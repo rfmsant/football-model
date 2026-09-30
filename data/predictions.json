@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T16:41:16Z",
+ "generated_at": "2026-09-30T16:54:13Z",
  "demo": false,
  "reference_date": "2026-09-30",
  "season": "2627",
@@ -16,7 +16,12 @@
   "min_ev": 0.04,
   "market_weight": 0.8,
   "min_odds": 1.3,
-  "max_odds": 2.5
+  "max_odds": 3.5,
+  "bet_markets": [
+   "1X2",
+   "O/U",
+   "BTTS"
+  ]
  },
  "status": {
   "fixtures": 49,
@@ -26,7 +31,7 @@
   "clubelo": false,
   "api_football": "APIFOOTBALL_KEY not set",
   "api_football_requests": 0,
-  "odds_api": "ok: used 15/45 credits this run, 467 left this month"
+  "odds_api": "ok: used 10/40 credits this run, 457 left this month"
  },
  "backtest": {
   "model": {
@@ -40,27 +45,23 @@
    "log_loss": 1.003
   },
   "bets": {
-   "bets": 143,
-   "roi_best_price": -0.0981,
-   "roi_avg_price": -0.141,
-   "profit_units": -14.0,
-   "hit_rate": 0.4126,
-   "avg_odds": 2.1,
-   "clv_mean": -0.0118,
-   "clv_beat_close": 0.3505,
-   "clv_n": 97,
+   "bets": 271,
+   "roi_best_price": -0.1502,
+   "roi_avg_price": -0.1941,
+   "profit_units": -40.7,
+   "hit_rate": 0.3137,
+   "avg_odds": 2.86,
+   "clv_mean": -0.0056,
+   "clv_beat_close": 0.4465,
+   "clv_n": 271,
    "by_market": {
     "1X2": {
-     "bets": 15,
-     "roi": -0.07
-    },
-    "AH": {
-     "bets": 75,
-     "roi": -0.1289
+     "bets": 138,
+     "roi": -0.329
     },
     "O/U 2.5": {
-     "bets": 53,
-     "roi": -0.0625
+     "bets": 133,
+     "roi": 0.0353
     }
    }
   }
@@ -91,34 +92,6 @@
  },
  "top_bets": [
   {
-   "id": "F1-20261010-44",
-   "league": "F1",
-   "league_name": "Ligue 1",
-   "date": "2026-10-10",
-   "time": "19:45",
-   "home": "Paris SG",
-   "away": "Le Mans",
-   "best_bet": {
-    "market": "AH -2.5",
-    "selection": "Away",
-    "model_p": 0.6499,
-    "fair_odds": 1.54,
-    "market_p": 0.4375,
-    "odds": 2.25,
-    "avg_odds": 2.25,
-    "edge": 0.2124,
-    "p_bet": 0.48,
-    "ev": 0.08,
-    "label": "Le Mans +2.5 (Asian handicap)"
-   },
-   "confidence": 47,
-   "probs": {
-    "H": 0.759,
-    "D": 0.149,
-    "A": 0.092
-   }
-  },
-  {
    "id": "I1-20261010-31",
    "league": "I1",
    "league_name": "Serie A",
@@ -127,19 +100,19 @@
    "home": "Milan",
    "away": "Parma",
    "best_bet": {
-    "market": "AH -2.5",
-    "selection": "Away",
-    "model_p": 0.8025,
-    "fair_odds": 1.25,
-    "market_p": 0.5413,
-    "odds": 1.81,
-    "avg_odds": 1.81,
-    "edge": 0.2612,
-    "p_bet": 0.5935,
-    "ev": 0.0743,
-    "label": "Parma +2.5 (Asian handicap)"
+    "market": "O/U 2.5",
+    "selection": "Under",
+    "model_p": 0.5132,
+    "fair_odds": 1.95,
+    "market_p": 0.2962,
+    "odds": 3.25,
+    "avg_odds": 3.2,
+    "edge": 0.217,
+    "p_bet": 0.3396,
+    "ev": 0.1037,
+    "label": "Under 2.5 goals"
    },
-   "confidence": 43,
+   "confidence": 46,
    "probs": {
     "H": 0.6533,
     "D": 0.2253,
@@ -147,31 +120,31 @@
    }
   },
   {
-   "id": "SP1-20261010-16",
+   "id": "SP1-20261010-13",
    "league": "SP1",
    "league_name": "La Liga",
    "date": "2026-10-10",
-   "time": "20:00",
-   "home": "Real Madrid",
-   "away": "Villarreal",
+   "time": "13:00",
+   "home": "Vallecano",
+   "away": "Ath Bilbao",
    "best_bet": {
-    "market": "AH -1.5",
-    "selection": "Away",
-    "model_p": 0.6114,
-    "fair_odds": 1.64,
-    "market_p": 0.4812,
-    "odds": 2.1,
-    "avg_odds": 2.02,
-    "edge": 0.1302,
-    "p_bet": 0.5072,
-    "ev": 0.0652,
-    "label": "Villarreal +1.5 (Asian handicap)"
+    "market": "1X2",
+    "selection": "H",
+    "model_p": 0.4376,
+    "fair_odds": 2.29,
+    "market_p": 0.3197,
+    "odds": 3.12,
+    "avg_odds": 2.93,
+    "edge": 0.1179,
+    "p_bet": 0.3433,
+    "ev": 0.0711,
+    "label": "Vallecano to win"
    },
    "confidence": 58,
    "probs": {
-    "H": 0.6008,
-    "D": 0.2054,
-    "A": 0.1938
+    "H": 0.4376,
+    "D": 0.2754,
+    "A": 0.287
    }
   },
   {
@@ -203,333 +176,63 @@
    }
   },
   {
-   "id": "SP1-20261010-15",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "date": "2026-10-10",
-   "time": "17:30",
-   "home": "Barcelona",
-   "away": "Getafe",
+   "id": "E0-20261012-11",
+   "league": "E0",
+   "league_name": "Premier League",
+   "date": "2026-10-12",
+   "time": "20:00",
+   "home": "Coventry",
+   "away": "Newcastle",
    "best_bet": {
-    "market": "AH -3.5",
-    "selection": "Away",
-    "model_p": 0.7782,
-    "fair_odds": 1.29,
-    "market_p": 0.5802,
-    "odds": 1.7,
-    "avg_odds": 1.7,
-    "edge": 0.1979,
-    "p_bet": 0.6198,
-    "ev": 0.0537,
-    "label": "Getafe +3.5 (Asian handicap)"
+    "market": "1X2",
+    "selection": "H",
+    "model_p": 0.3743,
+    "fair_odds": 2.67,
+    "market_p": 0.2926,
+    "odds": 3.44,
+    "avg_odds": 3.21,
+    "edge": 0.0817,
+    "p_bet": 0.3089,
+    "ev": 0.0623,
+    "label": "Coventry to win"
    },
-   "confidence": 52,
+   "confidence": 58,
    "probs": {
-    "H": 0.8331,
-    "D": 0.1218,
-    "A": 0.0451
+    "H": 0.3743,
+    "D": 0.2734,
+    "A": 0.3523
+   }
+  },
+  {
+   "id": "F1-20261011-46",
+   "league": "F1",
+   "league_name": "Ligue 1",
+   "date": "2026-10-11",
+   "time": "14:00",
+   "home": "Nice",
+   "away": "Strasbourg",
+   "best_bet": {
+    "market": "1X2",
+    "selection": "A",
+    "model_p": 0.4143,
+    "fair_odds": 2.41,
+    "market_p": 0.3073,
+    "odds": 3.23,
+    "avg_odds": 3.05,
+    "edge": 0.107,
+    "p_bet": 0.3287,
+    "ev": 0.0618,
+    "label": "Strasbourg to win"
+   },
+   "confidence": 57,
+   "probs": {
+    "H": 0.3287,
+    "D": 0.257,
+    "A": 0.4143
    }
   }
  ],
  "games": [
-  {
-   "id": "F1-20261010-44",
-   "league": "F1",
-   "league_name": "Ligue 1",
-   "country": "FRA",
-   "date": "2026-10-10",
-   "time": "19:45",
-   "home": "Paris SG",
-   "away": "Le Mans",
-   "probs": {
-    "H": 0.759,
-    "D": 0.149,
-    "A": 0.092
-   },
-   "xg": {
-    "home": 2.898,
-    "away": 0.953
-   },
-   "likely_score": "2-0",
-   "top_scores": [
-    {
-     "score": "2-0",
-     "p": 0.0919
-    },
-    {
-     "score": "3-0",
-     "p": 0.0888
-    },
-    {
-     "score": "2-1",
-     "p": 0.0876
-    },
-    {
-     "score": "3-1",
-     "p": 0.0846
-    },
-    {
-     "score": "1-1",
-     "p": 0.0653
-    }
-   ],
-   "markets": {
-    "1X2": {
-     "H": 0.759,
-     "D": 0.149,
-     "A": 0.092
-    },
-    "BTTS": {
-     "Yes": 0.5844,
-     "No": 0.4156
-    },
-    "O/U 1.5": {
-     "Over": 0.8987,
-     "Under": 0.1013
-    },
-    "O/U 2.5": {
-     "Over": 0.7315,
-     "Under": 0.2685
-    },
-    "O/U 3.5": {
-     "Over": 0.5232,
-     "Under": 0.4768
-    },
-    "AH -3": {
-     "Home": 0.2173,
-     "Away": 0.7827
-    },
-    "AH -2.75": {
-     "Home": 0.2899,
-     "Away": 0.7101
-    },
-    "AH -2.5": {
-     "Home": 0.3501,
-     "Away": 0.6499
-    }
-   },
-   "evals": [
-    {
-     "market": "1X2",
-     "selection": "H",
-     "model_p": 0.759,
-     "fair_odds": 1.32,
-     "market_p": 0.877,
-     "odds": 1.11,
-     "avg_odds": 1.08,
-     "edge": -0.1181,
-     "p_bet": 0.8534,
-     "ev": -0.0527
-    },
-    {
-     "market": "1X2",
-     "selection": "D",
-     "model_p": 0.149,
-     "fair_odds": 6.71,
-     "market_p": 0.082,
-     "odds": 12.31,
-     "avg_odds": 11.51,
-     "edge": 0.067,
-     "p_bet": 0.0954,
-     "ev": 0.1752
-    },
-    {
-     "market": "1X2",
-     "selection": "A",
-     "model_p": 0.092,
-     "fair_odds": 10.87,
-     "market_p": 0.0409,
-     "odds": 24.69,
-     "avg_odds": 23.08,
-     "edge": 0.0511,
-     "p_bet": 0.0511,
-     "ev": 0.2626
-    },
-    {
-     "market": "BTTS",
-     "selection": "Yes",
-     "model_p": 0.5844,
-     "fair_odds": 1.71
-    },
-    {
-     "market": "BTTS",
-     "selection": "No",
-     "model_p": 0.4156,
-     "fair_odds": 2.41
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Over",
-     "model_p": 0.8987,
-     "fair_odds": 1.11
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Under",
-     "model_p": 0.1013,
-     "fair_odds": 9.87
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Over",
-     "model_p": 0.7315,
-     "fair_odds": 1.37,
-     "market_p": 0.7844,
-     "odds": 1.22,
-     "avg_odds": 1.21,
-     "edge": -0.0529,
-     "p_bet": 0.7739,
-     "ev": -0.0559
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Under",
-     "model_p": 0.2685,
-     "fair_odds": 3.73,
-     "market_p": 0.2156,
-     "odds": 4.6,
-     "avg_odds": 4.4,
-     "edge": 0.0529,
-     "p_bet": 0.2261,
-     "ev": 0.0402
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Over",
-     "model_p": 0.5232,
-     "fair_odds": 1.91
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Under",
-     "model_p": 0.4768,
-     "fair_odds": 2.1
-    },
-    {
-     "market": "AH -3",
-     "selection": "Home",
-     "model_p": 0.2173,
-     "fair_odds": 4.6,
-     "market_p": 0.4663,
-     "odds": 2.06,
-     "avg_odds": 2.06,
-     "edge": -0.249,
-     "p_bet": 0.4165,
-     "ev": -0.1179
-    },
-    {
-     "market": "AH -3",
-     "selection": "Away",
-     "model_p": 0.7827,
-     "fair_odds": 1.28,
-     "market_p": 0.5337,
-     "odds": 1.8,
-     "avg_odds": 1.8,
-     "edge": 0.249,
-     "p_bet": 0.5835,
-     "ev": 0.0417
-    },
-    {
-     "market": "AH -2.75",
-     "selection": "Home",
-     "model_p": 0.2899,
-     "fair_odds": 3.45,
-     "market_p": 0.5222,
-     "odds": 1.83,
-     "avg_odds": 1.83,
-     "edge": -0.2323,
-     "p_bet": 0.4757,
-     "ev": -0.1184
-    },
-    {
-     "market": "AH -2.75",
-     "selection": "Away",
-     "model_p": 0.7101,
-     "fair_odds": 1.41,
-     "market_p": 0.4778,
-     "odds": 2.0,
-     "avg_odds": 2.0,
-     "edge": 0.2323,
-     "p_bet": 0.5243,
-     "ev": 0.0444
-    },
-    {
-     "market": "AH -2.5",
-     "selection": "Home",
-     "model_p": 0.3501,
-     "fair_odds": 2.86,
-     "market_p": 0.5625,
-     "odds": 1.75,
-     "avg_odds": 1.75,
-     "edge": -0.2124,
-     "p_bet": 0.52,
-     "ev": -0.09
-    },
-    {
-     "market": "AH -2.5",
-     "selection": "Away",
-     "model_p": 0.6499,
-     "fair_odds": 1.54,
-     "market_p": 0.4375,
-     "odds": 2.25,
-     "avg_odds": 2.25,
-     "edge": 0.2124,
-     "p_bet": 0.48,
-     "ev": 0.08
-    }
-   ],
-   "best_bet": {
-    "market": "AH -2.5",
-    "selection": "Away",
-    "model_p": 0.6499,
-    "fair_odds": 1.54,
-    "market_p": 0.4375,
-    "odds": 2.25,
-    "avg_odds": 2.25,
-    "edge": 0.2124,
-    "p_bet": 0.48,
-    "ev": 0.08,
-    "label": "Le Mans +2.5 (Asian handicap)"
-   },
-   "max_ev": 0.2626,
-   "edge": 0.2124,
-   "confidence": 47,
-   "flagged": true,
-   "has_xg": true,
-   "xg_share": 1.0,
-   "elo_diff": 186.8,
-   "elo_source": "built-in",
-   "injury_data": false,
-   "book_spread": null,
-   "factors": [],
-   "context": {
-    "home": {
-     "rest_days": 20,
-     "matches_21d": 1,
-     "form": "DDLWW",
-     "form_pts": 8
-    },
-    "away": {
-     "rest_days": 21,
-     "matches_21d": 1,
-     "form": "DLDDW",
-     "form_pts": 6
-    }
-   },
-   "table": {
-    "home": "6th in the table",
-    "away": "9th in the table"
-   },
-   "absences": {
-    "home": [],
-    "away": []
-   },
-   "adjustment": [
-    1.0,
-    1.0
-   ],
-   "summary": "Paris SG are clear favourites at 76%, with the draw at 15%. Expected goals 2.90-0.95 point to a high-scoring game; the most likely score is 2-0. Paris SG come in with mixed form (DDLWW), Le Mans with mixed form (DLDDW). Elo ratings favour Paris SG by 187 points. Best value: Le Mans +2.5 (Asian handicap) at 2.25. The model gives it 65% against a market 44% (EV +8.0%). Confidence: low (47/100), team news not checked."
-  },
   {
    "id": "I1-20261010-31",
    "league": "I1",
@@ -592,10 +295,6 @@
     "O/U 3.5": {
      "Over": 0.2675,
      "Under": 0.7325
-    },
-    "AH -2.5": {
-     "Home": 0.1975,
-     "Away": 0.8025
     }
    },
    "evals": [
@@ -694,48 +393,24 @@
      "selection": "Under",
      "model_p": 0.7325,
      "fair_odds": 1.37
-    },
-    {
-     "market": "AH -2.5",
-     "selection": "Home",
-     "model_p": 0.1975,
-     "fair_odds": 5.06,
-     "market_p": 0.4587,
-     "odds": 2.17,
-     "avg_odds": 2.13,
-     "edge": -0.2612,
-     "p_bet": 0.4065,
-     "ev": -0.118
-    },
-    {
-     "market": "AH -2.5",
-     "selection": "Away",
-     "model_p": 0.8025,
-     "fair_odds": 1.25,
-     "market_p": 0.5413,
-     "odds": 1.81,
-     "avg_odds": 1.81,
-     "edge": 0.2612,
-     "p_bet": 0.5935,
-     "ev": 0.0743
     }
    ],
    "best_bet": {
-    "market": "AH -2.5",
-    "selection": "Away",
-    "model_p": 0.8025,
-    "fair_odds": 1.25,
-    "market_p": 0.5413,
-    "odds": 1.81,
-    "avg_odds": 1.81,
-    "edge": 0.2612,
-    "p_bet": 0.5935,
-    "ev": 0.0743,
-    "label": "Parma +2.5 (Asian handicap)"
+    "market": "O/U 2.5",
+    "selection": "Under",
+    "model_p": 0.5132,
+    "fair_odds": 1.95,
+    "market_p": 0.2962,
+    "odds": 3.25,
+    "avg_odds": 3.2,
+    "edge": 0.217,
+    "p_bet": 0.3396,
+    "ev": 0.1037,
+    "label": "Under 2.5 goals"
    },
    "max_ev": 0.2346,
-   "edge": 0.2612,
-   "confidence": 43,
+   "edge": 0.217,
+   "confidence": 46,
    "flagged": true,
    "has_xg": true,
    "xg_share": 1.0,
@@ -770,7 +445,221 @@
     1.0,
     1.0
    ],
-   "summary": "Milan are clear favourites at 65%, with the draw at 23%. Expected goals 1.92-0.71 point to an average number of goals; the most likely score is 2-0. Milan come in with good form (WWDDW), Parma with poor form (LLDLW). Elo ratings favour Milan by 150 points. Best value: Parma +2.5 (Asian handicap) at 1.81. The model gives it 80% against a market 54% (EV +7.4%). Confidence: low (43/100), team news not checked."
+   "summary": "Milan are clear favourites at 65%, with the draw at 23%. Expected goals 1.92-0.71 point to an average number of goals; the most likely score is 2-0. Milan come in with good form (WWDDW), Parma with poor form (LLDLW). Elo ratings favour Milan by 150 points. Best value: Under 2.5 goals at 3.25. The model gives it 51% against a market 30% (EV +10.4%). Confidence: low (46/100), team news not checked."
+  },
+  {
+   "id": "SP1-20261010-13",
+   "league": "SP1",
+   "league_name": "La Liga",
+   "country": "ESP",
+   "date": "2026-10-10",
+   "time": "13:00",
+   "home": "Vallecano",
+   "away": "Ath Bilbao",
+   "probs": {
+    "H": 0.4376,
+    "D": 0.2754,
+    "A": 0.287
+   },
+   "xg": {
+    "home": 1.5006,
+    "away": 1.1726
+   },
+   "likely_score": "1-1",
+   "top_scores": [
+    {
+     "score": "1-1",
+     "p": 0.1313
+    },
+    {
+     "score": "1-0",
+     "p": 0.094
+    },
+    {
+     "score": "2-1",
+     "p": 0.0912
+    },
+    {
+     "score": "0-0",
+     "p": 0.0788
+    },
+    {
+     "score": "2-0",
+     "p": 0.0778
+    }
+   ],
+   "markets": {
+    "1X2": {
+     "H": 0.4376,
+     "D": 0.2754,
+     "A": 0.287
+    },
+    "BTTS": {
+     "Yes": 0.546,
+     "No": 0.454
+    },
+    "O/U 1.5": {
+     "Over": 0.7559,
+     "Under": 0.2441
+    },
+    "O/U 2.5": {
+     "Over": 0.4992,
+     "Under": 0.5008
+    },
+    "O/U 3.5": {
+     "Over": 0.2792,
+     "Under": 0.7208
+    }
+   },
+   "evals": [
+    {
+     "market": "1X2",
+     "selection": "H",
+     "model_p": 0.4376,
+     "fair_odds": 2.29,
+     "market_p": 0.3197,
+     "odds": 3.12,
+     "avg_odds": 2.93,
+     "edge": 0.1179,
+     "p_bet": 0.3433,
+     "ev": 0.0711
+    },
+    {
+     "market": "1X2",
+     "selection": "D",
+     "model_p": 0.2754,
+     "fair_odds": 3.63,
+     "market_p": 0.279,
+     "odds": 3.54,
+     "avg_odds": 3.35,
+     "edge": -0.0036,
+     "p_bet": 0.2783,
+     "ev": -0.0149
+    },
+    {
+     "market": "1X2",
+     "selection": "A",
+     "model_p": 0.287,
+     "fair_odds": 3.48,
+     "market_p": 0.4013,
+     "odds": 2.43,
+     "avg_odds": 2.33,
+     "edge": -0.1143,
+     "p_bet": 0.3784,
+     "ev": -0.0804
+    },
+    {
+     "market": "BTTS",
+     "selection": "Yes",
+     "model_p": 0.546,
+     "fair_odds": 1.83
+    },
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "model_p": 0.454,
+     "fair_odds": 2.2
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Over",
+     "model_p": 0.7559,
+     "fair_odds": 1.32
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Under",
+     "model_p": 0.2441,
+     "fair_odds": 4.1
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Over",
+     "model_p": 0.4992,
+     "fair_odds": 2.0,
+     "market_p": 0.5056,
+     "odds": 1.96,
+     "avg_odds": 1.87,
+     "edge": -0.0064,
+     "p_bet": 0.5043,
+     "ev": -0.0115
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "model_p": 0.5008,
+     "fair_odds": 2.0,
+     "market_p": 0.4944,
+     "odds": 1.99,
+     "avg_odds": 1.91,
+     "edge": 0.0064,
+     "p_bet": 0.4957,
+     "ev": -0.0137
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Over",
+     "model_p": 0.2792,
+     "fair_odds": 3.58
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "model_p": 0.7208,
+     "fair_odds": 1.39
+    }
+   ],
+   "best_bet": {
+    "market": "1X2",
+    "selection": "H",
+    "model_p": 0.4376,
+    "fair_odds": 2.29,
+    "market_p": 0.3197,
+    "odds": 3.12,
+    "avg_odds": 2.93,
+    "edge": 0.1179,
+    "p_bet": 0.3433,
+    "ev": 0.0711,
+    "label": "Vallecano to win"
+   },
+   "max_ev": 0.0711,
+   "edge": 0.1179,
+   "confidence": 58,
+   "flagged": true,
+   "has_xg": true,
+   "xg_share": 0.9673,
+   "elo_diff": 46.4,
+   "elo_source": "built-in",
+   "injury_data": false,
+   "book_spread": null,
+   "factors": [],
+   "context": {
+    "home": {
+     "rest_days": 21,
+     "matches_21d": 1,
+     "form": "LWLWD",
+     "form_pts": 7
+    },
+    "away": {
+     "rest_days": 21,
+     "matches_21d": 1,
+     "form": "LWWDD",
+     "form_pts": 8
+    }
+   },
+   "table": {
+    "home": "12th in the table",
+    "away": "10th in the table"
+   },
+   "absences": {
+    "home": [],
+    "away": []
+   },
+   "adjustment": [
+    1.0,
+    1.0
+   ],
+   "summary": "Vallecano are favourites at 44%, with the draw at 28%. Expected goals 1.50-1.17 point to an average number of goals; the most likely score is 1-1. Vallecano come in with mixed form (LWLWD), Ath Bilbao with mixed form (LWWDD). Best value: Vallecano to win at 3.12. The model gives it 44% against a market 32% (EV +7.1%). Confidence: moderate (58/100), team news not checked."
   },
   {
    "id": "D1-20261010-27",
@@ -834,14 +723,6 @@
     "O/U 3.5": {
      "Over": 0.3055,
      "Under": 0.6945
-    },
-    "AH +1": {
-     "Home": 0.6866,
-     "Away": 0.3134
-    },
-    "AH +1.5": {
-     "Home": 0.7551,
-     "Away": 0.2449
     }
    },
    "evals": [
@@ -952,54 +833,6 @@
      "edge": 0.1704,
      "p_bet": 0.5582,
      "ev": 0.0662
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.6866,
-     "fair_odds": 1.46,
-     "market_p": 0.5052,
-     "odds": 1.93,
-     "avg_odds": 1.9,
-     "edge": 0.1814,
-     "p_bet": 0.5415,
-     "ev": 0.0352
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.3134,
-     "fair_odds": 3.19,
-     "market_p": 0.4948,
-     "odds": 1.97,
-     "avg_odds": 1.94,
-     "edge": -0.1814,
-     "p_bet": 0.4585,
-     "ev": -0.0756
-    },
-    {
-     "market": "AH +1.5",
-     "selection": "Home",
-     "model_p": 0.7551,
-     "fair_odds": 1.32,
-     "market_p": 0.6077,
-     "odds": 1.62,
-     "avg_odds": 1.62,
-     "edge": 0.1474,
-     "p_bet": 0.6372,
-     "ev": 0.0323
-    },
-    {
-     "market": "AH +1.5",
-     "selection": "Away",
-     "model_p": 0.2449,
-     "fair_odds": 4.08,
-     "market_p": 0.3923,
-     "odds": 2.51,
-     "avg_odds": 2.51,
-     "edge": -0.1474,
-     "p_bet": 0.3628,
-     "ev": -0.0894
     }
    ],
    "best_bet": {
@@ -1055,247 +888,207 @@
    "summary": "Stuttgart are favourites at 46%, with the draw at 27%. Expected goals 1.18-1.61 point to an average number of goals; the most likely score is 1-1. Paderborn come in with mixed form (WDLLW), Stuttgart with poor form (DLWLL). Elo ratings favour Stuttgart by 144 points. Best value: Under 3.5 goals at 1.91. The model gives it 69% against a market 52% (EV +6.6%). Confidence: low (49/100), team news not checked."
   },
   {
-   "id": "SP1-20261010-16",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "country": "ESP",
-   "date": "2026-10-10",
+   "id": "E0-20261012-11",
+   "league": "E0",
+   "league_name": "Premier League",
+   "country": "ENG",
+   "date": "2026-10-12",
    "time": "20:00",
-   "home": "Real Madrid",
-   "away": "Villarreal",
+   "home": "Coventry",
+   "away": "Newcastle",
    "probs": {
-    "H": 0.6008,
-    "D": 0.2054,
-    "A": 0.1938
+    "H": 0.3743,
+    "D": 0.2734,
+    "A": 0.3523
    },
    "xg": {
-    "home": 2.3555,
-    "away": 1.29
+    "home": 1.4132,
+    "away": 1.3648
    },
-   "likely_score": "2-1",
+   "likely_score": "1-1",
    "top_scores": [
     {
-     "score": "2-1",
-     "p": 0.0945
-    },
-    {
      "score": "1-1",
-     "p": 0.0866
+     "p": 0.1296
     },
     {
-     "score": "3-1",
-     "p": 0.0742
+     "score": "2-1",
+     "p": 0.0848
     },
     {
-     "score": "2-0",
-     "p": 0.0732
+     "score": "1-2",
+     "p": 0.0819
     },
     {
-     "score": "2-2",
-     "p": 0.0609
+     "score": "1-0",
+     "p": 0.0784
+    },
+    {
+     "score": "0-1",
+     "p": 0.0753
     }
    ],
    "markets": {
     "1X2": {
-     "H": 0.6008,
-     "D": 0.2054,
-     "A": 0.1938
+     "H": 0.3743,
+     "D": 0.2734,
+     "A": 0.3523
     },
     "BTTS": {
-     "Yes": 0.6616,
-     "No": 0.3384
+     "Yes": 0.5727,
+     "No": 0.4273
     },
     "O/U 1.5": {
-     "Over": 0.8838,
-     "Under": 0.1162
+     "Over": 0.7745,
+     "Under": 0.2255
     },
     "O/U 2.5": {
-     "Over": 0.702,
-     "Under": 0.298
+     "Over": 0.5247,
+     "Under": 0.4753
     },
     "O/U 3.5": {
-     "Over": 0.4888,
-     "Under": 0.5112
-    },
-    "AH -1.5": {
-     "Home": 0.3886,
-     "Away": 0.6114
+     "Over": 0.3023,
+     "Under": 0.6977
     }
    },
    "evals": [
     {
      "market": "1X2",
      "selection": "H",
-     "model_p": 0.6008,
-     "fair_odds": 1.66,
-     "market_p": 0.7097,
-     "odds": 1.37,
-     "avg_odds": 1.32,
-     "edge": -0.1089,
-     "p_bet": 0.688,
-     "ev": -0.0575
+     "model_p": 0.3743,
+     "fair_odds": 2.67,
+     "market_p": 0.2926,
+     "odds": 3.44,
+     "avg_odds": 3.21,
+     "edge": 0.0817,
+     "p_bet": 0.3089,
+     "ev": 0.0623
     },
     {
      "market": "1X2",
      "selection": "D",
-     "model_p": 0.2054,
-     "fair_odds": 4.87,
-     "market_p": 0.1637,
-     "odds": 6.13,
-     "avg_odds": 5.73,
-     "edge": 0.0417,
-     "p_bet": 0.172,
-     "ev": 0.0543
+     "model_p": 0.2734,
+     "fair_odds": 3.66,
+     "market_p": 0.2641,
+     "odds": 3.75,
+     "avg_odds": 3.56,
+     "edge": 0.0093,
+     "p_bet": 0.266,
+     "ev": -0.0026
     },
     {
      "market": "1X2",
      "selection": "A",
-     "model_p": 0.1938,
-     "fair_odds": 5.16,
-     "market_p": 0.1266,
-     "odds": 7.93,
-     "avg_odds": 7.41,
-     "edge": 0.0672,
-     "p_bet": 0.14,
-     "ev": 0.1099
+     "model_p": 0.3523,
+     "fair_odds": 2.84,
+     "market_p": 0.4433,
+     "odds": 2.19,
+     "avg_odds": 2.12,
+     "edge": -0.091,
+     "p_bet": 0.4251,
+     "ev": -0.069
     },
     {
      "market": "BTTS",
      "selection": "Yes",
-     "model_p": 0.6616,
-     "fair_odds": 1.51
+     "model_p": 0.5727,
+     "fair_odds": 1.75
     },
     {
      "market": "BTTS",
      "selection": "No",
-     "model_p": 0.3384,
-     "fair_odds": 2.95
+     "model_p": 0.4273,
+     "fair_odds": 2.34
     },
     {
      "market": "O/U 1.5",
      "selection": "Over",
-     "model_p": 0.8838,
-     "fair_odds": 1.13
+     "model_p": 0.7745,
+     "fair_odds": 1.29
     },
     {
      "market": "O/U 1.5",
      "selection": "Under",
-     "model_p": 0.1162,
-     "fair_odds": 8.6
+     "model_p": 0.2255,
+     "fair_odds": 4.43
     },
     {
      "market": "O/U 2.5",
      "selection": "Over",
-     "model_p": 0.702,
-     "fair_odds": 1.42,
-     "market_p": 0.7237,
-     "odds": 1.32,
-     "avg_odds": 1.31,
-     "edge": -0.0218,
-     "p_bet": 0.7194,
-     "ev": -0.0504
+     "model_p": 0.5247,
+     "fair_odds": 1.91,
+     "market_p": 0.5658,
+     "odds": 1.73,
+     "avg_odds": 1.67,
+     "edge": -0.0411,
+     "p_bet": 0.5576,
+     "ev": -0.0353
     },
     {
      "market": "O/U 2.5",
      "selection": "Under",
-     "model_p": 0.298,
-     "fair_odds": 3.36,
-     "market_p": 0.2763,
-     "odds": 3.5,
-     "avg_odds": 3.42,
-     "edge": 0.0218,
-     "p_bet": 0.2806,
-     "ev": -0.0179
+     "model_p": 0.4753,
+     "fair_odds": 2.1,
+     "market_p": 0.4342,
+     "odds": 2.3,
+     "avg_odds": 2.17,
+     "edge": 0.0411,
+     "p_bet": 0.4424,
+     "ev": 0.0175
     },
     {
      "market": "O/U 3.5",
      "selection": "Over",
-     "model_p": 0.4888,
-     "fair_odds": 2.05,
-     "market_p": 0.5355,
-     "odds": 1.83,
-     "avg_odds": 1.75,
-     "edge": -0.0467,
-     "p_bet": 0.5261,
-     "ev": -0.0371
+     "model_p": 0.3023,
+     "fair_odds": 3.31
     },
     {
      "market": "O/U 3.5",
      "selection": "Under",
-     "model_p": 0.5112,
-     "fair_odds": 1.96,
-     "market_p": 0.4645,
-     "odds": 2.14,
-     "avg_odds": 2.02,
-     "edge": 0.0467,
-     "p_bet": 0.4739,
-     "ev": 0.014
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.3886,
-     "fair_odds": 2.57,
-     "market_p": 0.5188,
-     "odds": 1.91,
-     "avg_odds": 1.88,
-     "edge": -0.1302,
-     "p_bet": 0.4928,
-     "ev": -0.0588
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.6114,
-     "fair_odds": 1.64,
-     "market_p": 0.4812,
-     "odds": 2.1,
-     "avg_odds": 2.02,
-     "edge": 0.1302,
-     "p_bet": 0.5072,
-     "ev": 0.0652
+     "model_p": 0.6977,
+     "fair_odds": 1.43
     }
    ],
    "best_bet": {
-    "market": "AH -1.5",
-    "selection": "Away",
-    "model_p": 0.6114,
-    "fair_odds": 1.64,
-    "market_p": 0.4812,
-    "odds": 2.1,
-    "avg_odds": 2.02,
-    "edge": 0.1302,
-    "p_bet": 0.5072,
-    "ev": 0.0652,
-    "label": "Villarreal +1.5 (Asian handicap)"
+    "market": "1X2",
+    "selection": "H",
+    "model_p": 0.3743,
+    "fair_odds": 2.67,
+    "market_p": 0.2926,
+    "odds": 3.44,
+    "avg_odds": 3.21,
+    "edge": 0.0817,
+    "p_bet": 0.3089,
+    "ev": 0.0623,
+    "label": "Coventry to win"
    },
-   "max_ev": 0.1099,
-   "edge": 0.1302,
+   "max_ev": 0.0623,
+   "edge": 0.0817,
    "confidence": 58,
    "flagged": true,
    "has_xg": true,
-   "xg_share": 0.9664,
-   "elo_diff": 100.8,
+   "xg_share": 1.0,
+   "elo_diff": -16.9,
    "elo_source": "built-in",
    "injury_data": false,
    "book_spread": null,
    "factors": [],
    "context": {
     "home": {
-     "rest_days": 20,
-     "matches_21d": 1,
-     "form": "WLWWL",
-     "form_pts": 9
+     "rest_days": 23,
+     "matches_21d": 0,
+     "form": "LLLLW",
+     "form_pts": 3
     },
     "away": {
-     "rest_days": 20,
-     "matches_21d": 1,
-     "form": "LLLWW",
-     "form_pts": 6
+     "rest_days": 23,
+     "matches_21d": 0,
+     "form": "DWDLW",
+     "form_pts": 8
     }
    },
    "table": {
-    "home": "4th in the table",
+    "home": "18th in the table",
     "away": "9th in the table"
    },
    "absences": {
@@ -1306,544 +1099,190 @@
     1.0,
     1.0
    ],
-   "summary": "Real Madrid are clear favourites at 60%, with the draw at 21%. Expected goals 2.36-1.29 point to a high-scoring game; the most likely score is 2-1. Real Madrid come in with good form (WLWWL), Villarreal with mixed form (LLLWW). Best value: Villarreal +1.5 (Asian handicap) at 2.10. The model gives it 61% against a market 48% (EV +6.5%). Confidence: moderate (58/100), team news not checked."
+   "summary": "The model sees a finely balanced game (37% / 27% / 35%). Expected goals 1.41-1.36 point to an average number of goals; the most likely score is 1-1. Coventry come in with poor form (LLLLW), Newcastle with mixed form (DWDLW). Best value: Coventry to win at 3.44. The model gives it 37% against a market 29% (EV +6.2%). Confidence: moderate (58/100), team news not checked."
   },
   {
-   "id": "SP1-20261010-15",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "country": "ESP",
-   "date": "2026-10-10",
-   "time": "17:30",
-   "home": "Barcelona",
-   "away": "Getafe",
+   "id": "F1-20261011-46",
+   "league": "F1",
+   "league_name": "Ligue 1",
+   "country": "FRA",
+   "date": "2026-10-11",
+   "time": "14:00",
+   "home": "Nice",
+   "away": "Strasbourg",
    "probs": {
-    "H": 0.8331,
-    "D": 0.1218,
-    "A": 0.0451
+    "H": 0.3287,
+    "D": 0.257,
+    "A": 0.4143
    },
    "xg": {
-    "home": 2.87,
-    "away": 0.5675
+    "home": 1.4315,
+    "away": 1.6297
    },
-   "likely_score": "2-0",
+   "likely_score": "1-1",
    "top_scores": [
     {
-     "score": "2-0",
-     "p": 0.1361
+     "score": "1-1",
+     "p": 0.1183
     },
     {
-     "score": "3-0",
-     "p": 0.1302
-    },
-    {
-     "score": "4-0",
-     "p": 0.0934
-    },
-    {
-     "score": "1-0",
-     "p": 0.0905
+     "score": "1-2",
+     "p": 0.0892
     },
     {
      "score": "2-1",
-     "p": 0.0772
-    }
-   ],
-   "markets": {
-    "1X2": {
-     "H": 0.8331,
-     "D": 0.1218,
-     "A": 0.0451
-    },
-    "BTTS": {
-     "Yes": 0.4121,
-     "No": 0.5879
-    },
-    "O/U 1.5": {
-     "Over": 0.8576,
-     "Under": 0.1424
-    },
-    "O/U 2.5": {
-     "Over": 0.6581,
-     "Under": 0.3419
-    },
-    "O/U 3.5": {
-     "Over": 0.4343,
-     "Under": 0.5657
-    },
-    "AH -3.5": {
-     "Home": 0.2218,
-     "Away": 0.7782
-    },
-    "AH -3": {
-     "Home": 0.2748,
-     "Away": 0.7252
-    }
-   },
-   "evals": [
-    {
-     "market": "1X2",
-     "selection": "H",
-     "model_p": 0.8331,
-     "fair_odds": 1.2,
-     "market_p": 0.9042,
-     "odds": 1.07,
-     "avg_odds": 1.04,
-     "edge": -0.0711,
-     "p_bet": 0.89,
-     "ev": -0.0477
+     "p": 0.0784
     },
     {
-     "market": "1X2",
-     "selection": "D",
-     "model_p": 0.1218,
-     "fair_odds": 8.21,
-     "market_p": 0.0646,
-     "odds": 15.64,
-     "avg_odds": 14.62,
-     "edge": 0.0572,
-     "p_bet": 0.0761,
-     "ev": 0.1898
-    },
-    {
-     "market": "1X2",
-     "selection": "A",
-     "model_p": 0.0451,
-     "fair_odds": 22.2,
-     "market_p": 0.0311,
-     "odds": 32.46,
-     "avg_odds": 30.34,
-     "edge": 0.0139,
-     "p_bet": 0.0339,
-     "ev": 0.1013
-    },
-    {
-     "market": "BTTS",
-     "selection": "Yes",
-     "model_p": 0.4121,
-     "fair_odds": 2.43
-    },
-    {
-     "market": "BTTS",
-     "selection": "No",
-     "model_p": 0.5879,
-     "fair_odds": 1.7
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Over",
-     "model_p": 0.8576,
-     "fair_odds": 1.17
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Under",
-     "model_p": 0.1424,
-     "fair_odds": 7.02
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Over",
-     "model_p": 0.6581,
-     "fair_odds": 1.52,
-     "market_p": 0.7897,
-     "odds": 1.21,
-     "avg_odds": 1.2,
-     "edge": -0.1316,
-     "p_bet": 0.7634,
-     "ev": -0.0763
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Under",
-     "model_p": 0.3419,
-     "fair_odds": 2.92,
-     "market_p": 0.2103,
-     "odds": 4.57,
-     "avg_odds": 4.51,
-     "edge": 0.1316,
-     "p_bet": 0.2366,
-     "ev": 0.0813
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Over",
-     "model_p": 0.4343,
-     "fair_odds": 2.3
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Under",
-     "model_p": 0.5657,
-     "fair_odds": 1.77
-    },
-    {
-     "market": "AH -3.5",
-     "selection": "Home",
-     "model_p": 0.2218,
-     "fair_odds": 4.51,
-     "market_p": 0.4198,
-     "odds": 2.35,
-     "avg_odds": 2.35,
-     "edge": -0.1979,
-     "p_bet": 0.3802,
-     "ev": -0.1066
-    },
-    {
-     "market": "AH -3.5",
-     "selection": "Away",
-     "model_p": 0.7782,
-     "fair_odds": 1.29,
-     "market_p": 0.5802,
-     "odds": 1.7,
-     "avg_odds": 1.7,
-     "edge": 0.1979,
-     "p_bet": 0.6198,
-     "ev": 0.0537
-    },
-    {
-     "market": "AH -3",
-     "selection": "Home",
-     "model_p": 0.2748,
-     "fair_odds": 3.64,
-     "market_p": 0.5158,
-     "odds": 1.86,
-     "avg_odds": 1.84,
-     "edge": -0.241,
-     "p_bet": 0.4676,
-     "ev": -0.1052
-    },
-    {
-     "market": "AH -3",
-     "selection": "Away",
-     "model_p": 0.7252,
-     "fair_odds": 1.38,
-     "market_p": 0.4842,
-     "odds": 1.96,
-     "avg_odds": 1.96,
-     "edge": 0.241,
-     "p_bet": 0.5324,
-     "ev": 0.0351
-    }
-   ],
-   "best_bet": {
-    "market": "AH -3.5",
-    "selection": "Away",
-    "model_p": 0.7782,
-    "fair_odds": 1.29,
-    "market_p": 0.5802,
-    "odds": 1.7,
-    "avg_odds": 1.7,
-    "edge": 0.1979,
-    "p_bet": 0.6198,
-    "ev": 0.0537,
-    "label": "Getafe +3.5 (Asian handicap)"
-   },
-   "max_ev": 0.1898,
-   "edge": 0.1979,
-   "confidence": 52,
-   "flagged": true,
-   "has_xg": true,
-   "xg_share": 0.9671,
-   "elo_diff": 277.8,
-   "elo_source": "built-in",
-   "injury_data": false,
-   "book_spread": null,
-   "factors": [],
-   "context": {
-    "home": {
-     "rest_days": 21,
-     "matches_21d": 1,
-     "form": "WWWWW",
-     "form_pts": 15
-    },
-    "away": {
-     "rest_days": 20,
-     "matches_21d": 1,
-     "form": "LDDLW",
-     "form_pts": 5
-    }
-   },
-   "table": {
-    "home": "1st in the table",
-    "away": "11th in the table"
-   },
-   "absences": {
-    "home": [],
-    "away": []
-   },
-   "adjustment": [
-    1.0,
-    1.0
-   ],
-   "summary": "Barcelona are clear favourites at 83%, with the draw at 12%. Expected goals 2.87-0.57 point to a high-scoring game; the most likely score is 2-0. Barcelona come in with excellent form (WWWWW), Getafe with mixed form (LDDLW). Elo ratings favour Barcelona by 278 points. Best value: Getafe +3.5 (Asian handicap) at 1.70. The model gives it 78% against a market 58% (EV +5.4%). Confidence: moderate (52/100), team news not checked."
-  },
-  {
-   "id": "D1-20261010-23",
-   "league": "D1",
-   "league_name": "Bundesliga",
-   "country": "GER",
-   "date": "2026-10-10",
-   "time": "14:30",
-   "home": "Augsburg",
-   "away": "Bayern Munich",
-   "probs": {
-    "H": 0.1785,
-    "D": 0.1792,
-    "A": 0.6423
-   },
-   "xg": {
-    "home": 1.4639,
-    "away": 2.8069
-   },
-   "likely_score": "1-2",
-   "top_scores": [
-    {
-     "score": "1-2",
-     "p": 0.0827
-    },
-    {
-     "score": "1-3",
-     "p": 0.0774
-    },
-    {
-     "score": "1-1",
-     "p": 0.0636
+     "score": "0-1",
+     "p": 0.0677
     },
     {
      "score": "2-2",
-     "p": 0.0605
-    },
-    {
-     "score": "2-3",
-     "p": 0.0566
+     "p": 0.0639
     }
    ],
    "markets": {
     "1X2": {
-     "H": 0.1785,
-     "D": 0.1792,
-     "A": 0.6423
+     "H": 0.3287,
+     "D": 0.257,
+     "A": 0.4143
     },
     "BTTS": {
-     "Yes": 0.7256,
-     "No": 0.2744
+     "Yes": 0.6203,
+     "No": 0.3797
     },
     "O/U 1.5": {
-     "Over": 0.9292,
-     "Under": 0.0708
+     "Over": 0.8182,
+     "Under": 0.1818
     },
     "O/U 2.5": {
-     "Over": 0.7937,
-     "Under": 0.2063
+     "Over": 0.5895,
+     "Under": 0.4105
     },
     "O/U 3.5": {
-     "Over": 0.6076,
-     "Under": 0.3924
-    },
-    "AH +2": {
-     "Home": 0.6838,
-     "Away": 0.3162
-    },
-    "AH +2.25": {
-     "Home": 0.7163,
-     "Away": 0.2837
-    },
-    "AH +2.5": {
-     "Home": 0.7427,
-     "Away": 0.2573
+     "Over": 0.3651,
+     "Under": 0.6349
     }
    },
    "evals": [
     {
      "market": "1X2",
      "selection": "H",
-     "model_p": 0.1785,
-     "fair_odds": 5.6,
-     "market_p": 0.0969,
-     "odds": 10.39,
-     "avg_odds": 9.71,
-     "edge": 0.0815,
-     "p_bet": 0.1132,
-     "ev": 0.1764
+     "model_p": 0.3287,
+     "fair_odds": 3.04,
+     "market_p": 0.4291,
+     "odds": 2.3,
+     "avg_odds": 2.19,
+     "edge": -0.1004,
+     "p_bet": 0.409,
+     "ev": -0.0593
     },
     {
      "market": "1X2",
      "selection": "D",
-     "model_p": 0.1792,
-     "fair_odds": 5.58,
-     "market_p": 0.1269,
-     "odds": 7.94,
-     "avg_odds": 7.42,
-     "edge": 0.0523,
-     "p_bet": 0.1374,
-     "ev": 0.09
+     "model_p": 0.257,
+     "fair_odds": 3.89,
+     "market_p": 0.2636,
+     "odds": 3.75,
+     "avg_odds": 3.56,
+     "edge": -0.0066,
+     "p_bet": 0.2623,
+     "ev": -0.0165
     },
     {
      "market": "1X2",
      "selection": "A",
-     "model_p": 0.6423,
-     "fair_odds": 1.56,
-     "market_p": 0.7762,
-     "odds": 1.24,
-     "avg_odds": 1.21,
-     "edge": -0.1338,
-     "p_bet": 0.7494,
-     "ev": -0.0707
+     "model_p": 0.4143,
+     "fair_odds": 2.41,
+     "market_p": 0.3073,
+     "odds": 3.23,
+     "avg_odds": 3.05,
+     "edge": 0.107,
+     "p_bet": 0.3287,
+     "ev": 0.0618
     },
     {
      "market": "BTTS",
      "selection": "Yes",
-     "model_p": 0.7256,
-     "fair_odds": 1.38
+     "model_p": 0.6203,
+     "fair_odds": 1.61
     },
     {
      "market": "BTTS",
      "selection": "No",
-     "model_p": 0.2744,
-     "fair_odds": 3.64
+     "model_p": 0.3797,
+     "fair_odds": 2.63
     },
     {
      "market": "O/U 1.5",
      "selection": "Over",
-     "model_p": 0.9292,
-     "fair_odds": 1.08
+     "model_p": 0.8182,
+     "fair_odds": 1.22
     },
     {
      "market": "O/U 1.5",
      "selection": "Under",
-     "model_p": 0.0708,
-     "fair_odds": 14.11
+     "model_p": 0.1818,
+     "fair_odds": 5.5
     },
     {
      "market": "O/U 2.5",
      "selection": "Over",
-     "model_p": 0.7937,
-     "fair_odds": 1.26,
-     "market_p": 0.8149,
-     "odds": 1.18,
-     "avg_odds": 1.17,
-     "edge": -0.0212,
-     "p_bet": 0.8107,
-     "ev": -0.0434
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Under",
-     "model_p": 0.2063,
-     "fair_odds": 4.85,
-     "market_p": 0.1851,
-     "odds": 5.5,
-     "avg_odds": 5.14,
-     "edge": 0.0212,
-     "p_bet": 0.1893,
-     "ev": 0.0406
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Over",
-     "model_p": 0.6076,
-     "fair_odds": 1.65
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Under",
-     "model_p": 0.3924,
-     "fair_odds": 2.55
-    },
-    {
-     "market": "AH +2",
-     "selection": "Home",
-     "model_p": 0.6838,
-     "fair_odds": 1.46,
-     "market_p": 0.4588,
-     "odds": 2.1,
-     "avg_odds": 2.1,
-     "edge": 0.225,
-     "p_bet": 0.5038,
-     "ev": 0.0471
-    },
-    {
-     "market": "AH +2",
-     "selection": "Away",
-     "model_p": 0.3162,
-     "fair_odds": 3.16,
-     "market_p": 0.5412,
-     "odds": 1.78,
-     "avg_odds": 1.78,
-     "edge": -0.225,
-     "p_bet": 0.4962,
-     "ev": -0.095
-    },
-    {
-     "market": "AH +2.25",
-     "selection": "Home",
-     "model_p": 0.7163,
-     "fair_odds": 1.4,
-     "market_p": 0.5234,
-     "odds": 1.83,
-     "avg_odds": 1.83,
-     "edge": 0.1928,
+     "model_p": 0.5895,
+     "fair_odds": 1.7,
+     "market_p": 0.5552,
+     "odds": 1.77,
+     "avg_odds": 1.7,
+     "edge": 0.0343,
      "p_bet": 0.562,
-     "ev": 0.0258
+     "ev": -0.0052
     },
     {
-     "market": "AH +2.25",
-     "selection": "Away",
-     "model_p": 0.2837,
-     "fair_odds": 3.52,
-     "market_p": 0.4766,
-     "odds": 2.01,
-     "avg_odds": 2.01,
-     "edge": -0.1928,
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "model_p": 0.4105,
+     "fair_odds": 2.44,
+     "market_p": 0.4448,
+     "odds": 2.22,
+     "avg_odds": 2.12,
+     "edge": -0.0343,
      "p_bet": 0.438,
-     "ev": -0.1085
+     "ev": -0.0277
     },
     {
-     "market": "AH +2.5",
-     "selection": "Home",
-     "model_p": 0.7427,
-     "fair_odds": 1.35,
-     "market_p": 0.5636,
-     "odds": 1.75,
-     "avg_odds": 1.75,
-     "edge": 0.1791,
-     "p_bet": 0.5994,
-     "ev": 0.049
+     "market": "O/U 3.5",
+     "selection": "Over",
+     "model_p": 0.3651,
+     "fair_odds": 2.74
     },
     {
-     "market": "AH +2.5",
-     "selection": "Away",
-     "model_p": 0.2573,
-     "fair_odds": 3.89,
-     "market_p": 0.4364,
-     "odds": 2.26,
-     "avg_odds": 2.26,
-     "edge": -0.1791,
-     "p_bet": 0.4006,
-     "ev": -0.0947
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "model_p": 0.6349,
+     "fair_odds": 1.58
     }
    ],
    "best_bet": {
-    "market": "AH +2.5",
-    "selection": "Home",
-    "model_p": 0.7427,
-    "fair_odds": 1.35,
-    "market_p": 0.5636,
-    "odds": 1.75,
-    "avg_odds": 1.75,
-    "edge": 0.1791,
-    "p_bet": 0.5994,
-    "ev": 0.049,
-    "label": "Augsburg +2.5 (Asian handicap)"
+    "market": "1X2",
+    "selection": "A",
+    "model_p": 0.4143,
+    "fair_odds": 2.41,
+    "market_p": 0.3073,
+    "odds": 3.23,
+    "avg_odds": 3.05,
+    "edge": 0.107,
+    "p_bet": 0.3287,
+    "ev": 0.0618,
+    "label": "Strasbourg to win"
    },
-   "max_ev": 0.1764,
-   "edge": 0.1791,
-   "confidence": 48,
+   "max_ev": 0.0618,
+   "edge": 0.107,
+   "confidence": 57,
    "flagged": true,
    "has_xg": true,
    "xg_share": 1.0,
-   "elo_diff": -249.0,
+   "elo_diff": -125.2,
    "elo_source": "built-in",
    "injury_data": false,
    "book_spread": null,
@@ -1852,19 +1291,19 @@
     "home": {
      "rest_days": 21,
      "matches_21d": 1,
-     "form": "LWWDL",
-     "form_pts": 7
+     "form": "DLDLW",
+     "form_pts": 5
     },
     "away": {
      "rest_days": 22,
      "matches_21d": 0,
-     "form": "WWDWW",
-     "form_pts": 13
+     "form": "LWWDL",
+     "form_pts": 7
     }
    },
    "table": {
-    "home": "5th in the table",
-    "away": "2nd in the table"
+    "home": "14th in the table",
+    "away": "8th in the table"
    },
    "absences": {
     "home": [],
@@ -1874,7 +1313,221 @@
     1.0,
     1.0
    ],
-   "summary": "Bayern Munich are clear favourites at 64%, with the draw at 18%. Expected goals 1.46-2.81 point to a high-scoring game; the most likely score is 1-2. Augsburg come in with mixed form (LWWDL), Bayern Munich with excellent form (WWDWW). Elo ratings favour Bayern Munich by 249 points. Best value: Augsburg +2.5 (Asian handicap) at 1.75. The model gives it 74% against a market 56% (EV +4.9%). Confidence: low (48/100), team news not checked."
+   "summary": "The model sees a finely balanced game (33% / 26% / 41%). Expected goals 1.43-1.63 point to an average number of goals; the most likely score is 1-1. Nice come in with mixed form (DLDLW), Strasbourg with mixed form (LWWDL). Elo ratings favour Strasbourg by 125 points. Best value: Strasbourg to win at 3.23. The model gives it 41% against a market 31% (EV +6.2%). Confidence: moderate (57/100), team news not checked."
+  },
+  {
+   "id": "SP1-20261012-21",
+   "league": "SP1",
+   "league_name": "La Liga",
+   "country": "ESP",
+   "date": "2026-10-12",
+   "time": "20:00",
+   "home": "Levante",
+   "away": "Sevilla",
+   "probs": {
+    "H": 0.4944,
+    "D": 0.2666,
+    "A": 0.239
+   },
+   "xg": {
+    "home": 1.6221,
+    "away": 1.0601
+   },
+   "likely_score": "1-1",
+   "top_scores": [
+    {
+     "score": "1-1",
+     "p": 0.1273
+    },
+    {
+     "score": "1-0",
+     "p": 0.1017
+    },
+    {
+     "score": "2-1",
+     "p": 0.0956
+    },
+    {
+     "score": "2-0",
+     "p": 0.0901
+    },
+    {
+     "score": "0-0",
+     "p": 0.0779
+    }
+   ],
+   "markets": {
+    "1X2": {
+     "H": 0.4944,
+     "D": 0.2666,
+     "A": 0.239
+    },
+    "BTTS": {
+     "Yes": 0.5337,
+     "No": 0.4663
+    },
+    "O/U 1.5": {
+     "Over": 0.7571,
+     "Under": 0.2429
+    },
+    "O/U 2.5": {
+     "Over": 0.5012,
+     "Under": 0.4988
+    },
+    "O/U 3.5": {
+     "Over": 0.2809,
+     "Under": 0.7191
+    }
+   },
+   "evals": [
+    {
+     "market": "1X2",
+     "selection": "H",
+     "model_p": 0.4944,
+     "fair_odds": 2.02,
+     "market_p": 0.3602,
+     "odds": 2.74,
+     "avg_odds": 2.6,
+     "edge": 0.1342,
+     "p_bet": 0.3871,
+     "ev": 0.0606
+    },
+    {
+     "market": "1X2",
+     "selection": "D",
+     "model_p": 0.2666,
+     "fair_odds": 3.75,
+     "market_p": 0.2877,
+     "odds": 3.41,
+     "avg_odds": 3.25,
+     "edge": -0.0211,
+     "p_bet": 0.2835,
+     "ev": -0.0332
+    },
+    {
+     "market": "1X2",
+     "selection": "A",
+     "model_p": 0.239,
+     "fair_odds": 4.18,
+     "market_p": 0.352,
+     "odds": 2.79,
+     "avg_odds": 2.66,
+     "edge": -0.1131,
+     "p_bet": 0.3294,
+     "ev": -0.0809
+    },
+    {
+     "market": "BTTS",
+     "selection": "Yes",
+     "model_p": 0.5337,
+     "fair_odds": 1.87
+    },
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "model_p": 0.4663,
+     "fair_odds": 2.14
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Over",
+     "model_p": 0.7571,
+     "fair_odds": 1.32
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Under",
+     "model_p": 0.2429,
+     "fair_odds": 4.12
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Over",
+     "model_p": 0.5012,
+     "fair_odds": 2.0,
+     "market_p": 0.4638,
+     "odds": 2.11,
+     "avg_odds": 2.03,
+     "edge": 0.0375,
+     "p_bet": 0.4712,
+     "ev": -0.0057
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "model_p": 0.4988,
+     "fair_odds": 2.0,
+     "market_p": 0.5362,
+     "odds": 1.84,
+     "avg_odds": 1.76,
+     "edge": -0.0375,
+     "p_bet": 0.5288,
+     "ev": -0.0271
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Over",
+     "model_p": 0.2809,
+     "fair_odds": 3.56
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "model_p": 0.7191,
+     "fair_odds": 1.39
+    }
+   ],
+   "best_bet": {
+    "market": "1X2",
+    "selection": "H",
+    "model_p": 0.4944,
+    "fair_odds": 2.02,
+    "market_p": 0.3602,
+    "odds": 2.74,
+    "avg_odds": 2.6,
+    "edge": 0.1342,
+    "p_bet": 0.3871,
+    "ev": 0.0606,
+    "label": "Levante to win"
+   },
+   "max_ev": 0.0606,
+   "edge": 0.1342,
+   "confidence": 56,
+   "flagged": true,
+   "has_xg": true,
+   "xg_share": 0.9694,
+   "elo_diff": -7.0,
+   "elo_source": "built-in",
+   "injury_data": false,
+   "book_spread": null,
+   "factors": [],
+   "context": {
+    "home": {
+     "rest_days": 22,
+     "matches_21d": 0,
+     "form": "DWDLL",
+     "form_pts": 5
+    },
+    "away": {
+     "rest_days": 23,
+     "matches_21d": 0,
+     "form": "LDWWL",
+     "form_pts": 7
+    }
+   },
+   "table": {
+    "home": "17th in the table",
+    "away": "5th in the table"
+   },
+   "absences": {
+    "home": [],
+    "away": []
+   },
+   "adjustment": [
+    1.0,
+    1.0
+   ],
+   "summary": "Levante are favourites at 49%, with the draw at 27%. Expected goals 1.62-1.06 point to an average number of goals; the most likely score is 1-1. Levante come in with mixed form (DWDLL), Sevilla with mixed form (LDWWL). Best value: Levante to win at 2.74. The model gives it 49% against a market 36% (EV +6.1%). Confidence: moderate (56/100), team news not checked."
   },
   {
    "id": "I1-20261012-39",
@@ -1938,10 +1591,6 @@
     "O/U 3.5": {
      "Over": 0.3358,
      "Under": 0.6642
-    },
-    "AH -0.25": {
-     "Home": 0.4653,
-     "Away": 0.5347
     }
    },
    "evals": [
@@ -2040,30 +1689,6 @@
      "selection": "Under",
      "model_p": 0.6642,
      "fair_odds": 1.51
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Home",
-     "model_p": 0.4653,
-     "fair_odds": 2.15,
-     "market_p": 0.4741,
-     "odds": 2.03,
-     "avg_odds": 2.03,
-     "edge": -0.0088,
-     "p_bet": 0.4723,
-     "ev": -0.0357
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Away",
-     "model_p": 0.5347,
-     "fair_odds": 1.87,
-     "market_p": 0.5259,
-     "odds": 1.83,
-     "avg_odds": 1.83,
-     "edge": 0.0088,
-     "p_bet": 0.5277,
-     "ev": -0.0298
     }
    ],
    "best_bet": {
@@ -2104,304 +1729,6 @@
    },
    "adjustment": null,
    "summary": "The model sees a finely balanced game (40% / 26% / 33%). Expected goals 1.55-1.38 point to an average number of goals; the most likely score is 1-1. Best value: Over 2.5 goals at 2.12. The model gives it 56% against a market 48% (EV +4.3%). Confidence: moderate (58/100), team news not checked."
-  },
-  {
-   "id": "SP1-20261010-13",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "country": "ESP",
-   "date": "2026-10-10",
-   "time": "13:00",
-   "home": "Vallecano",
-   "away": "Ath Bilbao",
-   "probs": {
-    "H": 0.4376,
-    "D": 0.2754,
-    "A": 0.287
-   },
-   "xg": {
-    "home": 1.5006,
-    "away": 1.1726
-   },
-   "likely_score": "1-1",
-   "top_scores": [
-    {
-     "score": "1-1",
-     "p": 0.1313
-    },
-    {
-     "score": "1-0",
-     "p": 0.094
-    },
-    {
-     "score": "2-1",
-     "p": 0.0912
-    },
-    {
-     "score": "0-0",
-     "p": 0.0788
-    },
-    {
-     "score": "2-0",
-     "p": 0.0778
-    }
-   ],
-   "markets": {
-    "1X2": {
-     "H": 0.4376,
-     "D": 0.2754,
-     "A": 0.287
-    },
-    "BTTS": {
-     "Yes": 0.546,
-     "No": 0.454
-    },
-    "O/U 1.5": {
-     "Over": 0.7559,
-     "Under": 0.2441
-    },
-    "O/U 2.5": {
-     "Over": 0.4992,
-     "Under": 0.5008
-    },
-    "O/U 3.5": {
-     "Over": 0.2792,
-     "Under": 0.7208
-    },
-    "AH +0": {
-     "Home": 0.6039,
-     "Away": 0.3961
-    },
-    "AH +0.25": {
-     "Home": 0.6672,
-     "Away": 0.3328
-    },
-    "AH +1": {
-     "Home": 0.8558,
-     "Away": 0.1442
-    }
-   },
-   "evals": [
-    {
-     "market": "1X2",
-     "selection": "H",
-     "model_p": 0.4376,
-     "fair_odds": 2.29,
-     "market_p": 0.3197,
-     "odds": 3.12,
-     "avg_odds": 2.93,
-     "edge": 0.1179,
-     "p_bet": 0.3433,
-     "ev": 0.0711
-    },
-    {
-     "market": "1X2",
-     "selection": "D",
-     "model_p": 0.2754,
-     "fair_odds": 3.63,
-     "market_p": 0.279,
-     "odds": 3.54,
-     "avg_odds": 3.35,
-     "edge": -0.0036,
-     "p_bet": 0.2783,
-     "ev": -0.0149
-    },
-    {
-     "market": "1X2",
-     "selection": "A",
-     "model_p": 0.287,
-     "fair_odds": 3.48,
-     "market_p": 0.4013,
-     "odds": 2.43,
-     "avg_odds": 2.33,
-     "edge": -0.1143,
-     "p_bet": 0.3784,
-     "ev": -0.0804
-    },
-    {
-     "market": "BTTS",
-     "selection": "Yes",
-     "model_p": 0.546,
-     "fair_odds": 1.83
-    },
-    {
-     "market": "BTTS",
-     "selection": "No",
-     "model_p": 0.454,
-     "fair_odds": 2.2
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Over",
-     "model_p": 0.7559,
-     "fair_odds": 1.32
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Under",
-     "model_p": 0.2441,
-     "fair_odds": 4.1
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Over",
-     "model_p": 0.4992,
-     "fair_odds": 2.0,
-     "market_p": 0.5056,
-     "odds": 1.96,
-     "avg_odds": 1.87,
-     "edge": -0.0064,
-     "p_bet": 0.5043,
-     "ev": -0.0115
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Under",
-     "model_p": 0.5008,
-     "fair_odds": 2.0,
-     "market_p": 0.4944,
-     "odds": 1.99,
-     "avg_odds": 1.91,
-     "edge": 0.0064,
-     "p_bet": 0.4957,
-     "ev": -0.0137
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Over",
-     "model_p": 0.2792,
-     "fair_odds": 3.58
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Under",
-     "model_p": 0.7208,
-     "fair_odds": 1.39
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.6039,
-     "fair_odds": 1.66,
-     "market_p": 0.4411,
-     "odds": 2.23,
-     "avg_odds": 2.23,
-     "edge": 0.1628,
-     "p_bet": 0.4737,
-     "ev": 0.0408
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.3961,
-     "fair_odds": 2.52,
-     "market_p": 0.5589,
-     "odds": 1.76,
-     "avg_odds": 1.76,
-     "edge": -0.1628,
-     "p_bet": 0.5263,
-     "ev": -0.0534
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Home",
-     "model_p": 0.6672,
-     "fair_odds": 1.5,
-     "market_p": 0.5349,
-     "odds": 1.8,
-     "avg_odds": 1.8,
-     "edge": 0.1323,
-     "p_bet": 0.5613,
-     "ev": 0.009
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Away",
-     "model_p": 0.3328,
-     "fair_odds": 3.0,
-     "market_p": 0.4651,
-     "odds": 2.07,
-     "avg_odds": 2.07,
-     "edge": -0.1323,
-     "p_bet": 0.4387,
-     "ev": -0.0793
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.8558,
-     "fair_odds": 1.17,
-     "market_p": 0.7538,
-     "odds": 1.29,
-     "avg_odds": 1.29,
-     "edge": 0.102,
-     "p_bet": 0.7742,
-     "ev": -0.0011
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.1442,
-     "fair_odds": 6.93,
-     "market_p": 0.2462,
-     "odds": 3.95,
-     "avg_odds": 3.95,
-     "edge": -0.102,
-     "p_bet": 0.2258,
-     "ev": -0.0901
-    }
-   ],
-   "best_bet": {
-    "market": "AH +0",
-    "selection": "Home",
-    "model_p": 0.6039,
-    "fair_odds": 1.66,
-    "market_p": 0.4411,
-    "odds": 2.23,
-    "avg_odds": 2.23,
-    "edge": 0.1628,
-    "p_bet": 0.4737,
-    "ev": 0.0408,
-    "label": "Vallecano +0 (Asian handicap)"
-   },
-   "max_ev": 0.0711,
-   "edge": 0.1628,
-   "confidence": 53,
-   "flagged": true,
-   "has_xg": true,
-   "xg_share": 0.9673,
-   "elo_diff": 46.4,
-   "elo_source": "built-in",
-   "injury_data": false,
-   "book_spread": null,
-   "factors": [],
-   "context": {
-    "home": {
-     "rest_days": 21,
-     "matches_21d": 1,
-     "form": "LWLWD",
-     "form_pts": 7
-    },
-    "away": {
-     "rest_days": 21,
-     "matches_21d": 1,
-     "form": "LWWDD",
-     "form_pts": 8
-    }
-   },
-   "table": {
-    "home": "12th in the table",
-    "away": "10th in the table"
-   },
-   "absences": {
-    "home": [],
-    "away": []
-   },
-   "adjustment": [
-    1.0,
-    1.0
-   ],
-   "summary": "Vallecano are favourites at 44%, with the draw at 28%. Expected goals 1.50-1.17 point to an average number of goals; the most likely score is 1-1. Vallecano come in with mixed form (LWLWD), Ath Bilbao with mixed form (LWWDD). Best value: Vallecano +0 (Asian handicap) at 2.23. The model gives it 60% against a market 44% (EV +4.1%). Confidence: moderate (53/100), team news not checked."
   },
   {
    "id": "EC-20260930-0",
@@ -2465,10 +1792,6 @@
     "O/U 3.5": {
      "Over": 0.3311,
      "Under": 0.6689
-    },
-    "AH +0.5": {
-     "Home": 0.4663,
-     "Away": 0.5337
     }
    },
    "evals": [
@@ -2567,30 +1890,6 @@
      "selection": "Under",
      "model_p": 0.6689,
      "fair_odds": 1.49
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Home",
-     "model_p": 0.4663,
-     "fair_odds": 2.14,
-     "market_p": 0.4676,
-     "odds": 2.03,
-     "avg_odds": 1.97,
-     "edge": -0.0013,
-     "p_bet": 0.4673,
-     "ev": -0.0514
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Away",
-     "model_p": 0.5337,
-     "fair_odds": 1.87,
-     "market_p": 0.5324,
-     "odds": 1.78,
-     "avg_odds": 1.73,
-     "edge": 0.0013,
-     "p_bet": 0.5327,
-     "ev": -0.0518
     }
    ],
    "best_bet": null,
@@ -2682,10 +1981,6 @@
     "O/U 3.5": {
      "Over": 0.3455,
      "Under": 0.6545
-    },
-    "AH -0.25": {
-     "Home": 0.55,
-     "Away": 0.45
     }
    },
    "evals": [
@@ -2784,34 +2079,10 @@
      "selection": "Under",
      "model_p": 0.6545,
      "fair_odds": 1.53
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Home",
-     "model_p": 0.55,
-     "fair_odds": 1.82,
-     "market_p": 0.4717,
-     "odds": 2.03,
-     "avg_odds": 1.96,
-     "edge": 0.0783,
-     "p_bet": 0.4874,
-     "ev": -0.0093
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Away",
-     "model_p": 0.45,
-     "fair_odds": 2.22,
-     "market_p": 0.5283,
-     "odds": 1.78,
-     "avg_odds": 1.75,
-     "edge": -0.0783,
-     "p_bet": 0.5126,
-     "ev": -0.0764
     }
    ],
    "best_bet": null,
-   "max_ev": -0.0093,
+   "max_ev": -0.0275,
    "edge": null,
    "confidence": 44,
    "flagged": true,
@@ -2912,10 +2183,6 @@
     "O/U 3.5": {
      "Over": 0.2969,
      "Under": 0.7031
-    },
-    "AH -1.5": {
-     "Home": 0.4039,
-     "Away": 0.5961
     }
    },
    "evals": [
@@ -3014,30 +2281,6 @@
      "selection": "Under",
      "model_p": 0.7031,
      "fair_odds": 1.42
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.4039,
-     "fair_odds": 2.48,
-     "market_p": 0.4398,
-     "odds": 2.23,
-     "avg_odds": 2.18,
-     "edge": -0.0359,
-     "p_bet": 0.4326,
-     "ev": -0.0353
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.5961,
-     "fair_odds": 1.68,
-     "market_p": 0.5602,
-     "odds": 1.76,
-     "avg_odds": 1.71,
-     "edge": 0.0359,
-     "p_bet": 0.5674,
-     "ev": -0.0014
     }
    ],
    "best_bet": null,
@@ -3129,10 +2372,6 @@
     "O/U 3.5": {
      "Over": 0.3905,
      "Under": 0.6095
-    },
-    "AH +0": {
-     "Home": 0.5155,
-     "Away": 0.4845
     }
    },
    "evals": [
@@ -3231,34 +2470,10 @@
      "selection": "Under",
      "model_p": 0.6095,
      "fair_odds": 1.64
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5155,
-     "fair_odds": 1.94,
-     "market_p": 0.5004,
-     "odds": 1.95,
-     "avg_odds": 1.94,
-     "edge": 0.0151,
-     "p_bet": 0.5034,
-     "ev": -0.0137
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4845,
-     "fair_odds": 2.06,
-     "market_p": 0.4996,
-     "odds": 2.03,
-     "avg_odds": 1.94,
-     "edge": -0.0151,
-     "p_bet": 0.4966,
-     "ev": 0.006
     }
    ],
    "best_bet": null,
-   "max_ev": 0.006,
+   "max_ev": 0.0035,
    "edge": null,
    "confidence": 58,
    "flagged": false,
@@ -3346,22 +2561,6 @@
     "O/U 3.5": {
      "Over": 0.412,
      "Under": 0.588
-    },
-    "AH -1.5": {
-     "Home": 0.2212,
-     "Away": 0.7788
-    },
-    "AH -1": {
-     "Home": 0.2745,
-     "Away": 0.7255
-    },
-    "AH -0.75": {
-     "Home": 0.3527,
-     "Away": 0.6473
-    },
-    "AH -0.5": {
-     "Home": 0.4156,
-     "Away": 0.5844
     }
    },
    "evals": [
@@ -3472,102 +2671,6 @@
      "edge": 0.028,
      "p_bet": 0.5656,
      "ev": 0.0011
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.2212,
-     "fair_odds": 4.52,
-     "market_p": 0.3487,
-     "odds": 2.82,
-     "avg_odds": 2.82,
-     "edge": -0.1276,
-     "p_bet": 0.3232,
-     "ev": -0.0885
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.7788,
-     "fair_odds": 1.28,
-     "market_p": 0.6513,
-     "odds": 1.51,
-     "avg_odds": 1.51,
-     "edge": 0.1276,
-     "p_bet": 0.6768,
-     "ev": 0.0219
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.2745,
-     "fair_odds": 3.64,
-     "market_p": 0.4315,
-     "odds": 2.24,
-     "avg_odds": 2.24,
-     "edge": -0.1569,
-     "p_bet": 0.4001,
-     "ev": -0.0836
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.7255,
-     "fair_odds": 1.38,
-     "market_p": 0.5685,
-     "odds": 1.7,
-     "avg_odds": 1.7,
-     "edge": 0.1569,
-     "p_bet": 0.5999,
-     "ev": 0.016
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Home",
-     "model_p": 0.3527,
-     "fair_odds": 2.84,
-     "market_p": 0.5039,
-     "odds": 1.91,
-     "avg_odds": 1.91,
-     "edge": -0.1512,
-     "p_bet": 0.4736,
-     "ev": -0.0861
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Away",
-     "model_p": 0.6473,
-     "fair_odds": 1.54,
-     "market_p": 0.4961,
-     "odds": 1.94,
-     "avg_odds": 1.94,
-     "edge": 0.1512,
-     "p_bet": 0.5264,
-     "ev": 0.0191
-    },
-    {
-     "market": "AH -0.5",
-     "selection": "Home",
-     "model_p": 0.4156,
-     "fair_odds": 2.41,
-     "market_p": 0.5512,
-     "odds": 1.75,
-     "avg_odds": 1.71,
-     "edge": -0.1356,
-     "p_bet": 0.5241,
-     "ev": -0.0829
-    },
-    {
-     "market": "AH -0.5",
-     "selection": "Away",
-     "model_p": 0.5844,
-     "fair_odds": 1.71,
-     "market_p": 0.4488,
-     "odds": 2.11,
-     "avg_odds": 2.1,
-     "edge": 0.1356,
-     "p_bet": 0.4759,
-     "ev": 0.0042
     }
    ],
    "best_bet": null,
@@ -3672,10 +2775,6 @@
     "O/U 3.5": {
      "Over": 0.4044,
      "Under": 0.5956
-    },
-    "AH +0": {
-     "Home": 0.4772,
-     "Away": 0.5228
     }
    },
    "evals": [
@@ -3774,30 +2873,6 @@
      "selection": "Under",
      "model_p": 0.5956,
      "fair_odds": 1.68
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.4772,
-     "fair_odds": 2.1,
-     "market_p": 0.4591,
-     "odds": 2.17,
-     "avg_odds": 2.12,
-     "edge": 0.0181,
-     "p_bet": 0.4627,
-     "ev": 0.0031
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.5228,
-     "fair_odds": 1.91,
-     "market_p": 0.5409,
-     "odds": 1.81,
-     "avg_odds": 1.79,
-     "edge": -0.0181,
-     "p_bet": 0.5373,
-     "ev": -0.0206
     }
    ],
    "best_bet": null,
@@ -3889,18 +2964,6 @@
     "O/U 3.5": {
      "Over": 0.3701,
      "Under": 0.6299
-    },
-    "AH +0": {
-     "Home": 0.5877,
-     "Away": 0.4123
-    },
-    "AH +0.5": {
-     "Home": 0.6925,
-     "Away": 0.3075
-    },
-    "AH +1": {
-     "Home": 0.8305,
-     "Away": 0.1695
     }
    },
    "evals": [
@@ -3999,78 +3062,6 @@
      "selection": "Under",
      "model_p": 0.6299,
      "fair_odds": 1.59
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5877,
-     "fair_odds": 1.7,
-     "market_p": 0.4863,
-     "odds": 2.03,
-     "avg_odds": 1.99,
-     "edge": 0.1015,
-     "p_bet": 0.5066,
-     "ev": 0.0211
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4123,
-     "fair_odds": 2.43,
-     "market_p": 0.5137,
-     "odds": 1.92,
-     "avg_odds": 1.89,
-     "edge": -0.1015,
-     "p_bet": 0.4934,
-     "ev": -0.0392
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Home",
-     "model_p": 0.6925,
-     "fair_odds": 1.44,
-     "market_p": 0.6118,
-     "odds": 1.51,
-     "avg_odds": 1.51,
-     "edge": 0.0807,
-     "p_bet": 0.628,
-     "ev": -0.0518
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Away",
-     "model_p": 0.3075,
-     "fair_odds": 3.25,
-     "market_p": 0.3882,
-     "odds": 2.38,
-     "avg_odds": 2.38,
-     "edge": -0.0807,
-     "p_bet": 0.372,
-     "ev": -0.1146
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.8305,
-     "fair_odds": 1.2,
-     "market_p": 0.7649,
-     "odds": 1.26,
-     "avg_odds": 1.26,
-     "edge": 0.0656,
-     "p_bet": 0.778,
-     "ev": -0.0164
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.1695,
-     "fair_odds": 5.9,
-     "market_p": 0.2351,
-     "odds": 4.1,
-     "avg_odds": 4.1,
-     "edge": -0.0656,
-     "p_bet": 0.222,
-     "ev": -0.075
     }
    ],
    "best_bet": null,
@@ -4175,22 +3166,6 @@
     "O/U 3.5": {
      "Over": 0.3339,
      "Under": 0.6661
-    },
-    "AH -1.5": {
-     "Home": 0.4257,
-     "Away": 0.5743
-    },
-    "AH -1": {
-     "Home": 0.5576,
-     "Away": 0.4424
-    },
-    "AH -0.75": {
-     "Home": 0.6169,
-     "Away": 0.3831
-    },
-    "AH -0.5": {
-     "Home": 0.6622,
-     "Away": 0.3378
     }
    },
    "evals": [
@@ -4301,106 +3276,10 @@
      "edge": 0.0885,
      "p_bet": 0.5953,
      "ev": 0.0179
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.4257,
-     "fair_odds": 2.35,
-     "market_p": 0.344,
-     "odds": 2.86,
-     "avg_odds": 2.86,
-     "edge": 0.0816,
-     "p_bet": 0.3604,
-     "ev": 0.0306
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.5743,
-     "fair_odds": 1.74,
-     "market_p": 0.656,
-     "odds": 1.5,
-     "avg_odds": 1.5,
-     "edge": -0.0816,
-     "p_bet": 0.6396,
-     "ev": -0.0405
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.5576,
-     "fair_odds": 1.79,
-     "market_p": 0.4253,
-     "odds": 2.27,
-     "avg_odds": 2.27,
-     "edge": 0.1323,
-     "p_bet": 0.4518,
-     "ev": 0.0195
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.4424,
-     "fair_odds": 2.26,
-     "market_p": 0.5747,
-     "odds": 1.68,
-     "avg_odds": 1.68,
-     "edge": -0.1323,
-     "p_bet": 0.5482,
-     "ev": -0.0603
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Home",
-     "model_p": 0.6169,
-     "fair_odds": 1.62,
-     "market_p": 0.5091,
-     "odds": 1.89,
-     "avg_odds": 1.89,
-     "edge": 0.1078,
-     "p_bet": 0.5307,
-     "ev": 0.0026
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Away",
-     "model_p": 0.3831,
-     "fair_odds": 2.61,
-     "market_p": 0.4909,
-     "odds": 1.96,
-     "avg_odds": 1.96,
-     "edge": -0.1078,
-     "p_bet": 0.4693,
-     "ev": -0.0706
-    },
-    {
-     "market": "AH -0.5",
-     "selection": "Home",
-     "model_p": 0.6622,
-     "fair_odds": 1.51,
-     "market_p": 0.5481,
-     "odds": 1.74,
-     "avg_odds": 1.71,
-     "edge": 0.1141,
-     "p_bet": 0.5709,
-     "ev": -0.0066
-    },
-    {
-     "market": "AH -0.5",
-     "selection": "Away",
-     "model_p": 0.3378,
-     "fair_odds": 2.96,
-     "market_p": 0.4519,
-     "odds": 2.11,
-     "avg_odds": 2.08,
-     "edge": -0.1141,
-     "p_bet": 0.4291,
-     "ev": -0.0946
     }
    ],
    "best_bet": null,
-   "max_ev": 0.0306,
+   "max_ev": 0.0179,
    "edge": null,
    "confidence": 57,
    "flagged": true,
@@ -4501,10 +3380,6 @@
     "O/U 3.5": {
      "Over": 0.344,
      "Under": 0.656
-    },
-    "AH +0": {
-     "Home": 0.5512,
-     "Away": 0.4488
     }
    },
    "evals": [
@@ -4603,30 +3478,6 @@
      "selection": "Under",
      "model_p": 0.656,
      "fair_odds": 1.52
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5512,
-     "fair_odds": 1.81,
-     "market_p": 0.5034,
-     "odds": 1.96,
-     "avg_odds": 1.92,
-     "edge": 0.0477,
-     "p_bet": 0.513,
-     "ev": 0.004
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4488,
-     "fair_odds": 2.23,
-     "market_p": 0.4966,
-     "odds": 1.98,
-     "avg_odds": 1.95,
-     "edge": -0.0477,
-     "p_bet": 0.487,
-     "ev": -0.0264
     }
    ],
    "best_bet": null,
@@ -4718,18 +3569,6 @@
     "O/U 3.5": {
      "Over": 0.2395,
      "Under": 0.7605
-    },
-    "AH +0": {
-     "Home": 0.4786,
-     "Away": 0.5214
-    },
-    "AH +0.5": {
-     "Home": 0.6305,
-     "Away": 0.3695
-    },
-    "AH +1": {
-     "Home": 0.7899,
-     "Away": 0.2101
     }
    },
    "evals": [
@@ -4828,78 +3667,6 @@
      "selection": "Under",
      "model_p": 0.7605,
      "fair_odds": 1.31
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.4786,
-     "fair_odds": 2.09,
-     "market_p": 0.3598,
-     "odds": 2.74,
-     "avg_odds": 2.74,
-     "edge": 0.1188,
-     "p_bet": 0.3836,
-     "ev": 0.0361
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.5214,
-     "fair_odds": 1.92,
-     "market_p": 0.6402,
-     "odds": 1.54,
-     "avg_odds": 1.54,
-     "edge": -0.1188,
-     "p_bet": 0.6164,
-     "ev": -0.0359
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Home",
-     "model_p": 0.6305,
-     "fair_odds": 1.59,
-     "market_p": 0.5393,
-     "odds": 1.81,
-     "avg_odds": 1.76,
-     "edge": 0.0911,
-     "p_bet": 0.5576,
-     "ev": 0.0092
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Away",
-     "model_p": 0.3695,
-     "fair_odds": 2.71,
-     "market_p": 0.4607,
-     "odds": 2.09,
-     "avg_odds": 2.06,
-     "edge": -0.0911,
-     "p_bet": 0.4424,
-     "ev": -0.0753
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.7899,
-     "fair_odds": 1.27,
-     "market_p": 0.6938,
-     "odds": 1.39,
-     "avg_odds": 1.39,
-     "edge": 0.0961,
-     "p_bet": 0.7131,
-     "ev": -0.0071
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.2101,
-     "fair_odds": 4.76,
-     "market_p": 0.3062,
-     "odds": 3.15,
-     "avg_odds": 3.15,
-     "edge": -0.0961,
-     "p_bet": 0.2869,
-     "ev": -0.0767
     }
    ],
    "best_bet": null,
@@ -5004,10 +3771,6 @@
     "O/U 3.5": {
      "Over": 0.4139,
      "Under": 0.5861
-    },
-    "AH +0": {
-     "Home": 0.4526,
-     "Away": 0.5474
     }
    },
    "evals": [
@@ -5106,30 +3869,6 @@
      "selection": "Under",
      "model_p": 0.5861,
      "fair_odds": 1.71
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.4526,
-     "fair_odds": 2.21,
-     "market_p": 0.5026,
-     "odds": 1.96,
-     "avg_odds": 1.93,
-     "edge": -0.05,
-     "p_bet": 0.4926,
-     "ev": -0.026
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.5474,
-     "fair_odds": 1.83,
-     "market_p": 0.4974,
-     "odds": 1.98,
-     "avg_odds": 1.95,
-     "edge": 0.05,
-     "p_bet": 0.5074,
-     "ev": 0.0035
     }
    ],
    "best_bet": null,
@@ -5158,320 +3897,6 @@
    },
    "adjustment": null,
    "summary": "The model sees a finely balanced game (34% / 25% / 41%). Expected goals 1.56-1.73 point to a high-scoring game; the most likely score is 1-1. Elo ratings favour Man City by 128 points. No bet clears the value threshold: the market price looks fair. Confidence: moderate (58/100), team news not checked."
-  },
-  {
-   "id": "E0-20261012-11",
-   "league": "E0",
-   "league_name": "Premier League",
-   "country": "ENG",
-   "date": "2026-10-12",
-   "time": "20:00",
-   "home": "Coventry",
-   "away": "Newcastle",
-   "probs": {
-    "H": 0.3743,
-    "D": 0.2734,
-    "A": 0.3523
-   },
-   "xg": {
-    "home": 1.4132,
-    "away": 1.3648
-   },
-   "likely_score": "1-1",
-   "top_scores": [
-    {
-     "score": "1-1",
-     "p": 0.1296
-    },
-    {
-     "score": "2-1",
-     "p": 0.0848
-    },
-    {
-     "score": "1-2",
-     "p": 0.0819
-    },
-    {
-     "score": "1-0",
-     "p": 0.0784
-    },
-    {
-     "score": "0-1",
-     "p": 0.0753
-    }
-   ],
-   "markets": {
-    "1X2": {
-     "H": 0.3743,
-     "D": 0.2734,
-     "A": 0.3523
-    },
-    "BTTS": {
-     "Yes": 0.5727,
-     "No": 0.4273
-    },
-    "O/U 1.5": {
-     "Over": 0.7745,
-     "Under": 0.2255
-    },
-    "O/U 2.5": {
-     "Over": 0.5247,
-     "Under": 0.4753
-    },
-    "O/U 3.5": {
-     "Over": 0.3023,
-     "Under": 0.6977
-    },
-    "AH +0": {
-     "Home": 0.5151,
-     "Away": 0.4849
-    },
-    "AH +0.25": {
-     "Home": 0.5919,
-     "Away": 0.4081
-    },
-    "AH +0.5": {
-     "Home": 0.6477,
-     "Away": 0.3523
-    },
-    "AH +1": {
-     "Home": 0.7979,
-     "Away": 0.2021
-    }
-   },
-   "evals": [
-    {
-     "market": "1X2",
-     "selection": "H",
-     "model_p": 0.3743,
-     "fair_odds": 2.67,
-     "market_p": 0.2926,
-     "odds": 3.44,
-     "avg_odds": 3.21,
-     "edge": 0.0817,
-     "p_bet": 0.3089,
-     "ev": 0.0623
-    },
-    {
-     "market": "1X2",
-     "selection": "D",
-     "model_p": 0.2734,
-     "fair_odds": 3.66,
-     "market_p": 0.2641,
-     "odds": 3.75,
-     "avg_odds": 3.56,
-     "edge": 0.0093,
-     "p_bet": 0.266,
-     "ev": -0.0026
-    },
-    {
-     "market": "1X2",
-     "selection": "A",
-     "model_p": 0.3523,
-     "fair_odds": 2.84,
-     "market_p": 0.4433,
-     "odds": 2.19,
-     "avg_odds": 2.12,
-     "edge": -0.091,
-     "p_bet": 0.4251,
-     "ev": -0.069
-    },
-    {
-     "market": "BTTS",
-     "selection": "Yes",
-     "model_p": 0.5727,
-     "fair_odds": 1.75
-    },
-    {
-     "market": "BTTS",
-     "selection": "No",
-     "model_p": 0.4273,
-     "fair_odds": 2.34
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Over",
-     "model_p": 0.7745,
-     "fair_odds": 1.29
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Under",
-     "model_p": 0.2255,
-     "fair_odds": 4.43
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Over",
-     "model_p": 0.5247,
-     "fair_odds": 1.91,
-     "market_p": 0.5658,
-     "odds": 1.73,
-     "avg_odds": 1.67,
-     "edge": -0.0411,
-     "p_bet": 0.5576,
-     "ev": -0.0353
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Under",
-     "model_p": 0.4753,
-     "fair_odds": 2.1,
-     "market_p": 0.4342,
-     "odds": 2.3,
-     "avg_odds": 2.17,
-     "edge": 0.0411,
-     "p_bet": 0.4424,
-     "ev": 0.0175
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Over",
-     "model_p": 0.3023,
-     "fair_odds": 3.31
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Under",
-     "model_p": 0.6977,
-     "fair_odds": 1.43
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5151,
-     "fair_odds": 1.94,
-     "market_p": 0.3913,
-     "odds": 2.52,
-     "avg_odds": 2.52,
-     "edge": 0.1238,
-     "p_bet": 0.4161,
-     "ev": 0.0352
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4849,
-     "fair_odds": 2.06,
-     "market_p": 0.6087,
-     "odds": 1.62,
-     "avg_odds": 1.62,
-     "edge": -0.1238,
-     "p_bet": 0.5839,
-     "ev": -0.0393
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Home",
-     "model_p": 0.5919,
-     "fair_odds": 1.69,
-     "market_p": 0.487,
-     "odds": 1.98,
-     "avg_odds": 1.98,
-     "edge": 0.1048,
-     "p_bet": 0.508,
-     "ev": 0.0051
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Away",
-     "model_p": 0.4081,
-     "fair_odds": 2.45,
-     "market_p": 0.513,
-     "odds": 1.88,
-     "avg_odds": 1.88,
-     "edge": -0.1048,
-     "p_bet": 0.492,
-     "ev": -0.0648
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Home",
-     "model_p": 0.6477,
-     "fair_odds": 1.54,
-     "market_p": 0.5596,
-     "odds": 1.69,
-     "avg_odds": 1.68,
-     "edge": 0.088,
-     "p_bet": 0.5772,
-     "ev": -0.0245
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Away",
-     "model_p": 0.3523,
-     "fair_odds": 2.84,
-     "market_p": 0.4404,
-     "odds": 2.19,
-     "avg_odds": 2.13,
-     "edge": -0.088,
-     "p_bet": 0.4228,
-     "ev": -0.0742
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.7979,
-     "fair_odds": 1.25,
-     "market_p": 0.6874,
-     "odds": 1.41,
-     "avg_odds": 1.41,
-     "edge": 0.1105,
-     "p_bet": 0.7095,
-     "ev": 0.0003
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.2021,
-     "fair_odds": 4.95,
-     "market_p": 0.3126,
-     "odds": 3.1,
-     "avg_odds": 3.1,
-     "edge": -0.1105,
-     "p_bet": 0.2905,
-     "ev": -0.0806
-    }
-   ],
-   "best_bet": null,
-   "max_ev": 0.0623,
-   "edge": null,
-   "confidence": 58,
-   "flagged": true,
-   "has_xg": true,
-   "xg_share": 1.0,
-   "elo_diff": -16.9,
-   "elo_source": "built-in",
-   "injury_data": false,
-   "book_spread": null,
-   "factors": [],
-   "context": {
-    "home": {
-     "rest_days": 23,
-     "matches_21d": 0,
-     "form": "LLLLW",
-     "form_pts": 3
-    },
-    "away": {
-     "rest_days": 23,
-     "matches_21d": 0,
-     "form": "DWDLW",
-     "form_pts": 8
-    }
-   },
-   "table": {
-    "home": "18th in the table",
-    "away": "9th in the table"
-   },
-   "absences": {
-    "home": [],
-    "away": []
-   },
-   "adjustment": [
-    1.0,
-    1.0
-   ],
-   "summary": "The model sees a finely balanced game (37% / 27% / 35%). Expected goals 1.41-1.36 point to an average number of goals; the most likely score is 1-1. Coventry come in with poor form (LLLLW), Newcastle with mixed form (DWDLW). No bet clears the value threshold: the market price looks fair. Confidence: moderate (58/100), team news not checked."
   },
   {
    "id": "SP1-20261009-12",
@@ -5535,10 +3960,6 @@
     "O/U 3.5": {
      "Over": 0.2174,
      "Under": 0.7826
-    },
-    "AH +0": {
-     "Home": 0.5154,
-     "Away": 0.4846
     }
    },
    "evals": [
@@ -5637,30 +4058,6 @@
      "selection": "Under",
      "model_p": 0.7826,
      "fair_odds": 1.28
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5154,
-     "fair_odds": 1.94,
-     "market_p": 0.5045,
-     "odds": 1.95,
-     "avg_odds": 1.93,
-     "edge": 0.0109,
-     "p_bet": 0.5067,
-     "ev": -0.0084
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4846,
-     "fair_odds": 2.06,
-     "market_p": 0.4955,
-     "odds": 1.99,
-     "avg_odds": 1.96,
-     "edge": -0.0109,
-     "p_bet": 0.4933,
-     "ev": -0.0128
     }
    ],
    "best_bet": null,
@@ -5752,10 +4149,6 @@
     "O/U 3.5": {
      "Over": 0.2579,
      "Under": 0.7421
-    },
-    "AH +0.5": {
-     "Home": 0.6164,
-     "Away": 0.3836
     }
    },
    "evals": [
@@ -5854,30 +4247,6 @@
      "selection": "Under",
      "model_p": 0.7421,
      "fair_odds": 1.35
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Home",
-     "model_p": 0.6164,
-     "fair_odds": 1.62,
-     "market_p": 0.4729,
-     "odds": 2.04,
-     "avg_odds": 2.04,
-     "edge": 0.1435,
-     "p_bet": 0.5016,
-     "ev": 0.0232
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Away",
-     "model_p": 0.3836,
-     "fair_odds": 2.61,
-     "market_p": 0.5271,
-     "odds": 1.83,
-     "avg_odds": 1.83,
-     "edge": -0.1435,
-     "p_bet": 0.4984,
-     "ev": -0.0879
     }
    ],
    "best_bet": null,
@@ -5919,6 +4288,422 @@
     1.0
    ],
    "summary": "The model sees a finely balanced game (33% / 29% / 38%). Expected goals 1.23-1.34 point to an average number of goals; the most likely score is 1-1. Alaves come in with mixed form (WWLLD), Ath Madrid with excellent form (WLWWW). No bet clears the value threshold: the market price looks fair. Confidence: moderate (53/100), team news not checked."
+  },
+  {
+   "id": "SP1-20261010-15",
+   "league": "SP1",
+   "league_name": "La Liga",
+   "country": "ESP",
+   "date": "2026-10-10",
+   "time": "17:30",
+   "home": "Barcelona",
+   "away": "Getafe",
+   "probs": {
+    "H": 0.8331,
+    "D": 0.1218,
+    "A": 0.0451
+   },
+   "xg": {
+    "home": 2.87,
+    "away": 0.5675
+   },
+   "likely_score": "2-0",
+   "top_scores": [
+    {
+     "score": "2-0",
+     "p": 0.1361
+    },
+    {
+     "score": "3-0",
+     "p": 0.1302
+    },
+    {
+     "score": "4-0",
+     "p": 0.0934
+    },
+    {
+     "score": "1-0",
+     "p": 0.0905
+    },
+    {
+     "score": "2-1",
+     "p": 0.0772
+    }
+   ],
+   "markets": {
+    "1X2": {
+     "H": 0.8331,
+     "D": 0.1218,
+     "A": 0.0451
+    },
+    "BTTS": {
+     "Yes": 0.4121,
+     "No": 0.5879
+    },
+    "O/U 1.5": {
+     "Over": 0.8576,
+     "Under": 0.1424
+    },
+    "O/U 2.5": {
+     "Over": 0.6581,
+     "Under": 0.3419
+    },
+    "O/U 3.5": {
+     "Over": 0.4343,
+     "Under": 0.5657
+    }
+   },
+   "evals": [
+    {
+     "market": "1X2",
+     "selection": "H",
+     "model_p": 0.8331,
+     "fair_odds": 1.2,
+     "market_p": 0.9042,
+     "odds": 1.07,
+     "avg_odds": 1.04,
+     "edge": -0.0711,
+     "p_bet": 0.89,
+     "ev": -0.0477
+    },
+    {
+     "market": "1X2",
+     "selection": "D",
+     "model_p": 0.1218,
+     "fair_odds": 8.21,
+     "market_p": 0.0646,
+     "odds": 15.64,
+     "avg_odds": 14.62,
+     "edge": 0.0572,
+     "p_bet": 0.0761,
+     "ev": 0.1898
+    },
+    {
+     "market": "1X2",
+     "selection": "A",
+     "model_p": 0.0451,
+     "fair_odds": 22.2,
+     "market_p": 0.0311,
+     "odds": 32.46,
+     "avg_odds": 30.34,
+     "edge": 0.0139,
+     "p_bet": 0.0339,
+     "ev": 0.1013
+    },
+    {
+     "market": "BTTS",
+     "selection": "Yes",
+     "model_p": 0.4121,
+     "fair_odds": 2.43
+    },
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "model_p": 0.5879,
+     "fair_odds": 1.7
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Over",
+     "model_p": 0.8576,
+     "fair_odds": 1.17
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Under",
+     "model_p": 0.1424,
+     "fair_odds": 7.02
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Over",
+     "model_p": 0.6581,
+     "fair_odds": 1.52,
+     "market_p": 0.7897,
+     "odds": 1.21,
+     "avg_odds": 1.2,
+     "edge": -0.1316,
+     "p_bet": 0.7634,
+     "ev": -0.0763
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "model_p": 0.3419,
+     "fair_odds": 2.92,
+     "market_p": 0.2103,
+     "odds": 4.57,
+     "avg_odds": 4.51,
+     "edge": 0.1316,
+     "p_bet": 0.2366,
+     "ev": 0.0813
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Over",
+     "model_p": 0.4343,
+     "fair_odds": 2.3
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "model_p": 0.5657,
+     "fair_odds": 1.77
+    }
+   ],
+   "best_bet": null,
+   "max_ev": 0.1898,
+   "edge": null,
+   "confidence": 61,
+   "flagged": true,
+   "has_xg": true,
+   "xg_share": 0.9671,
+   "elo_diff": 277.8,
+   "elo_source": "built-in",
+   "injury_data": false,
+   "book_spread": null,
+   "factors": [],
+   "context": {
+    "home": {
+     "rest_days": 21,
+     "matches_21d": 1,
+     "form": "WWWWW",
+     "form_pts": 15
+    },
+    "away": {
+     "rest_days": 20,
+     "matches_21d": 1,
+     "form": "LDDLW",
+     "form_pts": 5
+    }
+   },
+   "table": {
+    "home": "1st in the table",
+    "away": "11th in the table"
+   },
+   "absences": {
+    "home": [],
+    "away": []
+   },
+   "adjustment": [
+    1.0,
+    1.0
+   ],
+   "summary": "Barcelona are clear favourites at 83%, with the draw at 12%. Expected goals 2.87-0.57 point to a high-scoring game; the most likely score is 2-0. Barcelona come in with excellent form (WWWWW), Getafe with mixed form (LDDLW). Elo ratings favour Barcelona by 278 points. No bet clears the value threshold: the market price looks fair. Confidence: moderate (61/100), team news not checked."
+  },
+  {
+   "id": "SP1-20261010-16",
+   "league": "SP1",
+   "league_name": "La Liga",
+   "country": "ESP",
+   "date": "2026-10-10",
+   "time": "20:00",
+   "home": "Real Madrid",
+   "away": "Villarreal",
+   "probs": {
+    "H": 0.6008,
+    "D": 0.2054,
+    "A": 0.1938
+   },
+   "xg": {
+    "home": 2.3555,
+    "away": 1.29
+   },
+   "likely_score": "2-1",
+   "top_scores": [
+    {
+     "score": "2-1",
+     "p": 0.0945
+    },
+    {
+     "score": "1-1",
+     "p": 0.0866
+    },
+    {
+     "score": "3-1",
+     "p": 0.0742
+    },
+    {
+     "score": "2-0",
+     "p": 0.0732
+    },
+    {
+     "score": "2-2",
+     "p": 0.0609
+    }
+   ],
+   "markets": {
+    "1X2": {
+     "H": 0.6008,
+     "D": 0.2054,
+     "A": 0.1938
+    },
+    "BTTS": {
+     "Yes": 0.6616,
+     "No": 0.3384
+    },
+    "O/U 1.5": {
+     "Over": 0.8838,
+     "Under": 0.1162
+    },
+    "O/U 2.5": {
+     "Over": 0.702,
+     "Under": 0.298
+    },
+    "O/U 3.5": {
+     "Over": 0.4888,
+     "Under": 0.5112
+    }
+   },
+   "evals": [
+    {
+     "market": "1X2",
+     "selection": "H",
+     "model_p": 0.6008,
+     "fair_odds": 1.66,
+     "market_p": 0.7097,
+     "odds": 1.37,
+     "avg_odds": 1.32,
+     "edge": -0.1089,
+     "p_bet": 0.688,
+     "ev": -0.0575
+    },
+    {
+     "market": "1X2",
+     "selection": "D",
+     "model_p": 0.2054,
+     "fair_odds": 4.87,
+     "market_p": 0.1637,
+     "odds": 6.13,
+     "avg_odds": 5.73,
+     "edge": 0.0417,
+     "p_bet": 0.172,
+     "ev": 0.0543
+    },
+    {
+     "market": "1X2",
+     "selection": "A",
+     "model_p": 0.1938,
+     "fair_odds": 5.16,
+     "market_p": 0.1266,
+     "odds": 7.93,
+     "avg_odds": 7.41,
+     "edge": 0.0672,
+     "p_bet": 0.14,
+     "ev": 0.1099
+    },
+    {
+     "market": "BTTS",
+     "selection": "Yes",
+     "model_p": 0.6616,
+     "fair_odds": 1.51
+    },
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "model_p": 0.3384,
+     "fair_odds": 2.95
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Over",
+     "model_p": 0.8838,
+     "fair_odds": 1.13
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Under",
+     "model_p": 0.1162,
+     "fair_odds": 8.6
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Over",
+     "model_p": 0.702,
+     "fair_odds": 1.42,
+     "market_p": 0.7237,
+     "odds": 1.32,
+     "avg_odds": 1.31,
+     "edge": -0.0218,
+     "p_bet": 0.7194,
+     "ev": -0.0504
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "model_p": 0.298,
+     "fair_odds": 3.36,
+     "market_p": 0.2763,
+     "odds": 3.5,
+     "avg_odds": 3.42,
+     "edge": 0.0218,
+     "p_bet": 0.2806,
+     "ev": -0.0179
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Over",
+     "model_p": 0.4888,
+     "fair_odds": 2.05,
+     "market_p": 0.5355,
+     "odds": 1.83,
+     "avg_odds": 1.75,
+     "edge": -0.0467,
+     "p_bet": 0.5261,
+     "ev": -0.0371
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "model_p": 0.5112,
+     "fair_odds": 1.96,
+     "market_p": 0.4645,
+     "odds": 2.14,
+     "avg_odds": 2.02,
+     "edge": 0.0467,
+     "p_bet": 0.4739,
+     "ev": 0.014
+    }
+   ],
+   "best_bet": null,
+   "max_ev": 0.1099,
+   "edge": null,
+   "confidence": 60,
+   "flagged": true,
+   "has_xg": true,
+   "xg_share": 0.9664,
+   "elo_diff": 100.8,
+   "elo_source": "built-in",
+   "injury_data": false,
+   "book_spread": null,
+   "factors": [],
+   "context": {
+    "home": {
+     "rest_days": 20,
+     "matches_21d": 1,
+     "form": "WLWWL",
+     "form_pts": 9
+    },
+    "away": {
+     "rest_days": 20,
+     "matches_21d": 1,
+     "form": "LLLWW",
+     "form_pts": 6
+    }
+   },
+   "table": {
+    "home": "4th in the table",
+    "away": "9th in the table"
+   },
+   "absences": {
+    "home": [],
+    "away": []
+   },
+   "adjustment": [
+    1.0,
+    1.0
+   ],
+   "summary": "Real Madrid are clear favourites at 60%, with the draw at 21%. Expected goals 2.36-1.29 point to a high-scoring game; the most likely score is 2-1. Real Madrid come in with good form (WLWWL), Villarreal with mixed form (LLLWW). No bet clears the value threshold: the market price looks fair. Confidence: moderate (60/100), team news not checked."
   },
   {
    "id": "SP1-20261011-17",
@@ -5982,10 +4767,6 @@
     "O/U 3.5": {
      "Over": 0.2847,
      "Under": 0.7153
-    },
-    "AH +0": {
-     "Home": 0.5455,
-     "Away": 0.4545
     }
    },
    "evals": [
@@ -6084,30 +4865,6 @@
      "selection": "Under",
      "model_p": 0.7153,
      "fair_odds": 1.4
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5455,
-     "fair_odds": 1.83,
-     "market_p": 0.4859,
-     "odds": 2.06,
-     "avg_odds": 2.0,
-     "edge": 0.0596,
-     "p_bet": 0.4978,
-     "ev": 0.0184
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4545,
-     "fair_odds": 2.2,
-     "market_p": 0.5141,
-     "odds": 1.9,
-     "avg_odds": 1.9,
-     "edge": -0.0596,
-     "p_bet": 0.5022,
-     "ev": -0.0331
     }
    ],
    "best_bet": null,
@@ -6199,10 +4956,6 @@
     "O/U 3.5": {
      "Over": 0.2802,
      "Under": 0.7198
-    },
-    "AH -0.75": {
-     "Home": 0.4625,
-     "Away": 0.5375
     }
    },
    "evals": [
@@ -6301,30 +5054,6 @@
      "selection": "Under",
      "model_p": 0.7198,
      "fair_odds": 1.39
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Home",
-     "model_p": 0.4625,
-     "fair_odds": 2.16,
-     "market_p": 0.5,
-     "odds": 1.93,
-     "avg_odds": 1.93,
-     "edge": -0.0375,
-     "p_bet": 0.4925,
-     "ev": -0.0437
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Away",
-     "model_p": 0.5375,
-     "fair_odds": 1.86,
-     "market_p": 0.5,
-     "odds": 1.93,
-     "avg_odds": 1.93,
-     "edge": 0.0375,
-     "p_bet": 0.5075,
-     "ev": -0.0181
     }
    ],
    "best_bet": null,
@@ -6416,10 +5145,6 @@
     "O/U 3.5": {
      "Over": 0.3269,
      "Under": 0.6731
-    },
-    "AH -0.75": {
-     "Home": 0.5157,
-     "Away": 0.4843
     }
    },
    "evals": [
@@ -6518,30 +5243,6 @@
      "selection": "Under",
      "model_p": 0.6731,
      "fair_odds": 1.49
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Home",
-     "model_p": 0.5157,
-     "fair_odds": 1.94,
-     "market_p": 0.5195,
-     "odds": 1.85,
-     "avg_odds": 1.85,
-     "edge": -0.0038,
-     "p_bet": 0.5187,
-     "ev": -0.0357
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Away",
-     "model_p": 0.4843,
-     "fair_odds": 2.06,
-     "market_p": 0.4805,
-     "odds": 2.0,
-     "avg_odds": 2.0,
-     "edge": 0.0038,
-     "p_bet": 0.4813,
-     "ev": -0.0331
     }
    ],
    "best_bet": null,
@@ -6633,10 +5334,6 @@
     "O/U 3.5": {
      "Over": 0.3764,
      "Under": 0.6236
-    },
-    "AH -0.25": {
-     "Home": 0.481,
-     "Away": 0.519
     }
    },
    "evals": [
@@ -6735,30 +5432,6 @@
      "selection": "Under",
      "model_p": 0.6236,
      "fair_odds": 1.6
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Home",
-     "model_p": 0.481,
-     "fair_odds": 2.08,
-     "market_p": 0.5013,
-     "odds": 1.92,
-     "avg_odds": 1.92,
-     "edge": -0.0203,
-     "p_bet": 0.4972,
-     "ev": -0.0395
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Away",
-     "model_p": 0.519,
-     "fair_odds": 1.93,
-     "market_p": 0.4987,
-     "odds": 1.93,
-     "avg_odds": 1.93,
-     "edge": 0.0203,
-     "p_bet": 0.5028,
-     "ev": -0.0259
     }
    ],
    "best_bet": null,
@@ -6787,264 +5460,6 @@
    },
    "adjustment": null,
    "summary": "The model sees a finely balanced game (42% / 25% / 33%). Expected goals 1.67-1.45 point to a high-scoring game; the most likely score is 1-1. No bet clears the value threshold: the market price looks fair. Confidence: moderate (62/100), team news not checked."
-  },
-  {
-   "id": "SP1-20261012-21",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "country": "ESP",
-   "date": "2026-10-12",
-   "time": "20:00",
-   "home": "Levante",
-   "away": "Sevilla",
-   "probs": {
-    "H": 0.4944,
-    "D": 0.2666,
-    "A": 0.239
-   },
-   "xg": {
-    "home": 1.6221,
-    "away": 1.0601
-   },
-   "likely_score": "1-1",
-   "top_scores": [
-    {
-     "score": "1-1",
-     "p": 0.1273
-    },
-    {
-     "score": "1-0",
-     "p": 0.1017
-    },
-    {
-     "score": "2-1",
-     "p": 0.0956
-    },
-    {
-     "score": "2-0",
-     "p": 0.0901
-    },
-    {
-     "score": "0-0",
-     "p": 0.0779
-    }
-   ],
-   "markets": {
-    "1X2": {
-     "H": 0.4944,
-     "D": 0.2666,
-     "A": 0.239
-    },
-    "BTTS": {
-     "Yes": 0.5337,
-     "No": 0.4663
-    },
-    "O/U 1.5": {
-     "Over": 0.7571,
-     "Under": 0.2429
-    },
-    "O/U 2.5": {
-     "Over": 0.5012,
-     "Under": 0.4988
-    },
-    "O/U 3.5": {
-     "Over": 0.2809,
-     "Under": 0.7191
-    },
-    "AH -1": {
-     "Home": 0.3443,
-     "Away": 0.6557
-    },
-    "AH +0": {
-     "Home": 0.6742,
-     "Away": 0.3258
-    }
-   },
-   "evals": [
-    {
-     "market": "1X2",
-     "selection": "H",
-     "model_p": 0.4944,
-     "fair_odds": 2.02,
-     "market_p": 0.3602,
-     "odds": 2.74,
-     "avg_odds": 2.6,
-     "edge": 0.1342,
-     "p_bet": 0.3871,
-     "ev": 0.0606
-    },
-    {
-     "market": "1X2",
-     "selection": "D",
-     "model_p": 0.2666,
-     "fair_odds": 3.75,
-     "market_p": 0.2877,
-     "odds": 3.41,
-     "avg_odds": 3.25,
-     "edge": -0.0211,
-     "p_bet": 0.2835,
-     "ev": -0.0332
-    },
-    {
-     "market": "1X2",
-     "selection": "A",
-     "model_p": 0.239,
-     "fair_odds": 4.18,
-     "market_p": 0.352,
-     "odds": 2.79,
-     "avg_odds": 2.66,
-     "edge": -0.1131,
-     "p_bet": 0.3294,
-     "ev": -0.0809
-    },
-    {
-     "market": "BTTS",
-     "selection": "Yes",
-     "model_p": 0.5337,
-     "fair_odds": 1.87
-    },
-    {
-     "market": "BTTS",
-     "selection": "No",
-     "model_p": 0.4663,
-     "fair_odds": 2.14
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Over",
-     "model_p": 0.7571,
-     "fair_odds": 1.32
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Under",
-     "model_p": 0.2429,
-     "fair_odds": 4.12
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Over",
-     "model_p": 0.5012,
-     "fair_odds": 2.0,
-     "market_p": 0.4638,
-     "odds": 2.11,
-     "avg_odds": 2.03,
-     "edge": 0.0375,
-     "p_bet": 0.4712,
-     "ev": -0.0057
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Under",
-     "model_p": 0.4988,
-     "fair_odds": 2.0,
-     "market_p": 0.5362,
-     "odds": 1.84,
-     "avg_odds": 1.76,
-     "edge": -0.0375,
-     "p_bet": 0.5288,
-     "ev": -0.0271
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Over",
-     "model_p": 0.2809,
-     "fair_odds": 3.56
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Under",
-     "model_p": 0.7191,
-     "fair_odds": 1.39
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.3443,
-     "fair_odds": 2.9,
-     "market_p": 0.2179,
-     "odds": 4.45,
-     "avg_odds": 4.45,
-     "edge": 0.1263,
-     "p_bet": 0.2432,
-     "ev": 0.0634
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.6557,
-     "fair_odds": 1.53,
-     "market_p": 0.7821,
-     "odds": 1.24,
-     "avg_odds": 1.24,
-     "edge": -0.1263,
-     "p_bet": 0.7568,
-     "ev": -0.0475
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.6742,
-     "fair_odds": 1.48,
-     "market_p": 0.5032,
-     "odds": 1.96,
-     "avg_odds": 1.94,
-     "edge": 0.171,
-     "p_bet": 0.5374,
-     "ev": 0.0391
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.3258,
-     "fair_odds": 3.07,
-     "market_p": 0.4968,
-     "odds": 1.98,
-     "avg_odds": 1.96,
-     "edge": -0.171,
-     "p_bet": 0.4626,
-     "ev": -0.0616
-    }
-   ],
-   "best_bet": null,
-   "max_ev": 0.0634,
-   "edge": null,
-   "confidence": 56,
-   "flagged": true,
-   "has_xg": true,
-   "xg_share": 0.9694,
-   "elo_diff": -7.0,
-   "elo_source": "built-in",
-   "injury_data": false,
-   "book_spread": null,
-   "factors": [],
-   "context": {
-    "home": {
-     "rest_days": 22,
-     "matches_21d": 0,
-     "form": "DWDLL",
-     "form_pts": 5
-    },
-    "away": {
-     "rest_days": 23,
-     "matches_21d": 0,
-     "form": "LDWWL",
-     "form_pts": 7
-    }
-   },
-   "table": {
-    "home": "17th in the table",
-    "away": "5th in the table"
-   },
-   "absences": {
-    "home": [],
-    "away": []
-   },
-   "adjustment": [
-    1.0,
-    1.0
-   ],
-   "summary": "Levante are favourites at 49%, with the draw at 27%. Expected goals 1.62-1.06 point to an average number of goals; the most likely score is 1-1. Levante come in with mixed form (DWDLL), Sevilla with mixed form (LDWWL). No bet clears the value threshold: the market price looks fair. Confidence: moderate (56/100), team news not checked."
   },
   {
    "id": "D1-20261009-22",
@@ -7108,10 +5523,6 @@
     "O/U 3.5": {
      "Over": 0.3388,
      "Under": 0.6612
-    },
-    "AH -1.5": {
-     "Home": 0.5083,
-     "Away": 0.4917
     }
    },
    "evals": [
@@ -7210,30 +5621,6 @@
      "selection": "Under",
      "model_p": 0.6612,
      "fair_odds": 1.51
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.5083,
-     "fair_odds": 1.97,
-     "market_p": 0.4991,
-     "odds": 1.98,
-     "avg_odds": 1.94,
-     "edge": 0.0091,
-     "p_bet": 0.501,
-     "ev": -0.0081
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.4917,
-     "fair_odds": 2.03,
-     "market_p": 0.5009,
-     "odds": 1.96,
-     "avg_odds": 1.94,
-     "edge": -0.0091,
-     "p_bet": 0.499,
-     "ev": -0.0219
     }
    ],
    "best_bet": null,
@@ -7262,6 +5649,208 @@
    },
    "adjustment": null,
    "summary": "Dortmund are clear favourites at 74%, with the draw at 18%. Expected goals 2.31-0.65 point to an average number of goals; the most likely score is 2-0. Elo ratings favour Dortmund by 242 points. No bet clears the value threshold: the market price looks fair. Confidence: moderate (56/100), team news not checked."
+  },
+  {
+   "id": "D1-20261010-23",
+   "league": "D1",
+   "league_name": "Bundesliga",
+   "country": "GER",
+   "date": "2026-10-10",
+   "time": "14:30",
+   "home": "Augsburg",
+   "away": "Bayern Munich",
+   "probs": {
+    "H": 0.1785,
+    "D": 0.1792,
+    "A": 0.6423
+   },
+   "xg": {
+    "home": 1.4639,
+    "away": 2.8069
+   },
+   "likely_score": "1-2",
+   "top_scores": [
+    {
+     "score": "1-2",
+     "p": 0.0827
+    },
+    {
+     "score": "1-3",
+     "p": 0.0774
+    },
+    {
+     "score": "1-1",
+     "p": 0.0636
+    },
+    {
+     "score": "2-2",
+     "p": 0.0605
+    },
+    {
+     "score": "2-3",
+     "p": 0.0566
+    }
+   ],
+   "markets": {
+    "1X2": {
+     "H": 0.1785,
+     "D": 0.1792,
+     "A": 0.6423
+    },
+    "BTTS": {
+     "Yes": 0.7256,
+     "No": 0.2744
+    },
+    "O/U 1.5": {
+     "Over": 0.9292,
+     "Under": 0.0708
+    },
+    "O/U 2.5": {
+     "Over": 0.7937,
+     "Under": 0.2063
+    },
+    "O/U 3.5": {
+     "Over": 0.6076,
+     "Under": 0.3924
+    }
+   },
+   "evals": [
+    {
+     "market": "1X2",
+     "selection": "H",
+     "model_p": 0.1785,
+     "fair_odds": 5.6,
+     "market_p": 0.0969,
+     "odds": 10.39,
+     "avg_odds": 9.71,
+     "edge": 0.0815,
+     "p_bet": 0.1132,
+     "ev": 0.1764
+    },
+    {
+     "market": "1X2",
+     "selection": "D",
+     "model_p": 0.1792,
+     "fair_odds": 5.58,
+     "market_p": 0.1269,
+     "odds": 7.94,
+     "avg_odds": 7.42,
+     "edge": 0.0523,
+     "p_bet": 0.1374,
+     "ev": 0.09
+    },
+    {
+     "market": "1X2",
+     "selection": "A",
+     "model_p": 0.6423,
+     "fair_odds": 1.56,
+     "market_p": 0.7762,
+     "odds": 1.24,
+     "avg_odds": 1.21,
+     "edge": -0.1338,
+     "p_bet": 0.7494,
+     "ev": -0.0707
+    },
+    {
+     "market": "BTTS",
+     "selection": "Yes",
+     "model_p": 0.7256,
+     "fair_odds": 1.38
+    },
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "model_p": 0.2744,
+     "fair_odds": 3.64
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Over",
+     "model_p": 0.9292,
+     "fair_odds": 1.08
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Under",
+     "model_p": 0.0708,
+     "fair_odds": 14.11
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Over",
+     "model_p": 0.7937,
+     "fair_odds": 1.26,
+     "market_p": 0.8149,
+     "odds": 1.18,
+     "avg_odds": 1.17,
+     "edge": -0.0212,
+     "p_bet": 0.8107,
+     "ev": -0.0434
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "model_p": 0.2063,
+     "fair_odds": 4.85,
+     "market_p": 0.1851,
+     "odds": 5.5,
+     "avg_odds": 5.14,
+     "edge": 0.0212,
+     "p_bet": 0.1893,
+     "ev": 0.0406
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Over",
+     "model_p": 0.6076,
+     "fair_odds": 1.65
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "model_p": 0.3924,
+     "fair_odds": 2.55
+    }
+   ],
+   "best_bet": null,
+   "max_ev": 0.1764,
+   "edge": null,
+   "confidence": 53,
+   "flagged": true,
+   "has_xg": true,
+   "xg_share": 1.0,
+   "elo_diff": -249.0,
+   "elo_source": "built-in",
+   "injury_data": false,
+   "book_spread": null,
+   "factors": [],
+   "context": {
+    "home": {
+     "rest_days": 21,
+     "matches_21d": 1,
+     "form": "LWWDL",
+     "form_pts": 7
+    },
+    "away": {
+     "rest_days": 22,
+     "matches_21d": 0,
+     "form": "WWDWW",
+     "form_pts": 13
+    }
+   },
+   "table": {
+    "home": "5th in the table",
+    "away": "2nd in the table"
+   },
+   "absences": {
+    "home": [],
+    "away": []
+   },
+   "adjustment": [
+    1.0,
+    1.0
+   ],
+   "summary": "Bayern Munich are clear favourites at 64%, with the draw at 18%. Expected goals 1.46-2.81 point to a high-scoring game; the most likely score is 1-2. Augsburg come in with mixed form (LWWDL), Bayern Munich with excellent form (WWDWW). Elo ratings favour Bayern Munich by 249 points. No bet clears the value threshold: the market price looks fair. Confidence: moderate (53/100), team news not checked."
   },
   {
    "id": "D1-20261010-24",
@@ -7325,10 +5914,6 @@
     "O/U 3.5": {
      "Over": 0.5472,
      "Under": 0.4528
-    },
-    "AH +0.25": {
-     "Home": 0.5539,
-     "Away": 0.4461
     }
    },
    "evals": [
@@ -7427,30 +6012,6 @@
      "selection": "Under",
      "model_p": 0.4528,
      "fair_odds": 2.21
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Home",
-     "model_p": 0.5539,
-     "fair_odds": 1.81,
-     "market_p": 0.5117,
-     "odds": 1.88,
-     "avg_odds": 1.88,
-     "edge": 0.0422,
-     "p_bet": 0.5201,
-     "ev": -0.0197
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Away",
-     "model_p": 0.4461,
-     "fair_odds": 2.24,
-     "market_p": 0.4883,
-     "odds": 1.97,
-     "avg_odds": 1.97,
-     "edge": -0.0422,
-     "p_bet": 0.4799,
-     "ev": -0.0486
     }
    ],
    "best_bet": null,
@@ -7542,10 +6103,6 @@
     "O/U 3.5": {
      "Over": 0.3804,
      "Under": 0.6196
-    },
-    "AH -0.25": {
-     "Home": 0.5191,
-     "Away": 0.4809
     }
    },
    "evals": [
@@ -7644,30 +6201,6 @@
      "selection": "Under",
      "model_p": 0.6196,
      "fair_odds": 1.61
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Home",
-     "model_p": 0.5191,
-     "fair_odds": 1.93,
-     "market_p": 0.4961,
-     "odds": 1.94,
-     "avg_odds": 1.94,
-     "edge": 0.023,
-     "p_bet": 0.5007,
-     "ev": -0.0251
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Away",
-     "model_p": 0.4809,
-     "fair_odds": 2.08,
-     "market_p": 0.5039,
-     "odds": 1.91,
-     "avg_odds": 1.91,
-     "edge": -0.023,
-     "p_bet": 0.4993,
-     "ev": -0.0405
     }
    ],
    "best_bet": null,
@@ -7759,10 +6292,6 @@
     "O/U 3.5": {
      "Over": 0.4408,
      "Under": 0.5592
-    },
-    "AH -1.5": {
-     "Home": 0.4392,
-     "Away": 0.5608
     }
    },
    "evals": [
@@ -7861,30 +6390,6 @@
      "selection": "Under",
      "model_p": 0.5592,
      "fair_odds": 1.79
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.4392,
-     "fair_odds": 2.28,
-     "market_p": 0.4542,
-     "odds": 2.19,
-     "avg_odds": 2.15,
-     "edge": -0.015,
-     "p_bet": 0.4512,
-     "ev": -0.0119
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.5608,
-     "fair_odds": 1.78,
-     "market_p": 0.5458,
-     "odds": 1.79,
-     "avg_odds": 1.79,
-     "edge": 0.015,
-     "p_bet": 0.5488,
-     "ev": -0.0176
     }
    ],
    "best_bet": null,
@@ -7976,10 +6481,6 @@
     "O/U 3.5": {
      "Over": 0.5217,
      "Under": 0.4783
-    },
-    "AH -1": {
-     "Home": 0.5333,
-     "Away": 0.4667
     }
    },
    "evals": [
@@ -8078,30 +6579,6 @@
      "selection": "Under",
      "model_p": 0.4783,
      "fair_odds": 2.09
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.5333,
-     "fair_odds": 1.88,
-     "market_p": 0.5278,
-     "odds": 1.83,
-     "avg_odds": 1.83,
-     "edge": 0.0055,
-     "p_bet": 0.5289,
-     "ev": -0.0254
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.4667,
-     "fair_odds": 2.14,
-     "market_p": 0.4722,
-     "odds": 2.05,
-     "avg_odds": 2.04,
-     "edge": -0.0055,
-     "p_bet": 0.4711,
-     "ev": -0.0271
     }
    ],
    "best_bet": null,
@@ -8193,10 +6670,6 @@
     "O/U 3.5": {
      "Over": 0.3852,
      "Under": 0.6148
-    },
-    "AH -0.75": {
-     "Home": 0.587,
-     "Away": 0.413
     }
    },
    "evals": [
@@ -8295,30 +6768,6 @@
      "selection": "Under",
      "model_p": 0.6148,
      "fair_odds": 1.63
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Home",
-     "model_p": 0.587,
-     "fair_odds": 1.7,
-     "market_p": 0.5323,
-     "odds": 1.81,
-     "avg_odds": 1.81,
-     "edge": 0.0547,
-     "p_bet": 0.5432,
-     "ev": -0.0148
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Away",
-     "model_p": 0.413,
-     "fair_odds": 2.42,
-     "market_p": 0.4677,
-     "odds": 2.06,
-     "avg_odds": 2.06,
-     "edge": -0.0547,
-     "p_bet": 0.4568,
-     "ev": -0.0524
     }
    ],
    "best_bet": null,
@@ -8410,18 +6859,6 @@
     "O/U 3.5": {
      "Over": 0.2439,
      "Under": 0.7561
-    },
-    "AH +0": {
-     "Home": 0.5084,
-     "Away": 0.4916
-    },
-    "AH +0.25": {
-     "Home": 0.5918,
-     "Away": 0.4082
-    },
-    "AH +1": {
-     "Home": 0.8079,
-     "Away": 0.1921
     }
    },
    "evals": [
@@ -8520,78 +6957,6 @@
      "selection": "Under",
      "model_p": 0.7561,
      "fair_odds": 1.32
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5084,
-     "fair_odds": 1.97,
-     "market_p": 0.4268,
-     "odds": 2.31,
-     "avg_odds": 2.31,
-     "edge": 0.0816,
-     "p_bet": 0.4431,
-     "ev": 0.0167
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4916,
-     "fair_odds": 2.03,
-     "market_p": 0.5732,
-     "odds": 1.72,
-     "avg_odds": 1.72,
-     "edge": -0.0816,
-     "p_bet": 0.5569,
-     "ev": -0.0299
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Home",
-     "model_p": 0.5918,
-     "fair_odds": 1.69,
-     "market_p": 0.5195,
-     "odds": 1.85,
-     "avg_odds": 1.85,
-     "edge": 0.0723,
-     "p_bet": 0.5339,
-     "ev": -0.0104
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Away",
-     "model_p": 0.4082,
-     "fair_odds": 2.45,
-     "market_p": 0.4805,
-     "odds": 2.0,
-     "avg_odds": 2.0,
-     "edge": -0.0723,
-     "p_bet": 0.4661,
-     "ev": -0.058
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.8079,
-     "fair_odds": 1.24,
-     "market_p": 0.7411,
-     "odds": 1.31,
-     "avg_odds": 1.31,
-     "edge": 0.0668,
-     "p_bet": 0.7545,
-     "ev": -0.0094
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.1921,
-     "fair_odds": 5.21,
-     "market_p": 0.2589,
-     "odds": 3.75,
-     "avg_odds": 3.75,
-     "edge": -0.0668,
-     "p_bet": 0.2455,
-     "ev": -0.0639
     }
    ],
    "best_bet": null,
@@ -8696,18 +7061,6 @@
     "O/U 3.5": {
      "Over": 0.3768,
      "Under": 0.6232
-    },
-    "AH -1.5": {
-     "Home": 0.36,
-     "Away": 0.64
-    },
-    "AH -1.25": {
-     "Home": 0.4061,
-     "Away": 0.5939
-    },
-    "AH -1": {
-     "Home": 0.4656,
-     "Away": 0.5344
     }
    },
    "evals": [
@@ -8818,78 +7171,6 @@
      "edge": 0.0289,
      "p_bet": 0.6,
      "ev": -0.016
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.36,
-     "fair_odds": 2.78,
-     "market_p": 0.435,
-     "odds": 2.26,
-     "avg_odds": 2.26,
-     "edge": -0.075,
-     "p_bet": 0.42,
-     "ev": -0.0508
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.64,
-     "fair_odds": 1.56,
-     "market_p": 0.565,
-     "odds": 1.74,
-     "avg_odds": 1.74,
-     "edge": 0.075,
-     "p_bet": 0.58,
-     "ev": 0.0092
-    },
-    {
-     "market": "AH -1.25",
-     "selection": "Home",
-     "model_p": 0.4061,
-     "fair_odds": 2.46,
-     "market_p": 0.4948,
-     "odds": 1.94,
-     "avg_odds": 1.94,
-     "edge": -0.0887,
-     "p_bet": 0.477,
-     "ev": -0.0661
-    },
-    {
-     "market": "AH -1.25",
-     "selection": "Away",
-     "model_p": 0.5939,
-     "fair_odds": 1.68,
-     "market_p": 0.5052,
-     "odds": 1.9,
-     "avg_odds": 1.9,
-     "edge": 0.0887,
-     "p_bet": 0.523,
-     "ev": -0.0057
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.4656,
-     "fair_odds": 2.15,
-     "market_p": 0.5371,
-     "odds": 1.81,
-     "avg_odds": 1.81,
-     "edge": -0.0715,
-     "p_bet": 0.5228,
-     "ev": -0.0416
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.5344,
-     "fair_odds": 1.87,
-     "market_p": 0.4629,
-     "odds": 2.1,
-     "avg_odds": 2.1,
-     "edge": 0.0715,
-     "p_bet": 0.4772,
-     "ev": 0.0017
     }
    ],
    "best_bet": null,
@@ -8994,10 +7275,6 @@
     "O/U 3.5": {
      "Over": 0.3543,
      "Under": 0.6457
-    },
-    "AH +0": {
-     "Home": 0.5314,
-     "Away": 0.4686
     }
    },
    "evals": [
@@ -9096,30 +7373,6 @@
      "selection": "Under",
      "model_p": 0.6457,
      "fair_odds": 1.55
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.5314,
-     "fair_odds": 1.88,
-     "market_p": 0.4987,
-     "odds": 1.98,
-     "avg_odds": 1.96,
-     "edge": 0.0327,
-     "p_bet": 0.5053,
-     "ev": 0.0003
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.4686,
-     "fair_odds": 2.13,
-     "market_p": 0.5013,
-     "odds": 1.97,
-     "avg_odds": 1.94,
-     "edge": -0.0327,
-     "p_bet": 0.4947,
-     "ev": -0.0187
     }
    ],
    "best_bet": null,
@@ -9211,18 +7464,6 @@
     "O/U 3.5": {
      "Over": 0.2371,
      "Under": 0.7629
-    },
-    "AH +0": {
-     "Home": 0.4037,
-     "Away": 0.5963
-    },
-    "AH +0.5": {
-     "Home": 0.5758,
-     "Away": 0.4242
-    },
-    "AH +1": {
-     "Home": 0.7373,
-     "Away": 0.2627
     }
    },
    "evals": [
@@ -9321,78 +7562,6 @@
      "selection": "Under",
      "model_p": 0.7629,
      "fair_odds": 1.31
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.4037,
-     "fair_odds": 2.48,
-     "market_p": 0.3102,
-     "odds": 3.18,
-     "avg_odds": 3.18,
-     "edge": 0.0935,
-     "p_bet": 0.3289,
-     "ev": 0.0326
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.5963,
-     "fair_odds": 1.68,
-     "market_p": 0.6898,
-     "odds": 1.43,
-     "avg_odds": 1.43,
-     "edge": -0.0935,
-     "p_bet": 0.6711,
-     "ev": -0.0287
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Home",
-     "model_p": 0.5758,
-     "fair_odds": 1.74,
-     "market_p": 0.5,
-     "odds": 1.93,
-     "avg_odds": 1.93,
-     "edge": 0.0758,
-     "p_bet": 0.5152,
-     "ev": -0.0058
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Away",
-     "model_p": 0.4242,
-     "fair_odds": 2.36,
-     "market_p": 0.5,
-     "odds": 1.93,
-     "avg_odds": 1.93,
-     "edge": -0.0758,
-     "p_bet": 0.4848,
-     "ev": -0.0642
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.7373,
-     "fair_odds": 1.36,
-     "market_p": 0.6757,
-     "odds": 1.44,
-     "avg_odds": 1.44,
-     "edge": 0.0617,
-     "p_bet": 0.688,
-     "ev": -0.0072
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.2627,
-     "fair_odds": 3.81,
-     "market_p": 0.3243,
-     "odds": 3.0,
-     "avg_odds": 3.0,
-     "edge": -0.0617,
-     "p_bet": 0.312,
-     "ev": -0.05
     }
    ],
    "best_bet": null,
@@ -9497,18 +7666,6 @@
     "O/U 3.5": {
      "Over": 0.2499,
      "Under": 0.7501
-    },
-    "AH -1.5": {
-     "Home": 0.2393,
-     "Away": 0.7607
-    },
-    "AH -1": {
-     "Home": 0.3101,
-     "Away": 0.6899
-    },
-    "AH -0.75": {
-     "Home": 0.399,
-     "Away": 0.601
     }
    },
    "evals": [
@@ -9607,78 +7764,6 @@
      "selection": "Under",
      "model_p": 0.7501,
      "fair_odds": 1.33
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.2393,
-     "fair_odds": 4.18,
-     "market_p": 0.3479,
-     "odds": 2.83,
-     "avg_odds": 2.83,
-     "edge": -0.1086,
-     "p_bet": 0.3262,
-     "ev": -0.0768
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.7607,
-     "fair_odds": 1.31,
-     "market_p": 0.6521,
-     "odds": 1.51,
-     "avg_odds": 1.51,
-     "edge": 0.1086,
-     "p_bet": 0.6738,
-     "ev": 0.0174
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.3101,
-     "fair_odds": 3.22,
-     "market_p": 0.4667,
-     "odds": 2.08,
-     "avg_odds": 2.08,
-     "edge": -0.1566,
-     "p_bet": 0.4354,
-     "ev": -0.0729
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.6899,
-     "fair_odds": 1.45,
-     "market_p": 0.5333,
-     "odds": 1.82,
-     "avg_odds": 1.82,
-     "edge": 0.1566,
-     "p_bet": 0.5646,
-     "ev": 0.0213
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Home",
-     "model_p": 0.399,
-     "fair_odds": 2.51,
-     "market_p": 0.5412,
-     "odds": 1.78,
-     "avg_odds": 1.78,
-     "edge": -0.1423,
-     "p_bet": 0.5128,
-     "ev": -0.0773
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Away",
-     "model_p": 0.601,
-     "fair_odds": 1.66,
-     "market_p": 0.4588,
-     "odds": 2.1,
-     "avg_odds": 2.1,
-     "edge": 0.1423,
-     "p_bet": 0.4872,
-     "ev": 0.0205
     }
    ],
    "best_bet": null,
@@ -9783,18 +7868,6 @@
     "O/U 3.5": {
      "Over": 0.3485,
      "Under": 0.6515
-    },
-    "AH +0": {
-     "Home": 0.4661,
-     "Away": 0.5339
-    },
-    "AH +0.75": {
-     "Home": 0.6715,
-     "Away": 0.3285
-    },
-    "AH +1": {
-     "Home": 0.7532,
-     "Away": 0.2468
     }
    },
    "evals": [
@@ -9893,78 +7966,6 @@
      "selection": "Under",
      "model_p": 0.6515,
      "fair_odds": 1.53
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.4661,
-     "fair_odds": 2.15,
-     "market_p": 0.3028,
-     "odds": 3.04,
-     "avg_odds": 3.04,
-     "edge": 0.1633,
-     "p_bet": 0.3354,
-     "ev": 0.0145
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.5339,
-     "fair_odds": 1.87,
-     "market_p": 0.6972,
-     "odds": 1.32,
-     "avg_odds": 1.32,
-     "edge": -0.1633,
-     "p_bet": 0.6646,
-     "ev": -0.0906
-    },
-    {
-     "market": "AH +0.75",
-     "selection": "Home",
-     "model_p": 0.6715,
-     "fair_odds": 1.49,
-     "market_p": 0.5311,
-     "odds": 1.81,
-     "avg_odds": 1.81,
-     "edge": 0.1404,
-     "p_bet": 0.5592,
-     "ev": 0.0109
-    },
-    {
-     "market": "AH +0.75",
-     "selection": "Away",
-     "model_p": 0.3285,
-     "fair_odds": 3.04,
-     "market_p": 0.4689,
-     "odds": 2.05,
-     "avg_odds": 2.05,
-     "edge": -0.1404,
-     "p_bet": 0.4408,
-     "ev": -0.0869
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.7532,
-     "fair_odds": 1.33,
-     "market_p": 0.6256,
-     "odds": 1.55,
-     "avg_odds": 1.55,
-     "edge": 0.1276,
-     "p_bet": 0.6511,
-     "ev": 0.0074
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.2468,
-     "fair_odds": 4.05,
-     "market_p": 0.3744,
-     "odds": 2.59,
-     "avg_odds": 2.59,
-     "edge": -0.1276,
-     "p_bet": 0.3489,
-     "ev": -0.0775
     }
    ],
    "best_bet": null,
@@ -10069,14 +8070,6 @@
     "O/U 3.5": {
      "Over": 0.2497,
      "Under": 0.7503
-    },
-    "AH +1": {
-     "Home": 0.6034,
-     "Away": 0.3966
-    },
-    "AH +1.5": {
-     "Home": 0.6999,
-     "Away": 0.3001
     }
    },
    "evals": [
@@ -10175,54 +8168,6 @@
      "selection": "Under",
      "model_p": 0.7503,
      "fair_odds": 1.33
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.6034,
-     "fair_odds": 1.66,
-     "market_p": 0.5155,
-     "odds": 1.88,
-     "avg_odds": 1.88,
-     "edge": 0.0879,
-     "p_bet": 0.5331,
-     "ev": 0.0017
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.3966,
-     "fair_odds": 2.52,
-     "market_p": 0.4845,
-     "odds": 2.02,
-     "avg_odds": 2.0,
-     "edge": -0.0879,
-     "p_bet": 0.4669,
-     "ev": -0.043
-    },
-    {
-     "market": "AH +1.5",
-     "selection": "Home",
-     "model_p": 0.6999,
-     "fair_odds": 1.43,
-     "market_p": 0.6303,
-     "odds": 1.56,
-     "avg_odds": 1.56,
-     "edge": 0.0696,
-     "p_bet": 0.6442,
-     "ev": 0.005
-    },
-    {
-     "market": "AH +1.5",
-     "selection": "Away",
-     "model_p": 0.3001,
-     "fair_odds": 3.33,
-     "market_p": 0.3697,
-     "odds": 2.66,
-     "avg_odds": 2.66,
-     "edge": -0.0696,
-     "p_bet": 0.3558,
-     "ev": -0.0537
     }
    ],
    "best_bet": null,
@@ -10327,10 +8272,6 @@
     "O/U 3.5": {
      "Over": 0.4901,
      "Under": 0.5099
-    },
-    "AH -1": {
-     "Home": 0.5409,
-     "Away": 0.4591
     }
    },
    "evals": [
@@ -10429,34 +8370,10 @@
      "selection": "Under",
      "model_p": 0.5099,
      "fair_odds": 1.96
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.5409,
-     "fair_odds": 1.85,
-     "market_p": 0.4716,
-     "odds": 2.11,
-     "avg_odds": 2.05,
-     "edge": 0.0693,
-     "p_bet": 0.4855,
-     "ev": 0.0192
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.4591,
-     "fair_odds": 2.18,
-     "market_p": 0.5284,
-     "odds": 1.86,
-     "avg_odds": 1.83,
-     "edge": -0.0693,
-     "p_bet": 0.5145,
-     "ev": -0.0339
     }
    ],
    "best_bet": null,
-   "max_ev": 0.0192,
+   "max_ev": -0.0066,
    "edge": null,
    "confidence": 58,
    "flagged": false,
@@ -10544,18 +8461,6 @@
     "O/U 3.5": {
      "Over": 0.4528,
      "Under": 0.5472
-    },
-    "AH -1": {
-     "Home": 0.3906,
-     "Away": 0.6094
-    },
-    "AH -0.25": {
-     "Home": 0.5849,
-     "Away": 0.4151
-    },
-    "AH +0": {
-     "Home": 0.6714,
-     "Away": 0.3286
     }
    },
    "evals": [
@@ -10666,82 +8571,10 @@
      "edge": -0.0442,
      "p_bet": 0.5825,
      "ev": -0.0273
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.3906,
-     "fair_odds": 2.56,
-     "market_p": 0.2872,
-     "odds": 3.35,
-     "avg_odds": 3.35,
-     "edge": 0.1034,
-     "p_bet": 0.3079,
-     "ev": 0.0249
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.6094,
-     "fair_odds": 1.64,
-     "market_p": 0.7128,
-     "odds": 1.35,
-     "avg_odds": 1.35,
-     "edge": -0.1034,
-     "p_bet": 0.6921,
-     "ev": -0.0519
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Home",
-     "model_p": 0.5849,
-     "fair_odds": 1.71,
-     "market_p": 0.4948,
-     "odds": 1.94,
-     "avg_odds": 1.94,
-     "edge": 0.0901,
-     "p_bet": 0.5128,
-     "ev": -0.0046
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Away",
-     "model_p": 0.4151,
-     "fair_odds": 2.41,
-     "market_p": 0.5052,
-     "odds": 1.9,
-     "avg_odds": 1.9,
-     "edge": -0.0901,
-     "p_bet": 0.4872,
-     "ev": -0.0659
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.6714,
-     "fair_odds": 1.49,
-     "market_p": 0.5827,
-     "odds": 1.69,
-     "avg_odds": 1.69,
-     "edge": 0.0887,
-     "p_bet": 0.6005,
-     "ev": 0.0114
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.3286,
-     "fair_odds": 3.04,
-     "market_p": 0.4173,
-     "odds": 2.36,
-     "avg_odds": 2.36,
-     "edge": -0.0887,
-     "p_bet": 0.3995,
-     "ev": -0.044
     }
    ],
    "best_bet": null,
-   "max_ev": 0.0249,
+   "max_ev": 0.0192,
    "edge": null,
    "confidence": 58,
    "flagged": true,
@@ -10842,10 +8675,6 @@
     "O/U 3.5": {
      "Over": 0.2802,
      "Under": 0.7198
-    },
-    "AH -1.25": {
-     "Home": 0.4209,
-     "Away": 0.5791
     }
    },
    "evals": [
@@ -10944,30 +8773,6 @@
      "selection": "Under",
      "model_p": 0.7198,
      "fair_odds": 1.39
-    },
-    {
-     "market": "AH -1.25",
-     "selection": "Home",
-     "model_p": 0.4209,
-     "fair_odds": 2.38,
-     "market_p": 0.4793,
-     "odds": 2.01,
-     "avg_odds": 2.01,
-     "edge": -0.0583,
-     "p_bet": 0.4676,
-     "ev": -0.0527
-    },
-    {
-     "market": "AH -1.25",
-     "selection": "Away",
-     "model_p": 0.5791,
-     "fair_odds": 1.73,
-     "market_p": 0.5207,
-     "odds": 1.85,
-     "avg_odds": 1.85,
-     "edge": 0.0583,
-     "p_bet": 0.5324,
-     "ev": -0.0132
     }
    ],
    "best_bet": null,
@@ -11059,10 +8864,6 @@
     "O/U 3.5": {
      "Over": 0.3292,
      "Under": 0.6708
-    },
-    "AH -0.75": {
-     "Home": 0.4562,
-     "Away": 0.5438
     }
    },
    "evals": [
@@ -11161,30 +8962,6 @@
      "selection": "Under",
      "model_p": 0.6708,
      "fair_odds": 1.49
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Home",
-     "model_p": 0.4562,
-     "fair_odds": 2.19,
-     "market_p": 0.5169,
-     "odds": 1.86,
-     "avg_odds": 1.86,
-     "edge": -0.0607,
-     "p_bet": 0.5047,
-     "ev": -0.0543
-    },
-    {
-     "market": "AH -0.75",
-     "selection": "Away",
-     "model_p": 0.5438,
-     "fair_odds": 1.84,
-     "market_p": 0.4831,
-     "odds": 1.99,
-     "avg_odds": 1.99,
-     "edge": 0.0607,
-     "p_bet": 0.4953,
-     "ev": -0.0128
     }
    ],
    "best_bet": null,
@@ -11276,10 +9053,6 @@
     "O/U 3.5": {
      "Over": 0.3189,
      "Under": 0.6811
-    },
-    "AH -0.5": {
-     "Home": 0.5301,
-     "Away": 0.4699
     }
    },
    "evals": [
@@ -11378,30 +9151,6 @@
      "selection": "Under",
      "model_p": 0.6811,
      "fair_odds": 1.47
-    },
-    {
-     "market": "AH -0.5",
-     "selection": "Home",
-     "model_p": 0.5301,
-     "fair_odds": 1.89,
-     "market_p": 0.513,
-     "odds": 1.88,
-     "avg_odds": 1.88,
-     "edge": 0.0172,
-     "p_bet": 0.5164,
-     "ev": -0.0292
-    },
-    {
-     "market": "AH -0.5",
-     "selection": "Away",
-     "model_p": 0.4699,
-     "fair_odds": 2.13,
-     "market_p": 0.487,
-     "odds": 1.98,
-     "avg_odds": 1.98,
-     "edge": -0.0172,
-     "p_bet": 0.4836,
-     "ev": -0.0424
     }
    ],
    "best_bet": null,
@@ -11430,6 +9179,208 @@
    },
    "adjustment": null,
    "summary": "Brest are favourites at 53%, with the draw at 25%. Expected goals 1.78-1.07 point to an average number of goals; the most likely score is 1-1. No bet clears the value threshold: the market price looks fair. Confidence: moderate (58/100), team news not checked."
+  },
+  {
+   "id": "F1-20261010-44",
+   "league": "F1",
+   "league_name": "Ligue 1",
+   "country": "FRA",
+   "date": "2026-10-10",
+   "time": "19:45",
+   "home": "Paris SG",
+   "away": "Le Mans",
+   "probs": {
+    "H": 0.759,
+    "D": 0.149,
+    "A": 0.092
+   },
+   "xg": {
+    "home": 2.898,
+    "away": 0.953
+   },
+   "likely_score": "2-0",
+   "top_scores": [
+    {
+     "score": "2-0",
+     "p": 0.0919
+    },
+    {
+     "score": "3-0",
+     "p": 0.0888
+    },
+    {
+     "score": "2-1",
+     "p": 0.0876
+    },
+    {
+     "score": "3-1",
+     "p": 0.0846
+    },
+    {
+     "score": "1-1",
+     "p": 0.0653
+    }
+   ],
+   "markets": {
+    "1X2": {
+     "H": 0.759,
+     "D": 0.149,
+     "A": 0.092
+    },
+    "BTTS": {
+     "Yes": 0.5844,
+     "No": 0.4156
+    },
+    "O/U 1.5": {
+     "Over": 0.8987,
+     "Under": 0.1013
+    },
+    "O/U 2.5": {
+     "Over": 0.7315,
+     "Under": 0.2685
+    },
+    "O/U 3.5": {
+     "Over": 0.5232,
+     "Under": 0.4768
+    }
+   },
+   "evals": [
+    {
+     "market": "1X2",
+     "selection": "H",
+     "model_p": 0.759,
+     "fair_odds": 1.32,
+     "market_p": 0.877,
+     "odds": 1.11,
+     "avg_odds": 1.08,
+     "edge": -0.1181,
+     "p_bet": 0.8534,
+     "ev": -0.0527
+    },
+    {
+     "market": "1X2",
+     "selection": "D",
+     "model_p": 0.149,
+     "fair_odds": 6.71,
+     "market_p": 0.082,
+     "odds": 12.31,
+     "avg_odds": 11.51,
+     "edge": 0.067,
+     "p_bet": 0.0954,
+     "ev": 0.1752
+    },
+    {
+     "market": "1X2",
+     "selection": "A",
+     "model_p": 0.092,
+     "fair_odds": 10.87,
+     "market_p": 0.0409,
+     "odds": 24.69,
+     "avg_odds": 23.08,
+     "edge": 0.0511,
+     "p_bet": 0.0511,
+     "ev": 0.2626
+    },
+    {
+     "market": "BTTS",
+     "selection": "Yes",
+     "model_p": 0.5844,
+     "fair_odds": 1.71
+    },
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "model_p": 0.4156,
+     "fair_odds": 2.41
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Over",
+     "model_p": 0.8987,
+     "fair_odds": 1.11
+    },
+    {
+     "market": "O/U 1.5",
+     "selection": "Under",
+     "model_p": 0.1013,
+     "fair_odds": 9.87
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Over",
+     "model_p": 0.7315,
+     "fair_odds": 1.37,
+     "market_p": 0.7844,
+     "odds": 1.22,
+     "avg_odds": 1.21,
+     "edge": -0.0529,
+     "p_bet": 0.7739,
+     "ev": -0.0559
+    },
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "model_p": 0.2685,
+     "fair_odds": 3.73,
+     "market_p": 0.2156,
+     "odds": 4.6,
+     "avg_odds": 4.4,
+     "edge": 0.0529,
+     "p_bet": 0.2261,
+     "ev": 0.0402
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Over",
+     "model_p": 0.5232,
+     "fair_odds": 1.91
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "model_p": 0.4768,
+     "fair_odds": 2.1
+    }
+   ],
+   "best_bet": null,
+   "max_ev": 0.2626,
+   "edge": null,
+   "confidence": 56,
+   "flagged": true,
+   "has_xg": true,
+   "xg_share": 1.0,
+   "elo_diff": 186.8,
+   "elo_source": "built-in",
+   "injury_data": false,
+   "book_spread": null,
+   "factors": [],
+   "context": {
+    "home": {
+     "rest_days": 20,
+     "matches_21d": 1,
+     "form": "DDLWW",
+     "form_pts": 8
+    },
+    "away": {
+     "rest_days": 21,
+     "matches_21d": 1,
+     "form": "DLDDW",
+     "form_pts": 6
+    }
+   },
+   "table": {
+    "home": "6th in the table",
+    "away": "9th in the table"
+   },
+   "absences": {
+    "home": [],
+    "away": []
+   },
+   "adjustment": [
+    1.0,
+    1.0
+   ],
+   "summary": "Paris SG are clear favourites at 76%, with the draw at 15%. Expected goals 2.90-0.95 point to a high-scoring game; the most likely score is 2-0. Paris SG come in with mixed form (DDLWW), Le Mans with mixed form (DLDDW). Elo ratings favour Paris SG by 187 points. No bet clears the value threshold: the market price looks fair. Confidence: moderate (56/100), team news not checked."
   },
   {
    "id": "F1-20261010-45",
@@ -11493,10 +9444,6 @@
     "O/U 3.5": {
      "Over": 0.2584,
      "Under": 0.7416
-    },
-    "AH +0.25": {
-     "Home": 0.5794,
-     "Away": 0.4206
     }
    },
    "evals": [
@@ -11595,30 +9542,6 @@
      "selection": "Under",
      "model_p": 0.7416,
      "fair_odds": 1.35
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Home",
-     "model_p": 0.5794,
-     "fair_odds": 1.73,
-     "market_p": 0.5259,
-     "odds": 1.83,
-     "avg_odds": 1.83,
-     "edge": 0.0535,
-     "p_bet": 0.5366,
-     "ev": -0.0154
-    },
-    {
-     "market": "AH +0.25",
-     "selection": "Away",
-     "model_p": 0.4206,
-     "fair_odds": 2.38,
-     "market_p": 0.4741,
-     "odds": 2.03,
-     "avg_odds": 2.03,
-     "edge": -0.0535,
-     "p_bet": 0.4634,
-     "ev": -0.0508
     }
    ],
    "best_bet": null,
@@ -11647,292 +9570,6 @@
    },
    "adjustment": null,
    "summary": "The model sees a finely balanced game (35% / 29% / 36%). Expected goals 1.28-1.30 point to an average number of goals; the most likely score is 1-1. No bet clears the value threshold: the market price looks fair. Confidence: moderate (58/100), team news not checked."
-  },
-  {
-   "id": "F1-20261011-46",
-   "league": "F1",
-   "league_name": "Ligue 1",
-   "country": "FRA",
-   "date": "2026-10-11",
-   "time": "14:00",
-   "home": "Nice",
-   "away": "Strasbourg",
-   "probs": {
-    "H": 0.3287,
-    "D": 0.257,
-    "A": 0.4143
-   },
-   "xg": {
-    "home": 1.4315,
-    "away": 1.6297
-   },
-   "likely_score": "1-1",
-   "top_scores": [
-    {
-     "score": "1-1",
-     "p": 0.1183
-    },
-    {
-     "score": "1-2",
-     "p": 0.0892
-    },
-    {
-     "score": "2-1",
-     "p": 0.0784
-    },
-    {
-     "score": "0-1",
-     "p": 0.0677
-    },
-    {
-     "score": "2-2",
-     "p": 0.0639
-    }
-   ],
-   "markets": {
-    "1X2": {
-     "H": 0.3287,
-     "D": 0.257,
-     "A": 0.4143
-    },
-    "BTTS": {
-     "Yes": 0.6203,
-     "No": 0.3797
-    },
-    "O/U 1.5": {
-     "Over": 0.8182,
-     "Under": 0.1818
-    },
-    "O/U 2.5": {
-     "Over": 0.5895,
-     "Under": 0.4105
-    },
-    "O/U 3.5": {
-     "Over": 0.3651,
-     "Under": 0.6349
-    },
-    "AH -1": {
-     "Home": 0.1873,
-     "Away": 0.8127
-    },
-    "AH -0.25": {
-     "Home": 0.3771,
-     "Away": 0.6229
-    },
-    "AH +0": {
-     "Home": 0.4424,
-     "Away": 0.5576
-    }
-   },
-   "evals": [
-    {
-     "market": "1X2",
-     "selection": "H",
-     "model_p": 0.3287,
-     "fair_odds": 3.04,
-     "market_p": 0.4291,
-     "odds": 2.3,
-     "avg_odds": 2.19,
-     "edge": -0.1004,
-     "p_bet": 0.409,
-     "ev": -0.0593
-    },
-    {
-     "market": "1X2",
-     "selection": "D",
-     "model_p": 0.257,
-     "fair_odds": 3.89,
-     "market_p": 0.2636,
-     "odds": 3.75,
-     "avg_odds": 3.56,
-     "edge": -0.0066,
-     "p_bet": 0.2623,
-     "ev": -0.0165
-    },
-    {
-     "market": "1X2",
-     "selection": "A",
-     "model_p": 0.4143,
-     "fair_odds": 2.41,
-     "market_p": 0.3073,
-     "odds": 3.23,
-     "avg_odds": 3.05,
-     "edge": 0.107,
-     "p_bet": 0.3287,
-     "ev": 0.0618
-    },
-    {
-     "market": "BTTS",
-     "selection": "Yes",
-     "model_p": 0.6203,
-     "fair_odds": 1.61
-    },
-    {
-     "market": "BTTS",
-     "selection": "No",
-     "model_p": 0.3797,
-     "fair_odds": 2.63
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Over",
-     "model_p": 0.8182,
-     "fair_odds": 1.22
-    },
-    {
-     "market": "O/U 1.5",
-     "selection": "Under",
-     "model_p": 0.1818,
-     "fair_odds": 5.5
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Over",
-     "model_p": 0.5895,
-     "fair_odds": 1.7,
-     "market_p": 0.5552,
-     "odds": 1.77,
-     "avg_odds": 1.7,
-     "edge": 0.0343,
-     "p_bet": 0.562,
-     "ev": -0.0052
-    },
-    {
-     "market": "O/U 2.5",
-     "selection": "Under",
-     "model_p": 0.4105,
-     "fair_odds": 2.44,
-     "market_p": 0.4448,
-     "odds": 2.22,
-     "avg_odds": 2.12,
-     "edge": -0.0343,
-     "p_bet": 0.438,
-     "ev": -0.0277
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Over",
-     "model_p": 0.3651,
-     "fair_odds": 2.74
-    },
-    {
-     "market": "O/U 3.5",
-     "selection": "Under",
-     "model_p": 0.6349,
-     "fair_odds": 1.58
-    },
-    {
-     "market": "AH -1",
-     "selection": "Home",
-     "model_p": 0.1873,
-     "fair_odds": 5.34,
-     "market_p": 0.2668,
-     "odds": 3.6,
-     "avg_odds": 3.6,
-     "edge": -0.0795,
-     "p_bet": 0.2509,
-     "ev": -0.0799
-    },
-    {
-     "market": "AH -1",
-     "selection": "Away",
-     "model_p": 0.8127,
-     "fair_odds": 1.23,
-     "market_p": 0.7332,
-     "odds": 1.31,
-     "avg_odds": 1.31,
-     "edge": 0.0795,
-     "p_bet": 0.7491,
-     "ev": -0.0154
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Home",
-     "model_p": 0.3771,
-     "fair_odds": 2.65,
-     "market_p": 0.5013,
-     "odds": 1.92,
-     "avg_odds": 1.92,
-     "edge": -0.1242,
-     "p_bet": 0.4765,
-     "ev": -0.0742
-    },
-    {
-     "market": "AH -0.25",
-     "selection": "Away",
-     "model_p": 0.6229,
-     "fair_odds": 1.61,
-     "market_p": 0.4987,
-     "odds": 1.93,
-     "avg_odds": 1.93,
-     "edge": 0.1242,
-     "p_bet": 0.5235,
-     "ev": 0.0091
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.4424,
-     "fair_odds": 2.26,
-     "market_p": 0.5827,
-     "odds": 1.69,
-     "avg_odds": 1.69,
-     "edge": -0.1404,
-     "p_bet": 0.5546,
-     "ev": -0.0465
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.5576,
-     "fair_odds": 1.79,
-     "market_p": 0.4173,
-     "odds": 2.36,
-     "avg_odds": 2.36,
-     "edge": 0.1404,
-     "p_bet": 0.4454,
-     "ev": 0.0379
-    }
-   ],
-   "best_bet": null,
-   "max_ev": 0.0618,
-   "edge": null,
-   "confidence": 57,
-   "flagged": true,
-   "has_xg": true,
-   "xg_share": 1.0,
-   "elo_diff": -125.2,
-   "elo_source": "built-in",
-   "injury_data": false,
-   "book_spread": null,
-   "factors": [],
-   "context": {
-    "home": {
-     "rest_days": 21,
-     "matches_21d": 1,
-     "form": "DLDLW",
-     "form_pts": 5
-    },
-    "away": {
-     "rest_days": 22,
-     "matches_21d": 0,
-     "form": "LWWDL",
-     "form_pts": 7
-    }
-   },
-   "table": {
-    "home": "14th in the table",
-    "away": "8th in the table"
-   },
-   "absences": {
-    "home": [],
-    "away": []
-   },
-   "adjustment": [
-    1.0,
-    1.0
-   ],
-   "summary": "The model sees a finely balanced game (33% / 26% / 41%). Expected goals 1.43-1.63 point to an average number of goals; the most likely score is 1-1. Nice come in with mixed form (DLDLW), Strasbourg with mixed form (LWWDL). Elo ratings favour Strasbourg by 125 points. No bet clears the value threshold: the market price looks fair. Confidence: moderate (57/100), team news not checked."
   },
   {
    "id": "F1-20261011-47",
@@ -11996,14 +9633,6 @@
     "O/U 3.5": {
      "Over": 0.4158,
      "Under": 0.5842
-    },
-    "AH -1.5": {
-     "Home": 0.3396,
-     "Away": 0.6604
-    },
-    "AH -1.25": {
-     "Home": 0.3813,
-     "Away": 0.6187
     }
    },
    "evals": [
@@ -12114,54 +9743,6 @@
      "edge": 0.0079,
      "p_bet": 0.578,
      "ev": -0.0117
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Home",
-     "model_p": 0.3396,
-     "fair_odds": 2.94,
-     "market_p": 0.4454,
-     "odds": 2.22,
-     "avg_odds": 2.19,
-     "edge": -0.1059,
-     "p_bet": 0.4243,
-     "ev": -0.0581
-    },
-    {
-     "market": "AH -1.5",
-     "selection": "Away",
-     "model_p": 0.6604,
-     "fair_odds": 1.51,
-     "market_p": 0.5546,
-     "odds": 1.77,
-     "avg_odds": 1.75,
-     "edge": 0.1059,
-     "p_bet": 0.5757,
-     "ev": 0.0191
-    },
-    {
-     "market": "AH -1.25",
-     "selection": "Home",
-     "model_p": 0.3813,
-     "fair_odds": 2.62,
-     "market_p": 0.4987,
-     "odds": 1.93,
-     "avg_odds": 1.93,
-     "edge": -0.1174,
-     "p_bet": 0.4752,
-     "ev": -0.0738
-    },
-    {
-     "market": "AH -1.25",
-     "selection": "Away",
-     "model_p": 0.6187,
-     "fair_odds": 1.62,
-     "market_p": 0.5013,
-     "odds": 1.92,
-     "avg_odds": 1.92,
-     "edge": 0.1174,
-     "p_bet": 0.5248,
-     "ev": 0.0068
     }
    ],
    "best_bet": null,
@@ -12266,18 +9847,6 @@
     "O/U 3.5": {
      "Over": 0.515,
      "Under": 0.485
-    },
-    "AH +0": {
-     "Home": 0.4135,
-     "Away": 0.5865
-    },
-    "AH +0.5": {
-     "Home": 0.546,
-     "Away": 0.454
-    },
-    "AH +1": {
-     "Home": 0.676,
-     "Away": 0.324
     }
    },
    "evals": [
@@ -12388,78 +9957,6 @@
      "edge": -0.1124,
      "p_bet": 0.5749,
      "ev": -0.1089
-    },
-    {
-     "market": "AH +0",
-     "selection": "Home",
-     "model_p": 0.4135,
-     "fair_odds": 2.42,
-     "market_p": 0.3215,
-     "odds": 3.06,
-     "avg_odds": 3.06,
-     "edge": 0.0919,
-     "p_bet": 0.3399,
-     "ev": 0.031
-    },
-    {
-     "market": "AH +0",
-     "selection": "Away",
-     "model_p": 0.5865,
-     "fair_odds": 1.7,
-     "market_p": 0.6785,
-     "odds": 1.45,
-     "avg_odds": 1.45,
-     "edge": -0.0919,
-     "p_bet": 0.6601,
-     "ev": -0.0332
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Home",
-     "model_p": 0.546,
-     "fair_odds": 1.83,
-     "market_p": 0.4767,
-     "odds": 2.02,
-     "avg_odds": 2.02,
-     "edge": 0.0693,
-     "p_bet": 0.4905,
-     "ev": -0.0091
-    },
-    {
-     "market": "AH +0.5",
-     "selection": "Away",
-     "model_p": 0.454,
-     "fair_odds": 2.2,
-     "market_p": 0.5233,
-     "odds": 1.84,
-     "avg_odds": 1.84,
-     "edge": -0.0693,
-     "p_bet": 0.5095,
-     "ev": -0.0626
-    },
-    {
-     "market": "AH +1",
-     "selection": "Home",
-     "model_p": 0.676,
-     "fair_odds": 1.48,
-     "market_p": 0.6329,
-     "odds": 1.52,
-     "avg_odds": 1.52,
-     "edge": 0.0431,
-     "p_bet": 0.6415,
-     "ev": -0.0202
-    },
-    {
-     "market": "AH +1",
-     "selection": "Away",
-     "model_p": 0.324,
-     "fair_odds": 3.09,
-     "market_p": 0.3671,
-     "odds": 2.62,
-     "avg_odds": 2.62,
-     "edge": -0.0431,
-     "p_bet": 0.3585,
-     "ev": -0.049
     }
    ],
    "best_bet": null,
