@@ -118,7 +118,7 @@ def daily_overview(date: str, games: list[dict], today=None) -> dict:
     value = [g for g in games if g.get("best_bet")]
 
     hl = []
-    if fav:
+    if fav and max(fav[0]["probs"]["H"], fav[0]["probs"]["A"]) >= 0.45:
         g = fav[0]
         side, p = ("home", g["probs"]["H"]) if g["probs"]["H"] >= g["probs"]["A"] else ("away", g["probs"]["A"])
         hl.append({"kind": "Strongest favourite", "game": g["id"],
