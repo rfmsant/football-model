@@ -1,0 +1,93 @@
+name: Weekly predictions
+
+on:
+  schedule:
+    - cron: "0 7 * * 2,5"   # Tuesday and Friday 07:00 UTC
+  workflow_dispatch:
+    inputs:
+      backtest:
+        description: "Re-run the backtest and re-tune parameters"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: weekly-predictions
+  cancel-in-progress: false
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Cache downloaded history
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Unit tests
+        run: python -m unittest discover tests
+
+      - name: Run pipeline
+        env:
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          if [ "${{ inputs.backtest }}" = "true" ]; then
+            python scripts/main.py --backtest
+          else
+            python scripts/main.py --backtest-if-stale
+          fi
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/predictions.json data/params.json data/backtest.json backtest.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update predictions $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Build site
+        run: |
+          mkdir -p _site/data
+          cp index.html backtest.md _site/
+          cp data/predictions.json data/backtest.json _site/data/ 2>/dev/null || true
+          cp data/predictions_demo.json _site/data/ 2>/dev/null || true
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: predict
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

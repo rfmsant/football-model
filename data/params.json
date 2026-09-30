@@ -1,0 +1,16 @@
+{
+ "params": {
+  "half_life_days": 120,
+  "xg_weight": 0.9,
+  "elo_weight": 0.3,
+  "prior_matches": 4.0,
+  "sharpness": 1.1,
+  "rho": -0.08,
+  "min_ev": 0.04,
+  "market_weight": 0.8,
+  "min_odds": 1.3,
+  "max_odds": 2.5
+ },
+ "generated_at": "2026-09-30T15:26:46Z",
+ "source": "tuned on 2425, tested on 2526"
+}

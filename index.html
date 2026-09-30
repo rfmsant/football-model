@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football Model</title>
+<meta name="description" content="Weekly expected-value football predictions across 22 European leagues.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+<style>
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --surface-2: #eef0f3; --text: #16181d; --muted: #5d6573;
+  --border: #dde1e7; --accent: #0f7b5f; --accent-soft: #d7f0e7; --home: #2563eb; --draw: #8b93a1;
+  --away: #d9480f; --warn: #a15c00; --bad: #b42318; --radius: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1115; --surface: #181b21; --surface-2: #222630; --text: #e8eaee; --muted: #9aa3b2;
+    --border: #2c313b; --accent: #3ccf9e; --accent-soft: #143a2f; --home: #5b8def; --draw: #6b7280;
+    --away: #f0703a; --warn: #f3b44c; --bad: #f97066;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1115; --surface: #181b21; --surface-2: #222630; --text: #e8eaee; --muted: #9aa3b2;
+  --border: #2c313b; --accent: #3ccf9e; --accent-soft: #143a2f; --home: #5b8def; --draw: #6b7280;
+  --away: #f0703a; --warn: #f3b44c; --bad: #f97066;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 16px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+h1 { font-size: 1.35rem; margin: 0; letter-spacing: -.01em; }
+h2 { font-size: 1.05rem; margin: 24px 0 10px; }
+.meta { color: var(--muted); font-size: .85rem; margin: 0 0 16px; }
+button, select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 7px 10px; min-height: 38px; }
+button { cursor: pointer; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; align-items: center; }
+.controls label { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: .85rem; }
+.top { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.tb { background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; }
+.tb .rank { font-weight: 700; color: var(--accent); margin-right: 6px; }
+.tb .bet { font-weight: 600; margin: 4px 0; }
+.small { font-size: .82rem; color: var(--muted); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 10px; }
+.row1 { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.teams { font-weight: 650; font-size: 1.02rem; }
+.tag { display: inline-block; font-size: .72rem; padding: 1px 7px; border-radius: 99px; background: var(--surface-2);
+  color: var(--muted); margin-left: 4px; white-space: nowrap; }
+.tag.flag { background: var(--accent-soft); color: var(--accent); }
+.bar { display: flex; height: 26px; border-radius: 7px; overflow: hidden; margin: 10px 0 4px; font-size: .78rem;
+  font-weight: 600; color: #fff; }
+.bar div { display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; }
+.bar .h { background: var(--home); } .bar .d { background: var(--draw); } .bar .a { background: var(--away); }
+.legend { display: flex; justify-content: space-between; font-size: .78rem; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 12px 0 8px; }
+@media (min-width: 640px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+.stat { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; }
+.stat .k { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.stat .v { font-weight: 650; font-variant-numeric: tabular-nums; }
+.pos { color: var(--accent); } .neg { color: var(--bad); }
+.conf { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-top: 4px; }
+.conf i { display: block; height: 100%; background: var(--accent); }
+.conf.mid i { background: var(--warn); } .conf.low i { background: var(--bad); }
+.summary { margin: 8px 0 0; color: var(--text); font-size: .92rem; }
+details { margin-top: 8px; } summary { cursor: pointer; color: var(--muted); font-size: .85rem; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .82rem; margin-top: 8px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th { color: var(--muted); font-weight: 600; }
+.empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+footer { color: var(--muted); font-size: .8rem; margin: 30px 0 10px; }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>⚽ Football Model</h1>
+    <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  </header>
+  <p class="meta" id="meta">Loading predictions…</p>
+
+  <section id="topsec" hidden>
+    <h2>Top value bets</h2>
+    <div class="top" id="top"></div>
+  </section>
+
+  <h2>All fixtures</h2>
+  <div class="controls">
+    <label>League <select id="league"><option value="">All leagues</option></select></label>
+    <label>Sort <select id="sort">
+      <option value="edge">Edge</option>
+      <option value="ev">Expected value</option>
+      <option value="confidence">Confidence</option>
+      <option value="date">Kick-off</option>
+    </select></label>
+    <label><input type="checkbox" id="onlybets"> Value bets only</label>
+  </div>
+  <div id="games"></div>
+
+  <footer>
+    Probabilities come from a Dixon-Coles model built on time-weighted xG/shots ratings blended with Elo.
+    Edge = model probability minus the bookmaker's no-vig probability; EV uses the best available price.
+    <a href="backtest.md">Backtest results</a> · <a href="https://github.com" id="repo">Source</a>.
+    Statistical model, not financial advice. 18+, bet responsibly.
+  </footer>
+</div>
+<script>
+(function () {
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById("theme").onclick = () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark"
+      : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  };
+  const repo = location.hostname.endsWith("github.io")
+    ? `https://github.com/${location.hostname.split(".")[0]}/${location.pathname.split("/")[1]}` : null;
+  if (repo) { document.getElementById("repo").href = repo; document.querySelector('a[href="backtest.md"]').href = repo + "/blob/main/backtest.md"; }
+
+  const pct = (x, d = 0) => x == null ? "–" : (x * 100).toFixed(d) + "%";
+  const sgn = (x, d = 1) => x == null ? "–" : (x >= 0 ? "+" : "") + (x * 100).toFixed(d) + "%";
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const confCls = c => c >= 70 ? "" : c >= 50 ? "mid" : "low";
+  let DATA = null;
+
+  const file = new URLSearchParams(location.search).has("demo") ? "data/predictions_demo.json" : "data/predictions.json";
+  fetch(file, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { DATA = d; init(); })
+    .catch(e => { document.getElementById("meta").textContent = "No predictions published yet (" + e.message + ")."; });
+
+  function init() {
+    const d = DATA, when = new Date(d.generated_at);
+    const bt = d.backtest && d.backtest.bets;
+    document.getElementById("meta").innerHTML =
+      `${d.n_games} fixtures · ${d.n_leagues} leagues · ${d.n_flagged} deep-checked · updated ${when.toLocaleString()}` +
+      (d.demo ? " · <b>demo replay</b>" : "") +
+      (bt && bt.bets ? ` · backtest ${d.backtest.bets.bets} bets, CLV ${sgn(bt.clv_mean)}` : "");
+    const sel = document.getElementById("league");
+    const present = [...new Set(d.games.map(g => g.league))];
+    present.sort((a, b) => (d.leagues[a] || a).localeCompare(d.leagues[b] || b));
+    for (const lg of present) sel.insertAdjacentHTML("beforeend", `<option value="${esc(lg)}">${esc(d.leagues[lg] || lg)}</option>`);
+    try { const s = JSON.parse(localStorage.getItem("filters") || "{}");
+      if (s.league && present.includes(s.league)) sel.value = s.league;
+      if (s.sort) document.getElementById("sort").value = s.sort;
+      document.getElementById("onlybets").checked = !!s.only; } catch (e) {}
+    for (const id of ["league", "sort", "onlybets"]) document.getElementById(id).onchange = render;
+    renderTop(); render();
+  }
+
+  function renderTop() {
+    const t = DATA.top_bets || [];
+    if (!t.length) return;
+    document.getElementById("topsec").hidden = false;
+    document.getElementById("top").innerHTML = t.map((g, i) => `
+      <div class="tb"><div class="small"><span class="rank">#${i + 1}</span>${esc(g.league_name)} · ${esc(g.date)} ${esc(g.time || "")}</div>
+      <div><b>${esc(g.home)}</b> v <b>${esc(g.away)}</b></div>
+      <div class="bet">${esc(g.best_bet.label)} @ ${g.best_bet.odds.toFixed(2)}</div>
+      <div class="small">Model ${pct(g.best_bet.model_p)} vs market ${pct(g.best_bet.market_p)} · edge ${sgn(g.best_bet.edge)} · EV ${sgn(g.best_bet.ev)} · conf ${g.confidence}</div></div>`).join("");
+  }
+
+  function render() {
+    const lg = document.getElementById("league").value, sort = document.getElementById("sort").value,
+      only = document.getElementById("onlybets").checked;
+    try { localStorage.setItem("filters", JSON.stringify({ league: lg, sort, only })); } catch (e) {}
+    let gs = DATA.games.filter(g => (!lg || g.league === lg) && (!only || g.best_bet));
+    const key = {
+      edge: g => g.best_bet ? g.best_bet.edge : -1,
+      ev: g => g.best_bet ? g.best_bet.ev : -1,
+      confidence: g => g.confidence,
+      date: g => -Date.parse(g.date + "T" + (g.time || "00:00")),
+    }[sort];
+    gs.sort((a, b) => key(b) - key(a));
+    const el = document.getElementById("games");
+    if (!gs.length) { el.innerHTML = `<div class="empty">No fixtures match this filter.</div>`; return; }
+    el.innerHTML = gs.map(card).join("");
+  }
+
+  function card(g) {
+    const p = g.probs, b = g.best_bet;
+    const evals = (g.evals || []).filter(e => e.odds);
+    const abs = ["home", "away"].flatMap(s => (g.absences?.[s] || []).map(a => ({ ...a, team: g[s] })));
+    return `<article class="card">
+      <div class="row1"><div class="teams">${esc(g.home)} <span class="small">v</span> ${esc(g.away)}</div>
+        <div class="small">${esc(g.league_name)} · ${esc(g.date)} ${esc(g.time || "")}${g.flagged ? '<span class="tag flag">deep-checked</span>' : ""}${g.has_xg ? "" : '<span class="tag">no xG</span>'}</div></div>
+      <div class="bar" role="img" aria-label="Home ${pct(p.H)}, draw ${pct(p.D)}, away ${pct(p.A)}">
+        <div class="h" style="width:${p.H * 100}%">${p.H > .12 ? pct(p.H) : ""}</div>
+        <div class="d" style="width:${p.D * 100}%">${p.D > .12 ? pct(p.D) : ""}</div>
+        <div class="a" style="width:${p.A * 100}%">${p.A > .12 ? pct(p.A) : ""}</div></div>
+      <div class="legend"><span>Home win ${pct(p.H)}</span><span>Draw ${pct(p.D)}</span><span>Away win ${pct(p.A)}</span></div>
+      <div class="stats">
+        <div class="stat"><div class="k">Likely score</div><div class="v">${esc(g.likely_score)}</div></div>
+        <div class="stat"><div class="k">Expected goals</div><div class="v">${g.xg.home.toFixed(2)} – ${g.xg.away.toFixed(2)}</div></div>
+        <div class="stat"><div class="k">Best bet</div><div class="v">${b ? esc(b.label) + " @ " + b.odds.toFixed(2) : "No value"}</div></div>
+        <div class="stat"><div class="k">Edge · EV</div><div class="v ${b ? "pos" : ""}">${b ? sgn(b.edge) + " · " + sgn(b.ev) : "–"}</div></div>
+      </div>
+      <div class="small">Confidence ${g.confidence}/100</div>
+      <div class="conf ${confCls(g.confidence)}"><i style="width:${g.confidence}%"></i></div>
+      <p class="summary">${esc(g.summary)}</p>
+      <details><summary>Markets${abs.length ? " & team news" : ""}</summary>
+        <div class="tablewrap"><table><thead><tr><th>Market</th><th>Pick</th><th>Model</th><th>Market</th><th>Fair odds</th><th>Odds</th><th>Edge</th><th>EV</th></tr></thead><tbody>
+        ${(g.evals || []).map(e => `<tr><td>${esc(e.market)}</td><td>${esc(e.selection)}</td><td>${pct(e.model_p, 1)}</td><td>${pct(e.market_p, 1)}</td><td>${e.fair_odds ?? "–"}</td><td>${e.odds ?? "–"}</td><td class="${(e.edge || 0) > 0 ? "pos" : "neg"}">${e.edge == null ? "–" : sgn(e.edge)}</td><td class="${(e.ev || 0) > 0 ? "pos" : "neg"}">${e.ev == null ? "–" : sgn(e.ev)}</td></tr>`).join("")}
+        </tbody></table></div>
+        ${abs.length ? `<div class="tablewrap"><table><thead><tr><th>Team</th><th>Player</th><th>Status</th><th>Reason</th><th>Minutes</th><th>Goal share</th></tr></thead><tbody>
+        ${abs.map(a => `<tr><td>${esc(a.team)}</td><td>${esc(a.name)}</td><td>${esc(a.status)}</td><td>${esc(a.reason)}</td><td>${pct(a.minutes_share)}</td><td>${pct(a.goal_share)}</td></tr>`).join("")}</tbody></table></div>` : ""}
+      </details>
+    </article>`;
+  }
+})();
+</script>
+</body>
+</html>

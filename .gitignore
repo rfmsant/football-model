@@ -1,0 +1,8 @@
+data/raw/
+data/history.csv
+data/fixtures.csv
+data/clubelo.csv
+__pycache__/
+*.pyc
+_site/
+prof
