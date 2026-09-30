@@ -1,0 +1,205 @@
+{
+ "E2|Blackpool": {
+  "query": "blackpool",
+  "place": "Blackpool",
+  "lat": 53.81667,
+  "lon": -3.05,
+  "approx": true
+ },
+ "E2|Leicester": {
+  "query": "leicester",
+  "place": "Leicester",
+  "lat": 52.6386,
+  "lon": -1.13169,
+  "approx": true
+ },
+ "E2|Leyton Orient": {
+  "query": "Leyton",
+  "place": "Leytonstone",
+  "lat": 51.56856,
+  "lon": 0.00768,
+  "approx": true
+ },
+ "E2|Plymouth": {
+  "query": "plymouth",
+  "place": "Plymouth",
+  "lat": 50.37153,
+  "lon": -4.14305,
+  "approx": true
+ },
+ "E2|Luton": {
+  "query": "luton",
+  "place": "Luton",
+  "lat": 51.87967,
+  "lon": -0.41748,
+  "approx": true
+ },
+ "E2|Doncaster": {
+  "query": "doncaster",
+  "place": "Doncaster",
+  "lat": 53.52285,
+  "lon": -1.13116,
+  "approx": true
+ },
+ "E3|Walsall": {
+  "query": "walsall",
+  "place": "Walsall",
+  "lat": 52.58528,
+  "lon": -1.98396,
+  "approx": true
+ },
+ "E3|Crawley Town": {
+  "query": "Crawley",
+  "place": "Crawley",
+  "lat": 51.11303,
+  "lon": -0.18312,
+  "approx": true
+ },
+ "SP2|Sabadell": {
+  "query": "sabadell",
+  "place": "Sabadell",
+  "lat": 41.54329,
+  "lon": 2.10942,
+  "approx": true
+ },
+ "SP2|Andorra": {
+  "query": "andorra",
+  "place": "Andorra",
+  "lat": 40.97655,
+  "lon": -0.44721,
+  "approx": true
+ },
+ "E3|Gillingham": {
+  "query": "gillingham",
+  "place": "Gillingham",
+  "lat": 51.38914,
+  "lon": 0.54863,
+  "approx": true
+ },
+ "E3|Newport County": {
+  "query": "Newport",
+  "place": "Newport",
+  "lat": 51.58774,
+  "lon": -2.99835,
+  "approx": true
+ },
+ "SP2|Castellon": {
+  "query": "castellon",
+  "place": "Castellon",
+  "lat": 39.98567,
+  "lon": -0.04935,
+  "approx": true
+ },
+ "SP2|Ceuta": {
+  "query": "ceuta",
+  "place": "Ceuta",
+  "lat": 35.88919,
+  "lon": -5.32042,
+  "approx": true
+ },
+ "SP2|Las Palmas": {
+  "query": "las palmas",
+  "place": "Las Palmas de Gran Canaria",
+  "lat": 28.10178,
+  "lon": -15.41573,
+  "approx": true
+ },
+ "SP2|Valladolid": {
+  "query": "valladolid",
+  "place": "Valladolid",
+  "lat": 41.65541,
+  "lon": -4.72353,
+  "approx": true
+ },
+ "SP2|Girona": {
+  "query": "girona",
+  "place": "Girona",
+  "lat": 41.98311,
+  "lon": 2.82493,
+  "approx": true
+ },
+ "SP2|Mallorca": {
+  "query": "mallorca",
+  "place": "Majorca",
+  "lat": 39.6078,
+  "lon": 3.01197,
+  "approx": true
+ },
+ "F1|Paris SG": {
+  "query": "Paris",
+  "place": "Paris",
+  "lat": 48.85341,
+  "lon": 2.3488,
+  "approx": true
+ },
+ "F1|Le Mans": {
+  "query": "le mans",
+  "place": "Le Mans",
+  "lat": 48.0021,
+  "lon": 0.20251,
+  "approx": true
+ },
+ "I1|Frosinone": {
+  "query": "frosinone",
+  "place": "Frosinone",
+  "lat": 41.63976,
+  "lon": 13.34109,
+  "approx": true
+ },
+ "F1|Brest": {
+  "query": "brest",
+  "place": "Brest",
+  "lat": 48.39029,
+  "lon": -4.48628,
+  "approx": true
+ },
+ "F1|Angers": {
+  "query": "angers",
+  "place": "Angers",
+  "lat": 47.47156,
+  "lon": -0.55202,
+  "approx": true
+ },
+ "SP1|Villarreal": {
+  "query": "villarreal",
+  "place": "Villarreal",
+  "lat": 38.72572,
+  "lon": -7.21533,
+  "approx": true
+ },
+ "D1|Paderborn": {
+  "query": "paderborn",
+  "place": "Paderborn",
+  "lat": 51.71905,
+  "lon": 8.75439,
+  "approx": true
+ },
+ "D1|Stuttgart": {
+  "query": "stuttgart",
+  "place": "Stuttgart",
+  "lat": 48.78232,
+  "lon": 9.17702,
+  "approx": true
+ },
+ "E0|Bournemouth": {
+  "query": "bournemouth",
+  "place": "Bournemouth",
+  "lat": 50.72048,
+  "lon": -1.8795,
+  "approx": true
+ },
+ "E0|Man United": {
+  "query": "Man",
+  "place": "Manchester",
+  "lat": 53.48095,
+  "lon": -2.23743,
+  "approx": true
+ },
+ "E0|Tottenham": {
+  "query": "tottenham",
+  "place": "Tottenham",
+  "lat": 51.60373,
+  "lon": -0.06794,
+  "approx": true
+ }
+}
