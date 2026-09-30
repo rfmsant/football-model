@@ -201,5 +201,54 @@
   "lat": 51.60373,
   "lon": -0.06794,
   "approx": true
+ },
+ "D1|RB Leipzig": {
+  "query": "leipzig",
+  "place": "Leipzig",
+  "lat": 51.33962,
+  "lon": 12.37129,
+  "approx": true
+ },
+ "D1|Ein Frankfurt": {
+  "query": "frankfurt",
+  "place": "Frankfurt am Main",
+  "lat": 50.11552,
+  "lon": 8.68417,
+  "approx": true
+ },
+ "E0|Man City": {
+  "query": "manchester city",
+  "place": "Manchester city centre",
+  "lat": 53.48097,
+  "lon": -2.24555,
+  "approx": true
+ },
+ "E0|Nott'm Forest": {
+  "query": "nottingham",
+  "place": "Nottingham",
+  "lat": 52.9536,
+  "lon": -1.15047,
+  "approx": true
+ },
+ "SP2|Sp Gijon": {
+  "query": "gijon",
+  "place": "Gijón",
+  "lat": 43.53573,
+  "lon": -5.66152,
+  "approx": true
+ },
+ "SP1|Ath Bilbao": {
+  "query": "bilbao",
+  "place": "Bilbao",
+  "lat": 43.26271,
+  "lon": -2.92528,
+  "approx": true
+ },
+ "SP2|Celta B": {
+  "query": "manual",
+  "place": "Vigo",
+  "lat": 42.2406,
+  "lon": -8.7207,
+  "approx": true
  }
 }

@@ -246,7 +246,9 @@ def geocode(team: str, league: str) -> dict | None:
         return st[key]
     cc = COUNTRY_CODE.get(LEAGUES[league][1])
     tried = []
-    for q in [norm_name(team), team.split()[0], norm_name(team).split()[0]]:
+    words = sorted({w for w in (norm_name(team) + " " + team.lower()).replace("'", " ").split() if len(w) >= 4},
+                   key=len, reverse=True)
+    for q in [norm_name(team), team] + words:
         if not q or q in tried:
             continue
         tried.append(q)
@@ -434,8 +436,8 @@ def build(g: dict, hist: pd.DataFrame, fixture_row: dict, season: str, elo_hist:
                               for e in g.get("evals", []) if e.get("odds")],
                    "bookmaker_spread": g.get("book_spread"), "line_movement": line_movement(g)},
         "table": table_section(hist, lg, season, date, g["home"], g["away"]),
-        "home": team_section(hist, lg, g["home"], "home", date, season, elo_hist),
-        "away": team_section(hist, lg, g["away"], "away", date, season, elo_hist),
+        "home_stats": team_section(hist, lg, g["home"], "home", date, season, elo_hist),
+        "away_stats": team_section(hist, lg, g["away"], "away", date, season, elo_hist),
         "h2h": h2h_section(hist, g["home"], g["away"], date),
         "referee": referee_section(hist, lg, fixture_row.get("Referee")),
         "weather": weather_section(home_loc, g["date"], g.get("time")),
