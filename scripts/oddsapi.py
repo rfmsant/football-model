@@ -12,6 +12,7 @@ import calendar
 import json
 import datetime as dt
 import os
+import time
 
 import numpy as np
 import pandas as pd
@@ -62,6 +63,16 @@ class OddsClient:
         log.info("Odds API: %s credits left this month, budget this run %d (%d leagues)",
                  self.remaining, self.budget, self.budget // COST_PER_LEAGUE)
 
+    def _get(self, url, params):
+        """Paced request; waits and retries on 429 (the API's per-second frequency limit)."""
+        for attempt in range(3):
+            time.sleep(0.4 + attempt * 1.5)
+            r = http_get(url, params=params, retries=2)
+            if r is None or r.status_code != 429:
+                return r
+            log.info("Odds API rate limited, retrying")
+        return r
+
     @property
     def enabled(self) -> bool:
         return bool(self.key)
@@ -74,7 +85,7 @@ class OddsClient:
         sport = LEAGUES.get(lg, (None,) * 6)[5]
         if not self.enabled or not sport:
             return []
-        r = http_get(f"{BASE}/sports/{sport}/events", params={"apiKey": self.key}, retries=2)
+        r = self._get(f"{BASE}/sports/{sport}/events", {"apiKey": self.key})
         try:
             data = r.json() if r is not None and r.status_code == 200 else []
         except ValueError:
@@ -88,12 +99,12 @@ class OddsClient:
         sport = LEAGUES.get(lg, (None,) * 6)[5]
         if not sport or not self.can_fetch():
             return None
-        self.used += COST_PER_LEAGUE
-        r = http_get(f"{BASE}/sports/{sport}/odds", retries=2,
-                     params={"apiKey": self.key, "regions": "eu", "markets": MARKETS, "oddsFormat": "decimal"})
+        r = self._get(f"{BASE}/sports/{sport}/odds",
+                      {"apiKey": self.key, "regions": "eu", "markets": MARKETS, "oddsFormat": "decimal"})
         if r is None or r.status_code != 200:
-            self.cache[lg] = []
-            return []
+            log.warning("Odds API %s failed (%s); not charged", lg, None if r is None else r.status_code)
+            return []                       # not cached: a later call may retry
+        self.used += COST_PER_LEAGUE
         rem = r.headers.get("x-requests-remaining")
         if rem:
             self.remaining = int(float(rem))

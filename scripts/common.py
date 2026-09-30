@@ -126,7 +126,12 @@ ALIASES = {
     "man united": "manchester united", "man utd": "manchester united", "man city": "manchester city",
     "nott'm forest": "nottingham forest", "forest": "nottingham forest", "wolves": "wolverhampton",
     "spurs": "tottenham", "sheffield weds": "sheffield wednesday", "sheffield utd": "sheffield united",
-    "qpr": "queens park rangers", "west brom": "west bromwich", "mk dons": "milton keynes dons",
+    "qpr": "queens park rangers", "peterboro": "peterborough united", "bristol rvs": "bristol rovers",
+    "celta fortuna": "celta b", "celta vigo b": "celta b",
+    "inter milan": "internazionale", "internazionale milano": "internazionale", "stade lavallois": "laval",
+    "sporting lisbon": "sporting cp", "vitoria sc": "guimaraes", "vitoria guimaraes": "guimaraes",
+    "amed sk": "amedspor", "basaksehir": "buyuksehyr", "istanbul basaksehir": "buyuksehyr",
+    "erzurum bb": "erzurumspor", "olympiakos piraeus": "olympiacos", "west brom": "west bromwich", "mk dons": "milton keynes dons",
     "rb leipzig": "rasenballsport leipzig", "leipzig": "rasenballsport leipzig",
     "fc koln": "fc cologne", "koln": "fc cologne", "cologne": "fc cologne", "ath bilbao": "athletic club bilbao",
     "atl madrid": "atletico madrid",
@@ -148,7 +153,10 @@ def norm_name(name: str) -> str:
     s = re.sub(r"\s+", " ", s)
     s = ALIASES.get(s, s)
     toks = [t for t in re.split(r"[^a-z0-9']+", s) if t and t not in _STOP]
-    return " ".join(toks) or s
+    out = " ".join(toks) or s
+    if out in ALIASES and ALIASES[out] != s:  # e.g. "1. FC Koln" -> "koln" -> "fc cologne"
+        return norm_name(ALIASES[out])
+    return out
 
 
 def match_name(name: str, candidates, cutoff: float = 0.72) -> str | None:
@@ -169,7 +177,7 @@ def match_name(name: str, candidates, cutoff: float = 0.72) -> str | None:
         # token containment bonus (e.g. "bayern" vs "bayern munchen")
         tt, nt = set(target.split()), set(n.split())
         if tt and nt and (tt <= nt or nt <= tt):
-            score = max(score, 0.85)
+            score = max(score, 0.85 + 0.1 * score)  # containment; ties broken by string similarity
         if score > best_score:
             best, best_score = c, score
     return best if best_score >= cutoff else None
