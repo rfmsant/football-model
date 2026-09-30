@@ -257,5 +257,19 @@
   "lat": 40.4165,
   "lon": -3.70256,
   "approx": true
+ },
+ "I1|Napoli": {
+  "query": "manual",
+  "place": "Naples (Maradona)",
+  "lat": 40.8279,
+  "lon": 14.1931,
+  "approx": true
+ },
+ "E0|Chelsea": {
+  "query": "manual",
+  "place": "London (Stamford Bridge)",
+  "lat": 51.4817,
+  "lon": -0.191,
+  "approx": true
  }
 }
