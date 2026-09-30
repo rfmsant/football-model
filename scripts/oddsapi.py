@@ -25,8 +25,7 @@ MARKETS = "h2h,totals"
 COST_PER_LEAGUE = 2            # markets x regions
 RESERVE = 15                   # credits kept back for manual runs
 MAX_PER_RUN = 40
-# fetched every run so the biggest leagues always have upcoming games, even between
-# football-data.co.uk refreshes
+# top leagues get a longer look-ahead so their next round shows even during international breaks
 CORE_LEAGUES = ["E0", "SP1", "D1", "I1", "F1"]
 EXCHANGES = {"betfair_ex_uk", "betfair_ex_eu", "matchbook", "smarkets"}
 
@@ -69,6 +68,18 @@ class OddsClient:
 
     def can_fetch(self) -> bool:
         return self.enabled and self.used + COST_PER_LEAGUE <= self.budget
+
+    def events(self, lg: str) -> list:
+        """Upcoming events of a league without odds. Free: costs 0 credits."""
+        sport = LEAGUES.get(lg, (None,) * 6)[5]
+        if not self.enabled or not sport:
+            return []
+        r = http_get(f"{BASE}/sports/{sport}/events", params={"apiKey": self.key}, retries=2)
+        try:
+            data = r.json() if r is not None and r.status_code == 200 else []
+        except ValueError:
+            data = []
+        return data if isinstance(data, list) else []
 
     def league(self, lg: str) -> list | None:
         """Events for a league (cached). None if unavailable or over budget."""
@@ -156,31 +167,53 @@ def event_to_row(lg: str, ev: dict, home: str, away: str) -> dict | None:
     return row
 
 
+def _missing(events, lg, fixtures, teams, start, end):
+    """Events inside [start, end) that football-data's fixtures.csv doesn't list yet, as (event, home, away)."""
+    have = fixtures[fixtures["Div"] == lg] if len(fixtures) else fixtures
+    out = []
+    for ev in events:
+        if not start <= pd.Timestamp(ev["commence_time"]) < end:
+            continue
+        home, away = match_name(ev["home_team"], teams), match_name(ev["away_team"], teams)
+        if not home or not away:
+            log.info("Odds API %s: cannot match %s v %s to history names", lg, ev["home_team"], ev["away_team"])
+            continue
+        if len(have) and ((have["HomeTeam"] == home) & (have["AwayTeam"] == away)).any():
+            continue
+        out.append((ev, home, away))
+    return out
+
+
 def discover_fixtures(client: OddsClient, fixtures: pd.DataFrame, hist: pd.DataFrame, season: str,
-                      today: dt.date, days: int = 12) -> pd.DataFrame:
-    """Add core-league games (next `days` days) that football-data's fixtures.csv doesn't list yet.
-    12 days rather than 7 so the site still shows the next round during international breaks."""
+                      today: dt.date, days: int = 7, core_days: int = 12) -> pd.DataFrame:
+    """Add games that football-data's fixtures.csv doesn't list yet, soonest first.
+
+    The free /events endpoint tells us which leagues play in the next `days` days (top-5 leagues:
+    `core_days`, so the next round still shows during international breaks). Odds credits are then
+    spent league by league in order of earliest missing kick-off (ties: higher tier first), and only
+    on leagues that actually have missing games."""
     if not client.enabled:
         return fixtures
-    new_rows = []
-    start, end = pd.Timestamp(today, tz="UTC"), pd.Timestamp(today + dt.timedelta(days=days + 1), tz="UTC")
-    for lg in CORE_LEAGUES:
-        events = client.league(lg)
-        if not events:
+    start = pd.Timestamp(today, tz="UTC")
+    plan = []
+    for lg, meta in LEAGUES.items():
+        if not meta[5]:
             continue
+        end = start + pd.Timedelta(days=(core_days if lg in CORE_LEAGUES else days) + 1)
         cur = hist[(hist["Div"] == lg) & (hist["Season"] == season)]
         teams = set(cur["HomeTeam"]) | set(cur["AwayTeam"])
-        have = fixtures[fixtures["Div"] == lg] if len(fixtures) else fixtures
-        for ev in events:
-            ct = pd.Timestamp(ev["commence_time"])
-            if not start <= ct < end:
-                continue
-            home, away = match_name(ev["home_team"], teams), match_name(ev["away_team"], teams)
-            if not home or not away:
-                log.info("Odds API %s: cannot match %s v %s to history names", lg, ev["home_team"], ev["away_team"])
-                continue
-            if len(have) and ((have["HomeTeam"] == home) & (have["AwayTeam"] == away)).any():
-                continue
+        miss = _missing(client.events(lg), lg, fixtures, teams, start, end)
+        if miss:
+            first = min(pd.Timestamp(ev["commence_time"]) for ev, _, _ in miss)
+            plan.append((first.floor("D"), meta[2], lg, teams, end))
+    plan.sort(key=lambda p: (p[0], p[1]))
+    new_rows = []
+    for _, _, lg, teams, end in plan:
+        events = client.league(lg)          # paid call, budgeted
+        if events is None:
+            log.info("Odds API budget reached; skipping %s and later leagues", lg)
+            break
+        for ev, home, away in _missing(events, lg, fixtures, teams, start, end):
             row = event_to_row(lg, ev, home, away)
             if row:
                 new_rows.append(row)

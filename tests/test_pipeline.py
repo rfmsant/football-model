@@ -230,13 +230,34 @@ class TestOddsBudget(unittest.TestCase):
         for lg in oddsapi.CORE_LEAGUES[1:]:
             c.cache[lg] = []
         hist = pd.DataFrame({"Div": ["E0"], "Season": ["2627"], "HomeTeam": ["Man City"], "AwayTeam": ["Wolves"]})
-        fx = oddsapi.discover_fixtures(c, pd.DataFrame(columns=["Div", "HomeTeam", "AwayTeam"]), hist, "2627", dt.date(2026, 10, 1))
-        self.assertEqual(len(fx), 1)
-        r = fx.iloc[0]
-        self.assertEqual((r.HomeTeam, r.AwayTeam, r.Time), ("Man City", "Wolves", "15:00"))
-        self.assertEqual(r.AvgH, 1.5)
-        again = oddsapi.discover_fixtures(c, fx, hist, "2627", dt.date(2026, 10, 1))   # no duplicates
-        self.assertEqual(len(again), 1)
+        with mock.patch.object(c, "events", side_effect=lambda lg: c.cache.get(lg, [])):
+            fx = oddsapi.discover_fixtures(c, pd.DataFrame(columns=["Div", "HomeTeam", "AwayTeam"]), hist, "2627", dt.date(2026, 10, 1))
+            self.assertEqual(len(fx), 1)
+            r = fx.iloc[0]
+            self.assertEqual((r.HomeTeam, r.AwayTeam, r.Time), ("Man City", "Wolves", "15:00"))
+            self.assertEqual(r.AvgH, 1.5)
+            again = oddsapi.discover_fixtures(c, fx, hist, "2627", dt.date(2026, 10, 1))   # no duplicates
+            self.assertEqual(len(again), 1)
+
+    def test_discovery_soonest_first_and_skips_listed_leagues(self):
+        import datetime as dt
+        c = self._client(500, (2026, 9, 30))
+        c.budget = 2                                    # room for exactly one league
+        ev = lambda h, a, t: {"home_team": h, "away_team": a, "commence_time": t, "bookmakers": []}
+        events = {"E0": [ev("Arsenal", "Leeds", "2026-10-10T11:30:00Z")],
+                  "E2": [ev("Barnsley", "Wigan", "2026-10-03T14:00:00Z")],
+                  "SP2": [ev("Racing Santander", "Eibar", "2026-10-02T18:30:00Z")]}
+        hist = pd.DataFrame({"Div": ["E0", "E2", "SP2"], "Season": "2627", "HomeTeam": ["Arsenal", "Barnsley", "Santander"],
+                             "AwayTeam": ["Leeds", "Wigan", "Eibar"]})
+        fetched = []
+        with mock.patch.object(c, "events", side_effect=lambda lg: events.get(lg, [])),                 mock.patch.object(c, "league", side_effect=lambda lg: fetched.append(lg) or None):
+            oddsapi.discover_fixtures(c, pd.DataFrame(columns=["Div", "HomeTeam", "AwayTeam"]), hist, "2627", dt.date(2026, 9, 30))
+        self.assertEqual(fetched, ["SP2"])              # Friday's Segunda game first; stops when over budget
+        listed = pd.DataFrame({"Div": ["SP2"], "HomeTeam": ["Santander"], "AwayTeam": ["Eibar"]})
+        fetched.clear()
+        with mock.patch.object(c, "events", side_effect=lambda lg: events.get(lg, [])),                 mock.patch.object(c, "league", side_effect=lambda lg: fetched.append(lg) or None):
+            oddsapi.discover_fixtures(c, listed, hist, "2627", dt.date(2026, 9, 30))
+        self.assertEqual(fetched[:1], ["E2"])           # SP2 already in fixtures.csv -> no credits spent on it
 
 
 class TestOutput(unittest.TestCase):
