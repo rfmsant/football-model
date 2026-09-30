@@ -31,6 +31,24 @@ win/draw/loss %, most likely score, expected goals, form, the **model's lean** (
 when it clears the threshold), confidence, a written summary and every market's model vs bookmaker
 price. It works on mobile and has dark and light modes.
 
+### Machine-learning layer (`scripts/features.py`, `scripts/ml.py`)
+On top of Dixon-Coles, an ensemble of gradient boosting and logistic regression predicts the result,
+over/under 2.5 and BTTS from every pre-match feature available for free:
+- form over the last 5 and 10 games: points, goal difference, xG, shots on target, corners and cards;
+- home form at home and away form away;
+- rest days and congestion;
+- league position, points per game and season progress;
+- Elo;
+- bookmaker no-vig probabilities, including the Asian-handicap line;
+- the Dixon-Coles probabilities and expected goals.
+
+The result is blended 50/50 with the bookmakers (chosen on a validation season).
+
+It is trained on 2022-23 onwards and retrained weekly. Out-of-sample (see [ml_report.md](ml_report.md)) it
+matches or slightly beats the bookmakers' probabilities. When its favourite is at 55%+ ("strong pick") it
+was right about 66-68% of the time; at 60%+ ("very strong") about 71-73%. Every game also shows the
+double-chance pick.
+
 ### Track record (`scripts/track.py`, **Results & record** tab)
 Every run stores the latest pre-match prediction for each game in `data/track_record.json` (source
 `live`). Each finished game is settled against the football-data.co.uk result: whether the predicted
@@ -83,6 +101,7 @@ python -m unittest discover tests          # offline tests (APIs are mocked)
 python scripts/main.py --no-notify         # live run -> data/predictions.json
 python scripts/main.py --demo 2026-09-19   # replay a past week -> data/predictions_demo.json
 python scripts/backtest.py                 # tune + backtest -> backtest.md, data/params.json
+python scripts/ml.py --evaluate --train    # ML layer: out-of-sample report + production model
 python -m http.server 8000                 # then open http://localhost:8000/
 ```
 

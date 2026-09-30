@@ -45,13 +45,22 @@ def compute_elo(hist: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
 
 
 # ================================================================ performance metric
+def sot_conversion(h: pd.DataFrame) -> pd.Series:
+    """Goals per shot on target for each row's league, taken from the PREVIOUS season (no look-ahead).
+    Falls back to 0.32 (the long-run European average) when there is no previous season."""
+    if "HST" not in h:
+        return pd.Series(0.32, index=h.index)
+    tot = h.groupby(["Div", "Season"]).agg(g=("FTHG", "sum"), g2=("FTAG", "sum"), s=("HST", "sum"), s2=("AST", "sum"))
+    rate = ((tot.g + tot.g2) / (tot.s + tot.s2)).where((tot.s + tot.s2) > 200).clip(0.2, 0.5)
+    prev = {(div, f"{(int(season[:2]) + 1) % 100:02d}{(int(season[2:]) + 1) % 100:02d}"): v
+            for (div, season), v in rate.items() if pd.notna(v)}
+    return pd.Series([prev.get((d, s), 0.32) for d, s in zip(h["Div"], h["Season"].astype(str))], index=h.index)
+
+
 def add_performance(hist: pd.DataFrame, xg_weight: float) -> pd.DataFrame:
     """Blend actual goals with xG (or a shots-on-target proxy) into a 'performance goals' metric."""
     h = hist.copy()
-    grp = h.groupby(["Div", "Season"])
-    goals = grp["FTHG"].transform("sum") + grp["FTAG"].transform("sum")
-    sot = grp["HST"].transform("sum") + grp["AST"].transform("sum") if "HST" in h else np.nan
-    conv = (goals / sot).where(sot > 0).clip(0.2, 0.5).fillna(0.32)
+    conv = sot_conversion(h)
     for side, g, st, xg in (("H", "FTHG", "HST", "HxG"), ("A", "FTAG", "AST", "AxG")):
         proxy = h[st] * conv if st in h else pd.Series(np.nan, index=h.index)
         underlying = h[xg].where(h[xg].notna(), proxy) if xg in h else proxy

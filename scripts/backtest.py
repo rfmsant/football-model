@@ -93,8 +93,9 @@ def simulate(model: Model, season: str, params: dict, collect_bets: bool = True)
                     lh, la, info = model.lambdas(lg, row.HomeTeam, row.AwayTeam, ref, season, row.EloH, row.EloA)
                     mat = dixon_coles_matrix(lh, la, params["rho"])
                     p = {"markets": {"1X2": {"H": np.tril(mat, -1).sum(), "D": np.trace(mat), "A": np.triu(mat, 1).sum()},
-                                     "O/U 2.5": {"Over": 1 - mat[np.add.outer(range(7), range(7)) <= 2].sum()}},
-                         "info": info}
+                                     "O/U 2.5": {"Over": 1 - mat[np.add.outer(range(7), range(7)) <= 2].sum()},
+                                     "BTTS": {"Yes": 1 - mat[0, :].sum() - mat[:, 0].sum() + mat[0, 0]}},
+                         "info": info, "lambda_home": lh, "lambda_away": la}
             except Exception as e:  # noqa: BLE001
                 log.debug("skip %s: %s", row.HomeTeam, e)
                 continue
@@ -103,7 +104,9 @@ def simulate(model: Model, season: str, params: dict, collect_bets: bool = True)
             rec = {"Div": lg, "Date": row.Date, "home": row.HomeTeam, "away": row.AwayTeam,
                    "FTHG": row.FTHG, "FTAG": row.FTAG, "res": res,
                    "pH": x["H"], "pD": x["D"], "pA": x["A"],
-                   "pO25": p["markets"]["O/U 2.5"]["Over"], "xg_share": p["info"].get("xg_share", 0)}
+                   "pO25": p["markets"]["O/U 2.5"]["Over"], "xg_share": p["info"].get("xg_share", 0),
+                   "pBTTS": (p["markets"].get("BTTS") or {}).get("Yes"),
+                   "lh": p.get("lambda_home"), "la": p.get("lambda_away")}
             fair = no_vig([row.get("AvgH"), row.get("AvgD"), row.get("AvgA")])
             if fair:
                 rec.update(mH=fair[0], mD=fair[1], mA=fair[2])

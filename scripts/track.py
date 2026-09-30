@@ -57,6 +57,10 @@ def snapshot(g: dict, source: str, made_at: str) -> dict:
         "p_over25": (mk.get("O/U 2.5") or {}).get("Over"), "p_btts": (mk.get("BTTS") or {}).get("Yes"),
         "confidence": g.get("confidence"),
         "lean": _bet(g.get("lean")), "value": _bet(g.get("best_bet")),
+        "pick_tier": (g.get("pick") or {}).get("tier"),
+        "dc_pick": ((g.get("pick") or {}).get("double_chance") or {}).get("selections"),
+        "dc_label": ((g.get("pick") or {}).get("double_chance") or {}).get("label"),
+        "prob_source": g.get("prob_source", "dixon-coles"),
         "result": None, "outcome": None,
     }
 
@@ -81,6 +85,9 @@ def evaluate(e: dict, hg: int, ag: int) -> dict:
     p = e["probs"]
     pick = max(("H", "D", "A"), key=lambda s: p[s])
     out = {"winner_pick": pick, "winner_ok": pick == res, "score_ok": e["likely_score"] == f"{hg}-{ag}"}
+    out["tier"] = e.get("pick_tier")
+    if e.get("dc_pick"):
+        out["dc_ok"] = res in e["dc_pick"]
     if e.get("p_over25") is not None:
         out["ou_pick"] = "Over" if e["p_over25"] >= 0.5 else "Under"
         out["ou_ok"] = (hg + ag > 2.5) == (out["ou_pick"] == "Over")
@@ -121,31 +128,48 @@ def settle_results(ledger: dict, hist: pd.DataFrame) -> int:
 
 def backfill(ledger: dict, hist: pd.DataFrame, start: dt.date, end: dt.date) -> int:
     """Walk-forward replay: for every match day in [start, end), predict with data before that day."""
+    import features
     import main  # lazy: main imports this module
+    import ml
     from model import Model
     params = load_params()
     season = season_code(start)
+    # ML ensemble trained only on seasons before this one, so the replay stays out-of-sample
+    bundle = ml.train_final(before_season=season, path=ml.DATA / "ml_model_replay.pkl")
+    full = ml.all_history(end)                      # same 6-season span (and Elo) the ML was trained on
+    hist = full[full["Date"] >= pd.Timestamp(start) - pd.Timedelta(days=400)].reset_index(drop=True)
+    feats = features.build(hist)                    # pre-match features only use earlier dates
+    hist = hist.drop(columns=["EloH", "EloA"])      # Model computes its own Elo from what it is given
+    full = full.drop(columns=["EloH", "EloA"])
     days = sorted(d for d in hist["Date"].dt.date.unique() if start <= d < end)
     n = 0
     for day in days:
-        before = hist[hist["Date"] < pd.Timestamp(day)]
+        before = full[full["Date"] < pd.Timestamp(day)]
         todays = hist[hist["Date"] == pd.Timestamp(day)]
         model = Model(before, params)
         made = f"replay (data to {day - dt.timedelta(days=1)})"
-        for i, row in todays.reset_index(drop=True).iterrows():
+        recs, odds, idx = [], {}, {}
+        for i, row in todays.iterrows():
             row = row.to_dict()
             k = game_key(row["Div"], day.isoformat(), row["HomeTeam"], row["AwayTeam"])
             if k in ledger["games"] and ledger["games"][k].get("source") == "live":
                 continue  # never overwrite a genuine live prediction
             try:
                 p = main.predict_game(model, row, params, pd.Timestamp(day), season)
-                g = main._clean(main.game_record(k, row, p, params))
+                recs.append(main._clean(main.game_record(k, row, p, params)))
+                odds[k], idx[k] = p["odds"], i
             except Exception as ex:  # noqa: BLE001
                 log.debug("replay failed for %s: %s", k, ex)
-                continue
-            ledger["games"][k] = snapshot(g, "replay", made)
-            n += 1
-        log.info("replayed %s: %d games", day, len(todays))
+        if recs:
+            X = feats.loc[[idx[r["id"]] for r in recs]]
+            X.index = [r["id"] for r in recs]
+            ml.apply(bundle, recs, X)
+            for r in recs:
+                if r.get("prob_source") == "ml":
+                    main.rescore(r, odds[r["id"]], params)
+                ledger["games"][r["id"]] = snapshot(main._clean(r), "replay", made)
+                n += 1
+        log.info("replayed %s: %d games", day, len(recs))
     return n
 
 

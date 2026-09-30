@@ -298,6 +298,30 @@ class TestTrackRecord(unittest.TestCase):
         self.assertEqual(backtest.settle("BTTS", "Yes", 1, 0, 1.8), -1.0)
 
 
+class TestML(unittest.TestCase):
+    def test_make_pick_tiers(self):
+        import ml
+        r = {"home": "A", "away": "B", "probs": {"H": 0.62, "D": 0.22, "A": 0.16}}
+        p = ml.make_pick(r)
+        self.assertEqual((p["label"], p["tier"]), ("A to win", "very strong"))
+        self.assertEqual(p["double_chance"]["label"], "A or draw")
+        self.assertAlmostEqual(p["double_chance"]["p"], 0.84)
+        r["probs"] = {"H": 0.30, "D": 0.33, "A": 0.37}
+        p = ml.make_pick(r)
+        self.assertIsNone(p["tier"])
+        self.assertEqual(p["double_chance"]["label"], "B or draw")
+
+    def test_features_no_lookahead(self):
+        import features
+        h = fake_history(n_weeks=6)
+        f1 = features.build(h)
+        h2 = h.copy()
+        last = h2["Date"] == h2["Date"].max()
+        h2.loc[last, ["FTHG", "FTAG"]] = [9, 9]          # change only the final day's results
+        f2 = features.build(h2)
+        pd.testing.assert_frame_equal(f1[last.values], f2[last.values])   # that day's features can't see them
+
+
 class TestOutput(unittest.TestCase):
     def game(self):
         return {"home": "A", "away": "B", "probs": {"H": 0.5, "D": 0.27, "A": 0.23}, "xg": {"home": 1.7, "away": 1.0},

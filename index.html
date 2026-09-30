@@ -58,6 +58,8 @@ button { cursor: pointer; }
 .ko { font-variant-numeric: tabular-nums; font-weight: 650; color: var(--accent); margin-right: 8px; }
 .tag { display: inline-block; font-size: .72rem; padding: 1px 7px; border-radius: 99px; background: var(--surface-2);
   color: var(--muted); margin-left: 4px; white-space: nowrap; }
+.tag.strong { background: var(--home); color: #fff; font-weight: 600; }
+.stat.strong { box-shadow: inset 0 0 0 2px var(--home); }
 .tag.value { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .bar { display: flex; height: 26px; border-radius: 7px; overflow: hidden; margin: 10px 0 4px; font-size: .78rem;
   font-weight: 600; color: #fff; }
@@ -118,10 +120,14 @@ a { color: var(--accent); }
     <label>League <select id="league"><option value="">All leagues</option></select></label>
     <label>Sort <select id="sort">
       <option value="date">Kick-off</option>
+      <option value="pick">Pick strength</option>
       <option value="edge">Edge</option>
       <option value="confidence">Confidence</option>
     </select></label>
-    <label><input type="checkbox" id="onlybets"> Value bets only</label>
+    <label>Show <select id="onlybets">
+      <option value="">All games</option><option value="strong">Strong picks (55%+)</option>
+      <option value="vstrong">Very strong picks (60%+)</option><option value="value">Value bets</option>
+    </select></label>
   </div>
   <div id="games"></div>
   </div>
@@ -144,7 +150,7 @@ a { color: var(--accent); }
     ratings blended with Elo. <b>Lean</b> is the market the model rates best against the bookmakers' prices. It is
     only marked <b>Value</b> when it clears the backtested threshold. Edge = model probability minus the
     bookmaker's no-vig probability.
-    <a href="backtest.md">Backtest results</a> · <a href="https://github.com" id="repo">Source</a>.
+    <a href="backtest.md">Backtest results</a> · <a href="ml_report.md" id="mlrep">ML evaluation</a> · <a href="https://github.com" id="repo">Source</a>.
     Statistical model, not financial advice. 18+, bet responsibly.
   </footer>
 </div>
@@ -160,7 +166,7 @@ a { color: var(--accent); }
   };
   const repo = location.hostname.endsWith("github.io")
     ? `https://github.com/${location.hostname.split(".")[0]}/${location.pathname.split("/")[1]}` : null;
-  if (repo) { document.getElementById("repo").href = repo; document.querySelector('a[href="backtest.md"]').href = repo + "/blob/main/backtest.md"; }
+  if (repo) { document.getElementById("repo").href = repo; document.querySelector('a[href="backtest.md"]').href = repo + "/blob/main/backtest.md"; document.getElementById("mlrep").href = repo + "/blob/main/ml_report.md"; }
 
   const pct = (x, d = 0) => x == null ? "–" : (x * 100).toFixed(d) + "%";
   const sgn = (x, d = 1) => x == null ? "–" : (x >= 0 ? "+" : "") + (x * 100).toFixed(d) + "%";
@@ -193,7 +199,7 @@ a { color: var(--accent); }
     DAY = days.some(x => x.date === saved) ? saved : (days.find(x => x.date >= today) || days[0] || {}).date;
     document.getElementById("days").innerHTML = days.map(x => {
       const [a, b] = dayLabel(x.date);
-      return `<button class="day" type="button" data-day="${x.date}" aria-pressed="${x.date === DAY}">${esc(a)}<small>${esc(b)} · ${x.n_games} game${x.n_games === 1 ? "" : "s"}${x.n_value ? " · " + x.n_value + " value" : ""}</small></button>`;
+      return `<button class="day" type="button" data-day="${x.date}" aria-pressed="${x.date === DAY}">${esc(a)}<small>${esc(b)} · ${x.n_games} game${x.n_games === 1 ? "" : "s"}${x.n_strong ? " · " + x.n_strong + " strong" : ""}${x.n_value ? " · " + x.n_value + " value" : ""}</small></button>`;
     }).join("");
     document.querySelectorAll(".day").forEach(b => b.onclick = () => {
       DAY = b.dataset.day; try { sessionStorage.setItem("day", DAY); } catch (e) {}
@@ -202,7 +208,7 @@ a { color: var(--accent); }
     });
     try { const s = JSON.parse(localStorage.getItem("filters2") || "{}");
       if (s.sort) document.getElementById("sort").value = s.sort;
-      document.getElementById("onlybets").checked = !!s.only; } catch (e) {}
+      if (typeof s.only === "string") document.getElementById("onlybets").value = s.only; } catch (e) {}
     for (const id of ["league", "sort", "onlybets"]) document.getElementById(id).onchange = render;
     renderDay();
   }
@@ -230,13 +236,14 @@ a { color: var(--accent); }
 
   function render() {
     const lg = document.getElementById("league").value, sort = document.getElementById("sort").value,
-      only = document.getElementById("onlybets").checked;
+      only = document.getElementById("onlybets").value;
     try { localStorage.setItem("filters2", JSON.stringify({ sort, only })); } catch (e) {}
-    let gs = DATA.games.filter(g => g.date === DAY && (!lg || g.league === lg) && (!only || g.best_bet));
+    let gs = DATA.games.filter(g => g.date === DAY && (!lg || g.league === lg) && (!only || (only === "value" ? g.best_bet : only === "vstrong" ? g.pick?.tier === "very strong" : g.pick?.tier)));
     const key = {
       date: g => (g.time || "99:99") + g.league,
       edge: g => -(g.lean ? g.lean.edge : -1),
       confidence: g => -g.confidence,
+      pick: g => -(g.pick ? g.pick.p : 0),
     }[sort];
     gs.sort((a, b) => { const x = key(a), y = key(b); return x < y ? -1 : x > y ? 1 : 0; });
     const el = document.getElementById("games");
@@ -250,18 +257,19 @@ a { color: var(--accent); }
     const form = ["home", "away"].map(s => g.context?.[s]?.form ? `${esc(g[s])} ${esc(g.context[s].form)}` : "").filter(Boolean).join(" · ");
     return `<article class="card" id="${esc(g.id)}">
       <div class="row1"><div class="teams"><span class="ko">${esc(g.time || "TBC")}</span>${esc(g.home)} <span class="small">v</span> ${esc(g.away)}</div>
-        <div class="small">${esc(g.league_name)}${g.best_bet ? '<span class="tag value">Value</span>' : ""}${g.has_xg ? "" : '<span class="tag">no xG</span>'}</div></div>
+        <div class="small">${esc(g.league_name)}${g.pick?.tier ? `<span class="tag strong">${g.pick.tier === "very strong" ? "Very strong pick" : "Strong pick"}</span>` : ""}${g.best_bet ? '<span class="tag value">Value</span>' : ""}${g.has_xg ? "" : '<span class="tag">no xG</span>'}</div></div>
       <div class="bar" role="img" aria-label="Home ${pct(p.H)}, draw ${pct(p.D)}, away ${pct(p.A)}">
         <div class="h" style="width:${p.H * 100}%">${p.H > .12 ? pct(p.H) : ""}</div>
         <div class="d" style="width:${p.D * 100}%">${p.D > .12 ? pct(p.D) : ""}</div>
         <div class="a" style="width:${p.A * 100}%">${p.A > .12 ? pct(p.A) : ""}</div></div>
       <div class="legend"><span>Home win ${pct(p.H)}</span><span>Draw ${pct(p.D)}</span><span>Away win ${pct(p.A)}</span></div>
       <div class="stats">
-        <div class="stat"><div class="k">Likely score</div><div class="v">${esc(g.likely_score)}</div></div>
-        <div class="stat"><div class="k">Expected goals</div><div class="v">${g.xg.home.toFixed(2)} – ${g.xg.away.toFixed(2)}</div></div>
+        <div class="stat ${g.pick?.tier ? "strong" : ""}"><div class="k">Pick</div><div class="v">${g.pick ? esc(g.pick.label) + " " + pct(g.pick.p) : "–"}</div></div>
+        <div class="stat"><div class="k">Double chance</div><div class="v">${g.pick ? esc(g.pick.double_chance.label) + " " + pct(g.pick.double_chance.p) : "–"}</div></div>
         <div class="stat ${l && l.value ? "value" : ""}"><div class="k">${l && l.value ? "Value bet" : "Model's lean"}</div><div class="v">${l ? esc(l.label) + " @ " + l.odds.toFixed(2) : "No prices yet"}</div></div>
         <div class="stat"><div class="k">Edge · EV</div><div class="v ${l && l.ev > 0 ? "pos" : ""}">${l ? sgn(l.edge) + " · " + sgn(l.ev) : "–"}</div></div>
       </div>
+      <div class="small">Likely score ${esc(g.likely_score)} · xG ${g.xg.home.toFixed(2)}–${g.xg.away.toFixed(2)} · over 2.5 ${pct(g.markets?.["O/U 2.5"]?.Over)} · BTTS ${pct(g.markets?.BTTS?.Yes)}</div>
       <div class="small">Confidence ${g.confidence}/100${form ? " · form (last 5): " + form : ""}</div>
       <div class="conf ${confCls(g.confidence)}"><i style="width:${g.confidence}%"></i></div>
       <p class="summary">${esc(g.summary)}</p>
@@ -314,7 +322,9 @@ a { color: var(--accent); }
       }
       return out;
     };
-    return { games: rows.length, winner: rate("winner_ok"), score: rate("score_ok"), ou: rate("ou_ok"), btts: rate("btts_ok"),
+    const tier = t => { const v = rows.filter(e => t === "vs" ? e.outcome.tier === "very strong" : e.outcome.tier).map(e => e.outcome.winner_ok);
+      return { n: v.length, hit: v.filter(Boolean).length }; };
+    return { games: rows.length, strong: tier("s"), vstrong: tier("vs"), dc: rate("dc_ok"), winner: rate("winner_ok"), score: rate("score_ok"), ou: rate("ou_ok"), btts: rate("btts_ok"),
       value: bets("value"), lean: bets("lean") };
   }
   const hp = r => r && r.n ? pct(r.hit / r.n, 1) : "–";
@@ -336,6 +346,9 @@ a { color: var(--accent); }
       ${kpi("Winner correct", hp(A.winner), `${A.winner.hit} of ${A.winner.n} games`)}
       ${kpi("Over/under 2.5 correct", hp(A.ou), `${A.ou.hit} of ${A.ou.n}`)}
       ${kpi("BTTS correct", hp(A.btts), `${A.btts.hit} of ${A.btts.n}`)}
+      ${kpi("Strong picks (55%+) correct", hp(A.strong), `${A.strong.hit} of ${A.strong.n} games`)}
+      ${kpi("Very strong (60%+) correct", hp(A.vstrong), `${A.vstrong.hit} of ${A.vstrong.n} games`)}
+      ${kpi("Double chance correct", hp(A.dc), `${A.dc.hit} of ${A.dc.n}`)}
       ${kpi("Exact score correct", hp(A.score), `${A.score.hit} of ${A.score.n}`)}
       ${kpi("Value bets", v ? pct(v.won / v.n, 1) : "–", betSub(v))}
       ${kpi("Model's leans", l ? pct(l.won / l.n, 1) : "–", betSub(l))}
@@ -350,12 +363,12 @@ a { color: var(--accent); }
     const byDay = {};
     rows.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
     const dates = Object.keys(byDay).sort().reverse();
-    h += `<div class="panel"><h3>By day</h3><div class="tablewrap"><table><thead><tr><th>Date</th><th>Games</th><th>Winner</th><th>O/U 2.5</th><th>BTTS</th>
+    h += `<div class="panel"><h3>By day</h3><div class="tablewrap"><table><thead><tr><th>Date</th><th>Games</th><th>Winner</th><th>Strong picks</th><th>Double chance</th><th>O/U 2.5</th><th>BTTS</th>
       <th>Value bets</th><th>Leans</th></tr></thead><tbody>
       ${dates.map(d => { const D = agg(byDay[d]); const srcs = [...new Set(byDay[d].map(e => e.source))].join("+");
         return `<tr class="dayrow" data-date="${d}"><td>${esc(dayLabel(d).join(" "))} <span class="small">${esc(srcs)}</span></td><td>${D.games}</td>
-          <td>${hp(D.winner)}</td><td>${hp(D.ou)}</td><td>${hp(D.btts)}</td><td>${betCell(D.value.All)}</td><td>${betCell(D.lean.All)}</td></tr>
-          <tr hidden data-detail="${d}"><td colspan="7">${dayGames(byDay[d])}</td></tr>`; }).join("")}
+          <td>${hp(D.winner)}</td><td>${D.strong.n ? `${D.strong.hit}/${D.strong.n}` : "–"}</td><td>${hp(D.dc)}</td><td>${hp(D.ou)}</td><td>${hp(D.btts)}</td><td>${betCell(D.value.All)}</td><td>${betCell(D.lean.All)}</td></tr>
+          <tr hidden data-detail="${d}"><td colspan="9">${dayGames(byDay[d])}</td></tr>`; }).join("")}
       </tbody></table></div><p class="note">Tap a day to see every game. "replay" = walk-forward reconstruction using only data available before that day; "live" = prediction published before kick-off.</p></div>`;
     el.innerHTML = h;
     el.querySelectorAll(".dayrow").forEach(r => r.onclick = () => {
@@ -366,10 +379,11 @@ a { color: var(--accent); }
     const mark = ok => ok == null ? "–" : ok ? '<span class="ok">✓</span>' : '<span class="no">✗</span>';
     const pickName = (e, s) => ({ H: e.home, D: "Draw", A: e.away })[s];
     const bet = (b, ok, pl) => b ? `${mark(ok)} ${esc(b.label)} @ ${b.odds} <span class="${pl >= 0 ? "pos" : "neg"}">${units(pl)}</span>` : "–";
-    return `<div class="tablewrap"><table><thead><tr><th>Match</th><th>Score</th><th>Predicted winner</th><th>Likely score</th><th>O/U 2.5</th><th>BTTS</th><th>Lean</th><th>Value bet</th></tr></thead><tbody>
+    return `<div class="tablewrap"><table><thead><tr><th>Match</th><th>Score</th><th>Pick</th><th>Double chance</th><th>Likely score</th><th>O/U 2.5</th><th>BTTS</th><th>Lean</th><th>Value bet</th></tr></thead><tbody>
       ${gs.sort((a, b) => a.league_name.localeCompare(b.league_name)).map(e => { const o = e.outcome, r = e.result;
         return `<tr><td>${esc(e.home)} v ${esc(e.away)} <span class="small">${esc(e.league_name)}</span></td><td><b>${r.hg}-${r.ag}</b></td>
-        <td>${mark(o.winner_ok)} ${esc(pickName(e, o.winner_pick))} (${pct(e.probs[o.winner_pick])})</td>
+        <td>${mark(o.winner_ok)} ${esc(pickName(e, o.winner_pick))} (${pct(e.probs[o.winner_pick])})${o.tier ? ` <span class="tag strong">${o.tier === "very strong" ? "V.strong" : "Strong"}</span>` : ""}</td>
+        <td>${e.dc_label ? `${mark(o.dc_ok)} ${esc(e.dc_label)}` : "–"}</td>
         <td>${mark(o.score_ok)} ${esc(e.likely_score)}</td><td>${mark(o.ou_ok)} ${esc(o.ou_pick || "–")}</td><td>${mark(o.btts_ok)} ${esc(o.btts_pick || "–")}</td>
         <td>${bet(e.lean, o.lean_ok, o.lean_pl)}</td><td>${bet(e.value, o.value_ok, o.value_pl)}</td></tr>`; }).join("")}
       </tbody></table></div>`;

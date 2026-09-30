@@ -22,9 +22,10 @@ import fetch
 import notify
 import oddsapi
 import summary
+import ml
 import track
 from common import DATA, LEAGUES, get_logger, load_params, read_json, season_code, write_json
-from model import Model, base_confidence, best_bet, market_odds_from_row
+from model import Model, base_confidence, best_bet, evaluate_markets, market_odds_from_row
 
 log = get_logger("main")
 N_FLAG = 25
@@ -125,6 +126,41 @@ def game_record(gid, row, p, params, flagged=False, ext=None) -> dict:
     return rec
 
 
+def rescore(rec: dict, odds: dict, params: dict) -> None:
+    """Recompute edges, EV, value bet and lean from the record's (ML) probabilities.
+    The ML output already includes the bookmaker blend, so no second market blend here."""
+    rec["markets"]["1X2"] = dict(rec["probs"])
+    evals = evaluate_markets(rec["markets"], odds or {}, 0.0)
+    bb = best_bet(evals, params)
+    rec["evals"] = evals
+    rec["best_bet"] = dict(bb, label=summary.bet_label(bb, rec["home"], rec["away"])) if bb else None
+    rec["edge"] = bb["edge"] if bb else None
+    rec["max_ev"] = max((e["ev"] for e in evals if "ev" in e), default=None)
+    priced = [e for e in evals if "ev" in e]
+    lean = max(priced, key=lambda e: e["ev"]) if priced else None
+    rec["lean"] = dict(lean, label=summary.bet_label(lean, rec["home"], rec["away"]), value=bool(bb)) if lean else None
+
+
+def apply_ml(args, records, rows, odds_by_id, model, season, params, today) -> str:
+    if not records:
+        return "no games"
+    try:
+        if not args.demo and (args.retrain_ml or ml.bundle_stale()):
+            ml.train_final(today)
+        bundle = ml.load_bundle()
+        if not bundle:
+            return "no trained model (run: python scripts/ml.py --train)"
+        feats = ml.fixture_features(model.hist, rows, model.elo, season)
+        ml.apply(bundle, records, feats)
+        for r in records:
+            if r.get("prob_source") == "ml":
+                rescore(r, odds_by_id.get(r["id"]), params)
+        return f"ok: trained through {bundle.get('trained_through')} on {bundle.get('n_train')} matches"
+    except Exception:  # noqa: BLE001
+        log.error("ML stage failed, keeping Dixon-Coles probabilities:\n%s", traceback.format_exc())
+        return "failed (Dixon-Coles probabilities used)"
+
+
 def select_flagged(records: list[dict], n: int = N_FLAG, today: dt.date | None = None) -> list[str]:
     """Deep-check the next 48 hours first (daily analysis), then the rest by EV and disagreement."""
     soon_cut = ((today or dt.date.today()) + dt.timedelta(days=1)).isoformat()
@@ -171,7 +207,7 @@ def run(args) -> dict:
     ref = pd.Timestamp(today)
 
     # ---- stage 1: scan every game
-    rows, records = {}, []
+    rows, records, odds_by_id = {}, [], {}
     for i, row in fixtures.iterrows():
         row = row.to_dict()
         gid = f"{row['Div']}-{pd.Timestamp(row['Date']):%Y%m%d}-{i}"
@@ -179,6 +215,7 @@ def run(args) -> dict:
             p = predict_game(model, row, params, ref, season)
             records.append(game_record(gid, row, p, params))
             rows[gid] = row
+            odds_by_id[gid] = p["odds"]
         except Exception:  # noqa: BLE001
             log.warning("prediction failed for %s v %s:\n%s", row.get("HomeTeam"), row.get("AwayTeam"),
                         traceback.format_exc(limit=2))
@@ -204,9 +241,13 @@ def run(args) -> dict:
             p = predict_game(model, rows[r["id"]], params, ref, season,
                              adj=tuple(e.get("lambda_mult", (1.0, 1.0))), extra_odds=e.get("extra_odds"))
             records[k] = game_record(r["id"], rows[r["id"]], p, params, flagged=True, ext=e)
+            odds_by_id[r["id"]] = p["odds"]
         except Exception:  # noqa: BLE001
             log.warning("stage 2 failed for %s:\n%s", r["id"], traceback.format_exc(limit=2))
             records[k]["flagged"] = True
+
+    # ---- stage 3: machine-learning ensemble on every available feature
+    status["ml"] = apply_ml(args, records, rows, odds_by_id, model, season, params, today)
 
     for r in records:
         try:
@@ -261,6 +302,7 @@ if __name__ == "__main__":
     ap.add_argument("--no-notify", action="store_true")
     ap.add_argument("--backtest", action="store_true", help="always run the backtest first")
     ap.add_argument("--backtest-if-stale", action="store_true")
+    ap.add_argument("--retrain-ml", action="store_true", help="retrain the ML ensemble now (otherwise weekly)")
     try:
         run(ap.parse_args())
     except Exception:  # noqa: BLE001

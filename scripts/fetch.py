@@ -203,7 +203,8 @@ def fetch_clubelo(date: dt.date | None = None) -> pd.DataFrame:
 def run(today: dt.date | None = None) -> dict:
     today = today or dt.date.today()
     fixtures = fetch_fixtures(today=today)
-    seasons = [season_code(today, -1), season_code(today)]
+    # six seasons: the ML layer was trained on Elo/form built from the same span
+    seasons = [season_code(today, k) for k in range(-5, 1)]
     hist = fetch_history(seasons)
     if len(hist):
         hist = merge_understat(hist)

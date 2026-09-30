@@ -70,6 +70,11 @@ def generate(g: dict) -> str:
     if other:
         parts.append("Also factored in: " + "; ".join(other[:3]) + ".")
 
+    pk = g.get("pick")
+    if pk:
+        tier = {"very strong": " (very strong pick)", "strong": " (strong pick)"}.get(pk.get("tier"), "")
+        parts.append(f"Pick: {pk['label']} at {pk['p']:.0%}{tier}; double chance {pk['double_chance']['label']} "
+                     f"at {pk['double_chance']['p']:.0%}.")
     b, lean = g.get("best_bet"), g.get("lean")
     if b:
         parts.append(f"Value bet: {bet_label(b, home, away)} at {b['odds']:.2f}. The model gives it "
@@ -116,6 +121,7 @@ def daily_overview(date: str, games: list[dict], today=None) -> dict:
         return max(abs(e["edge"]) for e in g["evals"] if e.get("market") == "1X2" and "edge" in e)
     disagree = sorted(priced, key=lambda g: -gap(g))
     value = [g for g in games if g.get("best_bet")]
+    strong = sorted((g for g in games if (g.get("pick") or {}).get("tier")), key=lambda g: -g["pick"]["p"])
 
     hl = []
     if fav and max(fav[0]["probs"]["H"], fav[0]["probs"]["A"]) >= 0.45:
@@ -147,6 +153,12 @@ def daily_overview(date: str, games: list[dict], today=None) -> dict:
 
     day = "Today" if d == today else "Tomorrow" if d == today + dt.timedelta(days=1) else d.strftime("%A")
     text = f"{day}, {d.strftime('%d %b')}: {len(games)} game{'s' if len(games) != 1 else ''} ({lg_txt}). "
+    if strong:
+        text += (f"{len(strong)} strong pick{'s' if len(strong) != 1 else ''} (55%+): "
+                 + "; ".join(f"{g['pick']['label']} {g['pick']['p']:.0%}" for g in strong[:4])
+                 + (" and more" if len(strong) > 4 else "") + ". ")
+    else:
+        text += "No strong picks (no favourite at 55% or more). "
     if value:
         text += (f"{len(value)} price{'s' if len(value) != 1 else ''} clear{'' if len(value) != 1 else 's'} the value threshold: "
                  + "; ".join(f"{_match(g)}, {bet_label(g['best_bet'], g['home'], g['away'])} @ {g['best_bet']['odds']:.2f}"
@@ -156,4 +168,4 @@ def daily_overview(date: str, games: list[dict], today=None) -> dict:
     else:
         text += "No bookmaker prices yet; model probabilities only."
     return {"date": date, "n_games": len(games), "leagues": leagues, "text": text, "highlights": hl,
-            "n_value": len(value)}
+            "n_value": len(value), "n_strong": len(strong)}

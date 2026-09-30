@@ -1,0 +1,365 @@
+[
+ {
+  "train": [
+   "2223",
+   "2324",
+   "2425"
+  ],
+  "test": "2526",
+  "n_train": 23310,
+  "n_test": 7646,
+  "result": {
+   "dixon_coles": {
+    "n": 7634,
+    "accuracy": 0.492,
+    "log_loss": 1.0169,
+    "brier": 0.6094
+   },
+   "bookmakers": {
+    "n": 7634,
+    "accuracy": 0.5062,
+    "log_loss": 1.003,
+    "brier": 0.6001
+   },
+   "ml": {
+    "n": 7634,
+    "accuracy": 0.5052,
+    "log_loss": 1.0027,
+    "brier": 0.6001
+   },
+   "ml_all_games": {
+    "n": 7646,
+    "accuracy": 0.5048,
+    "log_loss": 1.003,
+    "brier": 0.6002
+   }
+  },
+  "over25": {
+   "dixon_coles": {
+    "n": 7646,
+    "accuracy": 0.543,
+    "log_loss": 0.6884
+   },
+   "bookmakers": {
+    "n": 7634,
+    "accuracy": 0.5582,
+    "log_loss": 0.6805
+   },
+   "ml": {
+    "n": 7646,
+    "accuracy": 0.5556,
+    "log_loss": 0.6808
+   }
+  },
+  "btts": {
+   "dixon_coles": {
+    "n": 7646,
+    "accuracy": 0.5434,
+    "log_loss": 0.6886
+   },
+   "ml": {
+    "n": 7646,
+    "accuracy": 0.5524,
+    "log_loss": 0.6857
+   }
+  },
+  "confidence_ml": [
+   {
+    "threshold": 0.0,
+    "games": 7646,
+    "share": 1.0,
+    "winner_hit": 0.5048,
+    "double_chance_hit": 0.7813
+   },
+   {
+    "threshold": 0.45,
+    "games": 4479,
+    "share": 0.5858,
+    "winner_hit": 0.5693,
+    "double_chance_hit": 0.8205
+   },
+   {
+    "threshold": 0.5,
+    "games": 3069,
+    "share": 0.4014,
+    "winner_hit": 0.6224,
+    "double_chance_hit": 0.8495
+   },
+   {
+    "threshold": 0.55,
+    "games": 2195,
+    "share": 0.2871,
+    "winner_hit": 0.6638,
+    "double_chance_hit": 0.877
+   },
+   {
+    "threshold": 0.6,
+    "games": 1376,
+    "share": 0.18,
+    "winner_hit": 0.7144,
+    "double_chance_hit": 0.8968
+   },
+   {
+    "threshold": 0.65,
+    "games": 832,
+    "share": 0.1088,
+    "winner_hit": 0.7632,
+    "double_chance_hit": 0.9279
+   },
+   {
+    "threshold": 0.7,
+    "games": 555,
+    "share": 0.0726,
+    "winner_hit": 0.7856,
+    "double_chance_hit": 0.9441
+   },
+   {
+    "threshold": 0.75,
+    "games": 308,
+    "share": 0.0403,
+    "winner_hit": 0.8182,
+    "double_chance_hit": 0.9578
+   }
+  ],
+  "confidence_bookmakers": [
+   {
+    "threshold": 0.0,
+    "games": 7634,
+    "share": 1.0,
+    "winner_hit": 0.5062,
+    "double_chance_hit": 0.7771
+   },
+   {
+    "threshold": 0.45,
+    "games": 4283,
+    "share": 0.561,
+    "winner_hit": 0.5783,
+    "double_chance_hit": 0.8256
+   },
+   {
+    "threshold": 0.5,
+    "games": 2973,
+    "share": 0.3894,
+    "winner_hit": 0.6236,
+    "double_chance_hit": 0.8513
+   },
+   {
+    "threshold": 0.55,
+    "games": 1920,
+    "share": 0.2515,
+    "winner_hit": 0.6813,
+    "double_chance_hit": 0.8839
+   },
+   {
+    "threshold": 0.6,
+    "games": 1232,
+    "share": 0.1614,
+    "winner_hit": 0.7192,
+    "double_chance_hit": 0.8977
+   },
+   {
+    "threshold": 0.65,
+    "games": 766,
+    "share": 0.1003,
+    "winner_hit": 0.7715,
+    "double_chance_hit": 0.9321
+   },
+   {
+    "threshold": 0.7,
+    "games": 433,
+    "share": 0.0567,
+    "winner_hit": 0.8037,
+    "double_chance_hit": 0.9492
+   },
+   {
+    "threshold": 0.75,
+    "games": 219,
+    "share": 0.0287,
+    "winner_hit": 0.8584,
+    "double_chance_hit": 0.9726
+   }
+  ]
+ },
+ {
+  "train": [
+   "2223",
+   "2324",
+   "2425",
+   "2526"
+  ],
+  "test": "2627",
+  "n_train": 30956,
+  "n_test": 1339,
+  "result": {
+   "dixon_coles": {
+    "n": 1339,
+    "accuracy": 0.4787,
+    "log_loss": 1.0276,
+    "brier": 0.6169
+   },
+   "bookmakers": {
+    "n": 1339,
+    "accuracy": 0.4839,
+    "log_loss": 1.0115,
+    "brier": 0.6058
+   },
+   "ml": {
+    "n": 1339,
+    "accuracy": 0.4869,
+    "log_loss": 1.0112,
+    "brier": 0.6055
+   },
+   "ml_all_games": {
+    "n": 1339,
+    "accuracy": 0.4869,
+    "log_loss": 1.0112,
+    "brier": 0.6055
+   }
+  },
+  "over25": {
+   "dixon_coles": {
+    "n": 1339,
+    "accuracy": 0.5907,
+    "log_loss": 0.6703
+   },
+   "bookmakers": {
+    "n": 1338,
+    "accuracy": 0.5912,
+    "log_loss": 0.667
+   },
+   "ml": {
+    "n": 1339,
+    "accuracy": 0.5922,
+    "log_loss": 0.6665
+   }
+  },
+  "btts": {
+   "dixon_coles": {
+    "n": 1339,
+    "accuracy": 0.5594,
+    "log_loss": 0.6821
+   },
+   "ml": {
+    "n": 1339,
+    "accuracy": 0.5579,
+    "log_loss": 0.6805
+   }
+  },
+  "confidence_ml": [
+   {
+    "threshold": 0.0,
+    "games": 1339,
+    "share": 1.0,
+    "winner_hit": 0.4869,
+    "double_chance_hit": 0.7528
+   },
+   {
+    "threshold": 0.45,
+    "games": 754,
+    "share": 0.5631,
+    "winner_hit": 0.5557,
+    "double_chance_hit": 0.7865
+   },
+   {
+    "threshold": 0.5,
+    "games": 512,
+    "share": 0.3824,
+    "winner_hit": 0.627,
+    "double_chance_hit": 0.834
+   },
+   {
+    "threshold": 0.55,
+    "games": 366,
+    "share": 0.2733,
+    "winner_hit": 0.6776,
+    "double_chance_hit": 0.8634
+   },
+   {
+    "threshold": 0.6,
+    "games": 235,
+    "share": 0.1755,
+    "winner_hit": 0.7277,
+    "double_chance_hit": 0.8894
+   },
+   {
+    "threshold": 0.65,
+    "games": 146,
+    "share": 0.109,
+    "winner_hit": 0.7808,
+    "double_chance_hit": 0.9315
+   },
+   {
+    "threshold": 0.7,
+    "games": 99,
+    "share": 0.0739,
+    "winner_hit": 0.8182,
+    "double_chance_hit": 0.9697
+   },
+   {
+    "threshold": 0.75,
+    "games": 68,
+    "share": 0.0508,
+    "winner_hit": 0.8088,
+    "double_chance_hit": 0.9853
+   }
+  ],
+  "confidence_bookmakers": [
+   {
+    "threshold": 0.0,
+    "games": 1339,
+    "share": 1.0,
+    "winner_hit": 0.4839,
+    "double_chance_hit": 0.755
+   },
+   {
+    "threshold": 0.45,
+    "games": 736,
+    "share": 0.5497,
+    "winner_hit": 0.5598,
+    "double_chance_hit": 0.788
+   },
+   {
+    "threshold": 0.5,
+    "games": 504,
+    "share": 0.3764,
+    "winner_hit": 0.629,
+    "double_chance_hit": 0.8294
+   },
+   {
+    "threshold": 0.55,
+    "games": 327,
+    "share": 0.2442,
+    "winner_hit": 0.6911,
+    "double_chance_hit": 0.8807
+   },
+   {
+    "threshold": 0.6,
+    "games": 206,
+    "share": 0.1538,
+    "winner_hit": 0.733,
+    "double_chance_hit": 0.9029
+   },
+   {
+    "threshold": 0.65,
+    "games": 134,
+    "share": 0.1001,
+    "winner_hit": 0.7836,
+    "double_chance_hit": 0.9403
+   },
+   {
+    "threshold": 0.7,
+    "games": 87,
+    "share": 0.065,
+    "winner_hit": 0.8276,
+    "double_chance_hit": 0.977
+   },
+   {
+    "threshold": 0.75,
+    "games": 49,
+    "share": 0.0366,
+    "winner_hit": 0.7959,
+    "double_chance_hit": 0.9796
+   }
+  ]
+ }
+]
