@@ -250,5 +250,12 @@
   "lat": 42.2406,
   "lon": -8.7207,
   "approx": true
+ },
+ "SP1|Real Madrid": {
+  "query": "madrid",
+  "place": "Madrid",
+  "lat": 40.4165,
+  "lon": -3.70256,
+  "approx": true
  }
 }
