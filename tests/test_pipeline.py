@@ -194,8 +194,8 @@ class TestExtras(unittest.TestCase):
 class TestOddsBudget(unittest.TestCase):
     def test_runs_left(self):
         import datetime as dt
-        self.assertEqual(oddsapi.runs_left_this_month(dt.date(2026, 10, 1)), 9)   # Oct 2026: 4 Tue + 5 Fri
-        self.assertEqual(oddsapi.runs_left_this_month(dt.date(2026, 9, 30)), 1)   # none left -> at least 1
+        self.assertEqual(oddsapi.runs_left_this_month(dt.date(2026, 10, 1)), 31)  # daily runs
+        self.assertEqual(oddsapi.runs_left_this_month(dt.date(2026, 9, 30)), 1)   # last day of month
 
     def _client(self, remaining, today):
         import datetime as dt
@@ -205,15 +205,15 @@ class TestOddsBudget(unittest.TestCase):
 
     def test_budget_never_exceeds_month(self):
         c = self._client(500, (2026, 10, 1))
-        self.assertEqual(c.budget, 40)                  # capped per run
-        c = self._client(60, (2026, 10, 13))            # 6 runs left, 45 usable credits -> 7 per run
-        self.assertEqual(c.budget, 7)
+        self.assertEqual(c.budget, 15)                  # (500 - 15) // 31 days
+        c = self._client(60, (2026, 10, 27))            # 5 days left, 45 usable credits -> 9 per run
+        self.assertEqual(c.budget, 9)
         c = self._client(10, (2026, 10, 30))            # below the reserve -> nothing
         self.assertEqual(c.budget, 0)
         self.assertFalse(c.can_fetch())
 
     def test_league_cached_and_budgeted(self):
-        c = self._client(500, (2026, 10, 1))
+        c = self._client(500, (2026, 9, 30))
         c.budget = 3                                    # room for one 2-credit league
         with mock.patch.object(oddsapi, "http_get", side_effect=fake_http_get) as g:
             self.assertTrue(c.league("E0"))
@@ -272,6 +272,20 @@ class TestOutput(unittest.TestCase):
         s = summary.generate(self.game())
         self.assertIn("A -0.25", s)
         self.assertIn("no xG", s)
+
+    def test_daily_overview(self):
+        import datetime as dt
+        base = self.game()
+        g1 = dict(base, id="a", markets={"O/U 2.5": {"Over": 0.6}}, evals=[], lean=None, best_bet=None)
+        g2 = dict(base, id="b", home="C", away="D", probs={"H": 0.34, "D": 0.32, "A": 0.34}, xg={"home": 1.0, "away": 0.9},
+                  markets={}, evals=[{"market": "1X2", "selection": "H", "edge": 0.08, "model_p": 0.34, "market_p": 0.26}])
+        ov = summary.daily_overview("2026-10-03", [g1, g2], dt.date(2026, 10, 3))
+        self.assertTrue(ov["text"].startswith("Today, 03 Oct: 2 games"))
+        kinds = {h["kind"]: h["game"] for h in ov["highlights"]}
+        self.assertEqual(kinds["Strongest favourite"], "a")
+        self.assertEqual(kinds["Closest call"], "b")
+        self.assertEqual(kinds["Model vs bookies"], "b")
+        self.assertEqual(ov["n_value"], 1)
 
     def test_notify(self):
         pred = {"top_bets": [self.game()] * 7, "n_games": 100, "n_leagues": 20}

@@ -1,8 +1,9 @@
 # football-model
 
-A free, fully automated football betting model. Twice a week it scans every fixture in 22 European
-leagues, prices each game with a Dixon-Coles model, and ranks bets by **expected value** (not by
-how likely they are). It publishes the results to GitHub Pages and posts the top 5 picks to Discord.
+A free, fully automated football analysis model. Every day it analyses every upcoming fixture in 22
+European leagues with a Dixon-Coles model, writes a daily overview and a per-game analysis, compares
+the model's prices with the bookmakers' (European markets: 1X2, over/under, BTTS), and publishes it all
+to GitHub Pages. Games where the price clears a backtested threshold are marked as value bets.
 
 It runs only on free services: GitHub Actions, GitHub Pages, football-data.co.uk, ClubElo, Understat,
 and the free tiers of API-Football and The Odds API.
@@ -23,10 +24,12 @@ and the free tiers of API-Football and The Odds API.
 | 7 | `scripts/notify.py` | Posts the top 5 bets to Discord. |
 | 8 | `scripts/main.py` | Runs everything and writes `data/predictions.json`. |
 
-The site (`index.html`) is one static file. It reads `data/predictions.json` and shows win/draw/loss %,
-most likely score, expected goals, best bet, edge, EV, confidence and the summary for each game. You
-can sort by edge, EV, confidence or kick-off and filter by league. It works on mobile and has dark and
-light modes.
+The site (`index.html`) is one static file reading `data/predictions.json`. It opens on **today's**
+games, with tabs for each upcoming day. Each day has a written overview: strongest favourite, closest
+call, most goals expected, tightest game, and biggest model-vs-bookies gap. Each game card shows
+win/draw/loss %, most likely score, expected goals, form, the **model's lean** (flagged *Value* only
+when it clears the threshold), confidence, a written summary and every market's model vs bookmaker
+price. It works on mobile and has dark and light modes.
 
 ### Key definitions
 - **Edge** = model probability − bookmaker no-vig probability (from the average odds).
@@ -48,16 +51,16 @@ light modes.
 
    **Odds API credit budget** (`scripts/oddsapi.py`): each league request costs 2 credits (1X2 + totals; no Asian handicap). Before
    every run the pipeline reads the credits left (a free call) and allows at most
-   `(credits left - 15) / scheduled runs left this month`, capped at 40 per run (20 leagues). The Premier
-   League, La Liga, Bundesliga, Serie A and Ligue 1 are always fetched first (12-day window, so the next
-   round shows up even during international breaks). Leftover budget goes to the leagues of the flagged
-   games, most valuable first. Each league is fetched at most once per run. A normal month uses at most
+   `(credits left - 15) / days left this month`, capped at 40 per run (20 leagues). The free events
+   list shows which leagues play soon; credits go to leagues with games football-data.co.uk hasn't listed
+   yet, earliest kick-off first (top-5 leagues look 12 days ahead so their next round shows during
+   international breaks). Leftover budget goes to extra odds for the flagged games. Each league is fetched at most once per run. A normal month uses at most
    about 360 credits.
 
    All three are optional. Without them the pipeline still runs: it skips injuries, extra odds or
    Discord and lowers confidence where team news is missing.
 3. **Run it**: go to *Actions → Weekly predictions → Run workflow*. After that it runs automatically
-   every **Tuesday and Friday at 07:00 UTC**. football-data.co.uk refreshes `fixtures.csv` on those days.
+   **every day at 07:00 UTC**.
    Tick *backtest* to force a re-tune. Otherwise the backtest re-runs by itself when `params.json` is
    more than 30 days old (about 12 minutes).
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Football Model</title>
-<meta name="description" content="Weekly expected-value football predictions across 22 European leagues.">
+<meta name="description" content="Daily football match analysis across 22 European leagues.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
 <style>
 :root {
@@ -30,24 +30,35 @@ body { margin: 0; background: var(--bg); color: var(--text);
 .wrap { max-width: 980px; margin: 0 auto; padding: 16px; }
 header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
 h1 { font-size: 1.35rem; margin: 0; letter-spacing: -.01em; }
-h2 { font-size: 1.05rem; margin: 24px 0 10px; }
-.meta { color: var(--muted); font-size: .85rem; margin: 0 0 16px; }
+h2 { font-size: 1.05rem; margin: 0 0 6px; }
+.meta { color: var(--muted); font-size: .85rem; margin: 0 0 14px; }
 button, select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border);
   border-radius: 8px; padding: 7px 10px; min-height: 38px; }
 button { cursor: pointer; }
-.controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; align-items: center; }
+.days { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 12px; scrollbar-width: thin; }
+.day { flex: 0 0 auto; text-align: left; line-height: 1.25; padding: 7px 12px; }
+.day small { display: block; color: var(--muted); font-size: .75rem; }
+.day[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.day[aria-pressed="true"] small { color: rgba(255,255,255,.85); }
+.overview { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: var(--radius); padding: 14px 16px; margin-bottom: 14px; }
+.overview p { margin: 0 0 8px; }
+.hl { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.hl li { font-size: .9rem; }
+.hl a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+.hl b { color: var(--muted); font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; margin-right: 6px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; align-items: center; }
 .controls label { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: .85rem; }
-.top { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-.tb { background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; }
-.tb .rank { font-weight: 700; color: var(--accent); margin-right: 6px; }
-.tb .bet { font-weight: 600; margin: 4px 0; }
 .small { font-size: .82rem; color: var(--muted); }
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 10px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 10px;
+  scroll-margin-top: 12px; }
+.card.hit { outline: 2px solid var(--accent); }
 .row1 { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; }
 .teams { font-weight: 650; font-size: 1.02rem; }
+.ko { font-variant-numeric: tabular-nums; font-weight: 650; color: var(--accent); margin-right: 8px; }
 .tag { display: inline-block; font-size: .72rem; padding: 1px 7px; border-radius: 99px; background: var(--surface-2);
   color: var(--muted); margin-left: 4px; white-space: nowrap; }
-.tag.flag { background: var(--accent-soft); color: var(--accent); }
+.tag.value { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .bar { display: flex; height: 26px; border-radius: 7px; overflow: hidden; margin: 10px 0 4px; font-size: .78rem;
   font-weight: 600; color: #fff; }
 .bar div { display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; }
@@ -55,14 +66,15 @@ button { cursor: pointer; }
 .legend { display: flex; justify-content: space-between; font-size: .78rem; color: var(--muted); }
 .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 12px 0 8px; }
 @media (min-width: 640px) { .stats { grid-template-columns: repeat(4, 1fr); } }
-.stat { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; }
+.stat { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; min-width: 0; }
 .stat .k { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
-.stat .v { font-weight: 650; font-variant-numeric: tabular-nums; }
+.stat .v { font-weight: 650; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.stat.value { background: var(--accent-soft); }
 .pos { color: var(--accent); } .neg { color: var(--bad); }
 .conf { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-top: 4px; }
 .conf i { display: block; height: 100%; background: var(--accent); }
 .conf.mid i { background: var(--warn); } .conf.low i { background: var(--bad); }
-.summary { margin: 8px 0 0; color: var(--text); font-size: .92rem; }
+.summary { margin: 8px 0 0; font-size: .92rem; }
 details { margin-top: 8px; } summary { cursor: pointer; color: var(--muted); font-size: .85rem; }
 .tablewrap { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: .82rem; margin-top: 8px; font-variant-numeric: tabular-nums; }
@@ -79,29 +91,27 @@ a { color: var(--accent); }
     <h1>⚽ Football Model</h1>
     <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
   </header>
-  <p class="meta" id="meta">Loading predictions…</p>
+  <p class="meta" id="meta">Loading analysis…</p>
 
-  <section id="topsec" hidden>
-    <h2>Top value bets</h2>
-    <div class="top" id="top"></div>
-  </section>
+  <nav class="days" id="days" aria-label="Match days"></nav>
+  <section class="overview" id="overview" hidden></section>
 
-  <h2>All fixtures</h2>
   <div class="controls">
     <label>League <select id="league"><option value="">All leagues</option></select></label>
     <label>Sort <select id="sort">
-      <option value="edge">Edge</option>
-      <option value="ev">Expected value</option>
-      <option value="confidence">Confidence</option>
       <option value="date">Kick-off</option>
+      <option value="edge">Edge</option>
+      <option value="confidence">Confidence</option>
     </select></label>
     <label><input type="checkbox" id="onlybets"> Value bets only</label>
   </div>
   <div id="games"></div>
 
   <footer>
-    Probabilities come from a Dixon-Coles model built on time-weighted xG/shots ratings blended with Elo.
-    Edge = model probability minus the bookmaker's no-vig probability; EV uses the best available price.
+    A daily analysis of every fixture. Probabilities come from a Dixon-Coles model built on time-weighted xG/shots
+    ratings blended with Elo. <b>Lean</b> is the market the model rates best against the bookmakers' prices. It is
+    only marked <b>Value</b> when it clears the backtested threshold. Edge = model probability minus the
+    bookmaker's no-vig probability.
     <a href="backtest.md">Backtest results</a> · <a href="https://github.com" id="repo">Source</a>.
     Statistical model, not financial advice. 18+, bet responsibly.
   </footer>
@@ -124,67 +134,91 @@ a { color: var(--accent); }
   const sgn = (x, d = 1) => x == null ? "–" : (x >= 0 ? "+" : "") + (x * 100).toFixed(d) + "%";
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const confCls = c => c >= 70 ? "" : c >= 50 ? "mid" : "low";
-  let DATA = null;
+  const iso = d => d.toISOString().slice(0, 10);
+  let DATA = null, DAY = null;
 
   const file = new URLSearchParams(location.search).has("demo") ? "data/predictions_demo.json" : "data/predictions.json";
   fetch(file, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(d => { DATA = d; init(); })
-    .catch(e => { document.getElementById("meta").textContent = "No predictions published yet (" + e.message + ")."; });
+    .catch(e => { document.getElementById("meta").textContent = "No analysis published yet (" + e.message + ")."; });
+
+  function dayLabel(date) {
+    const ref = DATA.demo ? DATA.reference_date : iso(new Date());
+    const tmr = iso(new Date(Date.parse(ref + "T12:00:00Z") + 864e5));
+    const d = new Date(date + "T12:00:00Z");
+    const nice = d.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
+    return date === ref ? ["Today", nice] : date === tmr ? ["Tomorrow", nice] : [nice.split(",")[0], nice.split(", ").pop()];
+  }
 
   function init() {
     const d = DATA, when = new Date(d.generated_at);
-    const bt = d.backtest && d.backtest.bets;
     document.getElementById("meta").innerHTML =
-      `${d.n_games} fixtures · ${d.n_leagues} leagues · ${d.n_flagged} deep-checked · updated ${when.toLocaleString()}` +
-      (d.demo ? " · <b>demo replay</b>" : "") +
-      (bt && bt.bets ? ` · backtest ${d.backtest.bets.bets} bets, CLV ${sgn(bt.clv_mean)}` : "");
-    const sel = document.getElementById("league");
-    const present = [...new Set(d.games.map(g => g.league))];
-    present.sort((a, b) => (d.leagues[a] || a).localeCompare(d.leagues[b] || b));
-    for (const lg of present) sel.insertAdjacentHTML("beforeend", `<option value="${esc(lg)}">${esc(d.leagues[lg] || lg)}</option>`);
-    try { const s = JSON.parse(localStorage.getItem("filters") || "{}");
-      if (s.league && present.includes(s.league)) sel.value = s.league;
+      `${d.n_games} fixtures · ${d.n_leagues} leagues · updated ${when.toLocaleString()}` + (d.demo ? " · <b>demo replay</b>" : "");
+    const days = (d.daily && d.daily.length) ? d.daily
+      : [...new Set(d.games.map(g => g.date))].sort().map(x => ({ date: x, n_games: d.games.filter(g => g.date === x).length }));
+    const today = d.demo ? d.reference_date : iso(new Date());
+    let saved = null; try { saved = sessionStorage.getItem("day"); } catch (e) {}
+    DAY = days.some(x => x.date === saved) ? saved : (days.find(x => x.date >= today) || days[0] || {}).date;
+    document.getElementById("days").innerHTML = days.map(x => {
+      const [a, b] = dayLabel(x.date);
+      return `<button class="day" type="button" data-day="${x.date}" aria-pressed="${x.date === DAY}">${esc(a)}<small>${esc(b)} · ${x.n_games} game${x.n_games === 1 ? "" : "s"}${x.n_value ? " · " + x.n_value + " value" : ""}</small></button>`;
+    }).join("");
+    document.querySelectorAll(".day").forEach(b => b.onclick = () => {
+      DAY = b.dataset.day; try { sessionStorage.setItem("day", DAY); } catch (e) {}
+      document.querySelectorAll(".day").forEach(x => x.setAttribute("aria-pressed", x.dataset.day === DAY));
+      renderDay();
+    });
+    try { const s = JSON.parse(localStorage.getItem("filters2") || "{}");
       if (s.sort) document.getElementById("sort").value = s.sort;
       document.getElementById("onlybets").checked = !!s.only; } catch (e) {}
     for (const id of ["league", "sort", "onlybets"]) document.getElementById(id).onchange = render;
-    renderTop(); render();
+    renderDay();
   }
 
-  function renderTop() {
-    const t = DATA.top_bets || [];
-    if (!t.length) return;
-    document.getElementById("topsec").hidden = false;
-    document.getElementById("top").innerHTML = t.map((g, i) => `
-      <div class="tb"><div class="small"><span class="rank">#${i + 1}</span>${esc(g.league_name)} · ${esc(g.date)} ${esc(g.time || "")}</div>
-      <div><b>${esc(g.home)}</b> v <b>${esc(g.away)}</b></div>
-      <div class="bet">${esc(g.best_bet.label)} @ ${g.best_bet.odds.toFixed(2)}</div>
-      <div class="small">Model ${pct(g.best_bet.model_p)} vs market ${pct(g.best_bet.market_p)} · edge ${sgn(g.best_bet.edge)} · EV ${sgn(g.best_bet.ev)} · conf ${g.confidence}</div></div>`).join("");
+  function renderDay() {
+    const ov = (DATA.daily || []).find(x => x.date === DAY), el = document.getElementById("overview");
+    if (ov) {
+      el.hidden = false;
+      el.innerHTML = `<h2>Daily analysis</h2><p>${esc(ov.text)}</p><ul class="hl">${(ov.highlights || []).map(h =>
+        `<li><b>${esc(h.kind)}</b><a href="#${esc(h.game)}" data-jump="${esc(h.game)}">${esc(h.text)}</a></li>`).join("")}</ul>`;
+      el.querySelectorAll("[data-jump]").forEach(a => a.onclick = ev => {
+        ev.preventDefault();
+        document.getElementById("league").value = ""; document.getElementById("onlybets").checked = false; render();
+        const c = document.getElementById(a.dataset.jump);
+        if (c) { c.scrollIntoView({ behavior: "smooth" }); c.classList.add("hit"); setTimeout(() => c.classList.remove("hit"), 1600); }
+      });
+    } else el.hidden = true;
+    const sel = document.getElementById("league"), cur = sel.value;
+    const present = [...new Set(DATA.games.filter(g => g.date === DAY).map(g => g.league))]
+      .sort((a, b) => (DATA.leagues[a] || a).localeCompare(DATA.leagues[b] || b));
+    sel.innerHTML = `<option value="">All leagues</option>` + present.map(lg => `<option value="${esc(lg)}">${esc(DATA.leagues[lg] || lg)}</option>`).join("");
+    sel.value = present.includes(cur) ? cur : "";
+    render();
   }
 
   function render() {
     const lg = document.getElementById("league").value, sort = document.getElementById("sort").value,
       only = document.getElementById("onlybets").checked;
-    try { localStorage.setItem("filters", JSON.stringify({ league: lg, sort, only })); } catch (e) {}
-    let gs = DATA.games.filter(g => (!lg || g.league === lg) && (!only || g.best_bet));
+    try { localStorage.setItem("filters2", JSON.stringify({ sort, only })); } catch (e) {}
+    let gs = DATA.games.filter(g => g.date === DAY && (!lg || g.league === lg) && (!only || g.best_bet));
     const key = {
-      edge: g => g.best_bet ? g.best_bet.edge : -1,
-      ev: g => g.best_bet ? g.best_bet.ev : -1,
-      confidence: g => g.confidence,
-      date: g => -Date.parse(g.date + "T" + (g.time || "00:00")),
+      date: g => (g.time || "99:99") + g.league,
+      edge: g => -(g.lean ? g.lean.edge : -1),
+      confidence: g => -g.confidence,
     }[sort];
-    gs.sort((a, b) => key(b) - key(a));
+    gs.sort((a, b) => { const x = key(a), y = key(b); return x < y ? -1 : x > y ? 1 : 0; });
     const el = document.getElementById("games");
     if (!gs.length) { el.innerHTML = `<div class="empty">No fixtures match this filter.</div>`; return; }
     el.innerHTML = gs.map(card).join("");
   }
 
   function card(g) {
-    const p = g.probs, b = g.best_bet;
-    const evals = (g.evals || []).filter(e => e.odds);
+    const p = g.probs, l = g.lean;
     const abs = ["home", "away"].flatMap(s => (g.absences?.[s] || []).map(a => ({ ...a, team: g[s] })));
-    return `<article class="card">
-      <div class="row1"><div class="teams">${esc(g.home)} <span class="small">v</span> ${esc(g.away)}</div>
-        <div class="small">${esc(g.league_name)} · ${esc(g.date)} ${esc(g.time || "")}${g.flagged ? '<span class="tag flag">deep-checked</span>' : ""}${g.has_xg ? "" : '<span class="tag">no xG</span>'}</div></div>
+    const form = ["home", "away"].map(s => g.context?.[s]?.form ? `${esc(g[s])} ${esc(g.context[s].form)}` : "").filter(Boolean).join(" · ");
+    return `<article class="card" id="${esc(g.id)}">
+      <div class="row1"><div class="teams"><span class="ko">${esc(g.time || "TBC")}</span>${esc(g.home)} <span class="small">v</span> ${esc(g.away)}</div>
+        <div class="small">${esc(g.league_name)}${g.best_bet ? '<span class="tag value">Value</span>' : ""}${g.has_xg ? "" : '<span class="tag">no xG</span>'}</div></div>
       <div class="bar" role="img" aria-label="Home ${pct(p.H)}, draw ${pct(p.D)}, away ${pct(p.A)}">
         <div class="h" style="width:${p.H * 100}%">${p.H > .12 ? pct(p.H) : ""}</div>
         <div class="d" style="width:${p.D * 100}%">${p.D > .12 ? pct(p.D) : ""}</div>
@@ -193,16 +227,17 @@ a { color: var(--accent); }
       <div class="stats">
         <div class="stat"><div class="k">Likely score</div><div class="v">${esc(g.likely_score)}</div></div>
         <div class="stat"><div class="k">Expected goals</div><div class="v">${g.xg.home.toFixed(2)} – ${g.xg.away.toFixed(2)}</div></div>
-        <div class="stat"><div class="k">Best bet</div><div class="v">${b ? esc(b.label) + " @ " + b.odds.toFixed(2) : "No value"}</div></div>
-        <div class="stat"><div class="k">Edge · EV</div><div class="v ${b ? "pos" : ""}">${b ? sgn(b.edge) + " · " + sgn(b.ev) : "–"}</div></div>
+        <div class="stat ${l && l.value ? "value" : ""}"><div class="k">${l && l.value ? "Value bet" : "Model's lean"}</div><div class="v">${l ? esc(l.label) + " @ " + l.odds.toFixed(2) : "No prices yet"}</div></div>
+        <div class="stat"><div class="k">Edge · EV</div><div class="v ${l && l.ev > 0 ? "pos" : ""}">${l ? sgn(l.edge) + " · " + sgn(l.ev) : "–"}</div></div>
       </div>
-      <div class="small">Confidence ${g.confidence}/100</div>
+      <div class="small">Confidence ${g.confidence}/100${form ? " · form (last 5): " + form : ""}</div>
       <div class="conf ${confCls(g.confidence)}"><i style="width:${g.confidence}%"></i></div>
       <p class="summary">${esc(g.summary)}</p>
-      <details><summary>Markets${abs.length ? " & team news" : ""}</summary>
-        <div class="tablewrap"><table><thead><tr><th>Market</th><th>Pick</th><th>Model</th><th>Market</th><th>Fair odds</th><th>Odds</th><th>Edge</th><th>EV</th></tr></thead><tbody>
-        ${(g.evals || []).map(e => `<tr><td>${esc(e.market)}</td><td>${esc(e.selection)}</td><td>${pct(e.model_p, 1)}</td><td>${pct(e.market_p, 1)}</td><td>${e.fair_odds ?? "–"}</td><td>${e.odds ?? "–"}</td><td class="${(e.edge || 0) > 0 ? "pos" : "neg"}">${e.edge == null ? "–" : sgn(e.edge)}</td><td class="${(e.ev || 0) > 0 ? "pos" : "neg"}">${e.ev == null ? "–" : sgn(e.ev)}</td></tr>`).join("")}
+      <details><summary>All markets, likely scores${abs.length ? " & team news" : ""}</summary>
+        <div class="tablewrap"><table><thead><tr><th>Market</th><th>Pick</th><th>Model</th><th>Bookies</th><th>Fair odds</th><th>Odds</th><th>Edge</th><th>EV</th></tr></thead><tbody>
+        ${(g.evals || []).map(e => `<tr><td>${esc(e.market)}</td><td>${esc(e.selection)}</td><td>${pct(e.model_p, 1)}</td><td>${pct(e.market_p, 1)}</td><td>${e.fair_odds ?? "–"}</td><td>${e.odds ?? "–"}</td><td class="${e.edge == null ? "" : e.edge > 0 ? "pos" : "neg"}">${e.edge == null ? "–" : sgn(e.edge)}</td><td class="${e.ev == null ? "" : e.ev > 0 ? "pos" : "neg"}">${e.ev == null ? "–" : sgn(e.ev)}</td></tr>`).join("")}
         </tbody></table></div>
+        <div class="small" style="margin-top:8px">Most likely scores: ${(g.top_scores || []).map(s => `${esc(s.score)} (${pct(s.p)})`).join(", ")}</div>
         ${abs.length ? `<div class="tablewrap"><table><thead><tr><th>Team</th><th>Player</th><th>Status</th><th>Reason</th><th>Minutes</th><th>Goal share</th></tr></thead><tbody>
         ${abs.map(a => `<tr><td>${esc(a.team)}</td><td>${esc(a.name)}</td><td>${esc(a.status)}</td><td>${esc(a.reason)}</td><td>${pct(a.minutes_share)}</td><td>${pct(a.goal_share)}</td></tr>`).join("")}</tbody></table></div>` : ""}
       </details>

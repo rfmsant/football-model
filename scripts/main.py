@@ -117,12 +117,20 @@ def game_record(gid, row, p, params, flagged=False, ext=None) -> dict:
     }
     if bb:
         rec["best_bet"] = dict(bb, label=summary.bet_label(bb, rec["home"], rec["away"]))
+    # the model's lean: best-EV option among priced markets, shown even when it isn't a value bet
+    priced = [e for e in evals if "ev" in e]
+    lean = max(priced, key=lambda e: e["ev"]) if priced else None
+    rec["lean"] = dict(lean, label=summary.bet_label(lean, rec["home"], rec["away"]), value=bool(bb)) if lean else None
     return rec
 
 
-def select_flagged(records: list[dict], n: int = N_FLAG) -> list[str]:
-    by_ev = sorted((r for r in records if r["max_ev"] is not None), key=lambda r: -r["max_ev"])
-    flagged = [r["id"] for r in by_ev[: int(n * 0.7)]]
+def select_flagged(records: list[dict], n: int = N_FLAG, today: dt.date | None = None) -> list[str]:
+    """Deep-check the next 48 hours first (daily analysis), then the rest by EV and disagreement."""
+    soon_cut = ((today or dt.date.today()) + dt.timedelta(days=1)).isoformat()
+    soon = sorted((r for r in records if r["date"] <= soon_cut), key=lambda r: -(r["max_ev"] or -1))
+    flagged = [r["id"] for r in soon[:n]]
+    by_ev = sorted((r for r in records if r["max_ev"] is not None and r["id"] not in flagged), key=lambda r: -r["max_ev"])
+    flagged += [r["id"] for r in by_ev[: max(0, int(n * 0.7) - len(flagged))]]
 
     def disagreement(r):
         e = max((abs(x.get("edge", 0)) for x in r["evals"] if x["market"] == "1X2"), default=0)
@@ -173,7 +181,7 @@ def run(args) -> dict:
         except Exception:  # noqa: BLE001
             log.warning("prediction failed for %s v %s:\n%s", row.get("HomeTeam"), row.get("AwayTeam"),
                         traceback.format_exc(limit=2))
-    flagged = set(select_flagged(records))
+    flagged = set(select_flagged(records, today=today))
     log.info("stage 1: %d games scanned, %d flagged", len(records), len(flagged))
 
     # ---- stage 2: extras for flagged games
@@ -206,7 +214,16 @@ def run(args) -> dict:
             r["summary"] = ""
         r.pop("evals_full", None)
 
-    records.sort(key=lambda r: -(r["best_bet"]["ev"] if r["best_bet"] else -1))
+    records.sort(key=lambda r: (r["date"], r["time"] or "", r["league"]))
+    days = {}
+    for r in records:
+        days.setdefault(r["date"], []).append(r)
+    daily = []
+    for d, gs in sorted(days.items()):
+        try:
+            daily.append(summary.daily_overview(d, gs, today))
+        except Exception:  # noqa: BLE001
+            log.warning("daily overview failed for %s:\n%s", d, traceback.format_exc(limit=2))
     top = [r for r in records if r["best_bet"] and r["flagged"]]
     top.sort(key=lambda r: -(r["best_bet"]["ev"] * (0.5 + r["confidence"] / 200)))
     bt = read_json(DATA / "backtest.json", {}) or {}
@@ -219,6 +236,7 @@ def run(args) -> dict:
         "leagues": {k: v[0] for k, v in LEAGUES.items()},
         "top_bets": [{k: r[k] for k in ("id", "league", "league_name", "date", "time", "home", "away",
                                         "best_bet", "confidence", "probs")} for r in top[:5]],
+        "daily": daily,
         "games": records,
     }
     out = _clean(out)

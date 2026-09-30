@@ -31,8 +31,8 @@ CORE_LEAGUES = ["E0", "SP1", "D1", "I1", "F1"]
 EXCHANGES = {"betfair_ex_uk", "betfair_ex_eu", "matchbook", "smarkets"}
 
 
-def runs_left_this_month(today: dt.date, weekdays=(1, 4)) -> int:
-    """Scheduled runs (Tue=1, Fri=4) from today to the end of the month, inclusive."""
+def runs_left_this_month(today: dt.date, weekdays=(0, 1, 2, 3, 4, 5, 6)) -> int:
+    """Scheduled runs (daily) from today to the end of the month, inclusive."""
     last = calendar.monthrange(today.year, today.month)[1]
     return max(1, sum(1 for d in range(today.day, last + 1)
                       if dt.date(today.year, today.month, d).weekday() in weekdays))
