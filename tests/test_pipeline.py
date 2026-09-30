@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import backtest  # noqa: E402
 import extras  # noqa: E402
 import notify  # noqa: E402
+import oddsapi  # noqa: E402
 import summary  # noqa: E402
 from common import DEFAULT_PARAMS, match_name, norm_name  # noqa: E402
 from model import (Model, ah_outcomes, best_bet, derive_markets, dixon_coles_matrix,  # noqa: E402
@@ -162,7 +163,8 @@ class TestExtras(unittest.TestCase):
 
     def test_with_mocked_apis(self):
         with mock.patch.dict(os.environ, {"APIFOOTBALL_KEY": "x", "ODDS_API_KEY": "y"}), \
-                mock.patch.object(extras, "http_get", side_effect=fake_http_get):
+                mock.patch.object(extras, "http_get", side_effect=fake_http_get), \
+                mock.patch.object(oddsapi, "http_get", side_effect=fake_http_get):
             out = extras.run(self.games, self.hist, "2627")
         g = out["games"]["g1"]
         self.assertTrue(g["injury_data"])
@@ -182,6 +184,54 @@ class TestExtras(unittest.TestCase):
             out = extras.run(self.games, self.hist, "2627")
         self.assertFalse(out["games"]["g1"]["injury_data"])
         self.assertIn("application key", out["api_football_error"])
+
+
+class TestOddsBudget(unittest.TestCase):
+    def test_runs_left(self):
+        import datetime as dt
+        self.assertEqual(oddsapi.runs_left_this_month(dt.date(2026, 10, 1)), 9)   # Oct 2026: 4 Tue + 5 Fri
+        self.assertEqual(oddsapi.runs_left_this_month(dt.date(2026, 9, 30)), 1)   # none left -> at least 1
+
+    def _client(self, remaining, today):
+        import datetime as dt
+        resp = FakeResp([], headers={"x-requests-remaining": str(remaining)})
+        with mock.patch.object(oddsapi, "http_get", return_value=resp):
+            return oddsapi.OddsClient("k", dt.date(*today))
+
+    def test_budget_never_exceeds_month(self):
+        c = self._client(500, (2026, 10, 1))
+        self.assertEqual(c.budget, 45)                  # capped per run
+        c = self._client(60, (2026, 10, 13))            # 6 runs left, 45 usable credits -> 7 per run
+        self.assertEqual(c.budget, 7)
+        c = self._client(10, (2026, 10, 30))            # below the reserve -> nothing
+        self.assertEqual(c.budget, 0)
+        self.assertFalse(c.can_fetch())
+
+    def test_league_cached_and_budgeted(self):
+        c = self._client(500, (2026, 10, 1))
+        c.budget = 3
+        with mock.patch.object(oddsapi, "http_get", side_effect=fake_http_get) as g:
+            self.assertTrue(c.league("E0"))
+            self.assertTrue(c.league("E0"))             # cached: no second request
+            self.assertIsNone(c.league("D1"))           # over budget
+            self.assertEqual(g.call_count, 1)
+        self.assertEqual(c.used, 3)
+
+    def test_discovery_adds_missing_games(self):
+        import datetime as dt
+        c = self._client(500, (2026, 10, 1))
+        c.cache["E0"] = [{"home_team": "Manchester City", "away_team": "Wolverhampton Wanderers",
+                          "commence_time": "2026-10-03T14:00:00Z", "bookmakers": fake_http_get("the-odds-api")._d[0]["bookmakers"]}]
+        for lg in oddsapi.CORE_LEAGUES[1:]:
+            c.cache[lg] = []
+        hist = pd.DataFrame({"Div": ["E0"], "Season": ["2627"], "HomeTeam": ["Man City"], "AwayTeam": ["Wolves"]})
+        fx = oddsapi.discover_fixtures(c, pd.DataFrame(columns=["Div", "HomeTeam", "AwayTeam"]), hist, "2627", dt.date(2026, 10, 1))
+        self.assertEqual(len(fx), 1)
+        r = fx.iloc[0]
+        self.assertEqual((r.HomeTeam, r.AwayTeam, r.Time), ("Man City", "Wolves", "15:00"))
+        self.assertEqual(r.AvgH, 1.5)
+        again = oddsapi.discover_fixtures(c, fx, hist, "2627", dt.date(2026, 10, 1))   # no duplicates
+        self.assertEqual(len(again), 1)
 
 
 class TestOutput(unittest.TestCase):

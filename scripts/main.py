@@ -20,6 +20,7 @@ import pandas as pd
 import extras
 import fetch
 import notify
+import oddsapi
 import summary
 from common import DATA, LEAGUES, get_logger, load_params, read_json, season_code, write_json
 from model import Model, base_confidence, best_bet, market_odds_from_row
@@ -144,10 +145,17 @@ def run(args) -> dict:
             log.error("backtest failed, keeping existing params:\n%s", traceback.format_exc())
     params = load_params()
     fixtures, hist, clubelo = load_inputs(args, today)
-    status = {"fixtures": len(fixtures), "history": len(hist), "clubelo": bool(len(clubelo))}
     if hist is None or hist.empty:
         log.error("no history available; aborting without overwriting predictions")
         return {}
+    odds_client = oddsapi.OddsClient(key="" if args.demo else None, today=today)
+    n_fd = len(fixtures)
+    try:
+        fixtures = oddsapi.discover_fixtures(odds_client, fixtures, hist, season, today)
+    except Exception:  # noqa: BLE001
+        log.warning("fixture discovery failed:\n%s", traceback.format_exc(limit=2))
+    status = {"fixtures": len(fixtures), "fixtures_football_data": n_fd, "fixtures_odds_api": len(fixtures) - n_fd,
+              "history": len(hist), "clubelo": bool(len(clubelo))}
     model = Model(hist, params, clubelo)
     ref = pd.Timestamp(today)
 
@@ -167,15 +175,16 @@ def run(args) -> dict:
     log.info("stage 1: %d games scanned, %d flagged", len(records), len(flagged))
 
     # ---- stage 2: extras for flagged games
-    games = [{"id": r["id"], "league": r["league"], "home": r["home"], "away": r["away"], "date": r["date"]}
+    games = [{"id": r["id"], "league": r["league"], "home": r["home"], "away": r["away"], "date": r["date"],
+              "priority": r["max_ev"] if r["max_ev"] is not None else -1}
              for r in records if r["id"] in flagged]
     try:
-        ex = extras.run(games, hist, season) if games else {"games": {}}
+        ex = extras.run(games, hist, season, odds_client) if games else {"games": {}}
     except Exception:  # noqa: BLE001
         log.error("extras failed:\n%s", traceback.format_exc())
         ex = {"games": {}}
     status.update(api_football=ex.get("api_football_error") or "ok", api_football_requests=ex.get("api_football_used", 0),
-                  odds_api="ok" if os.environ.get("ODDS_API_KEY") else "ODDS_API_KEY not set")
+                  odds_api=odds_client.status())
     for k, r in enumerate(records):
         if r["id"] not in flagged:
             continue

@@ -17,11 +17,11 @@ import numpy as np
 import pandas as pd
 
 from common import LEAGUES, RAW, get_logger, http_get, match_name, season_code, season_start_year
+from oddsapi import OddsClient, find_event, parse_event
 
 log = get_logger("extras")
 
 AF_BASE = "https://v3.football.api-sports.io"
-ODDS_BASE = "https://api.the-odds-api.com/v4"
 MAX_ATT_LOSS, MAX_DEF_LOSS = 0.20, 0.20
 
 
@@ -118,8 +118,8 @@ class ApiFootball:
             log.warning("API-Football %s: %s", path, msg)
             if any(w in msg.lower() for w in ("token", "suspended", "limit", "application key")):
                 self.disabled, self.error = True, msg
-            if "plan" in msg.lower():
-                self.error = msg
+            if "plan" in msg.lower():  # e.g. free plan without access to the current season
+                self.disabled, self.error = True, msg
             return None
         remaining = r.headers.get("x-ratelimit-requests-remaining")
         if remaining is not None and remaining.isdigit() and int(remaining) <= 2:
@@ -245,49 +245,25 @@ def manager_change(api: ApiFootball, team_id: int, date: pd.Timestamp) -> bool |
 
 
 # ================================================================ The Odds API
-def fetch_extra_odds(key: str | None, games: list[dict]) -> dict:
-    """{game_id: {market: {selection: {"avg": x, "max": y}}}} for flagged games."""
-    if not key:
+def fetch_extra_odds(client: OddsClient, games: list[dict]) -> dict:
+    """{game_id: {market: {selection: {"avg": x, "max": y}}}} for flagged games.
+    Leagues are fetched in order of their most valuable flagged game until the credit budget is spent;
+    leagues already fetched for fixture discovery cost nothing extra."""
+    if not client.enabled:
         return {}
     out = {}
-    leagues = sorted({g["league"] for g in games if LEAGUES[g["league"]][5]})
-    for lg in leagues:
-        r = http_get(f"{ODDS_BASE}/sports/{LEAGUES[lg][5]}/odds",
-                     params={"apiKey": key, "regions": "eu", "markets": "h2h,totals,spreads", "oddsFormat": "decimal"},
-                     retries=2)
-        if r is None or r.status_code != 200:
+    prio: dict = {}
+    for g in games:
+        prio[g["league"]] = max(prio.get(g["league"], -9), g.get("priority") or 0)
+    for lg in sorted(prio, key=lambda lg: (lg not in client.cache, -prio[lg])):
+        events = client.league(lg)
+        if not events:
             continue
-        log.info("Odds API %s ok, requests remaining: %s", lg, r.headers.get("x-requests-remaining"))
-        events = r.json()
-        names = {e["home_team"] for e in events} | {e["away_team"] for e in events}
         for g in (g for g in games if g["league"] == lg):
-            h, a = match_name(g["home"], names), match_name(g["away"], names)
-            ev = next((e for e in events if e["home_team"] == h and e["away_team"] == a), None)
+            ev = find_event(events, g["home"], g["away"])
             if ev:
-                out[g["id"]] = _parse_odds_event(ev)
+                out[g["id"]] = parse_event(ev)
     return out
-
-
-def _parse_odds_event(ev: dict) -> dict:
-    prices: dict = {}
-    for bk in ev.get("bookmakers", []):
-        if bk["key"] in ("betfair_ex_uk", "betfair_ex_eu", "matchbook", "smarkets"):
-            continue  # exchanges: skip, commission not included
-        for mk in bk.get("markets", []):
-            for o in mk.get("outcomes", []):
-                if mk["key"] == "h2h":
-                    m = "1X2"
-                    s = "H" if o["name"] == ev["home_team"] else "A" if o["name"] == ev["away_team"] else "D"
-                elif mk["key"] == "totals" and o.get("point") in (1.5, 2.5, 3.5):
-                    m, s = f"O/U {o['point']}", o["name"]
-                elif mk["key"] == "spreads" and o.get("point") is not None:
-                    line = o["point"] if o["name"] == ev["home_team"] else -o["point"]
-                    m, s = f"AH {line:+g}", "Home" if o["name"] == ev["home_team"] else "Away"
-                else:
-                    continue
-                prices.setdefault(m, {}).setdefault(s, []).append(float(o["price"]))
-    return {m: {s: {"avg": float(np.mean(v)), "max": float(np.max(v)), "n": len(v)} for s, v in sel.items()}
-            for m, sel in prices.items()}
 
 
 def merge_odds(base: dict, extra: dict) -> dict:
@@ -305,9 +281,10 @@ def merge_odds(base: dict, extra: dict) -> dict:
 
 
 # ================================================================ orchestration
-def run(games: list[dict], hist: pd.DataFrame, season: str | None = None) -> dict:
-    """games: [{id, league, home, away, date (YYYY-MM-DD)}]. Returns per-game adjustments."""
+def run(games: list[dict], hist: pd.DataFrame, season: str | None = None, odds_client: OddsClient | None = None) -> dict:
+    """games: [{id, league, home, away, date (YYYY-MM-DD), priority}]. Returns per-game adjustments."""
     season = season or season_code()
+    odds_client = odds_client or OddsClient()
     api = ApiFootball(os.environ.get("APIFOOTBALL_KEY") or None,
                       budget=int(os.environ.get("APIFOOTBALL_BUDGET", "90")))
     try:
@@ -316,7 +293,7 @@ def run(games: list[dict], hist: pd.DataFrame, season: str | None = None) -> dic
         log.warning("injury stage failed: %s", e)
         injuries = {}
     try:
-        odds = fetch_extra_odds(os.environ.get("ODDS_API_KEY") or None, games)
+        odds = fetch_extra_odds(odds_client, games)
     except Exception as e:  # noqa: BLE001
         log.warning("odds stage failed: %s", e)
         odds = {}
