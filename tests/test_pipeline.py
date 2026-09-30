@@ -339,11 +339,11 @@ class TestDeepDive(unittest.TestCase):
         self.assertEqual(len(errs), 4)   # sum mismatch, bad market, meets_bar wrong, bad verdict
 
     def test_settle_new_markets(self):
-        self.assertEqual(backtest.settle("Double chance", "1X", 1, 1, 1.5), 0.5)
+        self.assertAlmostEqual(backtest.settle("Double chance", "1X", 1, 1, 1.5), 0.5)
         self.assertEqual(backtest.settle("Double chance", "X2", 2, 1, 1.5), -1.0)
         self.assertEqual(backtest.settle("Draw no bet", "A", 1, 1, 1.8), 0.0)
         self.assertAlmostEqual(backtest.settle("Draw no bet", "A", 0, 2, 1.8), 0.8)
-        self.assertEqual(backtest.settle("O/U 1.5", "Over", 1, 1, 1.3), 0.3)
+        self.assertAlmostEqual(backtest.settle("O/U 1.5", "Over", 1, 1, 1.3), 0.3)
 
     def test_market_lambda_fit(self):
         import shortlist
