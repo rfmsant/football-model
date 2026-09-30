@@ -69,6 +69,8 @@ DEFAULT_PARAMS = {
     "market_weight": 0.5,      # blend of model and no-vig market probability used for EV
     "min_odds": 1.3,
     "max_odds": 6.0,
+    # markets a bet may be recommended in (European bookmakers: no Asian handicap)
+    "bet_markets": ["1X2", "O/U", "BTTS"],
 }
 
 

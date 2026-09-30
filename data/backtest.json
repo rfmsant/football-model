@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T15:26:46Z",
+ "generated_at": "2026-09-30T16:52:38Z",
  "tune_season": "2425",
  "test_season": "2526",
  "params": {
@@ -12,7 +12,12 @@
   "min_ev": 0.04,
   "market_weight": 0.8,
   "min_odds": 1.3,
-  "max_odds": 2.5
+  "max_odds": 3.5,
+  "bet_markets": [
+   "1X2",
+   "O/U",
+   "BTTS"
+  ]
  },
  "grid": [
   {
@@ -368,227 +373,191 @@
  },
  "threshold_scores": {
   "min_ev=0.02 max_odds=2.5": {
-   "bets": 1754,
-   "roi_best_price": -0.0586,
-   "roi_avg_price": -0.0927,
-   "profit_units": -102.7,
-   "hit_rate": 0.4367,
-   "avg_odds": 2.06,
-   "clv_mean": -0.0049,
-   "clv_beat_close": 0.431,
-   "clv_n": 1311,
+   "bets": 883,
+   "roi_best_price": -0.0777,
+   "roi_avg_price": -0.1157,
+   "profit_units": -68.6,
+   "hit_rate": 0.4383,
+   "avg_odds": 2.14,
+   "clv_mean": -0.0073,
+   "clv_beat_close": 0.4236,
+   "clv_n": 883,
    "by_market": {
     "1X2": {
-     "bets": 102,
-     "roi": -0.1839
-    },
-    "AH": {
-     "bets": 993,
-     "roi": -0.0265
+     "bets": 163,
+     "roi": -0.0829
     },
     "O/U 2.5": {
-     "bets": 659,
-     "roi": -0.0874
+     "bets": 720,
+     "roi": -0.0765
     }
    }
   },
   "min_ev=0.02 max_odds=3.5": {
-   "bets": 2194,
-   "roi_best_price": -0.0334,
-   "roi_avg_price": -0.073,
-   "profit_units": -73.3,
-   "hit_rate": 0.4061,
-   "avg_odds": 2.36,
-   "clv_mean": -0.0056,
-   "clv_beat_close": 0.4386,
-   "clv_n": 1840,
+   "bets": 1572,
+   "roi_best_price": -0.0347,
+   "roi_avg_price": -0.0777,
+   "profit_units": -54.6,
+   "hit_rate": 0.3931,
+   "avg_odds": 2.54,
+   "clv_mean": -0.0059,
+   "clv_beat_close": 0.4364,
+   "clv_n": 1572,
    "by_market": {
     "1X2": {
-     "bets": 544,
-     "roi": -0.0211
-    },
-    "AH": {
-     "bets": 776,
-     "roi": -0.0323
+     "bets": 624,
+     "roi": -0.0226
     },
     "O/U 2.5": {
-     "bets": 874,
-     "roi": -0.042
+     "bets": 948,
+     "roi": -0.0427
     }
    }
   },
   "min_ev=0.02 max_odds=6.0": {
-   "bets": 2924,
-   "roi_best_price": -0.0701,
-   "roi_avg_price": -0.1158,
-   "profit_units": -204.9,
-   "hit_rate": 0.3075,
-   "avg_odds": 3.38,
-   "clv_mean": -0.001,
-   "clv_beat_close": 0.4714,
-   "clv_n": 2743,
+   "bets": 2698,
+   "roi_best_price": -0.0787,
+   "roi_avg_price": -0.1255,
+   "profit_units": -212.3,
+   "hit_rate": 0.2936,
+   "avg_odds": 3.55,
+   "clv_mean": -0.0014,
+   "clv_beat_close": 0.467,
+   "clv_n": 2698,
    "by_market": {
     "1X2": {
-     "bets": 1737,
-     "roi": -0.0683
-    },
-    "AH": {
-     "bets": 391,
-     "roi": -0.0434
+     "bets": 1860,
+     "roi": -0.0764
     },
     "O/U 2.5": {
-     "bets": 796,
-     "roi": -0.087
+     "bets": 838,
+     "roi": -0.0838
     }
    }
   },
   "min_ev=0.04 max_odds=2.5": {
-   "bets": 459,
-   "roi_best_price": -0.0083,
-   "roi_avg_price": -0.0468,
-   "profit_units": -3.8,
-   "hit_rate": 0.451,
-   "avg_odds": 2.08,
-   "clv_mean": -0.0008,
-   "clv_beat_close": 0.4758,
-   "clv_n": 330,
+   "bets": 218,
+   "roi_best_price": -0.0443,
+   "roi_avg_price": -0.0868,
+   "profit_units": -9.7,
+   "hit_rate": 0.4404,
+   "avg_odds": 2.18,
+   "clv_mean": 0.0012,
+   "clv_beat_close": 0.4817,
+   "clv_n": 218,
    "by_market": {
     "1X2": {
-     "bets": 31,
-     "roi": -0.0652
-    },
-    "AH": {
-     "bets": 257,
-     "roi": 0.0013
+     "bets": 41,
+     "roi": -0.092
     },
     "O/U 2.5": {
-     "bets": 171,
-     "roi": -0.0123
+     "bets": 177,
+     "roi": -0.0332
     }
    }
   },
   "min_ev=0.04 max_odds=3.5": {
-   "bets": 703,
-   "roi_best_price": -0.0143,
-   "roi_avg_price": -0.0577,
-   "profit_units": -10.1,
-   "hit_rate": 0.4011,
-   "avg_odds": 2.49,
-   "clv_mean": -0.0016,
-   "clv_beat_close": 0.4666,
-   "clv_n": 598,
+   "bets": 523,
+   "roi_best_price": -0.0312,
+   "roi_avg_price": -0.077,
+   "profit_units": -16.3,
+   "hit_rate": 0.3748,
+   "avg_odds": 2.67,
+   "clv_mean": 0.0005,
+   "clv_beat_close": 0.4704,
+   "clv_n": 523,
    "by_market": {
     "1X2": {
-     "bets": 208,
-     "roi": -0.0661
-    },
-    "AH": {
-     "bets": 206,
-     "roi": 0.0093
+     "bets": 223,
+     "roi": -0.0683
     },
     "O/U 2.5": {
-     "bets": 289,
-     "roi": 0.0061
+     "bets": 300,
+     "roi": -0.0037
     }
    }
   },
   "min_ev=0.04 max_odds=6.0": {
-   "bets": 1261,
-   "roi_best_price": -0.0747,
-   "roi_avg_price": -0.1232,
-   "profit_units": -94.2,
-   "hit_rate": 0.2791,
-   "avg_odds": 3.75,
-   "clv_mean": 0.0039,
-   "clv_beat_close": 0.4925,
-   "clv_n": 1206,
+   "bets": 1193,
+   "roi_best_price": -0.0824,
+   "roi_avg_price": -0.1316,
+   "profit_units": -98.3,
+   "hit_rate": 0.2666,
+   "avg_odds": 3.88,
+   "clv_mean": 0.0044,
+   "clv_beat_close": 0.492,
+   "clv_n": 1193,
    "by_market": {
     "1X2": {
-     "bets": 867,
-     "roi": -0.0833
-    },
-    "AH": {
-     "bets": 101,
-     "roi": -0.0467
+     "bets": 893,
+     "roi": -0.0895
     },
     "O/U 2.5": {
-     "bets": 293,
-     "roi": -0.0589
+     "bets": 300,
+     "roi": -0.0612
     }
    }
   },
   "min_ev=0.06 max_odds=2.5": {
-   "bets": 94,
-   "roi_best_price": 0.0279,
-   "roi_avg_price": -0.0156,
-   "profit_units": 2.6,
-   "hit_rate": 0.4574,
-   "avg_odds": 2.09,
-   "clv_mean": 0.0081,
-   "clv_beat_close": 0.5333,
-   "clv_n": 60,
+   "bets": 36,
+   "roi_best_price": 0.1908,
+   "roi_avg_price": 0.1275,
+   "profit_units": 6.9,
+   "hit_rate": 0.5278,
+   "avg_odds": 2.24,
+   "clv_mean": 0.0142,
+   "clv_beat_close": 0.5556,
+   "clv_n": 36,
    "by_market": {
     "1X2": {
      "bets": 5,
      "roi": 0.45
     },
-    "AH": {
-     "bets": 59,
-     "roi": -0.0889
-    },
     "O/U 2.5": {
-     "bets": 30,
-     "roi": 0.1873
+     "bets": 31,
+     "roi": 0.149
     }
    }
   },
   "min_ev=0.06 max_odds=3.5": {
-   "bets": 204,
-   "roi_best_price": -0.0845,
-   "roi_avg_price": -0.1284,
-   "profit_units": -17.2,
-   "hit_rate": 0.3529,
-   "avg_odds": 2.69,
-   "clv_mean": 0.0101,
-   "clv_beat_close": 0.5393,
-   "clv_n": 178,
+   "bets": 162,
+   "roi_best_price": -0.1083,
+   "roi_avg_price": -0.1543,
+   "profit_units": -17.6,
+   "hit_rate": 0.3272,
+   "avg_odds": 2.88,
+   "clv_mean": 0.0122,
+   "clv_beat_close": 0.5432,
+   "clv_n": 162,
    "by_market": {
     "1X2": {
-     "bets": 79,
-     "roi": -0.3111
-    },
-    "AH": {
-     "bets": 45,
-     "roi": -0.0598
+     "bets": 80,
+     "roi": -0.3197
     },
     "O/U 2.5": {
-     "bets": 80,
-     "roi": 0.1254
+     "bets": 82,
+     "roi": 0.0979
     }
    }
   },
   "min_ev=0.06 max_odds=6.0": {
-   "bets": 528,
-   "roi_best_price": -0.1413,
-   "roi_avg_price": -0.1891,
-   "profit_units": -74.6,
-   "hit_rate": 0.2292,
-   "avg_odds": 4.14,
-   "clv_mean": 0.0102,
+   "bets": 516,
+   "roi_best_price": -0.1358,
+   "roi_avg_price": -0.1845,
+   "profit_units": -70.1,
+   "hit_rate": 0.2267,
+   "avg_odds": 4.22,
+   "clv_mean": 0.0109,
    "clv_beat_close": 0.5136,
    "clv_n": 516,
    "by_market": {
     "1X2": {
-     "bets": 418,
-     "roi": -0.1436
-    },
-    "AH": {
-     "bets": 19,
-     "roi": -0.3542
+     "bets": 424,
+     "roi": -0.1444
     },
     "O/U 2.5": {
-     "bets": 91,
-     "roi": -0.0863
+     "bets": 92,
+     "roi": -0.0962
     }
    }
   }
@@ -666,27 +635,23 @@
    }
   ],
   "bets": {
-   "bets": 143,
-   "roi_best_price": -0.0981,
-   "roi_avg_price": -0.141,
-   "profit_units": -14.0,
-   "hit_rate": 0.4126,
-   "avg_odds": 2.1,
-   "clv_mean": -0.0118,
-   "clv_beat_close": 0.3505,
-   "clv_n": 97,
+   "bets": 271,
+   "roi_best_price": -0.1502,
+   "roi_avg_price": -0.1941,
+   "profit_units": -40.7,
+   "hit_rate": 0.3137,
+   "avg_odds": 2.86,
+   "clv_mean": -0.0056,
+   "clv_beat_close": 0.4465,
+   "clv_n": 271,
    "by_market": {
     "1X2": {
-     "bets": 15,
-     "roi": -0.07
-    },
-    "AH": {
-     "bets": 75,
-     "roi": -0.1289
+     "bets": 138,
+     "roi": -0.329
     },
     "O/U 2.5": {
-     "bets": 53,
-     "roi": -0.0625
+     "bets": 133,
+     "roi": 0.0353
     }
    }
   },
@@ -695,309 +660,309 @@
     "n": 311,
     "brier": 0.6189,
     "log_loss": 1.0283,
-    "bets": 6,
-    "roi_best_price": 0.1883,
-    "roi_avg_price": 0.1167,
-    "profit_units": 1.1,
-    "hit_rate": 0.5,
-    "avg_odds": 2.4,
-    "clv_mean": 0.0307,
-    "clv_beat_close": 0.6667,
-    "clv_n": 6
+    "bets": 10,
+    "roi_best_price": -0.287,
+    "roi_avg_price": -0.33,
+    "profit_units": -2.9,
+    "hit_rate": 0.3,
+    "avg_odds": 2.62,
+    "clv_mean": -0.0028,
+    "clv_beat_close": 0.5,
+    "clv_n": 10
    },
    "D1": {
     "n": 306,
     "brier": 0.5719,
     "log_loss": 0.9678,
-    "bets": 5,
-    "roi_best_price": -0.6,
-    "roi_avg_price": -0.626,
-    "profit_units": -3.0,
+    "bets": 10,
+    "roi_best_price": -0.35,
+    "roi_avg_price": -0.375,
+    "profit_units": -3.5,
     "hit_rate": 0.2,
-    "avg_odds": 1.98,
-    "clv_mean": -0.052,
-    "clv_beat_close": 0.0,
-    "clv_n": 2
+    "avg_odds": 3.09,
+    "clv_mean": 0.0301,
+    "clv_beat_close": 0.5,
+    "clv_n": 10
    },
    "D2": {
     "n": 306,
     "brier": 0.626,
     "log_loss": 1.0405,
-    "bets": 2,
-    "roi_best_price": 0.19,
-    "roi_avg_price": 0.11,
-    "profit_units": 0.4,
-    "hit_rate": 0.5,
-    "avg_odds": 2.12,
-    "clv_mean": -0.0893,
-    "clv_beat_close": 0.0,
-    "clv_n": 1
+    "bets": 14,
+    "roi_best_price": -0.6014,
+    "roi_avg_price": -0.6279,
+    "profit_units": -8.4,
+    "hit_rate": 0.1429,
+    "avg_odds": 3.1,
+    "clv_mean": -0.0215,
+    "clv_beat_close": 0.2143,
+    "clv_n": 14
    },
    "E0": {
     "n": 380,
     "brier": 0.6173,
     "log_loss": 1.0273,
-    "bets": 8,
-    "roi_best_price": 0.3025,
-    "roi_avg_price": 0.2475,
-    "profit_units": 2.4,
-    "hit_rate": 0.625,
-    "avg_odds": 1.98,
-    "clv_mean": -0.045,
-    "clv_beat_close": 0.0,
-    "clv_n": 3
+    "bets": 18,
+    "roi_best_price": 0.1567,
+    "roi_avg_price": 0.1067,
+    "profit_units": 2.8,
+    "hit_rate": 0.3889,
+    "avg_odds": 3.08,
+    "clv_mean": -0.0155,
+    "clv_beat_close": 0.5,
+    "clv_n": 18
    },
    "E1": {
     "n": 552,
     "brier": 0.6377,
     "log_loss": 1.0565,
-    "bets": 12,
-    "roi_best_price": -0.0083,
-    "roi_avg_price": -0.0567,
-    "profit_units": -0.1,
-    "hit_rate": 0.5,
-    "avg_odds": 2.01,
-    "clv_mean": 0.0029,
-    "clv_beat_close": 0.2857,
-    "clv_n": 7
+    "bets": 16,
+    "roi_best_price": -0.2662,
+    "roi_avg_price": -0.3025,
+    "profit_units": -4.3,
+    "hit_rate": 0.25,
+    "avg_odds": 2.93,
+    "clv_mean": 0.0249,
+    "clv_beat_close": 0.625,
+    "clv_n": 16
    },
    "E2": {
     "n": 552,
     "brier": 0.6201,
     "log_loss": 1.0344,
-    "bets": 8,
-    "roi_best_price": -0.1875,
-    "roi_avg_price": -0.22,
-    "profit_units": -1.5,
-    "hit_rate": 0.25,
-    "avg_odds": 2.05,
-    "clv_mean": -0.0114,
-    "clv_beat_close": 0.2,
-    "clv_n": 5
+    "bets": 15,
+    "roi_best_price": -0.0293,
+    "roi_avg_price": -0.0733,
+    "profit_units": -0.4,
+    "hit_rate": 0.3333,
+    "avg_odds": 2.94,
+    "clv_mean": -0.0288,
+    "clv_beat_close": 0.4,
+    "clv_n": 15
    },
    "E3": {
     "n": 552,
     "brier": 0.6244,
     "log_loss": 1.0378,
-    "bets": 9,
-    "roi_best_price": 0.5444,
-    "roi_avg_price": 0.4733,
-    "profit_units": 4.9,
-    "hit_rate": 0.7778,
-    "avg_odds": 1.98,
-    "clv_mean": -0.0137,
-    "clv_beat_close": 0.4286,
-    "clv_n": 7
+    "bets": 18,
+    "roi_best_price": 0.1172,
+    "roi_avg_price": 0.0628,
+    "profit_units": 2.1,
+    "hit_rate": 0.4444,
+    "avg_odds": 2.8,
+    "clv_mean": -0.0186,
+    "clv_beat_close": 0.3889,
+    "clv_n": 18
    },
    "EC": {
     "n": 552,
     "brier": 0.5909,
     "log_loss": 0.9921,
-    "bets": 20,
-    "roi_best_price": -0.168,
-    "roi_avg_price": -0.215,
-    "profit_units": -3.4,
-    "hit_rate": 0.4,
-    "avg_odds": 2.16,
-    "clv_mean": -0.0277,
-    "clv_beat_close": 0.2778,
-    "clv_n": 18
+    "bets": 23,
+    "roi_best_price": -0.1435,
+    "roi_avg_price": -0.193,
+    "profit_units": -3.3,
+    "hit_rate": 0.3913,
+    "avg_odds": 2.44,
+    "clv_mean": -0.0302,
+    "clv_beat_close": 0.2609,
+    "clv_n": 23
    },
    "F1": {
     "n": 306,
     "brier": 0.5893,
     "log_loss": 0.9866,
-    "bets": 5,
-    "roi_best_price": -0.238,
-    "roi_avg_price": -0.278,
-    "profit_units": -1.2,
-    "hit_rate": 0.4,
-    "avg_odds": 1.88,
-    "clv_mean": -0.0399,
-    "clv_beat_close": 0.0,
-    "clv_n": 4
+    "bets": 12,
+    "roi_best_price": -0.4242,
+    "roi_avg_price": -0.4567,
+    "profit_units": -5.1,
+    "hit_rate": 0.25,
+    "avg_odds": 2.75,
+    "clv_mean": -0.066,
+    "clv_beat_close": 0.25,
+    "clv_n": 12
    },
    "F2": {
     "n": 305,
     "brier": 0.6536,
     "log_loss": 1.079,
-    "bets": 8,
-    "roi_best_price": 0.6538,
-    "roi_avg_price": 0.5937,
-    "profit_units": 5.2,
-    "hit_rate": 0.75,
-    "avg_odds": 2.14,
-    "clv_mean": -0.0373,
-    "clv_beat_close": 0.2,
-    "clv_n": 5
+    "bets": 11,
+    "roi_best_price": -0.2727,
+    "roi_avg_price": -0.3036,
+    "profit_units": -3.0,
+    "hit_rate": 0.2727,
+    "avg_odds": 2.87,
+    "clv_mean": -0.0175,
+    "clv_beat_close": 0.2727,
+    "clv_n": 11
    },
    "G1": {
     "n": 236,
     "brier": 0.5773,
     "log_loss": 0.9676,
-    "bets": 11,
-    "roi_best_price": 0.0759,
-    "roi_avg_price": 0.0241,
-    "profit_units": 0.8,
-    "hit_rate": 0.4545,
-    "avg_odds": 2.11,
-    "clv_mean": -0.0062,
-    "clv_beat_close": 0.4,
-    "clv_n": 5
+    "bets": 10,
+    "roi_best_price": 0.005,
+    "roi_avg_price": -0.047,
+    "profit_units": 0.0,
+    "hit_rate": 0.4,
+    "avg_odds": 2.69,
+    "clv_mean": 0.0381,
+    "clv_beat_close": 0.7,
+    "clv_n": 10
    },
    "I1": {
     "n": 380,
     "brier": 0.597,
     "log_loss": 0.999,
-    "bets": 7,
-    "roi_best_price": -0.3157,
-    "roi_avg_price": -0.3429,
-    "profit_units": -2.2,
-    "hit_rate": 0.2857,
-    "avg_odds": 2.12,
-    "clv_mean": 0.0108,
-    "clv_beat_close": 0.5,
-    "clv_n": 6
+    "bets": 17,
+    "roi_best_price": 0.3747,
+    "roi_avg_price": 0.3065,
+    "profit_units": 6.4,
+    "hit_rate": 0.5294,
+    "avg_odds": 2.62,
+    "clv_mean": -0.0217,
+    "clv_beat_close": 0.3529,
+    "clv_n": 17
    },
    "I2": {
     "n": 380,
     "brier": 0.6194,
     "log_loss": 1.032,
-    "bets": 8,
-    "roi_best_price": -0.415,
-    "roi_avg_price": -0.4425,
-    "profit_units": -3.3,
-    "hit_rate": 0.25,
-    "avg_odds": 2.14,
-    "clv_mean": 0.0373,
-    "clv_beat_close": 0.5,
-    "clv_n": 6
+    "bets": 13,
+    "roi_best_price": -0.33,
+    "roi_avg_price": -0.3662,
+    "profit_units": -4.3,
+    "hit_rate": 0.2308,
+    "avg_odds": 2.85,
+    "clv_mean": 0.0186,
+    "clv_beat_close": 0.5385,
+    "clv_n": 13
    },
    "N1": {
     "n": 306,
     "brier": 0.5839,
     "log_loss": 0.9816,
-    "bets": 1,
-    "roi_best_price": -1.0,
-    "roi_avg_price": -1.0,
-    "profit_units": -1.0,
-    "hit_rate": 0.0,
-    "avg_odds": 2.38,
-    "clv_mean": 0.0372,
-    "clv_beat_close": 1.0,
-    "clv_n": 1
+    "bets": 14,
+    "roi_best_price": 0.415,
+    "roi_avg_price": 0.3271,
+    "profit_units": 5.8,
+    "hit_rate": 0.4286,
+    "avg_odds": 3.14,
+    "clv_mean": 0.0443,
+    "clv_beat_close": 0.7143,
+    "clv_n": 14
    },
    "P1": {
     "n": 306,
     "brier": 0.5464,
     "log_loss": 0.9233,
-    "bets": 4,
-    "roi_best_price": -0.01,
-    "roi_avg_price": -0.06,
-    "profit_units": -0.0,
-    "hit_rate": 0.5,
-    "avg_odds": 2.08,
-    "clv_mean": -0.0103,
-    "clv_beat_close": 0.5,
-    "clv_n": 2
+    "bets": 7,
+    "roi_best_price": 0.4071,
+    "roi_avg_price": 0.3443,
+    "profit_units": 2.9,
+    "hit_rate": 0.4286,
+    "avg_odds": 3.06,
+    "clv_mean": 0.0271,
+    "clv_beat_close": 0.7143,
+    "clv_n": 7
    },
    "SC0": {
     "n": 228,
     "brier": 0.5902,
     "log_loss": 0.9904,
-    "bets": 1,
-    "roi_best_price": -1.0,
-    "roi_avg_price": -1.0,
-    "profit_units": -1.0,
-    "hit_rate": 0.0,
-    "avg_odds": 2.33,
-    "clv_mean": -0.0032,
-    "clv_beat_close": 0.0,
-    "clv_n": 1
+    "bets": 8,
+    "roi_best_price": 0.0662,
+    "roi_avg_price": 0.0175,
+    "profit_units": 0.5,
+    "hit_rate": 0.375,
+    "avg_odds": 2.96,
+    "clv_mean": 0.0178,
+    "clv_beat_close": 0.625,
+    "clv_n": 8
    },
    "SC1": {
     "n": 180,
     "brier": 0.6526,
     "log_loss": 1.0726,
-    "bets": 3,
-    "roi_best_price": 0.18,
-    "roi_avg_price": 0.1233,
-    "profit_units": 0.5,
-    "hit_rate": 0.6667,
-    "avg_odds": 2.15,
-    "clv_mean": -0.0072,
+    "bets": 4,
+    "roi_best_price": -1.0,
+    "roi_avg_price": -1.0,
+    "profit_units": -4.0,
+    "hit_rate": 0.0,
+    "avg_odds": 3.02,
+    "clv_mean": -0.0172,
     "clv_beat_close": 0.5,
-    "clv_n": 2
+    "clv_n": 4
    },
    "SC2": {
     "n": 180,
     "brier": 0.627,
     "log_loss": 1.0384,
-    "bets": 1,
+    "bets": 2,
     "roi_best_price": -1.0,
     "roi_avg_price": -1.0,
-    "profit_units": -1.0,
+    "profit_units": -2.0,
     "hit_rate": 0.0,
-    "avg_odds": 2.3,
-    "clv_mean": -0.0178,
+    "avg_odds": 2.85,
+    "clv_mean": -0.0089,
     "clv_beat_close": 0.0,
-    "clv_n": 1
+    "clv_n": 2
    },
    "SC3": {
     "n": 180,
     "brier": 0.6572,
     "log_loss": 1.0853,
-    "bets": 9,
-    "roi_best_price": -0.0272,
-    "roi_avg_price": -0.075,
+    "bets": 5,
+    "roi_best_price": -0.03,
+    "roi_avg_price": -0.092,
     "profit_units": -0.2,
-    "hit_rate": 0.4444,
-    "avg_odds": 1.98,
-    "clv_mean": -0.0249,
-    "clv_beat_close": 0.6,
+    "hit_rate": 0.4,
+    "avg_odds": 3.03,
+    "clv_mean": -0.0491,
+    "clv_beat_close": 0.4,
     "clv_n": 5
    },
    "SP1": {
     "n": 380,
     "brier": 0.5807,
     "log_loss": 0.9803,
-    "bets": 5,
-    "roi_best_price": -0.5,
-    "roi_avg_price": -0.518,
-    "profit_units": -2.5,
-    "hit_rate": 0.2,
-    "avg_odds": 2.23,
-    "clv_mean": -0.0033,
+    "bets": 18,
+    "roi_best_price": -0.38,
+    "roi_avg_price": -0.4133,
+    "profit_units": -6.8,
+    "hit_rate": 0.2222,
+    "avg_odds": 2.84,
+    "clv_mean": -0.0031,
     "clv_beat_close": 0.5,
-    "clv_n": 4
+    "clv_n": 18
    },
    "SP2": {
     "n": 462,
     "brier": 0.6304,
     "log_loss": 1.0486,
-    "bets": 4,
-    "roi_best_price": -1.0,
-    "roi_avg_price": -1.0,
-    "profit_units": -4.0,
-    "hit_rate": 0.0,
-    "avg_odds": 2.18,
-    "clv_mean": 0.004,
-    "clv_beat_close": 0.5,
-    "clv_n": 4
+    "bets": 15,
+    "roi_best_price": -0.4367,
+    "roi_avg_price": -0.4713,
+    "profit_units": -6.6,
+    "hit_rate": 0.2,
+    "avg_odds": 3.02,
+    "clv_mean": -0.0082,
+    "clv_beat_close": 0.4,
+    "clv_n": 15
    },
    "T1": {
     "n": 306,
     "brier": 0.5929,
     "log_loss": 0.9886,
-    "bets": 6,
-    "roi_best_price": -0.8333,
-    "roi_avg_price": -0.8333,
-    "profit_units": -5.0,
-    "hit_rate": 0.0,
-    "avg_odds": 2.09,
-    "clv_mean": -0.0691,
-    "clv_beat_close": 0.0,
-    "clv_n": 2
+    "bets": 11,
+    "roi_best_price": -0.5945,
+    "roi_avg_price": -0.6136,
+    "profit_units": -6.5,
+    "hit_rate": 0.1818,
+    "avg_odds": 2.8,
+    "clv_mean": 0.0132,
+    "clv_beat_close": 0.4545,
+    "clv_n": 11
    }
   }
  }

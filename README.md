@@ -15,7 +15,7 @@ and the free tiers of API-Football and The Odds API.
 | Step | Script | What it does |
 |---|---|---|
 | 1 | `scripts/fetch.py`, `scripts/oddsapi.py` | Downloads the next 7 days of fixtures and odds (`fixtures.csv`, topped up with top-5-league games from The Odds API), results, shots, xG and closing odds for the current and previous season, Understat xG for the top 5 leagues, and ClubElo ratings. |
-| 2 | `scripts/model.py` | Fits time-weighted attack/defence ratings per league. Inputs are xG where available, otherwise shots on target × league conversion, blended with goals. It blends these with Elo (a built-in cross-division Elo, averaged with ClubElo when that API is up), builds a Dixon-Coles 0-0 to 6-6 scoreline matrix, derives 1X2, O/U 1.5/2.5/3.5, BTTS and Asian handicap, removes the bookmaker margin, and computes edge and EV. |
+| 2 | `scripts/model.py` | Fits time-weighted attack/defence ratings per league. Inputs are xG where available, otherwise shots on target × league conversion, blended with goals. It blends these with Elo (a built-in cross-division Elo, averaged with ClubElo when that API is up), builds a Dixon-Coles 0-0 to 6-6 scoreline matrix, derives 1X2, O/U 1.5/2.5/3.5 and BTTS (bets are only recommended in European markets: 1X2, over/under, BTTS; Asian handicap is excluded via `bet_markets` in `common.py`), removes the bookmaker margin, and computes edge and EV. |
 | 3 | `scripts/main.py` (stage 1) | Scans every game and flags 25: the top games by EV, plus the games where model and market (or bookmakers among themselves) disagree most. |
 | 4 | `scripts/extras.py` | For flagged games only: injuries and suspensions from API-Football, weighted by each player's minutes share and goal contribution. Also rest days, fixture congestion, manager change, league-table motivation, and extra bookmaker prices from The Odds API. |
 | 5 | `scripts/backtest.py` | Walk-forward backtest. Tunes weights on the season two years back, then reports calibration, Brier score, log loss, ROI and closing line value out-of-sample on last season. Writes `data/params.json` and `backtest.md`. |
@@ -46,13 +46,13 @@ light modes.
 | `ODDS_API_KEY` | Sign up at [the-odds-api.com](https://the-odds-api.com/#get-access) (free plan: 500 credits/month). The key arrives by email. | Upcoming games and odds for the top 5 leagues (so the site has games even between football-data refreshes), plus extra bookmaker odds for flagged games. Budgeted so it never exceeds the free 500 credits: see below. |
 | `DISCORD_WEBHOOK` | In Discord: *Server Settings → Integrations → Webhooks → New Webhook*. Pick a channel and *Copy Webhook URL*. | Posting the top 5 bets. |
 
-   **Odds API credit budget** (`scripts/oddsapi.py`): each league request costs 3 credits. Before
+   **Odds API credit budget** (`scripts/oddsapi.py`): each league request costs 2 credits (1X2 + totals; no Asian handicap). Before
    every run the pipeline reads the credits left (a free call) and allows at most
-   `(credits left - 15) / scheduled runs left this month`, capped at 45 per run (15 leagues). The Premier
+   `(credits left - 15) / scheduled runs left this month`, capped at 40 per run (20 leagues). The Premier
    League, La Liga, Bundesliga, Serie A and Ligue 1 are always fetched first (12-day window, so the next
    round shows up even during international breaks). Leftover budget goes to the leagues of the flagged
-   games, most valuable first. Each league is fetched at most once per run. A normal month uses about
-   400 credits.
+   games, most valuable first. Each league is fetched at most once per run. A normal month uses at most
+   about 360 credits.
 
    All three are optional. Without them the pipeline still runs: it skips injuries, extra odds or
    Discord and lowers confidence where team news is missing.

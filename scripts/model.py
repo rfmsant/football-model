@@ -365,7 +365,8 @@ class Model:
 
 
 def best_bet(evals: list[dict], params: dict) -> dict | None:
-    cands = [e for e in evals if "ev" in e and e["ev"] >= params["min_ev"]
+    allowed = tuple(params.get("bet_markets", ["1X2", "O/U", "BTTS"]))
+    cands = [e for e in evals if "ev" in e and e["ev"] >= params["min_ev"] and e["market"].startswith(allowed)
              and params.get("min_odds", 1.3) <= e["odds"] <= params.get("max_odds", 6.0)]
     return max(cands, key=lambda e: e["ev"]) if cands else None
 

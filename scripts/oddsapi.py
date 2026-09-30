@@ -1,7 +1,7 @@
 """The Odds API client with a hard monthly credit budget.
 
-Free plan: 500 credits/month. One league request with markets h2h,totals,spreads in one region costs
-3 credits. Before each run we read the remaining credits (free /sports call) and allow
+Free plan: 500 credits/month. One league request with markets h2h,totals in one region costs
+2 credits (no Asian handicap lines: European bookmakers don't offer them). Before each run we read the remaining credits (free /sports call) and allow
     (remaining - reserve) / scheduled runs left this month
 so the scheduled Tuesday/Friday runs can never exhaust the month. Each league is fetched at most
 once per run and the response is shared by fixture discovery and the stage-2 extra odds.
@@ -21,10 +21,10 @@ from common import LEAGUES, RAW, get_logger, http_get, match_name
 log = get_logger("oddsapi")
 
 BASE = "https://api.the-odds-api.com/v4"
-MARKETS = "h2h,totals,spreads"
-COST_PER_LEAGUE = 3            # markets x regions
+MARKETS = "h2h,totals"
+COST_PER_LEAGUE = 2            # markets x regions
 RESERVE = 15                   # credits kept back for manual runs
-MAX_PER_RUN = 45
+MAX_PER_RUN = 40
 # fetched every run so the biggest leagues always have upcoming games, even between
 # football-data.co.uk refreshes
 CORE_LEAGUES = ["E0", "SP1", "D1", "I1", "F1"]

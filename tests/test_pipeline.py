@@ -74,6 +74,11 @@ class TestModel(unittest.TestCase):
         self.assertAlmostEqual(h["ev"], h["p_bet"] * 2.1 - 1, places=3)
         self.assertEqual(best_bet(ev, DEFAULT_PARAMS)["selection"], "H")
 
+    def test_no_asian_handicap_bets(self):
+        ev = [{"market": "AH -0.5", "selection": "Home", "ev": 0.2, "odds": 2.0},
+              {"market": "O/U 2.5", "selection": "Over", "ev": 0.05, "odds": 1.9}]
+        self.assertEqual(best_bet(ev, DEFAULT_PARAMS)["market"], "O/U 2.5")
+
     def test_price_cap(self):
         row = {"AvgH": 2.0, "AvgD": 3.4, "AvgA": 4.0, "MaxH": 3.5, "MaxD": 3.5, "MaxA": 4.1}
         mk = {"1X2": {"H": 0.5, "D": 0.27, "A": 0.23}}
@@ -200,7 +205,7 @@ class TestOddsBudget(unittest.TestCase):
 
     def test_budget_never_exceeds_month(self):
         c = self._client(500, (2026, 10, 1))
-        self.assertEqual(c.budget, 45)                  # capped per run
+        self.assertEqual(c.budget, 40)                  # capped per run
         c = self._client(60, (2026, 10, 13))            # 6 runs left, 45 usable credits -> 7 per run
         self.assertEqual(c.budget, 7)
         c = self._client(10, (2026, 10, 30))            # below the reserve -> nothing
@@ -209,13 +214,13 @@ class TestOddsBudget(unittest.TestCase):
 
     def test_league_cached_and_budgeted(self):
         c = self._client(500, (2026, 10, 1))
-        c.budget = 3
+        c.budget = 3                                    # room for one 2-credit league
         with mock.patch.object(oddsapi, "http_get", side_effect=fake_http_get) as g:
             self.assertTrue(c.league("E0"))
             self.assertTrue(c.league("E0"))             # cached: no second request
             self.assertIsNone(c.league("D1"))           # over budget
             self.assertEqual(g.call_count, 1)
-        self.assertEqual(c.used, 3)
+        self.assertEqual(c.used, 2)
 
     def test_discovery_adds_missing_games(self):
         import datetime as dt

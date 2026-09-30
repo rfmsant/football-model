@@ -74,6 +74,8 @@ def predict_game(model: Model, row, params, ref, season, adj=(1.0, 1.0), extra_o
     odds = market_odds_from_row(row)
     if extra_odds:
         odds = extras.merge_odds(odds, extra_odds)
+    allowed = tuple(params.get("bet_markets", ["1X2", "O/U", "BTTS"]))
+    odds = {m: v for m, v in odds.items() if m.startswith(allowed)}   # only markets the user can bet
     ah_lines = sorted({float(m.split()[1]) for m in odds if m.startswith("AH")})
     return model.predict(row["Div"], row["HomeTeam"], row["AwayTeam"], ref, season, odds=odds,
                          ah_line=ah_lines, adj=adj) | {"odds": odds}

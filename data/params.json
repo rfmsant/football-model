@@ -9,8 +9,13 @@
   "min_ev": 0.04,
   "market_weight": 0.8,
   "min_odds": 1.3,
-  "max_odds": 2.5
+  "max_odds": 3.5,
+  "bet_markets": [
+   "1X2",
+   "O/U",
+   "BTTS"
+  ]
  },
- "generated_at": "2026-09-30T15:26:46Z",
+ "generated_at": "2026-09-30T16:52:38Z",
  "source": "tuned on 2425, tested on 2526"
 }
