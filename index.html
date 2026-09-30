@@ -108,11 +108,17 @@ a { color: var(--accent); }
   </header>
   <p class="meta" id="meta">Loading analysis…</p>
   <div class="views" role="tablist">
-    <button type="button" data-view="analysis" aria-pressed="true">Daily analysis</button>
+    <button type="button" data-view="deep" aria-pressed="true">Top 10 bets</button>
+    <button type="button" data-view="analysis" aria-pressed="false">Daily analysis</button>
     <button type="button" data-view="results" aria-pressed="false">Results &amp; record</button>
   </div>
 
-  <div id="view-analysis">
+  <div id="view-deep">
+    <div class="controls"><label>Deep dive <select id="deepday"><option>Loading…</option></select></label></div>
+    <div id="deep"><div class="empty">Loading…</div></div>
+  </div>
+
+  <div id="view-analysis" hidden>
   <nav class="days" id="days" aria-label="Match days"></nav>
   <section class="overview" id="overview" hidden></section>
 
@@ -181,7 +187,7 @@ a { color: var(--accent); }
     .catch(e => { document.getElementById("meta").textContent = "No analysis published yet (" + e.message + ")."; });
 
   function dayLabel(date) {
-    const ref = DATA.demo ? DATA.reference_date : iso(new Date());
+    const ref = DATA && DATA.demo ? DATA.reference_date : iso(new Date());
     const tmr = iso(new Date(Date.parse(ref + "T12:00:00Z") + 864e5));
     const d = new Date(date + "T12:00:00Z");
     const nice = d.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
@@ -285,18 +291,24 @@ a { color: var(--accent); }
   }
 
   // ---------------------------------------------------------------- results & track record
-  let TRACK = null;
+  var TRACK = null, DEEPREC = null;
   document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => showView(b.dataset.view));
   function showView(v) {
     document.querySelectorAll("[data-view]").forEach(x => x.setAttribute("aria-pressed", x.dataset.view === v));
     document.getElementById("view-analysis").hidden = v !== "analysis";
+    document.getElementById("view-deep").hidden = v !== "deep";
+    if (v === "deep") loadDeep();
     document.getElementById("view-results").hidden = v !== "results";
     try { sessionStorage.setItem("view", v); } catch (e) {}
     if (v === "results" && !TRACK) loadTrack();
   }
-  try { if (sessionStorage.getItem("view") === "results") showView("results"); } catch (e) {}
+  let startView = "deep";
+  try { startView = sessionStorage.getItem("view") || "deep"; } catch (e) {}
+  showView(startView);
 
   function loadTrack() {
+    fetch("data/deep_record.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
+      .then(d => { DEEPREC = d; if (TRACK) renderResults(); });
     fetch("data/track_record.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(t => {
         TRACK = Object.values(t.games || {}).filter(e => e.outcome);
@@ -340,6 +352,15 @@ a { color: var(--accent); }
     const el = document.getElementById("results");
     if (!rows.length) { el.innerHTML = `<div class="empty">No settled games for this filter yet.</div>`; return; }
     const A = agg(rows), v = A.value.All, l = A.lean.All;
+    const dr = DEEPREC && DEEPREC.all && DEEPREC.all.bets ? DEEPREC : null;
+    const dline = s => s && s.bets ? `${s.won}/${s.bets - s.void} won (${pct(s.hit_pct, 1)}) · <span class="${s.profit >= 0 ? "pos" : "neg"}">${units(s.profit)}</span> · ROI ${sgn(s.roi)} · avg odds ${s.avg_odds}` : "none settled yet";
+    const deepPanel = `<div class="panel"><h3>Deep-dive bets (Top 10 tab)</h3>${dr ? `<div class="tablewrap"><table><tbody>
+      <tr><td>All deep-dive bets</td><td>${dline(dr.all)}</td></tr>
+      <tr><td>Met the bar (≥70%, ≥1.40)</td><td>${dline(dr.meets_bar)}</td></tr>
+      <tr><td>Best available (below the bar)</td><td>${dline(dr.best_available)}</td></tr>
+      ${Object.entries(dr.by_market || {}).map(([m, s]) => `<tr><td>${esc(m)}</td><td>${dline(s)}</td></tr>`).join("")}
+      </tbody></table></div><p class="note">Settled at the odds recorded in the report, 1 unit each; draw-no-bet draws are void. Filters above don't apply here.</p>`
+      : `<p class="note">No deep-dive bets settled yet. They appear here once their games are played.</p>`}</div>`;
     const kpi = (k, val, sub) => `<div class="kpi"><div class="k">${k}</div><div class="v">${val}</div><div class="s">${sub}</div></div>`;
     const betSub = s => s ? `${s.won}/${s.n} won · <span class="${s.profit >= 0 ? "pos" : "neg"}">${units(s.profit)}</span> · ROI ${sgn(s.profit / s.n)}` : "none yet";
     let h = `<div class="kpis">
@@ -353,6 +374,7 @@ a { color: var(--accent); }
       ${kpi("Value bets", v ? pct(v.won / v.n, 1) : "–", betSub(v))}
       ${kpi("Model's leans", l ? pct(l.won / l.n, 1) : "–", betSub(l))}
     </div>`;
+    h += deepPanel;
     h += `<div class="panel"><h3>By type of bet</h3><div class="tablewrap"><table><thead><tr><th>Type</th><th>Call correct</th>
       <th>Value bets (won · profit)</th><th>Value ROI</th><th>Leans (won · profit)</th><th>Lean ROI</th></tr></thead><tbody>
       ${TYPES.map((t, i) => { const c = [A.winner, A.ou, A.btts][i], vb = A.value[t], lb = A.lean[t];
@@ -387,6 +409,61 @@ a { color: var(--accent); }
         <td>${mark(o.score_ok)} ${esc(e.likely_score)}</td><td>${mark(o.ou_ok)} ${esc(o.ou_pick || "–")}</td><td>${mark(o.btts_ok)} ${esc(o.btts_pick || "–")}</td>
         <td>${bet(e.lean, o.lean_ok, o.lean_pl)}</td><td>${bet(e.value, o.value_ok, o.value_pl)}</td></tr>`; }).join("")}
       </tbody></table></div>`;
+  }
+
+  // ---------------------------------------------------------------- top 10 bets (deep dive)
+  var DEEPIDX = null;
+  function loadDeep(file) {
+    const el = document.getElementById("deep");
+    const go = f => fetch("data/deep/" + f, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(renderDeep).catch(e => { el.innerHTML = `<div class="empty">No deep dive published yet (${esc(e.message)}). It runs every morning.</div>`; });
+    if (DEEPIDX) return go(file || "latest.json");
+    fetch("data/deep/index.json", { cache: "no-store" }).then(r => r.ok ? r.json() : []).catch(() => [])
+      .then(idx => {
+        DEEPIDX = idx || [];
+        const sel = document.getElementById("deepday");
+        sel.innerHTML = DEEPIDX.map(x => `<option value="${esc(x.file)}">${esc(dayLabel(x.date).join(" "))} · ${x.meets_bar}/${x.bets} meet the bar</option>`).join("")
+          || `<option value="latest.json">Latest</option>`;
+        sel.onchange = () => loadDeep(sel.value);
+        go(file || (DEEPIDX[0] ? DEEPIDX[0].file : "latest.json"));
+      });
+  }
+
+  function renderDeep(rep) {
+    const el = document.getElementById("deep");
+    const bets = rep.bets || [];
+    const nBar = bets.filter(b => b.meets_bar).length;
+    const verdictCls = v => v === "BET" ? "value" : v === "PASS" ? "" : "strong";
+    let h = `<section class="overview"><h2>Top ${bets.length} bets · analysed ${esc(rep.date)}</h2>
+      <p>${esc(rep.summary || "")}</p>
+      <p class="small"><b>${nBar}</b> of ${bets.length} meet the bar (probability ≥ 70% and odds ≥ 1.40). The rest are the best available and are marked as such.
+      Every probability starts from the model and is adjusted only for new information, with each change and its source listed.</p></section>`;
+    h += bets.map(b => {
+      const adj = (b.adjustments || []).map(a => `<tr><td>${esc(a.factor)}</td><td class="${a.delta >= 0 ? "pos" : "neg"}">${sgn(a.delta)}</td><td style="white-space:normal">${esc(a.reason)}</td></tr>`).join("");
+      const an = Object.entries(b.analysis || {}).filter(([, v]) => v).map(([k, v]) => `<p class="summary"><b>${esc(k[0].toUpperCase() + k.slice(1))}:</b> ${esc(v)}</p>`).join("");
+      const src = (b.sources || []).map(u => { let host = u; try { host = new URL(u).hostname.replace(/^www\./, ""); } catch (e) {} return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host)}</a>`; }).join(" · ");
+      return `<article class="card">
+        <div class="row1"><div class="teams"><span class="ko">#${b.rank}</span>${esc(b.label)}</div>
+          <div class="small">${esc(b.match)} · ${esc(b.league_name || b.league)} · ${esc(b.kickoff)}
+          ${b.meets_bar ? '<span class="tag value">Meets the bar</span>' : '<span class="tag">Best available</span>'}
+          <span class="tag ${verdictCls(b.verdict)}">${esc(b.verdict)}</span></div></div>
+        <div class="stats">
+          <div class="stat ${b.meets_bar ? "value" : ""}"><div class="k">Final probability</div><div class="v">${pct(b.final_p, 0)} <span class="small">(model ${pct(b.model_p, 0)})</span></div></div>
+          <div class="stat"><div class="k">Odds seen</div><div class="v">${Number(b.odds_seen).toFixed(2)}</div></div>
+          <div class="stat"><div class="k">Bet only at odds ≥</div><div class="v">${Number(b.min_odds).toFixed(2)}</div></div>
+          <div class="stat"><div class="k">Value · confidence</div><div class="v ${b.final_p * b.odds_seen - 1 > 0 ? "pos" : "neg"}">${sgn(b.final_p * b.odds_seen - 1)} · ${esc(b.confidence || "–")}</div></div>
+        </div>
+        ${adj ? `<div class="tablewrap"><table><thead><tr><th>Adjustment</th><th>Δ</th><th>Why</th></tr></thead><tbody>${adj}</tbody></table></div>` : ""}
+        <details><summary>Full breakdown${(b.risks || []).length ? " & risks" : ""}</summary>${an}
+          ${(b.risks || []).length ? `<p class="summary"><b>Risks:</b> ${(b.risks || []).map(esc).join("; ")}</p>` : ""}
+          ${src ? `<p class="small">Sources: ${src}</p>` : ""}</details>
+      </article>`;
+    }).join("");
+    if ((rep.rejected || []).length) {
+      h += `<div class="panel"><h3>Looked at and rejected</h3><div class="tablewrap"><table><thead><tr><th>Match</th><th>Bet</th><th>Why not</th></tr></thead><tbody>
+        ${rep.rejected.map(r => `<tr><td>${esc(r.match)}</td><td>${esc(r.label || "")}</td><td style="white-space:normal">${esc(r.reason)}</td></tr>`).join("")}</tbody></table></div></div>`;
+    }
+    el.innerHTML = h;
   }
 })();
 </script>

@@ -1,0 +1,43 @@
+name: Publish deep dive
+
+on:
+  push:
+    branches: [main]
+    paths: ["data/deep/**", "index.html"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build site
+        run: |
+          mkdir -p _site/data/deep
+          cp index.html backtest.md ml_report.md DEEP_DIVE.md _site/ 2>/dev/null || true
+          cp data/predictions.json data/predictions_demo.json data/backtest.json data/track_record.json              data/shortlist.json data/deep_record.json _site/data/ 2>/dev/null || true
+          cp data/deep/*.json _site/data/deep/ 2>/dev/null || true
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

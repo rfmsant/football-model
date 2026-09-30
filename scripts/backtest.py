@@ -35,6 +35,14 @@ def settle(market: str, sel: str, hg: int, ag: int, odds: float) -> float:
     if market == "BTTS":
         both = hg > 0 and ag > 0
         return odds - 1 if (both == (sel == "Yes")) else -1.0
+    if market == "Double chance":
+        res = "H" if hg > ag else "D" if hg == ag else "A"
+        covered = {"1X": "HD", "X2": "DA", "12": "HA"}[sel]
+        return odds - 1 if res in covered else -1.0
+    if market == "Draw no bet":
+        if hg == ag:
+            return 0.0
+        return odds - 1 if (hg > ag) == (sel == "H") else -1.0
     if market.startswith("AH"):
         line = float(market.split()[1])
         if sel == "Away":

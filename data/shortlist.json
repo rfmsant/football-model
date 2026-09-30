@@ -1,0 +1,100 @@
+{
+ "generated_at": "2026-09-30T23:14:53Z",
+ "for_dates": [
+  "2026-10-02",
+  "2026-10-03",
+  "2026-10-04",
+  "2026-10-05"
+ ],
+ "rules": {
+  "min_prob": 0.7,
+  "min_odds": 1.4,
+  "target": 20,
+  "max_per_game": 2
+ },
+ "n_candidates": 0,
+ "candidates": [],
+ "rejected_hard_games": [
+  {
+   "match": "Eldense v Oviedo",
+   "date": "2026-10-02",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Albacete v Eibar",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Barnsley v Milton Keynes Dons",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Reading v Bradford",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Bromley v Wycombe",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Wigan v Mansfield",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Peterboro v Notts County",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "AFC Wimbledon v Stevenage",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Accrington v Cheltenham",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Crewe v Bristol Rvs",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Colchester v Port Vale",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Exeter v Rotherham",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Northampton v Oldham",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Rochdale v Swindon",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Cadiz v Leganes",
+   "date": "2026-10-03",
+   "reason": "hard to call (balanced game)"
+  },
+  {
+   "match": "Sociedad B v Granada",
+   "date": "2026-10-04",
+   "reason": "hard to call (balanced game)"
+  }
+ ],
+ "dossiers": {}
+}

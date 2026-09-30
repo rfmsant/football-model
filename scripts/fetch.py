@@ -17,8 +17,8 @@ from common import DATA, LEAGUES, RAW, get_logger, http_get, match_name, season_
 log = get_logger("fetch")
 
 FD_BASE = "https://www.football-data.co.uk"
-KEEP = ["Div", "Date", "Time", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "HS", "AS", "HST", "AST",
-        "HC", "AC", "HY", "AY", "HR", "AR", "HxG", "AxG",
+KEEP = ["Div", "Date", "Time", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "HTHG", "HTAG", "Referee",
+        "HS", "AS", "HST", "AST", "HF", "AF", "HC", "AC", "HY", "AY", "HR", "AR", "HxG", "AxG",
         "AvgH", "AvgD", "AvgA", "MaxH", "MaxD", "MaxA", "B365H", "B365D", "B365A", "PSH", "PSD", "PSA",
         "Avg>2.5", "Avg<2.5", "Max>2.5", "Max<2.5", "AHh", "AvgAHH", "AvgAHA", "MaxAHH", "MaxAHA",
         "AvgCH", "AvgCD", "AvgCA", "MaxCH", "MaxCD", "MaxCA", "PSCH", "PSCD", "PSCA",
@@ -109,7 +109,7 @@ def fetch_history(seasons: list[str]) -> pd.DataFrame:
     h["Date"] = parse_dates(h["Date"].astype(str))
     h = h.dropna(subset=["Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"])
     for c in h.columns:
-        if c not in ("Div", "Date", "Time", "HomeTeam", "AwayTeam", "Season"):
+        if c not in ("Div", "Date", "Time", "HomeTeam", "AwayTeam", "Season", "Referee"):
             h[c] = pd.to_numeric(h[c], errors="coerce")
     h["Season"] = h["Season"].astype(str).str.zfill(4)
     return h.sort_values("Date").reset_index(drop=True)

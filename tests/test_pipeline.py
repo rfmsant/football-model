@@ -322,6 +322,38 @@ class TestML(unittest.TestCase):
         pd.testing.assert_frame_equal(f1[last.values], f2[last.values])   # that day's features can't see them
 
 
+class TestDeepDive(unittest.TestCase):
+    def bet(self, **kw):
+        b = {"rank": 1, "match": "A v B", "league": "E2", "kickoff": "2026-10-03 15:00", "market": "Draw no bet",
+             "selection": "A", "label": "B draw no bet", "model_p": 0.61, "final_p": 0.72, "odds_seen": 1.55, "min_odds": 1.4,
+             "meets_bar": True, "adjustments": [{"factor": "injuries", "delta": 0.11, "reason": "x"}],
+             "analysis": {"injuries": "x"}, "verdict": "BET"}
+        b.update(kw)
+        return b
+
+    def test_validate(self):
+        import deep
+        self.assertEqual(deep.validate({"date": "2026-10-01", "bets": [self.bet()]}), [])
+        errs = deep.validate({"date": "2026-10-01", "bets": [self.bet(final_p=0.80), self.bet(market="AH -0.5"),
+                                                             self.bet(odds_seen=1.3), self.bet(verdict="MAYBE")]})
+        self.assertEqual(len(errs), 4)   # sum mismatch, bad market, meets_bar wrong, bad verdict
+
+    def test_settle_new_markets(self):
+        self.assertEqual(backtest.settle("Double chance", "1X", 1, 1, 1.5), 0.5)
+        self.assertEqual(backtest.settle("Double chance", "X2", 2, 1, 1.5), -1.0)
+        self.assertEqual(backtest.settle("Draw no bet", "A", 1, 1, 1.8), 0.0)
+        self.assertAlmostEqual(backtest.settle("Draw no bet", "A", 0, 2, 1.8), 0.8)
+        self.assertEqual(backtest.settle("O/U 1.5", "Over", 1, 1, 1.3), 0.3)
+
+    def test_market_lambda_fit(self):
+        import shortlist
+        from model import dixon_coles_matrix
+        lh, la = shortlist.fit_market_lambdas(0.55, 0.20, 0.55)
+        m = shortlist._mk(dixon_coles_matrix(lh, la, -0.08))
+        self.assertAlmostEqual(m["H"], 0.55, delta=0.02)
+        self.assertAlmostEqual(m["O25"], 0.55, delta=0.03)
+
+
 class TestOutput(unittest.TestCase):
     def game(self):
         return {"home": "A", "away": "B", "probs": {"H": 0.5, "D": 0.27, "A": 0.23}, "xg": {"home": 1.7, "away": 1.0},

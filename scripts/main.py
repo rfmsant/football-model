@@ -21,6 +21,7 @@ import extras
 import fetch
 import notify
 import oddsapi
+import shortlist
 import summary
 import ml
 import track
@@ -286,6 +287,15 @@ def run(args) -> dict:
     write_json(target, out)
     log.info("wrote %s: %d games, %d value bets", target.name, len(records), sum(1 for r in records if r["best_bet"]))
     if not args.demo:
+        try:
+            shortlist.run(out["games"], rows, model.hist, season, today, out["generated_at"])
+        except Exception:  # noqa: BLE001
+            log.error("shortlist failed:\n%s", traceback.format_exc())
+        try:
+            import deep
+            deep.settle_all(model.hist)
+        except Exception:  # noqa: BLE001
+            log.warning("deep-dive settlement failed: %s", traceback.format_exc(limit=2))
         try:
             track.update(out, hist, today)
         except Exception:  # noqa: BLE001
