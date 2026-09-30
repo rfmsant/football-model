@@ -61,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/predictions.json data/params.json data/backtest.json backtest.md
+          git add data/predictions.json data/track_record.json data/params.json data/backtest.json backtest.md
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
@@ -73,7 +73,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html backtest.md _site/
-          cp data/predictions.json data/backtest.json _site/data/ 2>/dev/null || true
+          cp data/predictions.json data/backtest.json data/track_record.json _site/data/ 2>/dev/null || true
           cp data/predictions_demo.json _site/data/ 2>/dev/null || true
           touch _site/.nojekyll
 

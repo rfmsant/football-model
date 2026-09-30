@@ -15,6 +15,7 @@ import extras  # noqa: E402
 import notify  # noqa: E402
 import oddsapi  # noqa: E402
 import summary  # noqa: E402
+import track  # noqa: E402
 from common import DEFAULT_PARAMS, match_name, norm_name  # noqa: E402
 from model import (Model, ah_outcomes, best_bet, derive_markets, dixon_coles_matrix,  # noqa: E402
                    evaluate_markets, market_odds_from_row, no_vig)
@@ -258,6 +259,43 @@ class TestOddsBudget(unittest.TestCase):
         with mock.patch.object(c, "events", side_effect=lambda lg: events.get(lg, [])),                 mock.patch.object(c, "league", side_effect=lambda lg: fetched.append(lg) or None):
             oddsapi.discover_fixtures(c, listed, hist, "2627", dt.date(2026, 9, 30))
         self.assertEqual(fetched[:1], ["E2"])           # SP2 already in fixtures.csv -> no credits spent on it
+
+
+class TestTrackRecord(unittest.TestCase):
+    def pred(self):
+        return {"generated_at": "2026-10-03T07:00:00Z", "games": [{
+            "league": "E2", "league_name": "League One", "date": "2026-10-03", "time": "15:00", "home": "Barnsley",
+            "away": "Wigan", "probs": {"H": 0.5, "D": 0.27, "A": 0.23}, "likely_score": "1-0", "confidence": 55,
+            "markets": {"O/U 2.5": {"Over": 0.45, "Under": 0.55}, "BTTS": {"Yes": 0.52, "No": 0.48}},
+            "lean": {"market": "1X2", "selection": "H", "label": "Barnsley to win", "odds": 2.1, "model_p": 0.5,
+                     "market_p": 0.46, "ev": 0.03, "edge": 0.04},
+            "best_bet": {"market": "O/U 2.5", "selection": "Under", "label": "Under 2.5 goals", "odds": 1.9,
+                         "model_p": 0.55, "market_p": 0.5, "ev": 0.04, "edge": 0.05}}]}
+
+    def test_record_settle_summarise(self):
+        import datetime as dt
+        ledger = {"games": {}}
+        self.assertEqual(track.record_predictions(ledger, self.pred(), dt.date(2026, 10, 3)), 1)
+        self.assertEqual(track.record_predictions(ledger, self.pred(), dt.date(2026, 10, 4)), 0)  # past game: frozen
+        hist = pd.DataFrame({"Div": ["E2"], "Date": [pd.Timestamp("2026-10-04")], "HomeTeam": ["Barnsley"],
+                             "AwayTeam": ["Wigan"], "FTHG": [2], "FTAG": [0]})   # played a day late
+        self.assertEqual(track.settle_results(ledger, hist), 1)
+        e = next(iter(ledger["games"].values()))
+        o = e["outcome"]
+        self.assertTrue(o["winner_ok"] and o["ou_ok"])
+        self.assertFalse(o["score_ok"])
+        self.assertFalse(o["btts_ok"])                       # predicted yes, Wigan didn't score
+        self.assertAlmostEqual(o["lean_pl"], 1.1)
+        self.assertAlmostEqual(o["value_pl"], 0.9)
+        self.assertEqual(o["value_type"], "Goals (over/under)")
+        s = track.summarise(ledger)
+        self.assertEqual(s["winner"]["pct"], 1.0)
+        self.assertEqual(s["value_bets"]["All"]["profit"], 0.9)
+        self.assertEqual(track.settle_results(ledger, hist), 0)   # already settled
+
+    def test_settle_btts(self):
+        self.assertEqual(backtest.settle("BTTS", "Yes", 1, 1, 1.8), 0.8)
+        self.assertEqual(backtest.settle("BTTS", "Yes", 1, 0, 1.8), -1.0)
 
 
 class TestOutput(unittest.TestCase):

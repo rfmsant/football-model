@@ -80,6 +80,19 @@ details { margin-top: 8px; } summary { cursor: pointer; color: var(--muted); fon
 table { border-collapse: collapse; width: 100%; font-size: .82rem; margin-top: 8px; font-variant-numeric: tabular-nums; }
 th, td { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--border); white-space: nowrap; }
 th { color: var(--muted); font-weight: 600; }
+.views { display: flex; gap: 6px; margin: 0 0 12px; }
+.views button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 14px; }
+@media (min-width: 640px) { .kpis { grid-template-columns: repeat(3, 1fr); } }
+.kpi { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; }
+.kpi .k { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.kpi .v { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.kpi .s { font-size: .8rem; color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; }
+.panel h3 { margin: 0 0 4px; font-size: 1rem; }
+tr.dayrow { cursor: pointer; } tr.dayrow:hover td { background: var(--surface-2); }
+.ok { color: var(--accent); font-weight: 700; } .no { color: var(--bad); font-weight: 700; }
+.note { font-size: .8rem; color: var(--muted); margin: 6px 0 0; }
 .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
 footer { color: var(--muted); font-size: .8rem; margin: 30px 0 10px; }
 a { color: var(--accent); }
@@ -92,7 +105,12 @@ a { color: var(--accent); }
     <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
   </header>
   <p class="meta" id="meta">Loading analysis…</p>
+  <div class="views" role="tablist">
+    <button type="button" data-view="analysis" aria-pressed="true">Daily analysis</button>
+    <button type="button" data-view="results" aria-pressed="false">Results &amp; record</button>
+  </div>
 
+  <div id="view-analysis">
   <nav class="days" id="days" aria-label="Match days"></nav>
   <section class="overview" id="overview" hidden></section>
 
@@ -106,6 +124,20 @@ a { color: var(--accent); }
     <label><input type="checkbox" id="onlybets"> Value bets only</label>
   </div>
   <div id="games"></div>
+  </div>
+
+  <div id="view-results" hidden>
+    <div class="controls">
+      <label>Predictions <select id="rsource">
+        <option value="">Live + replay</option><option value="live">Live only</option><option value="replay">Replay only</option>
+      </select></label>
+      <label>Period <select id="rperiod">
+        <option value="0">Whole season</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option>
+      </select></label>
+      <label>League <select id="rleague"><option value="">All leagues</option></select></label>
+    </div>
+    <div id="results"><div class="empty">Loading results…</div></div>
+  </div>
 
   <footer>
     A daily analysis of every fixture. Probabilities come from a Dixon-Coles model built on time-weighted xG/shots
@@ -242,6 +274,105 @@ a { color: var(--accent); }
         ${abs.map(a => `<tr><td>${esc(a.team)}</td><td>${esc(a.name)}</td><td>${esc(a.status)}</td><td>${esc(a.reason)}</td><td>${pct(a.minutes_share)}</td><td>${pct(a.goal_share)}</td></tr>`).join("")}</tbody></table></div>` : ""}
       </details>
     </article>`;
+  }
+
+  // ---------------------------------------------------------------- results & track record
+  let TRACK = null;
+  document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => showView(b.dataset.view));
+  function showView(v) {
+    document.querySelectorAll("[data-view]").forEach(x => x.setAttribute("aria-pressed", x.dataset.view === v));
+    document.getElementById("view-analysis").hidden = v !== "analysis";
+    document.getElementById("view-results").hidden = v !== "results";
+    try { sessionStorage.setItem("view", v); } catch (e) {}
+    if (v === "results" && !TRACK) loadTrack();
+  }
+  try { if (sessionStorage.getItem("view") === "results") showView("results"); } catch (e) {}
+
+  function loadTrack() {
+    fetch("data/track_record.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(t => {
+        TRACK = Object.values(t.games || {}).filter(e => e.outcome);
+        const lgs = [...new Set(TRACK.map(e => e.league_name))].sort();
+        document.getElementById("rleague").insertAdjacentHTML("beforeend", lgs.map(l => `<option>${esc(l)}</option>`).join(""));
+        for (const id of ["rsource", "rperiod", "rleague"]) document.getElementById(id).onchange = renderResults;
+        renderResults();
+      })
+      .catch(e => { document.getElementById("results").innerHTML = `<div class="empty">No results recorded yet (${esc(e.message)}).</div>`; });
+  }
+
+  const TYPES = ["Winner (1X2)", "Goals (over/under)", "Both teams to score"];
+  function agg(rows) {
+    const rate = k => { const v = rows.filter(e => k in e.outcome).map(e => e.outcome[k]); return { n: v.length, hit: v.filter(Boolean).length }; };
+    const bets = kind => {
+      const out = {};
+      for (const e of rows) {
+        const o = e.outcome; if (!((kind + "_pl") in o)) continue;
+        for (const t of ["All", o[kind + "_type"]]) {
+          const s = out[t] = out[t] || { n: 0, won: 0, profit: 0 };
+          s.n++; s.won += o[kind + "_ok"] ? 1 : 0; s.profit += o[kind + "_pl"];
+        }
+      }
+      return out;
+    };
+    return { games: rows.length, winner: rate("winner_ok"), score: rate("score_ok"), ou: rate("ou_ok"), btts: rate("btts_ok"),
+      value: bets("value"), lean: bets("lean") };
+  }
+  const hp = r => r && r.n ? pct(r.hit / r.n, 1) : "–";
+  const units = x => (x >= 0 ? "+" : "") + x.toFixed(2) + "u";
+  const betCell = s => s && s.n ? `${s.won}/${s.n} · <span class="${s.profit >= 0 ? "pos" : "neg"}">${units(s.profit)}</span>` : "–";
+
+  function renderResults() {
+    const src = document.getElementById("rsource").value, days = +document.getElementById("rperiod").value,
+      lg = document.getElementById("rleague").value;
+    const latest = TRACK.reduce((m, e) => e.date > m ? e.date : m, "");
+    const cut = days ? iso(new Date(Date.parse(latest + "T12:00:00Z") - (days - 1) * 864e5)) : "";
+    const rows = TRACK.filter(e => (!src || e.source === src) && (!lg || e.league_name === lg) && e.date >= cut);
+    const el = document.getElementById("results");
+    if (!rows.length) { el.innerHTML = `<div class="empty">No settled games for this filter yet.</div>`; return; }
+    const A = agg(rows), v = A.value.All, l = A.lean.All;
+    const kpi = (k, val, sub) => `<div class="kpi"><div class="k">${k}</div><div class="v">${val}</div><div class="s">${sub}</div></div>`;
+    const betSub = s => s ? `${s.won}/${s.n} won · <span class="${s.profit >= 0 ? "pos" : "neg"}">${units(s.profit)}</span> · ROI ${sgn(s.profit / s.n)}` : "none yet";
+    let h = `<div class="kpis">
+      ${kpi("Winner correct", hp(A.winner), `${A.winner.hit} of ${A.winner.n} games`)}
+      ${kpi("Over/under 2.5 correct", hp(A.ou), `${A.ou.hit} of ${A.ou.n}`)}
+      ${kpi("BTTS correct", hp(A.btts), `${A.btts.hit} of ${A.btts.n}`)}
+      ${kpi("Exact score correct", hp(A.score), `${A.score.hit} of ${A.score.n}`)}
+      ${kpi("Value bets", v ? pct(v.won / v.n, 1) : "–", betSub(v))}
+      ${kpi("Model's leans", l ? pct(l.won / l.n, 1) : "–", betSub(l))}
+    </div>`;
+    h += `<div class="panel"><h3>By type of bet</h3><div class="tablewrap"><table><thead><tr><th>Type</th><th>Call correct</th>
+      <th>Value bets (won · profit)</th><th>Value ROI</th><th>Leans (won · profit)</th><th>Lean ROI</th></tr></thead><tbody>
+      ${TYPES.map((t, i) => { const c = [A.winner, A.ou, A.btts][i], vb = A.value[t], lb = A.lean[t];
+        return `<tr><td>${t}</td><td>${hp(c)}</td><td>${betCell(vb)}</td><td>${vb ? sgn(vb.profit / vb.n) : "–"}</td><td>${betCell(lb)}</td><td>${lb ? sgn(lb.profit / lb.n) : "–"}</td></tr>`; }).join("")}
+      </tbody></table></div>
+      <p class="note">"Call correct" is the model's most likely result (winner), its over/under 2.5 call and its BTTS call, across every game.
+      Value bets and leans are settled at the odds shown when the prediction was made, 1 unit each. The free data has no BTTS odds, so there are no BTTS bets.</p></div>`;
+    const byDay = {};
+    rows.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
+    const dates = Object.keys(byDay).sort().reverse();
+    h += `<div class="panel"><h3>By day</h3><div class="tablewrap"><table><thead><tr><th>Date</th><th>Games</th><th>Winner</th><th>O/U 2.5</th><th>BTTS</th>
+      <th>Value bets</th><th>Leans</th></tr></thead><tbody>
+      ${dates.map(d => { const D = agg(byDay[d]); const srcs = [...new Set(byDay[d].map(e => e.source))].join("+");
+        return `<tr class="dayrow" data-date="${d}"><td>${esc(dayLabel(d).join(" "))} <span class="small">${esc(srcs)}</span></td><td>${D.games}</td>
+          <td>${hp(D.winner)}</td><td>${hp(D.ou)}</td><td>${hp(D.btts)}</td><td>${betCell(D.value.All)}</td><td>${betCell(D.lean.All)}</td></tr>
+          <tr hidden data-detail="${d}"><td colspan="7">${dayGames(byDay[d])}</td></tr>`; }).join("")}
+      </tbody></table></div><p class="note">Tap a day to see every game. "replay" = walk-forward reconstruction using only data available before that day; "live" = prediction published before kick-off.</p></div>`;
+    el.innerHTML = h;
+    el.querySelectorAll(".dayrow").forEach(r => r.onclick = () => {
+      const d = el.querySelector(`[data-detail="${r.dataset.date}"]`); d.hidden = !d.hidden; });
+  }
+
+  function dayGames(gs) {
+    const mark = ok => ok == null ? "–" : ok ? '<span class="ok">✓</span>' : '<span class="no">✗</span>';
+    const pickName = (e, s) => ({ H: e.home, D: "Draw", A: e.away })[s];
+    const bet = (b, ok, pl) => b ? `${mark(ok)} ${esc(b.label)} @ ${b.odds} <span class="${pl >= 0 ? "pos" : "neg"}">${units(pl)}</span>` : "–";
+    return `<div class="tablewrap"><table><thead><tr><th>Match</th><th>Score</th><th>Predicted winner</th><th>Likely score</th><th>O/U 2.5</th><th>BTTS</th><th>Lean</th><th>Value bet</th></tr></thead><tbody>
+      ${gs.sort((a, b) => a.league_name.localeCompare(b.league_name)).map(e => { const o = e.outcome, r = e.result;
+        return `<tr><td>${esc(e.home)} v ${esc(e.away)} <span class="small">${esc(e.league_name)}</span></td><td><b>${r.hg}-${r.ag}</b></td>
+        <td>${mark(o.winner_ok)} ${esc(pickName(e, o.winner_pick))} (${pct(e.probs[o.winner_pick])})</td>
+        <td>${mark(o.score_ok)} ${esc(e.likely_score)}</td><td>${mark(o.ou_ok)} ${esc(o.ou_pick || "–")}</td><td>${mark(o.btts_ok)} ${esc(o.btts_pick || "–")}</td>
+        <td>${bet(e.lean, o.lean_ok, o.lean_pl)}</td><td>${bet(e.value, o.value_ok, o.value_pl)}</td></tr>`; }).join("")}
+      </tbody></table></div>`;
   }
 })();
 </script>

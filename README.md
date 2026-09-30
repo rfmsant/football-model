@@ -31,6 +31,17 @@ win/draw/loss %, most likely score, expected goals, form, the **model's lean** (
 when it clears the threshold), confidence, a written summary and every market's model vs bookmaker
 price. It works on mobile and has dark and light modes.
 
+### Track record (`scripts/track.py`, **Results & record** tab)
+Every run stores the latest pre-match prediction for each game in `data/track_record.json` (source
+`live`). Each finished game is settled against the football-data.co.uk result: whether the predicted
+winner, exact score, over/under 2.5 call and BTTS call were right, and the profit of the model's lean and
+of any value bet at the odds shown at the time (1 unit each). The site aggregates this by day and by bet
+type (Winner, Goals, BTTS), and you can filter by period, league and source.
+
+The season before the tracker went live was backfilled with `python scripts/track.py --backfill
+2026-08-01`, a walk-forward replay that only uses data available before each day. Those games are
+labelled `replay` so you can separate them from genuine `live` predictions.
+
 ### Key definitions
 - **Edge** = model probability − bookmaker no-vig probability (from the average odds).
 - **EV** = p × best price − 1. Here p blends the model with the market, weighted by the tuned

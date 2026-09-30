@@ -32,6 +32,9 @@ def settle(market: str, sel: str, hg: int, ag: int, odds: float) -> float:
         k = float(market.split()[1])
         over = hg + ag > k
         return odds - 1 if (over == (sel == "Over")) else -1.0
+    if market == "BTTS":
+        both = hg > 0 and ag > 0
+        return odds - 1 if (both == (sel == "Yes")) else -1.0
     if market.startswith("AH"):
         line = float(market.split()[1])
         if sel == "Away":

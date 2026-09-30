@@ -22,6 +22,7 @@ import fetch
 import notify
 import oddsapi
 import summary
+import track
 from common import DATA, LEAGUES, get_logger, load_params, read_json, season_code, write_json
 from model import Model, base_confidence, best_bet, market_odds_from_row
 
@@ -243,6 +244,11 @@ def run(args) -> dict:
     target = DATA / ("predictions_demo.json" if args.demo else "predictions.json")
     write_json(target, out)
     log.info("wrote %s: %d games, %d value bets", target.name, len(records), sum(1 for r in records if r["best_bet"]))
+    if not args.demo:
+        try:
+            track.update(out, hist, today)
+        except Exception:  # noqa: BLE001
+            log.error("track record update failed:\n%s", traceback.format_exc())
     if not args.demo and not args.no_notify:
         notify.run(out, os.environ.get("SITE_URL"))
     return out
