@@ -1,0 +1,63 @@
+name: Betting card to Discord
+
+on:
+  push:
+    branches: [main]
+    paths: ["data/cards/20*.json"]
+  schedule:
+    - cron: "41 10 * * *"   # 10:41 UTC fallback: if the morning deep dive didn't produce a card, build one from the model
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Card date (YYYY-MM-DD); empty = latest card"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: betting-card
+  cancel-in-progress: false
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Decide what to send
+        id: plan
+        run: |
+          today=$(date -u +%Y-%m-%d)
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ -e "data/cards/$today.json" ]; then
+              echo "Card for $today already exists; nothing to do"; echo "send=no" >> $GITHUB_OUTPUT
+            else
+              echo "send=build" >> $GITHUB_OUTPUT; echo "date=$today" >> $GITHUB_OUTPUT
+            fi
+          elif [ -n "${{ inputs.date }}" ]; then
+            echo "send=yes" >> $GITHUB_OUTPUT; echo "date=${{ inputs.date }}" >> $GITHUB_OUTPUT
+          else
+            d=$(python -c "import json;print(json.load(open('data/cards/latest.json'))['date'])")
+            echo "send=yes" >> $GITHUB_OUTPUT; echo "date=$d" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build fallback card (model only)
+        if: steps.plan.outputs.send == 'build'
+        run: |
+          cd scripts && python card.py build --date ${{ steps.plan.outputs.date }} > /dev/null
+          cd .. && git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cards && git commit -m "Fallback card ${{ steps.plan.outputs.date }}" && git push || true
+
+      - name: Send to Discord
+        if: steps.plan.outputs.send != 'no'
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: cd scripts && python card.py send --date ${{ steps.plan.outputs.date }}

@@ -292,6 +292,16 @@ def run(args) -> dict:
         except Exception:  # noqa: BLE001
             log.error("shortlist failed:\n%s", traceback.format_exc())
         try:
+            import intl
+            intl.export([(today + dt.timedelta(days=k)).isoformat() for k in (0, 1, 2)])
+        except Exception:  # noqa: BLE001
+            log.warning("international export failed: %s", traceback.format_exc(limit=2))
+        try:
+            import card
+            card.settle_cards(model.hist)
+        except Exception:  # noqa: BLE001
+            log.warning("card settlement failed: %s", traceback.format_exc(limit=2))
+        try:
             import deep
             deep.settle_all(model.hist)
         except Exception:  # noqa: BLE001

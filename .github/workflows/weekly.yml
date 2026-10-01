@@ -61,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in data/predictions.json data/track_record.json data/ml_model.pkl ml_report.md data/shortlist.json                    data/odds_history.json data/stadiums.json data/deep_record.json data/params.json data/backtest.json backtest.md; do
+          for f in data/predictions.json data/track_record.json data/ml_model.pkl ml_report.md data/shortlist.json                    data/odds_history.json data/stadiums.json data/deep_record.json data/intl.json data/card_record.json data/params.json data/backtest.json backtest.md; do
             [ -e "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then

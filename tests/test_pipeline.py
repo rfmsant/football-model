@@ -354,6 +354,28 @@ class TestDeepDive(unittest.TestCase):
         self.assertAlmostEqual(m["O25"], 0.55, delta=0.03)
 
 
+class TestCard(unittest.TestCase):
+    def leg(self, match, p, odds, market="1X2", sel="H"):
+        return {"match": match, "label": f"{match} {sel}", "market": market, "selection": sel, "p_model": p,
+                "odds": odds, "ev": p * odds - 1, "date": "2026-10-03", "time": "15:00"}
+
+    def test_combos_and_choice(self):
+        import card
+        legs = [self.leg("A v B", 0.80, 1.30), self.leg("C v D", 0.75, 1.40), self.leg("E v F", 0.70, 1.50),
+                self.leg("A v B", 0.60, 1.80, "O/U 2.5", "Over")]
+        cs = card.combos(legs)
+        self.assertTrue(all(card.TARGET_MIN <= c["odds"] <= card.TARGET_MAX for c in cs))
+        self.assertTrue(all(len({l["match"] for l in c["legs"]}) == c["n"] for c in cs))   # one leg per game
+        best = card.choose(cs)["main"]
+        self.assertAlmostEqual(best["p_win"], max(c["p_win"] for c in cs if c["ev"] >= -0.03))
+        self.assertAlmostEqual(best["odds"], round(1.30 * 1.40 * 1.50, 2) if best["n"] == 3 else best["odds"])
+
+    def test_discord_payload(self):
+        import card
+        c = {"date": "2026-10-02", "target_odds": 2.0, "main": None, "alternatives": []}
+        self.assertIn("No combination", card.discord_payload(c)["embeds"][0]["description"])
+
+
 class TestOutput(unittest.TestCase):
     def game(self):
         return {"home": "A", "away": "B", "probs": {"H": 0.5, "D": 0.27, "A": 0.23}, "xg": {"home": 1.7, "away": 1.0},

@@ -1,0 +1,95 @@
+{
+ "date": "2026-10-02",
+ "generated_at": "2026-10-01T23:00:42Z",
+ "bookmaker": "Betclic",
+ "target_odds": 2.0,
+ "legs_considered": 9,
+ "main": {
+  "odds": 2.02,
+  "p_win": 0.5296,
+  "p_not_lose": 0.5296,
+  "ev": 0.0677,
+  "n": 2,
+  "legs": [
+   {
+    "match": "Belgium v Turkey",
+    "league_name": "Nations League",
+    "date": "2026-10-02",
+    "time": "19:45",
+    "market": "O/U 3.5",
+    "selection": "Under",
+    "label": "Under 3.5 goals",
+    "p_model": 0.6461,
+    "odds": 1.68,
+    "odds_source": "estimated",
+    "min_odds": 1.52,
+    "ev": 0.0854,
+    "source": "international model",
+    "researched": null,
+    "research_note": null
+   },
+   {
+    "match": "Ukraine v Northern Ireland",
+    "league_name": "Nations League",
+    "date": "2026-10-02",
+    "time": "19:45",
+    "market": "Double chance",
+    "selection": "1X",
+    "label": "Ukraine or draw",
+    "p_model": 0.8197,
+    "odds": 1.2,
+    "odds_source": "estimated",
+    "min_odds": 1.2,
+    "ev": -0.0164,
+    "source": "international model",
+    "researched": null,
+    "research_note": null
+   }
+  ]
+ },
+ "alternatives": [
+  {
+   "odds": 2.19,
+   "p_win": 0.3619,
+   "p_not_lose": 0.516,
+   "ev": 0.0485,
+   "n": 2,
+   "legs": [
+    {
+     "match": "France v Italy",
+     "league_name": "Nations League",
+     "date": "2026-10-02",
+     "time": "19:45",
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "label": "Under 3.5 goals",
+     "p_model": 0.6266,
+     "odds": 1.65,
+     "odds_source": "estimated",
+     "min_odds": 1.56,
+     "ev": 0.0339,
+     "source": "international model",
+     "researched": null,
+     "research_note": null
+    },
+    {
+     "match": "Kazakhstan v Moldova",
+     "league_name": "Nations League",
+     "date": "2026-10-02",
+     "time": "15:00",
+     "market": "Draw no bet",
+     "selection": "H",
+     "label": "Kazakhstan draw no bet",
+     "p_model": 0.766,
+     "odds": 1.33,
+     "odds_source": "estimated",
+     "min_odds": 1.27,
+     "ev": 0.0142,
+     "source": "international model",
+     "researched": null,
+     "research_note": null
+    }
+   ]
+  }
+ ]
+}

@@ -110,16 +110,33 @@ def validate(df: pd.DataFrame, beta, since="2024-01-01") -> dict:
     return {"matches": n, "winner_correct": round(hit / n, 4), "log_loss": round(ll / n, 4)}
 
 
+INTL_SPORTS = {"soccer_uefa_nations_league": "Nations League",
+               "soccer_uefa_euro_qualification": "Euro qualifiers",
+               "soccer_fifa_world_cup_qualifiers_europe": "World Cup qualifiers",
+               "soccer_fifa_world_cup": "World Cup", "soccer_uefa_european_championship": "Euro"}
+_ODDS_CACHE: dict = {}
+
+
 def odds_for(date: str) -> list[dict]:
+    """Odds for every international competition with games on `date`. Event lists are free; odds (2 credits per
+    competition) are only fetched when that competition has games in the window, and cached per run."""
     key = os.environ.get("ODDS_API_KEY")
     if not key:
         return []
-    r = http_get("https://api.the-odds-api.com/v4/sports/soccer_uefa_nations_league/odds",
-                 params={"apiKey": key, "regions": "eu", "markets": "h2h,totals", "oddsFormat": "decimal"})
-    if r is None or r.status_code != 200:
-        return []
-    log.info("Odds API credits left: %s", r.headers.get("x-requests-remaining"))
-    return [e for e in r.json() if e["commence_time"][:10] == date]
+    out = []
+    for sport, name in INTL_SPORTS.items():
+        if sport not in _ODDS_CACHE:
+            ev = http_get(f"https://api.the-odds-api.com/v4/sports/{sport}/events", params={"apiKey": key}, retries=1)
+            evs = ev.json() if ev is not None and ev.status_code == 200 and isinstance(ev.json(), list) else []
+            if not any(e["commence_time"][:10] == date for e in evs):
+                continue
+            r = http_get(f"https://api.the-odds-api.com/v4/sports/{sport}/odds",
+                         params={"apiKey": key, "regions": "eu", "markets": "h2h,totals", "oddsFormat": "decimal"})
+            _ODDS_CACHE[sport] = r.json() if r is not None and r.status_code == 200 else []
+            log.info("Odds API %s: %d events, credits left %s", sport, len(_ODDS_CACHE[sport]),
+                     r.headers.get("x-requests-remaining") if r is not None else "?")
+        out += [dict(e, _competition=name) for e in _ODDS_CACHE.get(sport, []) if e["commence_time"][:10] == date]
+    return out
 
 
 def run(date: str, do_validate: bool = False) -> list[dict]:
@@ -157,12 +174,27 @@ def run(date: str, do_validate: bool = False) -> list[dict]:
         evals = [{"market": "1X2", "selection": s, "avg_odds": x[s]["avg"], "odds": x[s]["max"]} for s in "HDA"]
         if "Over" in ou and "Under" in ou:
             evals += [{"market": "O/U 2.5", "selection": s, "avg_odds": ou[s]["avg"], "odds": ou[s]["max"]} for s in ("Over", "Under")]
-        g = {"id": f"NL-{date}-{h}-{a}", "league": "NL", "league_name": "Nations League", "date": date,
-             "time": ev["commence_time"][11:16] + " UTC", "home": h, "away": a, "probs": probs,
+        g = {"id": f"INT-{date}-{h}-{a}", "league": "INT", "league_name": ev.get("_competition", "International"), "date": date,
+             "time": pd.Timestamp(ev["commence_time"]).tz_convert("Europe/Lisbon").strftime("%H:%M"), "home": h, "away": a, "probs": probs,
              "xg": {"home": lh, "away": la}, "markets": {"O/U 2.5": {"Over": o25}, "BTTS": {"Yes": btts}},
              "evals": evals, "elo": (round(elo[h]), round(elo[a])), "model_only": pm}
         cands = shortlist.candidates_for(g)
         out.append({"game": g, "hard": shortlist.is_hard(g), "candidates": cands})
+    return out
+
+
+def export(dates: list[str]) -> dict:
+    """Write data/intl.json: international games + candidate bets for the given dates (used by card.py)."""
+    import json
+    games = []
+    for d in dates:
+        for r in run(d):
+            g = r["game"]
+            games.append({**{k: g[k] for k in ("id", "league", "league_name", "date", "time", "home", "away", "probs", "xg", "elo")},
+                          "hard": r["hard"], "candidates": r["candidates"]})
+    out = {"generated_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "dates": dates, "games": games}
+    (DATA / "intl.json").write_text(json.dumps(out, default=float, indent=1), encoding="utf-8")
+    log.info("intl.json: %d games for %s", len(games), dates)
     return out
 
 
