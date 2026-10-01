@@ -1,0 +1,381 @@
+{
+ "date": "2026-10-01",
+ "generated_at": "2026-10-01T15:52:12Z",
+ "summary": "International break: 0 of 10 bets meet the bar (70%+ at 1.40+). Research removed two Saturday games that are postponed (Blackpool v Leicester, Walsall v Crawley). The only bet showing value is Castellón v Ceuta BTTS (62%, take only at 1.63 or better) because of Castellón's five absences; Castellón over 2.5 is 71% but priced at 1.35. Top-league games (9-12 Oct) will be researched in the daily runs once players are back from international duty.",
+ "bets": [
+  {
+   "match": "Castellon v Ceuta",
+   "league": "SP2",
+   "kickoff": "2026-10-04 17:30",
+   "market": "BTTS",
+   "selection": "Yes",
+   "label": "Both teams to score",
+   "model_p": 0.6006,
+   "odds_seen": 1.66,
+   "odds_source": "estimated from the bookmakers' 1X2 + O/U 2.5 prices; check your bookmaker",
+   "adjustments": [
+    {
+     "factor": "injuries/suspensions",
+     "delta": 0.03,
+     "reason": "Castellón back line reshuffled: RB Mellot suspended (red v Leganés), Jiménez/Sienra at CB, Alcázar at LB; goalkeeper Saipi away with Kosovo"
+    },
+    {
+     "factor": "suspensions",
+     "delta": -0.01,
+     "reason": "Ceuta without Bassinga (yellow-card suspension) and Koné (injured)"
+    }
+   ],
+   "analysis": {
+    "injuries": "Castellón: 5 absent (Mellot suspended, Vlack ankle, Orozco/Saipi/Rêgo on international duty). Ceuta: Bassinga suspended, Koné injured.",
+    "form": "Castellón top (2.71 ppg, 5 straight wins, xG 2.39 v 0.91 over the last 5). Ceuta 21st, 0W-0D-3L away.",
+    "tactics": "Castellón dominate territory; a weakened defence makes a Ceuta goal more plausible than usual.",
+    "market": "No real BTTS price in the free data; the estimate comes from the bookmakers' own 1X2 and O/U 2.5 prices."
+   },
+   "risks": [
+    "Ceuta have scored only 1.0 per game over their last 5",
+    "the estimated price may be lower at your bookmaker"
+   ],
+   "verdict": "BET SMALL",
+   "sources": [
+    "https://castellonplaza.com/castellonplaza/deportes4966/el-castellon-llega-con-cinco-ausencias-ante-el-ceuta-entre-sanciones-lesiones-e-internacionales",
+    "https://www.infobae.com/espana/agencias/2026/10/01/el-castellon-contara-con-cinco-ausencias-ante-la-visita-del-ceuta/"
+   ],
+   "confidence": "medium",
+   "rank": 1,
+   "league_name": "Segunda Division",
+   "final_p": 0.6206,
+   "meets_bar": false,
+   "min_odds": 1.63
+  },
+  {
+   "match": "Castellon v Ceuta",
+   "league": "SP2",
+   "kickoff": "2026-10-04 17:30",
+   "market": "O/U 2.5",
+   "selection": "Over",
+   "label": "Over 2.5 goals",
+   "model_p": 0.7046,
+   "odds_seen": 1.35,
+   "odds_source": "average bookmaker price (football-data / The Odds API)",
+   "adjustments": [
+    {
+     "factor": "injuries/suspensions",
+     "delta": 0.02,
+     "reason": "Weakened Castellón defence (Mellot suspended, makeshift back four, keeper Saipi away) raises goals against"
+    },
+    {
+     "factor": "injuries",
+     "delta": -0.01,
+     "reason": "Castellón also lose two midfielders (Vlack, Orozco): slightly less creativity"
+    }
+   ],
+   "analysis": {
+    "injuries": "As above.",
+    "form": "Castellón average 2.6 goals scored over their last 5; model expects 2.36-0.86.",
+    "market": "Clears 70% but the price (1.35) is below 1.40, so it does not meet the bar."
+   },
+   "risks": [
+    "Castellón's season over-2.5 rate is only 43%"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://castellonplaza.com/castellonplaza/deportes4966/el-castellon-llega-con-cinco-ausencias-ante-el-ceuta-entre-sanciones-lesiones-e-internacionales"
+   ],
+   "confidence": "medium",
+   "rank": 2,
+   "league_name": "Segunda Division",
+   "final_p": 0.7146,
+   "meets_bar": false,
+   "min_odds": 1.42
+  },
+  {
+   "match": "Sabadell v Andorra",
+   "league": "SP2",
+   "kickoff": "2026-10-03 18:30",
+   "market": "Draw no bet",
+   "selection": "H",
+   "label": "Sabadell draw no bet",
+   "model_p": 0.6338,
+   "odds_seen": 1.43,
+   "odds_source": "estimated from the bookmakers' 1X2 prices",
+   "adjustments": [
+    {
+     "factor": "availability",
+     "delta": 0.01,
+     "reason": "LaLiga lists no injuries or doubts for Sabadell"
+    },
+    {
+     "factor": "injuries",
+     "delta": 0.01,
+     "reason": "Andorra: Martí Vilà a doubt"
+    }
+   ],
+   "analysis": {
+    "form": "Sabadell 7th, 3W-0D-0L at home; Andorra 17th, 1W-4L in their last 5 (Elo -57 in 30 days).",
+    "injuries": "Sabadell full squad; Andorra one doubt."
+   },
+   "risks": [
+    "Price looks short for the probability"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://www.laliga.com/partido/temporada-2026-2027-laliga-hypermotion-ce-sabadell-fc-andorra-8"
+   ],
+   "confidence": "medium",
+   "rank": 3,
+   "league_name": "Segunda Division",
+   "final_p": 0.6538,
+   "meets_bar": false,
+   "min_odds": 1.55
+  },
+  {
+   "match": "Leyton Orient v Plymouth",
+   "league": "E2",
+   "kickoff": "2026-10-03 15:00",
+   "market": "Draw no bet",
+   "selection": "A",
+   "label": "Plymouth draw no bet",
+   "model_p": 0.6425,
+   "odds_seen": 1.45,
+   "odds_source": "estimated from the bookmakers' 1X2 prices",
+   "adjustments": [
+    {
+     "factor": "injuries",
+     "delta": -0.02,
+     "reason": "Plymouth CB Julio Pleguezuelo being assessed after going off v Burton"
+    },
+    {
+     "factor": "rotation",
+     "delta": -0.01,
+     "reason": "Plymouth have an EFL Trophy game three days later"
+    },
+    {
+     "factor": "injuries",
+     "delta": -0.01,
+     "reason": "Orient only without Demetri Mitchell; likely unchanged XI"
+    }
+   ],
+   "analysis": {
+    "injuries": "Orient: Mitchell out. Plymouth: Pleguezuelo doubt (Ross on standby).",
+    "form": "Orient ended a 3-game losing run (1-0 v Stevenage); Plymouth lost 1-0 to Burton after away wins at Doncaster and Blackpool.",
+    "motivation": "A home win lifts Orient above Plymouth."
+   },
+   "risks": [
+    "Plymouth have won three away games by four goals this season"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://www.sportsmole.co.uk/football/leyton-orient/preview/leyton-orient-vs-plymouth-prediction-team-news-lineups_606058.html",
+    "https://starting11.com/fixtures/leyton-orient-vs-plymouth"
+   ],
+   "confidence": "medium",
+   "rank": 4,
+   "league_name": "League One",
+   "final_p": 0.6025,
+   "meets_bar": false,
+   "min_odds": 1.68
+  },
+  {
+   "match": "Leyton Orient v Plymouth",
+   "league": "E2",
+   "kickoff": "2026-10-03 15:00",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "model_p": 0.641,
+   "odds_seen": 1.4,
+   "odds_source": "estimated from the bookmakers' O/U 2.5 price",
+   "adjustments": [
+    {
+     "factor": "style",
+     "delta": -0.02,
+     "reason": "Plymouth have won three away games by four goals this season"
+    }
+   ],
+   "analysis": {
+    "form": "Season over-2.5: Orient 57%, Plymouth 50%."
+   },
+   "risks": [
+    "Open away games from Plymouth"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://www.sportsmole.co.uk/football/leyton-orient/preview/leyton-orient-vs-plymouth-prediction-team-news-lineups_606058.html"
+   ],
+   "confidence": "low",
+   "rank": 5,
+   "league_name": "League One",
+   "final_p": 0.621,
+   "meets_bar": false,
+   "min_odds": 1.63
+  },
+  {
+   "match": "Burton v Huddersfield",
+   "league": "E2",
+   "kickoff": "2026-10-03 15:00",
+   "market": "Draw no bet",
+   "selection": "A",
+   "label": "Huddersfield draw no bet",
+   "model_p": 0.6682,
+   "odds_seen": 1.39,
+   "odds_source": "estimated from the bookmakers' 1X2 prices",
+   "adjustments": [],
+   "analysis": {
+    "injuries": "No current (2026-27) team news found; every article returned was from a previous season, so no adjustment was made."
+   },
+   "risks": [
+    "No current team news"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://starting11.com/fixtures/burton-albion-vs-huddersfield"
+   ],
+   "confidence": "low",
+   "rank": 6,
+   "league_name": "League One",
+   "final_p": 0.6682,
+   "meets_bar": false,
+   "min_odds": 1.52
+  },
+  {
+   "match": "Grimsby v Shrewsbury",
+   "league": "E3",
+   "kickoff": "2026-10-03 15:00",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "model_p": 0.6826,
+   "odds_seen": 1.33,
+   "odds_source": "estimated from the bookmakers' O/U 2.5 price",
+   "adjustments": [],
+   "analysis": {
+    "lineups": "Both sides have named the same XI two games running; both play the EFL Trophy three days later, so rotation is possible on both sides (no net effect on goals).",
+    "injuries": "No current (2026-27) team news found; every article returned was from a previous season, so no adjustment was made."
+   },
+   "risks": [
+    "Short price"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://starting11.com/fixtures/grimsby-vs-shrewsbury"
+   ],
+   "confidence": "low",
+   "rank": 7,
+   "league_name": "League Two",
+   "final_p": 0.6826,
+   "meets_bar": false,
+   "min_odds": 1.48
+  },
+  {
+   "match": "Salford v Fleetwood Town",
+   "league": "E3",
+   "kickoff": "2026-10-03 15:00",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "model_p": 0.6586,
+   "odds_seen": 1.37,
+   "odds_source": "estimated from the bookmakers' O/U 2.5 price",
+   "adjustments": [],
+   "analysis": {
+    "form": "Fleetwood 2W-4D-0L (draw-heavy); Salford 2W-1D-3L. Last 4 meetings: 3 draws.",
+    "injuries": "No current (2026-27) team news found; every article returned was from a previous season, so no adjustment was made."
+   },
+   "risks": [
+    "Short price"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://starting11.com/fixtures/salford-city-vs-fleetwood-town"
+   ],
+   "confidence": "low",
+   "rank": 8,
+   "league_name": "League Two",
+   "final_p": 0.6586,
+   "meets_bar": false,
+   "min_odds": 1.54
+  },
+  {
+   "match": "Gillingham v Newport County",
+   "league": "E3",
+   "kickoff": "2026-10-03 15:00",
+   "market": "Draw no bet",
+   "selection": "H",
+   "label": "Gillingham draw no bet",
+   "model_p": 0.618,
+   "odds_seen": 1.46,
+   "odds_source": "estimated from the bookmakers' 1X2 prices",
+   "adjustments": [],
+   "analysis": {
+    "injuries": "No current (2026-27) team news found; every article returned was from a previous season, so no adjustment was made.",
+    "form": "Gillingham 3W-1D-1L in their last 5, Elo +64 in 30 days; Newport 0W-1D-3L away."
+   },
+   "risks": [
+    "Newport have won 6 of the last 8 meetings"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://starting11.com/fixtures/gillingham-vs-newport-county"
+   ],
+   "confidence": "low",
+   "rank": 9,
+   "league_name": "League Two",
+   "final_p": 0.618,
+   "meets_bar": false,
+   "min_odds": 1.64
+  },
+  {
+   "match": "Las Palmas v Valladolid",
+   "league": "SP2",
+   "kickoff": "2026-10-04 18:30",
+   "market": "Draw no bet",
+   "selection": "H",
+   "label": "Las Palmas draw no bet",
+   "model_p": 0.6107,
+   "odds_seen": 1.52,
+   "odds_source": "estimated from the bookmakers' 1X2 prices",
+   "adjustments": [],
+   "analysis": {
+    "injuries": "No current (2026-27) team news found; every article returned was from a previous season, so no adjustment was made.",
+    "form": "Las Palmas 11th (1W-1D-3L in their last 5, xG 0.75 v 1.67); Valladolid 16th, 0W-2D-2L away.",
+    "travel": "Valladolid travel about 1,800 km to Gran Canaria."
+   },
+   "risks": [
+    "Las Palmas' underlying numbers are poor"
+   ],
+   "verdict": "PASS",
+   "sources": [
+    "https://apuestasonline.net/pronosticos/las-palmas-valladolid-041026/"
+   ],
+   "confidence": "low",
+   "rank": 10,
+   "league_name": "Segunda Division",
+   "final_p": 0.6107,
+   "meets_bar": false,
+   "min_odds": 1.66
+  }
+ ],
+ "rejected": [
+  {
+   "match": "Blackpool v Leicester",
+   "label": "Leicester DNB / Over 2.5",
+   "reason": "Postponed: international call-ups (confirmed by lcfc.com, 9 Sep)"
+  },
+  {
+   "match": "Walsall v Crawley Town",
+   "label": "Over 2.5 / Under 3.5",
+   "reason": "Postponed: international call-ups (confirmed by saddlers.co.uk, 21 Sep)"
+  },
+  {
+   "match": "Top-league games 9-12 Oct (10 candidates)",
+   "label": "various",
+   "reason": "Deferred: team news isn't available until players return from international duty; the daily runs will cover them"
+  },
+  {
+   "match": "Córdoba v Tenerife",
+   "label": "Córdoba DNB",
+   "reason": "Kick-off date/time conflict between sources (4 Oct 11:00 v 5 Oct); left out until confirmed"
+  }
+ ],
+ "n_meets_bar": 0
+}
