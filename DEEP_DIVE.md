@@ -18,6 +18,12 @@ show there isn't one.
 - `data/predictions.json`: every upcoming game, if more candidates are needed.
 
 ## For every candidate, research (web search) and record
+0. **Is the game still on?** Search "<home> <away> postponed". International call-ups regularly postpone
+   lower-league games (on 1 Oct 2026, 2 of 6 Saturday candidates were already postponed). Drop postponed games
+   and list them under `rejected`.
+   **Check every article's date.** Search results mix in previous seasons (old managers, old squads). Use only
+   information you can confirm is from the current week; if nothing current exists, make no adjustment and say
+   so in the analysis.
 1. **Injuries and suspensions** for both teams, confirmed where possible: who is out or doubtful, expected
    return, and the replacement's quality. Weight each absence by the player's minutes share and share of team
    xG/xA from the dossier.
