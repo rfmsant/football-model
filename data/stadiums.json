@@ -271,5 +271,33 @@
   "lat": 51.4817,
   "lon": -0.191,
   "approx": true
+ },
+ "D1|Hoffenheim": {
+  "query": "hoffenheim",
+  "place": "Hoffenheim",
+  "lat": 49.272,
+  "lon": 8.84099,
+  "approx": true
+ },
+ "D1|Hamburg": {
+  "query": "hamburg",
+  "place": "Hamburg",
+  "lat": 53.55073,
+  "lon": 9.99302,
+  "approx": true
+ },
+ "F1|Lille": {
+  "query": "lille",
+  "place": "Lille",
+  "lat": 50.63391,
+  "lon": 3.05512,
+  "approx": true
+ },
+ "F1|Le Havre": {
+  "query": "le havre",
+  "place": "Le Havre",
+  "lat": 49.49346,
+  "lon": 0.10785,
+  "approx": true
  }
 }
