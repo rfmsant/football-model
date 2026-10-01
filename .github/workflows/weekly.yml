@@ -2,7 +2,7 @@ name: Daily analysis
 
 on:
   schedule:
-    - cron: "0 7 * * *"     # every day 07:00 UTC
+    - cron: "23 6 * * *"    # every day 06:23 UTC (off the hour: GitHub drops many on-the-hour runs)
   workflow_dispatch:
     inputs:
       backtest:
