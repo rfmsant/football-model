@@ -167,20 +167,37 @@ def _combo_text(c: dict) -> str:
     return "\n".join(lines)
 
 
+def _short_bet(l: dict) -> str:
+    """Compact bet name: 'Under 3.5', 'Ukraine or draw', 'Kazakhstan DNB', 'France win', 'BTTS yes'."""
+    lab = l["label"].replace(" goals", "").replace(" draw no bet", " DNB").replace(" to win", " win")
+    return {"Both teams to score": "BTTS yes", "Both teams NOT to score": "BTTS no"}.get(lab, lab)
+
+
+def _short_match(m: str) -> str:
+    return m.replace("Northern Ireland", "N. Ireland").replace("Republic of Ireland", "Ireland") \
+            .replace("Bosnia and Herzegovina", "Bosnia")
+
+
+def _combo_lines(c: dict) -> str:
+    legs = sorted(c["legs"], key=lambda l: (l.get("date") or "", l.get("time") or ""))
+    return "\n".join(f"`{(l.get('time') or '--:--')[:5]}` {_short_match(l['match'])} → **{_short_bet(l)}** · min {l['min_odds']:.2f}"
+                     for l in legs)
+
+
 def discord_payload(card: dict) -> dict:
+    """Short, phone-friendly card: one line per bet. Details live on the site."""
     d = dt.date.fromisoformat(card["date"])
-    title = f"🎯 Betting card · {d.strftime('%a %d %b')} · target {card['target_odds']:.2f}+ (Betclic)"
+    title = f"🎯 {d.strftime('%a %d %b')} · Betclic card"
     if not card.get("main"):
         return {"username": "football-model", "embeds": [{"title": title, "url": SITE, "color": 0x95A5A6,
-                "description": "No combination reaches 2.00 at a fair price today. No bet is the right bet."}]}
-    fields = [{"name": f"⭐ Main · {card['main']['n']}-fold", "value": _combo_text(card["main"])[:1024], "inline": False}]
-    for i, a in enumerate(card["alternatives"], 1):
-        fields.append({"name": f"Alternative {i} · {a['n']}-fold", "value": _combo_text(a)[:1024], "inline": False})
-    desc = ("One unit on the main card. Check each leg's Betclic price first: if any leg is below its minimum, "
-            "skip that combo. Doubling your money at a fair price means roughly a 50% chance of winning, so expect "
-            "about every other card to win.")
-    return {"username": "football-model", "embeds": [{"title": title, "url": SITE, "description": desc, "fields": fields,
-            "color": 0x2ECC71, "footer": {"text": "Statistical model, not financial advice. 18+, bet responsibly."}}]}
+                "description": "No fair-value combo at 2.00+ today. **No bet.**"}]}
+    m = card["main"]
+    parts = [f"⭐ **MAIN · {m['odds']:.2f} · {m['p_win']:.0%} chance**", _combo_lines(m)]
+    if card.get("alternatives"):
+        a = card["alternatives"][0]
+        parts += ["", f"**Alt · {a['odds']:.2f} · {a['p_win']:.0%} chance**", _combo_lines(a)]
+    return {"username": "football-model", "embeds": [{"title": title, "url": SITE, "description": "\n".join(parts),
+            "color": 0x2ECC71, "footer": {"text": "Skip any leg priced below its min · 1 unit · 18+, not financial advice"}}]}
 
 
 def send(date: str) -> bool:

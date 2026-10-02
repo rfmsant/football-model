@@ -373,7 +373,7 @@ class TestCard(unittest.TestCase):
     def test_discord_payload(self):
         import card
         c = {"date": "2026-10-02", "target_odds": 2.0, "main": None, "alternatives": []}
-        self.assertIn("No combination", card.discord_payload(c)["embeds"][0]["description"])
+        self.assertIn("No bet", card.discord_payload(c)["embeds"][0]["description"])
 
 
 class TestOutput(unittest.TestCase):
