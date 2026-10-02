@@ -299,5 +299,131 @@
   "lat": 49.49346,
   "lon": 0.10785,
   "approx": true
+ },
+ "SC2|Alloa": {
+  "query": "alloa",
+  "place": "Alloa",
+  "lat": 56.11586,
+  "lon": -3.78997,
+  "approx": true
+ },
+ "EC|Boreham Wood": {
+  "query": "boreham",
+  "place": "Borehamwood",
+  "lat": 51.65468,
+  "lon": -0.27762,
+  "approx": true
+ },
+ "EC|Altrincham": {
+  "query": "altrincham",
+  "place": "Altrincham",
+  "lat": 53.38752,
+  "lon": -2.34848,
+  "approx": true
+ },
+ "EC|Harrogate": {
+  "query": "harrogate",
+  "place": "Harrogate",
+  "lat": 53.99078,
+  "lon": -1.5373,
+  "approx": true
+ },
+ "EC|Hornchurch": {
+  "query": "hornchurch",
+  "place": "Hornchurch",
+  "lat": 51.55685,
+  "lon": 0.21664,
+  "approx": true
+ },
+ "EC|Aldershot": {
+  "query": "aldershot",
+  "place": "Aldershot",
+  "lat": 51.24827,
+  "lon": -0.76389,
+  "approx": true
+ },
+ "EC|Carlisle": {
+  "query": "carlisle",
+  "place": "Carlisle",
+  "lat": 54.8951,
+  "lon": -2.9382,
+  "approx": true
+ },
+ "SC2|East Kilbride": {
+  "query": "east kilbride",
+  "place": "East Kilbride",
+  "lat": 55.76412,
+  "lon": -4.17669,
+  "approx": true
+ },
+ "EC|Southend": {
+  "query": "southend",
+  "place": "Southend-on-Sea",
+  "lat": 51.53782,
+  "lon": 0.71433,
+  "approx": true
+ },
+ "EC|Fylde": {
+  "query": "fylde",
+  "place": "Fylde",
+  "lat": 53.83333,
+  "lon": -2.91667,
+  "approx": true
+ },
+ "SC3|Kelty Hearts": {
+  "query": "hearts",
+  "place": "Heartsease",
+  "lat": 52.34643,
+  "lon": -2.96696,
+  "approx": true
+ },
+ "EC|Gateshead": {
+  "query": "gateshead",
+  "place": "Gateshead",
+  "lat": 54.96209,
+  "lon": -1.60168,
+  "approx": true
+ },
+ "EC|Worthing": {
+  "query": "worthing",
+  "place": "Worthing",
+  "lat": 50.81795,
+  "lon": -0.37538,
+  "approx": true
+ },
+ "SC3|Stranraer": {
+  "query": "stranraer",
+  "place": "Stranraer",
+  "lat": 54.90234,
+  "lon": -5.02731,
+  "approx": true
+ },
+ "SC3|Edinburgh City": {
+  "query": "edinburgh",
+  "place": "Edinburgh",
+  "lat": 55.95206,
+  "lon": -3.19648,
+  "approx": true
+ },
+ "EC|Yeovil": {
+  "query": "yeovil",
+  "place": "Yeovil",
+  "lat": 50.94159,
+  "lon": -2.63211,
+  "approx": true
+ },
+ "E3|Chesterfield": {
+  "query": "chesterfield",
+  "place": "Chesterfield",
+  "lat": 53.25,
+  "lon": -1.41667,
+  "approx": true
+ },
+ "E3|Tranmere": {
+  "query": "tranmere",
+  "place": "Tranmere Park",
+  "lat": 53.87476,
+  "lon": -1.73039,
+  "approx": true
  }
 }

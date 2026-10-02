@@ -1,0 +1,28 @@
+{
+ "cards": [
+  {
+   "date": "2026-10-02",
+   "kind": "main",
+   "odds": 2.02,
+   "status": "pending",
+   "profit": null
+  },
+  {
+   "date": "2026-10-02",
+   "kind": "alternative",
+   "odds": 2.19,
+   "status": "pending",
+   "profit": null
+  }
+ ],
+ "main": {
+  "played": 0,
+  "won": 0,
+  "profit_units": 0
+ },
+ "all": {
+  "played": 0,
+  "won": 0,
+  "profit_units": 0
+ }
+}
