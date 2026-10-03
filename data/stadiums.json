@@ -425,5 +425,96 @@
   "lat": 53.87476,
   "lon": -1.73039,
   "approx": true
+ },
+ "N1|PSV Eindhoven": {
+  "query": "eindhoven",
+  "place": "Eindhoven",
+  "lat": 51.44083,
+  "lon": 5.47778,
+  "approx": true
+ },
+ "N1|Heerenveen": {
+  "query": "heerenveen",
+  "place": "Heerenveen",
+  "lat": 52.95929,
+  "lon": 5.91854,
+  "approx": true
+ },
+ "P1|Porto": {
+  "query": "porto",
+  "place": "Porto",
+  "lat": 41.1485,
+  "lon": -8.61097,
+  "approx": true
+ },
+ "P1|Casa Pia": {
+  "query": "casa",
+  "place": "Casa",
+  "lat": 41.54106,
+  "lon": -8.02165,
+  "approx": true
+ },
+ "N1|Nijmegen": {
+  "query": "Nijmegen",
+  "place": "Nijmegen",
+  "lat": 51.8425,
+  "lon": 5.85278,
+  "approx": true
+ },
+ "N1|AZ Alkmaar": {
+  "query": "alkmaar",
+  "place": "Alkmaar",
+  "lat": 52.63167,
+  "lon": 4.74861,
+  "approx": true
+ },
+ "N1|Sparta Rotterdam": {
+  "query": "rotterdam",
+  "place": "Rotterdam",
+  "lat": 51.9225,
+  "lon": 4.47917,
+  "approx": true
+ },
+ "B1|RAAL La Louviere": {
+  "query": "louviere",
+  "place": "Louvière",
+  "lat": 50.16011,
+  "lon": 4.17938,
+  "approx": true
+ },
+ "B1|Club Brugge": {
+  "query": "brugge",
+  "place": "Bruges",
+  "lat": 51.20892,
+  "lon": 3.22424,
+  "approx": true
+ },
+ "B1|Cercle Brugge": {
+  "query": "brugge",
+  "place": "Bruges",
+  "lat": 51.20892,
+  "lon": 3.22424,
+  "approx": true
+ },
+ "B1|Anderlecht": {
+  "query": "anderlecht",
+  "place": "Anderlecht",
+  "lat": 50.83619,
+  "lon": 4.31454,
+  "approx": true
+ },
+ "N1|For Sittard": {
+  "query": "sittard",
+  "place": "Sittard",
+  "lat": 50.99833,
+  "lon": 5.86944,
+  "approx": true
+ },
+ "F1|Toulouse": {
+  "query": "toulouse",
+  "place": "Toulouse",
+  "lat": 43.60426,
+  "lon": 1.44367,
+  "approx": true
  }
 }
