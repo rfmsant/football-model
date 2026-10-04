@@ -516,5 +516,19 @@
   "lat": 43.60426,
   "lon": 1.44367,
   "approx": true
+ },
+ "B1|Genk": {
+  "query": "genk",
+  "place": "Genk",
+  "lat": 50.965,
+  "lon": 5.50082,
+  "approx": true
+ },
+ "B1|Kortrijk": {
+  "query": "kortrijk",
+  "place": "Kortrijk",
+  "lat": 50.82803,
+  "lon": 3.26487,
+  "approx": true
  }
 }
