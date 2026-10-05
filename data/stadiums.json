@@ -530,5 +530,19 @@
   "lat": 50.82803,
   "lon": 3.26487,
   "approx": true
+ },
+ "P1|Sp Braga": {
+  "query": "braga",
+  "place": "Braga",
+  "lat": 41.5514,
+  "lon": -8.42311,
+  "approx": true
+ },
+ "P1|Sp Lisbon": {
+  "query": "lisbon",
+  "place": "Lisbon",
+  "lat": 38.72509,
+  "lon": -9.1498,
+  "approx": true
  }
 }
