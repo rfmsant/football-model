@@ -1,0 +1,17 @@
+date,home_team,away_team,home_score,away_score,tournament,city,country,neutral
+2026-10-02,Belgium,Turkey,3,0,UEFA Nations League,,,FALSE
+2026-10-02,France,Italy,1,1,UEFA Nations League,,,FALSE
+2026-10-02,Kazakhstan,Moldova,1,2,UEFA Nations League,,,FALSE
+2026-10-02,Ukraine,Northern Ireland,0,3,UEFA Nations League,,,TRUE
+2026-10-03,Belarus,San Marino,4,0,UEFA Nations League,,,FALSE
+2026-10-03,Croatia,England,0,7,UEFA Nations League,,,FALSE
+2026-10-03,Spain,Czech Republic,3,1,UEFA Nations League,,,FALSE
+2026-10-04,Azerbaijan,Lithuania,1,0,UEFA Nations League,,,FALSE
+2026-10-04,Greece,Germany,0,0,UEFA Nations League,,,FALSE
+2026-10-04,Malta,Andorra,2,1,UEFA Nations League,,,FALSE
+2026-10-04,Portugal,Norway,2,1,UEFA Nations League,,,FALSE
+2026-10-04,Republic of Ireland,Israel,1,1,UEFA Nations League,,Serbia,TRUE
+2026-10-05,France,Belgium,4,1,UEFA Nations League,,,FALSE
+2026-10-05,Italy,Turkey,3,1,UEFA Nations League,,,FALSE
+2026-10-05,Romania,Sweden,0,1,UEFA Nations League,,,FALSE
+2026-10-05,Ukraine,Hungary,1,2,UEFA Nations League,,,TRUE

@@ -107,6 +107,14 @@ Do not double-count: the model already includes form, xG, table, Elo, rest and t
 
 `verdict` is one of: BET, BET SMALL, WAIT FOR LINE-UPS, PASS.
 
+## Missing international results
+The international results file that feeds the Elo ratings and settles the cards lags (it is topped up from
+API-Football, which may not cover every day). Before publishing, check `data/card_record.json`: for every leg with
+`"result": "pending"` whose date has passed and whose match is a national-team game, look up the final score (two
+sources, e.g. ESPN + UEFA) and add a row to `data/intl_results_extra.csv` with the same columns
+(`date,home_team,away_team,home_score,away_score,tournament,city,country,neutral`; team names exactly as in the
+card, `neutral` TRUE only for games at a third country). Then `git add data/intl_results_extra.csv` with the deep dive.
+
 ## Publish
 ```bash
 python scripts/deep.py publish data/deep/<date>.json   # validates, updates latest.json and index.json

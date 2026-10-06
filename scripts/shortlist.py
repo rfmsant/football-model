@@ -68,9 +68,13 @@ def fit_market_lambdas(pH: float, pA: float, pO25: float | None) -> tuple[float,
 
 def model_goal_probs(g: dict) -> dict:
     """O/U 1.5/3.5 and BTTS consistent with the ML over-2.5 probability: scale the model's expected goals
-    until the Dixon-Coles over-2.5 matches the ML value."""
-    lh, la = g["xg"]["home"], g["xg"]["away"]
+    until the Dixon-Coles over-2.5 matches the ML value. International games (intl.py) supply their own calibrated,
+    market-blended O1.5/O3.5 in g["goal_probs"]."""
     target = (g["markets"].get("O/U 2.5") or {}).get("Over")
+    gp = g.get("goal_probs")
+    if gp and target is not None and (g["markets"].get("BTTS") or {}).get("Yes") is not None:
+        return {"O15": gp["O15"], "O25": target, "O35": gp["O35"], "BTTS": g["markets"]["BTTS"]["Yes"]}
+    lh, la = g["xg"]["home"], g["xg"]["away"]
     k = 1.0
     if target:
         lo, hi = 0.4, 2.5

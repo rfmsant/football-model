@@ -31,8 +31,11 @@ log = get_logger("card")
 CARDS = DATA / "cards"
 CARDS.mkdir(exist_ok=True)
 TARGET_MIN, TARGET_MAX = 2.00, 3.20
-MIN_LEG_PROB = 0.62
+MIN_LEG_PROB = 0.66         # was 0.62; first card week: legs won 10 of 17 (59%) against ~70% expected
 MIN_LEG_EV = -0.04          # legs worse than this are never used
+# "Estimated" prices (double chance, draw no bet, O/U 1.5/3.5, BTTS without a real quote) are derived from the
+# bookmakers' 1X2 + O/U 2.5 at the average margin; Betclic usually prices these lower, so expect ~3% less.
+ESTIMATED_PRICE_HAIRCUT = 0.97
 MAX_LEGS = 4
 BETCLIC_MARKETS = {"1X2", "Double chance", "Draw no bet", "O/U 1.5", "O/U 2.5", "O/U 3.5", "BTTS"}
 SITE = "https://rfmsant.github.io/football-model/"
@@ -83,6 +86,8 @@ def pool(date: str) -> list[dict]:
     for c in legs:
         if c["market"] not in BETCLIC_MARKETS:
             continue
+        if c.get("odds_source") == "estimated" and not c.get("researched"):
+            c["odds"] = round(c["odds"] * ESTIMATED_PRICE_HAIRCUT, 2)
         w, push = leg_probs(c)
         c["ev"] = round(w * c["odds"] + push - 1, 4)
         if c["p_model"] >= MIN_LEG_PROB and c["ev"] >= MIN_LEG_EV and c["odds"] >= 1.08:
@@ -215,20 +220,40 @@ def send(date: str) -> bool:
     return ok
 
 
-def settle_cards(hist: pd.DataFrame | None = None) -> dict:
-    """Settle club legs against football-data results and international legs against the international results file."""
-    if hist is None:
-        hist = pd.read_csv(DATA / "history.csv", parse_dates=["Date"], low_memory=False)
+def _results(hist: pd.DataFrame | None) -> dict:
+    """(home, away, date) -> (home goals, away goals): football-data club results, the upstream international file
+    and our international top-up file (data/intl_results_extra.csv)."""
     results = {}
-    for r in hist.itertuples(index=False):
-        results[(r.HomeTeam, r.AwayTeam, str(r.Date.date()))] = (int(r.FTHG), int(r.FTAG))
-    try:
-        ir = pd.read_csv(DATA / "raw" / "intl" / "results.csv", parse_dates=["date"])
-        for r in ir.dropna(subset=["home_score"]).itertuples(index=False):
-            results[(r.home_team, r.away_team, str(r.date.date()))] = (int(r.home_score), int(r.away_score))
-    except Exception:  # noqa: BLE001
-        pass
-    rows = []
+    if hist is None and (DATA / "history.csv").exists():
+        hist = pd.read_csv(DATA / "history.csv", parse_dates=["Date"], low_memory=False)
+    if hist is not None:
+        for r in hist.dropna(subset=["FTHG", "FTAG"]).itertuples(index=False):
+            results[(r.HomeTeam, r.AwayTeam, str(r.Date.date()))] = (int(r.FTHG), int(r.FTAG))
+    for f in (DATA / "raw" / "intl" / "results.csv", DATA / "intl_results_extra.csv"):
+        try:
+            ir = pd.read_csv(f, parse_dates=["date"])
+            for r in ir.dropna(subset=["home_score", "away_score"]).itertuples(index=False):
+                results[(r.home_team, r.away_team, str(r.date.date()))] = (int(r.home_score), int(r.away_score))
+        except (OSError, ValueError, KeyError):
+            pass
+    return results
+
+
+def _leg_summary(legs: list[dict]) -> dict:
+    done = [l for l in legs if l["result"] in ("won", "lost")]
+    if not done:
+        return {"settled": 0}
+    return {"settled": len(done), "won": sum(l["result"] == "won" for l in done),
+            "hit_rate": round(sum(l["result"] == "won" for l in done) / len(done), 3),
+            "expected_hit_rate": round(sum(l["p_model"] for l in done) / len(done), 3),
+            "void": sum(l["result"] == "void" for l in legs)}
+
+
+def settle_cards(hist: pd.DataFrame | None = None) -> dict:
+    """Settle every card combo and every individual leg. Legs are tracked with the probability the card used, so
+    the record shows whether the model's probabilities hold up (by market and by probability band)."""
+    results = _results(hist)
+    rows, legs, seen = [], [], set()
     for f in sorted(CARDS.glob("20*.json")):
         card = json.loads(f.read_text(encoding="utf-8"))
         for kind, combo in [("main", card.get("main"))] + [("alternative", a) for a in card.get("alternatives", [])]:
@@ -237,24 +262,47 @@ def settle_cards(hist: pd.DataFrame | None = None) -> dict:
             payout, status = 1.0, "won"
             for l in combo["legs"]:
                 h, a = l["match"].split(" v ", 1)
-                res = next((v for (rh, ra, d), v in results.items() if d == l["date"] and rh == h and ra == a), None)
+                res = results.get((h, a, l["date"]))
                 if res is None:
+                    result = "pending"
+                else:
+                    pl = settle(l["market"], l["selection"], res[0], res[1], float(l["odds"]))
+                    result = "won" if pl > 0 else "lost" if pl < 0 else "void"
+                key = (l["date"], l["match"], l["market"], l["selection"])
+                if key not in seen:
+                    seen.add(key)
+                    legs.append({"date": l["date"], "match": l["match"], "market": l["market"], "selection": l["selection"],
+                                 "label": l.get("label"), "p_model": l["p_model"], "odds": l["odds"],
+                                 "odds_source": l.get("odds_source"), "source": l.get("source"),
+                                 "score": f"{res[0]}-{res[1]}" if res else None, "result": result})
+                if status == "lost":
+                    continue
+                if result == "pending":
                     status = "pending"
-                    break
-                pl = settle(l["market"], l["selection"], res[0], res[1], float(l["odds"]))
-                if pl < 0:
+                elif result == "lost":
                     status, payout = "lost", 0.0
-                    break
-                payout *= 1 + pl
+                elif status == "won":
+                    payout *= 1 + settle(l["market"], l["selection"], res[0], res[1], float(l["odds"]))
             rows.append({"date": card["date"], "kind": kind, "odds": combo["odds"], "status": status,
-                         "profit": round(payout - 1, 3) if status != "pending" else None})
+                         "profit": round(payout - 1, 3) if status in ("won", "lost") else None})
     done = [r for r in rows if r["status"] != "pending"]
     main = [r for r in done if r["kind"] == "main"]
+    bands = {}
+    for lo in (0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90):
+        b = [l for l in legs if lo <= l["p_model"] < lo + 0.05]
+        if b:
+            bands[f"{lo:.0%}-{lo + 0.05:.0%}"] = _leg_summary(b)
     out = {"cards": rows,
            "main": {"played": len(main), "won": sum(r["status"] == "won" for r in main),
                     "profit_units": round(sum(r["profit"] for r in main), 2)},
            "all": {"played": len(done), "won": sum(r["status"] == "won" for r in done),
-                   "profit_units": round(sum(r["profit"] for r in done), 2)}}
+                   "profit_units": round(sum(r["profit"] for r in done), 2)},
+           "legs": legs,
+           "legs_summary": {"all": _leg_summary(legs),
+                            "by_market": {m: _leg_summary([l for l in legs if l["market"] == m]) for m in sorted({l["market"] for l in legs})},
+                            "by_probability": bands,
+                            "by_price": {s: _leg_summary([l for l in legs if l.get("odds_source") == s])
+                                         for s in sorted({str(l.get("odds_source")) for l in legs})}}}
     write_json(DATA / "card_record.json", out)
     return out
 
@@ -277,6 +325,6 @@ if __name__ == "__main__":
     elif a.action == "send":
         sys.exit(0 if send(date) else 1)
     elif a.action == "settle":
-        print(json.dumps({k: v for k, v in settle_cards().items() if k != "cards"}, indent=1))
+        print(json.dumps({k: v for k, v in settle_cards().items() if k not in ("cards", "legs")}, indent=1))
     else:
         print(json.dumps(discord_payload(read_json(CARDS / f"{date}.json", {})), indent=1, ensure_ascii=False))
