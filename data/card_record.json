@@ -48,6 +48,20 @@
    "odds": 2.26,
    "status": "pending",
    "profit": null
+  },
+  {
+   "date": "2026-10-05",
+   "kind": "main",
+   "odds": 2.11,
+   "status": "pending",
+   "profit": null
+  },
+  {
+   "date": "2026-10-05",
+   "kind": "alternative",
+   "odds": 2.39,
+   "status": "pending",
+   "profit": null
   }
  ],
  "main": {
