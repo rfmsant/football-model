@@ -544,5 +544,33 @@
   "lat": 38.72509,
   "lon": -9.1498,
   "approx": true
+ },
+ "B1|Beveren": {
+  "query": "beveren",
+  "place": "Beveren",
+  "lat": 51.21187,
+  "lon": 4.25633,
+  "approx": true
+ },
+ "B1|Lommel SK": {
+  "query": "lommel",
+  "place": "Lommel",
+  "lat": 51.23074,
+  "lon": 5.31349,
+  "approx": true
+ },
+ "F1|Lorient": {
+  "query": "lorient",
+  "place": "Lorient",
+  "lat": 47.74817,
+  "lon": -3.37177,
+  "approx": true
+ },
+ "F1|Paris FC": {
+  "query": "paris",
+  "place": "Paris",
+  "lat": 48.85341,
+  "lon": 2.3488,
+  "approx": true
  }
 }

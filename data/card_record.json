@@ -4,15 +4,15 @@
    "date": "2026-10-02",
    "kind": "main",
    "odds": 2.02,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   },
   {
    "date": "2026-10-02",
    "kind": "alternative",
    "odds": 2.19,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   },
   {
    "date": "2026-10-03",
@@ -25,60 +25,60 @@
    "date": "2026-10-03",
    "kind": "alternative",
    "odds": 2.55,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   },
   {
    "date": "2026-10-04",
    "kind": "main",
    "odds": 2.03,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   },
   {
    "date": "2026-10-04",
    "kind": "alternative",
    "odds": 2.9,
-   "status": "pending",
-   "profit": null
+   "status": "won",
+   "profit": 1.905
   },
   {
    "date": "2026-10-04",
    "kind": "alternative",
    "odds": 2.26,
-   "status": "pending",
-   "profit": null
+   "status": "won",
+   "profit": 0.49
   },
   {
    "date": "2026-10-05",
    "kind": "main",
    "odds": 2.11,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   },
   {
    "date": "2026-10-05",
    "kind": "alternative",
    "odds": 2.39,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   },
   {
    "date": "2026-10-06",
    "kind": "main",
    "odds": 2.42,
-   "status": "pending",
-   "profit": null
+   "status": "won",
+   "profit": 1.417
   }
  ],
  "main": {
-  "played": 1,
-  "won": 0,
-  "profit_units": -1.0
+  "played": 5,
+  "won": 1,
+  "profit_units": -2.58
  },
  "all": {
-  "played": 1,
-  "won": 0,
-  "profit_units": -1.0
+  "played": 10,
+  "won": 3,
+  "profit_units": -3.19
  }
 }
