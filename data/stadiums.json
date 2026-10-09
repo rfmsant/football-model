@@ -572,5 +572,110 @@
   "lat": 48.85341,
   "lon": 2.3488,
   "approx": true
+ },
+ "E3|York": {
+  "query": "york",
+  "place": "York",
+  "lat": 53.95763,
+  "lon": -1.08271,
+  "approx": true
+ },
+ "E3|Northampton": {
+  "query": "northampton",
+  "place": "Northampton",
+  "lat": 52.25,
+  "lon": -0.88333,
+  "approx": true
+ },
+ "I1|Genoa": {
+  "query": "genoa",
+  "place": "Genoa",
+  "lat": 44.40478,
+  "lon": 8.94439,
+  "approx": true
+ },
+ "I1|Fiorentina": {
+  "query": "fiorentina",
+  "place": "Fiorentina",
+  "lat": 42.96392,
+  "lon": 10.53556,
+  "approx": true
+ },
+ "E1|Sheffield United": {
+  "query": "sheffield",
+  "place": "Sheffield",
+  "lat": 53.38297,
+  "lon": -1.4659,
+  "approx": true
+ },
+ "E1|Lincoln": {
+  "query": "lincoln",
+  "place": "Lincoln",
+  "lat": 53.22683,
+  "lon": -0.53792,
+  "approx": true
+ },
+ "F2|Nantes": {
+  "query": "nantes",
+  "place": "Nantes",
+  "lat": 47.21725,
+  "lon": -1.55336,
+  "approx": true
+ },
+ "F2|Reims": {
+  "query": "reims",
+  "place": "Reims",
+  "lat": 49.26526,
+  "lon": 4.02853,
+  "approx": true
+ },
+ "SC0|Falkirk": {
+  "query": "falkirk",
+  "place": "Falkirk",
+  "lat": 56.0021,
+  "lon": -3.78535,
+  "approx": true
+ },
+ "SC0|Dundee": {
+  "query": "dundee",
+  "place": "Dundee",
+  "lat": 56.46913,
+  "lon": -2.97489,
+  "approx": true
+ },
+ "E2|Huddersfield": {
+  "query": "huddersfield",
+  "place": "Huddersfield",
+  "lat": 53.64904,
+  "lon": -1.78416,
+  "approx": true
+ },
+ "E2|Sheffield Weds": {
+  "query": "sheffield",
+  "place": "Sheffield",
+  "lat": 53.38297,
+  "lon": -1.4659,
+  "approx": true
+ },
+ "E2|AFC Wimbledon": {
+  "query": "wimbledon",
+  "place": "Wimbledon",
+  "lat": 51.42212,
+  "lon": -0.20805,
+  "approx": true
+ },
+ "E3|Rochdale": {
+  "query": "rochdale",
+  "place": "Rochdale",
+  "lat": 53.61766,
+  "lon": -2.1552,
+  "approx": true
+ },
+ "G1|OFI Crete": {
+  "query": "crete",
+  "place": "Crete",
+  "lat": 35.20523,
+  "lon": 24.90308,
+  "approx": true
  }
 }
