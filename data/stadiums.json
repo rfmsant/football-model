@@ -677,5 +677,180 @@
   "lat": 35.20523,
   "lon": 24.90308,
   "approx": true
+ },
+ "E0|Hull": {
+  "query": "hull",
+  "place": "Hull",
+  "lat": 53.7446,
+  "lon": -0.33525,
+  "approx": true
+ },
+ "E0|Everton": {
+  "query": "everton",
+  "place": "Everton",
+  "lat": 52.14581,
+  "lon": -0.24616,
+  "approx": true
+ },
+ "P1|Benfica": {
+  "query": "benfica",
+  "place": "Benfica",
+  "lat": 38.75087,
+  "lon": -9.20282,
+  "approx": true
+ },
+ "P1|Guimaraes": {
+  "query": "guimaraes",
+  "place": "Guimarães",
+  "lat": 41.44443,
+  "lon": -8.29619,
+  "approx": true
+ },
+ "B1|Oud-Heverlee Leuven": {
+  "query": "oud-heverlee",
+  "place": "Oud-Heverlee",
+  "lat": 50.83522,
+  "lon": 4.66421,
+  "approx": true
+ },
+ "SC0|Motherwell": {
+  "query": "motherwell",
+  "place": "Motherwell",
+  "lat": 55.78924,
+  "lon": -3.99187,
+  "approx": true
+ },
+ "SC0|Celtic": {
+  "query": "celtic",
+  "place": "Celtic Lakes",
+  "lat": 51.5524,
+  "lon": -3.03611,
+  "approx": true
+ },
+ "D1|FC Koln": {
+  "query": "cologne",
+  "place": "Cologne",
+  "lat": 50.93333,
+  "lon": 6.95,
+  "approx": true
+ },
+ "D1|M'gladbach": {
+  "query": "monchengladbach",
+  "place": "Mönchengladbach",
+  "lat": 51.18539,
+  "lon": 6.44172,
+  "approx": true
+ },
+ "I1|Cagliari": {
+  "query": "cagliari",
+  "place": "Cagliari",
+  "lat": 39.23054,
+  "lon": 9.11917,
+  "approx": true
+ },
+ "B1|Mechelen": {
+  "query": "mechelen",
+  "place": "Mechelen",
+  "lat": 51.02574,
+  "lon": 4.47762,
+  "approx": true
+ },
+ "F1|Troyes": {
+  "query": "troyes",
+  "place": "Troyes",
+  "lat": 48.30073,
+  "lon": 4.08524,
+  "approx": true
+ },
+ "F1|Marseille": {
+  "query": "marseille",
+  "place": "Marseille",
+  "lat": 43.29695,
+  "lon": 5.38107,
+  "approx": true
+ },
+ "I2|Modena": {
+  "query": "modena",
+  "place": "Modena",
+  "lat": 44.64783,
+  "lon": 10.92539,
+  "approx": true
+ },
+ "I2|Verona": {
+  "query": "verona",
+  "place": "Verona",
+  "lat": 45.43854,
+  "lon": 10.9938,
+  "approx": true
+ },
+ "N1|Zwolle": {
+  "query": "zwolle",
+  "place": "Zwolle",
+  "lat": 52.5125,
+  "lon": 6.09444,
+  "approx": true
+ },
+ "E1|Southampton": {
+  "query": "southampton",
+  "place": "Southampton",
+  "lat": 50.90395,
+  "lon": -1.40428,
+  "approx": true
+ },
+ "E1|Portsmouth": {
+  "query": "portsmouth",
+  "place": "Portsmouth",
+  "lat": 50.79899,
+  "lon": -1.09125,
+  "approx": true
+ },
+ "N1|Den Haag": {
+  "query": "haag",
+  "place": "The Hague",
+  "lat": 52.07667,
+  "lon": 4.29861,
+  "approx": true
+ },
+ "N1|Utrecht": {
+  "query": "utrecht",
+  "place": "Utrecht",
+  "lat": 52.09083,
+  "lon": 5.12222,
+  "approx": true
+ },
+ "N1|Willem II": {
+  "query": "willem",
+  "place": "Willemstad",
+  "lat": 51.69167,
+  "lon": 4.43889,
+  "approx": true
+ },
+ "D2|Hertha": {
+  "query": "Hertha",
+  "place": "Hertha",
+  "lat": 54.55,
+  "lon": 13.58333,
+  "approx": true
+ },
+ "D2|Greuther Furth": {
+  "query": "furth",
+  "place": "Fürth",
+  "lat": 49.47593,
+  "lon": 10.98856,
+  "approx": true
+ },
+ "F1|Rennes": {
+  "query": "rennes",
+  "place": "Rennes",
+  "lat": 48.11109,
+  "lon": -1.67431,
+  "approx": true
+ },
+ "F1|Auxerre": {
+  "query": "auxerre",
+  "place": "Auxerre",
+  "lat": 47.7996,
+  "lon": 3.57033,
+  "approx": true
  }
 }
