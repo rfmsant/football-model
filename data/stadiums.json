@@ -852,5 +852,131 @@
   "lat": 47.7996,
   "lon": 3.57033,
   "approx": true
+ },
+ "I1|Venezia": {
+  "query": "venezia",
+  "place": "Veneziano",
+  "lat": 45.03109,
+  "lon": 11.92093,
+  "approx": true
+ },
+ "SP2|Oviedo": {
+  "query": "oviedo",
+  "place": "Oviedo",
+  "lat": 43.36029,
+  "lon": -5.84476,
+  "approx": true
+ },
+ "SP2|Eibar": {
+  "query": "eibar",
+  "place": "Eibar",
+  "lat": 43.18493,
+  "lon": -2.47158,
+  "approx": true
+ },
+ "T1|Goztep": {
+  "query": "goztep",
+  "place": "Göztepe",
+  "lat": 38.98145,
+  "lon": 42.30148,
+  "approx": true
+ },
+ "E0|Coventry": {
+  "query": "coventry",
+  "place": "Coventry",
+  "lat": 52.40656,
+  "lon": -1.51217,
+  "approx": true
+ },
+ "G1|Kalamata": {
+  "query": "kalamata",
+  "place": "Kalamata",
+  "lat": 37.03913,
+  "lon": 22.11265,
+  "approx": true
+ },
+ "SP2|Albacete": {
+  "query": "albacete",
+  "place": "Albacete",
+  "lat": 38.99424,
+  "lon": -1.85643,
+  "approx": true
+ },
+ "E1|Cardiff": {
+  "query": "cardiff",
+  "place": "Cardiff",
+  "lat": 51.48,
+  "lon": -3.18,
+  "approx": true
+ },
+ "E1|Watford": {
+  "query": "watford",
+  "place": "Watford",
+  "lat": 51.65531,
+  "lon": -0.39602,
+  "approx": true
+ },
+ "E1|Stoke": {
+  "query": "stoke",
+  "place": "Stoke by Clare",
+  "lat": 52.06241,
+  "lon": 0.53833,
+  "approx": true
+ },
+ "E1|Middlesbrough": {
+  "query": "middlesbrough",
+  "place": "Middlesbrough",
+  "lat": 54.57623,
+  "lon": -1.23483,
+  "approx": true
+ },
+ "E1|Bristol City": {
+  "query": "bristol",
+  "place": "Bristol",
+  "lat": 51.45523,
+  "lon": -2.59665,
+  "approx": true
+ },
+ "E1|Blackburn": {
+  "query": "blackburn",
+  "place": "Blackburn",
+  "lat": 53.75,
+  "lon": -2.48333,
+  "approx": true
+ },
+ "E1|Wolves": {
+  "query": "wolverhampton",
+  "place": "Wolverhampton",
+  "lat": 52.58547,
+  "lon": -2.12296,
+  "approx": true
+ },
+ "E1|Bolton": {
+  "query": "bolton",
+  "place": "Bolton",
+  "lat": 53.58333,
+  "lon": -2.43333,
+  "approx": true
+ },
+ "E1|West Ham": {
+  "query": "west ham",
+  "place": "West Ham",
+  "lat": 51.53333,
+  "lon": 0.01667,
+  "approx": true
+ },
+ "SP1|La Coruna": {
+  "query": "coruna",
+  "place": "Coruña del Conde",
+  "lat": 41.76566,
+  "lon": -3.39059,
+  "approx": true
+ },
+ "D1|Bayern Munich": {
+  "query": "bayern",
+  "place": "Bayern",
+  "lat": 47.795,
+  "lon": 12.53381,
+  "approx": true
  }
 }

@@ -69,6 +69,13 @@
    "odds": 2.42,
    "status": "won",
    "profit": 1.417
+  },
+  {
+   "date": "2026-10-10",
+   "kind": "main",
+   "odds": 2.55,
+   "status": "pending",
+   "profit": null
   }
  ],
  "main": {
