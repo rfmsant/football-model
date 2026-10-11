@@ -1,0 +1,51 @@
+{
+ "date": "2026-10-11",
+ "generated_at": "2026-10-11T16:25:26Z",
+ "bookmaker": "Betclic",
+ "target_odds": 2.0,
+ "legs_considered": 6,
+ "main": {
+  "odds": 2.76,
+  "p_win": 0.486,
+  "p_not_lose": 0.486,
+  "ev": 0.3438,
+  "n": 2,
+  "legs": [
+   {
+    "match": "Lazio v Monza",
+    "league_name": "Serie A",
+    "date": "2026-10-11",
+    "time": "14:00",
+    "market": "O/U 3.5",
+    "selection": "Under",
+    "label": "Under 3.5 goals",
+    "p_model": 0.7133,
+    "odds": 1.92,
+    "odds_source": "real",
+    "min_odds": 1.37,
+    "ev": 0.3695,
+    "source": "club model",
+    "researched": null,
+    "research_note": null
+   },
+   {
+    "match": "Benfica v Guimaraes",
+    "league_name": "Primeira Liga",
+    "date": "2026-10-11",
+    "time": "18:00",
+    "market": "O/U 2.5",
+    "selection": "Over",
+    "label": "Over 2.5 goals",
+    "p_model": 0.6814,
+    "odds": 1.44,
+    "odds_source": "real",
+    "min_odds": 1.44,
+    "ev": -0.0188,
+    "source": "club model",
+    "researched": null,
+    "research_note": null
+   }
+  ]
+ },
+ "alternatives": []
+}
