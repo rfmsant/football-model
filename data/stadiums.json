@@ -978,5 +978,54 @@
   "lat": 47.795,
   "lon": 12.53381,
   "approx": true
+ },
+ "SP1|Elche": {
+  "query": "elche",
+  "place": "Elche",
+  "lat": 38.26218,
+  "lon": -0.70107,
+  "approx": true
+ },
+ "SP1|Valencia": {
+  "query": "valencia",
+  "place": "Valencia",
+  "lat": 39.47391,
+  "lon": -0.37966,
+  "approx": true
+ },
+ "F1|Lens": {
+  "query": "lens",
+  "place": "Lens",
+  "lat": 50.43302,
+  "lon": 2.82791,
+  "approx": true
+ },
+ "D1|Union Berlin": {
+  "query": "berlin",
+  "place": "Berlin",
+  "lat": 52.52437,
+  "lon": 13.41053,
+  "approx": true
+ },
+ "D1|Dortmund": {
+  "query": "Dortmund",
+  "place": "Dortmund",
+  "lat": 51.51494,
+  "lon": 7.466,
+  "approx": true
+ },
+ "F1|Strasbourg": {
+  "query": "strasbourg",
+  "place": "Strasbourg",
+  "lat": 48.58392,
+  "lon": 7.74553,
+  "approx": true
+ },
+ "I1|Bologna": {
+  "query": "bologna",
+  "place": "Bologna",
+  "lat": 44.49381,
+  "lon": 11.33875,
+  "approx": true
  }
 }
