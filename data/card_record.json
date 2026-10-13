@@ -74,25 +74,25 @@
    "date": "2026-10-10",
    "kind": "main",
    "odds": 2.55,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   },
   {
    "date": "2026-10-11",
    "kind": "main",
    "odds": 2.76,
-   "status": "pending",
-   "profit": null
+   "status": "lost",
+   "profit": -1.0
   }
  ],
  "main": {
-  "played": 5,
+  "played": 7,
   "won": 1,
-  "profit_units": -2.58
+  "profit_units": -4.58
  },
  "all": {
-  "played": 10,
+  "played": 12,
   "won": 3,
-  "profit_units": -3.19
+  "profit_units": -5.19
  }
 }

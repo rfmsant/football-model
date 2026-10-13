@@ -1027,5 +1027,33 @@
   "lat": 44.49381,
   "lon": 11.33875,
   "approx": true
+ },
+ "T1|Corum": {
+  "query": "corum",
+  "place": "Çorum",
+  "lat": 40.54889,
+  "lon": 34.95333,
+  "approx": true
+ },
+ "E1|Millwall": {
+  "query": "millwall",
+  "place": "Millwall",
+  "lat": 51.49058,
+  "lon": -0.02375,
+  "approx": true
+ },
+ "E1|Birmingham": {
+  "query": "birmingham",
+  "place": "Birmingham",
+  "lat": 52.48142,
+  "lon": -1.89983,
+  "approx": true
+ },
+ "D1|Werder Bremen": {
+  "query": "werder",
+  "place": "Werder",
+  "lat": 52.37874,
+  "lon": 12.934,
+  "approx": true
  }
 }
