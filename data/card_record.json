@@ -32,8 +32,8 @@
    "date": "2026-10-04",
    "kind": "main",
    "odds": 2.03,
-   "status": "lost",
-   "profit": -1.0
+   "status": "won",
+   "profit": 1.026
   },
   {
    "date": "2026-10-04",
@@ -87,12 +87,439 @@
  ],
  "main": {
   "played": 7,
-  "won": 1,
-  "profit_units": -4.58
+  "won": 2,
+  "profit_units": -2.56
  },
  "all": {
   "played": 12,
-  "won": 3,
-  "profit_units": -5.19
+  "won": 4,
+  "profit_units": -3.16
+ },
+ "legs": [
+  {
+   "date": "2026-10-02",
+   "match": "Belgium v Turkey",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.6461,
+   "odds": 1.68,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "3-0",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-02",
+   "match": "Ukraine v Northern Ireland",
+   "market": "Double chance",
+   "selection": "1X",
+   "label": "Ukraine or draw",
+   "p_model": 0.8197,
+   "odds": 1.2,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "0-3",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-02",
+   "match": "France v Italy",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.6266,
+   "odds": 1.65,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "1-1",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-02",
+   "match": "Kazakhstan v Moldova",
+   "market": "Draw no bet",
+   "selection": "H",
+   "label": "Kazakhstan draw no bet",
+   "p_model": 0.766,
+   "odds": 1.33,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "1-2",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-03",
+   "match": "Chesterfield v Tranmere",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.648,
+   "odds": 1.76,
+   "odds_source": "real",
+   "source": "club model",
+   "score": "4-2",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-03",
+   "match": "Belarus v San Marino",
+   "market": "O/U 1.5",
+   "selection": "Over",
+   "label": "Over 1.5 goals",
+   "p_model": 0.9022,
+   "odds": 1.14,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "4-0",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-03",
+   "match": "Spain v Czech Republic",
+   "market": "BTTS",
+   "selection": "No",
+   "label": "Both teams NOT to score",
+   "p_model": 0.6801,
+   "odds": 1.75,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "3-1",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-03",
+   "match": "Croatia v England",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.6824,
+   "odds": 1.46,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "0-7",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-04",
+   "match": "Malta v Andorra",
+   "market": "O/U 1.5",
+   "selection": "Over",
+   "label": "Over 1.5 goals",
+   "p_model": 0.7123,
+   "odds": 1.49,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "2-1",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-04",
+   "match": "Azerbaijan v Lithuania",
+   "market": "Double chance",
+   "selection": "1X",
+   "label": "Azerbaijan or draw",
+   "p_model": 0.7259,
+   "odds": 1.36,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "1-0",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-04",
+   "match": "Portugal v Norway",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.6486,
+   "odds": 1.75,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "2-1",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-04",
+   "match": "Castellon v Ceuta",
+   "market": "BTTS",
+   "selection": "Yes",
+   "label": "Both teams to score",
+   "p_model": 0.6206,
+   "odds": 1.66,
+   "odds_source": "estimated",
+   "source": "club model",
+   "score": "1-1",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-04",
+   "match": "Greece v Germany",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.687,
+   "odds": 1.49,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "0-0",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-04",
+   "match": "Republic of Ireland v Israel",
+   "market": "Draw no bet",
+   "selection": "H",
+   "label": "Republic of Ireland draw no bet",
+   "p_model": 0.6505,
+   "odds": 1.52,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "1-1",
+   "result": "void"
+  },
+  {
+   "date": "2026-10-05",
+   "match": "Romania v Sweden",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.6883,
+   "odds": 1.51,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "0-1",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-05",
+   "match": "Ukraine v Hungary",
+   "market": "Double chance",
+   "selection": "1X",
+   "label": "Ukraine or draw",
+   "p_model": 0.7253,
+   "odds": 1.4,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "1-2",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-05",
+   "match": "Italy v Turkey",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.6793,
+   "odds": 1.55,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "3-1",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-05",
+   "match": "France v Belgium",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.6669,
+   "odds": 1.54,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "4-1",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-06",
+   "match": "England v Czech Republic",
+   "market": "BTTS",
+   "selection": "No",
+   "label": "Both teams NOT to score",
+   "p_model": 0.6219,
+   "odds": 1.69,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "3-0",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-06",
+   "match": "Scotland v Slovenia",
+   "market": "O/U 1.5",
+   "selection": "Over",
+   "label": "Over 1.5 goals",
+   "p_model": 0.7032,
+   "odds": 1.43,
+   "odds_source": "estimated",
+   "source": "international model",
+   "score": "1-2",
+   "result": "won"
+  },
+  {
+   "date": "2026-10-10",
+   "match": "Maritimo v Porto",
+   "market": "BTTS",
+   "selection": "No",
+   "label": "Both teams NOT to score",
+   "p_model": 0.6589,
+   "odds": 1.68,
+   "odds_source": "estimated",
+   "source": "club model",
+   "score": "1-2",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-10",
+   "match": "Real Madrid v Villarreal",
+   "market": "BTTS",
+   "selection": "Yes",
+   "label": "Both teams to score",
+   "p_model": 0.6738,
+   "odds": 1.52,
+   "odds_source": "estimated",
+   "source": "club model",
+   "score": "1-0",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-11",
+   "match": "Lazio v Monza",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "p_model": 0.7133,
+   "odds": 1.92,
+   "odds_source": "real",
+   "source": "club model",
+   "score": "3-1",
+   "result": "lost"
+  },
+  {
+   "date": "2026-10-11",
+   "match": "Benfica v Guimaraes",
+   "market": "O/U 2.5",
+   "selection": "Over",
+   "label": "Over 2.5 goals",
+   "p_model": 0.6814,
+   "odds": 1.44,
+   "odds_source": "real",
+   "source": "club model",
+   "score": "2-0",
+   "result": "lost"
+  }
+ ],
+ "legs_summary": {
+  "all": {
+   "settled": 23,
+   "won": 11,
+   "hit_rate": 0.478,
+   "expected_hit_rate": 0.695,
+   "void": 1
+  },
+  "by_market": {
+   "BTTS": {
+    "settled": 5,
+    "won": 2,
+    "hit_rate": 0.4,
+    "expected_hit_rate": 0.651,
+    "void": 0
+   },
+   "Double chance": {
+    "settled": 3,
+    "won": 1,
+    "hit_rate": 0.333,
+    "expected_hit_rate": 0.757,
+    "void": 0
+   },
+   "Draw no bet": {
+    "settled": 1,
+    "won": 0,
+    "hit_rate": 0.0,
+    "expected_hit_rate": 0.766,
+    "void": 1
+   },
+   "O/U 1.5": {
+    "settled": 3,
+    "won": 3,
+    "hit_rate": 1.0,
+    "expected_hit_rate": 0.773,
+    "void": 0
+   },
+   "O/U 2.5": {
+    "settled": 1,
+    "won": 0,
+    "hit_rate": 0.0,
+    "expected_hit_rate": 0.681,
+    "void": 0
+   },
+   "O/U 3.5": {
+    "settled": 10,
+    "won": 5,
+    "hit_rate": 0.5,
+    "expected_hit_rate": 0.669,
+    "void": 0
+   }
+  },
+  "by_probability": {
+   "60%-65%": {
+    "settled": 6,
+    "won": 5,
+    "hit_rate": 0.833,
+    "expected_hit_rate": 0.635,
+    "void": 0
+   },
+   "65%-70%": {
+    "settled": 9,
+    "won": 2,
+    "hit_rate": 0.222,
+    "expected_hit_rate": 0.678,
+    "void": 1
+   },
+   "70%-75%": {
+    "settled": 5,
+    "won": 3,
+    "hit_rate": 0.6,
+    "expected_hit_rate": 0.716,
+    "void": 0
+   },
+   "75%-80%": {
+    "settled": 1,
+    "won": 0,
+    "hit_rate": 0.0,
+    "expected_hit_rate": 0.766,
+    "void": 0
+   },
+   "80%-85%": {
+    "settled": 1,
+    "won": 0,
+    "hit_rate": 0.0,
+    "expected_hit_rate": 0.82,
+    "void": 0
+   },
+   "90%-95%": {
+    "settled": 1,
+    "won": 1,
+    "hit_rate": 1.0,
+    "expected_hit_rate": 0.902,
+    "void": 0
+   }
+  },
+  "by_price": {
+   "estimated": {
+    "settled": 20,
+    "won": 11,
+    "hit_rate": 0.55,
+    "expected_hit_rate": 0.697,
+    "void": 1
+   },
+   "real": {
+    "settled": 3,
+    "won": 0,
+    "hit_rate": 0.0,
+    "expected_hit_rate": 0.681,
+    "void": 0
+   }
+  }
  }
 }
