@@ -27,7 +27,7 @@ COST_PER_LEAGUE = 2            # markets x regions
 RESERVE = 15                   # credits kept back for manual runs
 MAX_PER_RUN = 40
 # top leagues get a longer look-ahead so their next round shows even during international breaks
-CORE_LEAGUES = ["E0", "SP1", "D1", "I1", "F1"]
+CORE_LEAGUES = ["E0", "SP1", "D1", "I1", "F1", "P1"]   # P1: weekly Liga Portugal round report
 EXCHANGES = {"betfair_ex_uk", "betfair_ex_eu", "matchbook", "smarkets"}
 
 

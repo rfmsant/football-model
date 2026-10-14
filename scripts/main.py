@@ -127,11 +127,17 @@ def game_record(gid, row, p, params, flagged=False, ext=None) -> dict:
     return rec
 
 
+ML_MARKETS = {"1X2", "O/U 2.5", "BTTS"}
+
+
 def rescore(rec: dict, odds: dict, params: dict) -> None:
     """Recompute edges, EV, value bet and lean from the record's (ML) probabilities.
-    The ML output already includes the bookmaker blend, so no second market blend here."""
+    The ML output (1X2, O/U 2.5, BTTS) already includes the bookmaker blend, so no second blend for those; the
+    other lines (O/U 1.5/3.5, Asian handicap) come from the goal model and get the usual market blend."""
     rec["markets"]["1X2"] = dict(rec["probs"])
-    evals = evaluate_markets(rec["markets"], odds or {}, 0.0)
+    mw = params.get("market_weight", 0.0)
+    weights = {mk: (0.0 if mk in ML_MARKETS else mw) for mk in rec["markets"]}
+    evals = evaluate_markets(rec["markets"], odds or {}, weights)
     bb = best_bet(evals, params)
     rec["evals"] = evals
     rec["best_bet"] = dict(bb, label=summary.bet_label(bb, rec["home"], rec["away"])) if bb else None
@@ -162,10 +168,18 @@ def apply_ml(args, records, rows, odds_by_id, model, season, params, today) -> s
         return "failed (Dixon-Coles probabilities used)"
 
 
+FOCUS_LEAGUES = {"P1"}   # Liga Portugal: every game gets the full extras (injuries, real prices for all markets)
+FOCUS_DAYS = 4
+
+
 def select_flagged(records: list[dict], n: int = N_FLAG, today: dt.date | None = None) -> list[str]:
-    """Deep-check the next 48 hours first (daily analysis), then the rest by EV and disagreement."""
-    soon_cut = ((today or dt.date.today()) + dt.timedelta(days=1)).isoformat()
-    soon = sorted((r for r in records if r["date"] <= soon_cut), key=lambda r: -(r["max_ev"] or -1))
+    """Deep-check the next 48 hours first (daily analysis), then the rest by EV and disagreement.
+    Games in FOCUS_LEAGUES (the weekly round report, jornada.py) within FOCUS_DAYS are always flagged, on top of n."""
+    today = today or dt.date.today()
+    focus_cut = (today + dt.timedelta(days=FOCUS_DAYS)).isoformat()
+    focus = [r["id"] for r in records if r["league"] in FOCUS_LEAGUES and r["date"] <= focus_cut]
+    soon_cut = (today + dt.timedelta(days=1)).isoformat()
+    soon = sorted((r for r in records if r["date"] <= soon_cut and r["id"] not in focus), key=lambda r: -(r["max_ev"] or -1))
     flagged = [r["id"] for r in soon[:n]]
     by_ev = sorted((r for r in records if r["max_ev"] is not None and r["id"] not in flagged), key=lambda r: -r["max_ev"])
     flagged += [r["id"] for r in by_ev[: max(0, int(n * 0.7) - len(flagged))]]
@@ -177,9 +191,9 @@ def select_flagged(records: list[dict], n: int = N_FLAG, today: dt.date | None =
     for r in sorted(records, key=lambda r: -disagreement(r)):
         if len(flagged) >= n:
             break
-        if r["id"] not in flagged:
+        if r["id"] not in flagged and r["id"] not in focus:
             flagged.append(r["id"])
-    return flagged
+    return focus + flagged
 
 
 def run(args) -> dict:

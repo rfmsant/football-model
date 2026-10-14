@@ -167,6 +167,27 @@ def ah_outcomes(mat: np.ndarray, line: float) -> tuple[float, float, float]:
     return win, push, loss
 
 
+def goal_lines_matching(lh: float, la: float, o25: float, rho: float) -> dict:
+    """Scale both expected-goal figures by one factor until the Dixon-Coles over-2.5 equals o25, and return the
+    matching {"O15", "O25", "O35", "BTTS"}. Keeps the 1.5/3.5 lines consistent with an over-2.5 probability that
+    came from elsewhere (the ML layer): without this, 2.5 follows the ML/market and 3.5 the raw goal model, and
+    the gap between them shows up as fake value (always Under 3.5)."""
+    def lines(k):
+        mat = dixon_coles_matrix(lh * k, la * k, rho)
+        i, j = np.indices(mat.shape)
+        t = i + j
+        return {"O15": float(mat[t > 1.5].sum()), "O25": float(mat[t > 2.5].sum()),
+                "O35": float(mat[t > 3.5].sum()), "BTTS": float(mat[(i > 0) & (j > 0)].sum())}
+    lo, hi = 0.3, 3.0
+    for _ in range(40):
+        k = (lo + hi) / 2
+        if lines(k)["O25"] < o25:
+            lo = k
+        else:
+            hi = k
+    return lines((lo + hi) / 2)
+
+
 def derive_markets(mat: np.ndarray, ah_line: float | None = None) -> dict:
     i, j = np.indices(mat.shape)
     tot = i + j
@@ -254,11 +275,13 @@ def _sane(market: str, sel: dict) -> bool:
 
 def evaluate_markets(model_mk: dict, odds: dict, market_weight: float) -> list[dict]:
     """Edge/EV for every market that has odds. model probs are blended with the no-vig market
-    probability (market_weight) before EV, which guards against model overconfidence."""
+    probability (market_weight) before EV, which guards against model overconfidence.
+    market_weight may be a {market: weight} dict (markets not listed: no blend)."""
     rows = []
     for mk, sels in model_mk.items():
         if not isinstance(sels, dict):
             continue
+        mw = market_weight.get(mk, 0.0) if isinstance(market_weight, dict) else market_weight
         names = [s for s in sels if not s.startswith("_")]
         mo = odds.get(mk)
         fair = no_vig([mo[s]["avg"] for s in names]) if mo and all(s in mo for s in names) else None
@@ -269,7 +292,7 @@ def evaluate_markets(model_mk: dict, odds: dict, market_weight: float) -> list[d
             if fair:
                 price = cap_price(mo[s]["avg"], mo[s]["max"])
                 p_mkt = fair[k]
-                p_bet = (1 - market_weight) * p_model + market_weight * p_mkt
+                p_bet = (1 - mw) * p_model + mw * p_mkt
                 if mk.startswith("AH") and "_raw" in sels:
                     w, push, lo = sels["_raw"]
                     if s == "Away":

@@ -19,6 +19,7 @@ import itertools
 import json
 import os
 import sys
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 import requests
@@ -39,6 +40,37 @@ ESTIMATED_PRICE_HAIRCUT = 0.97
 MAX_LEGS = 4
 BETCLIC_MARKETS = {"1X2", "Double chance", "Draw no bet", "O/U 1.5", "O/U 2.5", "O/U 3.5", "BTTS"}
 SITE = "https://rfmsant.github.io/football-model/"
+UK = ZoneInfo("Europe/London")   # game dates/times in predictions.json, intl.json and the deep dive are UK local time
+MIN_CARD_LEGS = 4                # a future day needs at least this many legs to be worth a card
+LOOKAHEAD_DAYS = 14
+
+
+def _now(now: dt.datetime | None = None) -> dt.datetime:
+    return now or dt.datetime.now(dt.timezone.utc)
+
+
+def kickoff_utc(date: str, time: str | None) -> dt.datetime | None:
+    """UK-local date + 'HH:MM' -> aware UTC datetime; None when the time is unknown."""
+    try:
+        h, m = (int(x) for x in str(time)[:5].split(":"))
+    except (TypeError, ValueError):
+        return None
+    local = dt.datetime.combine(dt.date.fromisoformat(date), dt.time(h, m), tzinfo=UK)
+    return local.astimezone(dt.timezone.utc)
+
+
+def started(date: str, time: str | None, now: dt.datetime | None = None) -> bool:
+    """True once the game has kicked off. Without a time, only a past UK date counts as started."""
+    now = _now(now)
+    ko = kickoff_utc(date, time)
+    if ko is None:
+        return dt.date.fromisoformat(date) < now.astimezone(UK).date()
+    return ko <= now
+
+
+def _same_bet(c: dict, match: str, market: str, selection: str) -> bool:
+    return market == c["market"] and selection == c["selection"] \
+        and bool(match_name(c["match"].split(" v ")[0], [match.split(" v ")[0]]))
 
 
 def leg_probs(c: dict) -> tuple[float, float]:
@@ -55,11 +87,13 @@ def min_price(c: dict) -> float:
     return round(max(1.01, (0.98 - push) / max(w, 1e-6)), 2)
 
 
-def pool(date: str) -> list[dict]:
+def pool(date: str, now: dt.datetime | None = None) -> list[dict]:
+    """Usable legs for games on `date` (UK) that haven't kicked off yet at `now` (default: current time)."""
+    now = _now(now)
     legs = []
     pred = read_json(DATA / "predictions.json", {}) or {}
     for g in pred.get("games", []):
-        if g["date"] != date or shortlist.is_hard(g):
+        if g["date"] != date or started(g["date"], g.get("time"), now) or shortlist.is_hard(g):
             continue
         try:
             legs += [dict(c, source="club model") for c in shortlist.candidates_for(g)]
@@ -67,17 +101,17 @@ def pool(date: str) -> list[dict]:
             log.debug("skip %s: %s", g.get("id"), e)
     intl = read_json(DATA / "intl.json", {}) or {}
     for g in intl.get("games", []):
-        if g["date"] == date and not g.get("hard"):
+        if g["date"] == date and not started(g["date"], g.get("time"), now) and not g.get("hard"):
             legs += [dict(c, source="international model") for c in g["candidates"]]
-    # deep-dive research overrides the model where it covered the same bet
+    # deep-dive research overrides the model where it covered the same bet; a PASS removes the bet altogether
     deep = read_json(DATA / "deep" / "latest.json", {}) or {}
-    researched = {}
+    researched, passed = [], []
     for b in deep.get("bets", []):
-        if str(b.get("kickoff", ""))[:10] == date and b.get("verdict") != "PASS":
-            researched[(b["match"], b["market"], b["selection"])] = b
+        if str(b.get("kickoff", ""))[:10] == date:
+            (passed if b.get("verdict") == "PASS" else researched).append(b)
+    legs = [c for c in legs if not any(_same_bet(c, b["match"], b["market"], b["selection"]) for b in passed)]
     for c in legs:
-        b = next((v for (m, mk, s), v in researched.items() if mk == c["market"] and s == c["selection"]
-                  and match_name(c["match"].split(" v ")[0], [m.split(" v ")[0]])), None)
+        b = next((v for v in researched if _same_bet(c, v["match"], v["market"], v["selection"])), None)
         if b:
             c.update(p_model=b["final_p"], researched=True, research_note="; ".join(a["reason"] for a in b.get("adjustments", []))[:200])
             if b.get("odds_seen"):
@@ -307,10 +341,22 @@ def settle_cards(hist: pd.DataFrame | None = None) -> dict:
     return out
 
 
-def default_date() -> str:
-    """Today if there are still enough games today, otherwise tomorrow."""
-    today = dt.date.today()
-    return today.isoformat() if len(pool(today.isoformat())) >= 4 and dt.datetime.now().hour < 12 else (today + dt.timedelta(days=1)).isoformat()
+def default_date(now: dt.datetime | None = None) -> str:
+    """Today (UK) if it still has legs that haven't kicked off, otherwise the next date with at least MIN_CARD_LEGS
+    legs (failing that, the next date with any legs; failing that, tomorrow)."""
+    now = _now(now)
+    today = now.astimezone(UK).date()
+    if pool(today.isoformat(), now):
+        return today.isoformat()
+    fallback = None
+    for ahead in range(1, LOOKAHEAD_DAYS + 1):
+        d = (today + dt.timedelta(days=ahead)).isoformat()
+        n = len(pool(d, now))
+        if n >= MIN_CARD_LEGS:
+            return d
+        if n and fallback is None:
+            fallback = d
+    return fallback or (today + dt.timedelta(days=1)).isoformat()
 
 
 if __name__ == "__main__":

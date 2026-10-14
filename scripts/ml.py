@@ -20,7 +20,7 @@ from sklearn.ensemble import HistGradientBoostingClassifier
 import features
 from common import DATA, ROOT, get_logger, load_params, season_code, write_json
 from fetch import fetch_history, merge_understat
-from model import Model, compute_elo
+from model import Model, compute_elo, goal_lines_matching
 
 log = get_logger("ml")
 MODEL_FILE = DATA / "ml_model.pkl"
@@ -328,12 +328,16 @@ def apply(bundle: dict, records: list[dict], feats: pd.DataFrame) -> None:
     X["lh"] = [by_id[i]["xg"]["home"] for i in ids]
     X["la"] = [by_id[i]["xg"]["away"] for i in ids]
     P = predict(bundle, X)
+    rho = load_params().get("rho", -0.08)
     for i in ids:
         r, p = by_id[i], P.loc[i]
         r["probs_dc"] = dict(r["probs"])
         r["probs"] = {"H": float(p.H), "D": float(p.D), "A": float(p.A)}
         r["markets"].setdefault("O/U 2.5", {}).update({"Over": float(p.O25), "Under": float(1 - p.O25)})
         r["markets"].setdefault("BTTS", {}).update({"Yes": float(p.BTTS), "No": float(1 - p.BTTS)})
+        gl = goal_lines_matching(r["xg"]["home"], r["xg"]["away"], float(p.O25), rho)
+        for line, key in ((1.5, "O15"), (3.5, "O35")):
+            r["markets"][f"O/U {line}"] = {"Over": gl[key], "Under": 1 - gl[key]}
         r["prob_source"] = "ml"
         r["pick"] = make_pick(r)
 

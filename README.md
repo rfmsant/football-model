@@ -60,6 +60,15 @@ The season before the tracker went live was backfilled with `python scripts/trac
 2026-08-01`, a walk-forward replay that only uses data available before each day. Those games are
 labelled `replay` so you can separate them from genuine `live` predictions.
 
+### Liga Portugal round report (`scripts/jornada.py`)
+
+Every game of the next Liga Portugal round (Friday to Monday) with the model's chances, the bookmakers' average
+prices and the value bets: model chance x price beats 1 by at least 2%, one per market family, at most 3 per game,
+each with the minimum price worth taking at Betclic. Games without value say so, with the price they would need.
+Liga Portugal games are always given the full extras (injuries, real prices for every market) and are discovered
+12 days ahead. The daily workflow posts the report to Discord once per round, 3 days before its first game;
+`python scripts/jornada.py build` shows it locally.
+
 ### Key definitions
 - **Edge** = model probability − bookmaker no-vig probability (from the average odds).
 - **EV** = p × best price − 1. Here p blends the model with the market, weighted by the tuned

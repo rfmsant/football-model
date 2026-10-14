@@ -57,11 +57,16 @@ jobs:
             python scripts/main.py --backtest-if-stale
           fi
 
+      - name: Liga Portugal round report
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python scripts/jornada.py run || echo "round report failed (pipeline results still committed)"
+
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in data/predictions.json data/track_record.json data/ml_model.pkl ml_report.md data/shortlist.json                    data/odds_history.json data/stadiums.json data/deep_record.json data/intl.json data/intl_results_extra.csv data/intl_results_fetched.json data/intl_predictions.csv data/card_record.json data/params.json data/backtest.json backtest.md; do
+          for f in data/predictions.json data/track_record.json data/ml_model.pkl ml_report.md data/shortlist.json                    data/odds_history.json data/stadiums.json data/deep_record.json data/intl.json data/intl_results_extra.csv data/intl_results_fetched.json data/intl_predictions.csv data/card_record.json data/params.json data/backtest.json backtest.md data/jornada; do
             [ -e "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then
@@ -78,6 +83,7 @@ jobs:
           cp data/predictions.json data/backtest.json data/track_record.json _site/data/ 2>/dev/null || true
           cp data/predictions_demo.json data/shortlist.json data/deep_record.json _site/data/ 2>/dev/null || true
           mkdir -p _site/data/deep && cp data/deep/*.json _site/data/deep/ 2>/dev/null || true
+          mkdir -p _site/data/jornada && cp data/jornada/*.json _site/data/jornada/ 2>/dev/null || true
           cp ml_report.md DEEP_DIVE.md _site/ 2>/dev/null || true
           touch _site/.nojekyll
 

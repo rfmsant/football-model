@@ -22,7 +22,7 @@ import pandas as pd
 
 import dossier
 from common import DATA, get_logger, write_json
-from model import dixon_coles_matrix
+from model import dixon_coles_matrix, goal_lines_matching
 
 log = get_logger("shortlist")
 FINAL_MIN_PROB = 0.70   # the bar a final bet must clear after the deep dive
@@ -75,16 +75,7 @@ def model_goal_probs(g: dict) -> dict:
     if gp and target is not None and (g["markets"].get("BTTS") or {}).get("Yes") is not None:
         return {"O15": gp["O15"], "O25": target, "O35": gp["O35"], "BTTS": g["markets"]["BTTS"]["Yes"]}
     lh, la = g["xg"]["home"], g["xg"]["away"]
-    k = 1.0
-    if target:
-        lo, hi = 0.4, 2.5
-        for _ in range(30):
-            k = (lo + hi) / 2
-            if _mk(dixon_coles_matrix(lh * k, la * k, RHO))["O25"] < target:
-                lo = k
-            else:
-                hi = k
-    m = _mk(dixon_coles_matrix(lh * k, la * k, RHO))
+    m = goal_lines_matching(lh, la, target, RHO) if target else _mk(dixon_coles_matrix(lh, la, RHO))
     btts = (g["markets"].get("BTTS") or {}).get("Yes")
     return {"O15": m["O15"], "O25": target or m["O25"], "O35": m["O35"], "BTTS": btts if btts is not None else m["BTTS"]}
 
