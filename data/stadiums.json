@@ -1055,5 +1055,68 @@
   "lat": 52.37874,
   "lon": 12.934,
   "approx": true
+ },
+ "E3|Barnet": {
+  "query": "barnet",
+  "place": "Barnet",
+  "lat": 51.65,
+  "lon": -0.2,
+  "approx": true
+ },
+ "E2|Peterboro": {
+  "query": "Peterboro",
+  "place": "Peterborough",
+  "lat": 52.57364,
+  "lon": -0.24777,
+  "approx": true
+ },
+ "E2|Burton": {
+  "query": "burton",
+  "place": "Burton",
+  "lat": 51.71556,
+  "lon": -4.92222,
+  "approx": true
+ },
+ "E3|Colchester": {
+  "query": "colchester",
+  "place": "Colchester",
+  "lat": 51.88921,
+  "lon": 0.90421,
+  "approx": true
+ },
+ "E3|Exeter": {
+  "query": "exeter",
+  "place": "Exeter",
+  "lat": 50.7236,
+  "lon": -3.52751,
+  "approx": true
+ },
+ "SC0|Kilmarnock": {
+  "query": "kilmarnock",
+  "place": "Kilmarnock",
+  "lat": 55.61171,
+  "lon": -4.49581,
+  "approx": true
+ },
+ "E2|Wigan": {
+  "query": "wigan",
+  "place": "Wigan",
+  "lat": 53.54296,
+  "lon": -2.63706,
+  "approx": true
+ },
+ "E2|Reading": {
+  "query": "reading",
+  "place": "Reading",
+  "lat": 51.45625,
+  "lon": -0.97113,
+  "approx": true
+ },
+ "SP1|Barcelona": {
+  "query": "barcelona",
+  "place": "Barcelona",
+  "lat": 41.38879,
+  "lon": 2.15899,
+  "approx": true
  }
 }
