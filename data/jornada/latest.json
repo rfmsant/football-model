@@ -1,6 +1,6 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-10-16T11:38:29Z",
+ "generated_at": "2026-10-17T10:58:15Z",
  "round_start": "2026-10-19",
  "round_end": "2026-10-19",
  "games": [
@@ -35,5 +35,6 @@
     "researched": null
    }
   }
- ]
+ ],
+ "posted_at": "2026-10-17T10:58:16Z"
 }

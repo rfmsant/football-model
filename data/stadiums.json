@@ -1118,5 +1118,103 @@
   "lat": 41.38879,
   "lon": 2.15899,
   "approx": true
+ },
+ "SC0|Hearts": {
+  "query": "hearts",
+  "place": "Heartsease",
+  "lat": 52.34643,
+  "lon": -2.96696,
+  "approx": true
+ },
+ "SP1|Santander": {
+  "query": "santander",
+  "place": "Santander",
+  "lat": 43.46589,
+  "lon": -3.80493,
+  "approx": true
+ },
+ "I1|Como": {
+  "query": "como",
+  "place": "Como",
+  "lat": 45.80819,
+  "lon": 9.0832,
+  "approx": true
+ },
+ "N1|Groningen": {
+  "query": "groningen",
+  "place": "Groningen",
+  "lat": 53.21917,
+  "lon": 6.56667,
+  "approx": true
+ },
+ "D1|Leverkusen": {
+  "query": "Leverkusen",
+  "place": "Leverkusen",
+  "lat": 51.0303,
+  "lon": 6.98432,
+  "approx": true
+ },
+ "D1|Freiburg": {
+  "query": "freiburg",
+  "place": "Freiburg im Breisgau",
+  "lat": 47.9959,
+  "lon": 7.85222,
+  "approx": true
+ },
+ "I2|Juve Stabia": {
+  "query": "stabia",
+  "place": "Stabiazzoni",
+  "lat": 44.05578,
+  "lon": 10.96047,
+  "approx": true
+ },
+ "E0|Brighton": {
+  "query": "brighton",
+  "place": "Brighton",
+  "lat": 50.82838,
+  "lon": -0.13947,
+  "approx": true
+ },
+ "E0|Crystal Palace": {
+  "query": "crystal palace",
+  "place": "Crystal Palace",
+  "lat": 51.41934,
+  "lon": -0.07854,
+  "approx": true
+ },
+ "SP1|Celta": {
+  "query": "vigo",
+  "place": "Vigo",
+  "lat": 42.23282,
+  "lon": -8.72264,
+  "approx": true
+ },
+ "SP1|Sevilla": {
+  "query": "sevilla",
+  "place": "Seville",
+  "lat": 37.38283,
+  "lon": -5.97317,
+  "approx": true
+ },
+ "D2|Bielefeld": {
+  "query": "bielefeld",
+  "place": "Bielefeld",
+  "lat": 52.03333,
+  "lon": 8.53333,
+  "approx": true
+ },
+ "D2|Osnabruck": {
+  "query": "osnabruck",
+  "place": "Osnabrück",
+  "lat": 52.27264,
+  "lon": 8.0498,
+  "approx": true
+ },
+ "E0|Sunderland": {
+  "query": "sunderland",
+  "place": "Sunderland",
+  "lat": 54.90465,
+  "lon": -1.38222,
+  "approx": true
  }
 }
