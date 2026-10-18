@@ -1,11 +1,8 @@
 name: Betting card to Discord
 
 on:
-  push:
-    branches: [main]
-    paths: ["data/cards/20*.json"]
-  schedule:
-    - cron: "41 10 * * *"   # 10:41 UTC fallback: if the morning deep dive didn't produce a card, build one from the model
+  # Daily posting switched off on 2026-10-18 (Discord only gets the Sunday Liga Portugal report, portugal.yml).
+  # Re-enable by restoring the push trigger on data/cards/20*.json and the "41 10 * * *" fallback schedule.
   workflow_dispatch:
     inputs:
       date:
