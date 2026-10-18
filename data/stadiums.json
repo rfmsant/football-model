@@ -1216,5 +1216,61 @@
   "lat": 54.90465,
   "lon": -1.38222,
   "approx": true
+ },
+ "E3|Swindon": {
+  "query": "swindon",
+  "place": "Swindon",
+  "lat": 51.55797,
+  "lon": -1.78116,
+  "approx": true
+ },
+ "E3|Rotherham": {
+  "query": "rotherham",
+  "place": "Rotherham",
+  "lat": 53.43012,
+  "lon": -1.35678,
+  "approx": true
+ },
+ "E2|Bradford": {
+  "query": "bradford",
+  "place": "Bradford",
+  "lat": 53.79391,
+  "lon": -1.75206,
+  "approx": true
+ },
+ "E2|Barnsley": {
+  "query": "barnsley",
+  "place": "Barnsley",
+  "lat": 53.55,
+  "lon": -1.48333,
+  "approx": true
+ },
+ "E2|Stockport": {
+  "query": "stockport",
+  "place": "Stockport",
+  "lat": 53.40979,
+  "lon": -2.15761,
+  "approx": true
+ },
+ "E3|Grimsby": {
+  "query": "grimsby",
+  "place": "Grimsby",
+  "lat": 53.56539,
+  "lon": -0.07553,
+  "approx": true
+ },
+ "E2|Bromley": {
+  "query": "bromley",
+  "place": "Bromley",
+  "lat": 51.40606,
+  "lon": 0.01519,
+  "approx": true
+ },
+ "E3|Accrington": {
+  "query": "accrington",
+  "place": "Accrington",
+  "lat": 53.75379,
+  "lon": -2.35863,
+  "approx": true
  }
 }
