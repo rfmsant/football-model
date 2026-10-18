@@ -3,7 +3,7 @@ name: Publish deep dive
 on:
   push:
     branches: [main]
-    paths: ["data/deep/**", "index.html"]
+    paths: ["data/deep/**", "data/portugal/**", "index.html"]
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,7 @@ jobs:
           cp index.html backtest.md ml_report.md DEEP_DIVE.md _site/ 2>/dev/null || true
           cp data/predictions.json data/predictions_demo.json data/backtest.json data/track_record.json              data/shortlist.json data/deep_record.json _site/data/ 2>/dev/null || true
           cp data/deep/*.json _site/data/deep/ 2>/dev/null || true
+          mkdir -p _site/data/portugal && cp data/portugal/*.json _site/data/portugal/ 2>/dev/null || true
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

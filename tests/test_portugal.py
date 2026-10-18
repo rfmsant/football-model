@@ -13,7 +13,7 @@ def _game(**kw):
          "outcomes": {"H": 0.57, "D": 0.25, "A": 0.18, "over15": 0.72, "over25": 0.45, "over35": 0.23, "btts": 0.44},
          "best_bet": {"market": "Double chance", "selection": "1X", "label": "Braga or draw", "p": 0.82,
                       "odds_seen": None, "min_odds": 1.24},
-         "factors": {k: "..." for k in portugal.FACTORS}, "risks": ["r"], "sources": []}
+         "why": "w", "factors": {k: "..." for k in portugal.FACTORS}, "risks": ["r"], "sources": []}
     g.update(kw)
     return g
 

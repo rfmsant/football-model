@@ -50,7 +50,7 @@ def validate(rep: dict) -> list[str]:
     errs = [f"missing top-level '{k}'" for k in ("date", "week_start", "week_end", "summary", "games") if k not in rep]
     for i, g in enumerate(rep.get("games", []), 1):
         tag = f"game {i} ({g.get('match', '?')})"
-        for k in ("match", "kickoff", "outcomes", "best_bet", "confidence", "factors", "risks", "sources"):
+        for k in ("match", "kickoff", "outcomes", "best_bet", "why", "confidence", "factors", "risks", "sources"):
             if k not in g:
                 errs.append(f"{tag}: missing '{k}'")
         try:
@@ -84,6 +84,12 @@ def publish(path: Path) -> dict:
     rep["games"].sort(key=lambda g: g["kickoff"])
     write_json(path, rep)
     write_json(OUT / "latest.json", rep)
+    idx = []
+    for f in sorted(OUT.glob("20*.json"), reverse=True):     # newest first, for the site's week selector
+        r = read_json(f, {}) or {}
+        idx.append({"file": f.name, "date": r.get("date"), "week_start": r.get("week_start"), "week_end": r.get("week_end"),
+                    "games": len(r.get("games", []))})
+    write_json(OUT / "index.json", idx)
     print(f"published {path.name}: {len(rep['games'])} games, {rep['week_start']}..{rep['week_end']}")
     return rep
 

@@ -51,6 +51,8 @@ bookmaker prices or your own estimate from the table, form and goals. Record eac
 - Also give up to two `alternatives`, for example a value bet at better odds.
 - `min_odds` = `round(1 / p + 0.02, 2)`: the lowest price at which the bet is still worth taking.
 - `confidence`: high / medium / low, depending on how much current information exists.
+- `why`: three to five sentences explaining why this bet and not the others (the result, double chance, goals
+  and BTTS options you weighed, and which evidence decided it). The site shows it at the top of each game.
 - If a game is genuinely a coin flip, still give the most likely bet, mark confidence low and say so in `risks`.
 
 ## Output: `data/portugal/<run date YYYY-MM-DD>.json`
@@ -71,6 +73,7 @@ bookmaker prices or your own estimate from the table, form and goals. Record eac
                    "odds_seen": 1.22, "odds_source": "bookmaker average, 2026-10-18", "min_odds": 1.24},
       "alternatives": [{"market": "O/U 2.5", "selection": "Under", "label": "Under 2.5 goals", "p": 0.55,
                         "odds_seen": 1.75, "odds_source": "...", "min_odds": 1.84}],
+      "why": "Braga are the better side, but ... so Braga or draw covers the three most likely scores.",
       "confidence": "medium",
       "adjustments": [{"factor": "injuries", "delta": -0.03, "reason": "..."}],
       "factors": {"injuries": "...", "fatigue": "...", "lineups": "...", "form": "...", "home_away": "...",
@@ -91,4 +94,5 @@ H/A, `O/U 1.5|2.5|3.5` Over/Under, `BTTS` Yes/No).
 python scripts/portugal.py publish data/portugal/<date>.json   # validates and writes latest.json
 git add data/portugal && git commit -m "Liga Portugal weekly <date>" && git pull --rebase && git push
 ```
-The push sends the report to Discord (workflow "Liga Portugal weekly to Discord").
+The push sends the report to Discord (workflow "Liga Portugal weekly to Discord") and redeploys the site, whose
+**Liga Portugal** tab shows every game with the why, the probabilities, each adjustment and the full breakdown.

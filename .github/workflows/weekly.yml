@@ -83,6 +83,7 @@ jobs:
           cp data/predictions_demo.json data/shortlist.json data/deep_record.json _site/data/ 2>/dev/null || true
           mkdir -p _site/data/deep && cp data/deep/*.json _site/data/deep/ 2>/dev/null || true
           mkdir -p _site/data/jornada && cp data/jornada/*.json _site/data/jornada/ 2>/dev/null || true
+          mkdir -p _site/data/portugal && cp data/portugal/*.json _site/data/portugal/ 2>/dev/null || true
           cp ml_report.md DEEP_DIVE.md _site/ 2>/dev/null || true
           touch _site/.nojekyll
 

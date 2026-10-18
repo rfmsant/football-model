@@ -96,6 +96,17 @@ tr.dayrow { cursor: pointer; } tr.dayrow:hover td { background: var(--surface-2)
 .ok { color: var(--accent); font-weight: 700; } .no { color: var(--bad); font-weight: 700; }
 .note { font-size: .8rem; color: var(--muted); margin: 6px 0 0; }
 .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+.best { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
+.best .lbl { font-size: 1.15rem; font-weight: 700; }
+.best .nums { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .9rem; margin-top: 2px; font-variant-numeric: tabular-nums; }
+.why { margin: 8px 0 0; }
+.points { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 6px 0 0; }
+@media (min-width: 640px) { .points { grid-template-columns: 170px minmax(0, 1fr); } }
+.points dt { font-weight: 650; font-size: .85rem; padding: 7px 0 0; }
+.points dd { margin: 0; padding: 2px 0 7px; font-size: .9rem; border-bottom: 1px solid var(--border); }
+@media (min-width: 640px) { .points dt { padding: 7px 0; border-bottom: 1px solid var(--border); } .points dd { padding: 7px 0; } }
+.alts { margin: 6px 0 0; padding-left: 18px; font-size: .9rem; }
+td.wrap { white-space: normal; }
 footer { color: var(--muted); font-size: .8rem; margin: 30px 0 10px; }
 a { color: var(--accent); }
 </style>
@@ -108,12 +119,18 @@ a { color: var(--accent); }
   </header>
   <p class="meta" id="meta">Loading analysis…</p>
   <div class="views" role="tablist">
-    <button type="button" data-view="deep" aria-pressed="true">Top 10 bets</button>
-    <button type="button" data-view="analysis" aria-pressed="false">Daily analysis</button>
-    <button type="button" data-view="results" aria-pressed="false">Results &amp; record</button>
+    <button type="button" data-view="pt" aria-pressed="true">🇵🇹 Liga Portugal</button>
+    <button type="button" data-view="deep" aria-pressed="false" class="alltab" hidden>Top 10 bets</button>
+    <button type="button" data-view="analysis" aria-pressed="false" class="alltab" hidden>Daily analysis</button>
+    <button type="button" data-view="results" aria-pressed="false" class="alltab" hidden>Results &amp; record</button>
   </div>
 
-  <div id="view-deep">
+  <div id="view-pt">
+    <div class="controls"><label>Week <select id="ptweek"><option>Loading…</option></select></label></div>
+    <div id="pt"><div class="empty">Loading…</div></div>
+  </div>
+
+  <div id="view-deep" hidden>
     <div class="controls"><label>Deep dive <select id="deepday"><option>Loading…</option></select></label></div>
     <div id="deep"><div class="empty">Loading…</div></div>
   </div>
@@ -151,7 +168,13 @@ a { color: var(--accent); }
     <div id="results"><div class="empty">Loading results…</div></div>
   </div>
 
-  <footer>
+  <footer id="ptfoot">
+    Every Sunday evening each Liga Portugal game of the coming week is researched (injuries, suspensions, fatigue from
+    Europe and the cup, line-ups, form, home advantage, manager news, motivation, referee, weather, tactics, market)
+    and given one best bet, chosen for its chance of winning, whatever the odds. Bet only at Betclic at or above the
+    minimum odds. Not financial advice. 18+, bet responsibly.
+  </footer>
+  <footer id="allfoot" hidden>
     A daily analysis of every fixture. Probabilities come from a Dixon-Coles model built on time-weighted xG/shots
     ratings blended with Elo. <b>Lean</b> is the market the model rates best against the bookmakers' prices. It is
     only marked <b>Value</b> when it clears the backtested threshold. Edge = model probability minus the
@@ -180,11 +203,13 @@ a { color: var(--accent); }
   const confCls = c => c >= 70 ? "" : c >= 50 ? "mid" : "low";
   const iso = d => d.toISOString().slice(0, 10);
   let DATA = null, DAY = null;
+  const ALL = new URLSearchParams(location.search).has("all");   // ?all shows the all-league tabs as well
+  if (ALL) { document.querySelectorAll(".alltab").forEach(b => b.hidden = false); document.getElementById("allfoot").hidden = false; document.getElementById("ptfoot").hidden = true; }
 
   const file = new URLSearchParams(location.search).has("demo") ? "data/predictions_demo.json" : "data/predictions.json";
   fetch(file, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(d => { DATA = d; init(); })
-    .catch(e => { document.getElementById("meta").textContent = "No analysis published yet (" + e.message + ")."; });
+    .catch(e => { if (ALL) document.getElementById("meta").textContent = "No analysis published yet (" + e.message + ")."; });
 
   function dayLabel(date) {
     const ref = DATA && DATA.demo ? DATA.reference_date : iso(new Date());
@@ -196,7 +221,7 @@ a { color: var(--accent); }
 
   function init() {
     const d = DATA, when = new Date(d.generated_at);
-    document.getElementById("meta").innerHTML =
+    if (ALL) document.getElementById("meta").innerHTML =
       `${d.n_games} fixtures · ${d.n_leagues} leagues · updated ${when.toLocaleString()}` + (d.demo ? " · <b>demo replay</b>" : "");
     const days = (d.daily && d.daily.length) ? d.daily
       : [...new Set(d.games.map(g => g.date))].sort().map(x => ({ date: x, n_games: d.games.filter(g => g.date === x).length }));
@@ -297,13 +322,15 @@ a { color: var(--accent); }
     document.querySelectorAll("[data-view]").forEach(x => x.setAttribute("aria-pressed", x.dataset.view === v));
     document.getElementById("view-analysis").hidden = v !== "analysis";
     document.getElementById("view-deep").hidden = v !== "deep";
+    document.getElementById("view-pt").hidden = v !== "pt";
+    if (v === "pt") loadPt();
     if (v === "deep") loadDeep();
     document.getElementById("view-results").hidden = v !== "results";
     try { sessionStorage.setItem("view", v); } catch (e) {}
     if (v === "results" && !TRACK) loadTrack();
   }
-  let startView = "deep";
-  try { startView = sessionStorage.getItem("view") || "deep"; } catch (e) {}
+  let startView = "pt";
+  try { startView = (ALL && sessionStorage.getItem("view")) || "pt"; } catch (e) {}
   showView(startView);
 
   function loadTrack() {
@@ -462,6 +489,79 @@ a { color: var(--accent); }
     if ((rep.rejected || []).length) {
       h += `<div class="panel"><h3>Looked at and rejected</h3><div class="tablewrap"><table><thead><tr><th>Match</th><th>Bet</th><th>Why not</th></tr></thead><tbody>
         ${rep.rejected.map(r => `<tr><td>${esc(r.match)}</td><td>${esc(r.label || "")}</td><td style="white-space:normal">${esc(r.reason)}</td></tr>`).join("")}</tbody></table></div></div>`;
+    }
+    el.innerHTML = h;
+  }
+
+  // ---------------------------------------------------------------- Liga Portugal weekly deep dive
+  var PTIDX = null;
+  const PT_POINTS = [["injuries", "Injuries & suspensions"], ["fatigue", "Fatigue & squad drain"], ["lineups", "Line-ups & rotation"],
+    ["form", "Form"], ["home_away", "Home advantage"], ["manager_news", "Manager & news"], ["motivation", "Motivation"],
+    ["referee", "Referee"], ["weather", "Weather & pitch"], ["tactics", "Tactics"], ["market", "Market & odds"], ["h2h", "Head-to-head"]];
+  const ptDay = s => { const d = new Date(s.replace(" ", "T") + ":00Z");
+    return d.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" }) + " · " + s.slice(11, 16); };
+  const odds = x => x ? Number(x).toFixed(2) : "no price yet";
+
+  function loadPt(file) {
+    const el = document.getElementById("pt");
+    const go = f => fetch("data/portugal/" + f, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(renderPt).catch(e => { el.innerHTML = `<div class="empty">No Liga Portugal report published yet (${esc(e.message)}). It runs every Sunday evening.</div>`; });
+    if (PTIDX) return go(file || "latest.json");
+    fetch("data/portugal/index.json", { cache: "no-store" }).then(r => r.ok ? r.json() : []).catch(() => [])
+      .then(idx => {
+        PTIDX = idx || [];
+        const sel = document.getElementById("ptweek");
+        sel.innerHTML = PTIDX.map(x => `<option value="${esc(x.file)}">${esc(x.week_start)} → ${esc(x.week_end)} · ${x.games} games</option>`).join("")
+          || `<option value="latest.json">Latest</option>`;
+        sel.onchange = () => loadPt(sel.value);
+        go(file || (PTIDX[0] ? PTIDX[0].file : "latest.json"));
+      });
+  }
+
+  function ptBet(b) {
+    return `${esc(b.label)} · <b>${pct(b.p)}</b> · ${odds(b.odds_seen)} · min ${Number(b.min_odds).toFixed(2)}`;
+  }
+
+  function renderPt(rep) {
+    const el = document.getElementById("pt");
+    const games = rep.games || [];
+    document.getElementById("meta").textContent =
+      `Liga Portugal Betclic · ${games.length} games from ${rep.week_start} to ${rep.week_end} · researched ${new Date(rep.generated_at).toLocaleString()}`;
+    let h = `<section class="overview"><h2>Best bet for every game · week of ${esc(rep.week_start)}</h2>
+      <p>${esc(rep.summary || "")}</p>
+      <ul class="hl">${games.map((g, i) => `<li><b>${esc(ptDay(g.kickoff))}</b><a href="#pt-${i}">${esc(g.match)}</a>: ${esc(g.best_bet.label)} (${pct(g.best_bet.p)})</li>`).join("")}</ul>
+      <p class="note">Chance = researched estimate. "Min" is the lowest Betclic price at which the bet is still worth taking. Most prices aren't out on Sunday.</p></section>`;
+    h += games.map((g, i) => {
+      const b = g.best_bet, o = g.outcomes || {};
+      const adj = (g.adjustments || []).map(a => `<tr><td>${esc(a.factor)}</td><td class="${a.delta >= 0 ? "pos" : "neg"}">${sgn(a.delta)}</td><td class="wrap">${esc(a.reason)}</td></tr>`).join("");
+      const pts = PT_POINTS.filter(([k]) => (g.factors || {})[k]).map(([k, t]) => `<dt>${t}</dt><dd>${esc(g.factors[k])}</dd>`).join("");
+      const src = (g.sources || []).map(u => { let host = u; try { host = new URL(u).hostname.replace(/^www\./, ""); } catch (e) {} return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host)}</a>`; }).join(" · ");
+      const conf = { high: "value", medium: "strong", low: "" }[g.confidence] ?? "";
+      return `<article class="card" id="pt-${i}">
+        <div class="row1"><div class="teams"><span class="ko">${esc(ptDay(g.kickoff))}</span>${esc(g.match)}</div>
+          <div class="small">${esc(g.venue || "")}<span class="tag ${conf}">${esc(g.confidence)} confidence</span></div></div>
+        <div class="best"><div class="small">Best bet</div><div class="lbl">${esc(b.label)}</div>
+          <div class="nums"><span>Chance <b>${pct(b.p)}</b></span><span>Odds seen <b>${odds(b.odds_seen)}</b></span><span>Bet only at ≥ <b>${Number(b.min_odds).toFixed(2)}</b></span></div></div>
+        <p class="why"><b>Why this bet:</b> ${esc(g.why)}</p>
+        <div class="bar" role="img" aria-label="Home ${pct(o.H)}, draw ${pct(o.D)}, away ${pct(o.A)}">
+          <div class="h" style="width:${o.H * 100}%">${pct(o.H)}</div><div class="d" style="width:${o.D * 100}%">${pct(o.D)}</div><div class="a" style="width:${o.A * 100}%">${pct(o.A)}</div></div>
+        <div class="legend"><span>Home win</span><span>Draw</span><span>Away win</span></div>
+        <div class="stats">
+          <div class="stat"><div class="k">Over 1.5</div><div class="v">${pct(o.over15)}</div></div>
+          <div class="stat"><div class="k">Over 2.5</div><div class="v">${pct(o.over25)}</div></div>
+          <div class="stat"><div class="k">Over 3.5</div><div class="v">${pct(o.over35)}</div></div>
+          <div class="stat"><div class="k">Both score</div><div class="v">${pct(o.btts)}</div></div>
+        </div>
+        ${(g.alternatives || []).length ? `<div class="small">Alternatives</div><ul class="alts">${g.alternatives.map(a => `<li>${ptBet(a)}</li>`).join("")}</ul>` : ""}
+        ${adj ? `<div class="tablewrap"><table><thead><tr><th>Adjustment</th><th>Δ</th><th>Why</th></tr></thead><tbody>${adj}</tbody></table></div>` : ""}
+        <details open><summary>Point-by-point analysis</summary><dl class="points">${pts}</dl>
+          ${(g.risks || []).length ? `<p class="summary"><b>Risks:</b> ${(g.risks || []).map(esc).join("; ")}</p>` : ""}
+          ${src ? `<p class="small">Sources: ${src}</p>` : ""}</details>
+      </article>`;
+    }).join("");
+    if ((rep.skipped || []).length) {
+      h += `<div class="panel"><h3>Not covered</h3><div class="tablewrap"><table><tbody>
+        ${rep.skipped.map(r => `<tr><td>${esc(r.match)}</td><td class="wrap">${esc(r.reason)}</td></tr>`).join("")}</tbody></table></div></div>`;
     }
     el.innerHTML = h;
   }

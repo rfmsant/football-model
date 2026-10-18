@@ -16,12 +16,28 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Decide whether to send
+        id: plan
+        run: |
+          # post once per weekly report: only when this push adds a new data/portugal/<date>.json (edits don't re-post)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "send=yes" >> $GITHUB_OUTPUT
+          elif git diff --name-only --diff-filter=A "${{ github.event.before }}" "${{ github.sha }}" -- 'data/portugal/20*.json' | grep -q .; then
+            echo "send=yes" >> $GITHUB_OUTPUT
+          else
+            echo "Existing report edited; not re-posting"; echo "send=no" >> $GITHUB_OUTPUT
+          fi
       - uses: actions/setup-python@v5
+        if: steps.plan.outputs.send == 'yes'
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+        if: steps.plan.outputs.send == 'yes'
       - name: Send to Discord
+        if: steps.plan.outputs.send == 'yes'
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: cd scripts && python portugal.py send
