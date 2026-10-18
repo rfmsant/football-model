@@ -58,9 +58,8 @@ jobs:
           fi
 
       - name: Liga Portugal round report
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        run: python scripts/jornada.py run || echo "round report failed (pipeline results still committed)"
+        # build only: Discord gets the researched Sunday report instead (scripts/portugal.py, PORTUGAL_WEEKLY.md)
+        run: python scripts/jornada.py build > /dev/null || echo "round report failed (pipeline results still committed)"
 
       - name: Commit results
         run: |

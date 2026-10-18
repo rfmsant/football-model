@@ -1,0 +1,647 @@
+{
+ "date": "2026-10-18",
+ "generated_at": "2026-10-18T17:30:00Z",
+ "week_start": "2026-10-19",
+ "week_end": "2026-10-26",
+ "summary": "First weekly Liga Portugal report: 10 games (matchday 9 plus Monday's rearranged Braga v Gil Vicente). Main themes: Europe midweek for Porto, Sporting, Benfica and Braga; Gil Vicente's cup extra time; Estoril's sacking. Referees and line-ups aren't out yet, so check the min odds and the team news before betting.",
+ "games": [
+  {
+   "match": "Braga v Gil Vicente",
+   "kickoff": "2026-10-19 20:15",
+   "venue": "Estadio Municipal de Braga",
+   "outcomes": {
+    "H": 0.57,
+    "D": 0.25,
+    "A": 0.18,
+    "over15": 0.72,
+    "over25": 0.45,
+    "over35": 0.23,
+    "btts": 0.44
+   },
+   "best_bet": {
+    "market": "Double chance",
+    "selection": "1X",
+    "label": "Braga or draw",
+    "p": 0.82,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.24
+   },
+   "alternatives": [
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "label": "Under 2.5 goals",
+     "p": 0.55,
+     "odds_seen": 1.75,
+     "odds_source": "bookmaker average via model, 2026-10-18",
+     "min_odds": 1.84
+    },
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "label": "Under 3.5 goals",
+     "p": 0.77,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.32
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [
+    {
+     "factor": "eligibility",
+     "delta": -0.03,
+     "reason": "New signings Milosevic and Tommy Marques ineligible (not registered on the original August date)"
+    },
+    {
+     "factor": "fatigue",
+     "delta": 0.02,
+     "reason": "Gil Vicente played 120 minutes in the cup on Saturday (3-2 aet v U. Santarem), two days' rest"
+    },
+    {
+     "factor": "form",
+     "delta": -0.01,
+     "reason": "Braga winless in three, conceded six in the last two; fans whistled after Copenhagen"
+    }
+   ],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "Braga 1.60, draw 4.00, Gil 5.75, Under 2.5 1.75 (model feed); Braga or draw about 1.15-1.20 estimated",
+    "injuries": "Braga: no new injuries reported; Milosevic and Tommy Marques ineligible. Gil Vicente: Guilherme Gomes ineligible (new signing, minor role).",
+    "fatigue": "Braga: Conference League midweek, then Nacional away Sunday (three games in seven days). Gil Vicente: cup extra time Saturday, Porto at home on Saturday.",
+    "form": "Braga: Sporting 3-1 (L), Copenhagen 3-0 (L), Santa Clara 0-0. Gil Vicente: won at Moreirense, 11 goals in 7 league games.",
+    "home_away": "Braga at home; Gil Vicente bring a large away following (short Minho derby trip).",
+    "manager_news": "Vicens under pressure after Copenhagen; Gil Vicente fear Braga's complaints about refereeing.",
+    "motivation": "Rearranged round-2 derby; both on 11 points, 8th and 9th.",
+    "tactics": "Gil Vicente compact and low-scoring; Braga dominate the ball but have been open at the back."
+   },
+   "risks": [
+    "Braga's form is poor and their defence has leaked six goals in two games"
+   ],
+   "sources": [
+    "https://www.abola.pt/noticias/sc-braga-derbi-para-afastar-fantasmas-e-evitar-igualar-registo-negativo-2026101716114909957",
+    "https://www.record.pt/futebol/futebol-nacional/liga-betclic/detalhe/os-jogadores-de-sp-braga-e-gil-vicente-impedidos-de-ir-a-jogo-na-segunda-feira",
+    "https://www.abola.pt/noticias/gil-vicente-derbi-com-o-sc-braga-vai-ser-especial-para-um-dos-indiscutiveis-2026101615104254062"
+   ]
+  },
+  {
+   "match": "Vitoria SC v Maritimo",
+   "kickoff": "2026-10-23 20:45",
+   "venue": "Estadio D. Afonso Henriques",
+   "outcomes": {
+    "H": 0.53,
+    "D": 0.26,
+    "A": 0.21,
+    "over15": 0.68,
+    "over25": 0.4,
+    "over35": 0.18,
+    "btts": 0.42
+   },
+   "best_bet": {
+    "market": "Double chance",
+    "selection": "1X",
+    "label": "Vitoria or draw",
+    "p": 0.79,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.29
+   },
+   "alternatives": [
+    {
+     "market": "O/U 2.5",
+     "selection": "Under",
+     "label": "Under 2.5 goals",
+     "p": 0.6,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.69
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "Vitoria about 1.53 (ESPN line -190)",
+    "injuries": "no current-week report found; no adjustment",
+    "fatigue": "Vitoria played a cup tie on Saturday (1-0 at Lamelas) but have six days' rest; no Europe. Maritimo travel from Madeira.",
+    "form": "Vitoria 15th (5 pts), 5 goals in 8 despite 16-29 shots a game at home; lost 2-0 at Benfica. Maritimo 11th, 9-14.",
+    "home_away": "All four Vitoria home games had 2 goals or fewer (0-1, 1-0, 0-0, 1-1).",
+    "manager_news": "Margarido 'worried' about 5 points but backed by the club.",
+    "motivation": "Vitoria need a win to get away from the bottom three.",
+    "tactics": "Vitoria dominate territory, finish poorly; Maritimo concede chances on the road."
+   },
+   "risks": [
+    "Vitoria have won only one home league game; finishing is the problem"
+   ],
+   "sources": [
+    "https://maisguimaraes.pt/margarido-admite-preocupacao-com-os-cinco-pontos-mas-garante-o-futuro-vai-ser-risonho",
+    "https://www.jn.pt/desporto/artigo/nacional-cai-na-terceira-eliminatoria-da-taca-de-portugal-frente-a-sanjoanense/18138155",
+    "https://www.espn.com/soccer/schedule/_/league/por.1",
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  },
+  {
+   "match": "Estrela v Casa Pia",
+   "kickoff": "2026-10-24 15:30",
+   "venue": "Estadio Jose Gomes",
+   "outcomes": {
+    "H": 0.52,
+    "D": 0.28,
+    "A": 0.2,
+    "over15": 0.7,
+    "over25": 0.45,
+    "over35": 0.22,
+    "btts": 0.38
+   },
+   "best_bet": {
+    "market": "Double chance",
+    "selection": "1X",
+    "label": "Estrela or draw",
+    "p": 0.8,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.27
+   },
+   "alternatives": [
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "label": "Both teams to score: No",
+     "p": 0.62,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.63
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "Estrela about 1.65 (ESPN line -155)",
+    "injuries": "no current-week report found; no adjustment",
+    "fatigue": "Neither in Europe; both normal week.",
+    "form": "Casa Pia 17th: 3 goals in 8, scored in only 2 games, 1 win. Estrela 10th, 14-15, open games.",
+    "home_away": "Estrela at home: 2-2 Sporting, 2-2 Famalicao, 2-1 Braga, 0-2 Viseu.",
+    "manager_news": "Filipe Coelho (Casa Pia) under pressure all season; Pepa at Estrela.",
+    "motivation": "Casa Pia in the relegation zone; Estrela mid-table.",
+    "tactics": "Casa Pia create very little; Estrela concede but score at home."
+   },
+   "risks": [
+    "Estrela have lost at home to Viseu and concede regularly"
+   ],
+   "sources": [
+    "https://www.record.pt/futebol/futebol-nacional/liga-betclic/casa-pia/detalhe/casa-pia-mantem-confianca-em-filipe-coelho",
+    "https://www.espn.com/soccer/schedule/_/league/por.1",
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  },
+  {
+   "match": "Alverca v Arouca",
+   "kickoff": "2026-10-24 18:00",
+   "venue": "Complexo Desportivo FC Alverca",
+   "outcomes": {
+    "H": 0.38,
+    "D": 0.29,
+    "A": 0.33,
+    "over15": 0.74,
+    "over25": 0.48,
+    "over35": 0.27,
+    "btts": 0.52
+   },
+   "best_bet": {
+    "market": "O/U 3.5",
+    "selection": "Under",
+    "label": "Under 3.5 goals",
+    "p": 0.73,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.39
+   },
+   "alternatives": [
+    {
+     "market": "Double chance",
+     "selection": "X2",
+     "label": "Arouca or draw",
+     "p": 0.62,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.63
+    }
+   ],
+   "confidence": "low",
+   "adjustments": [],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "Alverca about 2.10 (ESPN line +110)",
+    "injuries": "no current-week report found; no adjustment",
+    "fatigue": "Arouca's cup tie at Belenenses on Sunday 18 Oct; six days' rest. Alverca normal week.",
+    "form": "Arouca 5th (11-7), solid away: 1-0 Vitoria, 0-0 Estoril, 2-2 Sporting, 0-2 Porto. Alverca 7th (13-12).",
+    "home_away": "Alverca home: 2-2, 1-1, 1-2, 1-0.",
+    "manager_news": "Sergio Ferreira (Alverca) in his first season; no news.",
+    "motivation": "Both chasing the top six.",
+    "tactics": "Even game; neither side concedes heavily."
+   },
+   "risks": [
+    "Closest game of the week: no result bet is reliable"
+   ],
+   "sources": [
+    "https://www.espn.com/soccer/schedule/_/league/por.1",
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  },
+  {
+   "match": "Gil Vicente v FC Porto",
+   "kickoff": "2026-10-24 20:30",
+   "venue": "Estadio Cidade de Barcelos",
+   "outcomes": {
+    "H": 0.11,
+    "D": 0.19,
+    "A": 0.7,
+    "over15": 0.74,
+    "over25": 0.5,
+    "over35": 0.27,
+    "btts": 0.4
+   },
+   "best_bet": {
+    "market": "1X2",
+    "selection": "A",
+    "label": "Porto to win",
+    "p": 0.7,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.45
+   },
+   "alternatives": [
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "label": "Under 3.5 goals",
+     "p": 0.73,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.39
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [
+    {
+     "factor": "fatigue",
+     "delta": 0.02,
+     "reason": "Gil Vicente: cup extra time on Saturday plus Braga away on Monday before this"
+    },
+    {
+     "factor": "fatigue",
+     "delta": -0.02,
+     "reason": "Porto host PSV in the Champions League on Tuesday after losing 3-2 at Betis"
+    }
+   ],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "no price yet; Porto likely around 1.40-1.50",
+    "injuries": "Porto: William Gomes (back mid-November) and Vasco Sousa out. Gil Vicente: no reported injuries.",
+    "fatigue": "Porto: PSV Tuesday, four days' rest. Gil Vicente: three games in eight days including extra time.",
+    "form": "Porto won 8 of 8 (20-4); away 2-0 Rio Ave, 3-0 Viseu, 4-1 Casa Pia. Gil Vicente home: 1-0, 2-0, 0-1, 1-1.",
+    "home_away": "Gil Vicente concede little at home.",
+    "manager_news": "Farioli's Porto in form in the league, lost in Seville midweek.",
+    "motivation": "Porto lead by 5 points; Gil Vicente aiming for Europe.",
+    "tactics": "Gil Vicente's low block against Porto's possession; a goal may come late."
+   },
+   "risks": [
+    "Rotation after PSV",
+    "Gil Vicente are hard to break down at home"
+   ],
+   "sources": [
+    "https://maisfutebol.iol.pt/fc-porto/treino/fc-porto-prossegue-a-preparacao-ao-psv-com-dois-nomes-no-boletim-clinico",
+    "https://www.ligaportugal.pt/noticias/28860/resultados-da-3.a-eliminatoria-da-taca-de-portugal",
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  },
+  {
+   "match": "Estoril v Moreirense",
+   "kickoff": "2026-10-25 15:30",
+   "venue": "Estadio Antonio Coimbra da Mota",
+   "outcomes": {
+    "H": 0.38,
+    "D": 0.31,
+    "A": 0.31,
+    "over15": 0.65,
+    "over25": 0.38,
+    "over35": 0.22,
+    "btts": 0.45
+   },
+   "best_bet": {
+    "market": "O/U 3.5",
+    "selection": "Under",
+    "label": "Under 3.5 goals",
+    "p": 0.78,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.3
+   },
+   "alternatives": [
+    {
+     "market": "Double chance",
+     "selection": "1X",
+     "label": "Estoril or draw",
+     "p": 0.69,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.47
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "no price yet",
+    "injuries": "no current-week report found; no adjustment",
+    "fatigue": "Moreirense played and lost a cup tie Saturday (AVS 1-0); both normal week otherwise.",
+    "form": "Estoril bottom, no wins, 4 goals in 8; every Estoril game had 3 goals or fewer. Moreirense 12th, 8-15.",
+    "home_away": "Estoril home: 1-1, 0-2, 0-0, 1-2 despite many shots.",
+    "manager_news": "Estoril parted ways with Vasco Matos after round 8; Custodio and Joao Giao linked, nobody confirmed yet. Possible new-manager bounce.",
+    "motivation": "Six-pointer near the bottom.",
+    "tactics": "Two low-scoring sides; a new coach usually starts by tightening the defence."
+   },
+   "risks": [
+    "A new manager's first game is unpredictable"
+   ],
+   "sources": [
+    "https://www.abola.pt/noticias/chicotada-a-vista-treinador-de-saida-de-clube-da-liga-2026101513024518049",
+    "https://rr.pt/bola-branca/noticia/futebol-nacional/2026/10/17/nacional-e-moreirense-caem-na-taca-de-portugal/489607/"
+   ]
+  },
+  {
+   "match": "Nacional v Braga",
+   "kickoff": "2026-10-25 18:00",
+   "venue": "Estadio da Madeira",
+   "outcomes": {
+    "H": 0.22,
+    "D": 0.26,
+    "A": 0.52,
+    "over15": 0.74,
+    "over25": 0.5,
+    "over35": 0.27,
+    "btts": 0.52
+   },
+   "best_bet": {
+    "market": "O/U 1.5",
+    "selection": "Over",
+    "label": "Over 1.5 goals",
+    "p": 0.74,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.37
+   },
+   "alternatives": [
+    {
+     "market": "Double chance",
+     "selection": "X2",
+     "label": "Braga or draw",
+     "p": 0.78,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.3
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [
+    {
+     "factor": "fatigue",
+     "delta": -0.04,
+     "reason": "Braga's third game in seven days (Gil Vicente Mon, Conference League midweek) plus a flight to Madeira"
+    }
+   ],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "no price yet",
+    "injuries": "no current-week report found; Braga's new signings eligible again here",
+    "fatigue": "Braga: three games in seven days and travel. Nacional: normal week.",
+    "form": "Nacional 16th, 1 win in 8, 9-17; knocked out of the cup at home by fourth-tier Sanjoanense. 6 of the 7 Nacional games with known scores had 2+ goals.",
+    "home_away": "Nacional home: 2-0 Estoril, 2-3 Estrela, 1-3 Alverca, 0-4 Famalicao.",
+    "manager_news": "Alexandre Santos (since September) under pressure after the cup exit.",
+    "motivation": "Nacional in the relegation play-off spot; Braga need points to stay near Europe.",
+    "tactics": "Nacional concede plenty; a rotated Braga may concede too."
+   },
+   "risks": [
+    "Braga rotation could make it a scrappy game"
+   ],
+   "sources": [
+    "https://www.jn.pt/desporto/artigo/nacional-cai-na-terceira-eliminatoria-da-taca-de-portugal-frente-a-sanjoanense/18138155",
+    "https://www.abola.pt/noticias/nacional-quer-ter-o-prazer-de-ganhar-e-acabar-com-a-fase-negativa-2026101518523938339",
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  },
+  {
+   "match": "Rio Ave v Famalicao",
+   "kickoff": "2026-10-25 18:00",
+   "venue": "Estadio do Rio Ave",
+   "outcomes": {
+    "H": 0.34,
+    "D": 0.29,
+    "A": 0.37,
+    "over15": 0.71,
+    "over25": 0.46,
+    "over35": 0.25,
+    "btts": 0.5
+   },
+   "best_bet": {
+    "market": "O/U 1.5",
+    "selection": "Over",
+    "label": "Over 1.5 goals",
+    "p": 0.71,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.43
+   },
+   "alternatives": [
+    {
+     "market": "Double chance",
+     "selection": "X2",
+     "label": "Famalicao or draw",
+     "p": 0.66,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.54
+    }
+   ],
+   "confidence": "low",
+   "adjustments": [],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "no price yet",
+    "injuries": "no current-week report found; no adjustment",
+    "fatigue": "Neither in Europe; normal week.",
+    "form": "Rio Ave 14th, 8-17 (concede 2 a game). Famalicao 13th, 1-4-3, won 4-0 at Nacional.",
+    "home_away": "Rio Ave home: 0-2 Porto, 0-4 Sporting, 3-3 Estrela.",
+    "manager_news": "Carvalhal's first season at Famalicao; no news.",
+    "motivation": "Both in the bottom half.",
+    "tactics": "Rio Ave's leaky defence against a Famalicao side that draws a lot."
+   },
+   "risks": [
+    "Weakest pick of the week: bet small or skip"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  },
+  {
+   "match": "Sporting v Academico de Viseu",
+   "kickoff": "2026-10-25 20:30",
+   "venue": "Estadio Jose Alvalade",
+   "outcomes": {
+    "H": 0.74,
+    "D": 0.16,
+    "A": 0.1,
+    "over15": 0.85,
+    "over25": 0.63,
+    "over35": 0.38,
+    "btts": 0.48
+   },
+   "best_bet": {
+    "market": "1X2",
+    "selection": "H",
+    "label": "Sporting to win",
+    "p": 0.74,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.37
+   },
+   "alternatives": [
+    {
+     "market": "O/U 1.5",
+     "selection": "Over",
+     "label": "Over 1.5 goals",
+     "p": 0.85,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.2
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [
+    {
+     "factor": "injuries",
+     "delta": -0.02,
+     "reason": "Debast, Zalazar and Nuno Santos out"
+    },
+    {
+     "factor": "fatigue",
+     "delta": -0.01,
+     "reason": "Champions League v LASK on Wednesday"
+    }
+   ],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "no price yet; Sporting likely about 1.30",
+    "injuries": "Sporting: Debast (muscle), Zalazar, Nuno Santos (long-term) out; Ibrahima Ba back in training.",
+    "fatigue": "Sporting: LASK at home Wednesday, four days' rest. Viseu: normal week.",
+    "form": "Sporting unbeaten (5-3-0, 20-9). Viseu 6th: drew 2-2 at Benfica and 2-2 at Maritimo, won at Estrela, beat Estoril.",
+    "home_away": "Every Sporting home game had 2+ goals (3-2, 3-1, 2-0, 2-2, 3-1).",
+    "manager_news": "Rui Borges' Sporting doing well in the Champions League.",
+    "motivation": "Sporting 6 points behind Porto, can't drop points.",
+    "tactics": "Viseu dangerous on the break; Sporting dominate at home."
+   },
+   "risks": [
+    "Viseu already drew at Benfica",
+    "Rotation after LASK"
+   ],
+   "sources": [
+    "https://maisfutebol.iol.pt/sporting/rui-borges/dores-de-cabeca-para-rui-borges-tres-baixas-no-treino-de-preparacao-ao-lask",
+    "https://www.ojogo.pt/futebol/artigo/debast-nao-devera-ser-opcao-para-o-sporting-frente-ao-lask-linz/18137717",
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  },
+  {
+   "match": "Santa Clara v Benfica",
+   "kickoff": "2026-10-26 18:45",
+   "venue": "Estadio de Sao Miguel",
+   "outcomes": {
+    "H": 0.2,
+    "D": 0.27,
+    "A": 0.53,
+    "over15": 0.72,
+    "over25": 0.45,
+    "over35": 0.23,
+    "btts": 0.45
+   },
+   "best_bet": {
+    "market": "Double chance",
+    "selection": "X2",
+    "label": "Benfica or draw",
+    "p": 0.8,
+    "odds_seen": null,
+    "odds_source": "no price published yet",
+    "min_odds": 1.27
+   },
+   "alternatives": [
+    {
+     "market": "O/U 3.5",
+     "selection": "Under",
+     "label": "Under 3.5 goals",
+     "p": 0.77,
+     "odds_seen": null,
+     "odds_source": "no price published yet",
+     "min_odds": 1.32
+    }
+   ],
+   "confidence": "medium",
+   "adjustments": [
+    {
+     "factor": "fatigue",
+     "delta": -0.04,
+     "reason": "Benfica play Omonia in Nicosia on Thursday, then fly to the Azores with three days' rest"
+    }
+   ],
+   "factors": {
+    "referee": "not appointed yet (Conselho de Arbitragem names referees about two days before)",
+    "weather": "forecast too far out on Sunday; check on matchday",
+    "h2h": "small factor; not weighted",
+    "lineups": "predicted XIs not out yet; check about 1 h before kick-off",
+    "market": "no price yet",
+    "injuries": "Benfica: Barrenechea and Umeh out; Kaminski and Banjaqui doubtful (thigh). Santa Clara: no current report.",
+    "fatigue": "Benfica: Europa League in Cyprus Thursday plus a long trip. Santa Clara: full week.",
+    "form": "Santa Clara 4th and unbeaten (5-3-0, 12-4). Benfica 2nd (24-7), won 2-0 at Milan in Europe.",
+    "home_away": "Santa Clara home: 2-2 Nacional, 1-0 Famalicao, 4-0 Rio Ave, 0-0 Braga.",
+    "manager_news": "Marco Silva's Benfica in form; no issues reported.",
+    "motivation": "Benfica 5 points behind Porto; Santa Clara chasing Europe.",
+    "tactics": "Santa Clara's tight defence against Benfica's attack (Pavlidis)."
+   },
+   "risks": [
+    "Santa Clara have conceded only 4 in 8 and could win if Benfica are tired"
+   ],
+   "sources": [
+    "https://www.abola.pt/noticias/omonia-benfica-esperanca-para-duas-aguias-2026101716444565134",
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+   ]
+  }
+ ],
+ "skipped": []
+}
