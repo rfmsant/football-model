@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-18T20:53:50Z",
+ "updated_at": "2026-10-18T23:21:54Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -22,11 +22,11 @@
     "draw_pct": 0.33
    },
    "weather": {
-    "temperature_2m": 15.7,
+    "temperature_2m": 15.5,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.4,
-    "wind_gusts_10m": 9.0,
+    "wind_speed_10m": 2.3,
+    "wind_gusts_10m": 10.4,
     "weather_code": 0,
     "impact": "no impact expected"
    },
@@ -95,15 +95,15 @@
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.65,
-    "A": 4.9,
-    "D": 3.7,
+    "H": 1.69,
+    "A": 4.8,
+    "D": 3.65,
     "over25": 1.91,
     "under25": 1.77,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
-    "price": 1.14,
+    "price": 1.16,
     "derived": true
    }
   },
