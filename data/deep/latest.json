@@ -1,505 +1,493 @@
 {
- "date": "2026-10-06",
- "generated_at": "2026-10-06T14:58:48Z",
- "summary": "End of the international break: 1 of 10 bets meet the bar (70%+ at 1.40+), and it is tonight's Scotland v Slovenia over 1.5, borderline at an estimated price. There is little current-week club news ahead of the 9-10 Oct games, so most probabilities stay at the model's figure. The main new information is Real Madrid's defensive crisis plus Mbappe's absence, which lifts Madrid v Villarreal BTTS to 67%.",
+ "date": "2026-10-18",
+ "generated_at": "2026-10-18T15:30:00Z",
+ "summary": "No bet reaches the 70% bar today: the model is anchored to the bookmakers, and this week's news (mostly Spurs' fresh injuries and Real Madrid's absences) does not move any price past 70%. The best options are tonight's Real Madrid v Sevilla and Nijmegen v Sittard overs, Spurs v Coventry under 3.5, and a week-ahead Arsenal win. Current-week news for Tuesday's League One and Two games is thin, so those stay at the model's figure apart from Saturday's results; check line-ups.",
  "bets": [
   {
-   "game_id": "INT-2026-10-06-Scotland-Slovenia",
-   "match": "Scotland v Slovenia",
-   "league": "INT",
-   "league_name": "Nations League",
-   "kickoff": "2026-10-06 19:45",
-   "market": "O/U 1.5",
-   "selection": "Over",
-   "label": "Over 1.5 goals",
-   "model_p": 0.7032,
-   "final_p": 0.7032,
+   "game_id": "E0-20261024-125",
+   "match": "Arsenal v Everton",
+   "league": "E0",
+   "league_name": "Premier League",
+   "kickoff": "2026-10-24 15:00",
+   "market": "1X2",
+   "selection": "H",
+   "label": "Arsenal to win",
+   "model_p": 0.6945,
    "odds_seen": 1.43,
-   "odds_source": "model estimate from bookmaker 1X2 + O/U prices (no direct price found); check Betclic",
-   "min_odds": 1.44,
-   "meets_bar": true,
-   "confidence": "low",
-   "adjustments": [],
-   "analysis": {
-    "injuries": "no current-week report found; no adjustment",
-    "lineups": "Both sides under new coaches (Pocognoli for Scotland, Cesar for Slovenia); line-ups about 1 h before kick-off.",
-    "players": "no current-week report found; no adjustment",
-    "form": "Model expects about 2.1 goals; Scotland 52% to win.",
-    "tactics": "New coaches make the style hard to read; Scotland were cagey under Clarke.",
-    "referee": "no current-week report found; no adjustment",
-    "weather": "Glasgow evening, nothing notable in data.",
-    "motivation": "Nations League group game, both need points early.",
-    "market": "Over 1.5 estimated at about 1.43; no movement data.",
-    "h2h": "Scotland unbeaten v Slovenia."
-   },
-   "risks": [
-    "New-coach caution can mean a tight 1-0 or 0-0",
-    "Odds are estimated; take only at 1.44+"
-   ],
-   "verdict": "BET SMALL",
-   "sources": [
-    "https://www.sportsmole.co.uk/football/slovenia/uefa-nations-league/preview/slovenia-vs-scotland-prediction-team-news-lineups_605706.html",
-    "https://starting11.com/fixtures/scotland-vs-slovenia"
-   ],
-   "rank": 1
-  },
-  {
-   "game_id": "P1-20261010-76",
-   "match": "Maritimo v Porto",
-   "league": "P1",
-   "league_name": "Primeira Liga",
-   "kickoff": "2026-10-10 18:00",
-   "market": "BTTS",
-   "selection": "No",
-   "label": "Both teams NOT to score",
-   "model_p": 0.6589,
-   "final_p": 0.6589,
-   "odds_seen": 1.68,
-   "odds_source": "model estimate from bookmaker 1X2 + O/U prices (no direct price found); check Betclic",
-   "min_odds": 1.54,
-   "meets_bar": false,
+   "odds_source": "model bookmaker feed (real price), 2026-10-18 11:20Z",
    "confidence": "low",
    "adjustments": [],
    "analysis": {
     "injuries": "no current-week report found; no adjustment",
     "lineups": "no current-week report found; no adjustment",
     "players": "no current-week report found; no adjustment",
-    "form": "Porto top; model xG 1.89 v 0.60.",
-    "tactics": "Porto should dominate; Maritimo's attacking output is low.",
+    "form": "Model's strongest priced club bet in the next week (69%); the game is six days away.",
+    "tactics": "no current-week report found; no adjustment",
     "referee": "no current-week report found; no adjustment",
-    "weather": "n/a",
-    "motivation": "Porto leading the league.",
-    "market": "Porto shortened 1.32 to 1.28.",
-    "h2h": "n/a"
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "About 1.43; expect movement after midweek European games and team news.",
+    "h2h": "no current-week report found; no adjustment"
    },
    "risks": [
-    "One listing (theScore) shows the game on 11 Oct; confirm the date",
-    "Odds estimated"
+    "Six days out; injuries from midweek fixtures unknown",
+    "Price may shorten below 1.40"
    ],
-   "verdict": "BET SMALL",
+   "verdict": "WAIT FOR LINE-UPS",
    "sources": [
-    "https://www.thescore.com/ptpl/event/100532"
+    "https://rfmsant.github.io/football-model/"
    ],
-   "rank": 2
+   "final_p": 0.6945,
+   "min_odds": 1.46,
+   "meets_bar": false,
+   "rank": 1
   },
   {
-   "game_id": "SP1-20261010-22",
-   "match": "Real Madrid v Villarreal",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "kickoff": "2026-10-10 20:00",
-   "market": "BTTS",
-   "selection": "Yes",
-   "label": "Both teams to score",
-   "model_p": 0.6438,
-   "final_p": 0.6738,
-   "odds_seen": 1.52,
-   "odds_source": "model estimate from bookmaker 1X2 + O/U prices (no direct price found); check Betclic",
-   "min_odds": 1.5,
-   "meets_bar": false,
+   "game_id": "E0-20261019-9",
+   "match": "Tottenham v Coventry",
+   "league": "E0",
+   "league_name": "Premier League",
+   "kickoff": "2026-10-19 20:00",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "model_p": 0.6313,
+   "odds_seen": 1.54,
+   "odds_source": "model bookmaker feed (real price), 2026-10-18 11:20Z; no movement since 16 Oct",
    "confidence": "medium",
    "adjustments": [
     {
      "factor": "injuries",
-     "delta": 0.05,
-     "reason": "Madrid centre-back crisis: Huijsen suspended (derby red), Asencio post-surgery, Rudiger/Carvajal/Mendy/Alexander-Arnold out, Konate and Militao doubtful"
+     "delta": 0.02,
+     "reason": "Spurs lose more attacking options: Savio and Bergvall newly out for weeks (De Zerbi, 18 Oct), plus Simons, Odobert, Mudryk; Kulusevski only fit for the bench"
+    },
+    {
+     "factor": "injuries",
+     "delta": -0.01,
+     "reason": "Coventry get Awoniyi back from a ban and Kesler-Hayden back from a hamstring problem"
+    }
+   ],
+   "analysis": {
+    "injuries": "Spurs out: Savio (muscle), Bergvall (knee), Porro (muscle), Simons, Odobert (knee), Mudryk (ankle); Bentancur suspended (3 games). Coventry out: Woolfenden, Amenda, Eccles, Haji Wright.",
+    "lineups": "Predicted Spurs 4-2-3-1: Kinsky; Gray, Van Hecke, Van de Ven, Udogie; Fernandes, Tonali; Kudus, Maddison, Marmoush; Solanke. Coventry 3-4-2-1 with Cherif up front.",
+    "players": "Solanke scored the late equaliser at Old Trafford; Maddison is back in the side.",
+    "form": "Spurs are winless in the league (3 pts from 6) but have kept games low-scoring: 0-0, 0-0, 1-1 in three of the last four. Coventry have won two in a row (4-1 v Newcastle, 1-0 at Forest).",
+    "tactics": "Depleted Spurs attack against Coventry's back three; Sports Mole predicts 1-0.",
+    "referee": "Andy Madley: 3.2 goals/game in 5 games this season (small sample).",
+    "weather": "12 C, dry, light wind.",
+    "motivation": "Spurs 19th and under pressure; Coventry chasing a third straight win.",
+    "market": "Under 3.5 at about 1.54, unchanged.",
+    "h2h": "No recent league meetings."
+   },
+   "risks": [
+    "Coventry's 4-1 and 0-5 games show they can be in high-scoring games",
+    "Madley games have averaged 3.2 goals"
+   ],
+   "verdict": "BET SMALL",
+   "sources": [
+    "https://www.sportsmole.co.uk/football/spurs/preview/spurs-vs-coventry-prediction-team-news-lineups_607110.html",
+    "https://www.sportsmole.co.uk/football/spurs/injury-news/news/double-blow-for-de-zerbi-as-spurs-suffer-two-new-injuries-before-coventry_607147.html",
+    "https://www.tottenhamhotspur.com/news/1178784/spurs-vs-coventry-every-word-of-roberto-de-zerbis-pre-match-press-conference"
+   ],
+   "final_p": 0.6413,
+   "min_odds": 1.58,
+   "meets_bar": false,
+   "rank": 2
+  },
+  {
+   "game_id": "E3-20261020-90",
+   "match": "Barnet v Swindon",
+   "league": "E3",
+   "league_name": "League Two",
+   "kickoff": "2026-10-20 19:45",
+   "market": "O/U 2.5",
+   "selection": "Over",
+   "label": "Over 2.5 goals",
+   "model_p": 0.6445,
+   "odds_seen": 1.49,
+   "odds_source": "model bookmaker feed (real price), 2026-10-18 11:20Z; shortened from 1.54",
+   "confidence": "low",
+   "adjustments": [],
+   "analysis": {
+    "injuries": "no current-week report found; no adjustment",
+    "lineups": "no current-week report found; no adjustment",
+    "players": "no current-week report found; no adjustment",
+    "form": "Barnet won 2-1 at Tranmere on Saturday and have scored 2+ in five of the last six; Swindon drew 1-1 with Walsall. Saturday 17 Oct results (Sky Sports scores page) post-date the dossier's last match data.",
+    "tactics": "no current-week report found; no adjustment",
+    "referee": "no current-week report found; no adjustment",
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "Over 2.5 shortened from 1.54 to 1.49; Barnet win shortened from 1.63 to 1.50.",
+    "h2h": "no current-week report found; no adjustment"
+   },
+   "risks": [
+    "Swindon have scored 0-1 in five of their last six"
+   ],
+   "verdict": "WAIT FOR LINE-UPS",
+   "sources": [
+    "https://www.skysports.com/football-scores-fixtures/2026-10-17"
+   ],
+   "final_p": 0.6445,
+   "min_odds": 1.57,
+   "meets_bar": false,
+   "rank": 3
+  },
+  {
+   "game_id": "SP1-20261018-40",
+   "match": "Real Madrid v Sevilla",
+   "league": "SP1",
+   "league_name": "La Liga",
+   "kickoff": "2026-10-18 20:00",
+   "market": "O/U 2.5",
+   "selection": "Over",
+   "label": "Over 2.5 goals",
+   "model_p": 0.6758,
+   "odds_seen": 1.42,
+   "odds_source": "model bookmaker feed (real price), 2026-10-18 11:20Z",
+   "confidence": "medium",
+   "adjustments": [
+    {
+     "factor": "injuries",
+     "delta": 0.02,
+     "reason": "Madrid defence without Militao, Asencio and Mendy, which raises Sevilla's chance of scoring"
     },
     {
      "factor": "injuries",
      "delta": -0.02,
-     "reason": "Mbappe (41% of Madrid xG) out about 2 weeks with a knee hyperextension from France duty; slightly lowers Madrid's chance of scoring"
+     "reason": "Vinicius suspended, removing one of Madrid's main goal threats"
+    },
+    {
+     "factor": "injuries",
+     "delta": 0.01,
+     "reason": "Sevilla centre-back Marcao out"
+    },
+    {
+     "factor": "injuries",
+     "delta": -0.01,
+     "reason": "Sevilla striker Isaac Romero suspended; Ure isolated up front"
     }
    ],
    "analysis": {
-    "injuries": "Madrid: Huijsen (suspended), Asencio, Rudiger, Carvajal, Mendy, Alexander-Arnold out; Konate, Militao doubtful; Mbappe out. Villarreal: nothing current found.",
-    "lineups": "Makeshift Madrid back line likely.",
-    "players": "Mbappe 7 goals, 41% of team xG: a big loss, but Madrid still create plenty.",
-    "form": "Model xG 2.35 v 1.32.",
-    "tactics": "Villarreal's transition threat against an improvised defence.",
+    "injuries": "Madrid: Vinicius (suspended), Militao, Rodrygo, Mendy, Asencio out. Sevilla: Marcao, Guridi, Sierra out, Isaac Romero suspended, Kochorashvili doubtful.",
+    "lineups": "Predicted Madrid 4-2-3-1: Courtois; Dumfries, Huijsen, Konate, Cucurella; Valverde, Tchouameni; Guler, Bellingham, Diomande; Mbappe.",
+    "players": "Mbappe leads the line with Bellingham and Guler behind.",
+    "form": "SI predicts 3-1 Madrid.",
+    "tactics": "no current-week report found; no adjustment",
     "referee": "no current-week report found; no adjustment",
-    "weather": "Dry, 20C.",
-    "motivation": "Madrid 4th and need points; Villarreal mid-table.",
-    "market": "O2.5 1.31, BTTS estimated 1.52; stable.",
-    "h2h": "Usually open games."
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "Madrid at home in the title race; Sevilla injury-hit.",
+    "market": "Over 2.5 about 1.42.",
+    "h2h": "no current-week report found; no adjustment"
    },
    "risks": [
-    "Mbappe's absence could reduce Madrid's scoring",
-    "Madrid can still keep a clean sheet"
+    "Without Vinicius, Madrid may win 2-0 with Sevilla offering little"
    ],
    "verdict": "BET SMALL",
    "sources": [
-    "https://gulfnews.com/sport/football/kylian-mbappe-out-for-two-weeks-or-more-with-knee-injury-say-real-1.500689112",
-    "https://www.ysscores.com/en/news/14059901/defensive-crisis-hits-real-madrid-ahead-of-villarreal-clash"
+    "https://www.sportsmole.co.uk/football/real-madrid/race-for-the-la-liga-title/team-news/real-madrid-vs-sevilla-injury-suspension-list-predicted-xis_607031.html",
+    "https://www.si.com/soccer/real-madrid-vs-sevilla-preview-predictions-lineups-10-18-26",
+    "https://www.fotmob.com/matches/sevilla-vs-real-madrid/2ddv45"
    ],
-   "rank": 3
-  },
-  {
-   "game_id": "T1-20261009-82",
-   "match": "Galatasaray v Kasimpasa",
-   "league": "T1",
-   "league_name": "Super Lig",
-   "kickoff": "2026-10-09 18:00",
-   "market": "O/U 2.5",
-   "selection": "Over",
-   "label": "Over 2.5 goals",
-   "model_p": 0.6825,
-   "final_p": 0.6925,
-   "odds_seen": 1.42,
-   "odds_source": "market average in model data, 2026-10-06 13:26 UTC",
-   "min_odds": 1.46,
+   "final_p": 0.6758,
+   "min_odds": 1.5,
    "meets_bar": false,
-   "confidence": "medium",
-   "adjustments": [
-    {
-     "factor": "injuries",
-     "delta": 0.01,
-     "reason": "Osimhen and Lemina expected fit; Kasimpasa captain Aytac Kara out after surgery"
-    }
-   ],
-   "analysis": {
-    "injuries": "Galatasaray: Singo out, Sallai likely out until late October, Osimhen and Lemina expected fit. Kasimpasa: Aytac Kara out.",
-    "lineups": "Osimhen expected to lead the line.",
-    "players": "no current-week report found; no adjustment",
-    "form": "Model xG 2.14 v 0.66.",
-    "tactics": "Home dominance; goals likely to come mostly from one side.",
-    "referee": "no current-week report found; no adjustment",
-    "weather": "n/a",
-    "motivation": "Galatasaray 2nd, chasing the top.",
-    "market": "1.42, flat since open.",
-    "h2h": "n/a"
-   },
-   "risks": [
-    "Relies on Galatasaray scoring 3+ themselves",
-    "Could not confirm the article's date"
-   ],
-   "verdict": "WAIT FOR LINE-UPS",
-   "sources": [
-    "https://www.fanatik.com.tr/galatasaray/kasimpasa-macina-yetisecekler-mi-galatasarayda-4-yildiz-icin-seferberlik-2504761",
-    "https://www.milligazete.com.tr/osimhen-lemina-sallai-ve-singo-kasimpasa-macinda-oynayacak-mi-galatasarayda-sakat-futbolcularin-son-durumu-ne"
-   ],
    "rank": 4
   },
   {
-   "game_id": "F1-20261010-40",
-   "match": "Brest v Angers",
-   "league": "F1",
-   "league_name": "Ligue 1",
-   "kickoff": "2026-10-10 19:45",
-   "market": "Draw no bet",
-   "selection": "H",
-   "label": "Brest draw no bet",
-   "model_p": 0.6676,
-   "final_p": 0.6676,
-   "odds_seen": 1.45,
-   "odds_source": "model estimate from bookmaker 1X2 + O/U prices (no direct price found); check Betclic",
-   "min_odds": 1.52,
-   "meets_bar": false,
+   "game_id": "N1-20261018-33",
+   "match": "Nijmegen v For Sittard",
+   "league": "N1",
+   "league_name": "Eredivisie",
+   "kickoff": "2026-10-18 19:00",
+   "market": "O/U 2.5",
+   "selection": "Over",
+   "label": "Over 2.5 goals",
+   "model_p": 0.6844,
+   "odds_seen": 1.4,
+   "odds_source": "model bookmaker feed (real price), 2026-10-18 11:20Z",
    "confidence": "low",
    "adjustments": [],
    "analysis": {
     "injuries": "no current-week report found; no adjustment",
     "lineups": "no current-week report found; no adjustment",
-    "players": "Doumbia 4 goals, 37% of team xG.",
-    "form": "Model xG 1.80 v 1.08.",
+    "players": "no current-week report found; no adjustment",
+    "form": "Model expects an open game; 68% for 3+ goals.",
     "tactics": "no current-week report found; no adjustment",
     "referee": "no current-week report found; no adjustment",
-    "weather": "Dry, 14C.",
-    "motivation": "Mid-table.",
-    "market": "Brest drifted 1.87 to 1.96 (against this bet).",
-    "h2h": "n/a"
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "Over 2.5 about 1.40, right on the bar.",
+    "h2h": "no current-week report found; no adjustment"
    },
    "risks": [
-    "Market drifting away from Brest"
+    "No current-week team news found",
+    "Price is right at the 1.40 floor; take only at 1.47+ for value"
    ],
-   "verdict": "WAIT FOR LINE-UPS",
+   "verdict": "BET SMALL",
    "sources": [
-    "https://www.footmercato.net/live/5893296234964335306-brest-vs-angers"
+    "https://club.betcity.nl/sport/voorbeschouwingen/nec-nijmegen-fortuna-sittard"
    ],
+   "final_p": 0.6844,
+   "min_odds": 1.48,
+   "meets_bar": false,
    "rank": 5
   },
   {
-   "game_id": "D1-20261010-4",
-   "match": "Hoffenheim v Hamburg",
-   "league": "D1",
-   "league_name": "Bundesliga",
-   "kickoff": "2026-10-10 14:30",
-   "market": "1X2",
-   "selection": "H",
-   "label": "Hoffenheim to win",
-   "model_p": 0.6636,
-   "final_p": 0.6736,
-   "odds_seen": 1.42,
-   "odds_source": "market average in model data, 2026-10-06 13:26 UTC",
-   "min_odds": 1.5,
-   "meets_bar": false,
+   "game_id": "E2-20261020-71",
+   "match": "Huddersfield v Peterboro",
+   "league": "E2",
+   "league_name": "League One",
+   "kickoff": "2026-10-20 19:45",
+   "market": "O/U 2.5",
+   "selection": "Over",
+   "label": "Over 2.5 goals",
+   "model_p": 0.6623,
+   "odds_seen": 1.44,
+   "odds_source": "model bookmaker feed (real price), 2026-10-18 11:20Z",
    "confidence": "low",
-   "adjustments": [
-    {
-     "factor": "injuries",
-     "delta": 0.01,
-     "reason": "Hamburg's Albert Gronbaek has a muscle tear from international duty"
-    }
-   ],
+   "adjustments": [],
    "analysis": {
-    "injuries": "Hamburg: Gronbaek out. Hoffenheim: nothing current found.",
+    "injuries": "Yorkshire Post reported Murray Wallace (about 8 weeks) and Radinio Balker (2-3 weeks) out for Huddersfield, but the article's date could not be confirmed (page blocked), so no adjustment.",
     "lineups": "no current-week report found; no adjustment",
-    "players": "Daghim 2 assists, 28% of team xA.",
-    "form": "Model xG 2.29 v 1.10.",
+    "players": "no current-week report found; no adjustment",
+    "form": "Huddersfield won 2-0 at Plymouth on Saturday; Peterborough drew 2-2 with Burton. Saturday 17 Oct results (Sky Sports scores page) post-date the dossier's last match data.",
     "tactics": "no current-week report found; no adjustment",
     "referee": "no current-week report found; no adjustment",
-    "weather": "Windy (29 km/h), 53% chance of rain.",
-    "motivation": "Both in the bottom half.",
-    "market": "Stable around 1.42.",
-    "h2h": "n/a"
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "no current-week report found; no adjustment",
+    "h2h": "no current-week report found; no adjustment"
    },
    "risks": [
-    "Wind and rain add randomness",
-    "Bottom-half home side at a short price"
+    "Huddersfield's clean sheet at Plymouth suggests a tighter defence than the model assumes"
    ],
    "verdict": "WAIT FOR LINE-UPS",
    "sources": [
-    "https://www.footmercato.net/live/2744626068533104704-hoffenheim-vs-hambourg"
+    "https://www.skysports.com/football-scores-fixtures/2026-10-17",
+    "https://www.yorkshirepost.co.uk/sport/football/huddersfield-town-boss-martin-drury-reveals-significant-injury-blow-plus-updates-on-two-other-key-players-9285173"
    ],
+   "final_p": 0.6623,
+   "min_odds": 1.53,
+   "meets_bar": false,
    "rank": 6
   },
   {
-   "game_id": "N1-20261010-57",
-   "match": "Feyenoord v AZ Alkmaar",
-   "league": "N1",
-   "league_name": "Eredivisie",
-   "kickoff": "2026-10-10 17:45",
+   "game_id": "E2-20261020-65",
+   "match": "Luton v Barnsley",
+   "league": "E2",
+   "league_name": "League One",
+   "kickoff": "2026-10-20 19:45",
    "market": "O/U 2.5",
    "selection": "Over",
    "label": "Over 2.5 goals",
-   "model_p": 0.6823,
-   "final_p": 0.6823,
-   "odds_seen": 1.4,
-   "odds_source": "market average in model data, 2026-10-06 13:26 UTC",
-   "min_odds": 1.49,
-   "meets_bar": false,
+   "model_p": 0.6675,
+   "odds_seen": 1.41,
+   "odds_source": "model bookmaker feed (real price), 2026-10-18 11:20Z",
    "confidence": "low",
    "adjustments": [],
    "analysis": {
     "injuries": "no current-week report found; no adjustment",
     "lineups": "no current-week report found; no adjustment",
     "players": "no current-week report found; no adjustment",
-    "form": "Model xG 1.91 v 1.29; BTTS 66%.",
-    "tactics": "Top-of-table clash (2nd v 1st), both attack-minded.",
+    "form": "Luton lost 2-1 at MK Dons and Barnsley lost 1-2 at home to Cambridge on Saturday, so both defences keep conceding. Saturday 17 Oct results (Sky Sports scores page) post-date the dossier's last match data.",
+    "tactics": "no current-week report found; no adjustment",
     "referee": "no current-week report found; no adjustment",
-    "weather": "n/a",
-    "motivation": "Top-of-table game.",
-    "market": "Stable at 1.40.",
-    "h2h": "n/a"
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "no current-week report found; no adjustment",
+    "h2h": "no current-week report found; no adjustment"
    },
    "risks": [
-    "Big games can be cagey"
+    "Price is barely above 1.40"
    ],
    "verdict": "WAIT FOR LINE-UPS",
    "sources": [
-    "https://www.voetbalwedden.net/wedstrijden/az-feyenoord/opstellingen"
+    "https://www.skysports.com/football-scores-fixtures/2026-10-17"
    ],
+   "final_p": 0.6675,
+   "min_odds": 1.52,
+   "meets_bar": false,
    "rank": 7
   },
   {
-   "game_id": "N1-20261010-56",
-   "match": "Go Ahead Eagles v Sparta Rotterdam",
-   "league": "N1",
-   "league_name": "Eredivisie",
-   "kickoff": "2026-10-10 15:30",
-   "market": "O/U 2.5",
-   "selection": "Over",
-   "label": "Over 2.5 goals",
-   "model_p": 0.6767,
-   "final_p": 0.6767,
-   "odds_seen": 1.4,
-   "odds_source": "market average in model data, 2026-10-06 13:26 UTC",
-   "min_odds": 1.5,
-   "meets_bar": false,
-   "confidence": "low",
-   "adjustments": [],
-   "analysis": {
-    "injuries": "no current-week report found; no adjustment",
-    "lineups": "no current-week report found; no adjustment",
-    "players": "no current-week report found; no adjustment",
-    "form": "Model xG 2.15 v 1.48.",
-    "tactics": "no current-week report found; no adjustment",
-    "referee": "no current-week report found; no adjustment",
-    "weather": "n/a",
-    "motivation": "Mid-table.",
-    "market": "Stable at 1.40.",
-    "h2h": "n/a"
-   },
-   "risks": [
-    "Price has no margin"
-   ],
-   "verdict": "WAIT FOR LINE-UPS",
-   "sources": [],
-   "rank": 8
-  },
-  {
-   "game_id": "T1-20261010-84",
-   "match": "Alanyaspor v Erzurumspor",
-   "league": "T1",
-   "league_name": "Super Lig",
-   "kickoff": "2026-10-10 14:00",
+   "game_id": "E2-20261020-67",
+   "match": "Burton v Bradford",
+   "league": "E2",
+   "league_name": "League One",
+   "kickoff": "2026-10-20 19:45",
    "market": "Draw no bet",
-   "selection": "H",
-   "label": "Alanyaspor draw no bet",
-   "model_p": 0.6688,
-   "final_p": 0.6688,
-   "odds_seen": 1.4,
-   "odds_source": "model estimate from bookmaker 1X2 + O/U prices (no direct price found); check Betclic",
-   "min_odds": 1.52,
-   "meets_bar": false,
-   "confidence": "low",
-   "adjustments": [],
-   "analysis": {
-    "injuries": "no current-week report found; no adjustment",
-    "lineups": "no current-week report found; no adjustment",
-    "players": "no current-week report found; no adjustment",
-    "form": "Model xG 1.60 v 0.69.",
-    "tactics": "no current-week report found; no adjustment",
-    "referee": "no current-week report found; no adjustment",
-    "weather": "n/a",
-    "motivation": "Alanyaspor 5th, Erzurumspor 14th.",
-    "market": "Stable.",
-    "h2h": "n/a"
-   },
-   "risks": [
-    "Low-scoring profile (O2.5 42%) makes a draw likely"
-   ],
-   "verdict": "PASS",
-   "sources": [
-    "https://www.espn.com.au/football/match/_/gameId/750101"
-   ],
-   "rank": 9
-  },
-  {
-   "game_id": "D1-20261010-5",
-   "match": "Paderborn v Stuttgart",
-   "league": "D1",
-   "league_name": "Bundesliga",
-   "kickoff": "2026-10-10 14:30",
-   "market": "O/U 2.5",
-   "selection": "Over",
-   "label": "Over 2.5 goals",
-   "model_p": 0.6782,
-   "final_p": 0.6682,
-   "odds_seen": 1.4,
-   "odds_source": "market average in model data, 2026-10-06 13:26 UTC",
-   "min_odds": 1.52,
-   "meets_bar": false,
+   "selection": "A",
+   "label": "Bradford draw no bet",
+   "model_p": 0.6264,
+   "odds_seen": 1.47,
+   "odds_source": "estimated from 1X2 (Bradford 2.05); check Betclic",
    "confidence": "low",
    "adjustments": [
     {
-     "factor": "weather",
-     "delta": -0.01,
-     "reason": "Wind 30 km/h and 45% chance of rain forecast"
+     "factor": "form",
+     "delta": 0.01,
+     "reason": "Bradford beat Stevenage 2-0 on Saturday while Burton drew 2-2 at Peterborough; results not yet in the dossier"
     }
    ],
    "analysis": {
     "injuries": "no current-week report found; no adjustment",
     "lineups": "no current-week report found; no adjustment",
-    "players": "Curda 33% of Paderborn xA.",
-    "form": "Model xG 1.18 v 1.63.",
+    "players": "no current-week report found; no adjustment",
+    "form": "Bradford 2nd and won again Saturday; Burton 10th. Saturday 17 Oct results (Sky Sports scores page) post-date the dossier's last match data.",
     "tactics": "no current-week report found; no adjustment",
     "referee": "no current-week report found; no adjustment",
-    "weather": "Windy and possibly wet.",
-    "motivation": "Both lower half.",
-    "market": "Stable at 1.40.",
-    "h2h": "n/a"
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "Bradford win shortened slightly from 2.10 to 2.05.",
+    "h2h": "no current-week report found; no adjustment"
    },
    "risks": [
-    "Weather"
+    "Odds are estimated",
+    "Bradford's only recent defeat was in a game they were expected to win"
    ],
-   "verdict": "PASS",
+   "verdict": "WAIT FOR LINE-UPS",
    "sources": [
-    "https://starting11.com/fixtures/sc-paderborn-07-vs-vfb-stuttgart-20261010"
+    "https://www.skysports.com/football-scores-fixtures/2026-10-17"
    ],
+   "final_p": 0.6364,
+   "min_odds": 1.59,
+   "meets_bar": false,
+   "rank": 8
+  },
+  {
+   "game_id": "E2-20261020-70",
+   "match": "Doncaster v Stockport",
+   "league": "E2",
+   "league_name": "League One",
+   "kickoff": "2026-10-20 19:45",
+   "market": "Draw no bet",
+   "selection": "A",
+   "label": "Stockport draw no bet",
+   "model_p": 0.6458,
+   "odds_seen": 1.42,
+   "odds_source": "estimated from 1X2 (Stockport 1.90); check Betclic",
+   "confidence": "low",
+   "adjustments": [
+    {
+     "factor": "form",
+     "delta": 0.01,
+     "reason": "Stockport beat Bromley 1-0 on Saturday; Doncaster lost 2-1 at Leicester; results not yet in the dossier"
+    }
+   ],
+   "analysis": {
+    "injuries": "no current-week report found; no adjustment",
+    "lineups": "no current-week report found; no adjustment",
+    "players": "no current-week report found; no adjustment",
+    "form": "Stockport 3rd; Saturday 17 Oct results (Sky Sports scores page) post-date the dossier's last match data.",
+    "tactics": "no current-week report found; no adjustment",
+    "referee": "no current-week report found; no adjustment",
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "Stockport shortened from 2.05 to 1.90.",
+    "h2h": "no current-week report found; no adjustment"
+   },
+   "risks": [
+    "Odds estimated and close to 1.40"
+   ],
+   "verdict": "WAIT FOR LINE-UPS",
+   "sources": [
+    "https://www.skysports.com/football-scores-fixtures/2026-10-17"
+   ],
+   "final_p": 0.6558,
+   "min_odds": 1.54,
+   "meets_bar": false,
+   "rank": 9
+  },
+  {
+   "game_id": "E3-20261020-93",
+   "match": "Chesterfield v Colchester",
+   "league": "E3",
+   "league_name": "League Two",
+   "kickoff": "2026-10-20 19:45",
+   "market": "O/U 3.5",
+   "selection": "Under",
+   "label": "Under 3.5 goals",
+   "model_p": 0.636,
+   "odds_seen": 1.42,
+   "odds_source": "estimated; check Betclic",
+   "confidence": "low",
+   "adjustments": [],
+   "analysis": {
+    "injuries": "no current-week report found; no adjustment",
+    "lineups": "no current-week report found; no adjustment",
+    "players": "no current-week report found; no adjustment",
+    "form": "Chesterfield lost 1-0 at Port Vale and Colchester drew 0-0 with Exeter on Saturday. Saturday 17 Oct results (Sky Sports scores page) post-date the dossier's last match data.",
+    "tactics": "no current-week report found; no adjustment",
+    "referee": "no current-week report found; no adjustment",
+    "weather": "no current-week report found; no adjustment",
+    "motivation": "no current-week report found; no adjustment",
+    "market": "Chesterfield win shortened from 1.78 to 1.58.",
+    "h2h": "no current-week report found; no adjustment"
+   },
+   "risks": [
+    "Chesterfield games have produced 6, 6 and 4 goals recently"
+   ],
+   "verdict": "WAIT FOR LINE-UPS",
+   "sources": [
+    "https://www.skysports.com/football-scores-fixtures/2026-10-17"
+   ],
+   "final_p": 0.636,
+   "min_odds": 1.59,
+   "meets_bar": false,
    "rank": 10
   }
  ],
  "rejected": [
   {
-   "match": "Kazakhstan v Faroe Islands",
-   "label": "Over 1.5 / no draw",
-   "reason": "Kick-off already passed"
+   "match": "Tottenham v Coventry",
+   "label": "Tottenham to win",
+   "reason": "Model 65% falls to about 63% after Savio, Bergvall, Porro and Bentancur absences; winless side at 1.46, no value"
   },
   {
-   "match": "Moldova v Slovakia",
-   "label": "Slovakia to win",
-   "reason": "71% but priced 1.37, under 1.40"
+   "match": "Rotherham v Newport County",
+   "label": "Rotherham draw no bet",
+   "reason": "Price drifted from 1.69 to 2.02 on the win and Rotherham lost 2-0 at Fleetwood on Saturday"
   },
   {
-   "match": "Belarus v Finland",
-   "label": "Over 1.5 goals",
-   "reason": "Game flagged hard to call"
+   "match": "Barnet v Swindon",
+   "label": "Barnet to win",
+   "reason": "63%, below the bar; Over 2.5 kept instead to avoid stacking one game"
   },
   {
-   "match": "Luxembourg v Bulgaria",
-   "label": "Over 1.5 goals",
-   "reason": "Game flagged hard to call"
+   "match": "Luton v Barnsley",
+   "label": "Luton to win",
+   "reason": "61%; Luton lost at MK Dons on Saturday"
   },
   {
-   "match": "Croatia v Spain",
-   "label": "Over 2.5 goals",
-   "reason": "61% (63% after Spain's defensive withdrawals), too far below the bar"
+   "match": "Reading v Leyton Orient",
+   "label": "Reading to win / Over 2.5",
+   "reason": "61-62%; Reading lost 1-0 at Wigan while Orient beat Blackpool 2-0"
   },
   {
-   "match": "England v Czech Republic",
-   "label": "BTTS No",
-   "reason": "62%, too far below the bar"
+   "match": "Rochdale v Grimsby",
+   "label": "Grimsby draw no bet",
+   "reason": "60%; Grimsby lost 0-2 at home to Northampton on Saturday"
   },
   {
-   "match": "Switzerland v North Macedonia",
-   "label": "Over 2.5 goals",
-   "reason": "64%, below the bar"
+   "match": "Bromley v Leicester",
+   "label": "Under 3.5 / Over 2.5",
+   "reason": "60-62%, estimated prices, Bromley defence too erratic to call"
   },
   {
-   "match": "Sp Braga v Sp Lisbon",
-   "label": "Sporting draw no bet",
-   "reason": "64% at about 1.42, no new team news"
+   "match": "York v Accrington",
+   "label": "Under 3.5 goals",
+   "reason": "63%, estimated price; better options available"
   },
   {
-   "match": "Moreirense v Gil Vicente",
-   "label": "Gil Vicente draw no bet",
-   "reason": "62%, no team news"
+   "match": "Levante v Ath Bilbao",
+   "label": "Athletic draw no bet",
+   "reason": "62% (63% with Levante rotation, 3 games in 9 days); rearranged game confirmed for 21 Oct but below the bar"
   },
   {
-   "match": "PSV Eindhoven v Heerenveen",
-   "label": "Over 3.5 goals",
-   "reason": "61%; windy, 69% chance of rain"
-  },
-  {
-   "match": "Paris SG v Le Mans",
-   "label": "BTTS Yes",
-   "reason": "63%; PSG injury picture for this game unconfirmed"
-  },
-  {
-   "match": "Ajax v Nijmegen",
-   "label": "BTTS Yes",
-   "reason": "63%; Brobbey not fully fit, Edvardsen out for the season"
-  },
-  {
-   "match": "Casa Pia v Santa Clara",
-   "label": "BTTS No / Under 2.5",
-   "reason": "60-61%, below the bar"
-  },
-  {
-   "match": "Lille v Le Havre",
-   "label": "Over 2.5 goals",
-   "reason": "60%, below the bar"
-  },
-  {
-   "match": "Monaco v Toulouse",
-   "label": "Over 2.5 goals",
-   "reason": "60%, below the bar"
-  },
-  {
-   "match": "Samsunspor v Trabzonspor",
-   "label": "Trabzonspor draw no bet",
-   "reason": "64%, no team news"
+   "match": "Freiburg v Bayern Munich / Inter v Fiorentina",
+   "label": "Away win / Home win",
+   "reason": "68-69% but a week away with no current team news; revisit later in the week"
   }
  ],
- "n_meets_bar": 1
+ "n_meets_bar": 0
 }
