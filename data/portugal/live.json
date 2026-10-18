@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-18T18:02:25Z",
+ "updated_at": "2026-10-18T20:53:50Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -228,7 +228,14 @@
     "weather_code": 80,
     "impact": "no impact expected"
    },
-   "prices": null,
+   "prices": {
+    "H": 3.65,
+    "A": 2.0,
+    "D": 3.2,
+    "over25": 2.0,
+    "under25": 1.69,
+    "source": "DraftKings via ESPN"
+   },
    "best_bet_price": null
   },
   "Sporting v Academico de Viseu": {
@@ -264,13 +271,13 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 20.7,
+    "temperature_2m": 19.3,
     "precipitation_probability": 70,
     "precipitation": 0.0,
-    "wind_speed_10m": 19.2,
-    "wind_gusts_10m": 56.5,
-    "weather_code": 1,
-    "impact": "heavy rain or strong wind: fewer goals, more errors"
+    "wind_speed_10m": 5.8,
+    "wind_gusts_10m": 29.9,
+    "weather_code": 3,
+    "impact": "some rain or wind"
    },
    "prices": null,
    "best_bet_price": null
