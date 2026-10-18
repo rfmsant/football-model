@@ -1,0 +1,279 @@
+{
+ "updated_at": "2026-10-18T18:02:25Z",
+ "report": "2026-10-18",
+ "games": {
+  "Braga v Gil Vicente": {
+   "kickoff_utc": "2026-10-19T19:15:00Z",
+   "postponed": false,
+   "round": 2,
+   "stadium": {
+    "name": "Estadio Municipal de Braga",
+    "lat": 41.5617,
+    "lon": -8.4298
+   },
+   "referee": {
+    "name": "Gustavo Correia",
+    "var": "Rui Oliveira",
+    "games": 6,
+    "yellow_pg": 4.6,
+    "red_pg": 0.4,
+    "goals_pg": 2.5,
+    "home_win_pct": 0.5,
+    "draw_pct": 0.33
+   },
+   "weather": {
+    "temperature_2m": 15.7,
+    "precipitation_probability": 0,
+    "precipitation": 0.0,
+    "wind_speed_10m": 2.4,
+    "wind_gusts_10m": 9.0,
+    "weather_code": 0,
+    "impact": "no impact expected"
+   },
+   "prices": {
+    "H": 1.57,
+    "D": 3.78,
+    "A": 5.59,
+    "over25": 2.01,
+    "under25": 1.72,
+    "source": "bookmaker average (model feed)"
+   },
+   "best_bet_price": {
+    "price": 1.11,
+    "derived": true
+   }
+  },
+  "Vitoria SC v Maritimo": {
+   "kickoff_utc": "2026-10-23T19:45:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio D. Afonso Henriques",
+    "lat": 41.4459,
+    "lon": -8.3006
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 13.1,
+    "precipitation_probability": 9,
+    "precipitation": 0.0,
+    "wind_speed_10m": 0.4,
+    "wind_gusts_10m": 5.4,
+    "weather_code": 3,
+    "impact": "no impact expected"
+   },
+   "prices": {
+    "H": 1.53,
+    "A": 5.75,
+    "D": 4.0,
+    "over25": 1.8,
+    "under25": 1.87,
+    "source": "DraftKings via ESPN"
+   },
+   "best_bet_price": {
+    "price": 1.11,
+    "derived": true
+   }
+  },
+  "Estrela v Casa Pia": {
+   "kickoff_utc": "2026-10-24T14:30:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio Jose Gomes",
+    "lat": 38.7522,
+    "lon": -9.2236
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 19.9,
+    "precipitation_probability": 0,
+    "precipitation": 0.0,
+    "wind_speed_10m": 11.2,
+    "wind_gusts_10m": 28.8,
+    "weather_code": 0,
+    "impact": "no impact expected"
+   },
+   "prices": {
+    "H": 1.65,
+    "A": 4.9,
+    "D": 3.7,
+    "over25": 1.91,
+    "under25": 1.77,
+    "source": "DraftKings via ESPN"
+   },
+   "best_bet_price": {
+    "price": 1.14,
+    "derived": true
+   }
+  },
+  "Alverca v Arouca": {
+   "kickoff_utc": "2026-10-24T17:00:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Complexo Desportivo FC Alverca",
+    "lat": 38.8956,
+    "lon": -9.0393
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 18.1,
+    "precipitation_probability": 0,
+    "precipitation": 0.0,
+    "wind_speed_10m": 13.1,
+    "wind_gusts_10m": 26.6,
+    "weather_code": 1,
+    "impact": "no impact expected"
+   },
+   "prices": {
+    "H": 2.1,
+    "A": 3.6,
+    "D": 3.05,
+    "over25": 1.83,
+    "under25": 1.83,
+    "source": "DraftKings via ESPN"
+   },
+   "best_bet_price": null
+  },
+  "Gil Vicente v FC Porto": {
+   "kickoff_utc": "2026-10-24T19:30:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio Cidade de Barcelos",
+    "lat": 41.5444,
+    "lon": -8.6338
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 13.3,
+    "precipitation_probability": 5,
+    "precipitation": 0.0,
+    "wind_speed_10m": 4.8,
+    "wind_gusts_10m": 13.7,
+    "weather_code": 3,
+    "impact": "no impact expected"
+   },
+   "prices": null,
+   "best_bet_price": null
+  },
+  "Estoril v Moreirense": {
+   "kickoff_utc": "2026-10-25T15:30:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio Antonio Coimbra da Mota",
+    "lat": 38.7135,
+    "lon": -9.4013
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 20.9,
+    "precipitation_probability": 3,
+    "precipitation": 0.0,
+    "wind_speed_10m": 12.6,
+    "wind_gusts_10m": 27.4,
+    "weather_code": 2,
+    "impact": "no impact expected"
+   },
+   "prices": {
+    "H": 1.8,
+    "A": 4.0,
+    "D": 3.7,
+    "over25": 1.74,
+    "under25": 1.95,
+    "source": "DraftKings via ESPN"
+   },
+   "best_bet_price": null
+  },
+  "Nacional v Braga": {
+   "kickoff_utc": "2026-10-25T18:00:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio da Madeira",
+    "lat": 32.6704,
+    "lon": -16.8834
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 17.3,
+    "precipitation_probability": 2,
+    "precipitation": 0.0,
+    "wind_speed_10m": 14.8,
+    "wind_gusts_10m": 38.9,
+    "weather_code": 2,
+    "impact": "no impact expected"
+   },
+   "prices": null,
+   "best_bet_price": null
+  },
+  "Rio Ave v Famalicao": {
+   "kickoff_utc": "2026-10-25T18:00:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio do Rio Ave",
+    "lat": 41.3616,
+    "lon": -8.7402
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 17.0,
+    "precipitation_probability": 21,
+    "precipitation": 0.2,
+    "wind_speed_10m": 5.5,
+    "wind_gusts_10m": 16.2,
+    "weather_code": 80,
+    "impact": "no impact expected"
+   },
+   "prices": null,
+   "best_bet_price": null
+  },
+  "Sporting v Academico de Viseu": {
+   "kickoff_utc": "2026-10-25T20:30:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio Jose Alvalade",
+    "lat": 38.7611,
+    "lon": -9.1608
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 18.2,
+    "precipitation_probability": 1,
+    "precipitation": 0.0,
+    "wind_speed_10m": 7.1,
+    "wind_gusts_10m": 22.0,
+    "weather_code": 2,
+    "impact": "no impact expected"
+   },
+   "prices": null,
+   "best_bet_price": null
+  },
+  "Santa Clara v Benfica": {
+   "kickoff_utc": "2026-10-26T18:45:00Z",
+   "postponed": false,
+   "round": 9,
+   "stadium": {
+    "name": "Estadio de Sao Miguel",
+    "lat": 37.7489,
+    "lon": -25.6631
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 20.7,
+    "precipitation_probability": 70,
+    "precipitation": 0.0,
+    "wind_speed_10m": 19.2,
+    "wind_gusts_10m": 56.5,
+    "weather_code": 1,
+    "impact": "heavy rain or strong wind: fewer goals, more errors"
+   },
+   "prices": null,
+   "best_bet_price": null
+  }
+ }
+}

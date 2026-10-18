@@ -92,7 +92,14 @@ H/A, `O/U 1.5|2.5|3.5` Over/Under, `BTTS` Yes/No).
 ## Publish
 ```bash
 python scripts/portugal.py publish data/portugal/<date>.json   # validates and writes latest.json
+cd scripts && python portugal_live.py update && cd ..           # referees, weather, prices for the site
 git add data/portugal && git commit -m "Liga Portugal weekly <date>" && git pull --rebase && git push
 ```
 The push sends the report to Discord (workflow "Liga Portugal weekly to Discord") and redeploys the site, whose
 **Liga Portugal** tab shows every game with the why, the probabilities, each adjustment and the full breakdown.
+
+## Live data
+`scripts/portugal_live.py` (workflow "Liga Portugal live update", every 3 hours) refreshes `data/portugal/live.json`
+for the current report: referee appointments and their season record and kick-off changes and postponements
+(Liga Portugal API), the weather forecast at the stadium (Open-Meteo), and prices (the model's bookmaker feed, then
+ESPN). The site's **Update live data** button reloads it and fetches the weather directly in the browser.

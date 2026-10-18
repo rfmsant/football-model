@@ -25,6 +25,7 @@
   --away: #f0703a; --warn: #f3b44c; --bad: #f97066;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { margin: 0; background: var(--bg); color: var(--text);
   font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 .wrap { max-width: 980px; margin: 0 auto; padding: 16px; }
@@ -96,16 +97,66 @@ tr.dayrow { cursor: pointer; } tr.dayrow:hover td { background: var(--surface-2)
 .ok { color: var(--accent); font-weight: 700; } .no { color: var(--bad); font-weight: 700; }
 .note { font-size: .8rem; color: var(--muted); margin: 6px 0 0; }
 .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
-.best { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
-.best .lbl { font-size: 1.15rem; font-weight: 700; }
-.best .nums { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .9rem; margin-top: 2px; font-variant-numeric: tabular-nums; }
-.why { margin: 8px 0 0; }
-.points { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 6px 0 0; }
+/* ---- Liga Portugal tab ---- */
+.pt-bar { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; margin-bottom: 12px; }
+.pt-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pt-row + .pt-row { margin-top: 8px; }
+.pt-row select, .pt-row input[type=search] { min-height: 36px; padding: 6px 8px; }
+.pt-row input[type=search] { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; flex: 1 1 160px; min-width: 0; }
+.pt-row label { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: .82rem; }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.btn-primary[disabled] { opacity: .6; cursor: progress; }
+.chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.chip { flex: 0 0 auto; min-height: 32px; padding: 4px 11px; border-radius: 99px; font-size: .82rem; }
+.chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.livestat { font-size: .78rem; color: var(--muted); }
+.livestat a { color: var(--muted); }
+.pt-kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+@media (min-width: 640px) { .pt-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.pt-kpis .kpi { padding: 10px 12px; } .pt-kpis .kpi .v { font-size: 1.25rem; }
+.pt-intro { color: var(--muted); font-size: .88rem; margin: 0 0 12px; }
+.game { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; }
+.game.off { opacity: .55; }
+.game-head { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 10px; padding: 12px; cursor: pointer; align-items: center; }
+@media (min-width: 720px) { .game-head { grid-template-columns: 64px minmax(0, 1fr) 280px 20px; } }
+.when { text-align: center; line-height: 1.15; }
+.when b { display: block; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.when small { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
+.who { min-width: 0; }
+.who .m { font-weight: 650; overflow-wrap: anywhere; }
+.who .sub { color: var(--muted); font-size: .78rem; display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 2px; }
+.pick { grid-column: 1 / -1; background: var(--surface-2); border-radius: 10px; padding: 8px 10px; min-width: 0; }
+@media (min-width: 720px) { .pick { grid-column: auto; } }
+.pick .l { font-weight: 700; overflow-wrap: anywhere; }
+.pick .n { display: flex; justify-content: space-between; gap: 8px; font-size: .8rem; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+.meter { height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; margin-top: 6px; }
+.meter i { display: block; height: 100%; background: var(--accent); }
+.price-ok { color: var(--accent); font-weight: 650; } .price-low { color: var(--bad); font-weight: 650; }
+.chev { color: var(--muted); transition: transform .15s; display: none; }
+@media (min-width: 720px) { .chev { display: block; } }
+.game.open .chev { transform: rotate(90deg); }
+.game-body { border-top: 1px solid var(--border); padding: 12px; display: none; }
+.game.open .game-body { display: block; }
+.sec { margin-bottom: 14px; } .sec:last-child { margin-bottom: 0; }
+.sec h4 { margin: 0 0 6px; font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+@media (min-width: 720px) { .grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.why { margin: 0; font-size: .95rem; }
+.mkt { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 4px 8px; align-items: center; font-size: .78rem; color: var(--muted); }
+.mkt .bar { margin: 0; height: 20px; font-size: .72rem; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.fact { background: var(--surface-2); border-radius: 8px; padding: 6px 9px; min-width: 0; }
+.fact .k { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.fact .v { font-weight: 650; font-size: .9rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.badge { display: inline-flex; align-items: center; gap: 3px; font-size: .74rem; padding: 1px 7px; border-radius: 99px; background: var(--surface-2); color: var(--muted); }
+.badge.good { background: var(--accent-soft); color: var(--accent); } .badge.bad { background: var(--bad); color: #fff; }
+.points { display: grid; grid-template-columns: minmax(0, 1fr); margin: 0; }
 @media (min-width: 640px) { .points { grid-template-columns: 170px minmax(0, 1fr); } }
 .points dt { font-weight: 650; font-size: .85rem; padding: 7px 0 0; }
-.points dd { margin: 0; padding: 2px 0 7px; font-size: .9rem; border-bottom: 1px solid var(--border); }
+.points dd { margin: 0; padding: 2px 0 7px; font-size: .9rem; border-bottom: 1px solid var(--border); overflow-wrap: anywhere; }
 @media (min-width: 640px) { .points dt { padding: 7px 0; border-bottom: 1px solid var(--border); } .points dd { padding: 7px 0; } }
-.alts { margin: 6px 0 0; padding-left: 18px; font-size: .9rem; }
+.points dd .live { display: block; color: var(--accent); font-size: .85rem; margin-top: 2px; }
+.alts { margin: 0; padding-left: 18px; font-size: .9rem; }
 td.wrap { white-space: normal; }
 footer { color: var(--muted); font-size: .8rem; margin: 30px 0 10px; }
 a { color: var(--accent); }
@@ -118,7 +169,7 @@ a { color: var(--accent); }
     <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
   </header>
   <p class="meta" id="meta">Loading analysis…</p>
-  <div class="views" role="tablist">
+  <div class="views" role="tablist" id="views" hidden>
     <button type="button" data-view="pt" aria-pressed="true">🇵🇹 Liga Portugal</button>
     <button type="button" data-view="deep" aria-pressed="false" class="alltab" hidden>Top 10 bets</button>
     <button type="button" data-view="analysis" aria-pressed="false" class="alltab" hidden>Daily analysis</button>
@@ -126,7 +177,30 @@ a { color: var(--accent); }
   </div>
 
   <div id="view-pt">
-    <div class="controls"><label>Week <select id="ptweek"><option>Loading…</option></select></label></div>
+    <div class="pt-bar">
+      <div class="pt-row">
+        <select id="ptweek" aria-label="Week"><option>Loading…</option></select>
+        <input type="search" id="ptq" placeholder="Search team…" aria-label="Search team">
+        <button type="button" id="ptlive" class="btn-primary">↻ Update live data</button>
+      </div>
+      <div class="pt-row">
+        <div class="chips" id="ptdays" role="group" aria-label="Day"></div>
+      </div>
+      <div class="pt-row">
+        <label>Sort <select id="ptsort">
+          <option value="ko">Kick-off</option><option value="p">Chance (high → low)</option>
+          <option value="conf">Confidence</option><option value="min">Min odds (low → high)</option><option value="value">Value at current price</option>
+        </select></label>
+        <label>Bet <select id="pttype">
+          <option value="">All types</option><option value="result">Result (1X2)</option><option value="dc">Double chance</option>
+          <option value="dnb">Draw no bet</option><option value="goals">Goals over/under</option><option value="btts">Both teams score</option>
+        </select></label>
+        <label>Confidence <select id="ptconf"><option value="">Any</option><option value="high">High</option><option value="medium">Medium+</option></select></label>
+        <label>Chance <select id="ptmin"><option value="0">Any</option><option value="0.7">70%+</option><option value="0.75">75%+</option><option value="0.8">80%+</option></select></label>
+        <label><input type="checkbox" id="ptpriced"> Price ≥ min only</label>
+      </div>
+      <div class="pt-row"><span class="livestat" id="ptlivestat">Live data: loading…</span></div>
+    </div>
     <div id="pt"><div class="empty">Loading…</div></div>
   </div>
 
@@ -204,7 +278,7 @@ a { color: var(--accent); }
   const iso = d => d.toISOString().slice(0, 10);
   let DATA = null, DAY = null;
   const ALL = new URLSearchParams(location.search).has("all");   // ?all shows the all-league tabs as well
-  if (ALL) { document.querySelectorAll(".alltab").forEach(b => b.hidden = false); document.getElementById("allfoot").hidden = false; document.getElementById("ptfoot").hidden = true; }
+  if (ALL) { document.getElementById("views").hidden = false; document.querySelectorAll(".alltab").forEach(b => b.hidden = false); document.getElementById("allfoot").hidden = false; document.getElementById("ptfoot").hidden = true; }
 
   const file = new URLSearchParams(location.search).has("demo") ? "data/predictions_demo.json" : "data/predictions.json";
   fetch(file, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -494,76 +568,232 @@ a { color: var(--accent); }
   }
 
   // ---------------------------------------------------------------- Liga Portugal weekly deep dive
-  var PTIDX = null;
+  var PTIDX = null, PTREP = null, PTLIVE = null, PTOPEN = new Set(), PTWX = null;
   const PT_POINTS = [["injuries", "Injuries & suspensions"], ["fatigue", "Fatigue & squad drain"], ["lineups", "Line-ups & rotation"],
     ["form", "Form"], ["home_away", "Home advantage"], ["manager_news", "Manager & news"], ["motivation", "Motivation"],
     ["referee", "Referee"], ["weather", "Weather & pitch"], ["tactics", "Tactics"], ["market", "Market & odds"], ["h2h", "Head-to-head"]];
-  const ptDay = s => { const d = new Date(s.replace(" ", "T") + ":00Z");
-    return d.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" }) + " · " + s.slice(11, 16); };
-  const odds = x => x ? Number(x).toFixed(2) : "no price yet";
+  const PT_FAMILY = m => m === "1X2" ? "result" : m === "Double chance" ? "dc" : m === "Draw no bet" ? "dnb" : m === "BTTS" ? "btts" : "goals";
+  const PT_CONF = { high: 3, medium: 2, low: 1 };
+  const LIVE_WF = "https://github.com/rfmsant/football-model/actions/workflows/portugal-live.yml";
+  const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const fmt2 = x => x ? Number(x).toFixed(2) : "–";
+  const lisbon = (d, o) => d.toLocaleString("en-GB", { timeZone: "Europe/Lisbon", ...o });
+  const ago = t => { const m = Math.round((Date.now() - Date.parse(t)) / 60000);
+    return m < 2 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " d ago"; };
+  const wxIcon = c => c == null ? "" : c <= 1 ? "☀️" : c <= 3 ? "⛅" : c <= 48 ? "🌫️" : (c >= 51 && c <= 67) || (c >= 80 && c <= 82) ? "🌧️" : (c >= 71 && c <= 77) || c === 85 || c === 86 ? "❄️" : "⛈️";
+  const wxImpact = w => (w.precipitation || 0) >= 2 || (w.wind_gusts_10m || 0) >= 50 ? "heavy rain or strong wind: fewer goals, more errors"
+    : (w.precipitation_probability || 0) >= 60 || (w.wind_speed_10m || 0) >= 30 ? "some rain or wind" : "no impact expected";
+  const PTF = (() => { try { return JSON.parse(localStorage.getItem("ptf")) || {}; } catch (e) { return {}; } })();
+
+  function ptLive(g) { return (PTLIVE && PTREP && PTLIVE.report === PTREP.date && PTLIVE.games[g.match]) || {}; }
+  function ptKick(g) {                                   // Date of kick-off: live fixture time first, else the report's Lisbon time
+    const l = ptLive(g);
+    if (l.kickoff_utc) return new Date(l.kickoff_utc);
+    const [d, t] = g.kickoff.split(" "), probe = new Date(d + "T12:00:00Z");
+    const off = lisbon(probe, { timeZoneName: "shortOffset" }).match(/GMT([+-]\d+)?/);
+    const h = off && off[1] ? Number(off[1]) : 0;
+    return new Date(Date.parse(d + "T" + t + ":00Z") - h * 3600e3);
+  }
+  function betPrice(b, p) {                              // same rules as portugal_live.bet_price: DC and DNB derived from 1X2
+    if (!p) return null; const { H, D, A } = p, m = b.market, s = b.selection;
+    if (m === "1X2") return { H, D, A }[s] || null;
+    if (m === "O/U 2.5") return (s === "Over" ? p.over25 : p.under25) || null;
+    if (m === "Double chance" && H && D && A) { const [a, c] = { "1X": [H, D], "X2": [D, A], "12": [H, A] }[s]; return Math.round(100 / (1 / a + 1 / c)) / 100; }
+    if (m === "Draw no bet" && H && D && A) return Math.round(100 * (s === "H" ? H : A) * (D - 1) / D) / 100;
+    return null;
+  }
+  function ptPrice(g) { const l = ptLive(g); return (l.best_bet_price && l.best_bet_price.price) || g.best_bet.odds_seen || null; }
+  function altPrice(g, a) { return betPrice(a, ptLive(g).prices) || a.odds_seen || null; }
+  function ptValue(g) { const x = ptPrice(g); return x ? g.best_bet.p * x - 1 : null; }
 
   function loadPt(file) {
     const el = document.getElementById("pt");
-    const go = f => fetch("data/portugal/" + f, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(renderPt).catch(e => { el.innerHTML = `<div class="empty">No Liga Portugal report published yet (${esc(e.message)}). It runs every Sunday evening.</div>`; });
+    const go = f => Promise.all([
+      fetch("data/portugal/" + f, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+      fetch("data/portugal/live.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)])
+      .then(([rep, live]) => { PTREP = rep; PTLIVE = live; PTWX = null; ptSetup(); renderPt(); })
+      .catch(e => { el.innerHTML = `<div class="empty">No Liga Portugal report published yet (${esc(e.message)}). It runs every Sunday evening.</div>`; });
     if (PTIDX) return go(file || "latest.json");
     fetch("data/portugal/index.json", { cache: "no-store" }).then(r => r.ok ? r.json() : []).catch(() => [])
       .then(idx => {
         PTIDX = idx || [];
         const sel = document.getElementById("ptweek");
-        sel.innerHTML = PTIDX.map(x => `<option value="${esc(x.file)}">${esc(x.week_start)} → ${esc(x.week_end)} · ${x.games} games</option>`).join("")
-          || `<option value="latest.json">Latest</option>`;
+        sel.innerHTML = PTIDX.map(x => `<option value="${esc(x.file)}">Week ${esc(x.week_start)} → ${esc(x.week_end)} · ${x.games} games</option>`).join("")
+          || `<option value="latest.json">Latest week</option>`;
         sel.onchange = () => loadPt(sel.value);
+        for (const id of ["ptsort", "pttype", "ptconf", "ptmin"]) { const s = document.getElementById(id); if (PTF[id] != null) s.value = PTF[id]; s.onchange = ptChanged; }
+        const pr = document.getElementById("ptpriced"); pr.checked = !!PTF.ptpriced; pr.onchange = ptChanged;
+        document.getElementById("ptq").oninput = ptChanged;
+        document.getElementById("ptlive").onclick = ptUpdateLive;
         go(file || (PTIDX[0] ? PTIDX[0].file : "latest.json"));
       });
   }
 
-  function ptBet(b) {
-    return `${esc(b.label)} · <b>${pct(b.p)}</b> · ${odds(b.odds_seen)} · min ${Number(b.min_odds).toFixed(2)}`;
+  function ptChanged() {
+    for (const id of ["ptsort", "pttype", "ptconf", "ptmin"]) PTF[id] = document.getElementById(id).value;
+    PTF.ptpriced = document.getElementById("ptpriced").checked;
+    try { localStorage.setItem("ptf", JSON.stringify({ ...PTF, ptday: undefined })); } catch (e) {}
+    renderPt();
   }
 
-  function renderPt(rep) {
-    const el = document.getElementById("pt");
-    const games = rep.games || [];
-    document.getElementById("meta").textContent =
-      `Liga Portugal Betclic · ${games.length} games from ${rep.week_start} to ${rep.week_end} · researched ${new Date(rep.generated_at).toLocaleString()}`;
-    let h = `<section class="overview"><h2>Best bet for every game · week of ${esc(rep.week_start)}</h2>
-      <p>${esc(rep.summary || "")}</p>
-      <ul class="hl">${games.map((g, i) => `<li><b>${esc(ptDay(g.kickoff))}</b><a href="#pt-${i}">${esc(g.match)}</a>: ${esc(g.best_bet.label)} (${pct(g.best_bet.p)})</li>`).join("")}</ul>
-      <p class="note">Chance = researched estimate. "Min" is the lowest Betclic price at which the bet is still worth taking. Most prices aren't out on Sunday.</p></section>`;
-    h += games.map((g, i) => {
-      const b = g.best_bet, o = g.outcomes || {};
-      const adj = (g.adjustments || []).map(a => `<tr><td>${esc(a.factor)}</td><td class="${a.delta >= 0 ? "pos" : "neg"}">${sgn(a.delta)}</td><td class="wrap">${esc(a.reason)}</td></tr>`).join("");
-      const pts = PT_POINTS.filter(([k]) => (g.factors || {})[k]).map(([k, t]) => `<dt>${t}</dt><dd>${esc(g.factors[k])}</dd>`).join("");
-      const src = (g.sources || []).map(u => { let host = u; try { host = new URL(u).hostname.replace(/^www\./, ""); } catch (e) {} return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host)}</a>`; }).join(" · ");
-      const conf = { high: "value", medium: "strong", low: "" }[g.confidence] ?? "";
-      return `<article class="card" id="pt-${i}">
-        <div class="row1"><div class="teams"><span class="ko">${esc(ptDay(g.kickoff))}</span>${esc(g.match)}</div>
-          <div class="small">${esc(g.venue || "")}<span class="tag ${conf}">${esc(g.confidence)} confidence</span></div></div>
-        <div class="best"><div class="small">Best bet</div><div class="lbl">${esc(b.label)}</div>
-          <div class="nums"><span>Chance <b>${pct(b.p)}</b></span><span>Odds seen <b>${odds(b.odds_seen)}</b></span><span>Bet only at ≥ <b>${Number(b.min_odds).toFixed(2)}</b></span></div></div>
-        <p class="why"><b>Why this bet:</b> ${esc(g.why)}</p>
-        <div class="bar" role="img" aria-label="Home ${pct(o.H)}, draw ${pct(o.D)}, away ${pct(o.A)}">
-          <div class="h" style="width:${o.H * 100}%">${pct(o.H)}</div><div class="d" style="width:${o.D * 100}%">${pct(o.D)}</div><div class="a" style="width:${o.A * 100}%">${pct(o.A)}</div></div>
-        <div class="legend"><span>Home win</span><span>Draw</span><span>Away win</span></div>
-        <div class="stats">
-          <div class="stat"><div class="k">Over 1.5</div><div class="v">${pct(o.over15)}</div></div>
-          <div class="stat"><div class="k">Over 2.5</div><div class="v">${pct(o.over25)}</div></div>
-          <div class="stat"><div class="k">Over 3.5</div><div class="v">${pct(o.over35)}</div></div>
-          <div class="stat"><div class="k">Both score</div><div class="v">${pct(o.btts)}</div></div>
+  function ptSetup() {                                   // day chips for this week
+    const days = [...new Set((PTREP.games || []).map(g => lisbon(ptKick(g), { year: "numeric", month: "2-digit", day: "2-digit" })))];
+    const label = k => { const g = PTREP.games.find(x => lisbon(ptKick(x), { year: "numeric", month: "2-digit", day: "2-digit" }) === k);
+      return lisbon(ptKick(g), { weekday: "short", day: "numeric" }); };
+    PTF.ptday = days.includes(PTF.ptday) ? PTF.ptday : "";
+    const box = document.getElementById("ptdays");
+    box.innerHTML = [`<button type="button" class="chip" data-d="">All days</button>`, ...days.map(d => `<button type="button" class="chip" data-d="${esc(d)}">${esc(label(d))}</button>`)].join("");
+    box.querySelectorAll(".chip").forEach(b => { b.setAttribute("aria-pressed", b.dataset.d === PTF.ptday); b.onclick = () => { PTF.ptday = b.dataset.d; ptSetup(); renderPt(); }; });
+    ptLiveStat();
+  }
+
+  function ptLiveStat(msg) {
+    const st = document.getElementById("ptlivestat");
+    const l = PTLIVE && PTREP && PTLIVE.report === PTREP.date ? PTLIVE : null;
+    st.innerHTML = msg || [
+      l ? `Referees, kick-off times &amp; odds: updated ${esc(ago(l.updated_at))} (automatic every 3 h)` : "Live data not available for this week",
+      PTWX ? `weather: ${esc(ago(PTWX))} from Open-Meteo` : "",
+      `<a href="${LIVE_WF}" target="_blank" rel="noopener">refresh referees &amp; odds now ↗</a>`].filter(Boolean).join(" · ");
+  }
+
+  async function ptUpdateLive() {
+    const btn = document.getElementById("ptlive");
+    btn.disabled = true; btn.textContent = "Updating…";
+    try {
+      const live = await fetch("data/portugal/live.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null);
+      if (live) PTLIVE = live;
+      const jobs = (PTREP.games || []).map(async g => {
+        const l = ptLive(g), st = l.stadium, ko = ptKick(g);
+        if (!st || ko - Date.now() > 15 * 864e5 || ko < Date.now() - 3 * 3600e3) return;
+        const day = ko.toISOString().slice(0, 10);
+        const u = `https://api.open-meteo.com/v1/forecast?latitude=${st.lat}&longitude=${st.lon}&timezone=UTC&start_date=${day}&end_date=${day}` +
+          "&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,wind_gusts_10m,weather_code";
+        const d = await fetch(u).then(r => r.ok ? r.json() : null).catch(() => null);
+        if (!d || !d.hourly) return;
+        const hh = d.hourly, i = hh.time.reduce((b, t, j) => Math.abs(Date.parse(t + "Z") - ko) < Math.abs(Date.parse(hh.time[b] + "Z") - ko) ? j : b, 0);
+        const w = {}; for (const k of ["temperature_2m", "precipitation_probability", "precipitation", "wind_speed_10m", "wind_gusts_10m", "weather_code"]) w[k] = hh[k][i];
+        w.impact = wxImpact(w);
+        if (PTLIVE && PTLIVE.games[g.match]) PTLIVE.games[g.match].weather = w;
+      });
+      await Promise.all(jobs);
+      PTWX = new Date().toISOString();
+      renderPt();
+    } finally { btn.disabled = false; btn.textContent = "↻ Update live data"; ptLiveStat(); }
+  }
+
+  function ptVisible() {
+    const q = norm(document.getElementById("ptq").value).trim();
+    const type = PTF.pttype || "", conf = PTF.ptconf || "", min = Number(PTF.ptmin || 0);
+    let gs = (PTREP.games || []).filter(g => {
+      if (q && !norm(g.match).includes(q)) return false;
+      if (PTF.ptday && lisbon(ptKick(g), { year: "numeric", month: "2-digit", day: "2-digit" }) !== PTF.ptday) return false;
+      if (type && PT_FAMILY(g.best_bet.market) !== type) return false;
+      if (conf === "high" && g.confidence !== "high") return false;
+      if (conf === "medium" && g.confidence === "low") return false;
+      if (g.best_bet.p < min) return false;
+      if (PTF.ptpriced && !(ptPrice(g) >= g.best_bet.min_odds)) return false;
+      return true;
+    });
+    const s = PTF.ptsort || "ko", by = {
+      ko: (a, b) => ptKick(a) - ptKick(b), p: (a, b) => b.best_bet.p - a.best_bet.p,
+      conf: (a, b) => PT_CONF[b.confidence] - PT_CONF[a.confidence] || b.best_bet.p - a.best_bet.p,
+      min: (a, b) => a.best_bet.min_odds - b.best_bet.min_odds,
+      value: (a, b) => (ptValue(b) ?? -9) - (ptValue(a) ?? -9) };
+    return gs.sort((a, b) => by[s](a, b) || ptKick(a) - ptKick(b));
+  }
+
+  function ptPriceHtml(g) {
+    const x = ptPrice(g), b = g.best_bet, l = ptLive(g), der = l.best_bet_price && l.best_bet_price.derived;
+    if (!x) return `<span>min ${fmt2(b.min_odds)} · no price yet</span>`;
+    const ok = x >= b.min_odds;
+    return `<span class="${ok ? "price-ok" : "price-low"}" title="${der ? "Estimated from 1X2 prices; Betclic's own price may differ" : ""}">${der ? "≈" : ""}${fmt2(x)} ${ok ? "✓" : "below"} min ${fmt2(b.min_odds)}</span>`;
+  }
+
+  function ptMarket(l) {
+    const p = l.prices; if (!p || !p.H || !p.D || !p.A) return null;
+    const s = 1 / p.H + 1 / p.D + 1 / p.A; return { H: 1 / p.H / s, D: 1 / p.D / s, A: 1 / p.A / s };
+  }
+  const hdaBar = o => `<div class="bar"><div class="h" style="width:${o.H * 100}%">${pct(o.H)}</div><div class="d" style="width:${o.D * 100}%">${pct(o.D)}</div><div class="a" style="width:${o.A * 100}%">${pct(o.A)}</div></div>`;
+  const fact = (k, v) => `<div class="fact"><div class="k">${k}</div><div class="v">${v}</div></div>`;
+
+  function ptGame(g) {
+    const b = g.best_bet, o = g.outcomes || {}, l = ptLive(g), ko = ptKick(g), r = l.referee, w = l.weather, mk = ptMarket(l);
+    const open = PTOPEN.has(g.match);
+    const badges = [
+      l.postponed ? `<span class="badge bad">Postponed</span>` : "",
+      `<span class="badge">${esc(g.confidence)} confidence</span>`,
+      r ? `<span class="badge good">🧑‍⚖️ ${esc(r.name)}</span>` : `<span class="badge">🧑‍⚖️ referee TBA</span>`,
+      w ? `<span class="badge">${wxIcon(w.weather_code)} ${Math.round(w.temperature_2m)}° · ${w.precipitation_probability ?? "–"}% rain</span>` : ""].join("");
+    const refFacts = r ? [fact("Referee", esc(r.name)), fact("VAR", esc(r.var || "–")), fact("Games this season", r.games ?? "–"),
+      fact("Yellows / game", r.yellow_pg ?? "–"), fact("Reds / game", r.red_pg ?? "–"), fact("Goals / game", r.goals_pg ?? "–"),
+      fact("Home wins", pct(r.home_win_pct)), fact("Draws", pct(r.draw_pct))].join("") : "";
+    const wxFacts = w ? [fact("Sky", `${wxIcon(w.weather_code)} ${Math.round(w.temperature_2m)}°C`), fact("Rain", `${w.precipitation_probability ?? "–"}% · ${w.precipitation ?? 0} mm`),
+      fact("Wind", `${Math.round(w.wind_speed_10m)} km/h (gusts ${Math.round(w.wind_gusts_10m)})`), fact("Impact", esc(w.impact))].join("") : "";
+    const pr = l.prices;
+    const prFacts = pr ? [fact("1 · X · 2", `${fmt2(pr.H)} · ${fmt2(pr.D)} · ${fmt2(pr.A)}`), fact("Over / under 2.5", `${fmt2(pr.over25)} / ${fmt2(pr.under25)}`)].join("") : "";
+    const liveRef = r ? `Live: ${r.name} (VAR ${r.var || "–"}), ${r.games} games this season, ${r.yellow_pg ?? "–"} yellows and ${r.red_pg ?? "–"} reds per game, home wins ${pct(r.home_win_pct)}, ${r.goals_pg ?? "–"} goals per game.` : "";
+    const liveWx = w ? `Live forecast at kick-off: ${Math.round(w.temperature_2m)}°C, ${w.precipitation_probability ?? "–"}% chance of rain, wind ${Math.round(w.wind_speed_10m)} km/h; ${w.impact}.` : "";
+    const livePr = pr ? `Live prices (${pr.source}): 1 ${fmt2(pr.H)} · X ${fmt2(pr.D)} · 2 ${fmt2(pr.A)}${pr.over25 ? ` · O2.5 ${fmt2(pr.over25)} / U2.5 ${fmt2(pr.under25)}` : ""}.` : "";
+    const liveFor = { referee: liveRef, weather: liveWx, market: livePr };
+    const pts = PT_POINTS.filter(([k]) => (g.factors || {})[k] || liveFor[k]).map(([k, t]) =>
+      `<dt>${t}</dt><dd>${esc((g.factors || {})[k] || "")}${liveFor[k] ? `<span class="live">${esc(liveFor[k])}</span>` : ""}</dd>`).join("");
+    const adj = (g.adjustments || []).map(a => `<tr><td>${esc(a.factor)}</td><td class="${a.delta >= 0 ? "pos" : "neg"}">${sgn(a.delta)}</td><td class="wrap">${esc(a.reason)}</td></tr>`).join("");
+    const src = (g.sources || []).map(u => { let host = u; try { host = new URL(u).hostname.replace(/^www\./, ""); } catch (e) {} return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host)}</a>`; }).join(" · ");
+    return `<article class="game${open ? " open" : ""}${l.postponed ? " off" : ""}" data-m="${esc(g.match)}">
+      <div class="game-head" role="button" tabindex="0" aria-expanded="${open}">
+        <div class="when"><small>${esc(lisbon(ko, { weekday: "short", day: "numeric" }))}</small><b>${esc(lisbon(ko, { hour: "2-digit", minute: "2-digit" }))}</b></div>
+        <div class="who"><div class="m">${esc(g.match)}</div><div class="sub">${badges}</div></div>
+        <div class="pick"><div class="l">${esc(b.label)}</div>
+          <div class="n"><span><b>${pct(b.p)}</b> chance</span>${ptPriceHtml(g)}</div>
+          <div class="meter"><i style="width:${b.p * 100}%"></i></div></div>
+        <div class="chev">›</div>
+      </div>
+      <div class="game-body">
+        <div class="grid2">
+          <div class="sec"><h4>Why this bet</h4><p class="why">${esc(g.why)}</p>
+            ${(g.alternatives || []).length ? `<h4 style="margin-top:12px">Alternatives</h4><ul class="alts">${g.alternatives.map(a => { const x = altPrice(g, a); return `<li>${esc(a.label)} · <b>${pct(a.p)}</b> · ${x ? `<span class="${x >= a.min_odds ? "price-ok" : "price-low"}">${fmt2(x)}</span>` : "no price yet"} · min ${fmt2(a.min_odds)}</li>`; }).join("")}</ul>` : ""}</div>
+          <div class="sec"><h4>Probabilities</h4>
+            <div class="mkt"><span>Our view</span>${hdaBar(o)}${mk ? `<span>Bookmakers</span>${hdaBar(mk)}` : ""}</div>
+            <div class="legend" style="margin-left:78px"><span>Home</span><span>Draw</span><span>Away</span></div>
+            <div class="facts" style="margin-top:8px">${fact("Over 1.5", pct(o.over15))}${fact("Over 2.5", pct(o.over25))}${fact("Over 3.5", pct(o.over35))}${fact("Both score", pct(o.btts))}</div></div>
         </div>
-        ${(g.alternatives || []).length ? `<div class="small">Alternatives</div><ul class="alts">${g.alternatives.map(a => `<li>${ptBet(a)}</li>`).join("")}</ul>` : ""}
-        ${adj ? `<div class="tablewrap"><table><thead><tr><th>Adjustment</th><th>Δ</th><th>Why</th></tr></thead><tbody>${adj}</tbody></table></div>` : ""}
-        <details open><summary>Point-by-point analysis</summary><dl class="points">${pts}</dl>
-          ${(g.risks || []).length ? `<p class="summary"><b>Risks:</b> ${(g.risks || []).map(esc).join("; ")}</p>` : ""}
-          ${src ? `<p class="small">Sources: ${src}</p>` : ""}</details>
-      </article>`;
-    }).join("");
-    if ((rep.skipped || []).length) {
-      h += `<div class="panel"><h3>Not covered</h3><div class="tablewrap"><table><tbody>
-        ${rep.skipped.map(r => `<tr><td>${esc(r.match)}</td><td class="wrap">${esc(r.reason)}</td></tr>`).join("")}</tbody></table></div></div>`;
-    }
+        <div class="grid2">
+          <div class="sec"><h4>Referee</h4>${refFacts ? `<div class="facts">${refFacts}</div>` : `<p class="small">Not appointed yet: the referees' committee names them about two days before the game. Press ↻ Update live data later in the week.</p>`}</div>
+          <div class="sec"><h4>Weather at kick-off${l.stadium ? ` · ${esc(l.stadium.name)}` : ""}</h4>${wxFacts ? `<div class="facts">${wxFacts}</div>` : `<p class="small">Forecast not available yet (it starts about 15 days out).</p>`}
+            ${prFacts ? `<h4 style="margin-top:12px">Odds now</h4><div class="facts">${prFacts}</div><p class="note">${esc(pr.source)}</p>` : ""}</div>
+        </div>
+        ${adj ? `<div class="sec"><h4>Adjustments to the probability</h4><div class="tablewrap"><table><thead><tr><th>Factor</th><th>Δ</th><th>Why</th></tr></thead><tbody>${adj}</tbody></table></div></div>` : ""}
+        <div class="sec"><h4>Point-by-point analysis</h4><dl class="points">${pts}</dl></div>
+        ${(g.risks || []).length ? `<div class="sec"><h4>Risks</h4><ul class="alts">${g.risks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+        ${src ? `<p class="small">Sources: ${src}</p>` : ""}
+      </div></article>`;
+  }
+
+  function renderPt() {
+    if (!PTREP) return;
+    const el = document.getElementById("pt"), all = PTREP.games || [], gs = ptVisible();
+    document.getElementById("meta").textContent =
+      `Liga Portugal Betclic · week ${PTREP.week_start} → ${PTREP.week_end} · researched ${new Date(PTREP.generated_at).toLocaleString()}`;
+    const avg = gs.length ? gs.reduce((s, g) => s + g.best_bet.p, 0) / gs.length : null;
+    const refs = all.filter(g => ptLive(g).referee).length, priced = all.filter(g => ptPrice(g)).length;
+    const okp = all.filter(g => ptPrice(g) >= g.best_bet.min_odds).length;
+    let h = `<p class="pt-intro">${esc(PTREP.summary || "")}</p>
+      <div class="pt-kpis">
+        <div class="kpi"><div class="k">Games shown</div><div class="v">${gs.length}<span class="s"> / ${all.length}</span></div></div>
+        <div class="kpi"><div class="k">Average chance</div><div class="v">${pct(avg)}</div></div>
+        <div class="kpi"><div class="k">Referees known</div><div class="v">${refs}<span class="s"> / ${all.length}</span></div></div>
+        <div class="kpi"><div class="k">Price ≥ min</div><div class="v">${okp}<span class="s"> / ${priced} priced</span></div></div>
+      </div>`;
+    h += gs.length ? gs.map(ptGame).join("") : `<div class="empty">No games match these filters.</div>`;
+    if ((PTREP.skipped || []).length) h += `<div class="panel"><h3>Not covered</h3><div class="tablewrap"><table><tbody>
+        ${PTREP.skipped.map(r => `<tr><td>${esc(r.match)}</td><td class="wrap">${esc(r.reason)}</td></tr>`).join("")}</tbody></table></div></div>`;
     el.innerHTML = h;
+    el.querySelectorAll(".game-head").forEach(hd => {
+      const toggle = () => { const art = hd.parentElement, m = art.dataset.m;
+        PTOPEN.has(m) ? PTOPEN.delete(m) : PTOPEN.add(m); art.classList.toggle("open"); hd.setAttribute("aria-expanded", art.classList.contains("open")); };
+      hd.onclick = toggle; hd.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } };
+    });
+    ptLiveStat();
   }
 })();
 </script>

@@ -1,0 +1,61 @@
+name: Liga Portugal live update
+
+# Referees, kick-off changes, weather and prices for the current weekly report (scripts/portugal_live.py).
+# Runs every 3 hours, or on demand from the site's "Refresh referees & odds" link (Actions -> Run workflow).
+on:
+  schedule:
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Refresh live data
+        run: cd scripts && python portugal_live.py update
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/portugal/live.json
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "Liga Portugal live data $(date -u +%Y-%m-%dT%H:%M)" && git pull --rebase && git push; fi
+      # pushes made with GITHUB_TOKEN don't start other workflows, so the site is rebuilt here
+      - name: Build site
+        run: |
+          mkdir -p _site/data/deep _site/data/portugal
+          cp index.html backtest.md ml_report.md DEEP_DIVE.md _site/ 2>/dev/null || true
+          cp data/predictions.json data/predictions_demo.json data/backtest.json data/track_record.json data/shortlist.json data/deep_record.json _site/data/ 2>/dev/null || true
+          cp data/deep/*.json _site/data/deep/ 2>/dev/null || true
+          cp data/portugal/*.json _site/data/portugal/ 2>/dev/null || true
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
