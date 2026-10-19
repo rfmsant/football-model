@@ -1272,5 +1272,26 @@
   "lat": 53.75379,
   "lon": -2.35863,
   "approx": true
+ },
+ "I1|Torino": {
+  "query": "torino",
+  "place": "Turin",
+  "lat": 45.07049,
+  "lon": 7.68682,
+  "approx": true
+ },
+ "I1|Monza": {
+  "query": "monza",
+  "place": "Monza",
+  "lat": 45.58005,
+  "lon": 9.27246,
+  "approx": true
+ },
+ "I1|Sassuolo": {
+  "query": "sassuolo",
+  "place": "Sassuolo",
+  "lat": 44.5432,
+  "lon": 10.7848,
+  "approx": true
  }
 }
