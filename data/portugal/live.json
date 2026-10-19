@@ -1,35 +1,18 @@
 {
- "updated_at": "2026-10-19T13:41:01Z",
+ "updated_at": "2026-10-19T20:38:27Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
-   "kickoff_utc": "2026-10-19T19:15:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 2,
+   "round": null,
    "stadium": {
     "name": "Estadio Municipal de Braga",
     "lat": 41.5617,
     "lon": -8.4298
    },
-   "referee": {
-    "name": "Gustavo Correia",
-    "var": "Rui Oliveira",
-    "games": 6,
-    "yellow_pg": 4.6,
-    "red_pg": 0.4,
-    "goals_pg": 2.5,
-    "home_win_pct": 0.5,
-    "draw_pct": 0.33
-   },
-   "weather": {
-    "temperature_2m": 15.6,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 2.9,
-    "wind_gusts_10m": 9.4,
-    "weather_code": 0,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": {
     "H": 1.57,
     "D": 3.78,
@@ -53,21 +36,13 @@
     "lon": -8.3006
    },
    "referee": null,
-   "weather": {
-    "temperature_2m": 12.9,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 4.4,
-    "wind_gusts_10m": 5.8,
-    "weather_code": 3,
-    "impact": "no impact expected"
-   },
+   "weather": null,
    "prices": {
     "H": 1.53,
     "A": 5.75,
     "D": 4.0,
-    "over25": 1.8,
-    "under25": 1.87,
+    "over25": 1.83,
+    "under25": 1.83,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
@@ -85,15 +60,7 @@
     "lon": -9.2236
    },
    "referee": null,
-   "weather": {
-    "temperature_2m": 19.4,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 16.3,
-    "wind_gusts_10m": 37.8,
-    "weather_code": 2,
-    "impact": "no impact expected"
-   },
+   "weather": null,
    "prices": {
     "H": 1.69,
     "A": 4.8,
@@ -117,21 +84,13 @@
     "lon": -9.0393
    },
    "referee": null,
-   "weather": {
-    "temperature_2m": 17.9,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 16.1,
-    "wind_gusts_10m": 35.6,
-    "weather_code": 1,
-    "impact": "no impact expected"
-   },
+   "weather": null,
    "prices": {
     "H": 2.1,
     "A": 3.45,
     "D": 3.1,
-    "over25": 1.83,
-    "under25": 1.83,
+    "over25": 1.8,
+    "under25": 1.87,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": null
@@ -146,15 +105,7 @@
     "lon": -8.6338
    },
    "referee": null,
-   "weather": {
-    "temperature_2m": 14.1,
-    "precipitation_probability": 1,
-    "precipitation": 0.0,
-    "wind_speed_10m": 3.5,
-    "wind_gusts_10m": 9.4,
-    "weather_code": 3,
-    "impact": "no impact expected"
-   },
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
@@ -168,21 +119,13 @@
     "lon": -9.4013
    },
    "referee": null,
-   "weather": {
-    "temperature_2m": 21.1,
-    "precipitation_probability": 1,
-    "precipitation": 0.0,
-    "wind_speed_10m": 16.6,
-    "wind_gusts_10m": 36.0,
-    "weather_code": 2,
-    "impact": "no impact expected"
-   },
+   "weather": null,
    "prices": {
-    "H": 1.8,
-    "A": 4.0,
-    "D": 3.7,
-    "over25": 1.74,
-    "under25": 1.95,
+    "H": 1.83,
+    "A": 3.9,
+    "D": 3.6,
+    "over25": 1.77,
+    "under25": 1.87,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": null
@@ -197,15 +140,7 @@
     "lon": -16.8834
    },
    "referee": null,
-   "weather": {
-    "temperature_2m": 17.4,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 15.3,
-    "wind_gusts_10m": 36.0,
-    "weather_code": 1,
-    "impact": "no impact expected"
-   },
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
@@ -219,15 +154,7 @@
     "lon": -8.7402
    },
    "referee": null,
-   "weather": {
-    "temperature_2m": 16.7,
-    "precipitation_probability": 31,
-    "precipitation": 0.0,
-    "wind_speed_10m": 1.6,
-    "wind_gusts_10m": 11.2,
-    "weather_code": 2,
-    "impact": "no impact expected"
-   },
+   "weather": null,
    "prices": {
     "H": 3.65,
     "A": 2.0,
@@ -249,11 +176,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 17.9,
-    "precipitation_probability": 4,
+    "temperature_2m": 17.2,
+    "precipitation_probability": 20,
     "precipitation": 0.0,
-    "wind_speed_10m": 10.6,
-    "wind_gusts_10m": 29.2,
+    "wind_speed_10m": 13.5,
+    "wind_gusts_10m": 32.8,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -281,13 +208,13 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 19.0,
+    "temperature_2m": 20.9,
     "precipitation_probability": 72,
-    "precipitation": 0.1,
-    "wind_speed_10m": 13.7,
-    "wind_gusts_10m": 40.3,
-    "weather_code": 51,
-    "impact": "some rain or wind"
+    "precipitation": 0.5,
+    "wind_speed_10m": 21.2,
+    "wind_gusts_10m": 54.4,
+    "weather_code": 53,
+    "impact": "heavy rain or strong wind: fewer goals, more errors"
    },
    "prices": {
     "H": 8.0,
