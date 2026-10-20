@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20T00:26:54Z",
+ "updated_at": "2026-10-20T08:42:11Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -37,11 +37,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 12.6,
+    "temperature_2m": 13.0,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 3.3,
-    "wind_gusts_10m": 6.8,
+    "wind_speed_10m": 1.5,
+    "wind_gusts_10m": 3.6,
     "weather_code": 3,
     "impact": "no impact expected"
    },
@@ -69,19 +69,19 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 20.6,
+    "temperature_2m": 19.9,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 16.4,
-    "wind_gusts_10m": 40.3,
-    "weather_code": 2,
+    "wind_speed_10m": 16.8,
+    "wind_gusts_10m": 40.0,
+    "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
     "H": 1.69,
     "A": 4.6,
     "D": 3.65,
-    "over25": 1.87,
+    "over25": 1.83,
     "under25": 1.8,
     "source": "DraftKings via ESPN"
    },
@@ -101,12 +101,12 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 18.5,
+    "temperature_2m": 18.9,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 15.7,
-    "wind_gusts_10m": 34.6,
-    "weather_code": 3,
+    "wind_speed_10m": 14.1,
+    "wind_gusts_10m": 31.7,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
@@ -130,16 +130,26 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 14.0,
+    "temperature_2m": 15.4,
     "precipitation_probability": 1,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.9,
-    "wind_gusts_10m": 5.4,
+    "wind_speed_10m": 4.4,
+    "wind_gusts_10m": 20.2,
     "weather_code": 3,
     "impact": "no impact expected"
    },
-   "prices": null,
-   "best_bet_price": null
+   "prices": {
+    "H": 7.0,
+    "A": 1.41,
+    "D": 4.5,
+    "over25": 1.77,
+    "under25": 1.91,
+    "source": "DraftKings via ESPN"
+   },
+   "best_bet_price": {
+    "price": 1.41,
+    "derived": false
+   }
   },
   "Estoril v Moreirense": {
    "kickoff_utc": "2026-10-25T15:30:00Z",
@@ -152,12 +162,12 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 20.8,
-    "precipitation_probability": 3,
+    "temperature_2m": 19.9,
+    "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 20.5,
-    "wind_gusts_10m": 43.6,
-    "weather_code": 1,
+    "wind_speed_10m": 16.8,
+    "wind_gusts_10m": 36.0,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
@@ -181,12 +191,12 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 16.8,
+    "temperature_2m": 16.3,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 16.2,
-    "wind_gusts_10m": 45.4,
-    "weather_code": 1,
+    "wind_speed_10m": 14.1,
+    "wind_gusts_10m": 32.4,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": null,
@@ -203,12 +213,12 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 16.6,
-    "precipitation_probability": 39,
+    "temperature_2m": 17.3,
+    "precipitation_probability": 25,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.2,
-    "wind_gusts_10m": 10.1,
-    "weather_code": 2,
+    "wind_speed_10m": 3.1,
+    "wind_gusts_10m": 7.2,
+    "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
@@ -232,11 +242,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 17.4,
-    "precipitation_probability": 10,
+    "temperature_2m": 18.3,
+    "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 14.7,
-    "wind_gusts_10m": 39.2,
+    "wind_speed_10m": 8.2,
+    "wind_gusts_10m": 21.2,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -264,13 +274,13 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 20.9,
-    "precipitation_probability": 72,
-    "precipitation": 0.5,
-    "wind_speed_10m": 21.2,
-    "wind_gusts_10m": 54.4,
-    "weather_code": 53,
-    "impact": "heavy rain or strong wind: fewer goals, more errors"
+    "temperature_2m": 18.8,
+    "precipitation_probability": 65,
+    "precipitation": 0.0,
+    "wind_speed_10m": 16.3,
+    "wind_gusts_10m": 47.2,
+    "weather_code": 3,
+    "impact": "some rain or wind"
    },
    "prices": {
     "H": 8.0,
