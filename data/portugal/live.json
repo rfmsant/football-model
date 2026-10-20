@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20T08:42:11Z",
+ "updated_at": "2026-10-20T14:22:57Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -13,18 +13,8 @@
    },
    "referee": null,
    "weather": null,
-   "prices": {
-    "H": 1.57,
-    "D": 3.78,
-    "A": 5.59,
-    "over25": 2.01,
-    "under25": 1.72,
-    "source": "bookmaker average (model feed)"
-   },
-   "best_bet_price": {
-    "price": 1.11,
-    "derived": true
-   }
+   "prices": null,
+   "best_bet_price": null
   },
   "Vitoria SC v Maritimo": {
    "kickoff_utc": "2026-10-23T19:45:00Z",
@@ -37,20 +27,20 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 13.0,
+    "temperature_2m": 11.9,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 1.5,
-    "wind_gusts_10m": 3.6,
+    "wind_speed_10m": 3.4,
+    "wind_gusts_10m": 11.9,
     "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.53,
-    "A": 5.75,
-    "D": 4.0,
-    "over25": 1.83,
-    "under25": 1.83,
+    "H": 1.56,
+    "A": 5.5,
+    "D": 3.9,
+    "over25": 1.87,
+    "under25": 1.8,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
@@ -69,19 +59,19 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 19.9,
+    "temperature_2m": 20.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 16.8,
-    "wind_gusts_10m": 40.0,
-    "weather_code": 3,
+    "wind_speed_10m": 20.0,
+    "wind_gusts_10m": 45.7,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.69,
-    "A": 4.6,
-    "D": 3.65,
-    "over25": 1.83,
+    "H": 1.71,
+    "A": 4.5,
+    "D": 3.6,
+    "over25": 1.87,
     "under25": 1.8,
     "source": "DraftKings via ESPN"
    },
@@ -101,11 +91,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 18.9,
+    "temperature_2m": 18.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 14.1,
-    "wind_gusts_10m": 31.7,
+    "wind_speed_10m": 16.5,
+    "wind_gusts_10m": 41.4,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -130,24 +120,24 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 15.4,
+    "temperature_2m": 14.5,
     "precipitation_probability": 1,
     "precipitation": 0.0,
-    "wind_speed_10m": 4.4,
-    "wind_gusts_10m": 20.2,
+    "wind_speed_10m": 3.1,
+    "wind_gusts_10m": 13.0,
     "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 7.0,
-    "A": 1.41,
-    "D": 4.5,
-    "over25": 1.77,
-    "under25": 1.91,
+    "H": 6.5,
+    "A": 1.43,
+    "D": 4.3,
+    "over25": 1.8,
+    "under25": 1.87,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
-    "price": 1.41,
+    "price": 1.43,
     "derived": false
    }
   },
@@ -163,7 +153,7 @@
    "referee": null,
    "weather": {
     "temperature_2m": 19.9,
-    "precipitation_probability": 0,
+    "precipitation_probability": 20,
     "precipitation": 0.0,
     "wind_speed_10m": 16.8,
     "wind_gusts_10m": 36.0,
@@ -171,11 +161,11 @@
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.83,
-    "A": 3.9,
-    "D": 3.6,
-    "over25": 1.77,
-    "under25": 1.87,
+    "H": 1.91,
+    "A": 3.7,
+    "D": 3.5,
+    "over25": 1.8,
+    "under25": 1.83,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": null
@@ -191,8 +181,8 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 16.3,
-    "precipitation_probability": 0,
+    "temperature_2m": 16.5,
+    "precipitation_probability": 14,
     "precipitation": 0.0,
     "wind_speed_10m": 14.1,
     "wind_gusts_10m": 32.4,
@@ -213,11 +203,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 17.3,
-    "precipitation_probability": 25,
+    "temperature_2m": 17.4,
+    "precipitation_probability": 31,
     "precipitation": 0.0,
-    "wind_speed_10m": 3.1,
-    "wind_gusts_10m": 7.2,
+    "wind_speed_10m": 3.6,
+    "wind_gusts_10m": 10.4,
     "weather_code": 3,
     "impact": "no impact expected"
    },
@@ -243,7 +233,7 @@
    "referee": null,
    "weather": {
     "temperature_2m": 18.3,
-    "precipitation_probability": 0,
+    "precipitation_probability": 11,
     "precipitation": 0.0,
     "wind_speed_10m": 8.2,
     "wind_gusts_10m": 21.2,
@@ -275,7 +265,7 @@
    "referee": null,
    "weather": {
     "temperature_2m": 18.8,
-    "precipitation_probability": 65,
+    "precipitation_probability": 67,
     "precipitation": 0.0,
     "wind_speed_10m": 16.3,
     "wind_gusts_10m": 47.2,
