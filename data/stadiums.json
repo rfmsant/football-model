@@ -1293,5 +1293,40 @@
   "lat": 44.5432,
   "lon": 10.7848,
   "approx": true
+ },
+ "D1|Elversberg": {
+  "query": "elversberg",
+  "place": "Elversberg",
+  "lat": 49.31437,
+  "lon": 7.12844,
+  "approx": true
+ },
+ "SP1|Ath Madrid": {
+  "query": "madrid",
+  "place": "Madrid",
+  "lat": 40.4165,
+  "lon": -3.70256,
+  "approx": true
+ },
+ "D1|Mainz": {
+  "query": "mainz",
+  "place": "Mainz",
+  "lat": 49.98185,
+  "lon": 8.28008,
+  "approx": true
+ },
+ "D1|Schalke 04": {
+  "query": "schalke",
+  "place": "Schalkenbach",
+  "lat": 50.49485,
+  "lon": 7.14636,
+  "approx": true
+ },
+ "D1|Augsburg": {
+  "query": "augsburg",
+  "place": "Augsburg",
+  "lat": 48.37154,
+  "lon": 10.89851,
+  "approx": true
  }
 }

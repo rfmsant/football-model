@@ -1,40 +1,7 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-10-19T13:40:01Z",
- "round_start": "2026-10-19",
- "round_end": "2026-10-19",
- "games": [
-  {
-   "match": "Sp Braga v Gil Vicente",
-   "date": "2026-10-19",
-   "time": "20:15",
-   "chances": {
-    "H": 0.591,
-    "D": 0.246,
-    "A": 0.163,
-    "over25": 0.461,
-    "btts": 0.441
-   },
-   "prices": {
-    "H": 1.57,
-    "D": 3.78,
-    "A": 5.59,
-    "over25": 2.01,
-    "under25": 1.72
-   },
-   "best": [],
-   "closest": {
-    "market": "BTTS",
-    "selection": "No",
-    "label": "Both teams NOT to score",
-    "p_model": 0.559,
-    "odds": 1.67,
-    "odds_source": "estimated",
-    "value": -0.0665,
-    "min_odds": 1.75,
-    "researched": null
-   }
-  }
- ],
- "posted_at": "2026-10-17T10:58:16Z"
+ "generated_at": "2026-10-20T11:53:01Z",
+ "round_start": null,
+ "round_end": null,
+ "games": []
 }

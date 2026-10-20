@@ -1,14 +1,14 @@
 {
- "updated_at": "2026-10-19T13:40:00Z",
+ "updated_at": "2026-10-20T11:53:00Z",
  "all": {
-  "bets": 19,
-  "won": 9,
+  "bets": 22,
+  "won": 11,
   "void": 4,
-  "hit_pct": 0.6,
-  "profit": -2.13,
-  "roi": -0.1121,
-  "avg_odds": 1.44,
-  "avg_final_p": 0.6586
+  "hit_pct": 0.6111,
+  "profit": -2.31,
+  "roi": -0.105,
+  "avg_odds": 1.45,
+  "avg_final_p": 0.6597
  },
  "meets_bar": {
   "bets": 0,
@@ -21,14 +21,14 @@
   "avg_final_p": null
  },
  "best_available": {
-  "bets": 19,
-  "won": 9,
+  "bets": 22,
+  "won": 11,
   "void": 4,
-  "hit_pct": 0.6,
-  "profit": -2.13,
-  "roi": -0.1121,
-  "avg_odds": 1.44,
-  "avg_final_p": 0.6586
+  "hit_pct": 0.6111,
+  "profit": -2.31,
+  "roi": -0.105,
+  "avg_odds": 1.45,
+  "avg_final_p": 0.6597
  },
  "by_market": {
   "1X2": {
@@ -62,27 +62,37 @@
    "avg_final_p": 0.6414
   },
   "O/U 2.5": {
-   "bets": 5,
-   "won": 2,
+   "bets": 7,
+   "won": 4,
    "void": 0,
-   "hit_pct": 0.4,
-   "profit": -2.18,
-   "roi": -0.436,
-   "avg_odds": 1.39,
-   "avg_final_p": 0.6869
+   "hit_pct": 0.5714,
+   "profit": -1.36,
+   "roi": -0.1943,
+   "avg_odds": 1.4,
+   "avg_final_p": 0.6849
   },
   "O/U 3.5": {
-   "bets": 3,
+   "bets": 4,
    "won": 3,
    "void": 0,
-   "hit_pct": 1.0,
-   "profit": 1.1,
-   "roi": 0.3667,
-   "avg_odds": 1.37,
-   "avg_final_p": 0.6541
+   "hit_pct": 0.75,
+   "profit": 0.1,
+   "roi": 0.025,
+   "avg_odds": 1.41,
+   "avg_final_p": 0.6509
   }
  },
  "by_day": {
+  "2026-10-18": {
+   "bets": 3,
+   "won": 2,
+   "void": 0,
+   "hit_pct": 0.6667,
+   "profit": -0.18,
+   "roi": -0.06,
+   "avg_odds": 1.45,
+   "avg_final_p": 0.6672
+  },
   "2026-10-06": {
    "bets": 9,
    "won": 3,
@@ -556,7 +566,10 @@
    "min_odds": 1.58,
    "meets_bar": false,
    "confidence": "medium",
-   "verdict": "BET SMALL"
+   "verdict": "BET SMALL",
+   "score": "3-1",
+   "profit": -1.0,
+   "result": "lost"
   },
   {
    "report_date": "2026-10-18",
@@ -592,7 +605,10 @@
    "min_odds": 1.5,
    "meets_bar": false,
    "confidence": "medium",
-   "verdict": "BET SMALL"
+   "verdict": "BET SMALL",
+   "score": "4-1",
+   "profit": 0.42,
+   "result": "won"
   },
   {
    "report_date": "2026-10-18",
@@ -610,7 +626,10 @@
    "min_odds": 1.48,
    "meets_bar": false,
    "confidence": "low",
-   "verdict": "BET SMALL"
+   "verdict": "BET SMALL",
+   "score": "2-2",
+   "profit": 0.4,
+   "result": "won"
   },
   {
    "report_date": "2026-10-18",
