@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-21T12:06:18Z",
+ "updated_at": "2026-10-21T17:22:09Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -25,13 +25,22 @@
     "lat": 41.4459,
     "lon": -8.3006
    },
-   "referee": null,
+   "referee": {
+    "name": "Diogo Rosa",
+    "var": "Manuel Oliveira",
+    "games": 2,
+    "yellow_pg": 3.0,
+    "red_pg": 0.0,
+    "goals_pg": 3.0,
+    "home_win_pct": 0.0,
+    "draw_pct": 1.0
+   },
    "weather": {
-    "temperature_2m": 11.4,
+    "temperature_2m": 11.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 3.4,
-    "wind_gusts_10m": 9.0,
+    "wind_speed_10m": 2.4,
+    "wind_gusts_10m": 8.3,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -39,7 +48,7 @@
     "H": 1.57,
     "A": 5.75,
     "D": 3.95,
-    "over25": 1.87,
+    "over25": 1.91,
     "under25": 1.8,
     "source": "DraftKings via ESPN"
    },
@@ -57,26 +66,35 @@
     "lat": 38.7522,
     "lon": -9.2236
    },
-   "referee": null,
+   "referee": {
+    "name": "Bruno Costa",
+    "var": "João Casegas",
+    "games": 4,
+    "yellow_pg": 3.0,
+    "red_pg": 0.0,
+    "goals_pg": 3.0,
+    "home_win_pct": 0.25,
+    "draw_pct": 0.25
+   },
    "weather": {
-    "temperature_2m": 20.1,
+    "temperature_2m": 21.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 15.2,
-    "wind_gusts_10m": 39.2,
-    "weather_code": 2,
+    "wind_speed_10m": 10.9,
+    "wind_gusts_10m": 28.1,
+    "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.71,
-    "A": 4.5,
+    "H": 1.77,
+    "A": 4.4,
     "D": 3.6,
     "over25": 1.87,
-    "under25": 1.8,
+    "under25": 1.83,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
-    "price": 1.16,
+    "price": 1.19,
     "derived": true
    }
   },
@@ -89,20 +107,29 @@
     "lat": 38.8956,
     "lon": -9.0393
    },
-   "referee": null,
+   "referee": {
+    "name": "Pedro Ramalho",
+    "var": "Paulo Barradas",
+    "games": 4,
+    "yellow_pg": 3.7,
+    "red_pg": 0.67,
+    "goals_pg": 2.2,
+    "home_win_pct": 0.25,
+    "draw_pct": 0.25
+   },
    "weather": {
-    "temperature_2m": 17.7,
+    "temperature_2m": 18.0,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 17.8,
-    "wind_gusts_10m": 37.8,
+    "wind_speed_10m": 18.1,
+    "wind_gusts_10m": 37.1,
     "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 2.1,
-    "A": 3.45,
-    "D": 3.1,
+    "H": 2.15,
+    "A": 3.5,
+    "D": 3.15,
     "over25": 1.8,
     "under25": 1.87,
     "source": "DraftKings via ESPN"
@@ -118,26 +145,35 @@
     "lat": 41.5444,
     "lon": -8.6338
    },
-   "referee": null,
+   "referee": {
+    "name": "Luís Godinho",
+    "var": "Pedro Ferreira",
+    "games": 5,
+    "yellow_pg": 5.6,
+    "red_pg": 1.0,
+    "goals_pg": 2.0,
+    "home_win_pct": 0.4,
+    "draw_pct": 0.2
+   },
    "weather": {
-    "temperature_2m": 13.1,
+    "temperature_2m": 12.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 3.0,
-    "wind_gusts_10m": 9.4,
+    "wind_speed_10m": 2.0,
+    "wind_gusts_10m": 8.6,
     "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
     "H": 6.5,
-    "A": 1.43,
+    "A": 1.44,
     "D": 4.3,
     "over25": 1.8,
     "under25": 1.87,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
-    "price": 1.43,
+    "price": 1.44,
     "derived": false
    }
   },
@@ -150,14 +186,23 @@
     "lat": 38.7135,
     "lon": -9.4013
    },
-   "referee": null,
+   "referee": {
+    "name": "Carlos Macedo",
+    "var": "Bruno Esteves",
+    "games": 5,
+    "yellow_pg": 3.8,
+    "red_pg": 1.0,
+    "goals_pg": 3.6,
+    "home_win_pct": 0.6,
+    "draw_pct": 0.0
+   },
    "weather": {
-    "temperature_2m": 20.3,
+    "temperature_2m": 20.0,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 21.4,
-    "wind_gusts_10m": 47.5,
-    "weather_code": 0,
+    "wind_speed_10m": 20.1,
+    "wind_gusts_10m": 45.4,
+    "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
@@ -179,14 +224,23 @@
     "lat": 32.6704,
     "lon": -16.8834
    },
-   "referee": null,
+   "referee": {
+    "name": "José Bessa",
+    "var": "Bruno Costa",
+    "games": 5,
+    "yellow_pg": 6.0,
+    "red_pg": 0.33,
+    "goals_pg": 3.8,
+    "home_win_pct": 0.2,
+    "draw_pct": 0.6
+   },
    "weather": {
-    "temperature_2m": 14.7,
+    "temperature_2m": 14.5,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 4.7,
-    "wind_gusts_10m": 28.8,
-    "weather_code": 3,
+    "wind_speed_10m": 4.3,
+    "wind_gusts_10m": 26.6,
+    "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": null,
@@ -201,14 +255,23 @@
     "lat": 41.3616,
     "lon": -8.7402
    },
-   "referee": null,
+   "referee": {
+    "name": "Hélder Carvalho",
+    "var": "Manuel Mota",
+    "games": 3,
+    "yellow_pg": 2.5,
+    "red_pg": 0.0,
+    "goals_pg": 4.0,
+    "home_win_pct": 0.33,
+    "draw_pct": 0.33
+   },
    "weather": {
-    "temperature_2m": 16.3,
-    "precipitation_probability": 8,
+    "temperature_2m": 16.4,
+    "precipitation_probability": 5,
     "precipitation": 0.0,
-    "wind_speed_10m": 1.8,
-    "wind_gusts_10m": 5.0,
-    "weather_code": 1,
+    "wind_speed_10m": 2.7,
+    "wind_gusts_10m": 5.8,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
@@ -230,18 +293,27 @@
     "lat": 38.7611,
     "lon": -9.1608
    },
-   "referee": null,
+   "referee": {
+    "name": "Miguel Nogueira",
+    "var": "Luís Ferreira",
+    "games": 6,
+    "yellow_pg": 5.8,
+    "red_pg": 0.75,
+    "goals_pg": 2.3,
+    "home_win_pct": 0.17,
+    "draw_pct": 0.0
+   },
    "weather": {
-    "temperature_2m": 17.3,
+    "temperature_2m": 16.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 9.4,
-    "wind_gusts_10m": 22.3,
-    "weather_code": 0,
+    "wind_speed_10m": 9.1,
+    "wind_gusts_10m": 21.2,
+    "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.24,
+    "H": 1.22,
     "A": 9.5,
     "D": 6.0,
     "over25": null,
@@ -249,7 +321,7 @@
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
-    "price": 1.24,
+    "price": 1.22,
     "derived": false
    }
   },
@@ -262,26 +334,35 @@
     "lat": 37.7489,
     "lon": -25.6631
    },
-   "referee": null,
+   "referee": {
+    "name": "Cláudio Pereira",
+    "var": "Rui Soares",
+    "games": 2,
+    "yellow_pg": 4.0,
+    "red_pg": 0.0,
+    "goals_pg": 2.5,
+    "home_win_pct": 0.5,
+    "draw_pct": 0.0
+   },
    "weather": {
-    "temperature_2m": 17.6,
-    "precipitation_probability": 55,
+    "temperature_2m": 17.5,
+    "precipitation_probability": 68,
     "precipitation": 0.0,
-    "wind_speed_10m": 17.5,
-    "wind_gusts_10m": 44.3,
-    "weather_code": 3,
-    "impact": "no impact expected"
+    "wind_speed_10m": 23.4,
+    "wind_gusts_10m": 51.5,
+    "weather_code": 1,
+    "impact": "heavy rain or strong wind: fewer goals, more errors"
    },
    "prices": {
     "H": 8.0,
-    "A": 1.36,
-    "D": 4.6,
-    "over25": 1.8,
-    "under25": 1.87,
+    "A": 1.34,
+    "D": 4.7,
+    "over25": 1.77,
+    "under25": 1.91,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
-    "price": 1.05,
+    "price": 1.04,
     "derived": true
    }
   }
