@@ -1328,5 +1328,19 @@
   "lat": 48.37154,
   "lon": 10.89851,
   "approx": true
+ },
+ "E0|Aston Villa": {
+  "query": "aston",
+  "place": "Aston",
+  "lat": 51.72501,
+  "lon": -1.50805,
+  "approx": true
+ },
+ "I1|Parma": {
+  "query": "parma",
+  "place": "Parma",
+  "lat": 44.79935,
+  "lon": 10.32618,
+  "approx": true
  }
 }
