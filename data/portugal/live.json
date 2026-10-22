@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-21T21:49:47Z",
+ "updated_at": "2026-10-22T05:02:44Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -36,24 +36,24 @@
     "draw_pct": 1.0
    },
    "weather": {
-    "temperature_2m": 11.9,
+    "temperature_2m": 11.1,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.2,
-    "wind_gusts_10m": 8.6,
-    "weather_code": 1,
+    "wind_speed_10m": 3.2,
+    "wind_gusts_10m": 6.8,
+    "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.57,
-    "A": 5.75,
-    "D": 3.95,
+    "H": 1.62,
+    "A": 5.25,
+    "D": 3.8,
     "over25": 1.91,
     "under25": 1.8,
     "source": "DraftKings via ESPN"
    },
    "best_bet_price": {
-    "price": 1.12,
+    "price": 1.14,
     "derived": true
    }
   },
@@ -77,12 +77,12 @@
     "draw_pct": 0.25
    },
    "weather": {
-    "temperature_2m": 21.2,
+    "temperature_2m": 21.6,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 11.3,
-    "wind_gusts_10m": 29.9,
-    "weather_code": 1,
+    "wind_speed_10m": 10.3,
+    "wind_gusts_10m": 27.4,
+    "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": {
@@ -118,12 +118,12 @@
     "draw_pct": 0.25
    },
    "weather": {
-    "temperature_2m": 18.2,
+    "temperature_2m": 19.3,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 17.6,
-    "wind_gusts_10m": 35.6,
-    "weather_code": 3,
+    "wind_speed_10m": 15.0,
+    "wind_gusts_10m": 30.6,
+    "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
@@ -156,11 +156,11 @@
     "draw_pct": 0.2
    },
    "weather": {
-    "temperature_2m": 12.5,
+    "temperature_2m": 12.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.4,
-    "wind_gusts_10m": 9.7,
+    "wind_speed_10m": 1.5,
+    "wind_gusts_10m": 12.2,
     "weather_code": 3,
     "impact": "no impact expected"
    },
@@ -197,19 +197,19 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 20.8,
+    "temperature_2m": 21.2,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 19.0,
-    "wind_gusts_10m": 43.2,
-    "weather_code": 0,
+    "wind_speed_10m": 16.3,
+    "wind_gusts_10m": 37.8,
+    "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
     "H": 1.87,
     "A": 3.8,
     "D": 3.55,
-    "over25": 1.8,
+    "over25": 1.83,
     "under25": 1.83,
     "source": "DraftKings via ESPN"
    },
@@ -235,12 +235,12 @@
     "draw_pct": 0.6
    },
    "weather": {
-    "temperature_2m": 14.3,
+    "temperature_2m": 14.9,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 4.6,
-    "wind_gusts_10m": 30.6,
-    "weather_code": 0,
+    "wind_speed_10m": 4.0,
+    "wind_gusts_10m": 24.5,
+    "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": null,
@@ -266,12 +266,12 @@
     "draw_pct": 0.33
    },
    "weather": {
-    "temperature_2m": 16.4,
-    "precipitation_probability": 3,
+    "temperature_2m": 16.6,
+    "precipitation_probability": 5,
     "precipitation": 0.0,
-    "wind_speed_10m": 0.5,
-    "wind_gusts_10m": 6.1,
-    "weather_code": 2,
+    "wind_speed_10m": 3.7,
+    "wind_gusts_10m": 10.8,
+    "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
@@ -304,11 +304,11 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 17.5,
+    "temperature_2m": 18.0,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 8.6,
-    "wind_gusts_10m": 23.4,
+    "wind_speed_10m": 6.6,
+    "wind_gusts_10m": 18.4,
     "weather_code": 0,
     "impact": "no impact expected"
    },
@@ -345,13 +345,13 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 17.7,
-    "precipitation_probability": 68,
+    "temperature_2m": 18.4,
+    "precipitation_probability": 67,
     "precipitation": 0.0,
-    "wind_speed_10m": 27.5,
-    "wind_gusts_10m": 56.9,
-    "weather_code": 0,
-    "impact": "heavy rain or strong wind: fewer goals, more errors"
+    "wind_speed_10m": 24.4,
+    "wind_gusts_10m": 48.6,
+    "weather_code": 3,
+    "impact": "some rain or wind"
    },
    "prices": {
     "H": 8.0,
