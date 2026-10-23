@@ -1342,5 +1342,12 @@
   "lat": 44.79935,
   "lon": 10.32618,
   "approx": true
+ },
+ "B1|Westerlo": {
+  "query": "westerlo",
+  "place": "Westerlo",
+  "lat": 51.09049,
+  "lon": 4.91544,
+  "approx": true
  }
 }
