@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-24T20:58:39Z",
+ "updated_at": "2026-10-24T23:23:01Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -141,16 +141,16 @@
     "games": 6,
     "yellow_pg": 5.6,
     "red_pg": 1.0,
-    "goals_pg": 1.7,
+    "goals_pg": 1.8,
     "home_win_pct": 0.33,
-    "draw_pct": 0.33
+    "draw_pct": 0.17
    },
    "weather": {
     "temperature_2m": 12.8,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.2,
-    "wind_gusts_10m": 7.2,
+    "wind_speed_10m": 1.8,
+    "wind_gusts_10m": 7.9,
     "weather_code": 3,
     "impact": "no impact expected"
    },
@@ -187,12 +187,12 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 21.0,
+    "temperature_2m": 21.2,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 15.0,
+    "wind_speed_10m": 15.6,
     "wind_gusts_10m": 36.0,
-    "weather_code": 0,
+    "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
@@ -225,11 +225,11 @@
     "draw_pct": 0.6
    },
    "weather": {
-    "temperature_2m": 15.3,
+    "temperature_2m": 15.1,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 6.5,
-    "wind_gusts_10m": 35.6,
+    "wind_speed_10m": 5.4,
+    "wind_gusts_10m": 36.4,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -263,12 +263,12 @@
     "draw_pct": 0.33
    },
    "weather": {
-    "temperature_2m": 15.9,
+    "temperature_2m": 16.1,
     "precipitation_probability": 0,
     "precipitation": 0.0,
     "wind_speed_10m": 1.5,
     "wind_gusts_10m": 7.9,
-    "weather_code": 1,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
@@ -301,11 +301,11 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 16.5,
+    "temperature_2m": 16.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 7.8,
-    "wind_gusts_10m": 24.5,
+    "wind_speed_10m": 7.4,
+    "wind_gusts_10m": 21.6,
     "weather_code": 1,
     "impact": "no impact expected"
    },
@@ -343,7 +343,7 @@
    },
    "weather": {
     "temperature_2m": 17.6,
-    "precipitation_probability": 0,
+    "precipitation_probability": 1,
     "precipitation": 0.0,
     "wind_speed_10m": 17.6,
     "wind_gusts_10m": 37.8,
