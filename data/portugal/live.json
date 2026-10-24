@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-24T16:04:30Z",
+ "updated_at": "2026-10-24T20:58:39Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -60,11 +60,11 @@
     "name": "Bruno Costa",
     "var": "João Casegas",
     "games": 5,
-    "yellow_pg": 3.0,
+    "yellow_pg": 3.5,
     "red_pg": 0.0,
-    "goals_pg": 2.4,
+    "goals_pg": 2.8,
     "home_win_pct": 0.2,
-    "draw_pct": 0.4
+    "draw_pct": 0.2
    },
    "weather": {
     "temperature_2m": 20.7,
@@ -100,19 +100,19 @@
    "referee": {
     "name": "Pedro Ramalho",
     "var": "Paulo Barradas",
-    "games": 4,
-    "yellow_pg": 3.7,
-    "red_pg": 0.67,
-    "goals_pg": 2.2,
-    "home_win_pct": 0.25,
-    "draw_pct": 0.25
+    "games": 5,
+    "yellow_pg": 4.0,
+    "red_pg": 1.5,
+    "goals_pg": 2.0,
+    "home_win_pct": 0.2,
+    "draw_pct": 0.2
    },
    "weather": {
-    "temperature_2m": 17.7,
+    "temperature_2m": 18.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 18.0,
-    "wind_gusts_10m": 36.4,
+    "wind_speed_10m": 16.8,
+    "wind_gusts_10m": 34.2,
     "weather_code": 0,
     "impact": "no impact expected"
    },
@@ -138,19 +138,19 @@
    "referee": {
     "name": "Luís Godinho",
     "var": "Pedro Ferreira",
-    "games": 5,
+    "games": 6,
     "yellow_pg": 5.6,
     "red_pg": 1.0,
-    "goals_pg": 2.0,
-    "home_win_pct": 0.4,
-    "draw_pct": 0.2
+    "goals_pg": 1.7,
+    "home_win_pct": 0.33,
+    "draw_pct": 0.33
    },
    "weather": {
-    "temperature_2m": 12.6,
+    "temperature_2m": 12.8,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 1.8,
-    "wind_gusts_10m": 9.0,
+    "wind_speed_10m": 2.2,
+    "wind_gusts_10m": 7.2,
     "weather_code": 3,
     "impact": "no impact expected"
    },
@@ -187,12 +187,12 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 20.7,
+    "temperature_2m": 21.0,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 13.6,
-    "wind_gusts_10m": 32.8,
-    "weather_code": 2,
+    "wind_speed_10m": 15.0,
+    "wind_gusts_10m": 36.0,
+    "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": {
@@ -225,11 +225,11 @@
     "draw_pct": 0.6
    },
    "weather": {
-    "temperature_2m": 15.2,
+    "temperature_2m": 15.3,
     "precipitation_probability": 0,
     "precipitation": 0.0,
     "wind_speed_10m": 6.5,
-    "wind_gusts_10m": 33.1,
+    "wind_gusts_10m": 35.6,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -263,11 +263,11 @@
     "draw_pct": 0.33
    },
    "weather": {
-    "temperature_2m": 16.2,
+    "temperature_2m": 15.9,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 0.5,
-    "wind_gusts_10m": 9.0,
+    "wind_speed_10m": 1.5,
+    "wind_gusts_10m": 7.9,
     "weather_code": 1,
     "impact": "no impact expected"
    },
@@ -304,8 +304,8 @@
     "temperature_2m": 16.5,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 7.0,
-    "wind_gusts_10m": 19.1,
+    "wind_speed_10m": 7.8,
+    "wind_gusts_10m": 24.5,
     "weather_code": 1,
     "impact": "no impact expected"
    },
@@ -342,12 +342,12 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 17.2,
+    "temperature_2m": 17.6,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 18.9,
-    "wind_gusts_10m": 39.6,
-    "weather_code": 1,
+    "wind_speed_10m": 17.6,
+    "wind_gusts_10m": 37.8,
+    "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
