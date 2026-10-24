@@ -1349,5 +1349,40 @@
   "lat": 51.09049,
   "lon": 4.91544,
   "approx": true
+ },
+ "SP1|Getafe": {
+  "query": "getafe",
+  "place": "Getafe",
+  "lat": 40.30571,
+  "lon": -3.73295,
+  "approx": true
+ },
+ "P1|Academico Viseu": {
+  "query": "viseu",
+  "place": "Viseu",
+  "lat": 40.66165,
+  "lon": -7.90905,
+  "approx": true
+ },
+ "P1|Famalicao": {
+  "query": "famalicao",
+  "place": "Vila Nova de Famalicão",
+  "lat": 41.40797,
+  "lon": -8.51978,
+  "approx": true
+ },
+ "E0|Liverpool": {
+  "query": "liverpool",
+  "place": "Liverpool",
+  "lat": 53.41058,
+  "lon": -2.97794,
+  "approx": true
+ },
+ "I2|Palermo": {
+  "query": "palermo",
+  "place": "Palermo",
+  "lat": 38.1166,
+  "lon": 13.3636,
+  "approx": true
  }
 }
