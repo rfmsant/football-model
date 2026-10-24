@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-24T11:18:07Z",
+ "updated_at": "2026-10-24T16:04:30Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -59,32 +59,32 @@
    "referee": {
     "name": "Bruno Costa",
     "var": "João Casegas",
-    "games": 4,
+    "games": 5,
     "yellow_pg": 3.0,
     "red_pg": 0.0,
-    "goals_pg": 3.0,
-    "home_win_pct": 0.25,
-    "draw_pct": 0.25
+    "goals_pg": 2.4,
+    "home_win_pct": 0.2,
+    "draw_pct": 0.4
    },
    "weather": {
-    "temperature_2m": 20.6,
+    "temperature_2m": 20.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 9.8,
-    "wind_gusts_10m": 29.2,
+    "wind_speed_10m": 10.4,
+    "wind_gusts_10m": 27.0,
     "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.74,
-    "A": 4.7,
-    "D": 3.75,
-    "over25": 1.87,
-    "under25": 1.87,
-    "source": "DraftKings via ESPN"
+    "H": 1.75,
+    "D": 3.58,
+    "A": 4.42,
+    "over25": 1.89,
+    "under25": 1.84,
+    "source": "bookmaker average (model feed)"
    },
    "best_bet_price": {
-    "price": 1.19,
+    "price": 1.18,
     "derived": true
    }
   },
@@ -111,18 +111,18 @@
     "temperature_2m": 17.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 18.5,
-    "wind_gusts_10m": 36.7,
+    "wind_speed_10m": 18.0,
+    "wind_gusts_10m": 36.4,
     "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 2.2,
-    "A": 3.5,
-    "D": 3.15,
-    "over25": 1.91,
-    "under25": 1.83,
-    "source": "DraftKings via ESPN"
+    "H": 2.12,
+    "D": 3.3,
+    "A": 3.29,
+    "over25": 1.84,
+    "under25": 1.87,
+    "source": "bookmaker average (model feed)"
    },
    "best_bet_price": null
   },
@@ -146,24 +146,24 @@
     "draw_pct": 0.2
    },
    "weather": {
-    "temperature_2m": 12.9,
+    "temperature_2m": 12.6,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.4,
-    "wind_gusts_10m": 8.6,
+    "wind_speed_10m": 1.8,
+    "wind_gusts_10m": 9.0,
     "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 6.5,
-    "A": 1.48,
-    "D": 4.3,
-    "over25": 1.87,
-    "under25": 1.87,
-    "source": "DraftKings via ESPN"
+    "H": 6.98,
+    "D": 4.28,
+    "A": 1.43,
+    "over25": 1.83,
+    "under25": 1.88,
+    "source": "bookmaker average (model feed)"
    },
    "best_bet_price": {
-    "price": 1.48,
+    "price": 1.43,
     "derived": false
    }
   },
@@ -187,21 +187,21 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 20.9,
+    "temperature_2m": 20.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 15.2,
-    "wind_gusts_10m": 34.9,
-    "weather_code": 1,
+    "wind_speed_10m": 13.6,
+    "wind_gusts_10m": 32.8,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.95,
-    "A": 3.75,
-    "D": 3.5,
-    "over25": 1.87,
-    "under25": 1.8,
-    "source": "DraftKings via ESPN"
+    "H": 1.93,
+    "D": 3.46,
+    "A": 3.7,
+    "over25": 1.88,
+    "under25": 1.84,
+    "source": "bookmaker average (model feed)"
    },
    "best_bet_price": null
   },
@@ -225,15 +225,22 @@
     "draw_pct": 0.6
    },
    "weather": {
-    "temperature_2m": 15.4,
+    "temperature_2m": 15.2,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 5.8,
-    "wind_gusts_10m": 35.6,
+    "wind_speed_10m": 6.5,
+    "wind_gusts_10m": 33.1,
     "weather_code": 2,
     "impact": "no impact expected"
    },
-   "prices": null,
+   "prices": {
+    "H": 5.53,
+    "D": 3.93,
+    "A": 1.56,
+    "over25": 1.84,
+    "under25": 1.87,
+    "source": "bookmaker average (model feed)"
+   },
    "best_bet_price": null
   },
   "Rio Ave v Famalicao": {
@@ -259,18 +266,18 @@
     "temperature_2m": 16.2,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 0.4,
-    "wind_gusts_10m": 7.6,
+    "wind_speed_10m": 0.5,
+    "wind_gusts_10m": 9.0,
     "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 3.6,
-    "A": 2.05,
-    "D": 3.3,
-    "over25": 2.0,
-    "under25": 1.71,
-    "source": "DraftKings via ESPN"
+    "H": 3.59,
+    "D": 3.29,
+    "A": 2.02,
+    "over25": 2.03,
+    "under25": 1.72,
+    "source": "bookmaker average (model feed)"
    },
    "best_bet_price": null
   },
@@ -297,21 +304,21 @@
     "temperature_2m": 16.5,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 6.3,
-    "wind_gusts_10m": 19.8,
+    "wind_speed_10m": 7.0,
+    "wind_gusts_10m": 19.1,
     "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 1.24,
-    "A": 10.0,
-    "D": 6.0,
-    "over25": null,
-    "under25": null,
-    "source": "DraftKings via ESPN"
+    "H": 1.23,
+    "D": 5.95,
+    "A": 10.38,
+    "over25": 1.44,
+    "under25": 2.64,
+    "source": "bookmaker average (model feed)"
    },
    "best_bet_price": {
-    "price": 1.24,
+    "price": 1.23,
     "derived": false
    }
   },
@@ -335,24 +342,24 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 18.0,
-    "precipitation_probability": 9,
+    "temperature_2m": 17.2,
+    "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 16.0,
-    "wind_gusts_10m": 38.2,
-    "weather_code": 3,
+    "wind_speed_10m": 18.9,
+    "wind_gusts_10m": 39.6,
+    "weather_code": 1,
     "impact": "no impact expected"
    },
    "prices": {
-    "H": 8.0,
-    "A": 1.37,
-    "D": 4.7,
-    "over25": 1.83,
-    "under25": 1.87,
-    "source": "DraftKings via ESPN"
+    "H": 8.19,
+    "D": 4.55,
+    "A": 1.36,
+    "over25": 1.8,
+    "under25": 1.93,
+    "source": "bookmaker average (model feed)"
    },
    "best_bet_price": {
-    "price": 1.06,
+    "price": 1.05,
     "derived": true
    }
   }
