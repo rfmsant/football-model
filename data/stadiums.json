@@ -1384,5 +1384,61 @@
   "lat": 38.1166,
   "lon": 13.3636,
   "approx": true
+ },
+ "F1|Lyon": {
+  "query": "lyon",
+  "place": "Lyon",
+  "lat": 45.74906,
+  "lon": 4.84789,
+  "approx": true
+ },
+ "E3|Salford": {
+  "query": "salford",
+  "place": "Salford",
+  "lat": 53.48771,
+  "lon": -2.29042,
+  "approx": true
+ },
+ "T1|Besiktas": {
+  "query": "besiktas",
+  "place": "Beşiktaş",
+  "lat": 40.91119,
+  "lon": 42.87263,
+  "approx": true
+ },
+ "E2|Cambridge": {
+  "query": "cambridge",
+  "place": "Cambridge",
+  "lat": 52.2,
+  "lon": 0.11667,
+  "approx": true
+ },
+ "I2|Avellino": {
+  "query": "avellino",
+  "place": "Avellino",
+  "lat": 40.91494,
+  "lon": 14.79103,
+  "approx": true
+ },
+ "I2|Cesena": {
+  "query": "cesena",
+  "place": "Cesena",
+  "lat": 44.1391,
+  "lon": 12.24315,
+  "approx": true
+ },
+ "I2|Empoli": {
+  "query": "empoli",
+  "place": "Empoli",
+  "lat": 43.71795,
+  "lon": 10.94758,
+  "approx": true
+ },
+ "E2|Oxford": {
+  "query": "oxford",
+  "place": "Oxford",
+  "lat": 51.75222,
+  "lon": -1.25596,
+  "approx": true
  }
 }
