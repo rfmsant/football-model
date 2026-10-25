@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-25T16:34:05Z",
+ "updated_at": "2026-10-25T20:58:40Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -154,16 +154,16 @@
     "var": "Bruno Esteves",
     "games": 6,
     "yellow_pg": 3.8,
-    "red_pg": 1.0,
-    "goals_pg": 3.0,
+    "red_pg": 0.8,
+    "goals_pg": 3.7,
     "home_win_pct": 0.5,
-    "draw_pct": 0.17
+    "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 20.6,
+    "temperature_2m": 20.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 16.5,
+    "wind_speed_10m": 14.8,
     "wind_gusts_10m": 37.4,
     "weather_code": 2,
     "impact": "no impact expected"
@@ -189,20 +189,20 @@
    },
    "referee": {
     "name": "José Bessa",
-    "var": "Bruno Costa",
-    "games": 5,
+    "var": "Rui Costa",
+    "games": 6,
     "yellow_pg": 6.0,
     "red_pg": 0.33,
-    "goals_pg": 3.8,
-    "home_win_pct": 0.2,
-    "draw_pct": 0.6
+    "goals_pg": 3.3,
+    "home_win_pct": 0.33,
+    "draw_pct": 0.5
    },
    "weather": {
-    "temperature_2m": 14.4,
+    "temperature_2m": 14.6,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 5.5,
-    "wind_gusts_10m": 37.8,
+    "wind_speed_10m": 5.6,
+    "wind_gusts_10m": 38.2,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -228,20 +228,20 @@
    "referee": {
     "name": "Hélder Carvalho",
     "var": "Manuel Mota",
-    "games": 3,
+    "games": 4,
     "yellow_pg": 2.5,
     "red_pg": 0.0,
     "goals_pg": 4.0,
-    "home_win_pct": 0.33,
-    "draw_pct": 0.33
+    "home_win_pct": 0.25,
+    "draw_pct": 0.25
    },
    "weather": {
-    "temperature_2m": 15.7,
+    "temperature_2m": 15.6,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 2.2,
-    "wind_gusts_10m": 7.9,
-    "weather_code": 2,
+    "wind_speed_10m": 2.3,
+    "wind_gusts_10m": 7.6,
+    "weather_code": 45,
     "impact": "no impact expected"
    },
    "prices": {
@@ -266,19 +266,19 @@
    "referee": {
     "name": "Miguel Nogueira",
     "var": "Luís Ferreira",
-    "games": 6,
+    "games": 7,
     "yellow_pg": 5.8,
     "red_pg": 0.75,
-    "goals_pg": 2.3,
-    "home_win_pct": 0.17,
-    "draw_pct": 0.0
+    "goals_pg": 2.0,
+    "home_win_pct": 0.14,
+    "draw_pct": 0.14
    },
    "weather": {
     "temperature_2m": 16.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 7.4,
-    "wind_gusts_10m": 23.0,
+    "wind_speed_10m": 8.1,
+    "wind_gusts_10m": 23.4,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -315,12 +315,12 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 17.2,
+    "temperature_2m": 17.6,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 17.7,
-    "wind_gusts_10m": 39.2,
-    "weather_code": 0,
+    "wind_speed_10m": 16.6,
+    "wind_gusts_10m": 34.9,
+    "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
