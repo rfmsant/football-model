@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-25T04:55:42Z",
+ "updated_at": "2026-10-25T11:46:15Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -187,11 +187,11 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 20.8,
+    "temperature_2m": 21.0,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 15.5,
-    "wind_gusts_10m": 36.0,
+    "wind_speed_10m": 15.4,
+    "wind_gusts_10m": 35.6,
     "weather_code": 1,
     "impact": "no impact expected"
    },
@@ -225,11 +225,11 @@
     "draw_pct": 0.6
    },
    "weather": {
-    "temperature_2m": 14.8,
+    "temperature_2m": 14.5,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 5.2,
-    "wind_gusts_10m": 30.2,
+    "wind_speed_10m": 5.7,
+    "wind_gusts_10m": 36.7,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -266,9 +266,9 @@
     "temperature_2m": 15.8,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 1.6,
-    "wind_gusts_10m": 9.4,
-    "weather_code": 0,
+    "wind_speed_10m": 1.8,
+    "wind_gusts_10m": 8.3,
+    "weather_code": 3,
     "impact": "no impact expected"
    },
    "prices": {
@@ -304,9 +304,9 @@
     "temperature_2m": 16.9,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 7.2,
-    "wind_gusts_10m": 20.5,
-    "weather_code": 1,
+    "wind_speed_10m": 6.8,
+    "wind_gusts_10m": 23.0,
+    "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": {
@@ -342,11 +342,11 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 17.4,
+    "temperature_2m": 17.3,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 19.9,
-    "wind_gusts_10m": 40.3,
+    "wind_speed_10m": 15.9,
+    "wind_gusts_10m": 37.1,
     "weather_code": 1,
     "impact": "no impact expected"
    },
