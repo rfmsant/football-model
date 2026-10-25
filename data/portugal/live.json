@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-25T11:46:15Z",
+ "updated_at": "2026-10-25T16:34:05Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -75,18 +75,8 @@
     "weather_code": 1,
     "impact": "no impact expected"
    },
-   "prices": {
-    "H": 1.75,
-    "D": 3.58,
-    "A": 4.42,
-    "over25": 1.89,
-    "under25": 1.84,
-    "source": "bookmaker average (model feed)"
-   },
-   "best_bet_price": {
-    "price": 1.18,
-    "derived": true
-   }
+   "prices": null,
+   "best_bet_price": null
   },
   "Alverca v Arouca": {
    "kickoff_utc": "2026-10-24T17:00:00Z",
@@ -116,14 +106,7 @@
     "weather_code": 0,
     "impact": "no impact expected"
    },
-   "prices": {
-    "H": 2.12,
-    "D": 3.3,
-    "A": 3.29,
-    "over25": 1.84,
-    "under25": 1.87,
-    "source": "bookmaker average (model feed)"
-   },
+   "prices": null,
    "best_bet_price": null
   },
   "Gil Vicente v FC Porto": {
@@ -154,18 +137,8 @@
     "weather_code": 3,
     "impact": "no impact expected"
    },
-   "prices": {
-    "H": 6.98,
-    "D": 4.28,
-    "A": 1.43,
-    "over25": 1.83,
-    "under25": 1.88,
-    "source": "bookmaker average (model feed)"
-   },
-   "best_bet_price": {
-    "price": 1.43,
-    "derived": false
-   }
+   "prices": null,
+   "best_bet_price": null
   },
   "Estoril v Moreirense": {
    "kickoff_utc": "2026-10-25T15:30:00Z",
@@ -179,20 +152,20 @@
    "referee": {
     "name": "Carlos Macedo",
     "var": "Bruno Esteves",
-    "games": 5,
+    "games": 6,
     "yellow_pg": 3.8,
     "red_pg": 1.0,
-    "goals_pg": 3.6,
-    "home_win_pct": 0.6,
-    "draw_pct": 0.0
+    "goals_pg": 3.0,
+    "home_win_pct": 0.5,
+    "draw_pct": 0.17
    },
    "weather": {
-    "temperature_2m": 21.0,
+    "temperature_2m": 20.6,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 15.4,
-    "wind_gusts_10m": 35.6,
-    "weather_code": 1,
+    "wind_speed_10m": 16.5,
+    "wind_gusts_10m": 37.4,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
@@ -225,11 +198,11 @@
     "draw_pct": 0.6
    },
    "weather": {
-    "temperature_2m": 14.5,
+    "temperature_2m": 14.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 5.7,
-    "wind_gusts_10m": 36.7,
+    "wind_speed_10m": 5.5,
+    "wind_gusts_10m": 37.8,
     "weather_code": 2,
     "impact": "no impact expected"
    },
@@ -263,12 +236,12 @@
     "draw_pct": 0.33
    },
    "weather": {
-    "temperature_2m": 15.8,
+    "temperature_2m": 15.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 1.8,
-    "wind_gusts_10m": 8.3,
-    "weather_code": 3,
+    "wind_speed_10m": 2.2,
+    "wind_gusts_10m": 7.9,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
@@ -301,12 +274,12 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 16.9,
+    "temperature_2m": 16.7,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 6.8,
+    "wind_speed_10m": 7.4,
     "wind_gusts_10m": 23.0,
-    "weather_code": 0,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
@@ -342,12 +315,12 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 17.3,
+    "temperature_2m": 17.2,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 15.9,
-    "wind_gusts_10m": 37.1,
-    "weather_code": 1,
+    "wind_speed_10m": 17.7,
+    "wind_gusts_10m": 39.2,
+    "weather_code": 0,
     "impact": "no impact expected"
    },
    "prices": {
