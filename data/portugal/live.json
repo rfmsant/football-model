@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-25T20:58:40Z",
+ "updated_at": "2026-10-25T23:21:13Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -191,14 +191,14 @@
     "name": "José Bessa",
     "var": "Rui Costa",
     "games": 6,
-    "yellow_pg": 6.0,
-    "red_pg": 0.33,
+    "yellow_pg": 5.5,
+    "red_pg": 0.25,
     "goals_pg": 3.3,
     "home_win_pct": 0.33,
     "draw_pct": 0.5
    },
    "weather": {
-    "temperature_2m": 14.6,
+    "temperature_2m": 14.4,
     "precipitation_probability": 0,
     "precipitation": 0.0,
     "wind_speed_10m": 5.6,
@@ -229,14 +229,14 @@
     "name": "Hélder Carvalho",
     "var": "Manuel Mota",
     "games": 4,
-    "yellow_pg": 2.5,
+    "yellow_pg": 3.3,
     "red_pg": 0.0,
     "goals_pg": 4.0,
     "home_win_pct": 0.25,
     "draw_pct": 0.25
    },
    "weather": {
-    "temperature_2m": 15.6,
+    "temperature_2m": 15.5,
     "precipitation_probability": 0,
     "precipitation": 0.0,
     "wind_speed_10m": 2.3,
@@ -269,16 +269,16 @@
     "games": 7,
     "yellow_pg": 5.8,
     "red_pg": 0.75,
-    "goals_pg": 2.0,
+    "goals_pg": 2.4,
     "home_win_pct": 0.14,
-    "draw_pct": 0.14
+    "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 16.7,
+    "temperature_2m": 16.5,
     "precipitation_probability": 0,
     "precipitation": 0.0,
-    "wind_speed_10m": 8.1,
-    "wind_gusts_10m": 23.4,
+    "wind_speed_10m": 7.8,
+    "wind_gusts_10m": 24.1,
     "weather_code": 2,
     "impact": "no impact expected"
    },
