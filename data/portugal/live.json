@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26T04:59:04Z",
+ "updated_at": "2026-10-26T13:18:21Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -168,14 +168,7 @@
     "weather_code": 2,
     "impact": "no impact expected"
    },
-   "prices": {
-    "H": 1.93,
-    "D": 3.46,
-    "A": 3.7,
-    "over25": 1.88,
-    "under25": 1.84,
-    "source": "bookmaker average (model feed)"
-   },
+   "prices": null,
    "best_bet_price": null
   },
   "Nacional v Braga": {
@@ -206,14 +199,7 @@
     "weather_code": 2,
     "impact": "no impact expected"
    },
-   "prices": {
-    "H": 5.53,
-    "D": 3.93,
-    "A": 1.56,
-    "over25": 1.84,
-    "under25": 1.87,
-    "source": "bookmaker average (model feed)"
-   },
+   "prices": null,
    "best_bet_price": null
   },
   "Rio Ave v Famalicao": {
@@ -244,14 +230,7 @@
     "weather_code": 45,
     "impact": "no impact expected"
    },
-   "prices": {
-    "H": 3.59,
-    "D": 3.29,
-    "A": 2.02,
-    "over25": 2.03,
-    "under25": 1.72,
-    "source": "bookmaker average (model feed)"
-   },
+   "prices": null,
    "best_bet_price": null
   },
   "Sporting v Academico de Viseu": {
@@ -282,18 +261,8 @@
     "weather_code": 2,
     "impact": "no impact expected"
    },
-   "prices": {
-    "H": 1.23,
-    "D": 5.95,
-    "A": 10.38,
-    "over25": 1.44,
-    "under25": 2.64,
-    "source": "bookmaker average (model feed)"
-   },
-   "best_bet_price": {
-    "price": 1.23,
-    "derived": false
-   }
+   "prices": null,
+   "best_bet_price": null
   },
   "Santa Clara v Benfica": {
    "kickoff_utc": "2026-10-26T18:45:00Z",
@@ -316,11 +285,11 @@
    },
    "weather": {
     "temperature_2m": 17.8,
-    "precipitation_probability": 1,
+    "precipitation_probability": 4,
     "precipitation": 0.0,
-    "wind_speed_10m": 17.2,
-    "wind_gusts_10m": 34.9,
-    "weather_code": 3,
+    "wind_speed_10m": 18.5,
+    "wind_gusts_10m": 38.2,
+    "weather_code": 2,
     "impact": "no impact expected"
    },
    "prices": {
