@@ -1440,5 +1440,26 @@
   "lat": 51.75222,
   "lon": -1.25596,
   "approx": true
+ },
+ "I2|Vicenza": {
+  "query": "vicenza",
+  "place": "Vicenza",
+  "lat": 45.54672,
+  "lon": 11.5475,
+  "approx": true
+ },
+ "SC0|Dundee United": {
+  "query": "united",
+  "place": "United Kingdom",
+  "lat": 54.75844,
+  "lon": -2.69531,
+  "approx": true
+ },
+ "SC0|Aberdeen": {
+  "query": "aberdeen",
+  "place": "Aberdeen",
+  "lat": 57.14369,
+  "lon": -2.09814,
+  "approx": true
  }
 }
