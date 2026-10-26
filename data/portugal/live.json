@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-25T23:21:13Z",
+ "updated_at": "2026-10-26T04:59:04Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -268,7 +268,7 @@
     "var": "Luís Ferreira",
     "games": 7,
     "yellow_pg": 5.8,
-    "red_pg": 0.75,
+    "red_pg": 0.6,
     "goals_pg": 2.4,
     "home_win_pct": 0.14,
     "draw_pct": 0.0
@@ -315,10 +315,10 @@
     "draw_pct": 0.0
    },
    "weather": {
-    "temperature_2m": 17.6,
-    "precipitation_probability": 0,
+    "temperature_2m": 17.8,
+    "precipitation_probability": 1,
     "precipitation": 0.0,
-    "wind_speed_10m": 16.6,
+    "wind_speed_10m": 17.2,
     "wind_gusts_10m": 34.9,
     "weather_code": 3,
     "impact": "no impact expected"
