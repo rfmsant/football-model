@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26T13:18:21Z",
+ "updated_at": "2026-10-26T20:36:15Z",
  "report": "2026-10-18",
  "games": {
   "Braga v Gil Vicente": {
@@ -17,281 +17,128 @@
    "best_bet_price": null
   },
   "Vitoria SC v Maritimo": {
-   "kickoff_utc": "2026-10-23T19:45:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio D. Afonso Henriques",
     "lat": 41.4459,
     "lon": -8.3006
    },
-   "referee": {
-    "name": "Diogo Rosa",
-    "var": "Manuel Oliveira",
-    "games": 3,
-    "yellow_pg": 6.0,
-    "red_pg": 0.0,
-    "goals_pg": 3.7,
-    "home_win_pct": 0.33,
-    "draw_pct": 0.67
-   },
-   "weather": {
-    "temperature_2m": 11.7,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 3.0,
-    "wind_gusts_10m": 10.1,
-    "weather_code": 1,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Estrela v Casa Pia": {
-   "kickoff_utc": "2026-10-24T14:30:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio Jose Gomes",
     "lat": 38.7522,
     "lon": -9.2236
    },
-   "referee": {
-    "name": "Bruno Costa",
-    "var": "João Casegas",
-    "games": 5,
-    "yellow_pg": 3.5,
-    "red_pg": 0.0,
-    "goals_pg": 2.8,
-    "home_win_pct": 0.2,
-    "draw_pct": 0.2
-   },
-   "weather": {
-    "temperature_2m": 20.7,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 10.4,
-    "wind_gusts_10m": 27.0,
-    "weather_code": 1,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Alverca v Arouca": {
-   "kickoff_utc": "2026-10-24T17:00:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Complexo Desportivo FC Alverca",
     "lat": 38.8956,
     "lon": -9.0393
    },
-   "referee": {
-    "name": "Pedro Ramalho",
-    "var": "Paulo Barradas",
-    "games": 5,
-    "yellow_pg": 4.0,
-    "red_pg": 1.5,
-    "goals_pg": 2.0,
-    "home_win_pct": 0.2,
-    "draw_pct": 0.2
-   },
-   "weather": {
-    "temperature_2m": 18.4,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 16.8,
-    "wind_gusts_10m": 34.2,
-    "weather_code": 0,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Gil Vicente v FC Porto": {
-   "kickoff_utc": "2026-10-24T19:30:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio Cidade de Barcelos",
     "lat": 41.5444,
     "lon": -8.6338
    },
-   "referee": {
-    "name": "Luís Godinho",
-    "var": "Pedro Ferreira",
-    "games": 6,
-    "yellow_pg": 4.8,
-    "red_pg": 1.17,
-    "goals_pg": 1.8,
-    "home_win_pct": 0.33,
-    "draw_pct": 0.17
-   },
-   "weather": {
-    "temperature_2m": 12.8,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 1.8,
-    "wind_gusts_10m": 7.9,
-    "weather_code": 3,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Estoril v Moreirense": {
-   "kickoff_utc": "2026-10-25T15:30:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio Antonio Coimbra da Mota",
     "lat": 38.7135,
     "lon": -9.4013
    },
-   "referee": {
-    "name": "Carlos Macedo",
-    "var": "Bruno Esteves",
-    "games": 6,
-    "yellow_pg": 3.8,
-    "red_pg": 0.8,
-    "goals_pg": 3.7,
-    "home_win_pct": 0.5,
-    "draw_pct": 0.0
-   },
-   "weather": {
-    "temperature_2m": 20.4,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 14.8,
-    "wind_gusts_10m": 37.4,
-    "weather_code": 2,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Nacional v Braga": {
-   "kickoff_utc": "2026-10-25T18:00:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio da Madeira",
     "lat": 32.6704,
     "lon": -16.8834
    },
-   "referee": {
-    "name": "José Bessa",
-    "var": "Rui Costa",
-    "games": 6,
-    "yellow_pg": 5.5,
-    "red_pg": 0.25,
-    "goals_pg": 3.3,
-    "home_win_pct": 0.33,
-    "draw_pct": 0.5
-   },
-   "weather": {
-    "temperature_2m": 14.4,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 5.6,
-    "wind_gusts_10m": 38.2,
-    "weather_code": 2,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Rio Ave v Famalicao": {
-   "kickoff_utc": "2026-10-25T18:00:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio do Rio Ave",
     "lat": 41.3616,
     "lon": -8.7402
    },
-   "referee": {
-    "name": "Hélder Carvalho",
-    "var": "Manuel Mota",
-    "games": 4,
-    "yellow_pg": 3.3,
-    "red_pg": 0.0,
-    "goals_pg": 4.0,
-    "home_win_pct": 0.25,
-    "draw_pct": 0.25
-   },
-   "weather": {
-    "temperature_2m": 15.5,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 2.3,
-    "wind_gusts_10m": 7.6,
-    "weather_code": 45,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Sporting v Academico de Viseu": {
-   "kickoff_utc": "2026-10-25T20:30:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio Jose Alvalade",
     "lat": 38.7611,
     "lon": -9.1608
    },
-   "referee": {
-    "name": "Miguel Nogueira",
-    "var": "Luís Ferreira",
-    "games": 7,
-    "yellow_pg": 5.8,
-    "red_pg": 0.6,
-    "goals_pg": 2.4,
-    "home_win_pct": 0.14,
-    "draw_pct": 0.0
-   },
-   "weather": {
-    "temperature_2m": 16.5,
-    "precipitation_probability": 0,
-    "precipitation": 0.0,
-    "wind_speed_10m": 7.8,
-    "wind_gusts_10m": 24.1,
-    "weather_code": 2,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": null,
    "best_bet_price": null
   },
   "Santa Clara v Benfica": {
-   "kickoff_utc": "2026-10-26T18:45:00Z",
+   "kickoff_utc": null,
    "postponed": false,
-   "round": 9,
+   "round": null,
    "stadium": {
     "name": "Estadio de Sao Miguel",
     "lat": 37.7489,
     "lon": -25.6631
    },
-   "referee": {
-    "name": "Cláudio Pereira",
-    "var": "Rui Soares",
-    "games": 2,
-    "yellow_pg": 4.0,
-    "red_pg": 0.0,
-    "goals_pg": 2.5,
-    "home_win_pct": 0.5,
-    "draw_pct": 0.0
-   },
-   "weather": {
-    "temperature_2m": 17.8,
-    "precipitation_probability": 4,
-    "precipitation": 0.0,
-    "wind_speed_10m": 18.5,
-    "wind_gusts_10m": 38.2,
-    "weather_code": 2,
-    "impact": "no impact expected"
-   },
+   "referee": null,
+   "weather": null,
    "prices": {
     "H": 8.19,
     "D": 4.55,
