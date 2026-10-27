@@ -1,39 +1,7 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-10-26T13:17:26Z",
- "round_start": "2026-10-26",
- "round_end": "2026-10-26",
- "games": [
-  {
-   "match": "Santa Clara v Benfica",
-   "date": "2026-10-26",
-   "time": "18:45",
-   "chances": {
-    "H": 0.105,
-    "D": 0.196,
-    "A": 0.699,
-    "over25": 0.518,
-    "btts": 0.453
-   },
-   "prices": {
-    "H": 8.19,
-    "D": 4.55,
-    "A": 1.36,
-    "over25": 1.8,
-    "under25": 1.93
-   },
-   "best": [],
-   "closest": {
-    "market": "1X2",
-    "selection": "A",
-    "label": "Benfica to win",
-    "p_model": 0.6985,
-    "odds": 1.36,
-    "odds_source": "real",
-    "value": -0.05,
-    "min_odds": 1.4,
-    "researched": null
-   }
-  }
- ]
+ "generated_at": "2026-10-27T12:26:32Z",
+ "round_start": null,
+ "round_end": null,
+ "games": []
 }

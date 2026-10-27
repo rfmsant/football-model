@@ -1,14 +1,14 @@
 {
- "updated_at": "2026-10-26T13:17:25Z",
+ "updated_at": "2026-10-27T12:26:31Z",
  "all": {
-  "bets": 28,
-  "won": 16,
+  "bets": 29,
+  "won": 17,
   "void": 5,
-  "hit_pct": 0.6957,
-  "profit": -0.13,
-  "roi": -0.0046,
-  "avg_odds": 1.45,
-  "avg_final_p": 0.6578
+  "hit_pct": 0.7083,
+  "profit": 0.3,
+  "roi": 0.0103,
+  "avg_odds": 1.44,
+  "avg_final_p": 0.659
  },
  "meets_bar": {
   "bets": 0,
@@ -21,25 +21,25 @@
   "avg_final_p": null
  },
  "best_available": {
-  "bets": 28,
-  "won": 16,
+  "bets": 29,
+  "won": 17,
   "void": 5,
-  "hit_pct": 0.6957,
-  "profit": -0.13,
-  "roi": -0.0046,
-  "avg_odds": 1.45,
-  "avg_final_p": 0.6578
+  "hit_pct": 0.7083,
+  "profit": 0.3,
+  "roi": 0.0103,
+  "avg_odds": 1.44,
+  "avg_final_p": 0.659
  },
  "by_market": {
   "1X2": {
-   "bets": 1,
-   "won": 0,
+   "bets": 2,
+   "won": 1,
    "void": 0,
-   "hit_pct": 0.0,
-   "profit": -1.0,
-   "roi": -1.0,
+   "hit_pct": 0.5,
+   "profit": -0.57,
+   "roi": -0.285,
    "avg_odds": 1.42,
-   "avg_final_p": 0.6736
+   "avg_final_p": 0.6841
   },
   "BTTS": {
    "bets": 3,
@@ -84,14 +84,14 @@
  },
  "by_day": {
   "2026-10-18": {
-   "bets": 9,
-   "won": 7,
+   "bets": 10,
+   "won": 8,
    "void": 1,
-   "hit_pct": 0.875,
-   "profit": 2.0,
-   "roi": 0.2222,
-   "avg_odds": 1.45,
-   "avg_final_p": 0.656
+   "hit_pct": 0.8889,
+   "profit": 2.43,
+   "roi": 0.243,
+   "avg_odds": 1.44,
+   "avg_final_p": 0.6598
   },
   "2026-10-06": {
    "bets": 9,
@@ -548,7 +548,10 @@
    "min_odds": 1.46,
    "meets_bar": false,
    "confidence": "low",
-   "verdict": "WAIT FOR LINE-UPS"
+   "verdict": "WAIT FOR LINE-UPS",
+   "score": "2-0",
+   "profit": 0.43,
+   "result": "won"
   },
   {
    "report_date": "2026-10-18",

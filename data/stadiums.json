@@ -1461,5 +1461,26 @@
   "lat": 57.14369,
   "lon": -2.09814,
   "approx": true
+ },
+ "I1|Lecce": {
+  "query": "lecce",
+  "place": "Lecce",
+  "lat": 40.35481,
+  "lon": 18.17244,
+  "approx": true
+ },
+ "SP1|Espanol": {
+  "query": "Espanol",
+  "place": "Español",
+  "lat": 28.5,
+  "lon": -16.33333,
+  "approx": true
+ },
+ "SP1|Malaga": {
+  "query": "malaga",
+  "place": "Málaga",
+  "lat": 36.72016,
+  "lon": -4.42034,
+  "approx": true
  }
 }
