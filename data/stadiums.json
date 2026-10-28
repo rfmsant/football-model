@@ -1482,5 +1482,26 @@
   "lat": 36.72016,
   "lon": -4.42034,
   "approx": true
+ },
+ "D2|Braunschweig": {
+  "query": "braunschweig",
+  "place": "Braunschweig",
+  "lat": 52.26594,
+  "lon": 10.52673,
+  "approx": true
+ },
+ "B1|Waregem": {
+  "query": "waregem",
+  "place": "Waregem",
+  "lat": 50.88898,
+  "lon": 3.42756,
+  "approx": true
+ },
+ "E1|West Brom": {
+  "query": "west bromwich",
+  "place": "West Bromwich",
+  "lat": 52.51868,
+  "lon": -1.9945,
+  "approx": true
  }
 }
