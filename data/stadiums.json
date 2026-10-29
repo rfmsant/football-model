@@ -1503,5 +1503,19 @@
   "lat": 52.51868,
   "lon": -1.9945,
   "approx": true
+ },
+ "P1|Estoril": {
+  "query": "estoril",
+  "place": "Estoril",
+  "lat": 38.70571,
+  "lon": -9.39773,
+  "approx": true
+ },
+ "D2|Wolfsburg": {
+  "query": "wolfsburg",
+  "place": "Wolfsburg",
+  "lat": 52.4236,
+  "lon": 10.77597,
+  "approx": true
  }
 }
