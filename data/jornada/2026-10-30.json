@@ -1,6 +1,6 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-10-29T13:17:48Z",
+ "generated_at": "2026-10-30T13:11:17Z",
  "round_start": "2026-10-30",
  "round_end": "2026-11-02",
  "games": [
@@ -9,29 +9,29 @@
    "date": "2026-10-30",
    "time": "20:15",
    "chances": {
-    "H": 0.105,
-    "D": 0.162,
+    "H": 0.098,
+    "D": 0.169,
     "A": 0.733,
-    "over25": 0.61,
-    "btts": 0.389
+    "over25": 0.585,
+    "btts": 0.416
    },
    "prices": {
-    "H": 9.26,
-    "D": 5.32,
-    "A": 1.26,
-    "over25": 1.56,
-    "under25": 2.35
+    "H": 9.21,
+    "D": 5.35,
+    "A": 1.29,
+    "over25": 1.58,
+    "under25": 2.27
    },
    "best": [
     {
      "market": "BTTS",
      "selection": "No",
      "label": "Both teams NOT to score",
-     "p_model": 0.6115,
-     "odds": 1.73,
+     "p_model": 0.5843,
+     "odds": 1.75,
      "odds_source": "estimated",
-     "value": 0.0579,
-     "min_odds": 1.6,
+     "value": 0.0225,
+     "min_odds": 1.68,
      "researched": null
     }
    ],
@@ -42,29 +42,29 @@
    "date": "2026-10-31",
    "time": "15:30",
    "chances": {
-    "H": 0.315,
-    "D": 0.286,
-    "A": 0.399,
-    "over25": 0.476,
-    "btts": 0.522
+    "H": 0.319,
+    "D": 0.279,
+    "A": 0.402,
+    "over25": 0.491,
+    "btts": 0.54
    },
    "prices": {
-    "H": 2.78,
-    "D": 3.17,
-    "A": 2.38,
-    "over25": 1.96,
-    "under25": 1.77
+    "H": 2.77,
+    "D": 3.28,
+    "A": 2.43,
+    "over25": 1.92,
+    "under25": 1.81
    },
    "best": [],
    "closest": {
     "market": "1X2",
     "selection": "A",
     "label": "Estrela to win",
-    "p_model": 0.3986,
-    "odds": 2.38,
+    "p_model": 0.4022,
+    "odds": 2.43,
     "odds_source": "real",
-    "value": -0.0513,
-    "min_odds": 2.46,
+    "value": -0.0227,
+    "min_odds": 2.44,
     "researched": null
    }
   },
@@ -73,29 +73,29 @@
    "date": "2026-10-31",
    "time": "20:30",
    "chances": {
-    "H": 0.785,
-    "D": 0.156,
-    "A": 0.059,
-    "over25": 0.584,
-    "btts": 0.454
+    "H": 0.8,
+    "D": 0.148,
+    "A": 0.052,
+    "over25": 0.581,
+    "btts": 0.405
    },
    "prices": {
     "H": 1.19,
-    "D": 5.89,
-    "A": 12.69,
+    "D": 6.17,
+    "A": 13.78,
     "over25": 1.65,
-    "under25": 2.1
+    "under25": 2.13
    },
    "best": [],
    "closest": {
-    "market": "BTTS",
-    "selection": "Yes",
-    "label": "Both teams to score",
-    "p_model": 0.4543,
-    "odds": 2.23,
-    "odds_source": "estimated",
-    "value": 0.0131,
-    "min_odds": 2.16,
+    "market": "O/U 2.5",
+    "selection": "Over",
+    "label": "Over 2.5 goals",
+    "p_model": 0.5808,
+    "odds": 1.65,
+    "odds_source": "real",
+    "value": -0.0417,
+    "min_odds": 1.69,
     "researched": null
    }
   },
@@ -104,28 +104,28 @@
    "date": "2026-11-01",
    "time": "15:30",
    "chances": {
-    "H": 0.508,
-    "D": 0.261,
-    "A": 0.231,
-    "over25": 0.525,
-    "btts": 0.551
+    "H": 0.524,
+    "D": 0.249,
+    "A": 0.227,
+    "over25": 0.516,
+    "btts": 0.547
    },
    "prices": {
-    "H": 1.78,
-    "D": 3.56,
-    "A": 3.96,
-    "over25": 1.79,
+    "H": 1.79,
+    "D": 3.65,
+    "A": 4.08,
+    "over25": 1.8,
     "under25": 1.93
    },
    "best": [],
    "closest": {
-    "market": "O/U 2.5",
-    "selection": "Over",
-    "label": "Over 2.5 goals",
-    "p_model": 0.5249,
+    "market": "1X2",
+    "selection": "H",
+    "label": "Arouca to win",
+    "p_model": 0.5239,
     "odds": 1.79,
     "odds_source": "real",
-    "value": -0.0604,
+    "value": -0.0622,
     "min_odds": 1.87,
     "researched": null
    }
@@ -136,28 +136,28 @@
    "time": "18:00",
    "chances": {
     "H": 0.481,
-    "D": 0.281,
-    "A": 0.237,
-    "over25": 0.491,
-    "btts": 0.517
+    "D": 0.274,
+    "A": 0.244,
+    "over25": 0.493,
+    "btts": 0.515
    },
    "prices": {
-    "H": 1.86,
-    "D": 3.41,
-    "A": 3.76,
-    "over25": 1.85,
-    "under25": 1.86
+    "H": 1.9,
+    "D": 3.49,
+    "A": 3.77,
+    "over25": 1.83,
+    "under25": 1.88
    },
    "best": [],
    "closest": {
     "market": "O/U 2.5",
     "selection": "Under",
     "label": "Under 2.5 goals",
-    "p_model": 0.5094,
-    "odds": 1.86,
+    "p_model": 0.5067,
+    "odds": 1.88,
     "odds_source": "real",
-    "value": -0.0525,
-    "min_odds": 1.92,
+    "value": -0.0474,
+    "min_odds": 1.93,
     "researched": null
    }
   },
@@ -166,17 +166,17 @@
    "date": "2026-11-01",
    "time": "18:00",
    "chances": {
-    "H": 0.276,
-    "D": 0.309,
-    "A": 0.416,
-    "over25": 0.386,
-    "btts": 0.446
+    "H": 0.273,
+    "D": 0.32,
+    "A": 0.407,
+    "over25": 0.377,
+    "btts": 0.453
    },
    "prices": {
-    "H": 3.27,
-    "D": 3.02,
-    "A": 2.17,
-    "over25": 2.35,
+    "H": 3.25,
+    "D": 3.08,
+    "A": 2.24,
+    "over25": 2.39,
     "under25": 1.52
    },
    "best": [],
@@ -184,11 +184,11 @@
     "market": "O/U 2.5",
     "selection": "Under",
     "label": "Under 2.5 goals",
-    "p_model": 0.6137,
+    "p_model": 0.6227,
     "odds": 1.52,
     "odds_source": "real",
-    "value": -0.0672,
-    "min_odds": 1.6,
+    "value": -0.0535,
+    "min_odds": 1.57,
     "researched": null
    }
   },
@@ -197,29 +197,29 @@
    "date": "2026-11-01",
    "time": "20:30",
    "chances": {
-    "H": 0.547,
-    "D": 0.26,
-    "A": 0.193,
-    "over25": 0.461,
-    "btts": 0.486
+    "H": 0.525,
+    "D": 0.276,
+    "A": 0.2,
+    "over25": 0.436,
+    "btts": 0.465
    },
    "prices": {
-    "H": 1.69,
-    "D": 3.43,
-    "A": 4.68,
-    "over25": 2.08,
-    "under25": 1.67
+    "H": 1.77,
+    "D": 3.38,
+    "A": 4.56,
+    "over25": 2.19,
+    "under25": 1.62
    },
    "best": [],
    "closest": {
     "market": "O/U 2.5",
     "selection": "Over",
     "label": "Over 2.5 goals",
-    "p_model": 0.461,
-    "odds": 2.08,
+    "p_model": 0.4364,
+    "odds": 2.19,
     "odds_source": "real",
-    "value": -0.0411,
-    "min_odds": 2.13,
+    "value": -0.0443,
+    "min_odds": 2.25,
     "researched": null
    }
   },
@@ -228,62 +228,60 @@
    "date": "2026-11-02",
    "time": "20:15",
    "chances": {
-    "H": 0.815,
-    "D": 0.127,
-    "A": 0.058,
-    "over25": 0.728,
-    "btts": 0.58
+    "H": 0.83,
+    "D": 0.115,
+    "A": 0.055,
+    "over25": 0.711,
+    "btts": 0.527
    },
    "prices": {
-    "H": 1.13,
-    "D": 7.22,
-    "A": 13.72,
+    "H": 1.16,
+    "D": 7.23,
+    "A": 13.22,
     "over25": 1.37,
-    "under25": 2.93
+    "under25": 2.9
    },
-   "best": [
-    {
-     "market": "BTTS",
-     "selection": "Yes",
-     "label": "Both teams to score",
-     "p_model": 0.5802,
-     "odds": 1.85,
-     "odds_source": "estimated",
-     "value": 0.0734,
-     "min_odds": 1.69,
-     "researched": null
-    }
-   ],
-   "closest": null
+   "best": [],
+   "closest": {
+    "market": "BTTS",
+    "selection": "Yes",
+    "label": "Both teams to score",
+    "p_model": 0.5268,
+    "odds": 1.85,
+    "odds_source": "estimated",
+    "value": -0.0254,
+    "min_odds": 1.86,
+    "researched": null
+   }
   },
   {
    "match": "Gil Vicente v Guimaraes",
    "date": "2026-11-02",
    "time": "20:15",
    "chances": {
-    "H": 0.311,
+    "H": 0.304,
     "D": 0.31,
-    "A": 0.379,
-    "over25": 0.436,
-    "btts": 0.504
+    "A": 0.387,
+    "over25": 0.439,
+    "btts": 0.52
    },
    "prices": {
-    "H": 2.79,
-    "D": 3.04,
-    "A": 2.44,
-    "over25": 2.2,
-    "under25": 1.6
+    "H": 2.8,
+    "D": 3.13,
+    "A": 2.46,
+    "over25": 2.18,
+    "under25": 1.62
    },
    "best": [],
    "closest": {
-    "market": "O/U 2.5",
-    "selection": "Over",
-    "label": "Over 2.5 goals",
-    "p_model": 0.436,
-    "odds": 2.2,
-    "odds_source": "real",
-    "value": -0.0408,
-    "min_odds": 2.25,
+    "market": "Draw no bet",
+    "selection": "A",
+    "label": "Guimaraes draw no bet",
+    "p_model": 0.5602,
+    "odds": 1.68,
+    "odds_source": "estimated",
+    "value": -0.0406,
+    "min_odds": 1.73,
     "researched": null
    }
   }

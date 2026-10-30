@@ -1517,5 +1517,40 @@
   "lat": 52.4236,
   "lon": 10.77597,
   "approx": true
+ },
+ "E0|Leeds": {
+  "query": "leeds",
+  "place": "Leeds",
+  "lat": 53.79648,
+  "lon": -1.54785,
+  "approx": true
+ },
+ "E1|Burnley": {
+  "query": "burnley",
+  "place": "Burnley",
+  "lat": 53.8,
+  "lon": -2.23333,
+  "approx": true
+ },
+ "E3|Shrewsbury": {
+  "query": "shrewsbury",
+  "place": "Shrewsbury",
+  "lat": 52.71009,
+  "lon": -2.75208,
+  "approx": true
+ },
+ "I1|Milan": {
+  "query": "milan",
+  "place": "Milan",
+  "lat": 45.46427,
+  "lon": 9.18951,
+  "approx": true
+ },
+ "E1|Charlton": {
+  "query": "charlton",
+  "place": "Charlton",
+  "lat": 51.485,
+  "lon": 0.04032,
+  "approx": true
  }
 }
