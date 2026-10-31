@@ -1552,5 +1552,33 @@
   "lat": 51.485,
   "lon": 0.04032,
   "approx": true
+ },
+ "B1|Antwerp": {
+  "query": "antwerp",
+  "place": "Antwerp",
+  "lat": 51.22047,
+  "lon": 4.40026,
+  "approx": true
+ },
+ "T1|Gaziantep": {
+  "query": "gaziantep",
+  "place": "Gaziantep",
+  "lat": 37.05944,
+  "lon": 37.3825,
+  "approx": true
+ },
+ "I2|Arezzo": {
+  "query": "arezzo",
+  "place": "Arezzo",
+  "lat": 43.46276,
+  "lon": 11.88068,
+  "approx": true
+ },
+ "I2|Ascoli": {
+  "query": "ascoli",
+  "place": "Ascoli Piceno",
+  "lat": 42.85351,
+  "lon": 13.57395,
+  "approx": true
  }
 }

@@ -1,42 +1,9 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-10-30T13:11:17Z",
- "round_start": "2026-10-30",
+ "generated_at": "2026-10-31T12:48:00Z",
+ "round_start": "2026-10-31",
  "round_end": "2026-11-02",
  "games": [
-  {
-   "match": "Casa Pia v Sp Lisbon",
-   "date": "2026-10-30",
-   "time": "20:15",
-   "chances": {
-    "H": 0.098,
-    "D": 0.169,
-    "A": 0.733,
-    "over25": 0.585,
-    "btts": 0.416
-   },
-   "prices": {
-    "H": 9.21,
-    "D": 5.35,
-    "A": 1.29,
-    "over25": 1.58,
-    "under25": 2.27
-   },
-   "best": [
-    {
-     "market": "BTTS",
-     "selection": "No",
-     "label": "Both teams NOT to score",
-     "p_model": 0.5843,
-     "odds": 1.75,
-     "odds_source": "estimated",
-     "value": 0.0225,
-     "min_odds": 1.68,
-     "researched": null
-    }
-   ],
-   "closest": null
-  },
   {
    "match": "Moreirense v Estrela",
    "date": "2026-10-31",
