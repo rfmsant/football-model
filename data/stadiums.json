@@ -1580,5 +1580,33 @@
   "lat": 42.85351,
   "lon": 13.57395,
   "approx": true
+ },
+ "SP2|Cadiz": {
+  "query": "cadiz",
+  "place": "Cadiz",
+  "lat": 36.52672,
+  "lon": -6.2891,
+  "approx": true
+ },
+ "E1|Derby": {
+  "query": "derby",
+  "place": "Derby",
+  "lat": 52.92277,
+  "lon": -1.47663,
+  "approx": true
+ },
+ "E1|Norwich": {
+  "query": "norwich",
+  "place": "Norwich",
+  "lat": 52.62783,
+  "lon": 1.29834,
+  "approx": true
+ },
+ "E1|Wrexham": {
+  "query": "wrexham",
+  "place": "Wrexham",
+  "lat": 53.04664,
+  "lon": -2.99132,
+  "approx": true
  }
 }
