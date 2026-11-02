@@ -1,0 +1,70 @@
+{
+ "league": "Liga Portugal Betclic",
+ "generated_at": "2026-11-02T16:25:04Z",
+ "round_start": "2026-11-02",
+ "round_end": "2026-11-02",
+ "games": [
+  {
+   "match": "Benfica v Alverca",
+   "date": "2026-11-02",
+   "time": "20:15",
+   "chances": {
+    "H": 0.829,
+    "D": 0.116,
+    "A": 0.055,
+    "over25": 0.711,
+    "btts": 0.525
+   },
+   "prices": {
+    "H": 1.16,
+    "D": 7.23,
+    "A": 13.22,
+    "over25": 1.37,
+    "under25": 2.9
+   },
+   "best": [],
+   "closest": {
+    "market": "O/U 2.5",
+    "selection": "Over",
+    "label": "Over 2.5 goals",
+    "p_model": 0.7106,
+    "odds": 1.37,
+    "odds_source": "real",
+    "value": -0.0265,
+    "min_odds": 1.38,
+    "researched": null
+   }
+  },
+  {
+   "match": "Gil Vicente v Guimaraes",
+   "date": "2026-11-02",
+   "time": "20:15",
+   "chances": {
+    "H": 0.303,
+    "D": 0.312,
+    "A": 0.385,
+    "over25": 0.439,
+    "btts": 0.52
+   },
+   "prices": {
+    "H": 2.8,
+    "D": 3.13,
+    "A": 2.46,
+    "over25": 2.18,
+    "under25": 1.62
+   },
+   "best": [],
+   "closest": {
+    "market": "Draw no bet",
+    "selection": "A",
+    "label": "Guimaraes draw no bet",
+    "p_model": 0.559,
+    "odds": 1.68,
+    "odds_source": "estimated",
+    "value": -0.0419,
+    "min_odds": 1.74,
+    "researched": null
+   }
+  }
+ ]
+}

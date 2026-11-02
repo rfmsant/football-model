@@ -1608,5 +1608,26 @@
   "lat": 53.04664,
   "lon": -2.99132,
   "approx": true
+ },
+ "E1|Preston": {
+  "query": "preston",
+  "place": "Preston",
+  "lat": 53.76282,
+  "lon": -2.70452,
+  "approx": true
+ },
+ "E0|Fulham": {
+  "query": "fulham",
+  "place": "Fulham",
+  "lat": 51.48026,
+  "lon": -0.1993,
+  "approx": true
+ },
+ "E1|Swansea": {
+  "query": "swansea",
+  "place": "Swansea",
+  "lat": 51.62079,
+  "lon": -3.94323,
+  "approx": true
  }
 }
