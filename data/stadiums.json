@@ -1629,5 +1629,12 @@
   "lat": 51.62079,
   "lon": -3.94323,
   "approx": true
+ },
+ "E0|Brentford": {
+  "query": "brentford",
+  "place": "Brentford",
+  "lat": 51.48619,
+  "lon": -0.3083,
+  "approx": true
  }
 }
