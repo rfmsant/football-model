@@ -1,7 +1,289 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-11-04T14:42:41Z",
- "round_start": null,
- "round_end": null,
- "games": []
+ "generated_at": "2026-11-05T14:47:22Z",
+ "round_start": "2026-11-06",
+ "round_end": "2026-11-08",
+ "games": [
+  {
+   "match": "Famalicao v Arouca",
+   "date": "2026-11-06",
+   "time": "20:45",
+   "chances": {
+    "H": 0.457,
+    "D": 0.28,
+    "A": 0.263,
+    "over25": 0.464,
+    "btts": 0.499
+   },
+   "prices": {
+    "H": 2.05,
+    "D": 3.29,
+    "A": 3.35,
+    "over25": 1.99,
+    "under25": 1.73
+   },
+   "best": [],
+   "closest": {
+    "market": "Draw no bet",
+    "selection": "H",
+    "label": "Famalicao draw no bet",
+    "p_model": 0.6343,
+    "odds": 1.44,
+    "odds_source": "estimated",
+    "value": -0.0623,
+    "min_odds": 1.53,
+    "researched": null
+   }
+  },
+  {
+   "match": "Nacional v Academico Viseu",
+   "date": "2026-11-07",
+   "time": "15:30",
+   "chances": {
+    "H": 0.324,
+    "D": 0.291,
+    "A": 0.384,
+    "over25": 0.473,
+    "btts": 0.525
+   },
+   "prices": {
+    "H": 2.89,
+    "D": 3.22,
+    "A": 2.3,
+    "over25": 1.93,
+    "under25": 1.78
+   },
+   "best": [],
+   "closest": {
+    "market": "Draw no bet",
+    "selection": "H",
+    "label": "Nacional draw no bet",
+    "p_model": 0.4579,
+    "odds": 2.01,
+    "odds_source": "estimated",
+    "value": -0.0564,
+    "min_odds": 2.12,
+    "researched": null
+   }
+  },
+  {
+   "match": "Alverca v Casa Pia",
+   "date": "2026-11-07",
+   "time": "18:00",
+   "chances": {
+    "H": 0.55,
+    "D": 0.258,
+    "A": 0.192,
+    "over25": 0.505,
+    "btts": 0.514
+   },
+   "prices": {
+    "H": 1.69,
+    "D": 3.58,
+    "A": 4.49,
+    "over25": 1.89,
+    "under25": 1.83
+   },
+   "best": [],
+   "closest": {
+    "market": "O/U 2.5",
+    "selection": "Over",
+    "label": "Over 2.5 goals",
+    "p_model": 0.5052,
+    "odds": 1.89,
+    "odds_source": "real",
+    "value": -0.0452,
+    "min_odds": 1.94,
+    "researched": null
+   }
+  },
+  {
+   "match": "Sp Lisbon v Moreirense",
+   "date": "2026-11-07",
+   "time": "20:30",
+   "chances": {
+    "H": 0.822,
+    "D": 0.124,
+    "A": 0.054,
+    "over25": 0.69,
+    "btts": 0.5
+   },
+   "prices": {
+    "H": 1.13,
+    "D": 7.33,
+    "A": 13.83,
+    "over25": 1.4,
+    "under25": 2.8
+   },
+   "best": [],
+   "closest": {
+    "market": "BTTS",
+    "selection": "Yes",
+    "label": "Both teams to score",
+    "p_model": 0.5003,
+    "odds": 1.94,
+    "odds_source": "estimated",
+    "value": -0.0294,
+    "min_odds": 1.96,
+    "researched": null
+   }
+  },
+  {
+   "match": "Estoril v Maritimo",
+   "date": "2026-11-08",
+   "time": "15:30",
+   "chances": {
+    "H": 0.452,
+    "D": 0.267,
+    "A": 0.282,
+    "over25": 0.497,
+    "btts": 0.501
+   },
+   "prices": {
+    "H": 1.99,
+    "D": 3.36,
+    "A": 3.38,
+    "over25": 1.86,
+    "under25": 1.85
+   },
+   "best": [],
+   "closest": {
+    "market": "BTTS",
+    "selection": "No",
+    "label": "Both teams NOT to score",
+    "p_model": 0.4988,
+    "odds": 1.94,
+    "odds_source": "estimated",
+    "value": -0.0323,
+    "min_odds": 1.96,
+    "researched": null
+   }
+  },
+  {
+   "match": "Santa Clara v Gil Vicente",
+   "date": "2026-11-08",
+   "time": "15:30",
+   "chances": {
+    "H": 0.429,
+    "D": 0.315,
+    "A": 0.256,
+    "over25": 0.372,
+    "btts": 0.467
+   },
+   "prices": {
+    "H": 2.14,
+    "D": 3.01,
+    "A": 3.39,
+    "over25": 2.45,
+    "under25": 1.49
+   },
+   "best": [],
+   "closest": {
+    "market": "Draw no bet",
+    "selection": "H",
+    "label": "Santa Clara draw no bet",
+    "p_model": 0.6265,
+    "odds": 1.45,
+    "odds_source": "estimated",
+    "value": -0.0628,
+    "min_odds": 1.55,
+    "researched": null
+   }
+  },
+  {
+   "match": "Guimaraes v Porto",
+   "date": "2026-11-08",
+   "time": "18:00",
+   "chances": {
+    "H": 0.189,
+    "D": 0.25,
+    "A": 0.561,
+    "over25": 0.51,
+    "btts": 0.46
+   },
+   "prices": {
+    "H": 4.84,
+    "D": 3.79,
+    "A": 1.61,
+    "over25": 1.85,
+    "under25": 1.87
+   },
+   "best": [],
+   "closest": {
+    "market": "BTTS",
+    "selection": "No",
+    "label": "Both teams NOT to score",
+    "p_model": 0.5401,
+    "odds": 1.8,
+    "odds_source": "estimated",
+    "value": -0.0278,
+    "min_odds": 1.81,
+    "researched": null
+   }
+  },
+  {
+   "match": "Estrela v Benfica",
+   "date": "2026-11-08",
+   "time": "20:30",
+   "chances": {
+    "H": 0.095,
+    "D": 0.137,
+    "A": 0.768,
+    "over25": 0.712,
+    "btts": 0.405
+   },
+   "prices": {
+    "H": 10.2,
+    "D": 6.07,
+    "A": 1.21,
+    "over25": 1.13,
+    "under25": 2.77
+   },
+   "best": [
+    {
+     "market": "BTTS",
+     "selection": "No",
+     "label": "Both teams NOT to score",
+     "p_model": 0.5946,
+     "odds": 2.04,
+     "odds_source": "estimated",
+     "value": 0.213,
+     "min_odds": 1.65,
+     "researched": null
+    }
+   ],
+   "closest": null
+  },
+  {
+   "match": "Rio Ave v Sp Braga",
+   "date": "2026-11-08",
+   "time": "20:30",
+   "chances": {
+    "H": 0.168,
+    "D": 0.233,
+    "A": 0.599,
+    "over25": 0.522,
+    "btts": 0.455
+   },
+   "prices": {
+    "H": 5.54,
+    "D": 3.97,
+    "A": 1.52,
+    "over25": 1.79,
+    "under25": 1.94
+   },
+   "best": [],
+   "closest": {
+    "market": "BTTS",
+    "selection": "No",
+    "label": "Both teams NOT to score",
+    "p_model": 0.5451,
+    "odds": 1.79,
+    "odds_source": "estimated",
+    "value": -0.0243,
+    "min_odds": 1.8,
+    "researched": null
+   }
+  }
+ ]
 }

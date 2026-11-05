@@ -1636,5 +1636,12 @@
   "lat": 51.48619,
   "lon": -0.3083,
   "approx": true
+ },
+ "P1|Arouca": {
+  "query": "arouca",
+  "place": "Arouca",
+  "lat": 40.93057,
+  "lon": -8.24488,
+  "approx": true
  }
 }
