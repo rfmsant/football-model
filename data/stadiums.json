@@ -1643,5 +1643,33 @@
   "lat": 40.93057,
   "lon": -8.24488,
   "approx": true
+ },
+ "SC3|Stirling": {
+  "query": "stirling",
+  "place": "Stirling",
+  "lat": 56.11903,
+  "lon": -3.93682,
+  "approx": true
+ },
+ "SP2|Cordoba": {
+  "query": "cordoba",
+  "place": "Córdoba",
+  "lat": 37.89155,
+  "lon": -4.77275,
+  "approx": true
+ },
+ "SC3|Elgin": {
+  "query": "elgin",
+  "place": "Elgin",
+  "lat": 57.64947,
+  "lon": -3.31843,
+  "approx": true
+ },
+ "SC3|Dumbarton": {
+  "query": "dumbarton",
+  "place": "Dumbarton",
+  "lat": 55.94433,
+  "lon": -4.57061,
+  "approx": true
  }
 }
