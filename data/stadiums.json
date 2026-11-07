@@ -1671,5 +1671,19 @@
   "lat": 55.94433,
   "lon": -4.57061,
   "approx": true
+ },
+ "F1|Nice": {
+  "query": "nice",
+  "place": "Nice",
+  "lat": 43.70313,
+  "lon": 7.26608,
+  "approx": true
+ },
+ "E0|Ipswich": {
+  "query": "ipswich",
+  "place": "Ipswich",
+  "lat": 52.05917,
+  "lon": 1.15545,
+  "approx": true
  }
 }

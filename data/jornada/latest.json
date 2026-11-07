@@ -1,40 +1,9 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-11-06T14:26:40Z",
- "round_start": "2026-11-06",
+ "generated_at": "2026-11-07T13:16:31Z",
+ "round_start": "2026-11-07",
  "round_end": "2026-11-08",
  "games": [
-  {
-   "match": "Famalicao v Arouca",
-   "date": "2026-11-06",
-   "time": "20:45",
-   "chances": {
-    "H": 0.417,
-    "D": 0.292,
-    "A": 0.291,
-    "over25": 0.435,
-    "btts": 0.503
-   },
-   "prices": {
-    "H": 2.25,
-    "D": 3.23,
-    "A": 3.1,
-    "over25": 2.14,
-    "under25": 1.65
-   },
-   "best": [],
-   "closest": {
-    "market": "Draw no bet",
-    "selection": "H",
-    "label": "Famalicao draw no bet",
-    "p_model": 0.5887,
-    "odds": 1.55,
-    "odds_source": "estimated",
-    "value": -0.0619,
-    "min_odds": 1.65,
-    "researched": null
-   }
-  },
   {
    "match": "Nacional v Academico Viseu",
    "date": "2026-11-07",
