@@ -1,102 +1,9 @@
 {
  "league": "Liga Portugal Betclic",
- "generated_at": "2026-11-07T13:16:31Z",
- "round_start": "2026-11-07",
+ "generated_at": "2026-11-08T13:38:04Z",
+ "round_start": "2026-11-08",
  "round_end": "2026-11-08",
  "games": [
-  {
-   "match": "Nacional v Academico Viseu",
-   "date": "2026-11-07",
-   "time": "15:30",
-   "chances": {
-    "H": 0.313,
-    "D": 0.303,
-    "A": 0.384,
-    "over25": 0.461,
-    "btts": 0.527
-   },
-   "prices": {
-    "H": 2.94,
-    "D": 3.27,
-    "A": 2.33,
-    "over25": 1.99,
-    "under25": 1.76
-   },
-   "best": [],
-   "closest": {
-    "market": "O/U 2.5",
-    "selection": "Under",
-    "label": "Under 2.5 goals",
-    "p_model": 0.5392,
-    "odds": 1.76,
-    "odds_source": "real",
-    "value": -0.051,
-    "min_odds": 1.82,
-    "researched": null
-   }
-  },
-  {
-   "match": "Alverca v Casa Pia",
-   "date": "2026-11-07",
-   "time": "18:00",
-   "chances": {
-    "H": 0.546,
-    "D": 0.257,
-    "A": 0.197,
-    "over25": 0.496,
-    "btts": 0.502
-   },
-   "prices": {
-    "H": 1.74,
-    "D": 3.62,
-    "A": 4.42,
-    "over25": 1.89,
-    "under25": 1.83
-   },
-   "best": [],
-   "closest": {
-    "market": "1X2",
-    "selection": "H",
-    "label": "Alverca to win",
-    "p_model": 0.5463,
-    "odds": 1.74,
-    "odds_source": "real",
-    "value": -0.0494,
-    "min_odds": 1.79,
-    "researched": null
-   }
-  },
-  {
-   "match": "Sp Lisbon v Moreirense",
-   "date": "2026-11-07",
-   "time": "20:30",
-   "chances": {
-    "H": 0.828,
-    "D": 0.114,
-    "A": 0.058,
-    "over25": 0.684,
-    "btts": 0.457
-   },
-   "prices": {
-    "H": 1.16,
-    "D": 7.24,
-    "A": 12.97,
-    "over25": 1.41,
-    "under25": 2.75
-   },
-   "best": [],
-   "closest": {
-    "market": "O/U 2.5",
-    "selection": "Over",
-    "label": "Over 2.5 goals",
-    "p_model": 0.6843,
-    "odds": 1.41,
-    "odds_source": "real",
-    "value": -0.0351,
-    "min_odds": 1.43,
-    "researched": null
-   }
-  },
   {
    "match": "Estoril v Maritimo",
    "date": "2026-11-08",
@@ -120,10 +27,10 @@
     "market": "BTTS",
     "selection": "No",
     "label": "Both teams NOT to score",
-    "p_model": 0.4995,
+    "p_model": 0.4996,
     "odds": 1.99,
     "odds_source": "estimated",
-    "value": -0.006,
+    "value": -0.0058,
     "min_odds": 1.96,
     "researched": null
    }
@@ -156,6 +63,37 @@
     "odds_source": "real",
     "value": -0.0571,
     "min_odds": 1.55,
+    "researched": null
+   }
+  },
+  {
+   "match": "Nacional v Academico Viseu",
+   "date": "2026-11-08",
+   "time": "15:30",
+   "chances": {
+    "H": 0.328,
+    "D": 0.305,
+    "A": 0.367,
+    "over25": 0.462,
+    "btts": 0.525
+   },
+   "prices": {
+    "H": 2.85,
+    "D": 3.17,
+    "A": 2.42,
+    "over25": 1.98,
+    "under25": 1.77
+   },
+   "best": [],
+   "closest": {
+    "market": "O/U 2.5",
+    "selection": "Under",
+    "label": "Under 2.5 goals",
+    "p_model": 0.5376,
+    "odds": 1.77,
+    "odds_source": "real",
+    "value": -0.0484,
+    "min_odds": 1.82,
     "researched": null
    }
   },
@@ -244,10 +182,10 @@
     "market": "1X2",
     "selection": "A",
     "label": "Sp Braga to win",
-    "p_model": 0.6228,
+    "p_model": 0.6229,
     "odds": 1.52,
     "odds_source": "real",
-    "value": -0.0533,
+    "value": -0.0532,
     "min_odds": 1.57,
     "researched": null
    }

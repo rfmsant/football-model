@@ -1685,5 +1685,33 @@
   "lat": 52.05917,
   "lon": 1.15545,
   "approx": true
+ },
+ "SP2|Leganes": {
+  "query": "leganes",
+  "place": "Leganés",
+  "lat": 40.32718,
+  "lon": -3.7635,
+  "approx": true
+ },
+ "SP2|Burgos": {
+  "query": "burgos",
+  "place": "Burgos",
+  "lat": 42.34106,
+  "lon": -3.70184,
+  "approx": true
+ },
+ "E3|Cheltenham": {
+  "query": "cheltenham",
+  "place": "Cheltenham",
+  "lat": 51.90006,
+  "lon": -2.07972,
+  "approx": true
+ },
+ "E3|Crewe": {
+  "query": "crewe",
+  "place": "Crewe",
+  "lat": 53.09787,
+  "lon": -2.44161,
+  "approx": true
  }
 }
