@@ -1713,5 +1713,12 @@
   "lat": 53.09787,
   "lon": -2.44161,
   "approx": true
+ },
+ "SP2|Almeria": {
+  "query": "almeria",
+  "place": "Almería",
+  "lat": 36.83814,
+  "lon": -2.45974,
+  "approx": true
  }
 }
