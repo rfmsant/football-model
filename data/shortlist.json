@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T10:53:08Z",
+ "generated_at": "2026-11-09T16:36:38Z",
  "for_dates": [
   "2026-11-13",
   "2026-11-14",
@@ -18,14 +18,14 @@
    "market": "Draw no bet",
    "selection": "H",
    "label": "Leganes draw no bet",
-   "p_model": 0.63,
+   "p_model": 0.6299,
    "p_market": 0.6104,
    "odds": 1.49,
    "odds_source": "estimated",
-   "ev": -0.044,
-   "edge": 0.0196,
+   "ev": -0.0441,
+   "edge": 0.0195,
    "fair_odds": 1.59,
-   "push_prob": 0.2834,
+   "push_prob": 0.2835,
    "game_id": "SP2-20261113-2",
    "match": "Leganes v Burgos",
    "league": "SP2",
@@ -33,20 +33,20 @@
    "date": "2026-11-13",
    "time": "19:30",
    "pick_tier": null,
-   "gap_to_bar": 0.07,
+   "gap_to_bar": 0.0701,
    "rank": 1
   },
   {
    "market": "O/U 2.5",
    "selection": "Over",
    "label": "Over 2.5 goals",
-   "p_model": 0.6134,
-   "p_market": 0.587,
-   "odds": 1.59,
+   "p_model": 0.609,
+   "p_market": 0.5875,
+   "odds": 1.58,
    "odds_source": "real",
-   "ev": -0.0247,
-   "edge": 0.0264,
-   "fair_odds": 1.63,
+   "ev": -0.0378,
+   "edge": 0.0215,
+   "fair_odds": 1.64,
    "game_id": "SP2-20261114-5",
    "match": "Almeria v Andorra",
    "league": "SP2",
@@ -54,21 +54,21 @@
    "date": "2026-11-14",
    "time": "17:30",
    "pick_tier": null,
-   "gap_to_bar": 0.0866,
+   "gap_to_bar": 0.091,
    "rank": 2
   },
   {
    "market": "Draw no bet",
    "selection": "H",
    "label": "Exeter draw no bet",
-   "p_model": 0.6487,
-   "p_market": 0.6329,
+   "p_model": 0.6471,
+   "p_market": 0.6304,
    "odds": 1.46,
    "odds_source": "estimated",
-   "ev": -0.0379,
-   "edge": 0.0158,
-   "fair_odds": 1.54,
-   "push_prob": 0.2844,
+   "ev": -0.0395,
+   "edge": 0.0167,
+   "fair_odds": 1.55,
+   "push_prob": 0.2845,
    "game_id": "E3-20261114-24",
    "match": "Exeter v Cheltenham",
    "league": "E3",
@@ -76,19 +76,40 @@
    "date": "2026-11-14",
    "time": "12:30",
    "pick_tier": null,
-   "gap_to_bar": 0.0513,
+   "gap_to_bar": 0.0529,
    "rank": 3
+  },
+  {
+   "market": "BTTS",
+   "selection": "Yes",
+   "label": "Both teams to score",
+   "p_model": 0.6139,
+   "p_market": 0.5828,
+   "odds": 1.56,
+   "odds_source": "estimated",
+   "ev": -0.0423,
+   "edge": 0.0311,
+   "fair_odds": 1.63,
+   "game_id": "SP2-20261114-6",
+   "match": "Mallorca v Cordoba",
+   "league": "SP2",
+   "league_name": "Segunda Division",
+   "date": "2026-11-14",
+   "time": "17:30",
+   "pick_tier": "strong",
+   "gap_to_bar": 0.0861,
+   "rank": 4
   },
   {
    "market": "Draw no bet",
    "selection": "H",
    "label": "Colchester draw no bet",
-   "p_model": 0.6365,
-   "p_market": 0.6211,
+   "p_model": 0.6355,
+   "p_market": 0.6204,
    "odds": 1.48,
    "odds_source": "estimated",
-   "ev": -0.0418,
-   "edge": 0.0154,
+   "ev": -0.0427,
+   "edge": 0.0152,
    "fair_odds": 1.57,
    "push_prob": 0.2804,
    "game_id": "E3-20261114-28",
@@ -98,19 +119,19 @@
    "date": "2026-11-14",
    "time": "15:00",
    "pick_tier": null,
-   "gap_to_bar": 0.0635,
-   "rank": 4
+   "gap_to_bar": 0.0645,
+   "rank": 5
   },
   {
    "market": "BTTS",
    "selection": "Yes",
    "label": "Both teams to score",
-   "p_model": 0.6133,
+   "p_model": 0.6128,
    "p_market": 0.5809,
    "odds": 1.56,
    "odds_source": "estimated",
-   "ev": -0.0433,
-   "edge": 0.0324,
+   "ev": -0.044,
+   "edge": 0.0319,
    "fair_odds": 1.63,
    "game_id": "SP2-20261114-5",
    "match": "Almeria v Andorra",
@@ -119,20 +140,20 @@
    "date": "2026-11-14",
    "time": "17:30",
    "pick_tier": null,
-   "gap_to_bar": 0.0867,
-   "rank": 5
+   "gap_to_bar": 0.0872,
+   "rank": 6
   },
   {
    "market": "O/U 2.5",
    "selection": "Over",
    "label": "Over 2.5 goals",
-   "p_model": 0.6091,
-   "p_market": 0.5868,
+   "p_model": 0.6079,
+   "p_market": 0.5858,
    "odds": 1.57,
    "odds_source": "real",
-   "ev": -0.0437,
-   "edge": 0.0223,
-   "fair_odds": 1.64,
+   "ev": -0.0456,
+   "edge": 0.0221,
+   "fair_odds": 1.65,
    "game_id": "SP2-20261114-6",
    "match": "Mallorca v Cordoba",
    "league": "SP2",
@@ -140,8 +161,8 @@
    "date": "2026-11-14",
    "time": "17:30",
    "pick_tier": "strong",
-   "gap_to_bar": 0.0909,
-   "rank": 6
+   "gap_to_bar": 0.0921,
+   "rank": 7
   },
   {
    "market": "Draw no bet",
@@ -163,39 +184,40 @@
    "time": "15:00",
    "pick_tier": null,
    "gap_to_bar": 0.0539,
-   "rank": 7
+   "rank": 8
   },
   {
-   "market": "BTTS",
-   "selection": "Yes",
-   "label": "Both teams to score",
-   "p_model": 0.6145,
-   "p_market": 0.5865,
-   "odds": 1.55,
+   "market": "Draw no bet",
+   "selection": "A",
+   "label": "Grimsby draw no bet",
+   "p_model": 0.6195,
+   "p_market": 0.6149,
+   "odds": 1.5,
    "odds_source": "estimated",
-   "ev": -0.0475,
-   "edge": 0.028,
-   "fair_odds": 1.63,
-   "game_id": "SP2-20261114-6",
-   "match": "Mallorca v Cordoba",
-   "league": "SP2",
-   "league_name": "Segunda Division",
+   "ev": -0.0531,
+   "edge": 0.0046,
+   "fair_odds": 1.61,
+   "push_prob": 0.2489,
+   "game_id": "E3-20261114-30",
+   "match": "Swindon v Grimsby",
+   "league": "E3",
+   "league_name": "League Two",
    "date": "2026-11-14",
-   "time": "17:30",
-   "pick_tier": "strong",
-   "gap_to_bar": 0.0855,
-   "rank": 8
+   "time": "15:00",
+   "pick_tier": null,
+   "gap_to_bar": 0.0805,
+   "rank": 9
   },
   {
    "market": "O/U 2.5",
    "selection": "Over",
    "label": "Over 2.5 goals",
-   "p_model": 0.6027,
+   "p_model": 0.6028,
    "p_market": 0.589,
    "odds": 1.57,
    "odds_source": "real",
-   "ev": -0.0538,
-   "edge": 0.0137,
+   "ev": -0.0536,
+   "edge": 0.0138,
    "fair_odds": 1.66,
    "game_id": "E3-20261114-30",
    "match": "Swindon v Grimsby",
@@ -204,29 +226,7 @@
    "date": "2026-11-14",
    "time": "15:00",
    "pick_tier": null,
-   "gap_to_bar": 0.0973,
-   "rank": 9
-  },
-  {
-   "market": "Draw no bet",
-   "selection": "A",
-   "label": "Grimsby draw no bet",
-   "p_model": 0.6219,
-   "p_market": 0.6176,
-   "odds": 1.49,
-   "odds_source": "estimated",
-   "ev": -0.0553,
-   "edge": 0.0043,
-   "fair_odds": 1.61,
-   "push_prob": 0.2463,
-   "game_id": "E3-20261114-30",
-   "match": "Swindon v Grimsby",
-   "league": "E3",
-   "league_name": "League Two",
-   "date": "2026-11-14",
-   "time": "15:00",
-   "pick_tier": null,
-   "gap_to_bar": 0.0781,
+   "gap_to_bar": 0.0972,
    "rank": 10
   },
   {
@@ -254,14 +254,14 @@
    "market": "Draw no bet",
    "selection": "H",
    "label": "Crewe draw no bet",
-   "p_model": 0.6181,
+   "p_model": 0.6187,
    "p_market": 0.6302,
    "odds": 1.47,
    "odds_source": "estimated",
-   "ev": -0.0664,
-   "edge": -0.0122,
+   "ev": -0.0659,
+   "edge": -0.0115,
    "fair_odds": 1.62,
-   "push_prob": 0.2734,
+   "push_prob": 0.272,
    "game_id": "E3-20261114-29",
    "match": "Crewe v Newport County",
    "league": "E3",
@@ -269,19 +269,19 @@
    "date": "2026-11-14",
    "time": "15:00",
    "pick_tier": null,
-   "gap_to_bar": 0.0819,
+   "gap_to_bar": 0.0813,
    "rank": 12
   },
   {
    "market": "O/U 3.5",
    "selection": "Under",
    "label": "Under 3.5 goals",
-   "p_model": 0.6342,
+   "p_model": 0.634,
    "p_market": 0.6362,
    "odds": 1.45,
    "odds_source": "estimated",
-   "ev": -0.0805,
-   "edge": -0.002,
+   "ev": -0.0806,
+   "edge": -0.0021,
    "fair_odds": 1.58,
    "game_id": "E3-20261114-33",
    "match": "Rochdale v York",
@@ -290,7 +290,7 @@
    "date": "2026-11-14",
    "time": "15:00",
    "pick_tier": null,
-   "gap_to_bar": 0.0658,
+   "gap_to_bar": 0.066,
    "rank": 13
   },
   {
@@ -466,8 +466,8 @@
    "away": "Burgos",
    "model": {
     "probs": {
-     "H": 0.4515,
-     "D": 0.2834,
+     "H": 0.4513,
+     "D": 0.2835,
      "A": 0.2652
     },
     "probs_dixon_coles": {
@@ -504,7 +504,7 @@
     "pick": {
      "selection": "H",
      "label": "Leganes to win",
-     "p": 0.4515,
+     "p": 0.4513,
      "tier": null,
      "double_chance": {
       "selections": "HD",
@@ -514,25 +514,25 @@
     },
     "markets": {
      "1X2": {
-      "H": 0.4515,
-      "D": 0.2834,
+      "H": 0.4513,
+      "D": 0.2835,
       "A": 0.2652
      },
      "BTTS": {
-      "Yes": 0.4891,
-      "No": 0.5109
+      "Yes": 0.4883,
+      "No": 0.5117
      },
      "O/U 1.5": {
-      "Over": 0.7,
-      "Under": 0.3
+      "Over": 0.6988,
+      "Under": 0.3012
      },
      "O/U 2.5": {
-      "Over": 0.4278,
-      "Under": 0.5722
+      "Over": 0.4264,
+      "Under": 0.5736
      },
      "O/U 3.5": {
-      "Over": 0.2191,
-      "Under": 0.7809
+      "Over": 0.218,
+      "Under": 0.782
      }
     },
     "confidence": 54
@@ -544,20 +544,20 @@
       "selection": "H",
       "avg_odds": 2.1,
       "odds": 2.24,
-      "market_p": 0.4326,
-      "model_p": 0.4515,
-      "edge": 0.0189,
-      "ev": 0.0113
+      "market_p": 0.4325,
+      "model_p": 0.4513,
+      "edge": 0.0188,
+      "ev": 0.011
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.12,
+      "avg_odds": 3.11,
       "odds": 3.3,
-      "market_p": 0.2915,
-      "model_p": 0.2834,
+      "market_p": 0.2916,
+      "model_p": 0.2835,
       "edge": -0.0081,
-      "ev": -0.0649
+      "ev": -0.0644
      },
      {
       "market": "1X2",
@@ -567,27 +567,27 @@
       "market_p": 0.2759,
       "model_p": 0.2652,
       "edge": -0.0107,
-      "ev": -0.072
+      "ev": -0.0719
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
       "avg_odds": 2.13,
       "odds": 2.2,
-      "market_p": 0.4349,
-      "model_p": 0.4278,
-      "edge": -0.0071,
-      "ev": -0.0588
+      "market_p": 0.433,
+      "model_p": 0.4264,
+      "edge": -0.0066,
+      "ev": -0.062
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
-      "avg_odds": 1.64,
+      "avg_odds": 1.63,
       "odds": 1.74,
-      "market_p": 0.5651,
-      "model_p": 0.5722,
-      "edge": 0.0071,
-      "ev": -0.0044
+      "market_p": 0.567,
+      "model_p": 0.5736,
+      "edge": 0.0066,
+      "ev": -0.0019
      }
     ],
     "bookmaker_spread": null,
@@ -602,8 +602,8 @@
       },
       "1X2|D": {
        "open": 3.09,
-       "now": 3.12,
-       "change_pct": 1.0
+       "now": 3.11,
+       "change_pct": 0.6
       },
       "1X2|A": {
        "open": 3.38,
@@ -617,8 +617,8 @@
       },
       "O/U 2.5|Under": {
        "open": 1.61,
-       "now": 1.64,
-       "change_pct": 1.9
+       "now": 1.63,
+       "change_pct": 1.2
       }
      },
      "shortening_5pct_plus": []
@@ -1267,9 +1267,9 @@
    "away": "Andorra",
    "model": {
     "probs": {
-     "H": 0.5499,
+     "H": 0.5494,
      "D": 0.2434,
-     "A": 0.2068
+     "A": 0.2072
     },
     "probs_dixon_coles": {
      "H": 0.5263,
@@ -1305,35 +1305,35 @@
     "pick": {
      "selection": "H",
      "label": "Almeria to win",
-     "p": 0.5499,
+     "p": 0.5494,
      "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Almeria or draw",
-      "p": 0.7932
+      "p": 0.7928
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.5499,
+      "H": 0.5494,
       "D": 0.2434,
-      "A": 0.2068
+      "A": 0.2072
      },
      "BTTS": {
-      "Yes": 0.6133,
-      "No": 0.3867
+      "Yes": 0.6128,
+      "No": 0.3872
      },
      "O/U 1.5": {
-      "Over": 0.8329,
-      "Under": 0.1671
+      "Over": 0.8302,
+      "Under": 0.1698
      },
      "O/U 2.5": {
-      "Over": 0.6134,
-      "Under": 0.3866
+      "Over": 0.609,
+      "Under": 0.391
      },
      "O/U 3.5": {
-      "Over": 0.3896,
-      "Under": 0.6104
+      "Over": 0.3849,
+      "Under": 0.6151
      }
     },
     "confidence": 55
@@ -1345,50 +1345,50 @@
       "selection": "H",
       "avg_odds": 1.63,
       "odds": 1.74,
-      "market_p": 0.5556,
-      "model_p": 0.5499,
-      "edge": -0.0058,
-      "ev": -0.0432
+      "market_p": 0.5553,
+      "model_p": 0.5494,
+      "edge": -0.0059,
+      "ev": -0.044
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.87,
-      "odds": 4.14,
+      "avg_odds": 3.88,
+      "odds": 4.15,
       "market_p": 0.2342,
       "model_p": 0.2434,
-      "edge": 0.0091,
-      "ev": 0.0073
+      "edge": 0.0092,
+      "ev": 0.0094
      },
      {
       "market": "1X2",
       "selection": "A",
       "avg_odds": 4.31,
       "odds": 4.61,
-      "market_p": 0.2101,
-      "model_p": 0.2068,
+      "market_p": 0.2105,
+      "model_p": 0.2072,
       "edge": -0.0034,
-      "ev": -0.046
+      "ev": -0.0444
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
-      "avg_odds": 1.59,
+      "avg_odds": 1.58,
       "odds": 1.6,
-      "market_p": 0.588,
-      "model_p": 0.6134,
-      "edge": 0.0255,
-      "ev": -0.0185
+      "market_p": 0.5866,
+      "model_p": 0.609,
+      "edge": 0.0224,
+      "ev": -0.0256
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
-      "avg_odds": 2.26,
+      "avg_odds": 2.25,
       "odds": 2.39,
-      "market_p": 0.412,
-      "model_p": 0.3866,
-      "edge": -0.0255,
-      "ev": -0.0761
+      "market_p": 0.4134,
+      "model_p": 0.391,
+      "edge": -0.0224,
+      "ev": -0.0655
      }
     ],
     "bookmaker_spread": null,
@@ -1403,8 +1403,8 @@
       },
       "1X2|D": {
        "open": 4.03,
-       "now": 3.87,
-       "change_pct": -4.0
+       "now": 3.88,
+       "change_pct": -3.7
       },
       "1X2|A": {
        "open": 4.63,
@@ -2018,9 +2018,9 @@
    "away": "Cheltenham",
    "model": {
     "probs": {
-     "H": 0.4642,
-     "D": 0.2844,
-     "A": 0.2514
+     "H": 0.463,
+     "D": 0.2845,
+     "A": 0.2525
     },
     "probs_dixon_coles": {
      "H": 0.518,
@@ -2056,23 +2056,23 @@
     "pick": {
      "selection": "H",
      "label": "Exeter to win",
-     "p": 0.4642,
+     "p": 0.463,
      "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Exeter or draw",
-      "p": 0.7486
+      "p": 0.7475
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.4642,
-      "D": 0.2844,
-      "A": 0.2514
+      "H": 0.463,
+      "D": 0.2845,
+      "A": 0.2525
      },
      "BTTS": {
-      "Yes": 0.5212,
-      "No": 0.4788
+      "Yes": 0.5211,
+      "No": 0.4789
      },
      "O/U 1.5": {
       "Over": 0.7425,
@@ -2083,8 +2083,8 @@
       "Under": 0.5179
      },
      "O/U 3.5": {
-      "Over": 0.264,
-      "Under": 0.736
+      "Over": 0.2639,
+      "Under": 0.7361
      }
     },
     "confidence": 59
@@ -2094,12 +2094,12 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 2.03,
-      "odds": 2.09,
-      "market_p": 0.4545,
-      "model_p": 0.4642,
-      "edge": 0.0097,
-      "ev": -0.0298
+      "avg_odds": 2.04,
+      "odds": 2.1,
+      "market_p": 0.453,
+      "model_p": 0.463,
+      "edge": 0.01,
+      "ev": -0.0277
      },
      {
       "market": "1X2",
@@ -2107,19 +2107,19 @@
       "avg_odds": 3.27,
       "odds": 3.4,
       "market_p": 0.2817,
-      "model_p": 0.2844,
+      "model_p": 0.2845,
       "edge": 0.0027,
-      "ev": -0.033
+      "ev": -0.0327
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.5,
+      "avg_odds": 3.48,
       "odds": 3.57,
-      "market_p": 0.2638,
-      "model_p": 0.2514,
-      "edge": -0.0124,
-      "ev": -0.1026
+      "market_p": 0.2653,
+      "model_p": 0.2525,
+      "edge": -0.0128,
+      "ev": -0.0985
      },
      {
       "market": "O/U 2.5",
@@ -2149,8 +2149,8 @@
      "moves": {
       "1X2|H": {
        "open": 1.85,
-       "now": 2.03,
-       "change_pct": 9.7
+       "now": 2.04,
+       "change_pct": 10.3
       },
       "1X2|D": {
        "open": 3.43,
@@ -2159,8 +2159,8 @@
       },
       "1X2|A": {
        "open": 3.94,
-       "now": 3.5,
-       "change_pct": -11.2
+       "now": 3.48,
+       "change_pct": -11.7
       },
       "O/U 2.5|Over": {
        "open": 1.89,
@@ -2783,6 +2783,750 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
+  "SP2-20261114-6": {
+   "id": "SP2-20261114-6",
+   "league": "SP2",
+   "league_name": "Segunda Division",
+   "date": "2026-11-14",
+   "time": "17:30",
+   "home": "Mallorca",
+   "away": "Cordoba",
+   "model": {
+    "probs": {
+     "H": 0.5535,
+     "D": 0.2425,
+     "A": 0.204
+    },
+    "probs_dixon_coles": {
+     "H": 0.5191,
+     "D": 0.2436,
+     "A": 0.2373
+    },
+    "expected_goals": {
+     "home": 1.867,
+     "away": 1.2038
+    },
+    "likely_scores": [
+     {
+      "score": "1-1",
+      "p": 0.113
+     },
+     {
+      "score": "2-1",
+      "p": 0.0976
+     },
+     {
+      "score": "2-0",
+      "p": 0.0811
+     },
+     {
+      "score": "1-0",
+      "p": 0.0785
+     },
+     {
+      "score": "1-2",
+      "p": 0.063
+     }
+    ],
+    "pick": {
+     "selection": "H",
+     "label": "Mallorca to win",
+     "p": 0.5535,
+     "tier": "strong",
+     "double_chance": {
+      "selections": "HD",
+      "label": "Mallorca or draw",
+      "p": 0.796
+     }
+    },
+    "markets": {
+     "1X2": {
+      "H": 0.5535,
+      "D": 0.2425,
+      "A": 0.204
+     },
+     "BTTS": {
+      "Yes": 0.6139,
+      "No": 0.3861
+     },
+     "O/U 1.5": {
+      "Over": 0.8295,
+      "Under": 0.1705
+     },
+     "O/U 2.5": {
+      "Over": 0.6079,
+      "Under": 0.3921
+     },
+     "O/U 3.5": {
+      "Over": 0.3838,
+      "Under": 0.6162
+     }
+    },
+    "confidence": 59
+   },
+   "market": {
+    "prices": [
+     {
+      "market": "1X2",
+      "selection": "H",
+      "avg_odds": 1.64,
+      "odds": 1.71,
+      "market_p": 0.5541,
+      "model_p": 0.5535,
+      "edge": -0.0006,
+      "ev": -0.0535
+     },
+     {
+      "market": "1X2",
+      "selection": "D",
+      "avg_odds": 3.91,
+      "odds": 4.18,
+      "market_p": 0.2322,
+      "model_p": 0.2425,
+      "edge": 0.0103,
+      "ev": 0.0147
+     },
+     {
+      "market": "1X2",
+      "selection": "A",
+      "avg_odds": 4.25,
+      "odds": 4.55,
+      "market_p": 0.2137,
+      "model_p": 0.204,
+      "edge": -0.0097,
+      "ev": -0.0723
+     },
+     {
+      "market": "O/U 2.5",
+      "selection": "Over",
+      "avg_odds": 1.57,
+      "odds": 1.62,
+      "market_p": 0.5857,
+      "model_p": 0.6079,
+      "edge": 0.0222,
+      "ev": -0.0152
+     },
+     {
+      "market": "O/U 2.5",
+      "selection": "Under",
+      "avg_odds": 2.22,
+      "odds": 2.35,
+      "market_p": 0.4143,
+      "model_p": 0.3921,
+      "edge": -0.0222,
+      "ev": -0.0786
+     }
+    ],
+    "bookmaker_spread": null,
+    "line_movement": {
+     "snapshots": 2,
+     "since": "2026-11-08T13:37:51Z",
+     "moves": {
+      "1X2|H": {
+       "open": 1.61,
+       "now": 1.64,
+       "change_pct": 1.9
+      },
+      "1X2|D": {
+       "open": 3.95,
+       "now": 3.91,
+       "change_pct": -1.0
+      },
+      "1X2|A": {
+       "open": 4.31,
+       "now": 4.25,
+       "change_pct": -1.4
+      },
+      "O/U 2.5|Over": {
+       "open": 1.57,
+       "now": 1.57,
+       "change_pct": 0.0
+      },
+      "O/U 2.5|Under": {
+       "open": 2.24,
+       "now": 2.22,
+       "change_pct": -0.9
+      }
+     },
+     "shortening_5pct_plus": []
+    }
+   },
+   "table": {
+    "home": {
+     "pos": 6,
+     "of": 22,
+     "played": 12,
+     "points": 22,
+     "gd": 8.0,
+     "ppg": 1.83,
+     "gap_to_top": 7,
+     "gap_to_europe": 0,
+     "gap_above_relegation": 11
+    },
+    "away": {
+     "pos": 10,
+     "of": 22,
+     "played": 13,
+     "points": 19,
+     "gd": 0.0,
+     "ppg": 1.46,
+     "gap_to_top": 10,
+     "gap_to_europe": 3,
+     "gap_above_relegation": 8
+    },
+    "teams": 22
+   },
+   "home_stats": {
+    "name": "Mallorca",
+    "last6": [
+     {
+      "date": "2026-11-02",
+      "venue": "H",
+      "opponent": "Cadiz",
+      "competition": "SP2",
+      "score": "2-1",
+      "ht": "0-0",
+      "result": "W",
+      "gf": 2,
+      "ga": 1,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 3.28,
+      "xg_against": 0.5,
+      "shots": 23.0,
+      "shots_against": 10.0,
+      "sot": 6.0,
+      "sot_against": 3.0,
+      "corners": 10.0,
+      "corners_against": 2.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent": "Leganes",
+      "competition": "SP2",
+      "score": "1-1",
+      "ht": "1-0",
+      "result": "D",
+      "gf": 1,
+      "ga": 1,
+      "ht_gf": 1.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.9,
+      "xg_against": 2.56,
+      "shots": 10.0,
+      "shots_against": 13.0,
+      "sot": 3.0,
+      "sot_against": 4.0,
+      "corners": 4.0,
+      "corners_against": 6.0,
+      "yellows": 4.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-17",
+      "venue": "A",
+      "opponent": "Eibar",
+      "competition": "SP2",
+      "score": "1-1",
+      "ht": "0-0",
+      "result": "D",
+      "gf": 1,
+      "ga": 1,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 2.0,
+      "xg_against": 2.45,
+      "shots": 16.0,
+      "shots_against": 13.0,
+      "sot": 5.0,
+      "sot_against": 6.0,
+      "corners": 7.0,
+      "corners_against": 5.0,
+      "yellows": 4.0,
+      "reds": 1.0
+     },
+     {
+      "date": "2026-10-11",
+      "venue": "H",
+      "opponent": "Las Palmas",
+      "competition": "SP2",
+      "score": "3-1",
+      "ht": "1-0",
+      "result": "W",
+      "gf": 3,
+      "ga": 1,
+      "ht_gf": 1.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.82,
+      "xg_against": 0.33,
+      "shots": 12.0,
+      "shots_against": 4.0,
+      "sot": 6.0,
+      "sot_against": 2.0,
+      "corners": 7.0,
+      "corners_against": 2.0,
+      "yellows": 1.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-04",
+      "venue": "A",
+      "opponent": "Girona",
+      "competition": "SP2",
+      "score": "0-0",
+      "ht": "0-0",
+      "result": "D",
+      "gf": 0,
+      "ga": 0,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.25,
+      "xg_against": 1.06,
+      "shots": 9.0,
+      "shots_against": 16.0,
+      "sot": 0.0,
+      "sot_against": 5.0,
+      "corners": 7.0,
+      "corners_against": 5.0,
+      "yellows": 4.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-09-27",
+      "venue": "H",
+      "opponent": "Almeria",
+      "competition": "SP2",
+      "score": "0-1",
+      "ht": "0-1",
+      "result": "L",
+      "gf": 0,
+      "ga": 1,
+      "ht_gf": 0.0,
+      "ht_ga": 1.0,
+      "xg_for": 2.06,
+      "xg_against": 2.13,
+      "shots": 17.0,
+      "shots_against": 11.0,
+      "sot": 5.0,
+      "sot_against": 3.0,
+      "corners": 6.0,
+      "corners_against": 2.0,
+      "yellows": 6.0,
+      "reds": 0.0
+     }
+    ],
+    "last5": {
+     "games": 5,
+     "ppg": 1.8,
+     "record": "2W-3D-0L",
+     "goals_for": 1.4,
+     "goals_against": 0.8,
+     "xg_for": 1.45,
+     "xg_against": 1.38,
+     "shots": 14.0,
+     "shots_against": 11.2,
+     "sot": 4.0,
+     "sot_against": 4.0,
+     "corners": 7.0,
+     "corners_against": 4.0,
+     "yellows": 3.0,
+     "clean_sheet_pct": 0.2,
+     "failed_to_score_pct": 0.2,
+     "btts_pct": 0.8,
+     "over15_pct": 0.8,
+     "over25_pct": 0.4,
+     "over35_pct": 0.2,
+     "first_half_goals_for": 0.4,
+     "first_half_goals_against": 0.0
+    },
+    "last10": {
+     "games": 10,
+     "ppg": 1.9,
+     "record": "5W-4D-1L",
+     "goals_for": 1.3,
+     "goals_against": 0.5,
+     "xg_for": 1.56,
+     "xg_against": 1.16,
+     "shots": 13.3,
+     "shots_against": 10.8,
+     "sot": 4.2,
+     "sot_against": 3.2,
+     "corners": 5.8,
+     "corners_against": 4.2,
+     "yellows": 3.1,
+     "clean_sheet_pct": 0.5,
+     "failed_to_score_pct": 0.3,
+     "btts_pct": 0.4,
+     "over15_pct": 0.6,
+     "over25_pct": 0.3,
+     "over35_pct": 0.1,
+     "first_half_goals_for": 0.5,
+     "first_half_goals_against": 0.1
+    },
+    "season": {
+     "games": 12,
+     "ppg": 1.83,
+     "record": "6W-4D-2L",
+     "goals_for": 1.25,
+     "goals_against": 0.58,
+     "xg_for": 1.41,
+     "xg_against": 1.11,
+     "shots": 13.17,
+     "shots_against": 11.17,
+     "sot": 4.08,
+     "sot_against": 3.25,
+     "corners": 5.17,
+     "corners_against": 4.33,
+     "yellows": 3.0,
+     "clean_sheet_pct": 0.5,
+     "failed_to_score_pct": 0.33,
+     "btts_pct": 0.33,
+     "over15_pct": 0.67,
+     "over25_pct": 0.25,
+     "over35_pct": 0.08,
+     "first_half_goals_for": 0.42,
+     "first_half_goals_against": 0.17
+    },
+    "season_venue": {
+     "games": 6,
+     "ppg": 2.5,
+     "record": "5W-0D-1L",
+     "goals_for": 2.0,
+     "goals_against": 0.5,
+     "xg_for": 1.8,
+     "xg_against": 0.82,
+     "shots": 14.17,
+     "shots_against": 10.0,
+     "sot": 5.0,
+     "sot_against": 2.17,
+     "corners": 5.33,
+     "corners_against": 3.17,
+     "yellows": 2.5,
+     "clean_sheet_pct": 0.5,
+     "failed_to_score_pct": 0.17,
+     "btts_pct": 0.33,
+     "over15_pct": 0.83,
+     "over25_pct": 0.5,
+     "over35_pct": 0.17,
+     "first_half_goals_for": 0.67,
+     "first_half_goals_against": 0.17
+    },
+    "game_state_season": {
+     "ht_leads": 4,
+     "ht_leads_won": 3,
+     "ht_deficits": 2,
+     "points_from_ht_deficits": 0,
+     "second_half_goals_for": 0.83,
+     "second_half_goals_against": 0.42
+    },
+    "trend_xgd_last5_vs_season": -0.23,
+    "rest_days": 12,
+    "games_last_14d": 1,
+    "games_last_30d": 3,
+    "elo": 1582,
+    "elo_change_30d": 8
+   },
+   "away_stats": {
+    "name": "Cordoba",
+    "last6": [
+     {
+      "date": "2026-11-07",
+      "venue": "H",
+      "opponent": "Ceuta",
+      "competition": "SP2",
+      "score": "3-0",
+      "ht": "2-0",
+      "result": "W",
+      "gf": 3,
+      "ga": 0,
+      "ht_gf": 2.0,
+      "ht_ga": 0.0,
+      "xg_for": 1.15,
+      "xg_against": 1.77,
+      "shots": 14.0,
+      "shots_against": 12.0,
+      "sot": 7.0,
+      "sot_against": 5.0,
+      "corners": 11.0,
+      "corners_against": 5.0,
+      "yellows": 3.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-31",
+      "venue": "A",
+      "opponent": "Celta B",
+      "competition": "SP2",
+      "score": "2-2",
+      "ht": "1-1",
+      "result": "D",
+      "gf": 2,
+      "ga": 2,
+      "ht_gf": 1.0,
+      "ht_ga": 1.0,
+      "xg_for": 0.8,
+      "xg_against": 1.76,
+      "shots": 11.0,
+      "shots_against": 17.0,
+      "sot": 5.0,
+      "sot_against": 7.0,
+      "corners": 7.0,
+      "corners_against": 4.0,
+      "yellows": 4.0,
+      "reds": 2.0
+     },
+     {
+      "date": "2026-10-24",
+      "venue": "H",
+      "opponent": "Eibar",
+      "competition": "SP2",
+      "score": "2-0",
+      "ht": "0-0",
+      "result": "W",
+      "gf": 2,
+      "ga": 0,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 4.05,
+      "xg_against": 1.61,
+      "shots": 24.0,
+      "shots_against": 14.0,
+      "sot": 11.0,
+      "sot_against": 4.0,
+      "corners": 16.0,
+      "corners_against": 2.0,
+      "yellows": 5.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-16",
+      "venue": "A",
+      "opponent": "Leganes",
+      "competition": "SP2",
+      "score": "1-0",
+      "ht": "0-0",
+      "result": "W",
+      "gf": 1,
+      "ga": 0,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 2.08,
+      "xg_against": 0.74,
+      "shots": 20.0,
+      "shots_against": 9.0,
+      "sot": 3.0,
+      "sot_against": 2.0,
+      "corners": 7.0,
+      "corners_against": 4.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-10",
+      "venue": "A",
+      "opponent": "Eldense",
+      "competition": "SP2",
+      "score": "1-2",
+      "ht": "1-0",
+      "result": "L",
+      "gf": 1,
+      "ga": 2,
+      "ht_gf": 1.0,
+      "ht_ga": 0.0,
+      "xg_for": 1.35,
+      "xg_against": 2.79,
+      "shots": 12.0,
+      "shots_against": 14.0,
+      "sot": 6.0,
+      "sot_against": 4.0,
+      "corners": 4.0,
+      "corners_against": 6.0,
+      "yellows": 3.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-05",
+      "venue": "H",
+      "opponent": "Tenerife",
+      "competition": "SP2",
+      "score": "3-2",
+      "ht": "2-1",
+      "result": "W",
+      "gf": 3,
+      "ga": 2,
+      "ht_gf": 2.0,
+      "ht_ga": 1.0,
+      "xg_for": 2.0,
+      "xg_against": 0.76,
+      "shots": 16.0,
+      "shots_against": 10.0,
+      "sot": 6.0,
+      "sot_against": 2.0,
+      "corners": 4.0,
+      "corners_against": 8.0,
+      "yellows": 4.0,
+      "reds": 0.0
+     }
+    ],
+    "last5": {
+     "games": 5,
+     "ppg": 2.0,
+     "record": "3W-1D-1L",
+     "goals_for": 1.8,
+     "goals_against": 0.8,
+     "xg_for": 1.89,
+     "xg_against": 1.73,
+     "shots": 16.2,
+     "shots_against": 13.2,
+     "sot": 6.4,
+     "sot_against": 4.4,
+     "corners": 9.0,
+     "corners_against": 4.2,
+     "yellows": 3.4,
+     "clean_sheet_pct": 0.6,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 0.4,
+     "over15_pct": 0.8,
+     "over25_pct": 0.6,
+     "over35_pct": 0.2,
+     "first_half_goals_for": 0.8,
+     "first_half_goals_against": 0.2
+    },
+    "last10": {
+     "games": 10,
+     "ppg": 1.6,
+     "record": "5W-1D-4L",
+     "goals_for": 1.7,
+     "goals_against": 1.5,
+     "xg_for": 1.68,
+     "xg_against": 1.85,
+     "shots": 16.0,
+     "shots_against": 12.5,
+     "sot": 5.5,
+     "sot_against": 4.6,
+     "corners": 7.0,
+     "corners_against": 3.8,
+     "yellows": 3.7,
+     "clean_sheet_pct": 0.3,
+     "failed_to_score_pct": 0.1,
+     "btts_pct": 0.6,
+     "over15_pct": 0.9,
+     "over25_pct": 0.7,
+     "over35_pct": 0.4,
+     "first_half_goals_for": 0.8,
+     "first_half_goals_against": 0.6
+    },
+    "season": {
+     "games": 13,
+     "ppg": 1.46,
+     "record": "6W-1D-6L",
+     "goals_for": 1.69,
+     "goals_against": 1.69,
+     "xg_for": 1.69,
+     "xg_against": 1.75,
+     "shots": 15.85,
+     "shots_against": 12.69,
+     "sot": 5.31,
+     "sot_against": 4.54,
+     "corners": 6.54,
+     "corners_against": 3.46,
+     "yellows": 3.46,
+     "clean_sheet_pct": 0.23,
+     "failed_to_score_pct": 0.08,
+     "btts_pct": 0.69,
+     "over15_pct": 0.92,
+     "over25_pct": 0.77,
+     "over35_pct": 0.46,
+     "first_half_goals_for": 1.0,
+     "first_half_goals_against": 0.62
+    },
+    "season_venue": {
+     "games": 7,
+     "ppg": 1.0,
+     "record": "2W-1D-4L",
+     "goals_for": 1.57,
+     "goals_against": 2.0,
+     "xg_for": 1.44,
+     "xg_against": 2.32,
+     "shots": 15.0,
+     "shots_against": 14.0,
+     "sot": 5.0,
+     "sot_against": 5.43,
+     "corners": 5.29,
+     "corners_against": 3.43,
+     "yellows": 3.43,
+     "clean_sheet_pct": 0.14,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 0.86,
+     "over15_pct": 0.86,
+     "over25_pct": 0.86,
+     "over35_pct": 0.57,
+     "first_half_goals_for": 0.86,
+     "first_half_goals_against": 1.0
+    },
+    "game_state_season": {
+     "ht_leads": 5,
+     "ht_leads_won": 3,
+     "ht_deficits": 2,
+     "points_from_ht_deficits": 3,
+     "second_half_goals_for": 0.69,
+     "second_half_goals_against": 1.08
+    },
+    "trend_xgd_last5_vs_season": 0.22,
+    "rest_days": 7,
+    "games_last_14d": 2,
+    "games_last_30d": 4,
+    "elo": 1446,
+    "elo_change_30d": 22
+   },
+   "h2h": {
+    "games": [],
+    "home_wins": 0,
+    "away_wins": 0,
+    "draws": 0,
+    "avg_goals": null,
+    "over25_pct": null
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 20.0,
+    "precipitation": 0.0,
+    "precipitation_probability": 4,
+    "wind_speed_10m": 5.6,
+    "wind_gusts_10m": 4.3,
+    "time": "2026-11-14T17:00",
+    "place": "Majorca",
+    "impact": "none expected"
+   },
+   "travel_km_away_team": 701,
+   "style": {
+    "home": null,
+    "away": null
+   },
+   "players": {
+    "home": null,
+    "away": null
+   },
+   "data_coverage": {
+    "xg": true,
+    "understat": false,
+    "referee": false,
+    "weather": true
+   },
+   "research_checklist": [
+    "Confirmed injuries & suspensions for both teams (with expected return dates) and who replaces them",
+    "Predicted line-ups (and confirmed XIs if within ~1h of kick-off); rotation risk from cup/European games",
+    "Key players' recent form and ratings (FotMob/Sofascore/WhoScored pages) - especially outside the top 5 leagues",
+    "Manager situation, press-conference quotes, dressing-room news, new signings",
+    "Motivation: derby, title/relegation/Europe stakes, dead rubber, next fixture priorities",
+    "Referee appointment and tendencies if not listed (non-UK leagues)",
+    "Pitch/weather confirmation; travel; any off-field issues",
+    "Latest odds and whether the price has moved since the model ran"
+   ]
+  },
   "E3-20261114-28": {
    "id": "E3-20261114-28",
    "league": "E3",
@@ -2793,9 +3537,9 @@
    "away": "Gillingham",
    "model": {
     "probs": {
-     "H": 0.458,
+     "H": 0.4574,
      "D": 0.2804,
-     "A": 0.2616
+     "A": 0.2623
     },
     "probs_dixon_coles": {
      "H": 0.458,
@@ -2831,23 +3575,23 @@
     "pick": {
      "selection": "H",
      "label": "Colchester to win",
-     "p": 0.458,
+     "p": 0.4574,
      "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Colchester or draw",
-      "p": 0.7384
+      "p": 0.7377
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.458,
+      "H": 0.4574,
       "D": 0.2804,
-      "A": 0.2616
+      "A": 0.2623
      },
      "BTTS": {
-      "Yes": 0.5159,
-      "No": 0.4841
+      "Yes": 0.5155,
+      "No": 0.4845
      },
      "O/U 1.5": {
       "Over": 0.746,
@@ -2858,8 +3602,8 @@
       "Under": 0.5139
      },
      "O/U 3.5": {
-      "Over": 0.2676,
-      "Under": 0.7324
+      "Over": 0.2677,
+      "Under": 0.7323
      }
     },
     "confidence": 55
@@ -2871,39 +3615,39 @@
       "selection": "H",
       "avg_odds": 2.05,
       "odds": 2.1,
-      "market_p": 0.4488,
-      "model_p": 0.458,
-      "edge": 0.0092,
-      "ev": -0.0382
+      "market_p": 0.448,
+      "model_p": 0.4574,
+      "edge": 0.0093,
+      "ev": -0.0395
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.33,
+      "avg_odds": 3.32,
       "odds": 3.4,
-      "market_p": 0.2771,
+      "market_p": 0.2769,
       "model_p": 0.2804,
-      "edge": 0.0033,
-      "ev": -0.0465
+      "edge": 0.0034,
+      "ev": -0.0468
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.36,
+      "avg_odds": 3.35,
       "odds": 3.46,
-      "market_p": 0.2741,
-      "model_p": 0.2616,
-      "edge": -0.0125,
-      "ev": -0.0949
+      "market_p": 0.275,
+      "model_p": 0.2623,
+      "edge": -0.0128,
+      "ev": -0.0925
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
-      "avg_odds": 1.91,
+      "avg_odds": 1.9,
       "odds": 1.94,
-      "market_p": 0.4889,
+      "market_p": 0.4888,
       "model_p": 0.4861,
-      "edge": -0.0028,
+      "edge": -0.0026,
       "ev": -0.0569
      },
      {
@@ -2911,9 +3655,9 @@
       "selection": "Under",
       "avg_odds": 1.82,
       "odds": 1.86,
-      "market_p": 0.5111,
+      "market_p": 0.5112,
       "model_p": 0.5139,
-      "edge": 0.0028,
+      "edge": 0.0026,
       "ev": -0.0442
      }
     ],
@@ -2929,18 +3673,18 @@
       },
       "1X2|D": {
        "open": 3.3,
-       "now": 3.33,
-       "change_pct": 0.9
+       "now": 3.32,
+       "change_pct": 0.6
       },
       "1X2|A": {
        "open": 3.34,
-       "now": 3.36,
-       "change_pct": 0.6
+       "now": 3.35,
+       "change_pct": 0.3
       },
       "O/U 2.5|Over": {
        "open": 1.9,
-       "now": 1.91,
-       "change_pct": 0.5
+       "now": 1.9,
+       "change_pct": 0.0
       },
       "O/U 2.5|Under": {
        "open": 1.83,
@@ -3559,750 +4303,6 @@
     "impact": "none expected"
    },
    "travel_km_away_team": 61,
-   "style": {
-    "home": null,
-    "away": null
-   },
-   "players": {
-    "home": null,
-    "away": null
-   },
-   "data_coverage": {
-    "xg": true,
-    "understat": false,
-    "referee": false,
-    "weather": true
-   },
-   "research_checklist": [
-    "Confirmed injuries & suspensions for both teams (with expected return dates) and who replaces them",
-    "Predicted line-ups (and confirmed XIs if within ~1h of kick-off); rotation risk from cup/European games",
-    "Key players' recent form and ratings (FotMob/Sofascore/WhoScored pages) - especially outside the top 5 leagues",
-    "Manager situation, press-conference quotes, dressing-room news, new signings",
-    "Motivation: derby, title/relegation/Europe stakes, dead rubber, next fixture priorities",
-    "Referee appointment and tendencies if not listed (non-UK leagues)",
-    "Pitch/weather confirmation; travel; any off-field issues",
-    "Latest odds and whether the price has moved since the model ran"
-   ]
-  },
-  "SP2-20261114-6": {
-   "id": "SP2-20261114-6",
-   "league": "SP2",
-   "league_name": "Segunda Division",
-   "date": "2026-11-14",
-   "time": "17:30",
-   "home": "Mallorca",
-   "away": "Cordoba",
-   "model": {
-    "probs": {
-     "H": 0.5536,
-     "D": 0.2422,
-     "A": 0.2042
-    },
-    "probs_dixon_coles": {
-     "H": 0.5191,
-     "D": 0.2436,
-     "A": 0.2373
-    },
-    "expected_goals": {
-     "home": 1.867,
-     "away": 1.2038
-    },
-    "likely_scores": [
-     {
-      "score": "1-1",
-      "p": 0.113
-     },
-     {
-      "score": "2-1",
-      "p": 0.0976
-     },
-     {
-      "score": "2-0",
-      "p": 0.0811
-     },
-     {
-      "score": "1-0",
-      "p": 0.0785
-     },
-     {
-      "score": "1-2",
-      "p": 0.063
-     }
-    ],
-    "pick": {
-     "selection": "H",
-     "label": "Mallorca to win",
-     "p": 0.5536,
-     "tier": "strong",
-     "double_chance": {
-      "selections": "HD",
-      "label": "Mallorca or draw",
-      "p": 0.7958
-     }
-    },
-    "markets": {
-     "1X2": {
-      "H": 0.5536,
-      "D": 0.2422,
-      "A": 0.2042
-     },
-     "BTTS": {
-      "Yes": 0.6145,
-      "No": 0.3855
-     },
-     "O/U 1.5": {
-      "Over": 0.8303,
-      "Under": 0.1697
-     },
-     "O/U 2.5": {
-      "Over": 0.6091,
-      "Under": 0.3909
-     },
-     "O/U 3.5": {
-      "Over": 0.385,
-      "Under": 0.615
-     }
-    },
-    "confidence": 59
-   },
-   "market": {
-    "prices": [
-     {
-      "market": "1X2",
-      "selection": "H",
-      "avg_odds": 1.64,
-      "odds": 1.71,
-      "market_p": 0.5542,
-      "model_p": 0.5536,
-      "edge": -0.0006,
-      "ev": -0.0533
-     },
-     {
-      "market": "1X2",
-      "selection": "D",
-      "avg_odds": 3.92,
-      "odds": 4.19,
-      "market_p": 0.2319,
-      "model_p": 0.2422,
-      "edge": 0.0103,
-      "ev": 0.0153
-     },
-     {
-      "market": "1X2",
-      "selection": "A",
-      "avg_odds": 4.25,
-      "odds": 4.54,
-      "market_p": 0.2139,
-      "model_p": 0.2042,
-      "edge": -0.0097,
-      "ev": -0.0723
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Over",
-      "avg_odds": 1.57,
-      "odds": 1.62,
-      "market_p": 0.5873,
-      "model_p": 0.6091,
-      "edge": 0.0218,
-      "ev": -0.0133
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Under",
-      "avg_odds": 2.23,
-      "odds": 2.35,
-      "market_p": 0.4127,
-      "model_p": 0.3909,
-      "edge": -0.0218,
-      "ev": -0.0814
-     }
-    ],
-    "bookmaker_spread": null,
-    "line_movement": {
-     "snapshots": 2,
-     "since": "2026-11-08T13:37:51Z",
-     "moves": {
-      "1X2|H": {
-       "open": 1.61,
-       "now": 1.64,
-       "change_pct": 1.9
-      },
-      "1X2|D": {
-       "open": 3.95,
-       "now": 3.92,
-       "change_pct": -0.8
-      },
-      "1X2|A": {
-       "open": 4.31,
-       "now": 4.25,
-       "change_pct": -1.4
-      },
-      "O/U 2.5|Over": {
-       "open": 1.57,
-       "now": 1.57,
-       "change_pct": 0.0
-      },
-      "O/U 2.5|Under": {
-       "open": 2.24,
-       "now": 2.23,
-       "change_pct": -0.4
-      }
-     },
-     "shortening_5pct_plus": []
-    }
-   },
-   "table": {
-    "home": {
-     "pos": 6,
-     "of": 22,
-     "played": 12,
-     "points": 22,
-     "gd": 8.0,
-     "ppg": 1.83,
-     "gap_to_top": 7,
-     "gap_to_europe": 0,
-     "gap_above_relegation": 11
-    },
-    "away": {
-     "pos": 10,
-     "of": 22,
-     "played": 13,
-     "points": 19,
-     "gd": 0.0,
-     "ppg": 1.46,
-     "gap_to_top": 10,
-     "gap_to_europe": 3,
-     "gap_above_relegation": 8
-    },
-    "teams": 22
-   },
-   "home_stats": {
-    "name": "Mallorca",
-    "last6": [
-     {
-      "date": "2026-11-02",
-      "venue": "H",
-      "opponent": "Cadiz",
-      "competition": "SP2",
-      "score": "2-1",
-      "ht": "0-0",
-      "result": "W",
-      "gf": 2,
-      "ga": 1,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 3.28,
-      "xg_against": 0.5,
-      "shots": 23.0,
-      "shots_against": 10.0,
-      "sot": 6.0,
-      "sot_against": 3.0,
-      "corners": 10.0,
-      "corners_against": 2.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-24",
-      "venue": "A",
-      "opponent": "Leganes",
-      "competition": "SP2",
-      "score": "1-1",
-      "ht": "1-0",
-      "result": "D",
-      "gf": 1,
-      "ga": 1,
-      "ht_gf": 1.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.9,
-      "xg_against": 2.56,
-      "shots": 10.0,
-      "shots_against": 13.0,
-      "sot": 3.0,
-      "sot_against": 4.0,
-      "corners": 4.0,
-      "corners_against": 6.0,
-      "yellows": 4.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-17",
-      "venue": "A",
-      "opponent": "Eibar",
-      "competition": "SP2",
-      "score": "1-1",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 1,
-      "ga": 1,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 2.0,
-      "xg_against": 2.45,
-      "shots": 16.0,
-      "shots_against": 13.0,
-      "sot": 5.0,
-      "sot_against": 6.0,
-      "corners": 7.0,
-      "corners_against": 5.0,
-      "yellows": 4.0,
-      "reds": 1.0
-     },
-     {
-      "date": "2026-10-11",
-      "venue": "H",
-      "opponent": "Las Palmas",
-      "competition": "SP2",
-      "score": "3-1",
-      "ht": "1-0",
-      "result": "W",
-      "gf": 3,
-      "ga": 1,
-      "ht_gf": 1.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.82,
-      "xg_against": 0.33,
-      "shots": 12.0,
-      "shots_against": 4.0,
-      "sot": 6.0,
-      "sot_against": 2.0,
-      "corners": 7.0,
-      "corners_against": 2.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-04",
-      "venue": "A",
-      "opponent": "Girona",
-      "competition": "SP2",
-      "score": "0-0",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 0,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.25,
-      "xg_against": 1.06,
-      "shots": 9.0,
-      "shots_against": 16.0,
-      "sot": 0.0,
-      "sot_against": 5.0,
-      "corners": 7.0,
-      "corners_against": 5.0,
-      "yellows": 4.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-09-27",
-      "venue": "H",
-      "opponent": "Almeria",
-      "competition": "SP2",
-      "score": "0-1",
-      "ht": "0-1",
-      "result": "L",
-      "gf": 0,
-      "ga": 1,
-      "ht_gf": 0.0,
-      "ht_ga": 1.0,
-      "xg_for": 2.06,
-      "xg_against": 2.13,
-      "shots": 17.0,
-      "shots_against": 11.0,
-      "sot": 5.0,
-      "sot_against": 3.0,
-      "corners": 6.0,
-      "corners_against": 2.0,
-      "yellows": 6.0,
-      "reds": 0.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 1.8,
-     "record": "2W-3D-0L",
-     "goals_for": 1.4,
-     "goals_against": 0.8,
-     "xg_for": 1.45,
-     "xg_against": 1.38,
-     "shots": 14.0,
-     "shots_against": 11.2,
-     "sot": 4.0,
-     "sot_against": 4.0,
-     "corners": 7.0,
-     "corners_against": 4.0,
-     "yellows": 3.0,
-     "clean_sheet_pct": 0.2,
-     "failed_to_score_pct": 0.2,
-     "btts_pct": 0.8,
-     "over15_pct": 0.8,
-     "over25_pct": 0.4,
-     "over35_pct": 0.2,
-     "first_half_goals_for": 0.4,
-     "first_half_goals_against": 0.0
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 1.9,
-     "record": "5W-4D-1L",
-     "goals_for": 1.3,
-     "goals_against": 0.5,
-     "xg_for": 1.56,
-     "xg_against": 1.16,
-     "shots": 13.3,
-     "shots_against": 10.8,
-     "sot": 4.2,
-     "sot_against": 3.2,
-     "corners": 5.8,
-     "corners_against": 4.2,
-     "yellows": 3.1,
-     "clean_sheet_pct": 0.5,
-     "failed_to_score_pct": 0.3,
-     "btts_pct": 0.4,
-     "over15_pct": 0.6,
-     "over25_pct": 0.3,
-     "over35_pct": 0.1,
-     "first_half_goals_for": 0.5,
-     "first_half_goals_against": 0.1
-    },
-    "season": {
-     "games": 12,
-     "ppg": 1.83,
-     "record": "6W-4D-2L",
-     "goals_for": 1.25,
-     "goals_against": 0.58,
-     "xg_for": 1.41,
-     "xg_against": 1.11,
-     "shots": 13.17,
-     "shots_against": 11.17,
-     "sot": 4.08,
-     "sot_against": 3.25,
-     "corners": 5.17,
-     "corners_against": 4.33,
-     "yellows": 3.0,
-     "clean_sheet_pct": 0.5,
-     "failed_to_score_pct": 0.33,
-     "btts_pct": 0.33,
-     "over15_pct": 0.67,
-     "over25_pct": 0.25,
-     "over35_pct": 0.08,
-     "first_half_goals_for": 0.42,
-     "first_half_goals_against": 0.17
-    },
-    "season_venue": {
-     "games": 6,
-     "ppg": 2.5,
-     "record": "5W-0D-1L",
-     "goals_for": 2.0,
-     "goals_against": 0.5,
-     "xg_for": 1.8,
-     "xg_against": 0.82,
-     "shots": 14.17,
-     "shots_against": 10.0,
-     "sot": 5.0,
-     "sot_against": 2.17,
-     "corners": 5.33,
-     "corners_against": 3.17,
-     "yellows": 2.5,
-     "clean_sheet_pct": 0.5,
-     "failed_to_score_pct": 0.17,
-     "btts_pct": 0.33,
-     "over15_pct": 0.83,
-     "over25_pct": 0.5,
-     "over35_pct": 0.17,
-     "first_half_goals_for": 0.67,
-     "first_half_goals_against": 0.17
-    },
-    "game_state_season": {
-     "ht_leads": 4,
-     "ht_leads_won": 3,
-     "ht_deficits": 2,
-     "points_from_ht_deficits": 0,
-     "second_half_goals_for": 0.83,
-     "second_half_goals_against": 0.42
-    },
-    "trend_xgd_last5_vs_season": -0.23,
-    "rest_days": 12,
-    "games_last_14d": 1,
-    "games_last_30d": 3,
-    "elo": 1582,
-    "elo_change_30d": 8
-   },
-   "away_stats": {
-    "name": "Cordoba",
-    "last6": [
-     {
-      "date": "2026-11-07",
-      "venue": "H",
-      "opponent": "Ceuta",
-      "competition": "SP2",
-      "score": "3-0",
-      "ht": "2-0",
-      "result": "W",
-      "gf": 3,
-      "ga": 0,
-      "ht_gf": 2.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.15,
-      "xg_against": 1.77,
-      "shots": 14.0,
-      "shots_against": 12.0,
-      "sot": 7.0,
-      "sot_against": 5.0,
-      "corners": 11.0,
-      "corners_against": 5.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-31",
-      "venue": "A",
-      "opponent": "Celta B",
-      "competition": "SP2",
-      "score": "2-2",
-      "ht": "1-1",
-      "result": "D",
-      "gf": 2,
-      "ga": 2,
-      "ht_gf": 1.0,
-      "ht_ga": 1.0,
-      "xg_for": 0.8,
-      "xg_against": 1.76,
-      "shots": 11.0,
-      "shots_against": 17.0,
-      "sot": 5.0,
-      "sot_against": 7.0,
-      "corners": 7.0,
-      "corners_against": 4.0,
-      "yellows": 4.0,
-      "reds": 2.0
-     },
-     {
-      "date": "2026-10-24",
-      "venue": "H",
-      "opponent": "Eibar",
-      "competition": "SP2",
-      "score": "2-0",
-      "ht": "0-0",
-      "result": "W",
-      "gf": 2,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 4.05,
-      "xg_against": 1.61,
-      "shots": 24.0,
-      "shots_against": 14.0,
-      "sot": 11.0,
-      "sot_against": 4.0,
-      "corners": 16.0,
-      "corners_against": 2.0,
-      "yellows": 5.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-16",
-      "venue": "A",
-      "opponent": "Leganes",
-      "competition": "SP2",
-      "score": "1-0",
-      "ht": "0-0",
-      "result": "W",
-      "gf": 1,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 2.08,
-      "xg_against": 0.74,
-      "shots": 20.0,
-      "shots_against": 9.0,
-      "sot": 3.0,
-      "sot_against": 2.0,
-      "corners": 7.0,
-      "corners_against": 4.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-10",
-      "venue": "A",
-      "opponent": "Eldense",
-      "competition": "SP2",
-      "score": "1-2",
-      "ht": "1-0",
-      "result": "L",
-      "gf": 1,
-      "ga": 2,
-      "ht_gf": 1.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.35,
-      "xg_against": 2.79,
-      "shots": 12.0,
-      "shots_against": 14.0,
-      "sot": 6.0,
-      "sot_against": 4.0,
-      "corners": 4.0,
-      "corners_against": 6.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-05",
-      "venue": "H",
-      "opponent": "Tenerife",
-      "competition": "SP2",
-      "score": "3-2",
-      "ht": "2-1",
-      "result": "W",
-      "gf": 3,
-      "ga": 2,
-      "ht_gf": 2.0,
-      "ht_ga": 1.0,
-      "xg_for": 2.0,
-      "xg_against": 0.76,
-      "shots": 16.0,
-      "shots_against": 10.0,
-      "sot": 6.0,
-      "sot_against": 2.0,
-      "corners": 4.0,
-      "corners_against": 8.0,
-      "yellows": 4.0,
-      "reds": 0.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 2.0,
-     "record": "3W-1D-1L",
-     "goals_for": 1.8,
-     "goals_against": 0.8,
-     "xg_for": 1.89,
-     "xg_against": 1.73,
-     "shots": 16.2,
-     "shots_against": 13.2,
-     "sot": 6.4,
-     "sot_against": 4.4,
-     "corners": 9.0,
-     "corners_against": 4.2,
-     "yellows": 3.4,
-     "clean_sheet_pct": 0.6,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.4,
-     "over15_pct": 0.8,
-     "over25_pct": 0.6,
-     "over35_pct": 0.2,
-     "first_half_goals_for": 0.8,
-     "first_half_goals_against": 0.2
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 1.6,
-     "record": "5W-1D-4L",
-     "goals_for": 1.7,
-     "goals_against": 1.5,
-     "xg_for": 1.68,
-     "xg_against": 1.85,
-     "shots": 16.0,
-     "shots_against": 12.5,
-     "sot": 5.5,
-     "sot_against": 4.6,
-     "corners": 7.0,
-     "corners_against": 3.8,
-     "yellows": 3.7,
-     "clean_sheet_pct": 0.3,
-     "failed_to_score_pct": 0.1,
-     "btts_pct": 0.6,
-     "over15_pct": 0.9,
-     "over25_pct": 0.7,
-     "over35_pct": 0.4,
-     "first_half_goals_for": 0.8,
-     "first_half_goals_against": 0.6
-    },
-    "season": {
-     "games": 13,
-     "ppg": 1.46,
-     "record": "6W-1D-6L",
-     "goals_for": 1.69,
-     "goals_against": 1.69,
-     "xg_for": 1.69,
-     "xg_against": 1.75,
-     "shots": 15.85,
-     "shots_against": 12.69,
-     "sot": 5.31,
-     "sot_against": 4.54,
-     "corners": 6.54,
-     "corners_against": 3.46,
-     "yellows": 3.46,
-     "clean_sheet_pct": 0.23,
-     "failed_to_score_pct": 0.08,
-     "btts_pct": 0.69,
-     "over15_pct": 0.92,
-     "over25_pct": 0.77,
-     "over35_pct": 0.46,
-     "first_half_goals_for": 1.0,
-     "first_half_goals_against": 0.62
-    },
-    "season_venue": {
-     "games": 7,
-     "ppg": 1.0,
-     "record": "2W-1D-4L",
-     "goals_for": 1.57,
-     "goals_against": 2.0,
-     "xg_for": 1.44,
-     "xg_against": 2.32,
-     "shots": 15.0,
-     "shots_against": 14.0,
-     "sot": 5.0,
-     "sot_against": 5.43,
-     "corners": 5.29,
-     "corners_against": 3.43,
-     "yellows": 3.43,
-     "clean_sheet_pct": 0.14,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.86,
-     "over15_pct": 0.86,
-     "over25_pct": 0.86,
-     "over35_pct": 0.57,
-     "first_half_goals_for": 0.86,
-     "first_half_goals_against": 1.0
-    },
-    "game_state_season": {
-     "ht_leads": 5,
-     "ht_leads_won": 3,
-     "ht_deficits": 2,
-     "points_from_ht_deficits": 3,
-     "second_half_goals_for": 0.69,
-     "second_half_goals_against": 1.08
-    },
-    "trend_xgd_last5_vs_season": 0.22,
-    "rest_days": 7,
-    "games_last_14d": 2,
-    "games_last_30d": 4,
-    "elo": 1446,
-    "elo_change_30d": 22
-   },
-   "h2h": {
-    "games": [],
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 0,
-    "avg_goals": null,
-    "over25_pct": null
-   },
-   "referee": null,
-   "weather": {
-    "temperature_2m": 20.0,
-    "precipitation": 0.0,
-    "precipitation_probability": 4,
-    "wind_speed_10m": 5.6,
-    "wind_gusts_10m": 4.3,
-    "time": "2026-11-14T17:00",
-    "place": "Majorca",
-    "impact": "none expected"
-   },
-   "travel_km_away_team": 701,
    "style": {
     "home": null,
     "away": null
@@ -5082,9 +5082,9 @@
    "away": "Grimsby",
    "model": {
     "probs": {
-     "H": 0.285,
-     "D": 0.2463,
-     "A": 0.4687
+     "H": 0.2858,
+     "D": 0.2489,
+     "A": 0.4654
     },
     "probs_dixon_coles": {
      "H": 0.3204,
@@ -5120,35 +5120,35 @@
     "pick": {
      "selection": "A",
      "label": "Grimsby to win",
-     "p": 0.4687,
+     "p": 0.4654,
      "tier": null,
      "double_chance": {
       "selections": "HA",
       "label": "Swindon or Grimsby",
-      "p": 0.7537
+      "p": 0.7511
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.285,
-      "D": 0.2463,
-      "A": 0.4687
+      "H": 0.2858,
+      "D": 0.2489,
+      "A": 0.4654
      },
      "BTTS": {
-      "Yes": 0.5872,
-      "No": 0.4128
+      "Yes": 0.588,
+      "No": 0.412
      },
      "O/U 1.5": {
-      "Over": 0.8265,
-      "Under": 0.1735
+      "Over": 0.8266,
+      "Under": 0.1734
      },
      "O/U 2.5": {
-      "Over": 0.6027,
-      "Under": 0.3973
+      "Over": 0.6028,
+      "Under": 0.3972
      },
      "O/U 3.5": {
-      "Over": 0.3787,
-      "Under": 0.6213
+      "Over": 0.3788,
+      "Under": 0.6212
      }
     },
     "confidence": 55
@@ -5158,32 +5158,32 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 3.23,
-      "odds": 3.4,
-      "market_p": 0.2854,
-      "model_p": 0.285,
-      "edge": -0.0003,
-      "ev": -0.0309
+      "avg_odds": 3.21,
+      "odds": 3.3,
+      "market_p": 0.287,
+      "model_p": 0.2858,
+      "edge": -0.0012,
+      "ev": -0.057
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.62,
+      "avg_odds": 3.61,
       "odds": 3.82,
-      "market_p": 0.2544,
-      "model_p": 0.2463,
-      "edge": -0.0081,
-      "ev": -0.0593
+      "market_p": 0.2553,
+      "model_p": 0.2489,
+      "edge": -0.0064,
+      "ev": -0.0493
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 2.0,
-      "odds": 2.05,
-      "market_p": 0.4602,
-      "model_p": 0.4687,
-      "edge": 0.0085,
-      "ev": -0.0392
+      "avg_odds": 2.01,
+      "odds": 2.08,
+      "market_p": 0.4577,
+      "model_p": 0.4654,
+      "edge": 0.0077,
+      "ev": -0.032
      },
      {
       "market": "O/U 2.5",
@@ -5191,9 +5191,9 @@
       "avg_odds": 1.57,
       "odds": 1.6,
       "market_p": 0.588,
-      "model_p": 0.6027,
-      "edge": 0.0148,
-      "ev": -0.0356
+      "model_p": 0.6028,
+      "edge": 0.0149,
+      "ev": -0.0355
      },
      {
       "market": "O/U 2.5",
@@ -5201,9 +5201,9 @@
       "avg_odds": 2.25,
       "odds": 2.3,
       "market_p": 0.412,
-      "model_p": 0.3973,
-      "edge": -0.0148,
-      "ev": -0.0863
+      "model_p": 0.3972,
+      "edge": -0.0149,
+      "ev": -0.0865
      }
     ],
     "bookmaker_spread": null,
@@ -5213,18 +5213,18 @@
      "moves": {
       "1X2|H": {
        "open": 3.59,
-       "now": 3.23,
-       "change_pct": -10.0
+       "now": 3.21,
+       "change_pct": -10.6
       },
       "1X2|D": {
        "open": 3.77,
-       "now": 3.62,
-       "change_pct": -4.0
+       "now": 3.61,
+       "change_pct": -4.2
       },
       "1X2|A": {
        "open": 1.85,
-       "now": 2.0,
-       "change_pct": 8.1
+       "now": 2.01,
+       "change_pct": 8.6
       },
       "O/U 2.5|Over": {
        "open": 1.57,
@@ -6629,9 +6629,9 @@
    "away": "Newport County",
    "model": {
     "probs": {
-     "H": 0.4491,
-     "D": 0.2734,
-     "A": 0.2775
+     "H": 0.4505,
+     "D": 0.272,
+     "A": 0.2776
     },
     "probs_dixon_coles": {
      "H": 0.4552,
@@ -6667,35 +6667,35 @@
     "pick": {
      "selection": "H",
      "label": "Crewe to win",
-     "p": 0.4491,
+     "p": 0.4505,
      "tier": null,
      "double_chance": {
       "selections": "HA",
       "label": "Crewe or Newport County",
-      "p": 0.7266
+      "p": 0.728
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.4491,
-      "D": 0.2734,
-      "A": 0.2775
+      "H": 0.4505,
+      "D": 0.272,
+      "A": 0.2776
      },
      "BTTS": {
-      "Yes": 0.5251,
-      "No": 0.4749
+      "Yes": 0.525,
+      "No": 0.475
      },
      "O/U 1.5": {
-      "Over": 0.7537,
-      "Under": 0.2463
+      "Over": 0.7558,
+      "Under": 0.2442
      },
      "O/U 2.5": {
-      "Over": 0.4965,
-      "Under": 0.5035
+      "Over": 0.4993,
+      "Under": 0.5007
      },
      "O/U 3.5": {
-      "Over": 0.2767,
-      "Under": 0.7233
+      "Over": 0.2792,
+      "Under": 0.7208
      }
     },
     "confidence": 55
@@ -6707,50 +6707,50 @@
       "selection": "H",
       "avg_odds": 2.03,
       "odds": 2.09,
-      "market_p": 0.4551,
-      "model_p": 0.4491,
-      "edge": -0.006,
-      "ev": -0.0614
+      "market_p": 0.4562,
+      "model_p": 0.4505,
+      "edge": -0.0057,
+      "ev": -0.0585
      },
      {
       "market": "1X2",
       "selection": "D",
       "avg_odds": 3.34,
       "odds": 3.5,
-      "market_p": 0.2775,
-      "model_p": 0.2734,
-      "edge": -0.0041,
-      "ev": -0.0432
+      "market_p": 0.2769,
+      "model_p": 0.272,
+      "edge": -0.0049,
+      "ev": -0.0482
      },
      {
       "market": "1X2",
       "selection": "A",
       "avg_odds": 3.46,
       "odds": 3.55,
-      "market_p": 0.2674,
-      "model_p": 0.2775,
-      "edge": 0.0102,
-      "ev": -0.0147
+      "market_p": 0.267,
+      "model_p": 0.2776,
+      "edge": 0.0106,
+      "ev": -0.0146
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
-      "avg_odds": 1.9,
+      "avg_odds": 1.89,
       "odds": 2.01,
-      "market_p": 0.4903,
-      "model_p": 0.4965,
-      "edge": 0.0062,
-      "ev": -0.002
+      "market_p": 0.4913,
+      "model_p": 0.4993,
+      "edge": 0.008,
+      "ev": 0.0036
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
       "avg_odds": 1.83,
       "odds": 1.87,
-      "market_p": 0.5097,
-      "model_p": 0.5035,
-      "edge": -0.0062,
-      "ev": -0.0585
+      "market_p": 0.5087,
+      "model_p": 0.5007,
+      "edge": -0.008,
+      "ev": -0.0637
      }
     ],
     "bookmaker_spread": null,
@@ -6775,8 +6775,8 @@
       },
       "O/U 2.5|Over": {
        "open": 1.82,
-       "now": 1.9,
-       "change_pct": 4.4
+       "now": 1.89,
+       "change_pct": 3.8
       },
       "O/U 2.5|Under": {
        "open": 1.91,
@@ -7430,9 +7430,9 @@
    "away": "York",
    "model": {
     "probs": {
-     "H": 0.2299,
-     "D": 0.2264,
-     "A": 0.5438
+     "H": 0.2288,
+     "D": 0.2268,
+     "A": 0.5444
     },
     "probs_dixon_coles": {
      "H": 0.2136,
@@ -7468,31 +7468,31 @@
     "pick": {
      "selection": "A",
      "label": "York to win",
-     "p": 0.5438,
+     "p": 0.5444,
      "tier": null,
      "double_chance": {
       "selections": "HA",
       "label": "Rochdale or York",
-      "p": 0.7736
+      "p": 0.7732
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.2299,
-      "D": 0.2264,
-      "A": 0.5438
+      "H": 0.2288,
+      "D": 0.2268,
+      "A": 0.5444
      },
      "BTTS": {
-      "Yes": 0.5209,
-      "No": 0.4791
+      "Yes": 0.5212,
+      "No": 0.4788
      },
      "O/U 1.5": {
       "Over": 0.8185,
       "Under": 0.1815
      },
      "O/U 2.5": {
-      "Over": 0.5906,
-      "Under": 0.4094
+      "Over": 0.5907,
+      "Under": 0.4093
      },
      "O/U 3.5": {
       "Over": 0.3659,
@@ -7506,32 +7506,32 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 4.14,
+      "avg_odds": 4.17,
       "odds": 4.4,
-      "market_p": 0.2224,
-      "model_p": 0.2299,
-      "edge": 0.0075,
-      "ev": 0.0114
+      "market_p": 0.2208,
+      "model_p": 0.2288,
+      "edge": 0.008,
+      "ev": 0.0066
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.93,
+      "avg_odds": 3.91,
       "odds": 4.15,
-      "market_p": 0.2346,
-      "model_p": 0.2264,
-      "edge": -0.0082,
-      "ev": -0.0606
+      "market_p": 0.2354,
+      "model_p": 0.2268,
+      "edge": -0.0086,
+      "ev": -0.0586
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 1.7,
+      "avg_odds": 1.69,
       "odds": 1.73,
-      "market_p": 0.543,
-      "model_p": 0.5438,
-      "edge": 0.0008,
-      "ev": -0.0593
+      "market_p": 0.5438,
+      "model_p": 0.5444,
+      "edge": 0.0006,
+      "ev": -0.0582
      },
      {
       "market": "O/U 2.5",
@@ -7539,9 +7539,9 @@
       "avg_odds": 1.58,
       "odds": 1.6,
       "market_p": 0.5859,
-      "model_p": 0.5906,
-      "edge": 0.0047,
-      "ev": -0.055
+      "model_p": 0.5907,
+      "edge": 0.0048,
+      "ev": -0.0549
      },
      {
       "market": "O/U 2.5",
@@ -7549,9 +7549,9 @@
       "avg_odds": 2.24,
       "odds": 2.28,
       "market_p": 0.4141,
-      "model_p": 0.4094,
-      "edge": -0.0047,
-      "ev": -0.0666
+      "model_p": 0.4093,
+      "edge": -0.0048,
+      "ev": -0.0667
      }
     ],
     "bookmaker_spread": null,
@@ -7561,18 +7561,18 @@
      "moves": {
       "1X2|H": {
        "open": 3.54,
-       "now": 4.14,
-       "change_pct": 16.9
+       "now": 4.17,
+       "change_pct": 17.8
       },
       "1X2|D": {
        "open": 3.84,
-       "now": 3.93,
-       "change_pct": 2.3
+       "now": 3.91,
+       "change_pct": 1.8
       },
       "1X2|A": {
        "open": 1.84,
-       "now": 1.7,
-       "change_pct": -7.6
+       "now": 1.69,
+       "change_pct": -8.2
       },
       "O/U 2.5|Over": {
        "open": 1.59,
