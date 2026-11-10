@@ -1720,5 +1720,12 @@
   "lat": 36.83814,
   "lon": -2.45974,
   "approx": true
+ },
+ "E3|Fleetwood Town": {
+  "query": "fleetwood",
+  "place": "Fleetwood",
+  "lat": 53.92527,
+  "lon": -3.01085,
+  "approx": true
  }
 }
