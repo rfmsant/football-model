@@ -1,0 +1,14 @@
+{
+ "date": "2026-11-11",
+ "generated_at": "2026-11-11T12:00:00Z",
+ "week_start": "2026-11-09",
+ "week_end": "2026-11-15",
+ "summary": "No Liga Portugal games this week: round 11 (7-8 Nov) was the last before the international break (Nations League 12-17 Nov), and the 4th round of the Taça de Portugal is also played during the pause. Round 12 is on 27-30 Nov (FC Porto v Sporting on Sun 29 Nov, 20:30). The full deep dive for round 12 will come once team news is out after the break.",
+ "games": [],
+ "skipped": [
+  {
+   "match": "Round 12 (27-30 Nov)",
+   "reason": "Outside this week; analysed in the run before it, when post-international-break team news exists"
+  }
+ ]
+}
