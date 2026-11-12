@@ -1,0 +1,43 @@
+name: Liga Portugal report from cloud branch
+
+# The cloud routine pushes its weekly report to a claude/* branch when it can't push to main.
+# This merges the report into main, then dispatches the Discord send and the site deploy
+# (pushes made with GITHUB_TOKEN don't trigger other workflows, but workflow_dispatch does).
+
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["data/portugal/20*.json"]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: portugal-weekly
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Merge the report into main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "${{ github.ref_name }}"
+          git merge --no-edit -X theirs "origin/${{ github.ref_name }}"
+          git push origin main
+          git push origin --delete "${{ github.ref_name }}" || true
+      - name: Send to Discord and redeploy the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run portugal.yml --ref main
+          gh workflow run deploy.yml --ref main
+          gh workflow run portugal-live.yml --ref main || true
