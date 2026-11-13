@@ -1727,5 +1727,47 @@
   "lat": 53.92527,
   "lon": -3.01085,
   "approx": true
+ },
+ "EC|Sutton": {
+  "query": "sutton",
+  "place": "Sutton",
+  "lat": 51.35,
+  "lon": -0.2,
+  "approx": true
+ },
+ "EC|Solihull": {
+  "query": "solihull",
+  "place": "Solihull",
+  "lat": 52.41426,
+  "lon": -1.78094,
+  "approx": true
+ },
+ "SC1|Ayr": {
+  "query": "ayr",
+  "place": "Ayr",
+  "lat": 55.46273,
+  "lon": -4.63393,
+  "approx": true
+ },
+ "EC|Barrow": {
+  "query": "barrow",
+  "place": "Barrow in Furness",
+  "lat": 54.11094,
+  "lon": -3.22758,
+  "approx": true
+ },
+ "EC|Hartlepool": {
+  "query": "hartlepool",
+  "place": "Hartlepool",
+  "lat": 54.68554,
+  "lon": -1.21028,
+  "approx": true
+ },
+ "EC|Wealdstone": {
+  "query": "wealdstone",
+  "place": "Wealdstone",
+  "lat": 51.59983,
+  "lon": -0.33711,
+  "approx": true
  }
 }
