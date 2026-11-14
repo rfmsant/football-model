@@ -1769,5 +1769,40 @@
   "lat": 51.59983,
   "lon": -0.33711,
   "approx": true
+ },
+ "D2|Darmstadt": {
+  "query": "darmstadt",
+  "place": "Darmstadt",
+  "lat": 49.87167,
+  "lon": 8.65027,
+  "approx": true
+ },
+ "D2|Heidenheim": {
+  "query": "heidenheim",
+  "place": "Heidenheim",
+  "lat": 48.67798,
+  "lon": 10.15162,
+  "approx": true
+ },
+ "D2|Nurnberg": {
+  "query": "nurnberg",
+  "place": "Nuremberg",
+  "lat": 49.45421,
+  "lon": 11.07752,
+  "approx": true
+ },
+ "B1|Charleroi": {
+  "query": "charleroi",
+  "place": "Charleroi",
+  "lat": 50.41136,
+  "lon": 4.44448,
+  "approx": true
+ },
+ "D2|Holstein Kiel": {
+  "query": "kiel",
+  "place": "Kiel",
+  "lat": 54.32133,
+  "lon": 10.13489,
+  "approx": true
  }
 }
