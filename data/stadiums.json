@@ -1804,5 +1804,12 @@
   "lat": 54.32133,
   "lon": 10.13489,
   "approx": true
+ },
+ "SP2|Granada": {
+  "query": "granada",
+  "place": "Granada",
+  "lat": 37.18817,
+  "lon": -3.60667,
+  "approx": true
  }
 }
