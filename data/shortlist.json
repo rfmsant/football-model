@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T16:01:21Z",
+ "generated_at": "2026-11-17T16:15:18Z",
  "for_dates": [
   "2026-11-20",
   "2026-11-21"
@@ -17,86 +17,86 @@
    "market": "BTTS",
    "selection": "Yes",
    "label": "Both teams to score",
-   "p_model": 0.684,
+   "p_model": 0.6843,
    "p_market": 0.5526,
-   "odds": 1.7,
+   "odds": 1.71,
    "odds_source": "estimated",
-   "ev": 0.1628,
-   "edge": 0.1314,
+   "ev": 0.1702,
+   "edge": 0.1317,
    "fair_odds": 1.46,
-   "game_id": "D1-20261120-1",
+   "game_id": "D1-20261120-0",
    "match": "Bayern Munich v FC Koln",
    "league": "D1",
    "league_name": "Bundesliga",
    "date": "2026-11-20",
    "time": "19:30",
    "pick_tier": "very strong",
-   "gap_to_bar": 0.016,
+   "gap_to_bar": 0.0157,
    "rank": 1
   },
   {
    "market": "O/U 3.5",
    "selection": "Over",
    "label": "Over 3.5 goals",
-   "p_model": 0.6258,
+   "p_model": 0.6266,
    "p_market": 0.5978,
-   "odds": 1.57,
+   "odds": 1.58,
    "odds_source": "estimated",
-   "ev": -0.0176,
-   "edge": 0.028,
+   "ev": -0.0099,
+   "edge": 0.0288,
    "fair_odds": 1.6,
-   "game_id": "D1-20261120-1",
+   "game_id": "D1-20261120-0",
    "match": "Bayern Munich v FC Koln",
    "league": "D1",
    "league_name": "Bundesliga",
    "date": "2026-11-20",
    "time": "19:30",
    "pick_tier": "very strong",
-   "gap_to_bar": 0.0742,
+   "gap_to_bar": 0.0734,
    "rank": 2
   },
   {
    "market": "Draw no bet",
    "selection": "H",
    "label": "Troyes draw no bet",
-   "p_model": 0.6135,
-   "p_market": 0.6204,
-   "odds": 1.52,
+   "p_model": 0.607,
+   "p_market": 0.6147,
+   "odds": 1.53,
    "odds_source": "estimated",
-   "ev": -0.0481,
-   "edge": -0.0069,
-   "fair_odds": 1.63,
-   "push_prob": 0.2872,
-   "game_id": "F1-20261120-31",
+   "ev": -0.0508,
+   "edge": -0.0077,
+   "fair_odds": 1.65,
+   "push_prob": 0.2874,
+   "game_id": "F1-20261120-37",
    "match": "Troyes v Le Havre",
    "league": "F1",
    "league_name": "Ligue 1",
    "date": "2026-11-20",
    "time": "19:45",
    "pick_tier": null,
-   "gap_to_bar": 0.0865,
+   "gap_to_bar": 0.093,
    "rank": 3
   },
   {
    "market": "Draw no bet",
    "selection": "H",
    "label": "Cercle Brugge draw no bet",
-   "p_model": 0.6193,
-   "p_market": 0.6095,
-   "odds": 1.49,
+   "p_model": 0.6281,
+   "p_market": 0.6164,
+   "odds": 1.48,
    "odds_source": "estimated",
-   "ev": -0.0578,
-   "edge": 0.0099,
-   "fair_odds": 1.61,
+   "ev": -0.0528,
+   "edge": 0.0116,
+   "fair_odds": 1.59,
    "push_prob": 0.2509,
-   "game_id": "B1-20261120-46",
+   "game_id": "B1-20261120-55",
    "match": "Cercle Brugge v Westerlo",
    "league": "B1",
    "league_name": "Belgian Pro League",
    "date": "2026-11-20",
    "time": "19:45",
    "pick_tier": null,
-   "gap_to_bar": 0.0807,
+   "gap_to_bar": 0.0719,
    "rank": 4
   },
   {
@@ -110,7 +110,7 @@
    "ev": -0.0633,
    "edge": -0.0034,
    "fair_odds": 1.57,
-   "game_id": "B1-20261120-46",
+   "game_id": "B1-20261120-55",
    "match": "Cercle Brugge v Westerlo",
    "league": "B1",
    "league_name": "Belgian Pro League",
@@ -121,67 +121,67 @@
    "rank": 5
   },
   {
-   "market": "O/U 2.5",
-   "selection": "Over",
-   "label": "Over 2.5 goals",
-   "p_model": 0.6158,
-   "p_market": 0.6148,
-   "odds": 1.51,
-   "odds_source": "real",
-   "ev": -0.0701,
-   "edge": 0.001,
-   "fair_odds": 1.62,
-   "game_id": "D2-20261120-55",
-   "match": "Darmstadt v Heidenheim",
-   "league": "D2",
-   "league_name": "2. Bundesliga",
-   "date": "2026-11-20",
-   "time": "17:30",
-   "pick_tier": null,
-   "gap_to_bar": 0.0842,
-   "rank": 6
-  },
-  {
-   "market": "Draw no bet",
-   "selection": "A",
-   "label": "Heidenheim draw no bet",
-   "p_model": 0.6333,
-   "p_market": 0.6402,
-   "odds": 1.43,
-   "odds_source": "estimated",
-   "ev": -0.0714,
-   "edge": -0.0068,
-   "fair_odds": 1.58,
-   "push_prob": 0.2428,
-   "game_id": "D2-20261120-55",
-   "match": "Darmstadt v Heidenheim",
-   "league": "D2",
-   "league_name": "2. Bundesliga",
-   "date": "2026-11-20",
-   "time": "17:30",
-   "pick_tier": null,
-   "gap_to_bar": 0.0667,
-   "rank": 7
-  },
-  {
    "market": "1X2",
    "selection": "H",
    "label": "Ath Bilbao to win",
-   "p_model": 0.6272,
-   "p_market": 0.6365,
-   "odds": 1.48,
+   "p_model": 0.6386,
+   "p_market": 0.6447,
+   "odds": 1.46,
    "odds_source": "real",
-   "ev": -0.0717,
-   "edge": -0.0093,
-   "fair_odds": 1.59,
-   "game_id": "SP1-20261120-16",
+   "ev": -0.0676,
+   "edge": -0.0061,
+   "fair_odds": 1.57,
+   "game_id": "SP1-20261120-18",
    "match": "Ath Bilbao v Espanol",
    "league": "SP1",
    "league_name": "La Liga",
    "date": "2026-11-20",
    "time": "20:00",
    "pick_tier": "very strong",
-   "gap_to_bar": 0.0728,
+   "gap_to_bar": 0.0614,
+   "rank": 6
+  },
+  {
+   "market": "Draw no bet",
+   "selection": "A",
+   "label": "Heidenheim draw no bet",
+   "p_model": 0.6216,
+   "p_market": 0.6272,
+   "odds": 1.46,
+   "odds_source": "estimated",
+   "ev": -0.0696,
+   "edge": -0.0055,
+   "fair_odds": 1.61,
+   "push_prob": 0.2468,
+   "game_id": "D2-20261120-64",
+   "match": "Darmstadt v Heidenheim",
+   "league": "D2",
+   "league_name": "2. Bundesliga",
+   "date": "2026-11-20",
+   "time": "17:30",
+   "pick_tier": null,
+   "gap_to_bar": 0.0784,
+   "rank": 7
+  },
+  {
+   "market": "O/U 2.5",
+   "selection": "Over",
+   "label": "Over 2.5 goals",
+   "p_model": 0.6114,
+   "p_market": 0.6138,
+   "odds": 1.51,
+   "odds_source": "real",
+   "ev": -0.0768,
+   "edge": -0.0024,
+   "fair_odds": 1.64,
+   "game_id": "D2-20261120-64",
+   "match": "Darmstadt v Heidenheim",
+   "league": "D2",
+   "league_name": "2. Bundesliga",
+   "date": "2026-11-20",
+   "time": "17:30",
+   "pick_tier": null,
+   "gap_to_bar": 0.0886,
    "rank": 8
   },
   {
@@ -195,7 +195,7 @@
    "ev": 0.03,
    "edge": 0.0553,
    "fair_odds": 1.57,
-   "game_id": "D1-20261121-2",
+   "game_id": "D1-20261121-1",
    "match": "Leverkusen v Paderborn",
    "league": "D1",
    "league_name": "Bundesliga",
@@ -209,152 +209,131 @@
    "market": "Draw no bet",
    "selection": "H",
    "label": "Sabadell draw no bet",
-   "p_model": 0.623,
-   "p_market": 0.5877,
-   "odds": 1.55,
+   "p_model": 0.6198,
+   "p_market": 0.5832,
+   "odds": 1.56,
    "odds_source": "estimated",
-   "ev": -0.0239,
-   "edge": 0.0353,
+   "ev": -0.023,
+   "edge": 0.0366,
    "fair_odds": 1.61,
-   "push_prob": 0.3042,
-   "game_id": "SP2-20261121-75",
+   "push_prob": 0.3048,
+   "game_id": "SP2-20261121-84",
    "match": "Sabadell v Granada",
    "league": "SP2",
    "league_name": "Segunda Division",
    "date": "2026-11-21",
    "time": "13:00",
    "pick_tier": null,
-   "gap_to_bar": 0.077,
+   "gap_to_bar": 0.0802,
    "rank": 10
   },
   {
    "market": "BTTS",
    "selection": "Yes",
    "label": "Both teams to score",
-   "p_model": 0.6163,
+   "p_model": 0.6159,
    "p_market": 0.598,
    "odds": 1.57,
    "odds_source": "estimated",
-   "ev": -0.0324,
-   "edge": 0.0183,
+   "ev": -0.033,
+   "edge": 0.0179,
    "fair_odds": 1.62,
-   "game_id": "F1-20261121-36",
+   "game_id": "F1-20261121-42",
    "match": "Lens v Toulouse",
    "league": "F1",
    "league_name": "Ligue 1",
    "date": "2026-11-21",
    "time": "19:45",
    "pick_tier": null,
-   "gap_to_bar": 0.0837,
+   "gap_to_bar": 0.0841,
    "rank": 11
   },
   {
    "market": "O/U 2.5",
    "selection": "Over",
    "label": "Over 2.5 goals",
-   "p_model": 0.6911,
-   "p_market": 0.6782,
-   "odds": 1.4,
-   "odds_source": "real",
-   "ev": -0.0325,
-   "edge": 0.0129,
-   "fair_odds": 1.45,
-   "game_id": "SP1-20261121-20",
-   "match": "Real Madrid v Celta",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "date": "2026-11-21",
-   "time": "20:00",
-   "pick_tier": "very strong",
-   "gap_to_bar": 0.0089,
-   "rank": 12
-  },
-  {
-   "market": "O/U 2.5",
-   "selection": "Over",
-   "label": "Over 2.5 goals",
-   "p_model": 0.6717,
+   "p_model": 0.6718,
    "p_market": 0.6495,
    "odds": 1.43,
    "odds_source": "real",
-   "ev": -0.0395,
-   "edge": 0.0222,
+   "ev": -0.0393,
+   "edge": 0.0223,
    "fair_odds": 1.49,
-   "game_id": "D2-20261121-57",
+   "game_id": "D2-20261121-66",
    "match": "Nurnberg v Braunschweig",
    "league": "D2",
    "league_name": "2. Bundesliga",
    "date": "2026-11-21",
    "time": "12:00",
    "pick_tier": "strong",
-   "gap_to_bar": 0.0283,
-   "rank": 13
+   "gap_to_bar": 0.0282,
+   "rank": 12
   },
   {
    "market": "Draw no bet",
    "selection": "H",
    "label": "Vallecano draw no bet",
-   "p_model": 0.6686,
-   "p_market": 0.6626,
-   "odds": 1.41,
+   "p_model": 0.6744,
+   "p_market": 0.6701,
+   "odds": 1.4,
    "odds_source": "estimated",
-   "ev": -0.0409,
-   "edge": 0.006,
-   "fair_odds": 1.5,
-   "push_prob": 0.286,
-   "game_id": "SP1-20261121-18",
+   "ev": -0.0399,
+   "edge": 0.0043,
+   "fair_odds": 1.48,
+   "push_prob": 0.2857,
+   "game_id": "SP1-20261121-20",
    "match": "Vallecano v Valencia",
    "league": "SP1",
    "league_name": "La Liga",
    "date": "2026-11-21",
    "time": "15:15",
    "pick_tier": null,
-   "gap_to_bar": 0.0314,
-   "rank": 14
-  },
-  {
-   "market": "Draw no bet",
-   "selection": "A",
-   "label": "Freiburg draw no bet",
-   "p_model": 0.6385,
-   "p_market": 0.6306,
-   "odds": 1.48,
-   "odds_source": "estimated",
-   "ev": -0.0416,
-   "edge": 0.0079,
-   "fair_odds": 1.57,
-   "push_prob": 0.2449,
-   "game_id": "D1-20261121-5",
-   "match": "Elversberg v Freiburg",
-   "league": "D1",
-   "league_name": "Bundesliga",
-   "date": "2026-11-21",
-   "time": "14:30",
-   "pick_tier": null,
-   "gap_to_bar": 0.0615,
-   "rank": 15
+   "gap_to_bar": 0.0256,
+   "rank": 13
   },
   {
    "market": "Draw no bet",
    "selection": "H",
    "label": "Alaves draw no bet",
-   "p_model": 0.6175,
-   "p_market": 0.6144,
-   "odds": 1.52,
+   "p_model": 0.6161,
+   "p_market": 0.6126,
+   "odds": 1.53,
    "odds_source": "estimated",
-   "ev": -0.0433,
-   "edge": 0.0031,
+   "ev": -0.0404,
+   "edge": 0.0034,
    "fair_odds": 1.62,
-   "push_prob": 0.2957,
-   "game_id": "SP1-20261121-17",
+   "push_prob": 0.296,
+   "game_id": "SP1-20261121-19",
    "match": "Alaves v La Coruna",
    "league": "SP1",
    "league_name": "La Liga",
    "date": "2026-11-21",
    "time": "13:00",
    "pick_tier": null,
-   "gap_to_bar": 0.0825,
-   "rank": 16
+   "gap_to_bar": 0.0839,
+   "rank": 14
+  },
+  {
+   "market": "Draw no bet",
+   "selection": "A",
+   "label": "Freiburg draw no bet",
+   "p_model": 0.6388,
+   "p_market": 0.6306,
+   "odds": 1.48,
+   "odds_source": "estimated",
+   "ev": -0.0413,
+   "edge": 0.0082,
+   "fair_odds": 1.57,
+   "push_prob": 0.2439,
+   "game_id": "D1-20261121-4",
+   "match": "Elversberg v Freiburg",
+   "league": "D1",
+   "league_name": "Bundesliga",
+   "date": "2026-11-21",
+   "time": "14:30",
+   "pick_tier": null,
+   "gap_to_bar": 0.0612,
+   "rank": 15
   },
   {
    "market": "O/U 2.5",
@@ -367,35 +346,56 @@
    "ev": -0.0468,
    "edge": 0.0149,
    "fair_odds": 1.48,
-   "game_id": "D2-20261121-59",
+   "game_id": "D2-20261121-68",
    "match": "Wolfsburg v Holstein Kiel",
    "league": "D2",
    "league_name": "2. Bundesliga",
    "date": "2026-11-21",
    "time": "12:00",
-   "pick_tier": "strong",
+   "pick_tier": null,
    "gap_to_bar": 0.024,
-   "rank": 17
+   "rank": 16
   },
   {
    "market": "O/U 2.5",
    "selection": "Over",
    "label": "Over 2.5 goals",
-   "p_model": 0.6148,
+   "p_model": 0.6146,
    "p_market": 0.5974,
    "odds": 1.55,
    "odds_source": "real",
-   "ev": -0.0471,
-   "edge": 0.0174,
+   "ev": -0.0474,
+   "edge": 0.0172,
    "fair_odds": 1.63,
-   "game_id": "B1-20261121-48",
+   "game_id": "B1-20261121-57",
    "match": "Genk v RAAL La Louviere",
    "league": "B1",
    "league_name": "Belgian Pro League",
    "date": "2026-11-21",
    "time": "17:15",
    "pick_tier": "very strong",
-   "gap_to_bar": 0.0852,
+   "gap_to_bar": 0.0854,
+   "rank": 17
+  },
+  {
+   "market": "BTTS",
+   "selection": "Yes",
+   "label": "Both teams to score",
+   "p_model": 0.6564,
+   "p_market": 0.6287,
+   "odds": 1.45,
+   "odds_source": "estimated",
+   "ev": -0.0482,
+   "edge": 0.0277,
+   "fair_odds": 1.52,
+   "game_id": "D2-20261121-66",
+   "match": "Nurnberg v Braunschweig",
+   "league": "D2",
+   "league_name": "2. Bundesliga",
+   "date": "2026-11-21",
+   "time": "12:00",
+   "pick_tier": "strong",
+   "gap_to_bar": 0.0436,
    "rank": 18
   },
   {
@@ -409,7 +409,7 @@
    "ev": -0.0492,
    "edge": 0.0164,
    "fair_odds": 1.62,
-   "game_id": "B1-20261121-47",
+   "game_id": "B1-20261121-56",
    "match": "Charleroi v St Truiden",
    "league": "B1",
    "league_name": "Belgian Pro League",
@@ -430,7 +430,7 @@
    "ev": -0.0492,
    "edge": 0.0081,
    "fair_odds": 1.59,
-   "game_id": "F1-20261121-33",
+   "game_id": "F1-20261121-39",
    "match": "Monaco v Auxerre",
    "league": "F1",
    "league_name": "Ligue 1",
@@ -484,8 +484,8 @@
   }
  ],
  "dossiers": {
-  "D1-20261120-1": {
-   "id": "D1-20261120-1",
+  "D1-20261120-0": {
+   "id": "D1-20261120-0",
    "league": "D1",
    "league_name": "Bundesliga",
    "date": "2026-11-20",
@@ -494,17 +494,17 @@
    "away": "FC Koln",
    "model": {
     "probs": {
-     "H": 0.8595,
-     "D": 0.0906,
-     "A": 0.0499
+     "H": 0.8607,
+     "D": 0.0899,
+     "A": 0.0494
     },
     "probs_dixon_coles": {
-     "H": 0.8365,
-     "D": 0.1066,
-     "A": 0.0569
+     "H": 0.8363,
+     "D": 0.1067,
+     "A": 0.057
     },
     "expected_goals": {
-     "home": 3.5214,
+     "home": 3.5203,
      "away": 0.901
     },
     "likely_scores": [
@@ -532,35 +532,35 @@
     "pick": {
      "selection": "H",
      "label": "Bayern Munich to win",
-     "p": 0.8595,
+     "p": 0.8607,
      "tier": "very strong",
      "double_chance": {
       "selections": "HD",
       "label": "Bayern Munich or draw",
-      "p": 0.9501
+      "p": 0.9506
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.8595,
-      "D": 0.0906,
-      "A": 0.0499
+      "H": 0.8607,
+      "D": 0.0899,
+      "A": 0.0494
      },
      "BTTS": {
-      "Yes": 0.684,
-      "No": 0.316
+      "Yes": 0.6843,
+      "No": 0.3157
      },
      "O/U 1.5": {
-      "Over": 0.9357,
-      "Under": 0.0643
+      "Over": 0.9359,
+      "Under": 0.0641
      },
      "O/U 2.5": {
-      "Over": 0.8092,
-      "Under": 0.1908
+      "Over": 0.8098,
+      "Under": 0.1902
      },
      "O/U 3.5": {
-      "Over": 0.6258,
-      "Under": 0.3742
+      "Over": 0.6266,
+      "Under": 0.3734
      }
     },
     "confidence": 64
@@ -572,55 +572,55 @@
       "selection": "H",
       "avg_odds": 1.08,
       "odds": 1.11,
-      "market_p": 0.8711,
-      "model_p": 0.8595,
-      "edge": -0.0116,
-      "ev": -0.046
+      "market_p": 0.8728,
+      "model_p": 0.8607,
+      "edge": -0.0122,
+      "ev": -0.0446
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 11.57,
-      "odds": 12.38,
-      "market_p": 0.0812,
-      "model_p": 0.0906,
-      "edge": 0.0094,
-      "ev": 0.122
+      "avg_odds": 11.74,
+      "odds": 12.56,
+      "market_p": 0.0802,
+      "model_p": 0.0899,
+      "edge": 0.0097,
+      "ev": 0.1291
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 19.72,
-      "odds": 21.1,
-      "market_p": 0.0477,
-      "model_p": 0.0499,
-      "edge": 0.0022,
-      "ev": 0.0532
+      "avg_odds": 20.06,
+      "odds": 21.47,
+      "market_p": 0.0469,
+      "model_p": 0.0494,
+      "edge": 0.0025,
+      "ev": 0.0613
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
       "avg_odds": 1.17,
       "odds": 1.17,
-      "market_p": 0.8093,
-      "model_p": 0.8092,
-      "edge": -0.0,
-      "ev": -0.0532
+      "market_p": 0.8102,
+      "model_p": 0.8098,
+      "edge": -0.0004,
+      "ev": -0.0525
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
-      "avg_odds": 4.95,
-      "odds": 5.1,
-      "market_p": 0.1907,
-      "model_p": 0.1908,
-      "edge": 0.0,
-      "ev": -0.0271
+      "avg_odds": 4.98,
+      "odds": 5.14,
+      "market_p": 0.1898,
+      "model_p": 0.1902,
+      "edge": 0.0004,
+      "ev": -0.0224
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 9,
+     "snapshots": 10,
      "since": "2026-11-08T13:37:51Z",
      "moves": {
       "1X2|H": {
@@ -630,13 +630,13 @@
       },
       "1X2|D": {
        "open": 11.26,
-       "now": 11.57,
-       "change_pct": 2.8
+       "now": 11.74,
+       "change_pct": 4.3
       },
       "1X2|A": {
        "open": 20.61,
-       "now": 19.72,
-       "change_pct": -4.3
+       "now": 20.06,
+       "change_pct": -2.7
       },
       "O/U 2.5|Over": {
        "open": 1.17,
@@ -645,8 +645,8 @@
       },
       "O/U 2.5|Under": {
        "open": 4.98,
-       "now": 4.95,
-       "change_pct": -0.6
+       "now": 4.98,
+       "change_pct": 0.0
       }
      },
      "shortening_5pct_plus": []
@@ -1249,7 +1249,16 @@
     "over25_pct": 0.62
    },
    "referee": null,
-   "weather": null,
+   "weather": {
+    "temperature_2m": 6.1,
+    "precipitation": 0.0,
+    "precipitation_probability": 40,
+    "wind_speed_10m": 9.2,
+    "wind_gusts_10m": 22.3,
+    "time": "2026-11-20T19:00",
+    "place": "Bayern",
+    "impact": "none expected"
+   },
    "travel_km_away_team": 534,
    "style": {
     "home": null,
@@ -1276,8 +1285,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "F1-20261120-31": {
-   "id": "F1-20261120-31",
+  "F1-20261120-37": {
+   "id": "F1-20261120-37",
    "league": "F1",
    "league_name": "Ligue 1",
    "date": "2026-11-20",
@@ -1286,18 +1295,18 @@
    "away": "Le Havre",
    "model": {
     "probs": {
-     "H": 0.4373,
-     "D": 0.2872,
-     "A": 0.2755
+     "H": 0.4325,
+     "D": 0.2874,
+     "A": 0.28
     },
     "probs_dixon_coles": {
-     "H": 0.4508,
+     "H": 0.4507,
      "D": 0.2679,
      "A": 0.2813
     },
     "expected_goals": {
      "home": 1.5787,
-     "away": 1.2022
+     "away": 1.2026
     },
     "likely_scores": [
      {
@@ -1310,11 +1319,11 @@
      },
      {
       "score": "1-0",
-      "p": 0.0886
+      "p": 0.0885
      },
      {
       "score": "2-0",
-      "p": 0.0774
+      "p": 0.0773
      },
      {
       "score": "0-0",
@@ -1324,35 +1333,35 @@
     "pick": {
      "selection": "H",
      "label": "Troyes to win",
-     "p": 0.4373,
+     "p": 0.4325,
      "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Troyes or draw",
-      "p": 0.7245
+      "p": 0.72
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.4373,
-      "D": 0.2872,
-      "A": 0.2755
+      "H": 0.4325,
+      "D": 0.2874,
+      "A": 0.28
      },
      "BTTS": {
-      "Yes": 0.5489,
-      "No": 0.4511
+      "Yes": 0.5497,
+      "No": 0.4503
      },
      "O/U 1.5": {
-      "Over": 0.7794,
-      "Under": 0.2206
+      "Over": 0.7793,
+      "Under": 0.2207
      },
      "O/U 2.5": {
-      "Over": 0.5319,
-      "Under": 0.4681
+      "Over": 0.5317,
+      "Under": 0.4683
      },
      "O/U 3.5": {
-      "Over": 0.3089,
-      "Under": 0.6911
+      "Over": 0.3088,
+      "Under": 0.6912
      }
     },
     "confidence": 64
@@ -1362,73 +1371,73 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 2.08,
-      "odds": 2.16,
-      "market_p": 0.4536,
-      "model_p": 0.4373,
-      "edge": -0.0163,
-      "ev": -0.0554
+      "avg_odds": 2.1,
+      "odds": 2.2,
+      "market_p": 0.4482,
+      "model_p": 0.4325,
+      "edge": -0.0157,
+      "ev": -0.0484
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.5,
-      "odds": 3.75,
-      "market_p": 0.2689,
-      "model_p": 0.2872,
-      "edge": 0.0183,
-      "ev": 0.0768
+      "avg_odds": 3.48,
+      "odds": 3.73,
+      "market_p": 0.2707,
+      "model_p": 0.2874,
+      "edge": 0.0168,
+      "ev": 0.0712
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.4,
+      "avg_odds": 3.35,
       "odds": 3.55,
-      "market_p": 0.2775,
-      "model_p": 0.2755,
-      "edge": -0.002,
-      "ev": -0.0219
+      "market_p": 0.2811,
+      "model_p": 0.28,
+      "edge": -0.0011,
+      "ev": -0.0059
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
       "avg_odds": 1.8,
       "odds": 1.9,
-      "market_p": 0.5259,
-      "model_p": 0.5319,
+      "market_p": 0.5258,
+      "model_p": 0.5317,
       "edge": 0.0059,
-      "ev": 0.0105
+      "ev": 0.0103
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
       "avg_odds": 2.0,
       "odds": 2.1,
-      "market_p": 0.4741,
-      "model_p": 0.4681,
+      "market_p": 0.4742,
+      "model_p": 0.4683,
       "edge": -0.0059,
-      "ev": -0.0169
+      "ev": -0.0167
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 9,
+     "snapshots": 10,
      "since": "2026-11-08T13:37:51Z",
      "moves": {
       "1X2|H": {
        "open": 2.07,
-       "now": 2.08,
-       "change_pct": 0.5
+       "now": 2.1,
+       "change_pct": 1.4
       },
       "1X2|D": {
        "open": 3.5,
-       "now": 3.5,
-       "change_pct": 0.0
+       "now": 3.48,
+       "change_pct": -0.6
       },
       "1X2|A": {
        "open": 3.29,
-       "now": 3.4,
-       "change_pct": 3.3
+       "now": 3.35,
+       "change_pct": 1.8
       },
       "O/U 2.5|Over": {
        "open": 1.77,
@@ -1984,7 +1993,16 @@
     "over25_pct": null
    },
    "referee": null,
-   "weather": null,
+   "weather": {
+    "temperature_2m": 10.6,
+    "precipitation": 0.5,
+    "precipitation_probability": 50,
+    "wind_speed_10m": 20.8,
+    "wind_gusts_10m": 45.0,
+    "time": "2026-11-20T19:00",
+    "place": "Troyes",
+    "impact": "none expected"
+   },
    "travel_km_away_team": 320,
    "style": {
     "home": null,
@@ -2011,8 +2029,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "B1-20261120-46": {
-   "id": "B1-20261120-46",
+  "B1-20261120-55": {
+   "id": "B1-20261120-55",
    "league": "B1",
    "league_name": "Belgian Pro League",
    "date": "2026-11-20",
@@ -2021,9 +2039,9 @@
    "away": "Westerlo",
    "model": {
     "probs": {
-     "H": 0.464,
+     "H": 0.4705,
      "D": 0.2509,
-     "A": 0.2852
+     "A": 0.2786
     },
     "probs_dixon_coles": {
      "H": 0.4333,
@@ -2031,8 +2049,8 @@
      "A": 0.3268
     },
     "expected_goals": {
-     "home": 1.8416,
-     "away": 1.5812
+     "home": 1.8414,
+     "away": 1.5809
     },
     "likely_scores": [
      {
@@ -2053,13 +2071,13 @@
      },
      {
       "score": "2-0",
-      "p": 0.0555
+      "p": 0.0556
      }
     ],
     "pick": {
      "selection": "H",
      "label": "Cercle Brugge to win",
-     "p": 0.464,
+     "p": 0.4705,
      "tier": null,
      "double_chance": {
       "selections": "HA",
@@ -2069,13 +2087,13 @@
     },
     "markets": {
      "1X2": {
-      "H": 0.464,
+      "H": 0.4705,
       "D": 0.2509,
-      "A": 0.2852
+      "A": 0.2786
      },
      "BTTS": {
-      "Yes": 0.6295,
-      "No": 0.3705
+      "Yes": 0.6291,
+      "No": 0.3709
      },
      "O/U 1.5": {
       "Over": 0.8476,
@@ -2086,8 +2104,8 @@
       "Under": 0.3628
      },
      "O/U 3.5": {
-      "Over": 0.4154,
-      "Under": 0.5846
+      "Over": 0.4153,
+      "Under": 0.5847
      }
     },
     "confidence": 54
@@ -2097,32 +2115,32 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 1.98,
-      "odds": 2.08,
-      "market_p": 0.4594,
-      "model_p": 0.464,
-      "edge": 0.0045,
-      "ev": -0.035
+      "avg_odds": 1.96,
+      "odds": 2.06,
+      "market_p": 0.466,
+      "model_p": 0.4705,
+      "edge": 0.0044,
+      "ev": -0.0309
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.71,
-      "odds": 3.93,
-      "market_p": 0.2459,
+      "avg_odds": 3.73,
+      "odds": 3.99,
+      "market_p": 0.2445,
       "model_p": 0.2509,
-      "edge": 0.005,
-      "ev": -0.014
+      "edge": 0.0064,
+      "ev": 0.0014
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.09,
-      "odds": 3.3,
-      "market_p": 0.2947,
-      "model_p": 0.2852,
-      "edge": -0.0095,
-      "ev": -0.059
+      "avg_odds": 3.15,
+      "odds": 3.35,
+      "market_p": 0.2895,
+      "model_p": 0.2786,
+      "edge": -0.0108,
+      "ev": -0.0665
      },
      {
       "market": "O/U 2.5",
@@ -2131,8 +2149,8 @@
       "odds": 1.47,
       "market_p": 0.6406,
       "model_p": 0.6372,
-      "edge": -0.0033,
-      "ev": -0.0632
+      "edge": -0.0034,
+      "ev": -0.0634
      },
      {
       "market": "O/U 2.5",
@@ -2141,29 +2159,29 @@
       "odds": 2.62,
       "market_p": 0.3594,
       "model_p": 0.3628,
-      "edge": 0.0033,
-      "ev": -0.0496
+      "edge": 0.0034,
+      "ev": -0.0494
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 4,
+     "snapshots": 5,
      "since": "2026-11-13T14:44:09Z",
      "moves": {
       "1X2|H": {
        "open": 1.97,
-       "now": 1.98,
-       "change_pct": 0.5
+       "now": 1.96,
+       "change_pct": -0.5
       },
       "1X2|D": {
        "open": 3.76,
-       "now": 3.71,
-       "change_pct": -1.3
+       "now": 3.73,
+       "change_pct": -0.8
       },
       "1X2|A": {
        "open": 3.06,
-       "now": 3.09,
-       "change_pct": 1.0
+       "now": 3.15,
+       "change_pct": 2.9
       },
       "O/U 2.5|Over": {
        "open": 1.43,
@@ -2776,7 +2794,16 @@
     "over25_pct": 0.5
    },
    "referee": null,
-   "weather": null,
+   "weather": {
+    "temperature_2m": 7.3,
+    "precipitation": 2.5,
+    "precipitation_probability": 33,
+    "wind_speed_10m": 21.0,
+    "wind_gusts_10m": 38.9,
+    "time": "2026-11-20T19:00",
+    "place": "Bruges",
+    "impact": "heavy rain"
+   },
    "travel_km_away_team": 119,
    "style": {
     "home": null,
@@ -2803,786 +2830,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "D2-20261120-55": {
-   "id": "D2-20261120-55",
-   "league": "D2",
-   "league_name": "2. Bundesliga",
-   "date": "2026-11-20",
-   "time": "17:30",
-   "home": "Darmstadt",
-   "away": "Heidenheim",
-   "model": {
-    "probs": {
-     "H": 0.2776,
-     "D": 0.2428,
-     "A": 0.4795
-    },
-    "probs_dixon_coles": {
-     "H": 0.3178,
-     "D": 0.2629,
-     "A": 0.4194
-    },
-    "expected_goals": {
-     "home": 1.3529,
-     "away": 1.5835
-    },
-    "likely_scores": [
-     {
-      "score": "1-1",
-      "p": 0.123
-     },
-     {
-      "score": "1-2",
-      "p": 0.0902
-     },
-     {
-      "score": "2-1",
-      "p": 0.077
-     },
-     {
-      "score": "0-1",
-      "p": 0.0751
-     },
-     {
-      "score": "0-2",
-      "p": 0.0666
-     }
-    ],
-    "pick": {
-     "selection": "A",
-     "label": "Heidenheim to win",
-     "p": 0.4795,
-     "tier": null,
-     "double_chance": {
-      "selections": "HA",
-      "label": "Darmstadt or Heidenheim",
-      "p": 0.7572
-     }
-    },
-    "markets": {
-     "1X2": {
-      "H": 0.2776,
-      "D": 0.2428,
-      "A": 0.4795
-     },
-     "BTTS": {
-      "Yes": 0.5686,
-      "No": 0.4314
-     },
-     "O/U 1.5": {
-      "Over": 0.8347,
-      "Under": 0.1653
-     },
-     "O/U 2.5": {
-      "Over": 0.6158,
-      "Under": 0.3842
-     },
-     "O/U 3.5": {
-      "Over": 0.3924,
-      "Under": 0.6076
-     }
-    },
-    "confidence": 60
-   },
-   "market": {
-    "prices": [
-     {
-      "market": "1X2",
-      "selection": "H",
-      "avg_odds": 3.38,
-      "odds": 3.61,
-      "market_p": 0.2705,
-      "model_p": 0.2776,
-      "edge": 0.0071,
-      "ev": 0.003
-     },
-     {
-      "market": "1X2",
-      "selection": "D",
-      "avg_odds": 3.69,
-      "odds": 3.94,
-      "market_p": 0.2477,
-      "model_p": 0.2428,
-      "edge": -0.0048,
-      "ev": -0.0432
-     },
-     {
-      "market": "1X2",
-      "selection": "A",
-      "avg_odds": 1.9,
-      "odds": 2.0,
-      "market_p": 0.4818,
-      "model_p": 0.4795,
-      "edge": -0.0023,
-      "ev": -0.041
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Over",
-      "avg_odds": 1.51,
-      "odds": 1.53,
-      "market_p": 0.6151,
-      "model_p": 0.6158,
-      "edge": 0.0007,
-      "ev": -0.0578
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Under",
-      "avg_odds": 2.41,
-      "odds": 2.42,
-      "market_p": 0.3849,
-      "model_p": 0.3842,
-      "edge": -0.0007,
-      "ev": -0.0703
-     }
-    ],
-    "bookmaker_spread": null,
-    "line_movement": {
-     "snapshots": 4,
-     "since": "2026-11-13T14:44:09Z",
-     "moves": {
-      "1X2|H": {
-       "open": 3.32,
-       "now": 3.38,
-       "change_pct": 1.8
-      },
-      "1X2|D": {
-       "open": 3.69,
-       "now": 3.69,
-       "change_pct": 0.0
-      },
-      "1X2|A": {
-       "open": 1.9,
-       "now": 1.9,
-       "change_pct": 0.0
-      },
-      "O/U 2.5|Over": {
-       "open": 1.5,
-       "now": 1.51,
-       "change_pct": 0.7
-      },
-      "O/U 2.5|Under": {
-       "open": 2.42,
-       "now": 2.41,
-       "change_pct": -0.4
-      }
-     },
-     "shortening_5pct_plus": []
-    }
-   },
-   "table": {
-    "home": {
-     "pos": 17,
-     "of": 18,
-     "played": 11,
-     "points": 9,
-     "gd": -12.0,
-     "ppg": 0.82,
-     "gap_to_top": 22,
-     "gap_to_europe": 12,
-     "gap_above_relegation": -2
-    },
-    "away": {
-     "pos": 7,
-     "of": 18,
-     "played": 11,
-     "points": 16,
-     "gd": -1.0,
-     "ppg": 1.45,
-     "gap_to_top": 15,
-     "gap_to_europe": 5,
-     "gap_above_relegation": 5
-    },
-    "teams": 18
-   },
-   "home_stats": {
-    "name": "Darmstadt",
-    "last6": [
-     {
-      "date": "2026-11-07",
-      "venue": "A",
-      "opponent": "Nurnberg",
-      "competition": "D2",
-      "score": "0-2",
-      "ht": "0-0",
-      "result": "L",
-      "gf": 0,
-      "ga": 2,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.15,
-      "xg_against": 2.12,
-      "shots": 10.0,
-      "shots_against": 22.0,
-      "sot": 2.0,
-      "sot_against": 7.0,
-      "corners": 3.0,
-      "corners_against": 10.0,
-      "yellows": 6.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-31",
-      "venue": "H",
-      "opponent": "Magdeburg",
-      "competition": "D2",
-      "score": "1-1",
-      "ht": "1-1",
-      "result": "D",
-      "gf": 1,
-      "ga": 1,
-      "ht_gf": 1.0,
-      "ht_ga": 1.0,
-      "xg_for": 1.22,
-      "xg_against": 0.77,
-      "shots": 15.0,
-      "shots_against": 12.0,
-      "sot": 3.0,
-      "sot_against": 2.0,
-      "corners": 7.0,
-      "corners_against": 5.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-23",
-      "venue": "H",
-      "opponent": "St Pauli",
-      "competition": "D2",
-      "score": "0-0",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 0,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.77,
-      "xg_against": 1.9,
-      "shots": 12.0,
-      "shots_against": 18.0,
-      "sot": 0.0,
-      "sot_against": 2.0,
-      "corners": 2.0,
-      "corners_against": 6.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-18",
-      "venue": "A",
-      "opponent": "Karlsruhe",
-      "competition": "D2",
-      "score": "0-4",
-      "ht": "0-2",
-      "result": "L",
-      "gf": 0,
-      "ga": 4,
-      "ht_gf": 0.0,
-      "ht_ga": 2.0,
-      "xg_for": 0.5,
-      "xg_against": 1.2,
-      "shots": 9.0,
-      "shots_against": 15.0,
-      "sot": 1.0,
-      "sot_against": 7.0,
-      "corners": 4.0,
-      "corners_against": 4.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-10",
-      "venue": "H",
-      "opponent": "Cottbus",
-      "competition": "D2",
-      "score": "3-1",
-      "ht": "1-1",
-      "result": "W",
-      "gf": 3,
-      "ga": 1,
-      "ht_gf": 1.0,
-      "ht_ga": 1.0,
-      "xg_for": 1.38,
-      "xg_against": 1.48,
-      "shots": 16.0,
-      "shots_against": 10.0,
-      "sot": 7.0,
-      "sot_against": 6.0,
-      "corners": 7.0,
-      "corners_against": 8.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-09-18",
-      "venue": "A",
-      "opponent": "Wolfsburg",
-      "competition": "D2",
-      "score": "1-5",
-      "ht": "1-2",
-      "result": "L",
-      "gf": 1,
-      "ga": 5,
-      "ht_gf": 1.0,
-      "ht_ga": 2.0,
-      "xg_for": 1.23,
-      "xg_against": 1.72,
-      "shots": 12.0,
-      "shots_against": 19.0,
-      "sot": 3.0,
-      "sot_against": 6.0,
-      "corners": 5.0,
-      "corners_against": 8.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 1.0,
-     "record": "1W-2D-2L",
-     "goals_for": 0.8,
-     "goals_against": 1.6,
-     "xg_for": 1.0,
-     "xg_against": 1.49,
-     "shots": 12.4,
-     "shots_against": 15.4,
-     "sot": 2.6,
-     "sot_against": 4.8,
-     "corners": 4.6,
-     "corners_against": 6.6,
-     "yellows": 3.2,
-     "clean_sheet_pct": 0.2,
-     "failed_to_score_pct": 0.6,
-     "btts_pct": 0.4,
-     "over15_pct": 0.8,
-     "over25_pct": 0.4,
-     "over35_pct": 0.4,
-     "first_half_goals_for": 0.4,
-     "first_half_goals_against": 0.8
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 0.8,
-     "record": "2W-2D-6L",
-     "goals_for": 0.7,
-     "goals_against": 1.9,
-     "xg_for": 1.05,
-     "xg_against": 1.6,
-     "shots": 11.6,
-     "shots_against": 17.1,
-     "sot": 2.8,
-     "sot_against": 5.4,
-     "corners": 4.2,
-     "corners_against": 7.6,
-     "yellows": 2.7,
-     "clean_sheet_pct": 0.1,
-     "failed_to_score_pct": 0.6,
-     "btts_pct": 0.4,
-     "over15_pct": 0.7,
-     "over25_pct": 0.5,
-     "over35_pct": 0.3,
-     "first_half_goals_for": 0.4,
-     "first_half_goals_against": 0.8
-    },
-    "season": {
-     "games": 11,
-     "ppg": 0.82,
-     "record": "2W-3D-6L",
-     "goals_for": 0.82,
-     "goals_against": 1.91,
-     "xg_for": 1.02,
-     "xg_against": 1.58,
-     "shots": 11.82,
-     "shots_against": 16.55,
-     "sot": 2.82,
-     "sot_against": 5.45,
-     "corners": 4.55,
-     "corners_against": 7.27,
-     "yellows": 2.64,
-     "clean_sheet_pct": 0.09,
-     "failed_to_score_pct": 0.55,
-     "btts_pct": 0.45,
-     "over15_pct": 0.73,
-     "over25_pct": 0.55,
-     "over35_pct": 0.36,
-     "first_half_goals_for": 0.36,
-     "first_half_goals_against": 0.91
-    },
-    "season_venue": {
-     "games": 6,
-     "ppg": 1.5,
-     "record": "2W-3D-1L",
-     "goals_for": 1.33,
-     "goals_against": 1.0,
-     "xg_for": 1.15,
-     "xg_against": 1.52,
-     "shots": 13.33,
-     "shots_against": 15.5,
-     "sot": 3.67,
-     "sot_against": 4.5,
-     "corners": 5.0,
-     "corners_against": 7.0,
-     "yellows": 2.33,
-     "clean_sheet_pct": 0.17,
-     "failed_to_score_pct": 0.33,
-     "btts_pct": 0.67,
-     "over15_pct": 0.67,
-     "over25_pct": 0.5,
-     "over35_pct": 0.33,
-     "first_half_goals_for": 0.5,
-     "first_half_goals_against": 0.67
-    },
-    "game_state_season": {
-     "ht_leads": 1,
-     "ht_leads_won": 1,
-     "ht_deficits": 5,
-     "points_from_ht_deficits": 1,
-     "second_half_goals_for": 0.45,
-     "second_half_goals_against": 1.0
-    },
-    "trend_xgd_last5_vs_season": 0.07,
-    "rest_days": 13,
-    "games_last_14d": 1,
-    "games_last_30d": 3,
-    "elo": 1421,
-    "elo_change_30d": -18
-   },
-   "away_stats": {
-    "name": "Heidenheim",
-    "last6": [
-     {
-      "date": "2026-11-08",
-      "venue": "H",
-      "opponent": "Hannover",
-      "competition": "D2",
-      "score": "2-2",
-      "ht": "1-0",
-      "result": "D",
-      "gf": 2,
-      "ga": 2,
-      "ht_gf": 1.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.1,
-      "xg_against": 1.37,
-      "shots": 14.0,
-      "shots_against": 15.0,
-      "sot": 3.0,
-      "sot_against": 5.0,
-      "corners": 7.0,
-      "corners_against": 9.0,
-      "yellows": 0.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-31",
-      "venue": "A",
-      "opponent": "Karlsruhe",
-      "competition": "D2",
-      "score": "1-2",
-      "ht": "0-1",
-      "result": "L",
-      "gf": 1,
-      "ga": 2,
-      "ht_gf": 0.0,
-      "ht_ga": 1.0,
-      "xg_for": 1.26,
-      "xg_against": 1.5,
-      "shots": 18.0,
-      "shots_against": 13.0,
-      "sot": 7.0,
-      "sot_against": 9.0,
-      "corners": 6.0,
-      "corners_against": 4.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-24",
-      "venue": "H",
-      "opponent": "Cottbus",
-      "competition": "D2",
-      "score": "1-1",
-      "ht": "0-1",
-      "result": "D",
-      "gf": 1,
-      "ga": 1,
-      "ht_gf": 0.0,
-      "ht_ga": 1.0,
-      "xg_for": 3.68,
-      "xg_against": 0.5,
-      "shots": 34.0,
-      "shots_against": 7.0,
-      "sot": 8.0,
-      "sot_against": 3.0,
-      "corners": 15.0,
-      "corners_against": 2.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-17",
-      "venue": "A",
-      "opponent": "Wolfsburg",
-      "competition": "D2",
-      "score": "1-3",
-      "ht": "1-2",
-      "result": "L",
-      "gf": 1,
-      "ga": 3,
-      "ht_gf": 1.0,
-      "ht_ga": 2.0,
-      "xg_for": 1.98,
-      "xg_against": 1.6,
-      "shots": 23.0,
-      "shots_against": 19.0,
-      "sot": 9.0,
-      "sot_against": 10.0,
-      "corners": 8.0,
-      "corners_against": 8.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-09",
-      "venue": "H",
-      "opponent": "Kaiserslautern",
-      "competition": "D2",
-      "score": "0-0",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 0,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.78,
-      "xg_against": 1.32,
-      "shots": 13.0,
-      "shots_against": 16.0,
-      "sot": 4.0,
-      "sot_against": 3.0,
-      "corners": 7.0,
-      "corners_against": 8.0,
-      "yellows": 0.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-09-20",
-      "venue": "A",
-      "opponent": "Bielefeld",
-      "competition": "D2",
-      "score": "2-2",
-      "ht": "2-1",
-      "result": "D",
-      "gf": 2,
-      "ga": 2,
-      "ht_gf": 2.0,
-      "ht_ga": 1.0,
-      "xg_for": 2.52,
-      "xg_against": 0.49,
-      "shots": 14.0,
-      "shots_against": 6.0,
-      "sot": 7.0,
-      "sot_against": 3.0,
-      "corners": 6.0,
-      "corners_against": 5.0,
-      "yellows": 4.0,
-      "reds": 0.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 0.6,
-     "record": "0W-3D-2L",
-     "goals_for": 1.0,
-     "goals_against": 1.6,
-     "xg_for": 1.76,
-     "xg_against": 1.26,
-     "shots": 20.4,
-     "shots_against": 14.0,
-     "sot": 6.2,
-     "sot_against": 6.0,
-     "corners": 8.6,
-     "corners_against": 6.2,
-     "yellows": 1.0,
-     "clean_sheet_pct": 0.2,
-     "failed_to_score_pct": 0.2,
-     "btts_pct": 0.8,
-     "over15_pct": 0.8,
-     "over25_pct": 0.6,
-     "over35_pct": 0.4,
-     "first_half_goals_for": 0.4,
-     "first_half_goals_against": 0.8
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 1.3,
-     "record": "3W-4D-3L",
-     "goals_for": 1.5,
-     "goals_against": 1.7,
-     "xg_for": 1.9,
-     "xg_against": 1.17,
-     "shots": 17.9,
-     "shots_against": 13.9,
-     "sot": 6.0,
-     "sot_against": 5.7,
-     "corners": 6.6,
-     "corners_against": 6.5,
-     "yellows": 1.5,
-     "clean_sheet_pct": 0.3,
-     "failed_to_score_pct": 0.1,
-     "btts_pct": 0.7,
-     "over15_pct": 0.7,
-     "over25_pct": 0.6,
-     "over35_pct": 0.5,
-     "first_half_goals_for": 0.5,
-     "first_half_goals_against": 0.9
-    },
-    "season": {
-     "games": 11,
-     "ppg": 1.45,
-     "record": "4W-4D-3L",
-     "goals_for": 1.73,
-     "goals_against": 1.82,
-     "xg_for": 1.95,
-     "xg_against": 1.26,
-     "shots": 18.09,
-     "shots_against": 15.0,
-     "sot": 6.0,
-     "sot_against": 5.73,
-     "corners": 6.36,
-     "corners_against": 6.45,
-     "yellows": 1.45,
-     "clean_sheet_pct": 0.27,
-     "failed_to_score_pct": 0.09,
-     "btts_pct": 0.73,
-     "over15_pct": 0.73,
-     "over25_pct": 0.64,
-     "over35_pct": 0.55,
-     "first_half_goals_for": 0.73,
-     "first_half_goals_against": 1.0
-    },
-    "season_venue": {
-     "games": 5,
-     "ppg": 0.8,
-     "record": "1W-1D-3L",
-     "goals_for": 1.2,
-     "goals_against": 2.2,
-     "xg_for": 1.58,
-     "xg_against": 1.25,
-     "shots": 14.4,
-     "shots_against": 14.2,
-     "sot": 6.2,
-     "sot_against": 7.2,
-     "corners": 5.0,
-     "corners_against": 5.8,
-     "yellows": 2.0,
-     "clean_sheet_pct": 0.2,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.8,
-     "over15_pct": 0.8,
-     "over25_pct": 0.8,
-     "over35_pct": 0.6,
-     "first_half_goals_for": 0.8,
-     "first_half_goals_against": 1.4
-    },
-    "game_state_season": {
-     "ht_leads": 4,
-     "ht_leads_won": 2,
-     "ht_deficits": 5,
-     "points_from_ht_deficits": 4,
-     "second_half_goals_for": 1.0,
-     "second_half_goals_against": 0.82
-    },
-    "trend_xgd_last5_vs_season": -0.19,
-    "rest_days": 12,
-    "games_last_14d": 1,
-    "games_last_30d": 3,
-    "elo": 1480,
-    "elo_change_30d": -24
-   },
-   "h2h": {
-    "games": [
-     {
-      "date": "2024-04-28",
-      "home": "Darmstadt",
-      "away": "Heidenheim",
-      "score": "0-1",
-      "competition": "D1"
-     },
-     {
-      "date": "2023-12-09",
-      "home": "Heidenheim",
-      "away": "Darmstadt",
-      "score": "3-2",
-      "competition": "D1"
-     },
-     {
-      "date": "2023-03-04",
-      "home": "Heidenheim",
-      "away": "Darmstadt",
-      "score": "1-0",
-      "competition": "D2"
-     },
-     {
-      "date": "2022-08-27",
-      "home": "Darmstadt",
-      "away": "Heidenheim",
-      "score": "2-2",
-      "competition": "D2"
-     },
-     {
-      "date": "2022-03-04",
-      "home": "Darmstadt",
-      "away": "Heidenheim",
-      "score": "3-2",
-      "competition": "D2"
-     },
-     {
-      "date": "2021-09-24",
-      "home": "Heidenheim",
-      "away": "Darmstadt",
-      "score": "2-1",
-      "competition": "D2"
-     }
-    ],
-    "home_wins": 1,
-    "away_wins": 4,
-    "draws": 1,
-    "avg_goals": 3.17,
-    "over25_pct": 0.67
-   },
-   "referee": null,
-   "weather": null,
-   "travel_km_away_team": 172,
-   "style": {
-    "home": null,
-    "away": null
-   },
-   "players": {
-    "home": null,
-    "away": null
-   },
-   "data_coverage": {
-    "xg": true,
-    "understat": false,
-    "referee": false,
-    "weather": true
-   },
-   "research_checklist": [
-    "Confirmed injuries & suspensions for both teams (with expected return dates) and who replaces them",
-    "Predicted line-ups (and confirmed XIs if within ~1h of kick-off); rotation risk from cup/European games",
-    "Key players' recent form and ratings (FotMob/Sofascore/WhoScored pages) - especially outside the top 5 leagues",
-    "Manager situation, press-conference quotes, dressing-room news, new signings",
-    "Motivation: derby, title/relegation/Europe stakes, dead rubber, next fixture priorities",
-    "Referee appointment and tendencies if not listed (non-UK leagues)",
-    "Pitch/weather confirmation; travel; any off-field issues",
-    "Latest odds and whether the price has moved since the model ran"
-   ]
-  },
-  "SP1-20261120-16": {
-   "id": "SP1-20261120-16",
+  "SP1-20261120-18": {
+   "id": "SP1-20261120-18",
    "league": "SP1",
    "league_name": "La Liga",
    "date": "2026-11-20",
@@ -3591,23 +2840,23 @@
    "away": "Espanol",
    "model": {
     "probs": {
-     "H": 0.6272,
-     "D": 0.2223,
-     "A": 0.1505
+     "H": 0.6386,
+     "D": 0.2146,
+     "A": 0.1468
     },
     "probs_dixon_coles": {
-     "H": 0.5675,
+     "H": 0.5674,
      "D": 0.2606,
-     "A": 0.1719
+     "A": 0.172
     },
     "expected_goals": {
-     "home": 1.6664,
-     "away": 0.8108
+     "home": 1.6665,
+     "away": 0.8111
     },
     "likely_scores": [
      {
       "score": "1-0",
-      "p": 0.1311
+      "p": 0.131
      },
      {
       "score": "1-1",
@@ -3629,35 +2878,35 @@
     "pick": {
      "selection": "H",
      "label": "Ath Bilbao to win",
-     "p": 0.6272,
+     "p": 0.6386,
      "tier": "very strong",
      "double_chance": {
       "selections": "HD",
       "label": "Ath Bilbao or draw",
-      "p": 0.8495
+      "p": 0.8532
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.6272,
-      "D": 0.2223,
-      "A": 0.1505
+      "H": 0.6386,
+      "D": 0.2146,
+      "A": 0.1468
      },
      "BTTS": {
-      "Yes": 0.5086,
-      "No": 0.4914
+      "Yes": 0.4982,
+      "No": 0.5018
      },
      "O/U 1.5": {
-      "Over": 0.7829,
-      "Under": 0.2171
+      "Over": 0.7834,
+      "Under": 0.2166
      },
      "O/U 2.5": {
-      "Over": 0.538,
-      "Under": 0.462
+      "Over": 0.5387,
+      "Under": 0.4613
      },
      "O/U 3.5": {
-      "Over": 0.3142,
-      "Under": 0.6858
+      "Over": 0.3149,
+      "Under": 0.6851
      }
     },
     "confidence": 64
@@ -3667,73 +2916,73 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 1.48,
+      "avg_odds": 1.46,
       "odds": 1.54,
-      "market_p": 0.636,
-      "model_p": 0.6272,
-      "edge": -0.0088,
-      "ev": -0.0341
+      "market_p": 0.6452,
+      "model_p": 0.6386,
+      "edge": -0.0066,
+      "ev": -0.0165
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 4.34,
+      "avg_odds": 4.39,
       "odds": 4.6,
-      "market_p": 0.2173,
-      "model_p": 0.2223,
-      "edge": 0.005,
-      "ev": 0.0226
+      "market_p": 0.2141,
+      "model_p": 0.2146,
+      "edge": 0.0005,
+      "ev": -0.0128
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 6.43,
-      "odds": 6.88,
-      "market_p": 0.1467,
-      "model_p": 0.1505,
-      "edge": 0.0038,
-      "ev": 0.0346
+      "avg_odds": 6.68,
+      "odds": 7.15,
+      "market_p": 0.1407,
+      "model_p": 0.1468,
+      "edge": 0.0061,
+      "ev": 0.0492
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
       "avg_odds": 1.8,
       "odds": 1.92,
-      "market_p": 0.5279,
-      "model_p": 0.538,
-      "edge": 0.0101,
-      "ev": 0.033
+      "market_p": 0.5283,
+      "model_p": 0.5387,
+      "edge": 0.0104,
+      "ev": 0.0344
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
       "avg_odds": 2.01,
       "odds": 2.08,
-      "market_p": 0.4721,
-      "model_p": 0.462,
-      "edge": -0.0101,
-      "ev": -0.0391
+      "market_p": 0.4717,
+      "model_p": 0.4613,
+      "edge": -0.0104,
+      "ev": -0.0406
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 9,
+     "snapshots": 10,
      "since": "2026-11-08T13:37:51Z",
      "moves": {
       "1X2|H": {
        "open": 1.45,
-       "now": 1.48,
-       "change_pct": 2.1
+       "now": 1.46,
+       "change_pct": 0.7
       },
       "1X2|D": {
        "open": 4.25,
-       "now": 4.34,
-       "change_pct": 2.1
+       "now": 4.39,
+       "change_pct": 3.3
       },
       "1X2|A": {
        "open": 6.33,
-       "now": 6.43,
-       "change_pct": 1.6
+       "now": 6.68,
+       "change_pct": 5.5
       },
       "O/U 2.5|Over": {
        "open": 1.81,
@@ -4346,7 +3595,16 @@
     "over25_pct": 0.5
    },
    "referee": null,
-   "weather": null,
+   "weather": {
+    "temperature_2m": 12.1,
+    "precipitation": 0.0,
+    "precipitation_probability": 0,
+    "wind_speed_10m": 5.6,
+    "wind_gusts_10m": 7.6,
+    "time": "2026-11-20T20:00",
+    "place": "Bilbao",
+    "impact": "none expected"
+   },
    "travel_km_away_team": 2032,
    "style": {
     "home": null,
@@ -4373,8 +3631,795 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "D1-20261121-2": {
-   "id": "D1-20261121-2",
+  "D2-20261120-64": {
+   "id": "D2-20261120-64",
+   "league": "D2",
+   "league_name": "2. Bundesliga",
+   "date": "2026-11-20",
+   "time": "17:30",
+   "home": "Darmstadt",
+   "away": "Heidenheim",
+   "model": {
+    "probs": {
+     "H": 0.285,
+     "D": 0.2468,
+     "A": 0.4682
+    },
+    "probs_dixon_coles": {
+     "H": 0.318,
+     "D": 0.2629,
+     "A": 0.4191
+    },
+    "expected_goals": {
+     "home": 1.3535,
+     "away": 1.583
+    },
+    "likely_scores": [
+     {
+      "score": "1-1",
+      "p": 0.123
+     },
+     {
+      "score": "1-2",
+      "p": 0.0901
+     },
+     {
+      "score": "2-1",
+      "p": 0.0771
+     },
+     {
+      "score": "0-1",
+      "p": 0.075
+     },
+     {
+      "score": "0-2",
+      "p": 0.0666
+     }
+    ],
+    "pick": {
+     "selection": "A",
+     "label": "Heidenheim to win",
+     "p": 0.4682,
+     "tier": null,
+     "double_chance": {
+      "selections": "HA",
+      "label": "Darmstadt or Heidenheim",
+      "p": 0.7532
+     }
+    },
+    "markets": {
+     "1X2": {
+      "H": 0.285,
+      "D": 0.2468,
+      "A": 0.4682
+     },
+     "BTTS": {
+      "Yes": 0.5726,
+      "No": 0.4274
+     },
+     "O/U 1.5": {
+      "Over": 0.8319,
+      "Under": 0.1681
+     },
+     "O/U 2.5": {
+      "Over": 0.6114,
+      "Under": 0.3886
+     },
+     "O/U 3.5": {
+      "Over": 0.3877,
+      "Under": 0.6123
+     }
+    },
+    "confidence": 60
+   },
+   "market": {
+    "prices": [
+     {
+      "market": "1X2",
+      "selection": "H",
+      "avg_odds": 3.28,
+      "odds": 3.5,
+      "market_p": 0.2793,
+      "model_p": 0.285,
+      "edge": 0.0057,
+      "ev": -0.0024
+     },
+     {
+      "market": "1X2",
+      "selection": "D",
+      "avg_odds": 3.64,
+      "odds": 3.88,
+      "market_p": 0.2518,
+      "model_p": 0.2468,
+      "edge": -0.005,
+      "ev": -0.0426
+     },
+     {
+      "market": "1X2",
+      "selection": "A",
+      "avg_odds": 1.95,
+      "odds": 2.01,
+      "market_p": 0.4689,
+      "model_p": 0.4682,
+      "edge": -0.0007,
+      "ev": -0.0589
+     },
+     {
+      "market": "O/U 2.5",
+      "selection": "Over",
+      "avg_odds": 1.51,
+      "odds": 1.53,
+      "market_p": 0.6138,
+      "model_p": 0.6114,
+      "edge": -0.0024,
+      "ev": -0.0646
+     },
+     {
+      "market": "O/U 2.5",
+      "selection": "Under",
+      "avg_odds": 2.4,
+      "odds": 2.4,
+      "market_p": 0.3862,
+      "model_p": 0.3886,
+      "edge": 0.0024,
+      "ev": -0.0673
+     }
+    ],
+    "bookmaker_spread": null,
+    "line_movement": {
+     "snapshots": 5,
+     "since": "2026-11-13T14:44:09Z",
+     "moves": {
+      "1X2|H": {
+       "open": 3.32,
+       "now": 3.28,
+       "change_pct": -1.2
+      },
+      "1X2|D": {
+       "open": 3.69,
+       "now": 3.64,
+       "change_pct": -1.4
+      },
+      "1X2|A": {
+       "open": 1.9,
+       "now": 1.95,
+       "change_pct": 2.6
+      },
+      "O/U 2.5|Over": {
+       "open": 1.5,
+       "now": 1.51,
+       "change_pct": 0.7
+      },
+      "O/U 2.5|Under": {
+       "open": 2.42,
+       "now": 2.4,
+       "change_pct": -0.8
+      }
+     },
+     "shortening_5pct_plus": []
+    }
+   },
+   "table": {
+    "home": {
+     "pos": 17,
+     "of": 18,
+     "played": 11,
+     "points": 9,
+     "gd": -12.0,
+     "ppg": 0.82,
+     "gap_to_top": 22,
+     "gap_to_europe": 12,
+     "gap_above_relegation": -2
+    },
+    "away": {
+     "pos": 7,
+     "of": 18,
+     "played": 11,
+     "points": 16,
+     "gd": -1.0,
+     "ppg": 1.45,
+     "gap_to_top": 15,
+     "gap_to_europe": 5,
+     "gap_above_relegation": 5
+    },
+    "teams": 18
+   },
+   "home_stats": {
+    "name": "Darmstadt",
+    "last6": [
+     {
+      "date": "2026-11-07",
+      "venue": "A",
+      "opponent": "Nurnberg",
+      "competition": "D2",
+      "score": "0-2",
+      "ht": "0-0",
+      "result": "L",
+      "gf": 0,
+      "ga": 2,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 1.15,
+      "xg_against": 2.12,
+      "shots": 10.0,
+      "shots_against": 22.0,
+      "sot": 2.0,
+      "sot_against": 7.0,
+      "corners": 3.0,
+      "corners_against": 10.0,
+      "yellows": 6.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-31",
+      "venue": "H",
+      "opponent": "Magdeburg",
+      "competition": "D2",
+      "score": "1-1",
+      "ht": "1-1",
+      "result": "D",
+      "gf": 1,
+      "ga": 1,
+      "ht_gf": 1.0,
+      "ht_ga": 1.0,
+      "xg_for": 1.22,
+      "xg_against": 0.77,
+      "shots": 15.0,
+      "shots_against": 12.0,
+      "sot": 3.0,
+      "sot_against": 2.0,
+      "corners": 7.0,
+      "corners_against": 5.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-23",
+      "venue": "H",
+      "opponent": "St Pauli",
+      "competition": "D2",
+      "score": "0-0",
+      "ht": "0-0",
+      "result": "D",
+      "gf": 0,
+      "ga": 0,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.77,
+      "xg_against": 1.9,
+      "shots": 12.0,
+      "shots_against": 18.0,
+      "sot": 0.0,
+      "sot_against": 2.0,
+      "corners": 2.0,
+      "corners_against": 6.0,
+      "yellows": 3.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-18",
+      "venue": "A",
+      "opponent": "Karlsruhe",
+      "competition": "D2",
+      "score": "0-4",
+      "ht": "0-2",
+      "result": "L",
+      "gf": 0,
+      "ga": 4,
+      "ht_gf": 0.0,
+      "ht_ga": 2.0,
+      "xg_for": 0.5,
+      "xg_against": 1.2,
+      "shots": 9.0,
+      "shots_against": 15.0,
+      "sot": 1.0,
+      "sot_against": 7.0,
+      "corners": 4.0,
+      "corners_against": 4.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-10",
+      "venue": "H",
+      "opponent": "Cottbus",
+      "competition": "D2",
+      "score": "3-1",
+      "ht": "1-1",
+      "result": "W",
+      "gf": 3,
+      "ga": 1,
+      "ht_gf": 1.0,
+      "ht_ga": 1.0,
+      "xg_for": 1.38,
+      "xg_against": 1.48,
+      "shots": 16.0,
+      "shots_against": 10.0,
+      "sot": 7.0,
+      "sot_against": 6.0,
+      "corners": 7.0,
+      "corners_against": 8.0,
+      "yellows": 3.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-09-18",
+      "venue": "A",
+      "opponent": "Wolfsburg",
+      "competition": "D2",
+      "score": "1-5",
+      "ht": "1-2",
+      "result": "L",
+      "gf": 1,
+      "ga": 5,
+      "ht_gf": 1.0,
+      "ht_ga": 2.0,
+      "xg_for": 1.23,
+      "xg_against": 1.72,
+      "shots": 12.0,
+      "shots_against": 19.0,
+      "sot": 3.0,
+      "sot_against": 6.0,
+      "corners": 5.0,
+      "corners_against": 8.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     }
+    ],
+    "last5": {
+     "games": 5,
+     "ppg": 1.0,
+     "record": "1W-2D-2L",
+     "goals_for": 0.8,
+     "goals_against": 1.6,
+     "xg_for": 1.0,
+     "xg_against": 1.49,
+     "shots": 12.4,
+     "shots_against": 15.4,
+     "sot": 2.6,
+     "sot_against": 4.8,
+     "corners": 4.6,
+     "corners_against": 6.6,
+     "yellows": 3.2,
+     "clean_sheet_pct": 0.2,
+     "failed_to_score_pct": 0.6,
+     "btts_pct": 0.4,
+     "over15_pct": 0.8,
+     "over25_pct": 0.4,
+     "over35_pct": 0.4,
+     "first_half_goals_for": 0.4,
+     "first_half_goals_against": 0.8
+    },
+    "last10": {
+     "games": 10,
+     "ppg": 0.8,
+     "record": "2W-2D-6L",
+     "goals_for": 0.7,
+     "goals_against": 1.9,
+     "xg_for": 1.05,
+     "xg_against": 1.6,
+     "shots": 11.6,
+     "shots_against": 17.1,
+     "sot": 2.8,
+     "sot_against": 5.4,
+     "corners": 4.2,
+     "corners_against": 7.6,
+     "yellows": 2.7,
+     "clean_sheet_pct": 0.1,
+     "failed_to_score_pct": 0.6,
+     "btts_pct": 0.4,
+     "over15_pct": 0.7,
+     "over25_pct": 0.5,
+     "over35_pct": 0.3,
+     "first_half_goals_for": 0.4,
+     "first_half_goals_against": 0.8
+    },
+    "season": {
+     "games": 11,
+     "ppg": 0.82,
+     "record": "2W-3D-6L",
+     "goals_for": 0.82,
+     "goals_against": 1.91,
+     "xg_for": 1.02,
+     "xg_against": 1.58,
+     "shots": 11.82,
+     "shots_against": 16.55,
+     "sot": 2.82,
+     "sot_against": 5.45,
+     "corners": 4.55,
+     "corners_against": 7.27,
+     "yellows": 2.64,
+     "clean_sheet_pct": 0.09,
+     "failed_to_score_pct": 0.55,
+     "btts_pct": 0.45,
+     "over15_pct": 0.73,
+     "over25_pct": 0.55,
+     "over35_pct": 0.36,
+     "first_half_goals_for": 0.36,
+     "first_half_goals_against": 0.91
+    },
+    "season_venue": {
+     "games": 6,
+     "ppg": 1.5,
+     "record": "2W-3D-1L",
+     "goals_for": 1.33,
+     "goals_against": 1.0,
+     "xg_for": 1.15,
+     "xg_against": 1.52,
+     "shots": 13.33,
+     "shots_against": 15.5,
+     "sot": 3.67,
+     "sot_against": 4.5,
+     "corners": 5.0,
+     "corners_against": 7.0,
+     "yellows": 2.33,
+     "clean_sheet_pct": 0.17,
+     "failed_to_score_pct": 0.33,
+     "btts_pct": 0.67,
+     "over15_pct": 0.67,
+     "over25_pct": 0.5,
+     "over35_pct": 0.33,
+     "first_half_goals_for": 0.5,
+     "first_half_goals_against": 0.67
+    },
+    "game_state_season": {
+     "ht_leads": 1,
+     "ht_leads_won": 1,
+     "ht_deficits": 5,
+     "points_from_ht_deficits": 1,
+     "second_half_goals_for": 0.45,
+     "second_half_goals_against": 1.0
+    },
+    "trend_xgd_last5_vs_season": 0.07,
+    "rest_days": 13,
+    "games_last_14d": 1,
+    "games_last_30d": 3,
+    "elo": 1421,
+    "elo_change_30d": -18
+   },
+   "away_stats": {
+    "name": "Heidenheim",
+    "last6": [
+     {
+      "date": "2026-11-08",
+      "venue": "H",
+      "opponent": "Hannover",
+      "competition": "D2",
+      "score": "2-2",
+      "ht": "1-0",
+      "result": "D",
+      "gf": 2,
+      "ga": 2,
+      "ht_gf": 1.0,
+      "ht_ga": 0.0,
+      "xg_for": 1.1,
+      "xg_against": 1.37,
+      "shots": 14.0,
+      "shots_against": 15.0,
+      "sot": 3.0,
+      "sot_against": 5.0,
+      "corners": 7.0,
+      "corners_against": 9.0,
+      "yellows": 0.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-31",
+      "venue": "A",
+      "opponent": "Karlsruhe",
+      "competition": "D2",
+      "score": "1-2",
+      "ht": "0-1",
+      "result": "L",
+      "gf": 1,
+      "ga": 2,
+      "ht_gf": 0.0,
+      "ht_ga": 1.0,
+      "xg_for": 1.26,
+      "xg_against": 1.5,
+      "shots": 18.0,
+      "shots_against": 13.0,
+      "sot": 7.0,
+      "sot_against": 9.0,
+      "corners": 6.0,
+      "corners_against": 4.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-24",
+      "venue": "H",
+      "opponent": "Cottbus",
+      "competition": "D2",
+      "score": "1-1",
+      "ht": "0-1",
+      "result": "D",
+      "gf": 1,
+      "ga": 1,
+      "ht_gf": 0.0,
+      "ht_ga": 1.0,
+      "xg_for": 3.68,
+      "xg_against": 0.5,
+      "shots": 34.0,
+      "shots_against": 7.0,
+      "sot": 8.0,
+      "sot_against": 3.0,
+      "corners": 15.0,
+      "corners_against": 2.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-17",
+      "venue": "A",
+      "opponent": "Wolfsburg",
+      "competition": "D2",
+      "score": "1-3",
+      "ht": "1-2",
+      "result": "L",
+      "gf": 1,
+      "ga": 3,
+      "ht_gf": 1.0,
+      "ht_ga": 2.0,
+      "xg_for": 1.98,
+      "xg_against": 1.6,
+      "shots": 23.0,
+      "shots_against": 19.0,
+      "sot": 9.0,
+      "sot_against": 10.0,
+      "corners": 8.0,
+      "corners_against": 8.0,
+      "yellows": 1.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-09",
+      "venue": "H",
+      "opponent": "Kaiserslautern",
+      "competition": "D2",
+      "score": "0-0",
+      "ht": "0-0",
+      "result": "D",
+      "gf": 0,
+      "ga": 0,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.78,
+      "xg_against": 1.32,
+      "shots": 13.0,
+      "shots_against": 16.0,
+      "sot": 4.0,
+      "sot_against": 3.0,
+      "corners": 7.0,
+      "corners_against": 8.0,
+      "yellows": 0.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-09-20",
+      "venue": "A",
+      "opponent": "Bielefeld",
+      "competition": "D2",
+      "score": "2-2",
+      "ht": "2-1",
+      "result": "D",
+      "gf": 2,
+      "ga": 2,
+      "ht_gf": 2.0,
+      "ht_ga": 1.0,
+      "xg_for": 2.52,
+      "xg_against": 0.49,
+      "shots": 14.0,
+      "shots_against": 6.0,
+      "sot": 7.0,
+      "sot_against": 3.0,
+      "corners": 6.0,
+      "corners_against": 5.0,
+      "yellows": 4.0,
+      "reds": 0.0
+     }
+    ],
+    "last5": {
+     "games": 5,
+     "ppg": 0.6,
+     "record": "0W-3D-2L",
+     "goals_for": 1.0,
+     "goals_against": 1.6,
+     "xg_for": 1.76,
+     "xg_against": 1.26,
+     "shots": 20.4,
+     "shots_against": 14.0,
+     "sot": 6.2,
+     "sot_against": 6.0,
+     "corners": 8.6,
+     "corners_against": 6.2,
+     "yellows": 1.0,
+     "clean_sheet_pct": 0.2,
+     "failed_to_score_pct": 0.2,
+     "btts_pct": 0.8,
+     "over15_pct": 0.8,
+     "over25_pct": 0.6,
+     "over35_pct": 0.4,
+     "first_half_goals_for": 0.4,
+     "first_half_goals_against": 0.8
+    },
+    "last10": {
+     "games": 10,
+     "ppg": 1.3,
+     "record": "3W-4D-3L",
+     "goals_for": 1.5,
+     "goals_against": 1.7,
+     "xg_for": 1.9,
+     "xg_against": 1.17,
+     "shots": 17.9,
+     "shots_against": 13.9,
+     "sot": 6.0,
+     "sot_against": 5.7,
+     "corners": 6.6,
+     "corners_against": 6.5,
+     "yellows": 1.5,
+     "clean_sheet_pct": 0.3,
+     "failed_to_score_pct": 0.1,
+     "btts_pct": 0.7,
+     "over15_pct": 0.7,
+     "over25_pct": 0.6,
+     "over35_pct": 0.5,
+     "first_half_goals_for": 0.5,
+     "first_half_goals_against": 0.9
+    },
+    "season": {
+     "games": 11,
+     "ppg": 1.45,
+     "record": "4W-4D-3L",
+     "goals_for": 1.73,
+     "goals_against": 1.82,
+     "xg_for": 1.95,
+     "xg_against": 1.26,
+     "shots": 18.09,
+     "shots_against": 15.0,
+     "sot": 6.0,
+     "sot_against": 5.73,
+     "corners": 6.36,
+     "corners_against": 6.45,
+     "yellows": 1.45,
+     "clean_sheet_pct": 0.27,
+     "failed_to_score_pct": 0.09,
+     "btts_pct": 0.73,
+     "over15_pct": 0.73,
+     "over25_pct": 0.64,
+     "over35_pct": 0.55,
+     "first_half_goals_for": 0.73,
+     "first_half_goals_against": 1.0
+    },
+    "season_venue": {
+     "games": 5,
+     "ppg": 0.8,
+     "record": "1W-1D-3L",
+     "goals_for": 1.2,
+     "goals_against": 2.2,
+     "xg_for": 1.58,
+     "xg_against": 1.25,
+     "shots": 14.4,
+     "shots_against": 14.2,
+     "sot": 6.2,
+     "sot_against": 7.2,
+     "corners": 5.0,
+     "corners_against": 5.8,
+     "yellows": 2.0,
+     "clean_sheet_pct": 0.2,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 0.8,
+     "over15_pct": 0.8,
+     "over25_pct": 0.8,
+     "over35_pct": 0.6,
+     "first_half_goals_for": 0.8,
+     "first_half_goals_against": 1.4
+    },
+    "game_state_season": {
+     "ht_leads": 4,
+     "ht_leads_won": 2,
+     "ht_deficits": 5,
+     "points_from_ht_deficits": 4,
+     "second_half_goals_for": 1.0,
+     "second_half_goals_against": 0.82
+    },
+    "trend_xgd_last5_vs_season": -0.19,
+    "rest_days": 12,
+    "games_last_14d": 1,
+    "games_last_30d": 3,
+    "elo": 1480,
+    "elo_change_30d": -24
+   },
+   "h2h": {
+    "games": [
+     {
+      "date": "2024-04-28",
+      "home": "Darmstadt",
+      "away": "Heidenheim",
+      "score": "0-1",
+      "competition": "D1"
+     },
+     {
+      "date": "2023-12-09",
+      "home": "Heidenheim",
+      "away": "Darmstadt",
+      "score": "3-2",
+      "competition": "D1"
+     },
+     {
+      "date": "2023-03-04",
+      "home": "Heidenheim",
+      "away": "Darmstadt",
+      "score": "1-0",
+      "competition": "D2"
+     },
+     {
+      "date": "2022-08-27",
+      "home": "Darmstadt",
+      "away": "Heidenheim",
+      "score": "2-2",
+      "competition": "D2"
+     },
+     {
+      "date": "2022-03-04",
+      "home": "Darmstadt",
+      "away": "Heidenheim",
+      "score": "3-2",
+      "competition": "D2"
+     },
+     {
+      "date": "2021-09-24",
+      "home": "Heidenheim",
+      "away": "Darmstadt",
+      "score": "2-1",
+      "competition": "D2"
+     }
+    ],
+    "home_wins": 1,
+    "away_wins": 4,
+    "draws": 1,
+    "avg_goals": 3.17,
+    "over25_pct": 0.67
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 9.8,
+    "precipitation": 0.0,
+    "precipitation_probability": 73,
+    "wind_speed_10m": 13.5,
+    "wind_gusts_10m": 35.3,
+    "time": "2026-11-20T17:00",
+    "place": "Darmstadt",
+    "impact": "none expected"
+   },
+   "travel_km_away_team": 172,
+   "style": {
+    "home": null,
+    "away": null
+   },
+   "players": {
+    "home": null,
+    "away": null
+   },
+   "data_coverage": {
+    "xg": true,
+    "understat": false,
+    "referee": false,
+    "weather": true
+   },
+   "research_checklist": [
+    "Confirmed injuries & suspensions for both teams (with expected return dates) and who replaces them",
+    "Predicted line-ups (and confirmed XIs if within ~1h of kick-off); rotation risk from cup/European games",
+    "Key players' recent form and ratings (FotMob/Sofascore/WhoScored pages) - especially outside the top 5 leagues",
+    "Manager situation, press-conference quotes, dressing-room news, new signings",
+    "Motivation: derby, title/relegation/Europe stakes, dead rubber, next fixture priorities",
+    "Referee appointment and tendencies if not listed (non-UK leagues)",
+    "Pitch/weather confirmation; travel; any off-field issues",
+    "Latest odds and whether the price has moved since the model ran"
+   ]
+  },
+  "D1-20261121-1": {
+   "id": "D1-20261121-1",
    "league": "D1",
    "league_name": "Bundesliga",
    "date": "2026-11-21",
@@ -4383,18 +4428,18 @@
    "away": "Paderborn",
    "model": {
     "probs": {
-     "H": 0.746,
-     "D": 0.1563,
-     "A": 0.0977
+     "H": 0.7459,
+     "D": 0.1562,
+     "A": 0.098
     },
     "probs_dixon_coles": {
-     "H": 0.6651,
+     "H": 0.665,
      "D": 0.1947,
      "A": 0.1403
     },
     "expected_goals": {
-     "home": 2.3709,
-     "away": 1.0128
+     "home": 2.371,
+     "away": 1.0131
     },
     "likely_scores": [
      {
@@ -4421,35 +4466,35 @@
     "pick": {
      "selection": "H",
      "label": "Leverkusen to win",
-     "p": 0.746,
+     "p": 0.7459,
      "tier": "very strong",
      "double_chance": {
       "selections": "HD",
       "label": "Leverkusen or draw",
-      "p": 0.9023
+      "p": 0.902
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.746,
-      "D": 0.1563,
-      "A": 0.0977
+      "H": 0.7459,
+      "D": 0.1562,
+      "A": 0.098
      },
      "BTTS": {
       "Yes": 0.6358,
       "No": 0.3642
      },
      "O/U 1.5": {
-      "Over": 0.8978,
-      "Under": 0.1022
+      "Over": 0.8977,
+      "Under": 0.1023
      },
      "O/U 2.5": {
-      "Over": 0.7292,
-      "Under": 0.2708
+      "Over": 0.7291,
+      "Under": 0.2709
      },
      "O/U 3.5": {
-      "Over": 0.5214,
-      "Under": 0.4786
+      "Over": 0.5213,
+      "Under": 0.4787
      }
     },
     "confidence": 64
@@ -4462,29 +4507,29 @@
       "avg_odds": 1.25,
       "odds": 1.3,
       "market_p": 0.7514,
-      "model_p": 0.746,
-      "edge": -0.0054,
-      "ev": -0.0302
+      "model_p": 0.7459,
+      "edge": -0.0055,
+      "ev": -0.0303
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 6.42,
-      "odds": 6.87,
-      "market_p": 0.1458,
-      "model_p": 0.1563,
-      "edge": 0.0105,
-      "ev": 0.0732
+      "avg_odds": 6.43,
+      "odds": 6.88,
+      "market_p": 0.1455,
+      "model_p": 0.1562,
+      "edge": 0.0106,
+      "ev": 0.0748
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 9.1,
-      "odds": 9.74,
-      "market_p": 0.1028,
-      "model_p": 0.0977,
+      "avg_odds": 9.08,
+      "odds": 9.72,
+      "market_p": 0.1031,
+      "model_p": 0.098,
       "edge": -0.0051,
-      "ev": -0.0483
+      "ev": -0.0482
      },
      {
       "market": "O/U 2.5",
@@ -4492,9 +4537,9 @@
       "avg_odds": 1.32,
       "odds": 1.33,
       "market_p": 0.7162,
-      "model_p": 0.7292,
+      "model_p": 0.7291,
       "edge": 0.0129,
-      "ev": -0.0302
+      "ev": -0.0303
      },
      {
       "market": "O/U 2.5",
@@ -4502,34 +4547,34 @@
       "avg_odds": 3.32,
       "odds": 3.37,
       "market_p": 0.2838,
-      "model_p": 0.2708,
+      "model_p": 0.2709,
       "edge": -0.0129,
-      "ev": -0.0873
+      "ev": -0.0871
      },
      {
       "market": "O/U 3.5",
       "selection": "Over",
       "avg_odds": 1.82,
       "odds": 1.92,
-      "market_p": 0.5159,
-      "model_p": 0.5214,
-      "edge": 0.0054,
-      "ev": -0.0073
+      "market_p": 0.5155,
+      "model_p": 0.5213,
+      "edge": 0.0058,
+      "ev": -0.0081
      },
      {
       "market": "O/U 3.5",
       "selection": "Under",
       "avg_odds": 1.94,
       "odds": 2.02,
-      "market_p": 0.4841,
-      "model_p": 0.4786,
-      "edge": -0.0054,
-      "ev": -0.0244
+      "market_p": 0.4845,
+      "model_p": 0.4787,
+      "edge": -0.0058,
+      "ev": -0.0236
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 8,
+     "snapshots": 9,
      "since": "2026-11-09T16:36:38Z",
      "moves": {
       "1X2|H": {
@@ -4539,13 +4584,13 @@
       },
       "1X2|D": {
        "open": 6.3,
-       "now": 6.42,
-       "change_pct": 1.9
+       "now": 6.43,
+       "change_pct": 2.1
       },
       "1X2|A": {
        "open": 8.93,
-       "now": 9.1,
-       "change_pct": 1.9
+       "now": 9.08,
+       "change_pct": 1.7
       },
       "O/U 2.5|Over": {
        "open": 1.32,
@@ -5112,10 +5157,10 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 6.5,
-    "precipitation": 0.1,
-    "precipitation_probability": 27,
-    "wind_speed_10m": 9.6,
+    "temperature_2m": 7.6,
+    "precipitation": 0.0,
+    "precipitation_probability": 20,
+    "wind_speed_10m": 9.3,
     "wind_gusts_10m": 21.2,
     "time": "2026-11-21T14:00",
     "place": "Leverkusen",
@@ -5147,8 +5192,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "SP2-20261121-75": {
-   "id": "SP2-20261121-75",
+  "SP2-20261121-84": {
+   "id": "SP2-20261121-84",
    "league": "SP2",
    "league_name": "Segunda Division",
    "date": "2026-11-21",
@@ -5157,18 +5202,18 @@
    "away": "Granada",
    "model": {
     "probs": {
-     "H": 0.4335,
-     "D": 0.3042,
-     "A": 0.2623
+     "H": 0.4309,
+     "D": 0.3048,
+     "A": 0.2643
     },
     "probs_dixon_coles": {
-     "H": 0.3912,
-     "D": 0.3152,
-     "A": 0.2936
+     "H": 0.3913,
+     "D": 0.3153,
+     "A": 0.2934
     },
     "expected_goals": {
-     "home": 1.1701,
-     "away": 0.9775
+     "home": 1.1697,
+     "away": 0.9768
     },
     "likely_scores": [
      {
@@ -5177,11 +5222,11 @@
      },
      {
       "score": "0-0",
-      "p": 0.1275
+      "p": 0.1276
      },
      {
       "score": "1-0",
-      "p": 0.126
+      "p": 0.1261
      },
      {
       "score": "0-1",
@@ -5195,35 +5240,35 @@
     "pick": {
      "selection": "H",
      "label": "Sabadell to win",
-     "p": 0.4335,
+     "p": 0.4309,
      "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Sabadell or draw",
-      "p": 0.7377
+      "p": 0.7357
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.4335,
-      "D": 0.3042,
-      "A": 0.2623
+      "H": 0.4309,
+      "D": 0.3048,
+      "A": 0.2643
      },
      "BTTS": {
-      "Yes": 0.4795,
-      "No": 0.5205
+      "Yes": 0.4801,
+      "No": 0.5199
      },
      "O/U 1.5": {
-      "Over": 0.6867,
-      "Under": 0.3133
+      "Over": 0.687,
+      "Under": 0.313
      },
      "O/U 2.5": {
-      "Over": 0.4121,
-      "Under": 0.5879
+      "Over": 0.4125,
+      "Under": 0.5875
      },
      "O/U 3.5": {
-      "Over": 0.2068,
-      "Under": 0.7932
+      "Over": 0.207,
+      "Under": 0.793
      }
     },
     "confidence": 59
@@ -5233,73 +5278,73 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 2.21,
-      "odds": 2.34,
-      "market_p": 0.4122,
-      "model_p": 0.4335,
-      "edge": 0.0213,
-      "ev": 0.0144
+      "avg_odds": 2.23,
+      "odds": 2.38,
+      "market_p": 0.4085,
+      "model_p": 0.4309,
+      "edge": 0.0224,
+      "ev": 0.0256
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.04,
-      "odds": 3.25,
-      "market_p": 0.2991,
-      "model_p": 0.3042,
-      "edge": 0.005,
-      "ev": -0.011
+      "avg_odds": 3.03,
+      "odds": 3.24,
+      "market_p": 0.3001,
+      "model_p": 0.3048,
+      "edge": 0.0048,
+      "ev": -0.0119
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.15,
-      "odds": 3.37,
-      "market_p": 0.2887,
-      "model_p": 0.2623,
-      "edge": -0.0263,
-      "ev": -0.1161
+      "avg_odds": 3.12,
+      "odds": 3.34,
+      "market_p": 0.2915,
+      "model_p": 0.2643,
+      "edge": -0.0272,
+      "ev": -0.1181
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
       "avg_odds": 2.2,
       "odds": 2.25,
-      "market_p": 0.4186,
-      "model_p": 0.4121,
-      "edge": -0.0065,
-      "ev": -0.0728
+      "market_p": 0.4192,
+      "model_p": 0.4125,
+      "edge": -0.0067,
+      "ev": -0.072
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
       "avg_odds": 1.59,
       "odds": 1.7,
-      "market_p": 0.5814,
-      "model_p": 0.5879,
-      "edge": 0.0065,
-      "ev": -0.0017
+      "market_p": 0.5808,
+      "model_p": 0.5875,
+      "edge": 0.0067,
+      "ev": -0.001
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 3,
+     "snapshots": 4,
      "since": "2026-11-14T13:40:11Z",
      "moves": {
       "1X2|H": {
        "open": 1.93,
-       "now": 2.21,
-       "change_pct": 14.5
+       "now": 2.23,
+       "change_pct": 15.5
       },
       "1X2|D": {
        "open": 3.06,
-       "now": 3.04,
-       "change_pct": -0.7
+       "now": 3.03,
+       "change_pct": -1.0
       },
       "1X2|A": {
        "open": 3.64,
-       "now": 3.15,
-       "change_pct": -13.5
+       "now": 3.12,
+       "change_pct": -14.3
       },
       "O/U 2.5|Over": {
        "open": 2.2,
@@ -5327,7 +5372,7 @@
      "ppg": 1.29,
      "gap_to_top": 14,
      "gap_to_europe": 6,
-     "gap_above_relegation": 7
+     "gap_above_relegation": 5
     },
     "away": {
      "pos": 3,
@@ -5338,7 +5383,7 @@
      "ppg": 2.0,
      "gap_to_top": 6,
      "gap_to_europe": -2,
-     "gap_above_relegation": 15
+     "gap_above_relegation": 13
     },
     "teams": 22
    },
@@ -5858,11 +5903,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 14.6,
+    "temperature_2m": 13.5,
     "precipitation": 0.0,
     "precipitation_probability": 3,
-    "wind_speed_10m": 4.6,
-    "wind_gusts_10m": 11.5,
+    "wind_speed_10m": 4.0,
+    "wind_gusts_10m": 9.7,
     "time": "2026-11-21T13:00",
     "place": "Sabadell",
     "impact": "none expected"
@@ -5893,8 +5938,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "F1-20261121-36": {
-   "id": "F1-20261121-36",
+  "F1-20261121-42": {
+   "id": "F1-20261121-42",
    "league": "F1",
    "league_name": "Ligue 1",
    "date": "2026-11-21",
@@ -5903,7 +5948,7 @@
    "away": "Toulouse",
    "model": {
     "probs": {
-     "H": 0.5183,
+     "H": 0.5182,
      "D": 0.2475,
      "A": 0.2343
     },
@@ -5913,7 +5958,7 @@
      "A": 0.2507
     },
     "expected_goals": {
-     "home": 1.8278,
+     "home": 1.8277,
      "away": 1.2376
     },
     "likely_scores": [
@@ -5941,7 +5986,7 @@
     "pick": {
      "selection": "H",
      "label": "Lens to win",
-     "p": 0.5183,
+     "p": 0.5182,
      "tier": null,
      "double_chance": {
       "selections": "HD",
@@ -5951,25 +5996,25 @@
     },
     "markets": {
      "1X2": {
-      "H": 0.5183,
+      "H": 0.5182,
       "D": 0.2475,
       "A": 0.2343
      },
      "BTTS": {
-      "Yes": 0.6163,
-      "No": 0.3837
+      "Yes": 0.6159,
+      "No": 0.3841
      },
      "O/U 1.5": {
-      "Over": 0.8241,
-      "Under": 0.1759
+      "Over": 0.8236,
+      "Under": 0.1764
      },
      "O/U 2.5": {
-      "Over": 0.5991,
-      "Under": 0.4009
+      "Over": 0.5984,
+      "Under": 0.4016
      },
      "O/U 3.5": {
-      "Over": 0.3748,
-      "Under": 0.6252
+      "Over": 0.374,
+      "Under": 0.626
      }
     },
     "confidence": 64
@@ -5980,56 +6025,56 @@
       "market": "1X2",
       "selection": "H",
       "avg_odds": 1.8,
-      "odds": 1.89,
+      "odds": 1.91,
       "market_p": 0.5213,
-      "model_p": 0.5183,
-      "edge": -0.003,
-      "ev": -0.0205
+      "model_p": 0.5182,
+      "edge": -0.0031,
+      "ev": -0.0103
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.9,
+      "avg_odds": 3.91,
       "odds": 4.18,
-      "market_p": 0.24,
+      "market_p": 0.2399,
       "model_p": 0.2475,
-      "edge": 0.0075,
-      "ev": 0.0332
+      "edge": 0.0076,
+      "ev": 0.0344
      },
      {
       "market": "1X2",
       "selection": "A",
       "avg_odds": 3.92,
       "odds": 4.2,
-      "market_p": 0.2387,
+      "market_p": 0.2388,
       "model_p": 0.2343,
       "edge": -0.0045,
-      "ev": -0.017
+      "ev": -0.016
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
       "avg_odds": 1.62,
       "odds": 1.68,
-      "market_p": 0.5849,
-      "model_p": 0.5991,
-      "edge": 0.0142,
-      "ev": 0.0065
+      "market_p": 0.584,
+      "model_p": 0.5984,
+      "edge": 0.0143,
+      "ev": 0.0053
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
       "avg_odds": 2.28,
       "odds": 2.38,
-      "market_p": 0.4151,
-      "model_p": 0.4009,
-      "edge": -0.0142,
-      "ev": -0.0459
+      "market_p": 0.416,
+      "model_p": 0.4016,
+      "edge": -0.0143,
+      "ev": -0.0441
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 8,
+     "snapshots": 9,
      "since": "2026-11-09T16:36:38Z",
      "moves": {
       "1X2|H": {
@@ -6039,8 +6084,8 @@
       },
       "1X2|D": {
        "open": 3.87,
-       "now": 3.9,
-       "change_pct": 0.8
+       "now": 3.91,
+       "change_pct": 1.0
       },
       "1X2|A": {
        "open": 3.89,
@@ -6659,11 +6704,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 3.1,
+    "temperature_2m": 4.7,
     "precipitation": 0.0,
-    "precipitation_probability": 2,
-    "wind_speed_10m": 7.2,
-    "wind_gusts_10m": 13.3,
+    "precipitation_probability": 4,
+    "wind_speed_10m": 6.5,
+    "wind_gusts_10m": 11.2,
     "time": "2026-11-21T19:00",
     "place": "Lens",
     "impact": "none expected"
@@ -6694,839 +6739,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "SP1-20261121-20": {
-   "id": "SP1-20261121-20",
-   "league": "SP1",
-   "league_name": "La Liga",
-   "date": "2026-11-21",
-   "time": "20:00",
-   "home": "Real Madrid",
-   "away": "Celta",
-   "model": {
-    "probs": {
-     "H": 0.7973,
-     "D": 0.138,
-     "A": 0.0647
-    },
-    "probs_dixon_coles": {
-     "H": 0.7164,
-     "D": 0.19,
-     "A": 0.0936
-    },
-    "expected_goals": {
-     "home": 2.2223,
-     "away": 0.6836
-    },
-    "likely_scores": [
-     {
-      "score": "2-0",
-      "p": 0.1361
-     },
-     {
-      "score": "1-0",
-      "p": 0.1158
-     },
-     {
-      "score": "3-0",
-      "p": 0.1009
-     },
-     {
-      "score": "2-1",
-      "p": 0.0931
-     },
-     {
-      "score": "1-1",
-      "p": 0.0905
-     }
-    ],
-    "pick": {
-     "selection": "H",
-     "label": "Real Madrid to win",
-     "p": 0.7973,
-     "tier": "very strong",
-     "double_chance": {
-      "selections": "HD",
-      "label": "Real Madrid or draw",
-      "p": 0.9353
-     }
-    },
-    "markets": {
-     "1X2": {
-      "H": 0.7973,
-      "D": 0.138,
-      "A": 0.0647
-     },
-     "BTTS": {
-      "Yes": 0.5525,
-      "No": 0.4475
-     },
-     "O/U 1.5": {
-      "Over": 0.8771,
-      "Under": 0.1229
-     },
-     "O/U 2.5": {
-      "Over": 0.6911,
-      "Under": 0.3089
-     },
-     "O/U 3.5": {
-      "Over": 0.4739,
-      "Under": 0.5261
-     }
-    },
-    "confidence": 64
-   },
-   "market": {
-    "prices": [
-     {
-      "market": "1X2",
-      "selection": "H",
-      "avg_odds": 1.18,
-      "odds": 1.24,
-      "market_p": 0.7934,
-      "model_p": 0.7973,
-      "edge": 0.0039,
-      "ev": -0.0114
-     },
-     {
-      "market": "1X2",
-      "selection": "D",
-      "avg_odds": 7.01,
-      "odds": 7.5,
-      "market_p": 0.1341,
-      "model_p": 0.138,
-      "edge": 0.0039,
-      "ev": 0.035
-     },
-     {
-      "market": "1X2",
-      "selection": "A",
-      "avg_odds": 12.96,
-      "odds": 13.87,
-      "market_p": 0.0725,
-      "model_p": 0.0647,
-      "edge": -0.0078,
-      "ev": -0.1028
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Over",
-      "avg_odds": 1.4,
-      "odds": 1.4,
-      "market_p": 0.6784,
-      "model_p": 0.6911,
-      "edge": 0.0127,
-      "ev": -0.0325
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Under",
-      "avg_odds": 2.95,
-      "odds": 2.99,
-      "market_p": 0.3216,
-      "model_p": 0.3089,
-      "edge": -0.0127,
-      "ev": -0.0764
-     },
-     {
-      "market": "O/U 3.5",
-      "selection": "Over",
-      "avg_odds": 1.96,
-      "odds": 2.09,
-      "market_p": 0.4831,
-      "model_p": 0.4739,
-      "edge": -0.0092,
-      "ev": 0.0078
-     },
-     {
-      "market": "O/U 3.5",
-      "selection": "Under",
-      "avg_odds": 1.83,
-      "odds": 1.88,
-      "market_p": 0.5169,
-      "model_p": 0.5261,
-      "edge": 0.0092,
-      "ev": -0.0247
-     }
-    ],
-    "bookmaker_spread": null,
-    "line_movement": {
-     "snapshots": 8,
-     "since": "2026-11-09T16:36:38Z",
-     "moves": {
-      "1X2|H": {
-       "open": 1.19,
-       "now": 1.18,
-       "change_pct": -0.8
-      },
-      "1X2|D": {
-       "open": 6.64,
-       "now": 7.01,
-       "change_pct": 5.6
-      },
-      "1X2|A": {
-       "open": 12.49,
-       "now": 12.96,
-       "change_pct": 3.8
-      },
-      "O/U 2.5|Over": {
-       "open": 1.4,
-       "now": 1.4,
-       "change_pct": 0.0
-      },
-      "O/U 2.5|Under": {
-       "open": 2.95,
-       "now": 2.95,
-       "change_pct": 0.0
-      },
-      "O/U 3.5|Over": {
-       "open": 1.97,
-       "now": 1.96,
-       "change_pct": -0.5
-      },
-      "O/U 3.5|Under": {
-       "open": 1.8,
-       "now": 1.83,
-       "change_pct": 1.7
-      }
-     },
-     "shortening_5pct_plus": []
-    }
-   },
-   "table": {
-    "home": {
-     "pos": 2,
-     "of": 20,
-     "played": 12,
-     "points": 30,
-     "gd": 21.0,
-     "ppg": 2.5,
-     "gap_to_top": 3,
-     "gap_to_europe": -12,
-     "gap_above_relegation": 20
-    },
-    "away": {
-     "pos": 11,
-     "of": 20,
-     "played": 12,
-     "points": 13,
-     "gd": 0.0,
-     "ppg": 1.08,
-     "gap_to_top": 20,
-     "gap_to_europe": 5,
-     "gap_above_relegation": 3
-    },
-    "teams": 20
-   },
-   "home_stats": {
-    "name": "Real Madrid",
-    "last6": [
-     {
-      "date": "2026-11-07",
-      "venue": "A",
-      "opponent": "Valencia",
-      "competition": "SP1",
-      "score": "3-0",
-      "ht": "2-0",
-      "result": "W",
-      "gf": 3,
-      "ga": 0,
-      "ht_gf": 2.0,
-      "ht_ga": 0.0,
-      "xg_for": 2.34,
-      "xg_against": 0.18,
-      "shots": 19.0,
-      "shots_against": 4.0,
-      "sot": 11.0,
-      "sot_against": 2.0,
-      "corners": 5.0,
-      "corners_against": 2.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-11-01",
-      "venue": "A",
-      "opponent": "Santander",
-      "competition": "SP1",
-      "score": "3-0",
-      "ht": "3-0",
-      "result": "W",
-      "gf": 3,
-      "ga": 0,
-      "ht_gf": 3.0,
-      "ht_ga": 0.0,
-      "xg_for": 3.36,
-      "xg_against": 0.97,
-      "shots": 22.0,
-      "shots_against": 10.0,
-      "sot": 7.0,
-      "sot_against": 1.0,
-      "corners": 6.0,
-      "corners_against": 4.0,
-      "yellows": 0.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-25",
-      "venue": "A",
-      "opponent": "Barcelona",
-      "competition": "SP1",
-      "score": "2-1",
-      "ht": "1-0",
-      "result": "W",
-      "gf": 2,
-      "ga": 1,
-      "ht_gf": 1.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.94,
-      "xg_against": 1.19,
-      "shots": 10.0,
-      "shots_against": 18.0,
-      "sot": 5.0,
-      "sot_against": 6.0,
-      "corners": 6.0,
-      "corners_against": 6.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-18",
-      "venue": "H",
-      "opponent": "Sevilla",
-      "competition": "SP1",
-      "score": "4-1",
-      "ht": "2-0",
-      "result": "W",
-      "gf": 4,
-      "ga": 1,
-      "ht_gf": 2.0,
-      "ht_ga": 0.0,
-      "xg_for": 2.28,
-      "xg_against": 0.75,
-      "shots": 15.0,
-      "shots_against": 11.0,
-      "sot": 8.0,
-      "sot_against": 5.0,
-      "corners": 1.0,
-      "corners_against": 2.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-10",
-      "venue": "H",
-      "opponent": "Villarreal",
-      "competition": "SP1",
-      "score": "1-0",
-      "ht": "0-0",
-      "result": "W",
-      "gf": 1,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.43,
-      "xg_against": 0.59,
-      "shots": 11.0,
-      "shots_against": 15.0,
-      "sot": 4.0,
-      "sot_against": 4.0,
-      "corners": 9.0,
-      "corners_against": 3.0,
-      "yellows": 5.0,
-      "reds": 1.0
-     },
-     {
-      "date": "2026-09-20",
-      "venue": "A",
-      "opponent": "Ath Madrid",
-      "competition": "SP1",
-      "score": "1-2",
-      "ht": "0-0",
-      "result": "L",
-      "gf": 1,
-      "ga": 2,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.3,
-      "xg_against": 2.35,
-      "shots": 8.0,
-      "shots_against": 18.0,
-      "sot": 3.0,
-      "sot_against": 9.0,
-      "corners": 1.0,
-      "corners_against": 3.0,
-      "yellows": 2.0,
-      "reds": 1.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 3.0,
-     "record": "5W-0D-0L",
-     "goals_for": 2.6,
-     "goals_against": 0.4,
-     "xg_for": 2.27,
-     "xg_against": 0.74,
-     "shots": 15.4,
-     "shots_against": 11.6,
-     "sot": 7.0,
-     "sot_against": 3.6,
-     "corners": 5.4,
-     "corners_against": 3.4,
-     "yellows": 2.6,
-     "clean_sheet_pct": 0.6,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.4,
-     "over15_pct": 0.8,
-     "over25_pct": 0.8,
-     "over35_pct": 0.2,
-     "first_half_goals_for": 1.6,
-     "first_half_goals_against": 0.0
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 2.4,
-     "record": "8W-0D-2L",
-     "goals_for": 2.5,
-     "goals_against": 0.8,
-     "xg_for": 2.37,
-     "xg_against": 0.97,
-     "shots": 16.8,
-     "shots_against": 12.9,
-     "sot": 6.9,
-     "sot_against": 4.3,
-     "corners": 6.3,
-     "corners_against": 3.9,
-     "yellows": 2.2,
-     "clean_sheet_pct": 0.4,
-     "failed_to_score_pct": 0.1,
-     "btts_pct": 0.5,
-     "over15_pct": 0.8,
-     "over25_pct": 0.8,
-     "over35_pct": 0.4,
-     "first_half_goals_for": 1.6,
-     "first_half_goals_against": 0.0
-    },
-    "season": {
-     "games": 12,
-     "ppg": 2.5,
-     "record": "10W-0D-2L",
-     "goals_for": 2.58,
-     "goals_against": 0.83,
-     "xg_for": 2.47,
-     "xg_against": 0.94,
-     "shots": 17.42,
-     "shots_against": 12.25,
-     "sot": 7.33,
-     "sot_against": 4.08,
-     "corners": 6.25,
-     "corners_against": 3.83,
-     "yellows": 2.17,
-     "clean_sheet_pct": 0.33,
-     "failed_to_score_pct": 0.08,
-     "btts_pct": 0.58,
-     "over15_pct": 0.83,
-     "over25_pct": 0.83,
-     "over35_pct": 0.42,
-     "first_half_goals_for": 1.5,
-     "first_half_goals_against": 0.17
-    },
-    "season_venue": {
-     "games": 5,
-     "ppg": 3.0,
-     "record": "5W-0D-0L",
-     "goals_for": 3.4,
-     "goals_against": 0.6,
-     "xg_for": 2.37,
-     "xg_against": 0.77,
-     "shots": 17.8,
-     "shots_against": 13.6,
-     "sot": 8.4,
-     "sot_against": 4.0,
-     "corners": 6.8,
-     "corners_against": 4.6,
-     "yellows": 2.0,
-     "clean_sheet_pct": 0.4,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.6,
-     "over15_pct": 0.8,
-     "over25_pct": 0.8,
-     "over35_pct": 0.8,
-     "first_half_goals_for": 1.8,
-     "first_half_goals_against": 0.2
-    },
-    "game_state_season": {
-     "ht_leads": 7,
-     "ht_leads_won": 7,
-     "ht_deficits": 0,
-     "points_from_ht_deficits": 0,
-     "second_half_goals_for": 1.08,
-     "second_half_goals_against": 0.67
-    },
-    "trend_xgd_last5_vs_season": -0.0,
-    "rest_days": 14,
-    "games_last_14d": 1,
-    "games_last_30d": 3,
-    "elo": 1898,
-    "elo_change_30d": 25
-   },
-   "away_stats": {
-    "name": "Celta",
-    "last6": [
-     {
-      "date": "2026-11-08",
-      "venue": "H",
-      "opponent": "Levante",
-      "competition": "SP1",
-      "score": "0-0",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 0,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 3.16,
-      "xg_against": 0.28,
-      "shots": 23.0,
-      "shots_against": 6.0,
-      "sot": 8.0,
-      "sot_against": 0.0,
-      "corners": 6.0,
-      "corners_against": 1.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-31",
-      "venue": "A",
-      "opponent": "Vallecano",
-      "competition": "SP1",
-      "score": "0-3",
-      "ht": "0-1",
-      "result": "L",
-      "gf": 0,
-      "ga": 3,
-      "ht_gf": 0.0,
-      "ht_ga": 1.0,
-      "xg_for": 1.39,
-      "xg_against": 1.09,
-      "shots": 11.0,
-      "shots_against": 14.0,
-      "sot": 0.0,
-      "sot_against": 8.0,
-      "corners": 3.0,
-      "corners_against": 4.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-25",
-      "venue": "H",
-      "opponent": "Betis",
-      "competition": "SP1",
-      "score": "0-0",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 0,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.76,
-      "xg_against": 1.15,
-      "shots": 12.0,
-      "shots_against": 15.0,
-      "sot": 4.0,
-      "sot_against": 2.0,
-      "corners": 3.0,
-      "corners_against": 4.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-18",
-      "venue": "H",
-      "opponent": "Alaves",
-      "competition": "SP1",
-      "score": "2-1",
-      "ht": "0-0",
-      "result": "W",
-      "gf": 2,
-      "ga": 1,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.97,
-      "xg_against": 1.06,
-      "shots": 6.0,
-      "shots_against": 20.0,
-      "sot": 3.0,
-      "sot_against": 9.0,
-      "corners": 0.0,
-      "corners_against": 4.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-11",
-      "venue": "A",
-      "opponent": "Elche",
-      "competition": "SP1",
-      "score": "0-0",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 0,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.47,
-      "xg_against": 0.78,
-      "shots": 7.0,
-      "shots_against": 13.0,
-      "sot": 0.0,
-      "sot_against": 2.0,
-      "corners": 2.0,
-      "corners_against": 5.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-09-19",
-      "venue": "H",
-      "opponent": "Santander",
-      "competition": "SP1",
-      "score": "5-0",
-      "ht": "2-0",
-      "result": "W",
-      "gf": 5,
-      "ga": 0,
-      "ht_gf": 2.0,
-      "ht_ga": 0.0,
-      "xg_for": 2.08,
-      "xg_against": 0.61,
-      "shots": 13.0,
-      "shots_against": 11.0,
-      "sot": 9.0,
-      "sot_against": 5.0,
-      "corners": 3.0,
-      "corners_against": 3.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 1.2,
-     "record": "1W-3D-1L",
-     "goals_for": 0.4,
-     "goals_against": 0.8,
-     "xg_for": 1.35,
-     "xg_against": 0.87,
-     "shots": 11.8,
-     "shots_against": 13.6,
-     "sot": 3.0,
-     "sot_against": 4.2,
-     "corners": 2.8,
-     "corners_against": 3.6,
-     "yellows": 1.6,
-     "clean_sheet_pct": 0.6,
-     "failed_to_score_pct": 0.8,
-     "btts_pct": 0.2,
-     "over15_pct": 0.4,
-     "over25_pct": 0.4,
-     "over35_pct": 0.0,
-     "first_half_goals_for": 0.0,
-     "first_half_goals_against": 0.2
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 1.2,
-     "record": "2W-6D-2L",
-     "goals_for": 0.9,
-     "goals_against": 0.8,
-     "xg_for": 1.26,
-     "xg_against": 0.98,
-     "shots": 12.0,
-     "shots_against": 13.4,
-     "sot": 3.6,
-     "sot_against": 4.2,
-     "corners": 3.0,
-     "corners_against": 4.7,
-     "yellows": 1.6,
-     "clean_sheet_pct": 0.5,
-     "failed_to_score_pct": 0.6,
-     "btts_pct": 0.3,
-     "over15_pct": 0.6,
-     "over25_pct": 0.3,
-     "over35_pct": 0.1,
-     "first_half_goals_for": 0.3,
-     "first_half_goals_against": 0.4
-    },
-    "season": {
-     "games": 12,
-     "ppg": 1.08,
-     "record": "2W-7D-3L",
-     "goals_for": 0.83,
-     "goals_against": 0.83,
-     "xg_for": 1.12,
-     "xg_against": 1.09,
-     "shots": 10.92,
-     "shots_against": 12.92,
-     "sot": 3.42,
-     "sot_against": 4.08,
-     "corners": 3.08,
-     "corners_against": 4.25,
-     "yellows": 1.58,
-     "clean_sheet_pct": 0.5,
-     "failed_to_score_pct": 0.58,
-     "btts_pct": 0.33,
-     "over15_pct": 0.58,
-     "over25_pct": 0.33,
-     "over35_pct": 0.08,
-     "first_half_goals_for": 0.33,
-     "first_half_goals_against": 0.33
-    },
-    "season_venue": {
-     "games": 5,
-     "ppg": 0.8,
-     "record": "0W-4D-1L",
-     "goals_for": 0.2,
-     "goals_against": 0.8,
-     "xg_for": 0.77,
-     "xg_against": 0.85,
-     "shots": 9.6,
-     "shots_against": 12.2,
-     "sot": 1.6,
-     "sot_against": 3.8,
-     "corners": 3.0,
-     "corners_against": 4.8,
-     "yellows": 2.4,
-     "clean_sheet_pct": 0.6,
-     "failed_to_score_pct": 0.8,
-     "btts_pct": 0.2,
-     "over15_pct": 0.4,
-     "over25_pct": 0.2,
-     "over35_pct": 0.0,
-     "first_half_goals_for": 0.0,
-     "first_half_goals_against": 0.4
-    },
-    "game_state_season": {
-     "ht_leads": 3,
-     "ht_leads_won": 1,
-     "ht_deficits": 3,
-     "points_from_ht_deficits": 1,
-     "second_half_goals_for": 0.5,
-     "second_half_goals_against": 0.5
-    },
-    "trend_xgd_last5_vs_season": 0.45,
-    "rest_days": 13,
-    "games_last_14d": 1,
-    "games_last_30d": 3,
-    "elo": 1619,
-    "elo_change_30d": -8
-   },
-   "h2h": {
-    "games": [
-     {
-      "date": "2026-03-06",
-      "home": "Celta",
-      "away": "Real Madrid",
-      "score": "1-2",
-      "competition": "SP1"
-     },
-     {
-      "date": "2025-12-07",
-      "home": "Real Madrid",
-      "away": "Celta",
-      "score": "0-2",
-      "competition": "SP1"
-     },
-     {
-      "date": "2025-05-04",
-      "home": "Real Madrid",
-      "away": "Celta",
-      "score": "3-2",
-      "competition": "SP1"
-     },
-     {
-      "date": "2024-10-19",
-      "home": "Celta",
-      "away": "Real Madrid",
-      "score": "1-2",
-      "competition": "SP1"
-     },
-     {
-      "date": "2024-03-10",
-      "home": "Real Madrid",
-      "away": "Celta",
-      "score": "4-0",
-      "competition": "SP1"
-     },
-     {
-      "date": "2023-08-25",
-      "home": "Celta",
-      "away": "Real Madrid",
-      "score": "0-1",
-      "competition": "SP1"
-     },
-     {
-      "date": "2023-04-22",
-      "home": "Real Madrid",
-      "away": "Celta",
-      "score": "2-0",
-      "competition": "SP1"
-     },
-     {
-      "date": "2022-08-20",
-      "home": "Celta",
-      "away": "Real Madrid",
-      "score": "1-4",
-      "competition": "SP1"
-     }
-    ],
-    "home_wins": 7,
-    "away_wins": 1,
-    "draws": 0,
-    "avg_goals": 3.12,
-    "over25_pct": 0.62
-   },
-   "referee": null,
-   "weather": {
-    "temperature_2m": 11.2,
-    "precipitation": 0.0,
-    "precipitation_probability": 33,
-    "wind_speed_10m": 3.1,
-    "wind_gusts_10m": 3.2,
-    "time": "2026-11-21T20:00",
-    "place": "Madrid",
-    "impact": "none expected"
-   },
-   "travel_km_away_team": 465,
-   "style": {
-    "home": null,
-    "away": null
-   },
-   "players": {
-    "home": null,
-    "away": null
-   },
-   "data_coverage": {
-    "xg": true,
-    "understat": false,
-    "referee": false,
-    "weather": true
-   },
-   "research_checklist": [
-    "Confirmed injuries & suspensions for both teams (with expected return dates) and who replaces them",
-    "Predicted line-ups (and confirmed XIs if within ~1h of kick-off); rotation risk from cup/European games",
-    "Key players' recent form and ratings (FotMob/Sofascore/WhoScored pages) - especially outside the top 5 leagues",
-    "Manager situation, press-conference quotes, dressing-room news, new signings",
-    "Motivation: derby, title/relegation/Europe stakes, dead rubber, next fixture priorities",
-    "Referee appointment and tendencies if not listed (non-UK leagues)",
-    "Pitch/weather confirmation; travel; any off-field issues",
-    "Latest odds and whether the price has moved since the model ran"
-   ]
-  },
-  "D2-20261121-57": {
-   "id": "D2-20261121-57",
+  "D2-20261121-66": {
+   "id": "D2-20261121-66",
    "league": "D2",
    "league_name": "2. Bundesliga",
    "date": "2026-11-21",
@@ -7535,13 +6749,13 @@
    "away": "Braunschweig",
    "model": {
     "probs": {
-     "H": 0.5616,
-     "D": 0.2231,
-     "A": 0.2153
+     "H": 0.5632,
+     "D": 0.2228,
+     "A": 0.214
     },
     "probs_dixon_coles": {
      "H": 0.5161,
-     "D": 0.2513,
+     "D": 0.2512,
      "A": 0.2327
     },
     "expected_goals": {
@@ -7573,35 +6787,35 @@
     "pick": {
      "selection": "H",
      "label": "Nurnberg to win",
-     "p": 0.5616,
+     "p": 0.5632,
      "tier": "strong",
      "double_chance": {
       "selections": "HD",
       "label": "Nurnberg or draw",
-      "p": 0.7847
+      "p": 0.786
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.5616,
-      "D": 0.2231,
-      "A": 0.2153
+      "H": 0.5632,
+      "D": 0.2228,
+      "A": 0.214
      },
      "BTTS": {
-      "Yes": 0.6566,
-      "No": 0.3434
+      "Yes": 0.6564,
+      "No": 0.3436
      },
      "O/U 1.5": {
-      "Over": 0.8673,
-      "Under": 0.1327
+      "Over": 0.8674,
+      "Under": 0.1326
      },
      "O/U 2.5": {
-      "Over": 0.6717,
-      "Under": 0.3283
+      "Over": 0.6718,
+      "Under": 0.3282
      },
      "O/U 3.5": {
-      "Over": 0.4536,
-      "Under": 0.5464
+      "Over": 0.4537,
+      "Under": 0.5463
      }
     },
     "confidence": 55
@@ -7611,32 +6825,32 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 1.62,
+      "avg_odds": 1.61,
       "odds": 1.68,
-      "market_p": 0.5637,
-      "model_p": 0.5616,
-      "edge": -0.0021,
-      "ev": -0.0566
+      "market_p": 0.5657,
+      "model_p": 0.5632,
+      "edge": -0.0026,
+      "ev": -0.0539
      },
      {
       "market": "1X2",
       "selection": "D",
       "avg_odds": 4.12,
-      "odds": 4.41,
-      "market_p": 0.2219,
-      "model_p": 0.2231,
-      "edge": 0.0012,
-      "ev": -0.017
+      "odds": 4.37,
+      "market_p": 0.2215,
+      "model_p": 0.2228,
+      "edge": 0.0013,
+      "ev": -0.0262
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 4.26,
-      "odds": 4.5,
-      "market_p": 0.2144,
-      "model_p": 0.2153,
-      "edge": 0.0009,
-      "ev": -0.0311
+      "avg_odds": 4.29,
+      "odds": 4.55,
+      "market_p": 0.2127,
+      "model_p": 0.214,
+      "edge": 0.0013,
+      "ev": -0.0263
      },
      {
       "market": "O/U 2.5",
@@ -7644,9 +6858,9 @@
       "avg_odds": 1.43,
       "odds": 1.44,
       "market_p": 0.6498,
-      "model_p": 0.6717,
+      "model_p": 0.6718,
       "edge": 0.022,
-      "ev": -0.0327
+      "ev": -0.0326
      },
      {
       "market": "O/U 2.5",
@@ -7654,20 +6868,20 @@
       "avg_odds": 2.65,
       "odds": 2.7,
       "market_p": 0.3502,
-      "model_p": 0.3283,
+      "model_p": 0.3282,
       "edge": -0.022,
-      "ev": -0.1136
+      "ev": -0.1138
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 3,
+     "snapshots": 4,
      "since": "2026-11-14T13:40:11Z",
      "moves": {
       "1X2|H": {
        "open": 1.62,
-       "now": 1.62,
-       "change_pct": 0.0
+       "now": 1.61,
+       "change_pct": -0.6
       },
       "1X2|D": {
        "open": 4.1,
@@ -7676,8 +6890,8 @@
       },
       "1X2|A": {
        "open": 4.19,
-       "now": 4.26,
-       "change_pct": 1.7
+       "now": 4.29,
+       "change_pct": 2.4
       },
       "O/U 2.5|Over": {
        "open": 1.44,
@@ -8291,11 +7505,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 4.3,
+    "temperature_2m": 6.7,
     "precipitation": 0.0,
-    "precipitation_probability": 60,
-    "wind_speed_10m": 4.8,
-    "wind_gusts_10m": 16.6,
+    "precipitation_probability": 27,
+    "wind_speed_10m": 10.5,
+    "wind_gusts_10m": 29.2,
     "time": "2026-11-21T12:00",
     "place": "Nuremberg",
     "impact": "none expected"
@@ -8326,8 +7540,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "SP1-20261121-18": {
-   "id": "SP1-20261121-18",
+  "SP1-20261121-20": {
+   "id": "SP1-20261121-20",
    "league": "SP1",
    "league_name": "La Liga",
    "date": "2026-11-21",
@@ -8336,9 +7550,9 @@
    "away": "Valencia",
    "model": {
     "probs": {
-     "H": 0.4774,
-     "D": 0.286,
-     "A": 0.2366
+     "H": 0.4817,
+     "D": 0.2857,
+     "A": 0.2326
     },
     "probs_dixon_coles": {
      "H": 0.4875,
@@ -8346,8 +7560,8 @@
      "A": 0.2475
     },
     "expected_goals": {
-     "home": 1.6349,
-     "away": 1.1027
+     "home": 1.635,
+     "away": 1.1028
     },
     "likely_scores": [
      {
@@ -8374,35 +7588,35 @@
     "pick": {
      "selection": "H",
      "label": "Vallecano to win",
-     "p": 0.4774,
+     "p": 0.4817,
      "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Vallecano or draw",
-      "p": 0.7634
+      "p": 0.7674
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.4774,
-      "D": 0.286,
-      "A": 0.2366
+      "H": 0.4817,
+      "D": 0.2857,
+      "A": 0.2326
      },
      "BTTS": {
-      "Yes": 0.5271,
-      "No": 0.4729
+      "Yes": 0.526,
+      "No": 0.474
      },
      "O/U 1.5": {
-      "Over": 0.7339,
-      "Under": 0.2661
+      "Over": 0.7344,
+      "Under": 0.2656
      },
      "O/U 2.5": {
-      "Over": 0.4704,
-      "Under": 0.5296
+      "Over": 0.4711,
+      "Under": 0.5289
      },
      "O/U 3.5": {
-      "Over": 0.2541,
-      "Under": 0.7459
+      "Over": 0.2547,
+      "Under": 0.7453
      }
     },
     "confidence": 64
@@ -8412,73 +7626,73 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 1.95,
+      "avg_odds": 1.93,
       "odds": 2.07,
-      "market_p": 0.4807,
-      "model_p": 0.4774,
-      "edge": -0.0032,
-      "ev": -0.0117
+      "market_p": 0.4861,
+      "model_p": 0.4817,
+      "edge": -0.0044,
+      "ev": -0.0053
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.41,
-      "odds": 3.6,
+      "avg_odds": 3.42,
+      "odds": 3.61,
       "market_p": 0.2747,
-      "model_p": 0.286,
-      "edge": 0.0113,
-      "ev": 0.0295
+      "model_p": 0.2857,
+      "edge": 0.0111,
+      "ev": 0.0315
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.83,
-      "odds": 4.1,
-      "market_p": 0.2446,
-      "model_p": 0.2366,
-      "edge": -0.008,
-      "ev": -0.03
+      "avg_odds": 3.92,
+      "odds": 4.19,
+      "market_p": 0.2393,
+      "model_p": 0.2326,
+      "edge": -0.0067,
+      "ev": -0.0243
      },
      {
       "market": "O/U 2.5",
       "selection": "Over",
       "avg_odds": 2.02,
-      "odds": 2.12,
-      "market_p": 0.4669,
-      "model_p": 0.4704,
-      "edge": 0.0035,
-      "ev": -0.0026
+      "odds": 2.11,
+      "market_p": 0.4677,
+      "model_p": 0.4711,
+      "edge": 0.0034,
+      "ev": -0.006
      },
      {
       "market": "O/U 2.5",
       "selection": "Under",
       "avg_odds": 1.77,
       "odds": 1.84,
-      "market_p": 0.5331,
-      "model_p": 0.5296,
-      "edge": -0.0035,
-      "ev": -0.0256
+      "market_p": 0.5323,
+      "model_p": 0.5289,
+      "edge": -0.0034,
+      "ev": -0.0268
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 8,
+     "snapshots": 9,
      "since": "2026-11-09T16:36:38Z",
      "moves": {
       "1X2|H": {
        "open": 1.97,
-       "now": 1.95,
-       "change_pct": -1.0
+       "now": 1.93,
+       "change_pct": -2.0
       },
       "1X2|D": {
        "open": 3.39,
-       "now": 3.41,
-       "change_pct": 0.6
+       "now": 3.42,
+       "change_pct": 0.9
       },
       "1X2|A": {
        "open": 3.71,
-       "now": 3.83,
-       "change_pct": 3.2
+       "now": 3.92,
+       "change_pct": 5.7
       },
       "O/U 2.5|Over": {
        "open": 2.03,
@@ -9118,752 +8332,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "D1-20261121-5": {
-   "id": "D1-20261121-5",
-   "league": "D1",
-   "league_name": "Bundesliga",
-   "date": "2026-11-21",
-   "time": "14:30",
-   "home": "Elversberg",
-   "away": "Freiburg",
-   "model": {
-    "probs": {
-     "H": 0.273,
-     "D": 0.2449,
-     "A": 0.4821
-    },
-    "probs_dixon_coles": {
-     "H": 0.3152,
-     "D": 0.261,
-     "A": 0.4238
-    },
-    "expected_goals": {
-     "home": 1.3593,
-     "away": 1.607
-    },
-    "likely_scores": [
-     {
-      "score": "1-1",
-      "p": 0.1217
-     },
-     {
-      "score": "1-2",
-      "p": 0.0906
-     },
-     {
-      "score": "2-1",
-      "p": 0.0766
-     },
-     {
-      "score": "0-1",
-      "p": 0.0739
-     },
-     {
-      "score": "0-2",
-      "p": 0.0666
-     }
-    ],
-    "pick": {
-     "selection": "A",
-     "label": "Freiburg to win",
-     "p": 0.4821,
-     "tier": null,
-     "double_chance": {
-      "selections": "HA",
-      "label": "Elversberg or Freiburg",
-      "p": 0.7551
-     }
-    },
-    "markets": {
-     "1X2": {
-      "H": 0.273,
-      "D": 0.2449,
-      "A": 0.4821
-     },
-     "BTTS": {
-      "Yes": 0.6104,
-      "No": 0.3896
-     },
-     "O/U 1.5": {
-      "Over": 0.8344,
-      "Under": 0.1656
-     },
-     "O/U 2.5": {
-      "Over": 0.6153,
-      "Under": 0.3847
-     },
-     "O/U 3.5": {
-      "Over": 0.3918,
-      "Under": 0.6082
-     }
-    },
-    "confidence": 64
-   },
-   "market": {
-    "prices": [
-     {
-      "market": "1X2",
-      "selection": "H",
-      "avg_odds": 3.38,
-      "odds": 3.62,
-      "market_p": 0.2768,
-      "model_p": 0.273,
-      "edge": -0.0039,
-      "ev": -0.0131
-     },
-     {
-      "market": "1X2",
-      "selection": "D",
-      "avg_odds": 3.71,
-      "odds": 3.97,
-      "market_p": 0.2518,
-      "model_p": 0.2449,
-      "edge": -0.0069,
-      "ev": -0.0264
-     },
-     {
-      "market": "1X2",
-      "selection": "A",
-      "avg_odds": 1.98,
-      "odds": 2.07,
-      "market_p": 0.4714,
-      "model_p": 0.4821,
-      "edge": 0.0107,
-      "ev": -0.002
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Over",
-      "avg_odds": 1.54,
-      "odds": 1.56,
-      "market_p": 0.6069,
-      "model_p": 0.6153,
-      "edge": 0.0084,
-      "ev": -0.0401
-     },
-     {
-      "market": "O/U 2.5",
-      "selection": "Under",
-      "avg_odds": 2.38,
-      "odds": 2.48,
-      "market_p": 0.3931,
-      "model_p": 0.3847,
-      "edge": -0.0084,
-      "ev": -0.046
-     }
-    ],
-    "bookmaker_spread": null,
-    "line_movement": {
-     "snapshots": 8,
-     "since": "2026-11-09T16:36:38Z",
-     "moves": {
-      "1X2|H": {
-       "open": 3.31,
-       "now": 3.38,
-       "change_pct": 2.1
-      },
-      "1X2|D": {
-       "open": 3.71,
-       "now": 3.71,
-       "change_pct": 0.0
-      },
-      "1X2|A": {
-       "open": 1.99,
-       "now": 1.98,
-       "change_pct": -0.5
-      },
-      "O/U 2.5|Over": {
-       "open": 1.54,
-       "now": 1.54,
-       "change_pct": 0.0
-      },
-      "O/U 2.5|Under": {
-       "open": 2.39,
-       "now": 2.38,
-       "change_pct": -0.4
-      }
-     },
-     "shortening_5pct_plus": []
-    }
-   },
-   "table": {
-    "home": {
-     "pos": 7,
-     "of": 18,
-     "played": 9,
-     "points": 13,
-     "gd": -1.0,
-     "ppg": 1.44,
-     "gap_to_top": 8,
-     "gap_to_europe": 2,
-     "gap_above_relegation": 6
-    },
-    "away": {
-     "pos": 3,
-     "of": 18,
-     "played": 9,
-     "points": 19,
-     "gd": 10.0,
-     "ppg": 2.11,
-     "gap_to_top": 2,
-     "gap_to_europe": -4,
-     "gap_above_relegation": 12
-    },
-    "teams": 18
-   },
-   "home_stats": {
-    "name": "Elversberg",
-    "last6": [
-     {
-      "date": "2026-11-07",
-      "venue": "A",
-      "opponent": "Dortmund",
-      "competition": "D1",
-      "score": "1-2",
-      "ht": "0-0",
-      "result": "L",
-      "gf": 1,
-      "ga": 2,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.22,
-      "xg_against": 1.57,
-      "shots": 16.0,
-      "shots_against": 19.0,
-      "sot": 7.0,
-      "sot_against": 6.0,
-      "corners": 6.0,
-      "corners_against": 6.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-30",
-      "venue": "H",
-      "opponent": "Mainz",
-      "competition": "D1",
-      "score": "4-1",
-      "ht": "3-0",
-      "result": "W",
-      "gf": 4,
-      "ga": 1,
-      "ht_gf": 3.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.94,
-      "xg_against": 1.17,
-      "shots": 13.0,
-      "shots_against": 10.0,
-      "sot": 6.0,
-      "sot_against": 2.0,
-      "corners": 5.0,
-      "corners_against": 11.0,
-      "yellows": 0.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-24",
-      "venue": "A",
-      "opponent": "RB Leipzig",
-      "competition": "D1",
-      "score": "0-4",
-      "ht": "0-0",
-      "result": "L",
-      "gf": 0,
-      "ga": 4,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.8,
-      "xg_against": 2.87,
-      "shots": 5.0,
-      "shots_against": 13.0,
-      "sot": 1.0,
-      "sot_against": 6.0,
-      "corners": 6.0,
-      "corners_against": 4.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-17",
-      "venue": "H",
-      "opponent": "Augsburg",
-      "competition": "D1",
-      "score": "4-3",
-      "ht": "3-1",
-      "result": "W",
-      "gf": 4,
-      "ga": 3,
-      "ht_gf": 3.0,
-      "ht_ga": 1.0,
-      "xg_for": 3.78,
-      "xg_against": 3.92,
-      "shots": 19.0,
-      "shots_against": 29.0,
-      "sot": 8.0,
-      "sot_against": 8.0,
-      "corners": 4.0,
-      "corners_against": 12.0,
-      "yellows": 4.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-10",
-      "venue": "A",
-      "opponent": "Union Berlin",
-      "competition": "D1",
-      "score": "0-1",
-      "ht": "0-0",
-      "result": "L",
-      "gf": 0,
-      "ga": 1,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 0.24,
-      "xg_against": 1.13,
-      "shots": 7.0,
-      "shots_against": 19.0,
-      "sot": 2.0,
-      "sot_against": 6.0,
-      "corners": 3.0,
-      "corners_against": 7.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-09-20",
-      "venue": "A",
-      "opponent": "Schalke 04",
-      "competition": "D1",
-      "score": "0-0",
-      "ht": "0-0",
-      "result": "D",
-      "gf": 0,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 1.01,
-      "xg_against": 1.01,
-      "shots": 11.0,
-      "shots_against": 13.0,
-      "sot": 1.0,
-      "sot_against": 1.0,
-      "corners": 4.0,
-      "corners_against": 4.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 1.2,
-     "record": "2W-0D-3L",
-     "goals_for": 1.8,
-     "goals_against": 2.2,
-     "xg_for": 1.4,
-     "xg_against": 2.13,
-     "shots": 12.0,
-     "shots_against": 18.0,
-     "sot": 4.8,
-     "sot_against": 5.6,
-     "corners": 4.8,
-     "corners_against": 8.0,
-     "yellows": 1.6,
-     "clean_sheet_pct": 0.0,
-     "failed_to_score_pct": 0.4,
-     "btts_pct": 0.6,
-     "over15_pct": 0.8,
-     "over25_pct": 0.8,
-     "over35_pct": 0.6,
-     "first_half_goals_for": 1.2,
-     "first_half_goals_against": 0.2
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 1.6,
-     "record": "5W-1D-4L",
-     "goals_for": 2.0,
-     "goals_against": 1.8,
-     "xg_for": 1.39,
-     "xg_against": 2.08,
-     "shots": 11.2,
-     "shots_against": 18.2,
-     "sot": 4.7,
-     "sot_against": 4.7,
-     "corners": 4.5,
-     "corners_against": 7.1,
-     "yellows": 1.7,
-     "clean_sheet_pct": 0.2,
-     "failed_to_score_pct": 0.3,
-     "btts_pct": 0.6,
-     "over15_pct": 0.8,
-     "over25_pct": 0.8,
-     "over35_pct": 0.5,
-     "first_half_goals_for": 1.0,
-     "first_half_goals_against": 0.44
-    },
-    "season": {
-     "games": 9,
-     "ppg": 1.44,
-     "record": "4W-1D-4L",
-     "goals_for": 1.89,
-     "goals_against": 2.0,
-     "xg_for": 1.39,
-     "xg_against": 2.08,
-     "shots": 11.22,
-     "shots_against": 19.67,
-     "sot": 4.67,
-     "sot_against": 5.0,
-     "corners": 4.33,
-     "corners_against": 7.67,
-     "yellows": 1.78,
-     "clean_sheet_pct": 0.11,
-     "failed_to_score_pct": 0.33,
-     "btts_pct": 0.67,
-     "over15_pct": 0.78,
-     "over25_pct": 0.78,
-     "over35_pct": 0.56,
-     "first_half_goals_for": 1.0,
-     "first_half_goals_against": 0.44
-    },
-    "season_venue": {
-     "games": 4,
-     "ppg": 2.25,
-     "record": "3W-0D-1L",
-     "goals_for": 3.0,
-     "goals_against": 2.0,
-     "xg_for": 1.73,
-     "xg_against": 2.45,
-     "shots": 12.0,
-     "shots_against": 22.0,
-     "sot": 5.25,
-     "sot_against": 5.0,
-     "corners": 4.0,
-     "corners_against": 8.75,
-     "yellows": 2.25,
-     "clean_sheet_pct": 0.0,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 1.0,
-     "over15_pct": 1.0,
-     "over25_pct": 1.0,
-     "over35_pct": 0.75,
-     "first_half_goals_for": 2.0,
-     "first_half_goals_against": 0.5
-    },
-    "game_state_season": {
-     "ht_leads": 3,
-     "ht_leads_won": 3,
-     "ht_deficits": 2,
-     "points_from_ht_deficits": 3,
-     "second_half_goals_for": 0.89,
-     "second_half_goals_against": 1.56
-    },
-    "trend_xgd_last5_vs_season": -0.04,
-    "rest_days": 14,
-    "games_last_14d": 1,
-    "games_last_30d": 3,
-    "elo": 1587,
-    "elo_change_30d": 19
-   },
-   "away_stats": {
-    "name": "Freiburg",
-    "last6": [
-     {
-      "date": "2026-11-08",
-      "venue": "H",
-      "opponent": "Union Berlin",
-      "competition": "D1",
-      "score": "2-0",
-      "ht": "0-0",
-      "result": "W",
-      "gf": 2,
-      "ga": 0,
-      "ht_gf": 0.0,
-      "ht_ga": 0.0,
-      "xg_for": 2.58,
-      "xg_against": 0.35,
-      "shots": 20.0,
-      "shots_against": 4.0,
-      "sot": 9.0,
-      "sot_against": 0.0,
-      "corners": 5.0,
-      "corners_against": 1.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-31",
-      "venue": "A",
-      "opponent": "Augsburg",
-      "competition": "D1",
-      "score": "2-1",
-      "ht": "0-1",
-      "result": "W",
-      "gf": 2,
-      "ga": 1,
-      "ht_gf": 0.0,
-      "ht_ga": 1.0,
-      "xg_for": 1.19,
-      "xg_against": 1.19,
-      "shots": 10.0,
-      "shots_against": 15.0,
-      "sot": 2.0,
-      "sot_against": 5.0,
-      "corners": 2.0,
-      "corners_against": 1.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-25",
-      "venue": "H",
-      "opponent": "Bayern Munich",
-      "competition": "D1",
-      "score": "1-3",
-      "ht": "0-2",
-      "result": "L",
-      "gf": 1,
-      "ga": 3,
-      "ht_gf": 0.0,
-      "ht_ga": 2.0,
-      "xg_for": 1.01,
-      "xg_against": 2.91,
-      "shots": 16.0,
-      "shots_against": 17.0,
-      "sot": 4.0,
-      "sot_against": 9.0,
-      "corners": 5.0,
-      "corners_against": 6.0,
-      "yellows": 3.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-18",
-      "venue": "A",
-      "opponent": "Leverkusen",
-      "competition": "D1",
-      "score": "1-2",
-      "ht": "1-1",
-      "result": "L",
-      "gf": 1,
-      "ga": 2,
-      "ht_gf": 1.0,
-      "ht_ga": 1.0,
-      "xg_for": 1.21,
-      "xg_against": 1.64,
-      "shots": 11.0,
-      "shots_against": 12.0,
-      "sot": 2.0,
-      "sot_against": 5.0,
-      "corners": 3.0,
-      "corners_against": 4.0,
-      "yellows": 1.0,
-      "reds": 0.0
-     },
-     {
-      "date": "2026-10-11",
-      "venue": "H",
-      "opponent": "Schalke 04",
-      "competition": "D1",
-      "score": "2-1",
-      "ht": "1-1",
-      "result": "W",
-      "gf": 2,
-      "ga": 1,
-      "ht_gf": 1.0,
-      "ht_ga": 1.0,
-      "xg_for": 1.15,
-      "xg_against": 0.32,
-      "shots": 10.0,
-      "shots_against": 5.0,
-      "sot": 4.0,
-      "sot_against": 1.0,
-      "corners": 7.0,
-      "corners_against": 2.0,
-      "yellows": 1.0,
-      "reds": 1.0
-     },
-     {
-      "date": "2026-09-19",
-      "venue": "A",
-      "opponent": "Ein Frankfurt",
-      "competition": "D1",
-      "score": "2-2",
-      "ht": "1-2",
-      "result": "D",
-      "gf": 2,
-      "ga": 2,
-      "ht_gf": 1.0,
-      "ht_ga": 2.0,
-      "xg_for": 3.09,
-      "xg_against": 2.18,
-      "shots": 22.0,
-      "shots_against": 10.0,
-      "sot": 7.0,
-      "sot_against": 3.0,
-      "corners": 5.0,
-      "corners_against": 3.0,
-      "yellows": 2.0,
-      "reds": 0.0
-     }
-    ],
-    "last5": {
-     "games": 5,
-     "ppg": 1.8,
-     "record": "3W-0D-2L",
-     "goals_for": 1.6,
-     "goals_against": 1.4,
-     "xg_for": 1.43,
-     "xg_against": 1.28,
-     "shots": 13.4,
-     "shots_against": 10.6,
-     "sot": 4.2,
-     "sot_against": 4.0,
-     "corners": 4.4,
-     "corners_against": 2.8,
-     "yellows": 2.0,
-     "clean_sheet_pct": 0.2,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.8,
-     "over15_pct": 1.0,
-     "over25_pct": 0.8,
-     "over35_pct": 0.2,
-     "first_half_goals_for": 0.4,
-     "first_half_goals_against": 1.0
-    },
-    "last10": {
-     "games": 10,
-     "ppg": 2.2,
-     "record": "7W-1D-2L",
-     "goals_for": 2.4,
-     "goals_against": 1.1,
-     "xg_for": 1.85,
-     "xg_against": 1.15,
-     "shots": 15.4,
-     "shots_against": 10.5,
-     "sot": 5.2,
-     "sot_against": 3.5,
-     "corners": 4.4,
-     "corners_against": 3.1,
-     "yellows": 1.7,
-     "clean_sheet_pct": 0.3,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.7,
-     "over15_pct": 0.9,
-     "over25_pct": 0.8,
-     "over35_pct": 0.5,
-     "first_half_goals_for": 0.89,
-     "first_half_goals_against": 0.78
-    },
-    "season": {
-     "games": 9,
-     "ppg": 2.11,
-     "record": "6W-1D-2L",
-     "goals_for": 2.22,
-     "goals_against": 1.11,
-     "xg_for": 1.78,
-     "xg_against": 1.11,
-     "shots": 15.89,
-     "shots_against": 10.11,
-     "sot": 5.22,
-     "sot_against": 3.22,
-     "corners": 4.78,
-     "corners_against": 3.22,
-     "yellows": 1.89,
-     "clean_sheet_pct": 0.33,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.67,
-     "over15_pct": 0.89,
-     "over25_pct": 0.78,
-     "over35_pct": 0.44,
-     "first_half_goals_for": 0.89,
-     "first_half_goals_against": 0.78
-    },
-    "season_venue": {
-     "games": 4,
-     "ppg": 1.75,
-     "record": "2W-1D-1L",
-     "goals_for": 1.5,
-     "goals_against": 1.25,
-     "xg_for": 1.68,
-     "xg_against": 1.44,
-     "shots": 14.75,
-     "shots_against": 12.75,
-     "sot": 4.0,
-     "sot_against": 4.0,
-     "corners": 3.5,
-     "corners_against": 3.25,
-     "yellows": 2.25,
-     "clean_sheet_pct": 0.25,
-     "failed_to_score_pct": 0.0,
-     "btts_pct": 0.75,
-     "over15_pct": 0.75,
-     "over25_pct": 0.75,
-     "over35_pct": 0.25,
-     "first_half_goals_for": 0.75,
-     "first_half_goals_against": 1.0
-    },
-    "game_state_season": {
-     "ht_leads": 3,
-     "ht_leads_won": 3,
-     "ht_deficits": 3,
-     "points_from_ht_deficits": 4,
-     "second_half_goals_for": 1.33,
-     "second_half_goals_against": 0.33
-    },
-    "trend_xgd_last5_vs_season": -0.52,
-    "rest_days": 13,
-    "games_last_14d": 1,
-    "games_last_30d": 3,
-    "elo": 1675,
-    "elo_change_30d": -1
-   },
-   "h2h": {
-    "games": [],
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 0,
-    "avg_goals": null,
-    "over25_pct": null
-   },
-   "referee": null,
-   "weather": {
-    "temperature_2m": 6.0,
-    "precipitation": 0.0,
-    "precipitation_probability": 25,
-    "wind_speed_10m": 2.5,
-    "wind_gusts_10m": 8.3,
-    "time": "2026-11-21T14:00",
-    "place": "Elversberg",
-    "impact": "none expected"
-   },
-   "travel_km_away_team": 156,
-   "style": {
-    "home": null,
-    "away": null
-   },
-   "players": {
-    "home": null,
-    "away": null
-   },
-   "data_coverage": {
-    "xg": true,
-    "understat": false,
-    "referee": false,
-    "weather": true
-   },
-   "research_checklist": [
-    "Confirmed injuries & suspensions for both teams (with expected return dates) and who replaces them",
-    "Predicted line-ups (and confirmed XIs if within ~1h of kick-off); rotation risk from cup/European games",
-    "Key players' recent form and ratings (FotMob/Sofascore/WhoScored pages) - especially outside the top 5 leagues",
-    "Manager situation, press-conference quotes, dressing-room news, new signings",
-    "Motivation: derby, title/relegation/Europe stakes, dead rubber, next fixture priorities",
-    "Referee appointment and tendencies if not listed (non-UK leagues)",
-    "Pitch/weather confirmation; travel; any off-field issues",
-    "Latest odds and whether the price has moved since the model ran"
-   ]
-  },
-  "SP1-20261121-17": {
-   "id": "SP1-20261121-17",
+  "SP1-20261121-19": {
+   "id": "SP1-20261121-19",
    "league": "SP1",
    "league_name": "La Liga",
    "date": "2026-11-21",
@@ -9872,18 +8342,18 @@
    "away": "La Coruna",
    "model": {
     "probs": {
-     "H": 0.4349,
-     "D": 0.2957,
-     "A": 0.2694
+     "H": 0.4337,
+     "D": 0.296,
+     "A": 0.2703
     },
     "probs_dixon_coles": {
-     "H": 0.4413,
+     "H": 0.4414,
      "D": 0.2949,
-     "A": 0.2638
+     "A": 0.2637
     },
     "expected_goals": {
-     "home": 1.3577,
-     "away": 0.9922
+     "home": 1.3582,
+     "away": 0.9923
     },
     "likely_scores": [
      {
@@ -9910,23 +8380,23 @@
     "pick": {
      "selection": "H",
      "label": "Alaves to win",
-     "p": 0.4349,
+     "p": 0.4337,
      "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Alaves or draw",
-      "p": 0.7306
+      "p": 0.7297
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.4349,
-      "D": 0.2957,
-      "A": 0.2694
+      "H": 0.4337,
+      "D": 0.296,
+      "A": 0.2703
      },
      "BTTS": {
-      "Yes": 0.5086,
-      "No": 0.4914
+      "Yes": 0.5087,
+      "No": 0.4913
      },
      "O/U 1.5": {
       "Over": 0.7085,
@@ -9948,32 +8418,32 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 2.14,
+      "avg_odds": 2.15,
       "odds": 2.26,
-      "market_p": 0.4374,
-      "model_p": 0.4349,
-      "edge": -0.0024,
-      "ev": -0.0171
+      "market_p": 0.4357,
+      "model_p": 0.4337,
+      "edge": -0.002,
+      "ev": -0.0197
      },
      {
       "market": "1X2",
       "selection": "D",
       "avg_odds": 3.26,
-      "odds": 3.49,
-      "market_p": 0.2877,
-      "model_p": 0.2957,
-      "edge": 0.008,
-      "ev": 0.0316
+      "odds": 3.45,
+      "market_p": 0.2881,
+      "model_p": 0.296,
+      "edge": 0.0079,
+      "ev": 0.0211
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.41,
-      "odds": 3.65,
-      "market_p": 0.2749,
-      "model_p": 0.2694,
-      "edge": -0.0056,
-      "ev": -0.0169
+      "avg_odds": 3.4,
+      "odds": 3.63,
+      "market_p": 0.2762,
+      "model_p": 0.2703,
+      "edge": -0.0059,
+      "ev": -0.018
      },
      {
       "market": "O/U 2.5",
@@ -9982,7 +8452,7 @@
       "odds": 2.25,
       "market_p": 0.4341,
       "model_p": 0.4384,
-      "edge": 0.0042,
+      "edge": 0.0043,
       "ev": -0.0136
      },
      {
@@ -9992,19 +8462,19 @@
       "odds": 1.75,
       "market_p": 0.5659,
       "model_p": 0.5616,
-      "edge": -0.0042,
+      "edge": -0.0043,
       "ev": -0.0172
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 8,
+     "snapshots": 9,
      "since": "2026-11-09T16:36:38Z",
      "moves": {
       "1X2|H": {
        "open": 2.04,
-       "now": 2.14,
-       "change_pct": 4.9
+       "now": 2.15,
+       "change_pct": 5.4
       },
       "1X2|D": {
        "open": 3.31,
@@ -10013,8 +8483,8 @@
       },
       "1X2|A": {
        "open": 3.58,
-       "now": 3.41,
-       "change_pct": -4.7
+       "now": 3.4,
+       "change_pct": -5.0
       },
       "O/U 2.5|Over": {
        "open": 2.17,
@@ -10027,7 +8497,9 @@
        "change_pct": 0.6
       }
      },
-     "shortening_5pct_plus": []
+     "shortening_5pct_plus": [
+      "1X2|A"
+     ]
     }
    },
    "table": {
@@ -10597,8 +9069,752 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "D2-20261121-59": {
-   "id": "D2-20261121-59",
+  "D1-20261121-4": {
+   "id": "D1-20261121-4",
+   "league": "D1",
+   "league_name": "Bundesliga",
+   "date": "2026-11-21",
+   "time": "14:30",
+   "home": "Elversberg",
+   "away": "Freiburg",
+   "model": {
+    "probs": {
+     "H": 0.2731,
+     "D": 0.2439,
+     "A": 0.483
+    },
+    "probs_dixon_coles": {
+     "H": 0.3152,
+     "D": 0.261,
+     "A": 0.4238
+    },
+    "expected_goals": {
+     "home": 1.3594,
+     "away": 1.6072
+    },
+    "likely_scores": [
+     {
+      "score": "1-1",
+      "p": 0.1217
+     },
+     {
+      "score": "1-2",
+      "p": 0.0906
+     },
+     {
+      "score": "2-1",
+      "p": 0.0766
+     },
+     {
+      "score": "0-1",
+      "p": 0.0739
+     },
+     {
+      "score": "0-2",
+      "p": 0.0666
+     }
+    ],
+    "pick": {
+     "selection": "A",
+     "label": "Freiburg to win",
+     "p": 0.483,
+     "tier": null,
+     "double_chance": {
+      "selections": "HA",
+      "label": "Elversberg or Freiburg",
+      "p": 0.7561
+     }
+    },
+    "markets": {
+     "1X2": {
+      "H": 0.2731,
+      "D": 0.2439,
+      "A": 0.483
+     },
+     "BTTS": {
+      "Yes": 0.6099,
+      "No": 0.3901
+     },
+     "O/U 1.5": {
+      "Over": 0.8342,
+      "Under": 0.1658
+     },
+     "O/U 2.5": {
+      "Over": 0.6151,
+      "Under": 0.3849
+     },
+     "O/U 3.5": {
+      "Over": 0.3916,
+      "Under": 0.6084
+     }
+    },
+    "confidence": 64
+   },
+   "market": {
+    "prices": [
+     {
+      "market": "1X2",
+      "selection": "H",
+      "avg_odds": 3.38,
+      "odds": 3.62,
+      "market_p": 0.277,
+      "model_p": 0.2731,
+      "edge": -0.0039,
+      "ev": -0.0124
+     },
+     {
+      "market": "1X2",
+      "selection": "D",
+      "avg_odds": 3.73,
+      "odds": 3.99,
+      "market_p": 0.251,
+      "model_p": 0.2439,
+      "edge": -0.0071,
+      "ev": -0.0268
+     },
+     {
+      "market": "1X2",
+      "selection": "A",
+      "avg_odds": 1.98,
+      "odds": 2.07,
+      "market_p": 0.4721,
+      "model_p": 0.483,
+      "edge": 0.011,
+      "ev": -0.0002
+     },
+     {
+      "market": "O/U 2.5",
+      "selection": "Over",
+      "avg_odds": 1.54,
+      "odds": 1.56,
+      "market_p": 0.6068,
+      "model_p": 0.6151,
+      "edge": 0.0083,
+      "ev": -0.0404
+     },
+     {
+      "market": "O/U 2.5",
+      "selection": "Under",
+      "avg_odds": 2.38,
+      "odds": 2.48,
+      "market_p": 0.3932,
+      "model_p": 0.3849,
+      "edge": -0.0083,
+      "ev": -0.0455
+     }
+    ],
+    "bookmaker_spread": null,
+    "line_movement": {
+     "snapshots": 9,
+     "since": "2026-11-09T16:36:38Z",
+     "moves": {
+      "1X2|H": {
+       "open": 3.31,
+       "now": 3.38,
+       "change_pct": 2.1
+      },
+      "1X2|D": {
+       "open": 3.71,
+       "now": 3.73,
+       "change_pct": 0.5
+      },
+      "1X2|A": {
+       "open": 1.99,
+       "now": 1.98,
+       "change_pct": -0.5
+      },
+      "O/U 2.5|Over": {
+       "open": 1.54,
+       "now": 1.54,
+       "change_pct": 0.0
+      },
+      "O/U 2.5|Under": {
+       "open": 2.39,
+       "now": 2.38,
+       "change_pct": -0.4
+      }
+     },
+     "shortening_5pct_plus": []
+    }
+   },
+   "table": {
+    "home": {
+     "pos": 7,
+     "of": 18,
+     "played": 9,
+     "points": 13,
+     "gd": -1.0,
+     "ppg": 1.44,
+     "gap_to_top": 8,
+     "gap_to_europe": 2,
+     "gap_above_relegation": 6
+    },
+    "away": {
+     "pos": 3,
+     "of": 18,
+     "played": 9,
+     "points": 19,
+     "gd": 10.0,
+     "ppg": 2.11,
+     "gap_to_top": 2,
+     "gap_to_europe": -4,
+     "gap_above_relegation": 12
+    },
+    "teams": 18
+   },
+   "home_stats": {
+    "name": "Elversberg",
+    "last6": [
+     {
+      "date": "2026-11-07",
+      "venue": "A",
+      "opponent": "Dortmund",
+      "competition": "D1",
+      "score": "1-2",
+      "ht": "0-0",
+      "result": "L",
+      "gf": 1,
+      "ga": 2,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 1.22,
+      "xg_against": 1.57,
+      "shots": 16.0,
+      "shots_against": 19.0,
+      "sot": 7.0,
+      "sot_against": 6.0,
+      "corners": 6.0,
+      "corners_against": 6.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-30",
+      "venue": "H",
+      "opponent": "Mainz",
+      "competition": "D1",
+      "score": "4-1",
+      "ht": "3-0",
+      "result": "W",
+      "gf": 4,
+      "ga": 1,
+      "ht_gf": 3.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.94,
+      "xg_against": 1.17,
+      "shots": 13.0,
+      "shots_against": 10.0,
+      "sot": 6.0,
+      "sot_against": 2.0,
+      "corners": 5.0,
+      "corners_against": 11.0,
+      "yellows": 0.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent": "RB Leipzig",
+      "competition": "D1",
+      "score": "0-4",
+      "ht": "0-0",
+      "result": "L",
+      "gf": 0,
+      "ga": 4,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.8,
+      "xg_against": 2.87,
+      "shots": 5.0,
+      "shots_against": 13.0,
+      "sot": 1.0,
+      "sot_against": 6.0,
+      "corners": 6.0,
+      "corners_against": 4.0,
+      "yellows": 1.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-17",
+      "venue": "H",
+      "opponent": "Augsburg",
+      "competition": "D1",
+      "score": "4-3",
+      "ht": "3-1",
+      "result": "W",
+      "gf": 4,
+      "ga": 3,
+      "ht_gf": 3.0,
+      "ht_ga": 1.0,
+      "xg_for": 3.78,
+      "xg_against": 3.92,
+      "shots": 19.0,
+      "shots_against": 29.0,
+      "sot": 8.0,
+      "sot_against": 8.0,
+      "corners": 4.0,
+      "corners_against": 12.0,
+      "yellows": 4.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-10",
+      "venue": "A",
+      "opponent": "Union Berlin",
+      "competition": "D1",
+      "score": "0-1",
+      "ht": "0-0",
+      "result": "L",
+      "gf": 0,
+      "ga": 1,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 0.24,
+      "xg_against": 1.13,
+      "shots": 7.0,
+      "shots_against": 19.0,
+      "sot": 2.0,
+      "sot_against": 6.0,
+      "corners": 3.0,
+      "corners_against": 7.0,
+      "yellows": 1.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-09-20",
+      "venue": "A",
+      "opponent": "Schalke 04",
+      "competition": "D1",
+      "score": "0-0",
+      "ht": "0-0",
+      "result": "D",
+      "gf": 0,
+      "ga": 0,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 1.01,
+      "xg_against": 1.01,
+      "shots": 11.0,
+      "shots_against": 13.0,
+      "sot": 1.0,
+      "sot_against": 1.0,
+      "corners": 4.0,
+      "corners_against": 4.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     }
+    ],
+    "last5": {
+     "games": 5,
+     "ppg": 1.2,
+     "record": "2W-0D-3L",
+     "goals_for": 1.8,
+     "goals_against": 2.2,
+     "xg_for": 1.4,
+     "xg_against": 2.13,
+     "shots": 12.0,
+     "shots_against": 18.0,
+     "sot": 4.8,
+     "sot_against": 5.6,
+     "corners": 4.8,
+     "corners_against": 8.0,
+     "yellows": 1.6,
+     "clean_sheet_pct": 0.0,
+     "failed_to_score_pct": 0.4,
+     "btts_pct": 0.6,
+     "over15_pct": 0.8,
+     "over25_pct": 0.8,
+     "over35_pct": 0.6,
+     "first_half_goals_for": 1.2,
+     "first_half_goals_against": 0.2
+    },
+    "last10": {
+     "games": 10,
+     "ppg": 1.6,
+     "record": "5W-1D-4L",
+     "goals_for": 2.0,
+     "goals_against": 1.8,
+     "xg_for": 1.39,
+     "xg_against": 2.08,
+     "shots": 11.2,
+     "shots_against": 18.2,
+     "sot": 4.7,
+     "sot_against": 4.7,
+     "corners": 4.5,
+     "corners_against": 7.1,
+     "yellows": 1.7,
+     "clean_sheet_pct": 0.2,
+     "failed_to_score_pct": 0.3,
+     "btts_pct": 0.6,
+     "over15_pct": 0.8,
+     "over25_pct": 0.8,
+     "over35_pct": 0.5,
+     "first_half_goals_for": 1.0,
+     "first_half_goals_against": 0.44
+    },
+    "season": {
+     "games": 9,
+     "ppg": 1.44,
+     "record": "4W-1D-4L",
+     "goals_for": 1.89,
+     "goals_against": 2.0,
+     "xg_for": 1.39,
+     "xg_against": 2.08,
+     "shots": 11.22,
+     "shots_against": 19.67,
+     "sot": 4.67,
+     "sot_against": 5.0,
+     "corners": 4.33,
+     "corners_against": 7.67,
+     "yellows": 1.78,
+     "clean_sheet_pct": 0.11,
+     "failed_to_score_pct": 0.33,
+     "btts_pct": 0.67,
+     "over15_pct": 0.78,
+     "over25_pct": 0.78,
+     "over35_pct": 0.56,
+     "first_half_goals_for": 1.0,
+     "first_half_goals_against": 0.44
+    },
+    "season_venue": {
+     "games": 4,
+     "ppg": 2.25,
+     "record": "3W-0D-1L",
+     "goals_for": 3.0,
+     "goals_against": 2.0,
+     "xg_for": 1.73,
+     "xg_against": 2.45,
+     "shots": 12.0,
+     "shots_against": 22.0,
+     "sot": 5.25,
+     "sot_against": 5.0,
+     "corners": 4.0,
+     "corners_against": 8.75,
+     "yellows": 2.25,
+     "clean_sheet_pct": 0.0,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 1.0,
+     "over15_pct": 1.0,
+     "over25_pct": 1.0,
+     "over35_pct": 0.75,
+     "first_half_goals_for": 2.0,
+     "first_half_goals_against": 0.5
+    },
+    "game_state_season": {
+     "ht_leads": 3,
+     "ht_leads_won": 3,
+     "ht_deficits": 2,
+     "points_from_ht_deficits": 3,
+     "second_half_goals_for": 0.89,
+     "second_half_goals_against": 1.56
+    },
+    "trend_xgd_last5_vs_season": -0.04,
+    "rest_days": 14,
+    "games_last_14d": 1,
+    "games_last_30d": 3,
+    "elo": 1587,
+    "elo_change_30d": 19
+   },
+   "away_stats": {
+    "name": "Freiburg",
+    "last6": [
+     {
+      "date": "2026-11-08",
+      "venue": "H",
+      "opponent": "Union Berlin",
+      "competition": "D1",
+      "score": "2-0",
+      "ht": "0-0",
+      "result": "W",
+      "gf": 2,
+      "ga": 0,
+      "ht_gf": 0.0,
+      "ht_ga": 0.0,
+      "xg_for": 2.58,
+      "xg_against": 0.35,
+      "shots": 20.0,
+      "shots_against": 4.0,
+      "sot": 9.0,
+      "sot_against": 0.0,
+      "corners": 5.0,
+      "corners_against": 1.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-31",
+      "venue": "A",
+      "opponent": "Augsburg",
+      "competition": "D1",
+      "score": "2-1",
+      "ht": "0-1",
+      "result": "W",
+      "gf": 2,
+      "ga": 1,
+      "ht_gf": 0.0,
+      "ht_ga": 1.0,
+      "xg_for": 1.19,
+      "xg_against": 1.19,
+      "shots": 10.0,
+      "shots_against": 15.0,
+      "sot": 2.0,
+      "sot_against": 5.0,
+      "corners": 2.0,
+      "corners_against": 1.0,
+      "yellows": 3.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-25",
+      "venue": "H",
+      "opponent": "Bayern Munich",
+      "competition": "D1",
+      "score": "1-3",
+      "ht": "0-2",
+      "result": "L",
+      "gf": 1,
+      "ga": 3,
+      "ht_gf": 0.0,
+      "ht_ga": 2.0,
+      "xg_for": 1.01,
+      "xg_against": 2.91,
+      "shots": 16.0,
+      "shots_against": 17.0,
+      "sot": 4.0,
+      "sot_against": 9.0,
+      "corners": 5.0,
+      "corners_against": 6.0,
+      "yellows": 3.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-18",
+      "venue": "A",
+      "opponent": "Leverkusen",
+      "competition": "D1",
+      "score": "1-2",
+      "ht": "1-1",
+      "result": "L",
+      "gf": 1,
+      "ga": 2,
+      "ht_gf": 1.0,
+      "ht_ga": 1.0,
+      "xg_for": 1.21,
+      "xg_against": 1.64,
+      "shots": 11.0,
+      "shots_against": 12.0,
+      "sot": 2.0,
+      "sot_against": 5.0,
+      "corners": 3.0,
+      "corners_against": 4.0,
+      "yellows": 1.0,
+      "reds": 0.0
+     },
+     {
+      "date": "2026-10-11",
+      "venue": "H",
+      "opponent": "Schalke 04",
+      "competition": "D1",
+      "score": "2-1",
+      "ht": "1-1",
+      "result": "W",
+      "gf": 2,
+      "ga": 1,
+      "ht_gf": 1.0,
+      "ht_ga": 1.0,
+      "xg_for": 1.15,
+      "xg_against": 0.32,
+      "shots": 10.0,
+      "shots_against": 5.0,
+      "sot": 4.0,
+      "sot_against": 1.0,
+      "corners": 7.0,
+      "corners_against": 2.0,
+      "yellows": 1.0,
+      "reds": 1.0
+     },
+     {
+      "date": "2026-09-19",
+      "venue": "A",
+      "opponent": "Ein Frankfurt",
+      "competition": "D1",
+      "score": "2-2",
+      "ht": "1-2",
+      "result": "D",
+      "gf": 2,
+      "ga": 2,
+      "ht_gf": 1.0,
+      "ht_ga": 2.0,
+      "xg_for": 3.09,
+      "xg_against": 2.18,
+      "shots": 22.0,
+      "shots_against": 10.0,
+      "sot": 7.0,
+      "sot_against": 3.0,
+      "corners": 5.0,
+      "corners_against": 3.0,
+      "yellows": 2.0,
+      "reds": 0.0
+     }
+    ],
+    "last5": {
+     "games": 5,
+     "ppg": 1.8,
+     "record": "3W-0D-2L",
+     "goals_for": 1.6,
+     "goals_against": 1.4,
+     "xg_for": 1.43,
+     "xg_against": 1.28,
+     "shots": 13.4,
+     "shots_against": 10.6,
+     "sot": 4.2,
+     "sot_against": 4.0,
+     "corners": 4.4,
+     "corners_against": 2.8,
+     "yellows": 2.0,
+     "clean_sheet_pct": 0.2,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 0.8,
+     "over15_pct": 1.0,
+     "over25_pct": 0.8,
+     "over35_pct": 0.2,
+     "first_half_goals_for": 0.4,
+     "first_half_goals_against": 1.0
+    },
+    "last10": {
+     "games": 10,
+     "ppg": 2.2,
+     "record": "7W-1D-2L",
+     "goals_for": 2.4,
+     "goals_against": 1.1,
+     "xg_for": 1.85,
+     "xg_against": 1.15,
+     "shots": 15.4,
+     "shots_against": 10.5,
+     "sot": 5.2,
+     "sot_against": 3.5,
+     "corners": 4.4,
+     "corners_against": 3.1,
+     "yellows": 1.7,
+     "clean_sheet_pct": 0.3,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 0.7,
+     "over15_pct": 0.9,
+     "over25_pct": 0.8,
+     "over35_pct": 0.5,
+     "first_half_goals_for": 0.89,
+     "first_half_goals_against": 0.78
+    },
+    "season": {
+     "games": 9,
+     "ppg": 2.11,
+     "record": "6W-1D-2L",
+     "goals_for": 2.22,
+     "goals_against": 1.11,
+     "xg_for": 1.78,
+     "xg_against": 1.11,
+     "shots": 15.89,
+     "shots_against": 10.11,
+     "sot": 5.22,
+     "sot_against": 3.22,
+     "corners": 4.78,
+     "corners_against": 3.22,
+     "yellows": 1.89,
+     "clean_sheet_pct": 0.33,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 0.67,
+     "over15_pct": 0.89,
+     "over25_pct": 0.78,
+     "over35_pct": 0.44,
+     "first_half_goals_for": 0.89,
+     "first_half_goals_against": 0.78
+    },
+    "season_venue": {
+     "games": 4,
+     "ppg": 1.75,
+     "record": "2W-1D-1L",
+     "goals_for": 1.5,
+     "goals_against": 1.25,
+     "xg_for": 1.68,
+     "xg_against": 1.44,
+     "shots": 14.75,
+     "shots_against": 12.75,
+     "sot": 4.0,
+     "sot_against": 4.0,
+     "corners": 3.5,
+     "corners_against": 3.25,
+     "yellows": 2.25,
+     "clean_sheet_pct": 0.25,
+     "failed_to_score_pct": 0.0,
+     "btts_pct": 0.75,
+     "over15_pct": 0.75,
+     "over25_pct": 0.75,
+     "over35_pct": 0.25,
+     "first_half_goals_for": 0.75,
+     "first_half_goals_against": 1.0
+    },
+    "game_state_season": {
+     "ht_leads": 3,
+     "ht_leads_won": 3,
+     "ht_deficits": 3,
+     "points_from_ht_deficits": 4,
+     "second_half_goals_for": 1.33,
+     "second_half_goals_against": 0.33
+    },
+    "trend_xgd_last5_vs_season": -0.52,
+    "rest_days": 13,
+    "games_last_14d": 1,
+    "games_last_30d": 3,
+    "elo": 1675,
+    "elo_change_30d": -1
+   },
+   "h2h": {
+    "games": [],
+    "home_wins": 0,
+    "away_wins": 0,
+    "draws": 0,
+    "avg_goals": null,
+    "over25_pct": null
+   },
+   "referee": null,
+   "weather": {
+    "temperature_2m": 6.4,
+    "precipitation": 0.0,
+    "precipitation_probability": 12,
+    "wind_speed_10m": 3.6,
+    "wind_gusts_10m": 10.8,
+    "time": "2026-11-21T14:00",
+    "place": "Elversberg",
+    "impact": "none expected"
+   },
+   "travel_km_away_team": 156,
+   "style": {
+    "home": null,
+    "away": null
+   },
+   "players": {
+    "home": null,
+    "away": null
+   },
+   "data_coverage": {
+    "xg": true,
+    "understat": false,
+    "referee": false,
+    "weather": true
+   },
+   "research_checklist": [
+    "Confirmed injuries & suspensions for both teams (with expected return dates) and who replaces them",
+    "Predicted line-ups (and confirmed XIs if within ~1h of kick-off); rotation risk from cup/European games",
+    "Key players' recent form and ratings (FotMob/Sofascore/WhoScored pages) - especially outside the top 5 leagues",
+    "Manager situation, press-conference quotes, dressing-room news, new signings",
+    "Motivation: derby, title/relegation/Europe stakes, dead rubber, next fixture priorities",
+    "Referee appointment and tendencies if not listed (non-UK leagues)",
+    "Pitch/weather confirmation; travel; any off-field issues",
+    "Latest odds and whether the price has moved since the model ran"
+   ]
+  },
+  "D2-20261121-68": {
+   "id": "D2-20261121-68",
    "league": "D2",
    "league_name": "2. Bundesliga",
    "date": "2026-11-21",
@@ -10607,18 +9823,18 @@
    "away": "Holstein Kiel",
    "model": {
     "probs": {
-     "H": 0.5511,
-     "D": 0.2291,
-     "A": 0.2199
+     "H": 0.5496,
+     "D": 0.2298,
+     "A": 0.2206
     },
     "probs_dixon_coles": {
-     "H": 0.5776,
-     "D": 0.2258,
-     "A": 0.1966
+     "H": 0.5774,
+     "D": 0.2259,
+     "A": 0.1967
     },
     "expected_goals": {
-     "home": 2.0644,
-     "away": 1.1361
+     "home": 2.0637,
+     "away": 1.1362
     },
     "likely_scores": [
      {
@@ -10639,29 +9855,29 @@
      },
      {
       "score": "3-1",
-      "p": 0.0683
+      "p": 0.0682
      }
     ],
     "pick": {
      "selection": "H",
      "label": "Wolfsburg to win",
-     "p": 0.5511,
-     "tier": "strong",
+     "p": 0.5496,
+     "tier": null,
      "double_chance": {
       "selections": "HD",
       "label": "Wolfsburg or draw",
-      "p": 0.7801
+      "p": 0.7794
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.5511,
-      "D": 0.2291,
-      "A": 0.2199
+      "H": 0.5496,
+      "D": 0.2298,
+      "A": 0.2206
      },
      "BTTS": {
-      "Yes": 0.6592,
-      "No": 0.3408
+      "Yes": 0.659,
+      "No": 0.341
      },
      "O/U 1.5": {
       "Over": 0.8696,
@@ -10683,32 +9899,32 @@
      {
       "market": "1X2",
       "selection": "H",
-      "avg_odds": 1.66,
+      "avg_odds": 1.67,
       "odds": 1.74,
-      "market_p": 0.5508,
-      "model_p": 0.5511,
-      "edge": 0.0003,
-      "ev": -0.0411
+      "market_p": 0.5486,
+      "model_p": 0.5496,
+      "edge": 0.001,
+      "ev": -0.0436
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 4.06,
-      "odds": 4.34,
-      "market_p": 0.2254,
-      "model_p": 0.2291,
-      "edge": 0.0037,
-      "ev": -0.0056
+      "avg_odds": 4.04,
+      "odds": 4.32,
+      "market_p": 0.2265,
+      "model_p": 0.2298,
+      "edge": 0.0033,
+      "ev": -0.0073
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 4.09,
-      "odds": 4.37,
-      "market_p": 0.2238,
-      "model_p": 0.2199,
-      "edge": -0.004,
-      "ev": -0.039
+      "avg_odds": 4.07,
+      "odds": 4.35,
+      "market_p": 0.2249,
+      "model_p": 0.2206,
+      "edge": -0.0043,
+      "ev": -0.0403
      },
      {
       "market": "O/U 2.5",
@@ -10733,23 +9949,23 @@
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 3,
+     "snapshots": 4,
      "since": "2026-11-14T13:40:11Z",
      "moves": {
       "1X2|H": {
        "open": 1.62,
-       "now": 1.66,
-       "change_pct": 2.5
+       "now": 1.67,
+       "change_pct": 3.1
       },
       "1X2|D": {
        "open": 4.07,
-       "now": 4.06,
-       "change_pct": -0.2
+       "now": 4.04,
+       "change_pct": -0.7
       },
       "1X2|A": {
        "open": 4.19,
-       "now": 4.09,
-       "change_pct": -2.4
+       "now": 4.07,
+       "change_pct": -2.9
       },
       "O/U 2.5|Over": {
        "open": 1.41,
@@ -11321,11 +10537,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 5.5,
+    "temperature_2m": 5.3,
     "precipitation": 0.0,
-    "precipitation_probability": 9,
-    "wind_speed_10m": 15.3,
-    "wind_gusts_10m": 34.4,
+    "precipitation_probability": 7,
+    "wind_speed_10m": 14.8,
+    "wind_gusts_10m": 41.4,
     "time": "2026-11-21T12:00",
     "place": "Wolfsburg",
     "impact": "none expected"
@@ -11356,8 +10572,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "B1-20261121-48": {
-   "id": "B1-20261121-48",
+  "B1-20261121-57": {
+   "id": "B1-20261121-57",
    "league": "B1",
    "league_name": "Belgian Pro League",
    "date": "2026-11-21",
@@ -11366,18 +10582,18 @@
    "away": "RAAL La Louviere",
    "model": {
     "probs": {
-     "H": 0.6505,
-     "D": 0.2053,
-     "A": 0.1442
+     "H": 0.6489,
+     "D": 0.2062,
+     "A": 0.1449
     },
     "probs_dixon_coles": {
-     "H": 0.6689,
+     "H": 0.6688,
      "D": 0.2011,
      "A": 0.13
     },
     "expected_goals": {
-     "home": 2.2386,
-     "away": 0.8925
+     "home": 2.2382,
+     "away": 0.8926
     },
     "likely_scores": [
      {
@@ -11404,35 +10620,35 @@
     "pick": {
      "selection": "H",
      "label": "Genk to win",
-     "p": 0.6505,
+     "p": 0.6489,
      "tier": "very strong",
      "double_chance": {
       "selections": "HD",
       "label": "Genk or draw",
-      "p": 0.8558
+      "p": 0.8551
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.6505,
-      "D": 0.2053,
-      "A": 0.1442
+      "H": 0.6489,
+      "D": 0.2062,
+      "A": 0.1449
      },
      "BTTS": {
-      "Yes": 0.5649,
-      "No": 0.4351
+      "Yes": 0.5651,
+      "No": 0.4349
      },
      "O/U 1.5": {
-      "Over": 0.833,
-      "Under": 0.167
+      "Over": 0.8329,
+      "Under": 0.1671
      },
      "O/U 2.5": {
-      "Over": 0.6148,
-      "Under": 0.3852
+      "Over": 0.6146,
+      "Under": 0.3854
      },
      "O/U 3.5": {
-      "Over": 0.39,
-      "Under": 0.61
+      "Over": 0.3898,
+      "Under": 0.6102
      }
     },
     "confidence": 55
@@ -11444,30 +10660,30 @@
       "selection": "H",
       "avg_odds": 1.39,
       "odds": 1.46,
-      "market_p": 0.6544,
-      "model_p": 0.6505,
-      "edge": -0.0039,
-      "ev": -0.0502
+      "market_p": 0.6543,
+      "model_p": 0.6489,
+      "edge": -0.0054,
+      "ev": -0.0525
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 4.54,
-      "odds": 4.86,
+      "avg_odds": 4.55,
+      "odds": 4.87,
       "market_p": 0.1998,
-      "model_p": 0.2053,
-      "edge": 0.0056,
-      "ev": -0.0017
+      "model_p": 0.2062,
+      "edge": 0.0064,
+      "ev": 0.0038
      },
      {
       "market": "1X2",
       "selection": "A",
       "avg_odds": 6.23,
-      "odds": 6.66,
-      "market_p": 0.1458,
-      "model_p": 0.1442,
-      "edge": -0.0016,
-      "ev": -0.0396
+      "odds": 6.67,
+      "market_p": 0.1459,
+      "model_p": 0.1449,
+      "edge": -0.001,
+      "ev": -0.0338
      },
      {
       "market": "O/U 2.5",
@@ -11475,9 +10691,9 @@
       "avg_odds": 1.55,
       "odds": 1.6,
       "market_p": 0.5973,
-      "model_p": 0.6148,
-      "edge": 0.0175,
-      "ev": -0.0164
+      "model_p": 0.6146,
+      "edge": 0.0174,
+      "ev": -0.0166
      },
      {
       "market": "O/U 2.5",
@@ -11485,14 +10701,14 @@
       "avg_odds": 2.3,
       "odds": 2.4,
       "market_p": 0.4027,
-      "model_p": 0.3852,
-      "edge": -0.0175,
-      "ev": -0.0754
+      "model_p": 0.3854,
+      "edge": -0.0174,
+      "ev": -0.0751
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 3,
+     "snapshots": 4,
      "since": "2026-11-14T13:40:11Z",
      "moves": {
       "1X2|H": {
@@ -11502,8 +10718,8 @@
       },
       "1X2|D": {
        "open": 4.56,
-       "now": 4.54,
-       "change_pct": -0.4
+       "now": 4.55,
+       "change_pct": -0.2
       },
       "1X2|A": {
        "open": 6.23,
@@ -12080,11 +11296,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 5.6,
+    "temperature_2m": 6.6,
     "precipitation": 0.0,
-    "precipitation_probability": 9,
-    "wind_speed_10m": 9.2,
-    "wind_gusts_10m": 28.4,
+    "precipitation_probability": 12,
+    "wind_speed_10m": 8.7,
+    "wind_gusts_10m": 24.1,
     "time": "2026-11-21T17:00",
     "place": "Genk",
     "impact": "none expected"
@@ -12115,8 +11331,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "B1-20261121-47": {
-   "id": "B1-20261121-47",
+  "B1-20261121-56": {
+   "id": "B1-20261121-56",
    "league": "B1",
    "league_name": "Belgian Pro League",
    "date": "2026-11-21",
@@ -12125,9 +11341,9 @@
    "away": "St Truiden",
    "model": {
     "probs": {
-     "H": 0.466,
-     "D": 0.26,
-     "A": 0.274
+     "H": 0.4652,
+     "D": 0.2603,
+     "A": 0.2745
     },
     "probs_dixon_coles": {
      "H": 0.5072,
@@ -12136,7 +11352,7 @@
     },
     "expected_goals": {
      "home": 1.8534,
-     "away": 1.2433
+     "away": 1.2432
     },
     "likely_scores": [
      {
@@ -12163,23 +11379,23 @@
     "pick": {
      "selection": "H",
      "label": "Charleroi to win",
-     "p": 0.466,
+     "p": 0.4652,
      "tier": null,
      "double_chance": {
       "selections": "HA",
       "label": "Charleroi or St Truiden",
-      "p": 0.74
+      "p": 0.7397
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.466,
-      "D": 0.26,
-      "A": 0.274
+      "H": 0.4652,
+      "D": 0.2603,
+      "A": 0.2745
      },
      "BTTS": {
-      "Yes": 0.6423,
-      "No": 0.3577
+      "Yes": 0.6425,
+      "No": 0.3575
      },
      "O/U 1.5": {
       "Over": 0.8355,
@@ -12190,8 +11406,8 @@
       "Under": 0.3826
      },
      "O/U 3.5": {
-      "Over": 0.3938,
-      "Under": 0.6062
+      "Over": 0.3939,
+      "Under": 0.6061
      }
     },
     "confidence": 54
@@ -12203,30 +11419,30 @@
       "selection": "H",
       "avg_odds": 1.95,
       "odds": 2.03,
-      "market_p": 0.4683,
-      "model_p": 0.466,
-      "edge": -0.0023,
-      "ev": -0.0541
+      "market_p": 0.4672,
+      "model_p": 0.4652,
+      "edge": -0.002,
+      "ev": -0.0556
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 3.62,
+      "avg_odds": 3.61,
       "odds": 3.87,
-      "market_p": 0.2517,
-      "model_p": 0.26,
-      "edge": 0.0084,
-      "ev": 0.0074
+      "market_p": 0.252,
+      "model_p": 0.2603,
+      "edge": 0.0082,
+      "ev": 0.0066
      },
      {
       "market": "1X2",
       "selection": "A",
-      "avg_odds": 3.25,
-      "odds": 3.48,
-      "market_p": 0.28,
-      "model_p": 0.274,
-      "edge": -0.006,
-      "ev": -0.0459
+      "avg_odds": 3.24,
+      "odds": 3.42,
+      "market_p": 0.2808,
+      "model_p": 0.2745,
+      "edge": -0.0062,
+      "ev": -0.0611
      },
      {
       "market": "O/U 2.5",
@@ -12246,12 +11462,12 @@
       "market_p": 0.3984,
       "model_p": 0.3826,
       "edge": -0.0158,
-      "ev": -0.055
+      "ev": -0.0551
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 3,
+     "snapshots": 4,
      "since": "2026-11-14T13:40:11Z",
      "moves": {
       "1X2|H": {
@@ -12261,13 +11477,13 @@
       },
       "1X2|D": {
        "open": 3.62,
-       "now": 3.62,
-       "change_pct": 0.0
+       "now": 3.61,
+       "change_pct": -0.3
       },
       "1X2|A": {
        "open": 3.25,
-       "now": 3.25,
-       "change_pct": 0.0
+       "now": 3.24,
+       "change_pct": -0.3
       },
       "O/U 2.5|Over": {
        "open": 1.54,
@@ -12881,11 +12097,11 @@
    },
    "referee": null,
    "weather": {
-    "temperature_2m": 6.8,
+    "temperature_2m": 8.0,
     "precipitation": 0.0,
-    "precipitation_probability": 5,
-    "wind_speed_10m": 6.3,
-    "wind_gusts_10m": 23.8,
+    "precipitation_probability": 6,
+    "wind_speed_10m": 7.8,
+    "wind_gusts_10m": 26.3,
     "time": "2026-11-21T15:00",
     "place": "Charleroi",
     "impact": "none expected"
@@ -12916,8 +12132,8 @@
     "Latest odds and whether the price has moved since the model ran"
    ]
   },
-  "F1-20261121-33": {
-   "id": "F1-20261121-33",
+  "F1-20261121-39": {
+   "id": "F1-20261121-39",
    "league": "F1",
    "league_name": "Ligue 1",
    "date": "2026-11-21",
@@ -12926,18 +12142,18 @@
    "away": "Auxerre",
    "model": {
     "probs": {
-     "H": 0.6784,
-     "D": 0.1912,
-     "A": 0.1305
+     "H": 0.6786,
+     "D": 0.1908,
+     "A": 0.1306
     },
     "probs_dixon_coles": {
-     "H": 0.5868,
+     "H": 0.5867,
      "D": 0.2362,
      "A": 0.177
     },
     "expected_goals": {
-     "home": 1.9153,
-     "away": 0.9624
+     "home": 1.9152,
+     "away": 0.9626
     },
     "likely_scores": [
      {
@@ -12964,23 +12180,23 @@
     "pick": {
      "selection": "H",
      "label": "Monaco to win",
-     "p": 0.6784,
+     "p": 0.6786,
      "tier": "very strong",
      "double_chance": {
       "selections": "HD",
       "label": "Monaco or draw",
-      "p": 0.8695
+      "p": 0.8694
      }
     },
     "markets": {
      "1X2": {
-      "H": 0.6784,
-      "D": 0.1912,
-      "A": 0.1305
+      "H": 0.6786,
+      "D": 0.1908,
+      "A": 0.1306
      },
      "BTTS": {
-      "Yes": 0.5555,
-      "No": 0.4445
+      "Yes": 0.5551,
+      "No": 0.4449
      },
      "O/U 1.5": {
       "Over": 0.8425,
@@ -12991,8 +12207,8 @@
       "Under": 0.3703
      },
      "O/U 3.5": {
-      "Over": 0.4065,
-      "Under": 0.5935
+      "Over": 0.4064,
+      "Under": 0.5936
      }
     },
     "confidence": 64
@@ -13004,30 +12220,30 @@
       "selection": "H",
       "avg_odds": 1.39,
       "odds": 1.46,
-      "market_p": 0.6721,
-      "model_p": 0.6784,
-      "edge": 0.0063,
-      "ev": -0.0096
+      "market_p": 0.6727,
+      "model_p": 0.6786,
+      "edge": 0.006,
+      "ev": -0.0092
      },
      {
       "market": "1X2",
       "selection": "D",
-      "avg_odds": 4.89,
-      "odds": 5.24,
-      "market_p": 0.1914,
-      "model_p": 0.1912,
-      "edge": -0.0002,
-      "ev": 0.001
+      "avg_odds": 4.91,
+      "odds": 5.25,
+      "market_p": 0.1908,
+      "model_p": 0.1908,
+      "edge": 0.0,
+      "ev": 0.0024
      },
      {
       "market": "1X2",
       "selection": "A",
       "avg_odds": 6.86,
       "odds": 7.34,
-      "market_p": 0.1365,
-      "model_p": 0.1305,
+      "market_p": 0.1366,
+      "model_p": 0.1306,
       "edge": -0.006,
-      "ev": -0.0421
+      "ev": -0.0419
      },
      {
       "market": "O/U 2.5",
@@ -13037,7 +12253,7 @@
       "market_p": 0.6207,
       "model_p": 0.6297,
       "edge": 0.009,
-      "ev": -0.0239
+      "ev": -0.024
      },
      {
       "market": "O/U 2.5",
@@ -13052,27 +12268,27 @@
      {
       "market": "O/U 3.5",
       "selection": "Over",
-      "avg_odds": 2.3,
+      "avg_odds": 2.29,
       "odds": 2.42,
-      "market_p": 0.4103,
-      "model_p": 0.4065,
-      "edge": -0.0038,
-      "ev": -0.009
+      "market_p": 0.411,
+      "model_p": 0.4064,
+      "edge": -0.0045,
+      "ev": -0.0076
      },
      {
       "market": "O/U 3.5",
       "selection": "Under",
       "avg_odds": 1.6,
       "odds": 1.66,
-      "market_p": 0.5897,
-      "model_p": 0.5935,
-      "edge": 0.0038,
-      "ev": -0.0198
+      "market_p": 0.589,
+      "model_p": 0.5936,
+      "edge": 0.0045,
+      "ev": -0.0207
      }
     ],
     "bookmaker_spread": null,
     "line_movement": {
-     "snapshots": 8,
+     "snapshots": 9,
      "since": "2026-11-09T16:36:38Z",
      "moves": {
       "1X2|H": {
@@ -13082,8 +12298,8 @@
       },
       "1X2|D": {
        "open": 4.98,
-       "now": 4.89,
-       "change_pct": -1.8
+       "now": 4.91,
+       "change_pct": -1.4
       },
       "1X2|A": {
        "open": 6.87,
@@ -13102,8 +12318,8 @@
       },
       "O/U 3.5|Over": {
        "open": 2.17,
-       "now": 2.3,
-       "change_pct": 6.0
+       "now": 2.29,
+       "change_pct": 5.5
       },
       "O/U 3.5|Under": {
        "open": 1.66,
