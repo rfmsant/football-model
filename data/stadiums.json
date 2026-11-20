@@ -1811,5 +1811,26 @@
   "lat": 37.18817,
   "lon": -3.60667,
   "approx": true
+ },
+ "F2|St Etienne": {
+  "query": "saint etienne",
+  "place": "Saint-Etienne",
+  "lat": 45.43389,
+  "lon": 4.39,
+  "approx": true
+ },
+ "EC|Halifax": {
+  "query": "halifax",
+  "place": "Halifax",
+  "lat": 53.71667,
+  "lon": -1.85,
+  "approx": true
+ },
+ "EC|Woking": {
+  "query": "woking",
+  "place": "Woking",
+  "lat": 51.31903,
+  "lon": -0.55893,
+  "approx": true
  }
 }
