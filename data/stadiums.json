@@ -1832,5 +1832,12 @@
   "lat": 51.31903,
   "lon": -0.55893,
   "approx": true
+ },
+ "G1|Kifisia": {
+  "query": "kifisia",
+  "place": "Kifissia",
+  "lat": 38.07438,
+  "lon": 23.81106,
+  "approx": true
  }
 }
