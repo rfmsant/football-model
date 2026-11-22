@@ -1839,5 +1839,26 @@
   "lat": 38.07438,
   "lon": 23.81106,
   "approx": true
+ },
+ "G1|Aris": {
+  "query": "aris",
+  "place": "Áris",
+  "lat": 37.0992,
+  "lon": 22.00443,
+  "approx": true
+ },
+ "F2|Grenoble": {
+  "query": "grenoble",
+  "place": "Grenoble",
+  "lat": 45.17869,
+  "lon": 5.71479,
+  "approx": true
+ },
+ "E2|Wycombe": {
+  "query": "wycombe",
+  "place": "High Wycombe",
+  "lat": 51.62907,
+  "lon": -0.74934,
+  "approx": true
  }
 }
