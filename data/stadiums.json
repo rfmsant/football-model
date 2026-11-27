@@ -1860,5 +1860,33 @@
   "lat": 51.62907,
   "lon": -0.74934,
   "approx": true
+ },
+ "I2|Benevento": {
+  "query": "benevento",
+  "place": "Benevento",
+  "lat": 41.1307,
+  "lon": 14.77816,
+  "approx": true
+ },
+ "EC|Eastleigh": {
+  "query": "eastleigh",
+  "place": "Eastleigh",
+  "lat": 50.96667,
+  "lon": -1.35,
+  "approx": true
+ },
+ "E3|Bristol Rvs": {
+  "query": "bristol",
+  "place": "Bristol",
+  "lat": 51.45523,
+  "lon": -2.59665,
+  "approx": true
+ },
+ "SP2|Tenerife": {
+  "query": "tenerife",
+  "place": "Tenerife",
+  "lat": 28.32977,
+  "lon": -16.5097,
+  "approx": true
  }
 }
