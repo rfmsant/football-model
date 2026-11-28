@@ -1888,5 +1888,19 @@
   "lat": 28.32977,
   "lon": -16.5097,
   "approx": true
+ },
+ "B1|Gent": {
+  "query": "gent",
+  "place": "Ghent",
+  "lat": 51.05,
+  "lon": 3.71667,
+  "approx": true
+ },
+ "I2|Padova": {
+  "query": "padova",
+  "place": "Padova",
+  "lat": 44.38225,
+  "lon": 11.14261,
+  "approx": true
  }
 }
